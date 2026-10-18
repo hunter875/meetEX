@@ -1531,6 +1531,16 @@
           },
           "snapshot": {
             "$ref": "#/components/schemas/AISnapshot"
+          },
+          "timing": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RequestTimingDTO"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "additionalProperties": true,
@@ -1572,6 +1582,16 @@
           },
           "snapshot": {
             "$ref": "#/components/schemas/AISnapshot"
+          },
+          "timing": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RequestTimingDTO"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "additionalProperties": true,
@@ -2526,6 +2546,70 @@
         "type": "object",
         "title": "ReportPayload"
       },
+      "RequestTimingDTO": {
+        "properties": {
+          "trigger": {
+            "type": "string",
+            "title": "Trigger"
+          },
+          "temperature": {
+            "type": "string",
+            "title": "Temperature"
+          },
+          "retrieval": {
+            "type": "string",
+            "title": "Retrieval"
+          },
+          "provider_mode": {
+            "type": "string",
+            "title": "Provider Mode"
+          },
+          "outcome": {
+            "type": "string",
+            "title": "Outcome"
+          },
+          "marks": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Marks"
+          },
+          "provider_ms": {
+            "type": "number",
+            "title": "Provider Ms",
+            "default": 0
+          },
+          "validation_ms": {
+            "type": "number",
+            "title": "Validation Ms",
+            "default": 0
+          },
+          "stable_to_scheduled_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stable To Scheduled Ms"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "trigger",
+          "temperature",
+          "retrieval",
+          "provider_mode",
+          "outcome",
+          "marks"
+        ],
+        "title": "RequestTimingDTO"
+      },
       "RoutingDecision": {
         "properties": {
           "version": {
@@ -3161,6 +3245,16 @@
           "duration_ms": {
             "type": "number",
             "title": "Duration Ms"
+          },
+          "timing": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RequestTimingDTO"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "additionalProperties": true,
@@ -3213,6 +3307,16 @@
           "duration_ms": {
             "type": "number",
             "title": "Duration Ms"
+          },
+          "timing": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RequestTimingDTO"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "additionalProperties": true,
@@ -3350,6 +3454,172 @@
           "type"
         ],
         "title": "ValidationError"
+      },
+      "CaptionAckDTO": {
+        "additionalProperties": true,
+        "properties": {
+          "type": {
+            "const": "caption.ack",
+            "title": "Type",
+            "type": "string"
+          },
+          "protocol_version": {
+            "const": 1,
+            "title": "Protocol Version",
+            "type": "integer"
+          },
+          "session_id": {
+            "title": "Session Id",
+            "type": "string"
+          },
+          "event_id": {
+            "title": "Event Id",
+            "type": "string"
+          },
+          "server_revision": {
+            "title": "Server Revision",
+            "type": "integer"
+          },
+          "applied": {
+            "title": "Applied",
+            "type": "boolean"
+          },
+          "ignored_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Ignored Reason"
+          },
+          "processing_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Processing Ms"
+          },
+          "backend_applied": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Backend Applied"
+          },
+          "segment_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Segment Id"
+          },
+          "segment_revision": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Segment Revision"
+          }
+        },
+        "required": [
+          "type",
+          "protocol_version",
+          "session_id",
+          "event_id",
+          "server_revision",
+          "applied"
+        ],
+        "title": "CaptionAckDTO",
+        "type": "object"
+      },
+      "CaptureGapAckDTO": {
+        "additionalProperties": true,
+        "properties": {
+          "type": {
+            "const": "capture.gap.ack",
+            "title": "Type",
+            "type": "string"
+          },
+          "protocol_version": {
+            "const": 1,
+            "title": "Protocol Version",
+            "type": "integer"
+          },
+          "session_id": {
+            "title": "Session Id",
+            "type": "string"
+          },
+          "event_id": {
+            "title": "Event Id",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "protocol_version",
+          "session_id",
+          "event_id",
+          "reason"
+        ],
+        "title": "CaptureGapAckDTO",
+        "type": "object"
+      },
+      "CaptureDiagnosticsDTO": {
+        "additionalProperties": true,
+        "properties": {
+          "backend_connected": {
+            "title": "Backend Connected",
+            "type": "boolean"
+          },
+          "content_alive": {
+            "title": "Content Alive",
+            "type": "boolean"
+          },
+          "adapter_status": {
+            "title": "Adapter Status",
+            "type": "string"
+          },
+          "pending_gap": {
+            "title": "Pending Gap",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "backend_connected",
+          "content_alive",
+          "adapter_status",
+          "pending_gap"
+        ],
+        "title": "CaptureDiagnosticsDTO",
+        "type": "object"
       }
     }
   }

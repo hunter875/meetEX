@@ -162,5 +162,17 @@ if phase1:
     text+='\nGiai đoạn 1: [kết quả A–E và giới hạn](PHASE1_REPORT.md); evidence cũ giữ nguyên, các check automated ở bảng trên dùng evidence mới. Provider/latency trước sửa là lịch sử. Không phải MVP VERIFIED.\n'
     with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
         stream.write('\nGiai đoạn 1: A–E PASS trong phạm vi guard đã thử, không mở rộng phạm vi sản phẩm. REQ-01/05/13/14/19/20/21/28/30 có thêm regression tests cho slot phiên, claim và pipeline. Xem [PHASE1_REPORT.md](PHASE1_REPORT.md).\n')
+phase2_path=docs/'evidence/phase2/review.json'
+if phase2_path.exists():
+    current=json.loads(phase2_path.read_text('utf8'))
+    text=text.replace('**219 tests**',f'**{current["final"]["backend"]} tests**').replace('**13 passed**',f'**{current["final"]["frontend"]} passed**').replace('(3 cases)','(4 cases)')
+    for name in ('backend-final.xml','frontend-final.json','browser-final-results.json','documentation-qa.json','browser-final/capture-fixture.json','browser-final/runtime-metrics-fixture.json','browser-final/projects.png','browser-final/report.png','browser-final/live-pinned.png','browser-final/sidepanel-320.png'):
+        text=text.replace('phase1/'+name,'phase2/'+name)
+    text=text.replace('## Số đo','## Số đo lịch sử trước Phase 2',1)
+    text=text.replace('| Adapter event → ACK |','| Adapter event → ACK (Phase 1 lịch sử) |')
+    text=text.replace('Cập nhật giai đoạn 1 2026-10-18;','Cập nhật Phase 2 2026-10-18;')
+    text+='\nPhase 2: [capture/recovery/latency, before-after và gate A–G](PHASE2_REPORT.md). Kết quả tự động 228 backend / 56 frontend / 4 browser; Meet thật NOT TESTED, không có paid provider call mới. Số đo lịch sử phía trên không phải benchmark Phase 2.\n'
+    with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
+        stream.write('\nPhase 2: replay/capture/recovery/telemetry đã triển khai; [A–G và giới hạn](PHASE2_REPORT.md), [runbook live](PHASE2_LIVE_RUNBOOK.md). 228 backend / 56 frontend / 4 browser; Meet thật NOT TESTED.\n')
 (docs/'ACCEPTANCE_REPORT.md').write_text(text+'\n',encoding='utf8')
 print('Generated traceability, task status and mode-specific acceptance report')

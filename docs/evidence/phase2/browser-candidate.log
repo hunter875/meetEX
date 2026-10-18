@@ -1,0 +1,43 @@
+
+Running 4 tests using 1 worker
+
+(node:13880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\extension.spec.ts:26:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export (14.1s)
+  ok 2 e2e\extension.spec.ts:60:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › SEC-06 provider key goes only to backend RAM; production key test never fakes success (341ms)
+  ok 3 e2e\extension.spec.ts:65:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › CAP/TRN integrated worker and content script with calibrated synthetic Meet DOM (1.9s)
+  x  4 e2e\extension.spec.ts:92:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency (12.2s)
+
+
+  1) e2e\extension.spec.ts:92:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32mfalse[39m
+    Received: [31mtrue[39m
+
+    Call Log:
+    - Timeout 12000ms exceeded while waiting on the predicate
+
+      112 |     for(const duration of [5000,20000]){
+      113 |       const before=(await api('/api/v1/meetings/'+m.id)).transcript_revision;
+    > 114 |       await context.setOffline(true);await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).connected).toBe(false);
+          |                                      ^
+      115 |       await observe(`During outage ${duration} NOT API-17`);await new Promise(resolve=>setTimeout(resolve,duration));
+      116 |       expect((await api('/api/v1/meetings/'+m.id)).transcript_revision).toBe(before);
+      117 |       await context.setOffline(false);
+        at D:\meetEX\e2e\extension.spec.ts:114:38
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\extension-Genuine-MV3-exte-91f06-correlated-rendered-latency\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\extension-Genuine-MV3-exte-91f06-correlated-rendered-latency\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e\extension.spec.ts:92:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency 
+  3 passed (38.0s)

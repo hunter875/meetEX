@@ -1,0 +1,23 @@
+{
+  "provenance": "manual live result form — no live run performed",
+  "gate": "NOT TESTED",
+  "commit": null,
+  "os": null,
+  "browser_version": null,
+  "extension_version": null,
+  "timezone": null,
+  "duration_minutes": null,
+  "participants_are_authorized_test_accounts": null,
+  "profile": null,
+  "observed_caption_count": null,
+  "application_missing": null,
+  "application_duplicates": null,
+  "speaker_mismatches": null,
+  "unapplied_corrections": null,
+  "google_asr_errors_separate": [],
+  "ambiguities": [],
+  "fault_scenarios": [],
+  "latency_groups": [],
+  "evidence_paths_private_only": [],
+  "reviewer": null
+}

@@ -16,6 +16,14 @@ class Service:
         self.store,self.retrieval,self.provider=store,retrieval,provider
         self.listeners=set();self.active={};self.queued={};self.auto_timers={};self.rate=defaultdict(deque);self.tasks=set();self.report_jobs={};self.report_tasks={};self.timings=[];self.stable_times={};self.stable_to_request=[];self.stable_to_ready=[]
         self.routing_timings=[]
+        self.latency_records=[];self.request_clocks={}
+    def mark(self,r,stage):
+        r['timing']['marks'].append(dict(stage=stage,offset_ms=(time.perf_counter()-self.request_clocks[r['id']])*1000))
+    def finish_timing(self,r):
+        if r['id'] not in self.request_clocks:return
+        r['timing']['outcome']=r['status'];self.mark(r,'request_completed')
+        self.latency_records.append(dict(request_id=r['id'],**json.loads(dumps(r['timing']))));self.latency_records=self.latency_records[-1000:]
+        self.request_clocks.pop(r['id'],None)
     async def emit(self,type,id=None,**payload):
         revision=self.store.meeting(id)['transcript_revision'] if id else 0
         event=dict(type=type,protocol_version=1,session_id=id,server_revision=revision,payload=payload)
@@ -100,11 +108,16 @@ class Service:
             if not cached['stale'] and cached['snapshot']['input_hash']==snapshot['input_hash'] and snapshot['transcript_revision']==m['transcript_revision']:
                 return cached['request_id']
         r=dict(id=uid(),action=body['action'],status='queued',created_at=now(),snapshot=snapshot,error=None,started_at=None,duration_ms=None)
+        self.request_clocks[r['id']]=time.perf_counter()
+        r['timing']=dict(trigger='auto' if auto else 'manual',temperature='warm' if getattr(self.provider,'_client',None) is not None else 'cold',retrieval='semantic' if self.store.settings()['semantic_enabled'] and self.retrieval.semantic.ready else 'keyword',provider_mode='demo' if m['demo'] else 'real',outcome='queued',marks=[dict(stage='suggestion_scheduled',offset_ms=0)],provider_ms=0,validation_ms=0)
+        stable=self.stable_times.get(id)
+        if stable and stable['revision']==snapshot['transcript_revision']:r['timing']['stable_to_scheduled_ms']=(self.request_clocks[r['id']]-stable['at'])*1000
+        self.task(self.emit('suggestion.scheduled',id,request_id=r['id'],segments=[dict(id=s['id'],revision=s['revision'],capture_epoch=s['capture_epoch']) for s in snapshot['segments']],automatic=auto))
         self.save_request(id,r)
         db=self.store.db_for(id)
         with db:m['latest_request']=r['id'];self.store.save_meeting(db,m)
         if id in self.queued:
-            previous=self.queued.pop(id);previous['status']='superseded';self.save_request(id,previous)
+            previous=self.queued.pop(id);previous['status']='superseded';self.finish_timing(previous);self.save_request(id,previous)
         self.queued[id]=r
         if id in self.active:
             if not auto:self.active[id].cancel()
@@ -116,7 +129,7 @@ class Service:
             if self.active.get(id) is finished:self.active.pop(id,None)
             if id in self.queued and id not in self.active:self.start_runner(id)
         task.add_done_callback(done)
-    async def generate_suggestion(self, snapshot):
+    async def generate_suggestion(self, snapshot, request=None):
         context = snapshot
         repairable = {
             'AI_CITATION', 'AI_EVIDENCE', 'AI_REVISION', 'AI_ROLE_UNSET',
@@ -135,8 +148,19 @@ class Service:
         }
         for attempt in range(2):
             try:
-                output = await self.provider.complete(context, SuggestionPayload)
-                validate_suggestion(output, snapshot)
+                if request:self.mark(request,'provider_started')
+                started=time.perf_counter()
+                try:output = await self.provider.complete(context, SuggestionPayload)
+                finally:
+                    if request:
+                        request['timing']['provider_ms']+=(time.perf_counter()-started)*1000
+                        self.mark(request,'provider_completed')
+                started=time.perf_counter()
+                try:validate_suggestion(output, snapshot)
+                finally:
+                    if request:
+                        request['timing']['validation_ms']+=(time.perf_counter()-started)*1000
+                        self.mark(request,'validation_completed')
                 return output
             except AppError as error:
                 if attempt or error.code not in repairable:
@@ -160,15 +184,19 @@ class Service:
                 await self.emit('suggestion.started',id,request_id=r['id'])
                 try:
                     m=self.store.meeting(id)
-                    output=demo_suggestion(r['snapshot']) if m['demo'] else await self.generate_suggestion(r['snapshot'])
-                    validate_suggestion(output,r['snapshot'])
+                    output=demo_suggestion(r['snapshot']) if m['demo'] else await self.generate_suggestion(r['snapshot'],r)
+                    validation_started=time.perf_counter()
+                    try:validate_suggestion(output,r['snapshot'])
+                    finally:
+                        r['timing']['validation_ms']+=(time.perf_counter()-validation_started)*1000;self.mark(r,'validation_completed')
                     m=self.store.meeting(id)
                     generations={s['id']:s['generation'] for s in self.store.sources(m['project_id'])}
                     content_stale=any(current['text']!=original['text'] for original in r['snapshot']['segments']+r['snapshot'].get('memory',[]) for current in self.store.transcript(id) if current['id']==original['id'])
                     stale=m['latest_request']!=r['id'] or generations!=r['snapshot']['index_generation'] or content_stale or m['transcript_revision']!=r['snapshot']['transcript_revision'] or m['self_speaker']!=r['snapshot'].get('self_speaker') or m.get('context_revision',0)!=r['snapshot'].get('context_revision',0) or self.store.project(m['project_id'])['glossary']!=r['snapshot'].get('glossary',{})
                     stale=stale or r['snapshot'].get('provider_config')!={key:self.store.settings()[key] for key in ('provider_url','model')}
                     # Explicit card actions may use an older immutable snapshot. Keep that fact visible.
-                    s=dict(id=uid(),request_id=r['id'],created_at=now(),mode='demo' if m['demo'] else 'real',payload=output.model_dump(),snapshot=r['snapshot'],stale=stale,automatic=r['action']=='auto',duration_ms=(time.perf_counter()-began)*1000)
+                    r['timing']['outcome']='stale' if stale else 'ready'
+                    s=dict(id=uid(),request_id=r['id'],created_at=now(),mode='demo' if m['demo'] else 'real',payload=output.model_dump(),snapshot=r['snapshot'],stale=stale,automatic=r['action']=='auto',duration_ms=(time.perf_counter()-began)*1000,timing=r['timing'])
                     db=self.store.db_for(id)
                     with db:db.execute('INSERT INTO suggestions VALUES(?,?,?,?)',(s['id'],id,r['id'],dumps(s)))
                     r['status']='stale' if stale else 'ready'
@@ -183,6 +211,7 @@ class Service:
                     await self.emit('suggestion.error',id,request_id=r['id'],error=error)
                 finally:
                     r['duration_ms']=(time.perf_counter()-began)*1000
+                    self.finish_timing(r)
                     try:self.save_request(id,r)
                     except AppError:pass
         finally:
@@ -190,7 +219,7 @@ class Service:
     def cancel(self,id):
         if id in self.active:self.active[id].cancel()
         if id in self.queued:
-            r=self.queued.pop(id);r['status']='cancelled';self.save_request(id,r)
+            r=self.queued.pop(id);r['status']='cancelled';self.finish_timing(r);self.save_request(id,r)
         if id in self.auto_timers:self.auto_timers.pop(id).cancel()
     def auto(self,id,event):
         m=self.store.meeting(id)

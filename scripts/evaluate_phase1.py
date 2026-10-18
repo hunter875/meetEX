@@ -24,6 +24,8 @@ def git(*args):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--output',default='docs/evidence/phase1/semantic-review.json')
+    parser.add_argument('--base-commit',default='cd6b79f876a6d3e00f26801dacfebb10bb87cbfb')
+    parser.add_argument('--starting-branch',default='main')
     args=parser.parse_args()
     results=[]
     for case in CASES:
@@ -60,10 +62,10 @@ def main():
            'backend/app/service.py','fixtures/phase1-semantic-cases.json']
     record=dict(
         created_at=datetime.now(timezone.utc).isoformat(),client_timezone='America/Los_Angeles',
-        base_commit='cd6b79f876a6d3e00f26801dacfebb10bb87cbfb',starting_branch='main',starting_working_tree='clean',
+        base_commit=args.base_commit,starting_branch=args.starting_branch,starting_working_tree='clean',
         branch=git('branch','--show-current'),head_at_evaluation=git('rev-parse','HEAD'),
         environment=dict(platform=platform.platform(),python=sys.version,executable=sys.executable),
-        command=f'.venv/Scripts/python.exe scripts/evaluate_phase1.py --output {args.output}',
+        command=f'.venv/Scripts/python.exe scripts/evaluate_phase1.py --output {args.output} --base-commit {args.base_commit} --starting-branch {args.starting_branch}',
         mode='Offline deterministic validation, synthetic evidence, no provider or real meeting',
         validation_policy=VALIDATION_POLICY,hash_format='utf8-lf',
         source_hashes={path:hashlib.sha256((ROOT/path).read_text('utf-8').encode('utf-8')).hexdigest() for path in paths},

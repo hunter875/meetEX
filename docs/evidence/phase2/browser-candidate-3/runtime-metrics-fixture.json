@@ -1,0 +1,187 @@
+{
+  "latency_records": [
+    {
+      "request_id": "63e4d03f-7a21-4ac0-a38e-d39d3b6708e4",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 7.54880002932623
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 10.935300029814243
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 3.519599966239184,
+      "stable_to_scheduled_ms": 2007.8091999748722
+    },
+    {
+      "request_id": "d71be700-9616-4bed-b06f-518e70ab4ce5",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 4.899499996099621
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 7.6142000034451485
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.8609999786131084,
+      "stable_to_scheduled_ms": 2003.7208000430837
+    },
+    {
+      "request_id": "5584005d-7eb8-4dde-8aa9-ce5bae403eb2",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "stale",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 5.498100013937801
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 8.252400031778961
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.9230999858118594
+    },
+    {
+      "request_id": "7931e546-d794-45da-afec-3e661b7ebc4e",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 6.162900011986494
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 9.095299988985062
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.8980999700725079,
+      "stable_to_scheduled_ms": 3933.2903000176884
+    }
+  ],
+  "classifier": {
+    "n": 11,
+    "median_ms": 0.16489997506141663,
+    "p95_ms": 4.768299986608326,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider_by_route": {
+    "fast": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "explain": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "deep": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "clarify": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    }
+  },
+  "request_count": 0,
+  "known_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "unknown_usage_count": 0,
+  "estimated_cost": null,
+  "price_date": null,
+  "cost_note": "Estimate from configured per-million token prices, not a bill.",
+  "capture_apply": {
+    "n": 6,
+    "median_ms": 1.548799977172166,
+    "p95_ms": 1.8253999878652394,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "retrieval": {
+    "n": 11,
+    "median_ms": 0.5582000012509525,
+    "p95_ms": 1.8657000036910176,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider": {
+    "n": 0,
+    "median_ms": null,
+    "p95_ms": null,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider_first_token": {
+    "n": 0,
+    "median_ms": null,
+    "p95_ms": null,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "backend_stable_to_request": {
+    "n": 3,
+    "median_ms": 2010.311299993191,
+    "p95_ms": 3936.56960001681,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "backend_stable_to_validated": {
+    "n": 3,
+    "median_ms": 2017.8768999758177,
+    "p95_ms": 3941.769400029443,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "report": {
+    "n": 1,
+    "median_ms": 21.718100004363805,
+    "p95_ms": 21.718100004363805,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "records": []
+}

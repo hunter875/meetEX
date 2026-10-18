@@ -1,0 +1,41 @@
+.......F.                                                                [100%]
+================================== FAILURES ===================================
+___________ test_obsolete_document_socket_cannot_write_after_rebind ___________
+
+client = <starlette.testclient.TestClient object at 0x000001B4CC5B3230>
+
+    def test_obsolete_document_socket_cannot_write_after_rebind(client):
+        p=client.post('/api/v1/projects',json=dict(name='P')).json()
+        m=client.post('/api/v1/meetings',json=dict(project_id=p['id'],title='scope',meeting_key='/scope')).json()
+        def bind(ws,doc):
+            ws.send_json(dict(type='auth',protocol_version=1,token='test-pairing-token'));receive(ws,'auth.ok')
+            ws.send_json(dict(type='session.bind',protocol_version=1,session_id=m['id'],payload=dict(tab_id=1,document_id=doc,meeting_key='/scope')));receive(ws,'session.snapshot')
+        origin={'Origin':'chrome-extension://'+'a'*32}
+>       with client.websocket_connect('/api/v1/events',headers=origin) as old:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase2_capture.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\starlette\testclient.py:121: in __enter__
+    self._raise_on_close(message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <starlette.testclient.WebSocketTestSession object at 0x000001B4CC65E120>
+message = {'code': 4403, 'reason': '', 'type': 'websocket.close'}
+
+    def _raise_on_close(self, message: Message) -> None:
+        if message["type"] == "websocket.close":
+>           raise WebSocketDisconnect(code=message.get("code", 1000), reason=message.get("reason", ""))
+E           starlette.websockets.WebSocketDisconnect
+
+.venv\Lib\site-packages\starlette\testclient.py:150: WebSocketDisconnect
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+---- generated xml file: D:\meetEX\docs\evidence\phase2\capture-first.xml -----
+=========================== short test summary info ===========================
+FAILED backend/tests/test_phase2_capture.py::test_obsolete_document_socket_cannot_write_after_rebind
+1 failed, 8 passed, 1 warning in 1.77s

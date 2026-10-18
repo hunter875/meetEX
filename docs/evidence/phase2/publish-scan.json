@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "staged_files": 139,
+  "findings": [],
+  "source_hashes_match_staged": true,
+  "scope": "Pattern scan and known local pairing tokens; not a comprehensive security audit",
+  "github_visibility_verified": "PUBLIC"
+}

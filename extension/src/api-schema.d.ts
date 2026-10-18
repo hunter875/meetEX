@@ -491,6 +491,7 @@ export interface components {
                 [key: string]: unknown;
             } | null;
             snapshot: components["schemas"]["AISnapshot"];
+            timing?: components["schemas"]["RequestTimingDTO"] | null;
         } & {
             [key: string]: unknown;
         };
@@ -507,6 +508,7 @@ export interface components {
                 [key: string]: unknown;
             } | null;
             snapshot: components["schemas"]["AISnapshot"];
+            timing?: components["schemas"]["RequestTimingDTO"] | null;
         } & {
             [key: string]: unknown;
         };
@@ -866,6 +868,37 @@ export interface components {
             /** Capture Warnings */
             capture_warnings?: string[];
         };
+        /** RequestTimingDTO */
+        RequestTimingDTO: {
+            /** Trigger */
+            trigger: string;
+            /** Temperature */
+            temperature: string;
+            /** Retrieval */
+            retrieval: string;
+            /** Provider Mode */
+            provider_mode: string;
+            /** Outcome */
+            outcome: string;
+            /** Marks */
+            marks: {
+                [key: string]: unknown;
+            }[];
+            /**
+             * Provider Ms
+             * @default 0
+             */
+            provider_ms: number;
+            /**
+             * Validation Ms
+             * @default 0
+             */
+            validation_ms: number;
+            /** Stable To Scheduled Ms */
+            stable_to_scheduled_ms?: number | null;
+        } & {
+            [key: string]: unknown;
+        };
         /** RoutingDecision */
         RoutingDecision: {
             /**
@@ -1074,6 +1107,7 @@ export interface components {
             automatic: boolean;
             /** Duration Ms */
             duration_ms: number;
+            timing?: components["schemas"]["RequestTimingDTO"] | null;
         } & {
             [key: string]: unknown;
         };
@@ -1095,6 +1129,7 @@ export interface components {
             automatic: boolean;
             /** Duration Ms */
             duration_ms: number;
+            timing?: components["schemas"]["RequestTimingDTO"] | null;
         } & {
             [key: string]: unknown;
         };
@@ -1135,6 +1170,88 @@ export interface components {
             msg: string;
             /** Error Type */
             type: string;
+        };
+        /** CaptionAckDTO */
+        CaptionAckDTO: {
+            /**
+             * Type
+             * @constant
+             */
+            type: "caption.ack";
+            /**
+             * Protocol Version
+             * @constant
+             */
+            protocol_version: 1;
+            /** Session Id */
+            session_id: string;
+            /** Event Id */
+            event_id: string;
+            /** Server Revision */
+            server_revision: number;
+            /** Applied */
+            applied: boolean;
+            /**
+             * Ignored Reason
+             * @default null
+             */
+            ignored_reason: string | null;
+            /**
+             * Processing Ms
+             * @default null
+             */
+            processing_ms: number | null;
+            /**
+             * Backend Applied
+             * @default null
+             */
+            backend_applied: boolean | null;
+            /**
+             * Segment Id
+             * @default null
+             */
+            segment_id: string | null;
+            /**
+             * Segment Revision
+             * @default null
+             */
+            segment_revision: number | null;
+        } & {
+            [key: string]: unknown;
+        };
+        /** CaptureGapAckDTO */
+        CaptureGapAckDTO: {
+            /**
+             * Type
+             * @constant
+             */
+            type: "capture.gap.ack";
+            /**
+             * Protocol Version
+             * @constant
+             */
+            protocol_version: 1;
+            /** Session Id */
+            session_id: string;
+            /** Event Id */
+            event_id: string;
+            /** Reason */
+            reason: string;
+        } & {
+            [key: string]: unknown;
+        };
+        /** CaptureDiagnosticsDTO */
+        CaptureDiagnosticsDTO: {
+            /** Backend Connected */
+            backend_connected: boolean;
+            /** Content Alive */
+            content_alive: boolean;
+            /** Adapter Status */
+            adapter_status: string;
+            /** Pending Gap */
+            pending_gap: boolean;
+        } & {
+            [key: string]: unknown;
         };
     };
     responses: never;

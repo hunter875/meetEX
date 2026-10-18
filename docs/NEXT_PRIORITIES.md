@@ -12,3 +12,7 @@ Bộ phân loại đã triển khai: [RESPONSE_ROUTING.md](RESPONSE_ROUTING.md).
 | P2 | Nguồn cập nhật và báo cáo dài | Đồng bộ connector được chọn, freshness rõ; thử corpus thực, report nhiều giờ, gom mục trùng và giữ quyết định thay đổi. |
 
 Nghiệm thu còn thiếu ngoài chức năng: Meet thật tối thiểu hai participant, đối chiếu capture, outage/reload/restart và Windows sạch. Chưa kết luận hệ thống sẵn sàng dùng chính thức trước khi đóng các gate này.
+
+## Sau Phase 2
+
+[Phase 2](PHASE2_REPORT.md) đã triển khai phần độc lập; ưu tiên đóng [live gate Meet hai participant](PHASE2_LIVE_RUNBOOK.md), đo ASR và lỗi ứng dụng riêng, hiệu chuẩn replacement/window/speaker trên DOM đã quan sát. Phase 3 tối ưu trigger, giảm Auto requests/revision burst và gợi ý lặp, theo cả ready/stale/error/cancelled. Không bỏ validator/capture fidelity để đổi lấy latency. Weighted matrix/decision memory/connector vẫn ngoài scope Phase 2.

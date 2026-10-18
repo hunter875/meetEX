@@ -3,10 +3,14 @@ import {spawn,type ChildProcess} from 'node:child_process';
 import {mkdtemp,readFile,writeFile,mkdir} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
+import {createServer,request as forwardHTTP,type Server} from 'node:http';
+import {connect as connectTCP,type Socket} from 'node:net';
 let context:BrowserContext;let page:Page;let worker:Worker;let extensionId:string;let backend:ChildProcess;let token:string;let dataDir:string;let projectId:string;let demoMeetingId:string;let logs='';
 const base='http://127.0.0.1:8765';
 const evidenceDir=process.env.MEET_E2E_EVIDENCE_DIR||'docs/evidence';
 const evidencePath=(name:string)=>path.join(evidenceDir,name);
+let proxy:Server;let transportBlocked=false;const transportClients=new Set<Socket>();
+function dropTransport(){for(const socket of transportClients)socket.destroy();transportClients.clear();}
 async function api(route:string,method='GET',body?:unknown){const response=await fetch(base+route,{method,headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const value=await response.json();expect(response.ok,JSON.stringify(value)).toBeTruthy();return value;}
 async function pair(target:Page){await target.goto(`chrome-extension://${extensionId}/dashboard.html#/settings`);await target.getByLabel('Pairing token ứng dụng local').fill(token);await target.getByRole('button',{name:'Lưu kết nối',exact:true}).click();await expect(target.getByText('Provider văn bản',{exact:true})).toBeVisible();}
 test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet/controlled AI',()=>{
@@ -17,12 +21,16 @@ test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet
     const extension=path.resolve('extension/dist');
     context=await chromium.launchPersistentContext(path.join(dir,'profile'),{channel:'chromium',headless:true,executablePath:process.env.MEET_CHROMIUM_PATH||undefined,args:[`--disable-extensions-except=${extension}`,`--load-extension=${extension}`],viewport:{width:1440,height:1000},acceptDownloads:true});
     worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');extensionId=worker.url().split('/')[2];
-    backend=spawn(path.resolve('.venv/Scripts/python.exe'),['-m','uvicorn','app.main:app','--app-dir','backend','--host','127.0.0.1','--port','8765','--workers','1'],{cwd:process.cwd(),env:{...process.env,MEET_DATA_DIR:dataDir,MEET_EXTENSION_ID:extensionId,MEET_DEV_ORIGIN:'',DEEPSEEK_API_KEY:''},windowsHide:true});
+    // Test-only transparent proxy: drop WS transport without restarting the backend or mocking ACKs.
+    proxy=createServer((req,res)=>{const upstream=forwardHTTP({hostname:'127.0.0.1',port:18765,path:req.url,method:req.method,headers:req.headers},r=>{res.writeHead(r.statusCode||502,r.headers);r.on('error',()=>res.destroy());r.pipe(res);});upstream.on('error',()=>{if(!res.headersSent)res.writeHead(502);res.end();});res.on('close',()=>upstream.destroy());req.pipe(upstream);});
+    proxy.on('upgrade',(req,client,head)=>{if(transportBlocked){client.destroy();return;}transportClients.add(client);const upstream=connectTCP(18765,'127.0.0.1',()=>{upstream.write(`${req.method} ${req.url} HTTP/1.1\r\n`+req.rawHeaders.reduce((s,h,i)=>s+h+(i%2?'\r\n':': '),'')+'\r\n');if(head.length)upstream.write(head);client.pipe(upstream);upstream.pipe(client);});client.on('close',()=>{transportClients.delete(client);upstream.destroy();});client.on('error',()=>upstream.destroy());upstream.on('error',()=>client.destroy());upstream.on('close',()=>client.destroy());});
+    await new Promise<void>(resolve=>proxy.listen(8765,'127.0.0.1',resolve));
+    backend=spawn(path.resolve('.venv/Scripts/python.exe'),['-m','uvicorn','phase2_server:app','--app-dir','e2e','--host','127.0.0.1','--port','18765','--workers','1'],{cwd:process.cwd(),env:{...process.env,MEET_DATA_DIR:dataDir,MEET_EXTENSION_ID:extensionId,MEET_DEV_ORIGIN:'',DEEPSEEK_API_KEY:''},windowsHide:true});
     backend.stdout?.on('data',d=>logs+=String(d));backend.stderr?.on('data',d=>logs+=String(d));
     await expect.poll(async()=>{try{return (await fetch(base+'/health')).ok;}catch{return false;}},{timeout:20000}).toBe(true);
     token=(await readFile(path.join(dataDir,'pairing-token'),'utf8')).trim();page=await context.newPage();page.on('pageerror',e=>console.error('UI error:',e.message));await pair(page);
   });
-  test.afterAll(async()=>{await context?.close();backend?.kill();await writeFile(evidencePath('e2e-backend.log'),logs,'utf8');});
+  test.afterAll(async()=>{dropTransport();await context?.close();backend?.kill();proxy?.closeAllConnections();proxy?.close();await writeFile(evidencePath('e2e-backend.log'),logs,'utf8');});
   test('UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export',async()=>{
     await page.getByRole('link',{name:'Dự án & dữ liệu',exact:true}).click();await page.getByRole('button',{name:'Tạo dự án',exact:true}).click();
     await page.getByLabel('Tên dự án',{exact:true}).fill('Demo Portal');await page.getByLabel('Mô tả',{exact:true}).fill('Dự án thử cho nghiệm thu — dữ liệu synthetic.');await page.getByRole('dialog').getByRole('button',{name:'Tạo dự án',exact:true}).click();
@@ -89,4 +97,61 @@ test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet
     await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.control',action:'end',idempotency_key:crypto.randomUUID()}));await meet.close();
     await page.evaluate(id=>chrome.storage.session.set({['reading_'+id]:{fixture:'delete-cache-sentinel'}}),m.id);await api('/api/v1/meetings/'+m.id,'DELETE');await expect.poll(async()=>page.evaluate(async id=>(await chrome.storage.session.get('reading_'+id))['reading_'+id],m.id)).toBeUndefined();
   });
+  test('PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency',async()=>{
+    test.setTimeout(180000);
+    const html='<!doctype html><html><body><h1>SYNTHETIC PHASE 2</h1><section id="captions"></section><aside id="chat">CHAT NOT 15.5 API-17</aside></body></html>';
+    await context.route('https://meet.google.com/phase2-room',route=>route.fulfill({status:200,contentType:'text/html',body:html}));
+    const meet=await context.newPage();await meet.goto('https://meet.google.com/phase2-room');await meet.bringToFront();
+    const profile={root:'#captions',block:'.block',text:'.words',speaker:'.speaker',version:'synthetic-phase2-v2',calibrated_at:new Date().toISOString()};
+    await page.evaluate(async profile=>{const {config}=await chrome.storage.local.get('config');await chrome.storage.local.set({config:{...config,profile}});},profile);
+    // Restart the actual worker to load the synthetic profile, preserving session RAM only.
+    const cdp=await context.newCDPSession(page);const targets=await cdp.send('Target.getTargets');const target=targets.targetInfos.find(t=>t.type==='service_worker'&&t.url.startsWith(`chrome-extension://${extensionId}/`));await cdp.send('Target.closeTarget',{targetId:target!.targetId});
+    await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).connected).toBe(true);
+    const m=await api('/api/v1/meetings','POST',{project_id:projectId,title:'SYNTHETIC PHASE 2 RECOVERY',timezone:'America/Los_Angeles',persistence_mode:'local',demo:false,meeting_key:'/phase2-room'});
+    await meet.bringToFront();await expect.poll(async()=>await page.evaluate(()=>chrome.storage.session.get(null)).then(v=>Object.keys(v).filter(k=>k.startsWith('document_')).length)).toBeGreaterThan(0);
+    expect((await page.evaluate(id=>chrome.runtime.sendMessage({type:'ui.bind',session_id:id}),m.id)).ok).toBe(true);
+    await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).capture_status).toBe('waiting_for_caption');
+    const observe=async(text:string,speaker='Client')=>{await meet.evaluate(({text,speaker})=>{let b=document.querySelector('.block');if(!b){b=document.createElement('div');b.className='block';b.innerHTML='<span class="speaker"></span><span class="words"></span>';document.querySelector('#captions')!.append(b);}b.querySelector('.speaker')!.textContent=speaker;b.querySelector('.words')!.textContent=text;},{text,speaker});};
+    await observe('Timeout 15.5 ms API-17');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).segments.at(-1)?.text).toBe('Timeout 15.5 ms API-17');
+    await observe('Timeout 50.5 ms API-71');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).segments.at(-1)?.text).toBe('Timeout 50.5 ms API-71');
+    expect((await api('/api/v1/meetings/'+m.id)).segments).toHaveLength(1);
+    const second=await context.newPage();await second.goto('https://meet.google.com/phase2-room');await second.evaluate(()=>document.querySelector('#captions')!.textContent='SECOND TAB MUST NOT LEAK');await second.close();
+    await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).segments[0]?.stable).toBe(true);
+    const faults=[];
+    for(const duration of [5000,20000]){
+      const before=(await api('/api/v1/meetings/'+m.id)).transcript_revision;
+      transportBlocked=true;dropTransport();await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).connected).toBe(false);
+      await meet.evaluate(()=>document.querySelector('.block')!.remove());await new Promise(resolve=>setTimeout(resolve,30));
+      await observe(`During outage ${duration} NOT API-17`);await new Promise(resolve=>setTimeout(resolve,duration));
+      expect((await api('/api/v1/meetings/'+m.id)).transcript_revision).toBe(before);
+      transportBlocked=false;
+      await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).segments.at(-1)?.text,{timeout:30000}).toBe(`During outage ${duration} NOT API-17`);
+      await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).pending,{timeout:30000}).toBe(0);
+      faults.push({outage_ms:duration,transcript_recovered:true,unacked:0});
+    }
+    expect((await api('/api/v1/meetings/'+m.id)).segments.map((s:any)=>s.text)).toEqual(['Timeout 50.5 ms API-71','During outage 5000 NOT API-17','During outage 20000 NOT API-17']);
+    expect((await api('/api/v1/meetings/'+m.id)).requests).toEqual([]);
+    const control=async(action:string)=>{const r=await page.evaluate(action=>chrome.runtime.sendMessage({type:'ui.control',action,idempotency_key:crypto.randomUUID()}),action);expect(r.ok,JSON.stringify(r)).toBe(true);};
+    await control('pause');const count=(await api('/api/v1/meetings/'+m.id)).segments.length;await observe('PAUSED MUST NOT BACKFILL');await new Promise(resolve=>setTimeout(resolve,1200));await control('resume');await new Promise(resolve=>setTimeout(resolve,1200));expect((await api('/api/v1/meetings/'+m.id)).segments).toHaveLength(count);
+    await observe('Could you explain the next step?','Another client');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).segments.length).toBe(count+1);
+    await new Promise(resolve=>setTimeout(resolve,1300));
+    await api('/api/v1/provider/credential','PUT',{api_key:'FAKE_PHASE2_NO_NETWORK'});
+    const panel=await context.newPage();await panel.goto(`chrome-extension://${extensionId}/sidepanel.html`);await panel.evaluate(id=>sessionStorage.setItem('meet-ui-session',id),m.id);await panel.reload();await expect(panel.locator('.caption-text')).toContainText('next step');
+    const request=async(question:string)=>{const {request_id}=await api(`/api/v1/meetings/${m.id}/suggest`,'POST',{action:'suggest',question});return request_id;};
+    const outcome=async(id:string,status:string)=>await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).requests.find((r:any)=>r.id===id)?.status).toBe(status);
+    for(let n=0;n<3;n++){const rid=await request('PHASE2_READY '+n);await outcome(rid,'ready');await expect(panel.getByTestId('english-reply')).toBeVisible();await expect.poll(async()=>{const v=await page.evaluate(()=>chrome.storage.session.get('latencyRecords'));return v.latencyRecords?.some((r:any)=>r.request_id===rid&&r.stage==='card_rendered_notification');}).toBe(true);}
+    const error=await request('PHASE2_ERROR');await outcome(error,'error');
+    const stale=await request('PHASE2_SLOW_STALE');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).requests.find((r:any)=>r.id===stale)?.status).toBe('running');await observe('Could you explain the revised next step?','Another client');await outcome(stale,'stale');
+    const cancelled=await request('PHASE2_SLOW_CANCEL');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).requests.find((r:any)=>r.id===cancelled)?.status).toBe('running');const next=await request('PHASE2_READY_AFTER_CANCEL');await outcome(cancelled,'cancelled');await outcome(next,'ready');
+    await api(`/api/v1/meetings/${m.id}`,'PATCH',{self_speaker:'Client'});await observe('Which option should we choose next?','Another client');
+    await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).requests.some((r:any)=>r.action==='auto'&&r.status==='ready'),{timeout:12000}).toBe(true);
+    await panel.close();await observe('Could you clarify after the panel closes?','Another client');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).segments.at(-1)?.text).toContain('panel closes');
+    await meet.reload();await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).status).toBe('interrupted');await observe('OLD AT RELOAD MUST NOT BACKFILL');await control('resume');await new Promise(resolve=>setTimeout(resolve,1200));expect(JSON.stringify((await api('/api/v1/meetings/'+m.id)).segments)).not.toContain('OLD AT RELOAD');
+    await observe('Fresh after reload','Fresh speaker');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).segments.at(-1)?.text).toBe('Fresh after reload');
+    const snapshot=await api('/api/v1/meetings/'+m.id);const telemetry=await page.evaluate(()=>chrome.storage.session.get(['latencyRecords','captureTimings']));const metrics=await api('/api/v1/metrics');
+    expect(JSON.stringify(snapshot.segments)).not.toContain('PAUSED MUST');expect(JSON.stringify(snapshot.segments)).not.toContain('SECOND TAB MUST');expect(JSON.stringify(telemetry.latencyRecords)).not.toContain('Could you');
+    await writeFile(evidencePath('phase2-recovery.json'),JSON.stringify({provenance:'synthetic calibrated DOM, genuine MV3 Chromium, real FastAPI/SQLite, httpx.MockTransport SSE provider, zero paid/network provider calls',browser:context.browser()?.version(),faults,snapshot,telemetry,backend_latency:metrics.latency_records,live_meet_tested:false},null,2));
+    await control('end');await meet.close();await api('/api/v1/provider/credential','DELETE');
+  });
+
 });

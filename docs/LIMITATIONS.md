@@ -46,3 +46,9 @@ Sau tối ưu, [LATENCY_REPORT.md](LATENCY_REPORT.md) tách riêng gợi ý: med
 ## Bộ phân loại mới
 
 [Response routing](RESPONSE_ROUTING.md) đã triển khai bằng quy tắc local Anh–Việt, chưa hiệu chuẩn trên corpus họp thật. Có thể phân loại sai câu gián tiếp/trích dẫn/cách nói mới. Preview không gọi AI nhưng vẫn có retrieval; available không chứng minh claim đúng. Deep mới đổi hướng dẫn trong schema gợi ý, chưa có bảng điểm trọng số. Mục tiêu 1–2/2–4/5–10 s theo luồng chưa được đo bằng provider thật trên build mới. Routing không thay semantic validation; ba probe gốc đã được giai đoạn 1 chặn trong [phạm vi được kiểm thử](PHASE1_REPORT.md). Chưa có provider benchmark sau thay đổi này. Các việc tiếp theo ở [NEXT_PRIORITIES.md](NEXT_PRIORITIES.md).
+
+## Phase 2 — giới hạn còn lại
+
+[Replay/recovery/telemetry](PHASE2_REPORT.md) đã có 228 backend / 56 frontend / 4 browser tests. Cắt WS bằng proxy 5/20 s trong Chromium thật đã phục hồi đúng fixture; đây chưa phải mạng/Meet live. Same-node text giống hệt không có mutation, short replacement, nhiều ứng viên giống nhau hoặc correction nằm ngoài window vẫn mơ hồ. Stable không phải final. Ngưỡng 160-token/1,5 s/3 s/overlap chỉ có bằng chứng synthetic; không phải đặc tính được Google bảo đảm.
+
+Backend alive, content heartbeat, adapter status và caption arrival là các tín hiệu khác nhau. Selector tồn tại nhưng trỏ nhầm vùng hợp lệ không thể tự được chứng minh đúng; calibration phải được đối chiếu. Không có caption trong im lặng không chứng minh hỏng capture. Native Chrome side panel/Meet thật hai participant vẫn NOT TESTED. [Runbook](PHASE2_LIVE_RUNBOOK.md) và form đã sẵn. Không có benchmark model thật hoặc semantic mới trong Phase 2. Render notification gồm message/rAF, chưa phải pixel hoặc speech ground truth.

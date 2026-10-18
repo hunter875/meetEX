@@ -40,7 +40,7 @@ def create_app(config=None):
     if config.provider_url!=DEFAULTS['provider_url'] or config.model!=DEFAULTS['model']:
         store.set_settings(dict(provider_url=config.provider_url,model=config.model))
     provider=Provider(config,store.settings);service=Service(store,retrieval,provider);ingestion=Ingestion(store,semantic)
-    ack_timings=[];last_heartbeats={}
+    ack_timings=[];last_heartbeats={};capture_connections={}
     index_lock=asyncio.Lock()
     async def sync_source(id):
         def isolated():
@@ -274,13 +274,13 @@ def create_app(config=None):
         unknown=len(records)-len(usage);sett=store.settings();estimate=None
         if not unknown and records and sett['price_input'] is not None and sett['price_output'] is not None and sett['price_date']:
             estimate=(known['prompt_tokens']*sett['price_input']+known['completion_tokens']*sett['price_output'])/1e6
-        return dict(classifier=summary(service.routing_timings),provider_by_route={route:summary([r['duration_ms'] for r in records if r.get('route')==route and r['duration_ms'] is not None]) for route in ('fast','explain','deep','clarify')},request_count=len(records),known_usage=known,unknown_usage_count=unknown,estimated_cost=estimate,price_date=sett['price_date'],cost_note='Estimate from configured per-million token prices, not a bill.',capture_apply=summary(ack_timings),retrieval=summary(retrieval.timings),provider=summary([r['duration_ms'] for r in records if r['duration_ms'] is not None]),provider_first_token=summary([r['first_token_ms'] for r in records if r['first_token_ms'] is not None]),backend_stable_to_request=summary(service.stable_to_request),backend_stable_to_validated=summary(service.stable_to_ready),report=summary([j['duration_ms'] for j in service.report_jobs.values() if j.get('duration_ms') is not None]),records=records)
+        return dict(latency_records=service.latency_records,classifier=summary(service.routing_timings),provider_by_route={route:summary([r['duration_ms'] for r in records if r.get('route')==route and r['duration_ms'] is not None]) for route in ('fast','explain','deep','clarify')},request_count=len(records),known_usage=known,unknown_usage_count=unknown,estimated_cost=estimate,price_date=sett['price_date'],cost_note='Estimate from configured per-million token prices, not a bill.',capture_apply=summary(ack_timings),retrieval=summary(retrieval.timings),provider=summary([r['duration_ms'] for r in records if r['duration_ms'] is not None]),provider_first_token=summary([r['first_token_ms'] for r in records if r['first_token_ms'] is not None]),backend_stable_to_request=summary(service.stable_to_request),backend_stable_to_validated=summary(service.stable_to_ready),report=summary([j['duration_ms'] for j in service.report_jobs.values() if j.get('duration_ms') is not None]),records=records)
 
     @app.websocket('/api/v1/events')
     async def events(ws:WebSocket):
         if not valid_host(ws.headers.get('host','')) or ws.headers.get('origin') not in config.origins:
             await ws.close(code=4403);return
-        await ws.accept();bound=None;authenticated=False;send_lock=asyncio.Lock()
+        await ws.accept();bound=None;bound_scope=None;authenticated=False;send_lock=asyncio.Lock()
         async def send(event):
             async with send_lock:await ws.send_json(event)
         try:
@@ -297,6 +297,7 @@ def create_app(config=None):
                     kind=envelope.get('type');payload=envelope.get('payload',{})
                     if envelope.get('protocol_version')!=1:raise AppError('PROTOCOL_VERSION','Unsupported protocol version')
                     if kind=='heartbeat':
+                        if bound and capture_connections.get(bound) is not ws:raise AppError('BINDING_SCOPE','This socket is no longer the capture owner',403)
                         if bound:last_heartbeats[bound]=time.monotonic()
                         await send(dict(type='heartbeat',protocol_version=1));continue
                     if kind=='session.bind':
@@ -315,16 +316,18 @@ def create_app(config=None):
                                     g=json.loads(row[0]);g['to_at']=now();db.execute('UPDATE capture_gaps SET payload=? WHERE id=?',(dumps(g),g['id']))
                                 m['transport_gap_id']=None
                             m['binding']=dict(tab_id=tab,document_id=doc,meeting_key=key);store.save_meeting(db,m)
-                        bound=id;last_heartbeats[id]=time.monotonic();await send(dict(type='session.snapshot',protocol_version=1,session_id=id,server_revision=m['transcript_revision'],payload={'snapshot':store.snapshot(id)}));continue
+                        bound=id;bound_scope=dict(m['binding']);capture_connections[id]=ws;last_heartbeats[id]=time.monotonic();await send(dict(type='session.snapshot',protocol_version=1,session_id=id,server_revision=m['transcript_revision'],payload={'snapshot':store.snapshot(id)}));continue
                     if not bound or envelope.get('session_id')!=bound:raise AppError('SESSION_SCOPE','Bind the owning tab before sending capture events',403)
                     m=store.meeting(bound)
+                    if m['binding']!=bound_scope or capture_connections.get(bound) is not ws:raise AppError('BINDING_SCOPE','This socket belongs to an obsolete document/connection',403)
                     if kind=='caption.upsert':
                         e=Caption.model_validate(payload).model_dump();began=time.perf_counter()
                         duplicate=store.db_for(bound).execute('SELECT 1 FROM applied_events WHERE meeting_id=? AND event_id=?',(bound,e['event_id'])).fetchone()
-                        ack=store.apply_caption(bound,e);ack['processing_ms']=(time.perf_counter()-began)*1000;ack_timings.append(ack['processing_ms']);ack_timings[:]=ack_timings[-1000:];await send(ack)
+                        ack=store.apply_caption(bound,e);ack['processing_ms']=(time.perf_counter()-began)*1000;ack['backend_applied']=ack['applied'];ack['segment_id']=e['segment_id'];ack['segment_revision']=e['revision'];ack_timings.append(ack['processing_ms']);ack_timings[:]=ack_timings[-1000:];await send(ack)
                         if ack['applied'] and not duplicate:
                             service.auto(bound,e);await service.emit('caption.updated',bound,segment_id=e['segment_id'])
                     elif kind=='capture.status':
+                        if m['status']!='active':continue
                         status=payload.get('status')
                         if status not in ('starting','observing','waiting_for_caption','captions_off','unsupported_dom','paused','disconnected','meeting_left','unknown'):raise AppError('CAPTURE_STATUS','Unknown capture state')
                         db=store.db_for(bound)
@@ -339,7 +342,16 @@ def create_app(config=None):
                         reason=payload.get('reason')
                         if reason not in ('outbox_overflow','end_flush_timeout','adapter_replaced','document_reloaded','interrupted_pending_discarded','adapter_heartbeat_lost','event_rejected'):raise AppError('GAP_REASON','Unknown transport gap')
                         db=store.db_for(bound)
-                        with db:store.gap(db,bound,reason,certainty='possible')
+                        event_id=payload.get('event_id')
+                        if event_id is not None and (not isinstance(event_id,str) or not 1<=len(event_id)<=100):raise AppError('INVALID_EVENT','Invalid gap event ID')
+                        with db:
+                            prior=db.execute('SELECT ack FROM applied_events WHERE meeting_id=? AND event_id=?',(bound,event_id)).fetchone() if event_id else None
+                            if not prior:
+                                store.gap(db,bound,reason,certainty='possible')
+                                if event_id:
+                                    ack=dict(type='capture.gap.ack',protocol_version=1,session_id=bound,event_id=event_id,reason=reason)
+                                    db.execute('INSERT INTO applied_events VALUES(?,?,?,?,?)',(bound,event_id,'diagnostic',0,dumps(ack)))
+                        if event_id:await send(json.loads(prior[0]) if prior else ack)
                     else:raise AppError('UNKNOWN_EVENT','Unknown WebSocket event')
                 except (ValidationError,AppError) as e:
                     error=e if isinstance(e,AppError) else AppError('INVALID_EVENT','Invalid capture event schema')
@@ -350,10 +362,21 @@ def create_app(config=None):
             if authenticated and bound:
                 try:
                     m=store.meeting(bound)
-                    if m['status']=='active' and not m.get('transport_gap_id'):
+                    if m['status']=='active' and m['binding']==bound_scope and capture_connections.get(bound) is ws and not m.get('transport_gap_id'):
                         db=store.db_for(bound)
-                        with db:m['transport_gap_id']=store.gap(db,bound,'transport_disconnected',certainty='possible')['id'];store.save_meeting(db,m)
+                        with db:m['transport_gap_id']=store.gap(db,bound,'transport_disconnected',certainty='possible')['id'];m['capture_status']='disconnected';store.save_meeting(db,m)
                 except AppError:pass
+                if capture_connections.get(bound) is ws:capture_connections.pop(bound,None)
+    # WS/extension-only output contracts share the generated component registry;
+    # no fake HTTP route is required to expose their schema to TypeScript clients.
+    from .models import CaptionAckDTO,CaptureGapAckDTO,CaptureDiagnosticsDTO
+    base_openapi=app.openapi
+    def protocol_openapi():
+        schema=base_openapi()
+        for dto in (CaptionAckDTO,CaptureGapAckDTO,CaptureDiagnosticsDTO):
+            schema['components']['schemas'][dto.__name__]=dto.model_json_schema()
+        return schema
+    app.openapi=protocol_openapi
     return app
 
 app=create_app()

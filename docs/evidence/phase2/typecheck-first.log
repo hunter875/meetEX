@@ -1,0 +1,19 @@
+
+> meet-copilot@0.1.0 typecheck
+> npm run typecheck -w extension
+
+
+> @meet-copilot/extension@0.1.0 typecheck
+> tsc --noEmit
+
+tests/phase2-replay.test.ts(26,25): error TS2345: Argument of type 'typeof import("D:/meetEX/extension/tests/legacy/caption-reducer").CaptionReducer' is not assignable to parameter of type 'typeof import("D:/meetEX/extension/src/content/caption-reducer").CaptionReducer'.
+  Types of construct signatures are incompatible.
+    Type 'new (emit: (event: Required<{ type: "caption.upsert"; protocol_version: 1; event_id: string; capture_epoch: string; segment_id: string; revision: number; seq: number; speaker_label?: string | null | undefined; text: string; observed_at: string; stable: boolean; adapter_version: string; }>) => void, version?: string, stableMs?: number) => CaptionReducer' is not assignable to type 'new (emit: (event: Required<{ type: "caption.upsert"; protocol_version: 1; event_id: string; capture_epoch: string; segment_id: string; revision: number; seq: number; speaker_label?: string | null | undefined; text: string; observed_at: string; stable: boolean; adapter_version: string; }>) => void, version?: string, stableMs?: number, ambiguity?: () => void) => CaptionReducer'.
+      Property 'ambiguity' is missing in type 'import("D:/meetEX/extension/tests/legacy/caption-reducer").CaptionReducer' but required in type 'import("D:/meetEX/extension/src/content/caption-reducer").CaptionReducer'.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path D:\meetEX\extension
+npm error workspace @meet-copilot/extension@0.1.0
+npm error location D:\meetEX\extension
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc --noEmit

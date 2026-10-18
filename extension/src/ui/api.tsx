@@ -1,6 +1,7 @@
 import {createContext,useCallback,useContext,useEffect,useState,type ReactNode} from 'react';
+import type {components} from '../api-schema';
 export type LocalConfig={url:string;token:string};
-type RuntimeState={config:LocalConfig;binding:{session_id:string;status:string;demo?:boolean}|null;connected:boolean;pending:number;extension_id:string;capture_timings?:number[]};
+type RuntimeState={config:LocalConfig;binding:{session_id:string;status:string;demo?:boolean}|null;connected:boolean;pending:number;extension_id:string;capture_timings?:number[];capture_diagnostics?:components['schemas']['CaptureDiagnosticsDTO']};
 const isExtension=typeof chrome!=='undefined'&&!!chrome.runtime?.id;
 export const inExtension=isExtension;
 export async function runtime(message:unknown):Promise<any>{
@@ -17,8 +18,9 @@ export function AppProvider({children}:{children:ReactNode}){
   const refresh=useCallback(()=>setRevision(n=>n+1),[]);
   useEffect(()=>{
     if(isExtension){runtime({type:'ui.state'}).then(s=>{setState(s);setConfig(s.config);}).finally(()=>setLoading(false));
-      const listener=(message:any)=>{if(message.type==='server.event'){refresh();void runtime({type:'ui.state'}).then(setState);}else if(message.type==='transport.error')setNotice(message.error);else if(message.type==='transport.status')setState(s=>s?{...s,connected:message.status==='connected'}:s);else if(message.type==='capture.timing')void runtime({type:'ui.state'}).then(setState);};
-      chrome.runtime.onMessage.addListener(listener);return ()=>chrome.runtime.onMessage.removeListener(listener);
+      const heartbeat=setInterval(()=>void runtime({type:'ui.state'}).then(setState).catch(()=>{}),2000);
+      const listener=(message:any)=>{if(message.type==='server.event'){refresh();void runtime({type:'ui.state'}).then(setState).catch(()=>{});}else if(message.type==='transport.error')setNotice(message.error);else if(message.type==='transport.status')setState(s=>s?{...s,connected:message.status==='connected'}:s);else if(message.type==='capture.timing')void runtime({type:'ui.state'}).then(setState).catch(()=>{});};
+      chrome.runtime.onMessage.addListener(listener);return ()=>{clearInterval(heartbeat);chrome.runtime.onMessage.removeListener(listener);};
     }else{try{setConfig(JSON.parse(sessionStorage.getItem('meet-local-config')||'null')||{url:'http://127.0.0.1:8765',token:''});}catch{}setLoading(false);}
   },[refresh]);
   useEffect(()=>{if(notice){const timer=setTimeout(()=>setNotice(''),6500);return ()=>clearTimeout(timer);}},[notice]);

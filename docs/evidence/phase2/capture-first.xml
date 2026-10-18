@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="9" time="1.655" timestamp="2026-10-18T04:30:27.962348-07:00" hostname="hunter875"><testcase classname="backend.tests.test_phase2_capture" name="test_raw_text_retry_and_reverse_revision_preserve_transcript[local]" time="0.075" /><testcase classname="backend.tests.test_phase2_capture" name="test_raw_text_retry_and_reverse_revision_preserve_transcript[memory]" time="0.055" /><testcase classname="backend.tests.test_phase2_capture" name="test_control_with_pending_loss_records_gap_and_never_applies_paused_content[pause]" time="0.067" /><testcase classname="backend.tests.test_phase2_capture" name="test_control_with_pending_loss_records_gap_and_never_applies_paused_content[end]" time="0.073" /><testcase classname="backend.tests.test_phase2_capture" name="test_control_with_pending_loss_records_gap_and_never_applies_paused_content[interrupt]" time="0.070" /><testcase classname="backend.tests.test_phase2_capture" name="test_backend_restart_interrupts_disk_and_loses_ram_without_promoting_it[local]" time="0.079" /><testcase classname="backend.tests.test_phase2_capture" name="test_backend_restart_interrupts_disk_and_loses_ram_without_promoting_it[memory]" time="0.063" /><testcase classname="backend.tests.test_phase2_capture" name="test_obsolete_document_socket_cannot_write_after_rebind" time="0.120"><failure message="starlette.websockets.WebSocketDisconnect">client = &lt;starlette.testclient.TestClient object at 0x000001B4CC5B3230&gt;
+
+    def test_obsolete_document_socket_cannot_write_after_rebind(client):
+        p=client.post('/api/v1/projects',json=dict(name='P')).json()
+        m=client.post('/api/v1/meetings',json=dict(project_id=p['id'],title='scope',meeting_key='/scope')).json()
+        def bind(ws,doc):
+            ws.send_json(dict(type='auth',protocol_version=1,token='test-pairing-token'));receive(ws,'auth.ok')
+            ws.send_json(dict(type='session.bind',protocol_version=1,session_id=m['id'],payload=dict(tab_id=1,document_id=doc,meeting_key='/scope')));receive(ws,'session.snapshot')
+        origin={'Origin':'chrome-extension://'+'a'*32}
+&gt;       with client.websocket_connect('/api/v1/events',headers=origin) as old:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase2_capture.py:71: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv\Lib\site-packages\starlette\testclient.py:121: in __enter__
+    self._raise_on_close(message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;starlette.testclient.WebSocketTestSession object at 0x000001B4CC65E120&gt;
+message = {'code': 4403, 'reason': '', 'type': 'websocket.close'}
+
+    def _raise_on_close(self, message: Message) -&gt; None:
+        if message["type"] == "websocket.close":
+&gt;           raise WebSocketDisconnect(code=message.get("code", 1000), reason=message.get("reason", ""))
+E           starlette.websockets.WebSocketDisconnect
+
+.venv\Lib\site-packages\starlette\testclient.py:150: WebSocketDisconnect</failure></testcase><testcase classname="backend.tests.test_phase2_capture" name="test_request_timing_tracks_validation_without_paid_provider" time="0.189" /></testsuite></testsuites>

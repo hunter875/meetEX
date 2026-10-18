@@ -52,3 +52,7 @@ Storage có revision/ACK, local/RAM, khoảng thiếu, retention và cascade del
 ## Cập nhật sau đánh giá
 
 Đã bổ sung [bộ phân loại local và gate xác minh](RESPONSE_ROUTING.md). Đây là bước định tuyến trước sinh câu trả lời, chưa phải kiểm tra ngữ nghĩa đầy đủ và không đóng ba phát hiện validator nêu trên. Các số lượng test trong phần đánh giá ban đầu là lịch sử; xem ACCEPTANCE_REPORT và backend-tests.xml cho lượt mới. [Ưu tiên tiếp theo](NEXT_PRIORITIES.md).
+
+## Trạng thái Phase 2 hiện tại
+
+[Capture/recovery/latency A–G](PHASE2_REPORT.md): 8 lỗi replay trước sửa đã đóng trong corpus synthetic; 228 backend / 56 frontend / 4 browser pass. Outage 5/20 s, mất ACK, stale revision, pause/reload/worker/backend recovery được kiểm tra theo scope của từng tầng. Không có chứng nhận capture mọi DOM hoặc semantic entailment tổng quát. A/B/F PARTIAL, C/D/E PASS trong automated scope, G Meet thật NOT TESTED. Số latency DeepSeek cũ không được tái chứng nhận; [live runbook](PHASE2_LIVE_RUNBOOK.md) là bước tiếp.

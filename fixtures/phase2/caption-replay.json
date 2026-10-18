@@ -1,0 +1,834 @@
+[
+  {
+    "id": "partial-stable-late-correction",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "The fix"
+          }
+        ]
+      },
+      {
+        "at": 200,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "The fix needs testing"
+          }
+        ]
+      },
+      {
+        "at": 1300,
+        "op": "tick",
+        "container": "captions",
+        "blocks": []
+      },
+      {
+        "at": 1700,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "The fix needs more testing"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "The fix needs more testing",
+        "revision": 4
+      }
+    ]
+  },
+  {
+    "id": "short-negation",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "We can deploy"
+          }
+        ]
+      },
+      {
+        "at": 1100,
+        "op": "tick",
+        "container": "captions",
+        "blocks": []
+      },
+      {
+        "at": 1500,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "We cannot deploy"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "We cannot deploy",
+        "revision": 3
+      }
+    ]
+  },
+  {
+    "id": "numeric-task-correction",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Timeout 15.5 ms API-17"
+          }
+        ]
+      },
+      {
+        "at": 1100,
+        "op": "tick",
+        "container": "captions",
+        "blocks": []
+      },
+      {
+        "at": 1200,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Timeout 50.5 ms API-71"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Timeout 50.5 ms API-71",
+        "revision": 3
+      }
+    ]
+  },
+  {
+    "id": "capital-punctuation-short",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "yes"
+          }
+        ]
+      },
+      {
+        "at": 1100,
+        "op": "tick",
+        "container": "captions",
+        "blocks": []
+      },
+      {
+        "at": 1200,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Yes!"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Yes!",
+        "revision": 3
+      }
+    ]
+  },
+  {
+    "id": "scroll-block-window",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "First turn"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "First turn"
+          },
+          {
+            "key": "b",
+            "speaker": "A",
+            "text": "Second turn"
+          }
+        ]
+      },
+      {
+        "at": 200,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "b",
+            "speaker": "A",
+            "text": "Second turn"
+          },
+          {
+            "key": "c",
+            "speaker": "A",
+            "text": "Third turn"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "First turn",
+        "revision": 2
+      },
+      {
+        "speaker": "A",
+        "text": "Second turn",
+        "revision": 1
+      },
+      {
+        "speaker": "A",
+        "text": "Third turn",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "replacement-with-shifted-slot",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Old turn"
+          },
+          {
+            "key": "b",
+            "speaker": "A",
+            "text": "The fix needs testing"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "new",
+            "speaker": "A",
+            "text": "The fix needs testing now"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Old turn",
+        "revision": 2
+      },
+      {
+        "speaker": "A",
+        "text": "The fix needs testing now",
+        "revision": 2
+      }
+    ]
+  },
+  {
+    "id": "recycled-node-new-turn",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "The fix needs testing"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Budget approval is pending"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "The fix needs testing",
+        "revision": 2
+      },
+      {
+        "speaker": "A",
+        "text": "Budget approval is pending",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "two-speakers-yes",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Yes"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "B",
+            "text": "Yes"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Yes",
+        "revision": 2
+      },
+      {
+        "speaker": "B",
+        "text": "Yes",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "yes-intervening-turn",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Yes"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "b",
+            "speaker": "B",
+            "text": "No"
+          }
+        ]
+      },
+      {
+        "at": 200,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "c",
+            "speaker": "A",
+            "text": "Yes"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Yes",
+        "revision": 2
+      },
+      {
+        "speaker": "B",
+        "text": "No",
+        "revision": 2
+      },
+      {
+        "speaker": "A",
+        "text": "Yes",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "identical-real-turns-separated",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Please test API-17"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": []
+      },
+      {
+        "at": 200,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Please test API-17"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Please test API-17",
+        "revision": 2
+      },
+      {
+        "speaker": "A",
+        "text": "Please test API-17",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "intentional-repetition",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "No"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "No, no"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "No, no",
+        "revision": 2
+      }
+    ]
+  },
+  {
+    "id": "speaker-label-arrives",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": null,
+            "text": "Check this"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "Minh",
+            "text": "Check this"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "Minh",
+        "text": "Check this",
+        "revision": 2
+      }
+    ]
+  },
+  {
+    "id": "container-disappears",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Visible before loss"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": []
+      },
+      {
+        "at": 1800,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "new",
+            "speaker": "A",
+            "text": "New visible turn"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Visible before loss",
+        "revision": 2
+      },
+      {
+        "speaker": "A",
+        "text": "New visible turn",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "unicode-raw-whitespace",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": ""
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "  Không  đổi 15.5 ms\nAPI-17 — ✓  "
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "  Không  đổi 15.5 ms\nAPI-17 — ✓  ",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "caption-not-speaker-metadata",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "Client",
+            "text": "Minh:\nI will deploy"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "Client",
+        "text": "Minh:\nI will deploy",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "start-resume-prime",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "prime",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Old visible"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Old visible before resume"
+          }
+        ]
+      },
+      {
+        "at": 1200,
+        "op": "tick",
+        "container": "captions",
+        "blocks": []
+      },
+      {
+        "at": 1500,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "b",
+            "speaker": "B",
+            "text": "New turn"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "B",
+        "text": "New turn",
+        "revision": 1
+      }
+    ]
+  },
+  {
+    "id": "rolling-text-window",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "one two three four five six"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "three four five six seven eight"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "one two three four five six seven eight",
+        "revision": 2
+      }
+    ]
+  },
+  {
+    "id": "similar-concurrent-turns",
+    "provenance": "synthetic",
+    "operations": "snapshot records add/edit/remove/replacement by node key; tick advances stable heuristic",
+    "steps": [
+      {
+        "at": 0,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Please test API-17"
+          }
+        ]
+      },
+      {
+        "at": 100,
+        "op": "update",
+        "container": "captions",
+        "blocks": [
+          {
+            "key": "a",
+            "speaker": "A",
+            "text": "Please test API-17"
+          },
+          {
+            "key": "b",
+            "speaker": "A",
+            "text": "Please test API-17"
+          }
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "speaker": "A",
+        "text": "Please test API-17",
+        "revision": 1
+      },
+      {
+        "speaker": "A",
+        "text": "Please test API-17",
+        "revision": 1
+      }
+    ]
+  }
+]

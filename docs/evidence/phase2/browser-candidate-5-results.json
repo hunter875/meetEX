@@ -1,0 +1,253 @@
+{
+  "config": {
+    "configFile": "D:\\meetEX\\playwright.config.ts",
+    "rootDir": "D:/meetEX/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase2/browser-final-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/meetEX/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/meetEX/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "extension.spec.ts",
+      "file": "extension.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Genuine MV3 extension + real local backend; synthetic Meet/controlled AI",
+          "file": "extension.spec.ts",
+          "line": 16,
+          "column": 15,
+          "specs": [
+            {
+              "title": "UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13886,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-18T11:42:13.760Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-6e7cc1f0d88535cb93ec",
+              "file": "extension.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "SEC-06 provider key goes only to backend RAM; production key test never fakes success",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 354,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-18T11:42:32.969Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-17ff8c717e732863f0a3",
+              "file": "extension.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "CAP/TRN integrated worker and content script with calibrated synthetic Meet DOM",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1977,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-18T11:42:33.357Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-2d7f59d9f0381b34df5a",
+              "file": "extension.spec.ts",
+              "line": 73,
+              "column": 7
+            },
+            {
+              "title": "PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 53022,
+                      "error": {
+                        "message": "Error: Cannot write headers after they are sent to the client",
+                        "stack": "Error: Cannot write headers after they are sent to the client\n    at ClientRequest.<anonymous> (D:\\meetEX\\e2e\\extension.spec.ts:25:239)",
+                        "location": {
+                          "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                          "column": 239,
+                          "line": 25
+                        },
+                        "snippet": "  23 |     worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');extensionId=worker.url().split('/')[2];\n  24 |     // Test-only transparent proxy: drop WS transport without restarting the backend or mocking ACKs.\n> 25 |     proxy=createServer((req,res)=>{const upstream=forwardHTTP({hostname:'127.0.0.1',port:18765,path:req.url,method:req.method,headers:req.headers},r=>{res.writeHead(r.statusCode||502,r.headers);r.pipe(res);});upstream.on('error',()=>{res.writeHead(502);res.end();});req.pipe(upstream);});\n     |                                                                                                                                                                                                                                               ^\n  26 |     proxy.on('upgrade',(req,client,head)=>{if(transportBlocked){client.destroy();return;}transportClients.add(client);const upstream=connectTCP(18765,'127.0.0.1',()=>{upstream.write(`${req.method} ${req.url} HTTP/1.1\\r\\n`+req.rawHeaders.reduce((s,h,i)=>s+h+(i%2?'\\r\\n':': '),'')+'\\r\\n');if(head.length)upstream.write(head);client.pipe(upstream);upstream.pipe(client);});client.on('close',()=>{transportClients.delete(client);upstream.destroy();});client.on('error',()=>upstream.destroy());upstream.on('error',()=>client.destroy());upstream.on('close',()=>client.destroy());});\n  27 |     await new Promise<void>(resolve=>proxy.listen(8765,'127.0.0.1',resolve));\n  28 |     backend=spawn(path.resolve('.venv/Scripts/python.exe'),['-m','uvicorn','phase2_server:app','--app-dir','e2e','--host','127.0.0.1','--port','18765','--workers','1'],{cwd:process.cwd(),env:{...process.env,MEET_DATA_DIR:dataDir,MEET_EXTENSION_ID:extensionId,MEET_DEV_ORIGIN:'',DEEPSEEK_API_KEY:''},windowsHide:true});"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                            "column": 239,
+                            "line": 25
+                          },
+                          "message": "Error: Cannot write headers after they are sent to the client\n\n  23 |     worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');extensionId=worker.url().split('/')[2];\n  24 |     // Test-only transparent proxy: drop WS transport without restarting the backend or mocking ACKs.\n> 25 |     proxy=createServer((req,res)=>{const upstream=forwardHTTP({hostname:'127.0.0.1',port:18765,path:req.url,method:req.method,headers:req.headers},r=>{res.writeHead(r.statusCode||502,r.headers);r.pipe(res);});upstream.on('error',()=>{res.writeHead(502);res.end();});req.pipe(upstream);});\n     |                                                                                                                                                                                                                                               ^\n  26 |     proxy.on('upgrade',(req,client,head)=>{if(transportBlocked){client.destroy();return;}transportClients.add(client);const upstream=connectTCP(18765,'127.0.0.1',()=>{upstream.write(`${req.method} ${req.url} HTTP/1.1\\r\\n`+req.rawHeaders.reduce((s,h,i)=>s+h+(i%2?'\\r\\n':': '),'')+'\\r\\n');if(head.length)upstream.write(head);client.pipe(upstream);upstream.pipe(client);});client.on('close',()=>{transportClients.delete(client);upstream.destroy();});client.on('error',()=>upstream.destroy());upstream.on('error',()=>client.destroy());upstream.on('close',()=>client.destroy());});\n  27 |     await new Promise<void>(resolve=>proxy.listen(8765,'127.0.0.1',resolve));\n  28 |     backend=spawn(path.resolve('.venv/Scripts/python.exe'),['-m','uvicorn','phase2_server:app','--app-dir','e2e','--host','127.0.0.1','--port','18765','--workers','1'],{cwd:process.cwd(),env:{...process.env,MEET_DATA_DIR:dataDir,MEET_EXTENSION_ID:extensionId,MEET_DEV_ORIGIN:'',DEEPSEEK_API_KEY:''},windowsHide:true});\n    at ClientRequest.<anonymous> (D:\\meetEX\\e2e\\extension.spec.ts:25:239)"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-18T11:42:35.373Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\meetEX\\test-results\\extension-Genuine-MV3-exte-91f06-correlated-rendered-latency\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                        "column": 239,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "da119938d3268322a91b-45c772dcf96f91e5b058",
+              "file": "extension.spec.ts",
+              "line": 100,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-18T11:42:11.868Z",
+    "duration": 77302.84599999999,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

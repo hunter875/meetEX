@@ -1,0 +1,18 @@
+
+> meet-copilot@0.1.0 build
+> npm run build -w extension
+
+
+> @meet-copilot/extension@0.1.0 build
+> tsc --noEmit && vite build && node build-content.mjs
+
+src/background/index.ts(93,82): error TS18047: 'binding' is possibly 'null'.
+src/background/index.ts(93,124): error TS18047: 'binding' is possibly 'null'.
+src/background/index.ts(93,198): error TS18047: 'binding' is possibly 'null'.
+npm error Lifecycle script `build` failed with error:
+npm error code 2
+npm error path D:\meetEX\extension
+npm error workspace @meet-copilot/extension@0.1.0
+npm error location D:\meetEX\extension
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc --noEmit && vite build && node build-content.mjs

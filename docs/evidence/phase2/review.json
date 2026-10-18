@@ -1,0 +1,270 @@
+{
+  "result": "PASS automated scope; live validation pending",
+  "client_date": "2026-10-18",
+  "timezone": "America/Los_Angeles",
+  "branch": "codex/phase2-capture",
+  "base_commit": "c81a95b1c24726a1b1ebaa309bdd5d6890cb3833",
+  "initial_worktree": "clean",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.4",
+  "baseline": {
+    "backend": 219,
+    "frontend": 13
+  },
+  "final": {
+    "backend": 228,
+    "frontend": 56,
+    "browser": 4
+  },
+  "before_product_failures": [
+    "synthetic replay: numeric-task-correction",
+    "synthetic replay: capital-punctuation-short",
+    "synthetic replay: replacement-with-shifted-slot",
+    "synthetic replay: recycled-node-new-turn",
+    "synthetic replay: speaker-label-arrives",
+    "synthetic replay: unicode-raw-whitespace",
+    "synthetic replay: caption-not-speaker-metadata",
+    "synthetic replay: rolling-text-window"
+  ],
+  "before_harness_note": "The first positive control mistakenly selected a passing negation case. Corrected to the unchanged failing numeric case; original raw failure is retained.",
+  "replay_provenance": "18 synthetic snapshots, production reducer + 8 DOM tests; not captured/live Meet data",
+  "faults": [
+    {
+      "outage_ms": 5000,
+      "transcript_recovered": true,
+      "unacked": 0
+    },
+    {
+      "outage_ms": 20000,
+      "transcript_recovered": true,
+      "unacked": 0
+    }
+  ],
+  "backend_latency_groups": {
+    "manual/cold/keyword/real/ready": {
+      "request_n": 1,
+      "provider": {
+        "n": 1,
+        "median_ms": 10.276100016199052,
+        "p95_ms": 10.276100016199052,
+        "max_ms": 10.276100016199052
+      },
+      "validation": {
+        "n": 1,
+        "median_ms": 1.0134000331163406,
+        "p95_ms": 1.0134000331163406,
+        "max_ms": 1.0134000331163406
+      },
+      "stable_to_scheduled": {
+        "n": 1,
+        "median_ms": 679.6305000316352,
+        "p95_ms": 679.6305000316352,
+        "max_ms": 679.6305000316352
+      },
+      "missing_render_n": 0
+    },
+    "manual/warm/keyword/real/ready": {
+      "request_n": 3,
+      "provider": {
+        "n": 3,
+        "median_ms": 4.050799994729459,
+        "p95_ms": 4.060900013428181,
+        "max_ms": 4.060900013428181
+      },
+      "validation": {
+        "n": 3,
+        "median_ms": 1.1382000520825386,
+        "p95_ms": 1.3031000271439552,
+        "max_ms": 1.3031000271439552
+      },
+      "stable_to_scheduled": {
+        "n": 2,
+        "median_ms": 1034.7195500216912,
+        "p95_ms": 1151.64310002001,
+        "max_ms": 1151.64310002001
+      },
+      "missing_render_n": 1
+    },
+    "manual/warm/keyword/real/error": {
+      "request_n": 1,
+      "provider": {
+        "n": 1,
+        "median_ms": 3.31880000885576,
+        "p95_ms": 3.31880000885576,
+        "max_ms": 3.31880000885576
+      },
+      "validation": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "max_ms": null
+      },
+      "stable_to_scheduled": {
+        "n": 1,
+        "median_ms": 1387.2647000243887,
+        "p95_ms": 1387.2647000243887,
+        "max_ms": 1387.2647000243887
+      },
+      "missing_render_n": 1
+    },
+    "manual/warm/keyword/real/stale": {
+      "request_n": 1,
+      "provider": {
+        "n": 1,
+        "median_ms": 809.3604000168853,
+        "p95_ms": 809.3604000168853,
+        "max_ms": 809.3604000168853
+      },
+      "validation": {
+        "n": 1,
+        "median_ms": 0.6658999482169747,
+        "p95_ms": 0.6658999482169747,
+        "max_ms": 0.6658999482169747
+      },
+      "stable_to_scheduled": {
+        "n": 1,
+        "median_ms": 1443.4708000044338,
+        "p95_ms": 1443.4708000044338,
+        "max_ms": 1443.4708000044338
+      },
+      "missing_render_n": 1
+    },
+    "manual/warm/keyword/real/cancelled": {
+      "request_n": 1,
+      "provider": {
+        "n": 1,
+        "median_ms": 42.28489997331053,
+        "p95_ms": 42.28489997331053,
+        "max_ms": 42.28489997331053
+      },
+      "validation": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "max_ms": null
+      },
+      "stable_to_scheduled": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "max_ms": null
+      },
+      "missing_render_n": 1
+    },
+    "auto/warm/keyword/real/ready": {
+      "request_n": 1,
+      "provider": {
+        "n": 1,
+        "median_ms": 3.592599998228252,
+        "p95_ms": 3.592599998228252,
+        "max_ms": 3.592599998228252
+      },
+      "validation": {
+        "n": 1,
+        "median_ms": 2.8202999965287745,
+        "p95_ms": 2.8202999965287745,
+        "max_ms": 2.8202999965287745
+      },
+      "stable_to_scheduled": {
+        "n": 1,
+        "median_ms": 2008.8213999988511,
+        "p95_ms": 2008.8213999988511,
+        "max_ms": 2008.8213999988511
+      },
+      "missing_render_n": 0
+    }
+  },
+  "extension_latency": {
+    "observed_to_ack_ms": {
+      "n": 15,
+      "median_ms": 1044.300000011921,
+      "p95_ms": 30879.30000001192,
+      "max_ms": 30879.30000001192
+    },
+    "stable_to_schedule_received_ms": {
+      "n": 6,
+      "median_ms": 1280.449999988079,
+      "p95_ms": 2022,
+      "max_ms": 2022
+    },
+    "observed_to_rendered_notification_ms": {
+      "n": 4,
+      "median_ms": 2211.5999999940395,
+      "p95_ms": 3205.099999964237,
+      "max_ms": 3205.099999964237
+    },
+    "stable_to_rendered_notification_ms": {
+      "n": 4,
+      "median_ms": 1149.7000000178814,
+      "p95_ms": 2107,
+      "max_ms": 2107
+    }
+  },
+  "render_groups": {
+    "manual/ready": {
+      "observed_to_rendered_notification_ms": {
+        "n": 3,
+        "median_ms": 2100.300000011921,
+        "p95_ms": 2322.899999976158,
+        "max_ms": 2322.899999976158
+      },
+      "stable_to_rendered_notification_ms": {
+        "n": 3,
+        "median_ms": 1038.4000000357628,
+        "p95_ms": 1261,
+        "max_ms": 1261
+      }
+    },
+    "auto/ready": {
+      "observed_to_rendered_notification_ms": {
+        "n": 1,
+        "median_ms": 3205.099999964237,
+        "p95_ms": 3205.099999964237,
+        "max_ms": 3205.099999964237
+      },
+      "stable_to_rendered_notification_ms": {
+        "n": 1,
+        "median_ms": 2107,
+        "p95_ms": 2107,
+        "max_ms": 2107
+      }
+    }
+  },
+  "latency_note": "MockTransport SSE only. Extension one content-process monotonic clock includes message delivery. Render notification follows two rAF callbacks, not independent pixel/speech ground truth. Small samples; nearest-rank p95; no SLA. Missing render includes closed/pinned panel, errors/cancellations and unmatched revisions.",
+  "provider_paid_calls": 0,
+  "live_gate": "NOT TESTED",
+  "semantic_regression": "PASS",
+  "hash_format": "utf8-lf",
+  "source_hashes": {
+    "backend/app/main.py": "89acc07644c071163b560425905a213091d32c8ae20a873e080950a41b37ee6a",
+    "backend/app/models.py": "764101adeb28dd3cc0d48bffa8d458fc2b12477d377109bbeb23907e5364ceee",
+    "backend/app/service.py": "aa81f3db3fdb3f903d34d94448128aeeb4f2cd0f769f54d4e29956f7a1ac5aee",
+    "backend/app/storage.py": "49894bc57cbfa5283d110931bc5013eb908007bc4ae91228d78ee44ddbac3a9a",
+    "backend/tests/test_phase2_capture.py": "753deceb3536384cd182cdddc82531de2694886a9367d86f296d5ab02a68385b",
+    "e2e/extension.spec.ts": "bbe7d2d7d8d240423f699c2790ddc65d408a6f27285cc0e3a30713f5198afd3f",
+    "e2e/phase2_server.py": "c48588ca4ce2534f5b7a3bd30b8da7546bb38b2b84c5a415d36a656ab444b4ef",
+    "extension/src/api-schema.d.ts": "e272d6beb5a10ee4ac1531ce0d523d7136eaae7c373f711bd960fe259338a6f2",
+    "extension/src/background/index.ts": "6a1c5a774fbd538ced30da969fd53de671a599f294c86b307d0b6f2fdfc7b4ea",
+    "extension/src/background/outbox.ts": "275f6c200a72303e8a4fb7b9678b85ff5af07ca3f13c088ce0cd13ca38320408",
+    "extension/src/content/caption-reducer.ts": "95037444b4f97ebc463483e96ca409a329fafa328573e0d200f1acb531c8677a",
+    "extension/src/content/capture-timing.ts": "355b10276dabcacf3e9f1533f4e4a553e05f5894ed8d1b3e58755dd1f4e057c6",
+    "extension/src/content/index.ts": "bea39284504bce68ab1f1f49c8c0944fa142a7fcc0a55b06762dd15f13608b34",
+    "extension/src/content/meet-adapter.ts": "62c432adfec9385d16b730cc68143e052d9b0e464e3a17299d77dd979a96eefa",
+    "extension/src/ui/api.tsx": "88a4a51c8f0353642c691764e5bb85f46c066dcc014f8d6e86980a30d73988b9",
+    "extension/src/ui/live.tsx": "17221cd0bb8bba8e013af78857ca426d802c964e4de47def8f8eae093dbf6a3a",
+    "extension/tests/legacy/caption-reducer.ts": "553aec128a91e4323d798870ef1f3d46b3da5af6f1296ff8c0aaf42b9b2fa881",
+    "extension/tests/phase2-dom.test.ts": "d8a0a9a1780999c38b9faaca7a2ef654bd3e1b888b35a7864eab7848aedb5c9b",
+    "extension/tests/phase2-replay.test.ts": "3945743519741c445272f0c6982341136aa98fcf2cf6d0fda6e271136ba6e81a",
+    "extension/tests/phase2-timing.test.ts": "507331ab5a5b973254771d21373a3ced496bbfdcb37c55ab3f20a20da65d7355",
+    "extension/tests/phase2-transport.test.ts": "6bdfb1be1b3c82203f6eb3a4cf41e8649343fa85893e75ae2900bccf60a0bb1c",
+    "fixtures/phase2/caption-replay.json": "b5f408ad95bf83a8714b27a53c63a7512f0c0d523b8371abfe06aa957ed6af68",
+    "fixtures/phase2/live-result-template.json": "2441e00277375baf0720b683d8511832ba33b74538bb11871b0730cf29f5e14b",
+    "playwright.config.ts": "52e570802e89492d19cd0d2376be892768feb5bdc2209e014d55c1e06c3c7791",
+    "scripts/caption-observation-recorder.js": "bb4532fe21fc5cbbb708686b8cc1f4a0b4190167a6d34e83c19be42c19720fee",
+    "scripts/check_docs.py": "891679e0b526394f1509f6ce65996aedff576a97d4224b7769260a8b69f99408",
+    "scripts/collect_phase2_evidence.py": "5ea0f0f35746cece3e869620eb638534c9251c34d076cce04a13464cea5e0ba2",
+    "scripts/documentation.py": "e257fc0c5f1c4695963740757cae04f79d63bc85a526dfbaa4198b524b675b9b",
+    "scripts/evaluate_phase1.py": "7a1e5b032fdefc5add1e7ba6c201de973b0b07027f0f8696a710791012600176",
+    "scripts/evaluate_phase2.py": "cc1c80afe84ee943589d31f127f569834ad0a350078dc5518672d790d17e780d"
+  }
+}

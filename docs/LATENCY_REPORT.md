@@ -65,3 +65,36 @@ Các test mới kiểm tra reuse/fresh credential/close pool, hủy stream, roun
 ## Phạm vi build sau khi thêm routing
 
 Các số đo trong báo cáo này là benchmark trước khi thêm [response routing](RESPONSE_ROUTING.md). Build mới có prompt theo luồng và preview/retrieval bổ sung; chưa chạy lại provider benchmark cho fast/explain/deep/clarify. Không suy số đo cũ thành SLA hoặc thời gian của các luồng mới.
+
+## Phase 2 — metric mới, provider thật chưa chạy lại
+
+Bảng DeepSeek phía trên là lịch sử. Phase 2 dùng Provider adapter + SSE MockTransport trong test, **0 paid calls**; không dùng số đo bên dưới để tuyên bố model đạt 1,5 s. [Định nghĩa clock/correlation](PHASE2_REPORT.md), [raw review theo nhóm](evidence/phase2/review.json). Error/cancelled được giữ trong request denominator; panel đóng/pinned hoặc revision không match có missing_render_n. Cold/warm chỉ việc tái dùng HTTP client; semantic mới và speech→rendered NOT TESTED.
+
+Mọi số sau là **milliseconds, synthetic**, keyword retrieval, Chromium 141/Windows 11. Provider intercepted không có TLS/model/network thật; n rất nhỏ, p95 nearest-rank thường bằng max. Manual gồm thời gian đợi trước khi trigger, Auto có heuristic stable + debounce hiện hành.
+
+| Phép đo | n | Median ms | p95 ms | Max ms |
+| --- | ---: | ---: | ---: | ---: |
+| observed_to_ack_ms | 15 | 1044.30 | 30879.30 | 30879.30 |
+| stable_to_schedule_received_ms | 6 | 1280.45 | 2022.00 | 2022.00 |
+| observed_to_rendered_notification_ms | 4 | 2211.60 | 3205.10 | 3205.10 |
+| stable_to_rendered_notification_ms | 4 | 1149.70 | 2107.00 | 2107.00 |
+
+ACK gồm cả outage 5/20 s và stable revisions (chờ heuristic); max 30,88 s trong bài mất mạng 20 s, có thêm backoff reconnect. Không gọi đây là latency bình thường hoặc speech→rendered.
+
+| Render group | n | Observed→render median / p95 / max ms | Stable→render median / p95 / max ms |
+| --- | ---: | --- | --- |
+| manual/ready | 3 | 2100.30 / 2322.90 / 2322.90 | 1038.40 / 1261.00 / 1261.00 |
+| auto/ready | 1 | 3205.10 / 3205.10 / 3205.10 | 2107.00 / 2107.00 / 2107.00 |
+
+Tất cả 8 request của phiên Phase 2: 5 ready, 1 stale, 1 error, 1 cancelled. Có 4 rendered notification tương quan; 4 request không có render gồm 1 ready, stale, error và cancelled. Không biến những mẫu thiếu này thành zero hoặc loại khỏi denominator.
+
+| Request group (trigger / client / retrieval / code branch / outcome) | Request n | Provider ms: n, median / p95 / max | Validation ms: n, median / p95 / max | Không có render |
+| --- | ---: | --- | --- | ---: |
+| manual/cold/keyword/real/ready | 1 | 1, 10.276 / 10.276 / 10.276 | 1, 1.013 / 1.013 / 1.013 | 0 |
+| manual/warm/keyword/real/ready | 3 | 3, 4.051 / 4.061 / 4.061 | 3, 1.138 / 1.303 / 1.303 | 1 |
+| manual/warm/keyword/real/error | 1 | 1, 3.319 / 3.319 / 3.319 | 0, — | 1 |
+| manual/warm/keyword/real/stale | 1 | 1, 809.360 / 809.360 / 809.360 | 1, 0.666 / 0.666 / 0.666 | 1 |
+| manual/warm/keyword/real/cancelled | 1 | 1, 42.285 / 42.285 / 42.285 | 0, — | 1 |
+| auto/warm/keyword/real/ready | 1 | 1, 3.593 / 3.593 / 3.593 | 1, 2.820 / 2.820 / 2.820 | 0 |
+
+`real` trong group là nhánh Provider class của app; môi trường này **MockTransport**. Request error có provider timing nhưng không validation/card; cancelled đo đến cancellation, không phải thời gian hoàn tất model. Request stale provider được cố ý delay 0,8 s. Stable→scheduled backend có raw n/median/p95/max từng nhóm trong review; Auto warm n=1 là 2008,82 ms, gồm debounce 2 s. Provider thật, semantic mới và speech ground truth: **NOT TESTED**.

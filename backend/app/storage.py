@@ -125,6 +125,8 @@ class Storage:
             if action == 'resume' and meeting['status'] in ('paused', 'interrupted'):
                 self.ensure_session_slot(exclude_id=id)
             with db:
+                if body.get('reason')=='interrupted_pending_discarded':
+                    self.gap(db,id,'interrupted_pending_discarded',certainty='possible')
                 if meeting['status'] == 'ended' and action == 'end':
                     pass
                 elif action == 'pause' and meeting['status'] == 'active':
@@ -161,13 +163,13 @@ class Storage:
                 if row and row['epoch'] != e['capture_epoch']:raise AppError('SEGMENT_SCOPE','Segment belongs to a different capture epoch',409)
                 if not row or e['revision']>row['revision']:
                     old=json.loads(row['payload']) if row else {}
-                    if old.get('text')!=e['text'] and e['segment_id'] in m.get('confirmed_segment_ids',[]):
+                    if (old.get('text')!=e['text'] or old.get('speaker')!=e['speaker_label']) and e['segment_id'] in m.get('confirmed_segment_ids',[]):
                         m['confirmed_segment_ids'].remove(e['segment_id']);m['memory_revision_warnings']=m.get('memory_revision_warnings',0)+1
-                    seg=dict(id=e['segment_id'],capture_epoch=e['capture_epoch'],revision=e['revision'],speaker=e['speaker_label'],text=' '.join(e['text'].split()),stable=e['stable'],observed_from=old.get('observed_from',e['observed_at']),observed_to=e['observed_at'])
+                    seg=dict(id=e['segment_id'],capture_epoch=e['capture_epoch'],revision=e['revision'],speaker=e['speaker_label'],text=e['text'],stable=e['stable'],observed_from=old.get('observed_from',e['observed_at']),observed_to=e['observed_at'])
                     db.execute('INSERT INTO caption_segments VALUES(?,?,?,?,?) ON CONFLICT(meeting_id,id) DO UPDATE SET revision=excluded.revision,payload=excluded.payload',(seg['id'],id,e['capture_epoch'],e['revision'],dumps(seg)))
                     m['transcript_revision']+=1;m['last_caption_at']=e['observed_at'];changed=True
                     for s in decoded(db.execute('SELECT payload FROM suggestions WHERE meeting_id=?',(id,))):
-                        if any(x['id']==seg['id'] and x['text']!=seg['text'] for x in s['snapshot']['segments']+s['snapshot'].get('memory',[])):
+                        if any(x['id']==seg['id'] and (x['text']!=seg['text'] or x.get('speaker')!=seg['speaker']) for x in s['snapshot']['segments']+s['snapshot'].get('memory',[])):
                             s['stale']=True;db.execute('UPDATE suggestions SET payload=? WHERE id=?',(dumps(s),s['id']))
             ack=dict(type='caption.ack',protocol_version=1,session_id=id,event_id=e['event_id'],server_revision=m['transcript_revision'],applied=changed,ignored_reason=None if m['status']=='active' else m['status'])
             self.save_meeting(db,m)

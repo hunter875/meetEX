@@ -1,6 +1,6 @@
 # Tài liệu Meet Copilot
 
-Snapshot đưa lên repository private [hunter875/meetEX](https://github.com/hunter875/meetEX). Ứng dụng chạy local; chưa nghiệm thu Google Meet thật. Thư mục spec giữ nguyên tài liệu đầu vào, không dùng trạng thái TODO trong đó thay cho kết quả triển khai hiện tại.
+Snapshot trong [hunter875/meetEX](https://github.com/hunter875/meetEX), GitHub báo public khi kiểm tra 2026-10-18. Ứng dụng chạy local; chưa nghiệm thu Google Meet thật. Thư mục spec giữ nguyên tài liệu đầu vào, không dùng trạng thái TODO trong đó thay cho kết quả triển khai hiện tại.
 
 ## Bắt đầu và kiến trúc
 
@@ -13,7 +13,7 @@ Snapshot đưa lên repository private [hunter875/meetEX](https://github.com/hun
 ## Trạng thái và kiểm tra
 
 - [Trạng thái triển khai](IMPLEMENTATION_STATUS.md), [truy vết yêu cầu](TRACEABILITY.md), [báo cáo nghiệm thu](ACCEPTANCE_REPORT.md).
-- Kết quả đã ghi: **219 backend tests, 13 frontend unit tests, 3 browser E2E pass**. E2E dùng MV3/backend thật, DOM Meet synthetic và AI controlled; không thay cho nghiệm thu Meet/provider thật.
+- Phase 2: **228 backend tests, 56 frontend unit tests, 4 browser E2E pass**. [Báo cáo A–G](PHASE2_REPORT.md), [review](evidence/phase2/review.json), [runbook live](PHASE2_LIVE_RUNBOOK.md). MV3/backend thật, DOM synthetic và provider intercepted; không thay Meet/provider thật.
 - [Response routing](RESPONSE_ROUTING.md): local rules-v1, 5 luồng, preview/lý do, chọn mode thủ công, gate xác minh; [34/34 fixture](evidence/routing-review.json) là phạm vi synthetic, không phải accuracy tổng quát.
 - [Đánh giá hệ thống](SYSTEM_ASSESSMENT.md), [giới hạn](LIMITATIONS.md), [các chức năng ưu tiên tiếp theo](NEXT_PRIORITIES.md).
 

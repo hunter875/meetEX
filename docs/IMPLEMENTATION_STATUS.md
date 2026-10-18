@@ -36,3 +36,5 @@ Cập nhật giai đoạn 1: 2026-10-18 · baseline bàn giao 2026-10-17 · Wind
 Bổ sung response routing: IMPLEMENTED trong backend/UI, quy tắc local 5 luồng và API preview. Xem [RESPONSE_ROUTING.md](RESPONSE_ROUTING.md); chưa nghiệm thu Meet/provider thật cho luồng mới. [Ưu tiên tiếp theo](NEXT_PRIORITIES.md).
 
 Giai đoạn 1: A–E PASS trong phạm vi guard đã thử, không mở rộng phạm vi sản phẩm. REQ-01/05/13/14/19/20/21/28/30 có thêm regression tests cho slot phiên, claim và pipeline. Xem [PHASE1_REPORT.md](PHASE1_REPORT.md).
+
+Phase 2: replay/capture/recovery/telemetry đã triển khai; [A–G và giới hạn](PHASE2_REPORT.md), [runbook live](PHASE2_LIVE_RUNBOOK.md). 228 backend / 56 frontend / 4 browser; Meet thật NOT TESTED.

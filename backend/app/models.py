@@ -226,6 +226,43 @@ class AISnapshot(DTO):
     input_hash:str
     routing:RoutingDecision|None=None
 
+class CaptionAckDTO(DTO):
+    type: Literal['caption.ack']
+    protocol_version: Literal[1]
+    session_id: str
+    event_id: str
+    server_revision: int
+    applied: bool
+    ignored_reason: str | None = None
+    processing_ms: float | None = None
+    backend_applied: bool | None = None
+    segment_id: str | None = None
+    segment_revision: int | None = None
+
+class CaptureGapAckDTO(DTO):
+    type: Literal['capture.gap.ack']
+    protocol_version: Literal[1]
+    session_id: str
+    event_id: str
+    reason: str
+
+class CaptureDiagnosticsDTO(DTO):
+    backend_connected: bool
+    content_alive: bool
+    adapter_status: str
+    pending_gap: bool
+
+class RequestTimingDTO(DTO):
+    trigger: str
+    temperature: str
+    retrieval: str
+    provider_mode: str
+    outcome: str
+    marks: list[dict[str, Any]]
+    provider_ms: float = 0
+    validation_ms: float = 0
+    stable_to_scheduled_ms: float | None = None
+
 class SuggestionDTO(DTO):
     id:str
     request_id:str
@@ -236,6 +273,7 @@ class SuggestionDTO(DTO):
     stale:bool
     automatic:bool
     duration_ms:float
+    timing:RequestTimingDTO|None=None
 
 class ReportDTO(DTO):
     id:str
@@ -273,6 +311,7 @@ class AIRequestDTO(DTO):
     status:str
     error:dict[str,Any]|None
     snapshot:AISnapshot
+    timing:RequestTimingDTO|None=None
 
 class SnapshotDTO(MeetingDTO):
     segments:list[SegmentDTO]

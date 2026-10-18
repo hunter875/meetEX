@@ -2,9 +2,9 @@
 
 Trợ lý dành cho developer Việt Nam họp với khách nói tiếng Anh: đọc **phụ đề Google Meet**, truy xuất nguồn dự án local, gợi ý câu tiếng Anh A2–B1, giải thích tiếng Việt và soạn báo cáo có bằng chứng.
 
-Repository: [hunter875/meetEX](https://github.com/hunter875/meetEX) (private). [Mục lục tài liệu và trạng thái hiện tại](docs/README.md).
+Repository: [hunter875/meetEX](https://github.com/hunter875/meetEX) (GitHub báo public khi kiểm tra 2026-10-18). [Mục lục tài liệu và trạng thái hiện tại](docs/README.md).
 
-Snapshot kiểm tra hiện tại: **219 backend tests, 13 frontend tests, 3 browser E2E đều pass**; bộ phân loại local đạt **34/34 fixture Anh–Việt**. Đây không phải accuracy họp thật. Bộ phân loại đã có 5 luồng; bảng phương án có trọng số và kiểm tra sai nghĩa đầy đủ còn trong [danh sách ưu tiên](docs/NEXT_PRIORITIES.md).
+Snapshot Phase 2: **228 backend tests, 56 frontend tests, 4 browser E2E pass**, có replay caption, recovery 5/20 giây và timing tương quan. [Báo cáo A–G và giới hạn](docs/PHASE2_REPORT.md); [Meet thật còn NOT TESTED](docs/PHASE2_LIVE_RUNBOOK.md). Bộ phân loại local đạt **34/34 fixture Anh–Việt**, chưa phải accuracy họp thật. Bảng phương án trọng số còn trong [danh sách ưu tiên](docs/NEXT_PRIORITIES.md).
 
 Có năm màn hình: **Dự án & dữ liệu, Đang họp, Báo cáo, Lịch sử, Cài đặt**. Chrome MV3 + React/TypeScript/Vite; FastAPI một worker; SQLite WAL/FTS5; E5 CPU tùy chọn. Không cần Docker/GPU. Không thu audio, tự nói, gửi chat/email, chạy source/SQL hoặc kết nối production DB.
 
@@ -20,7 +20,7 @@ Trạng thái triển khai và kết quả chạy thực tế ở [docs/ACCEPTAN
 
 Mở PowerShell tại thư mục dự án:
 
-Nếu lấy từ GitHub lần đầu, đăng nhập tài khoản có quyền truy cập private repo, rồi clone:
+Nếu lấy từ GitHub lần đầu, clone:
 
 ```powershell
 git clone https://github.com/hunter875/meetEX.git

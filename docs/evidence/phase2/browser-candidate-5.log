@@ -1,0 +1,37 @@
+
+Running 4 tests using 1 worker
+
+(node:8252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\extension.spec.ts:34:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export (13.9s)
+  ok 2 e2e\extension.spec.ts:68:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › SEC-06 provider key goes only to backend RAM; production key test never fakes success (354ms)
+  ok 3 e2e\extension.spec.ts:73:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › CAP/TRN integrated worker and content script with calibrated synthetic Meet DOM (2.0s)
+  x  4 e2e\extension.spec.ts:100:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency (53.0s)
+
+
+  1) e2e\extension.spec.ts:100:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency 
+
+    Error: Cannot write headers after they are sent to the client
+
+      23 |     worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');extensionId=worker.url().split('/')[2];
+      24 |     // Test-only transparent proxy: drop WS transport without restarting the backend or mocking ACKs.
+    > 25 |     proxy=createServer((req,res)=>{const upstream=forwardHTTP({hostname:'127.0.0.1',port:18765,path:req.url,method:req.method,headers:req.headers},r=>{res.writeHead(r.statusCode||502,r.headers);r.pipe(res);});upstream.on('error',()=>{res.writeHead(502);res.end();});req.pipe(upstream);});
+         |                                                                                                                                                                                                                                               ^
+      26 |     proxy.on('upgrade',(req,client,head)=>{if(transportBlocked){client.destroy();return;}transportClients.add(client);const upstream=connectTCP(18765,'127.0.0.1',()=>{upstream.write(`${req.method} ${req.url} HTTP/1.1\r\n`+req.rawHeaders.reduce((s,h,i)=>s+h+(i%2?'\r\n':': '),'')+'\r\n');if(head.length)upstream.write(head);client.pipe(upstream);upstream.pipe(client);});client.on('close',()=>{transportClients.delete(client);upstream.destroy();});client.on('error',()=>upstream.destroy());upstream.on('error',()=>client.destroy());upstream.on('close',()=>client.destroy());});
+      27 |     await new Promise<void>(resolve=>proxy.listen(8765,'127.0.0.1',resolve));
+      28 |     backend=spawn(path.resolve('.venv/Scripts/python.exe'),['-m','uvicorn','phase2_server:app','--app-dir','e2e','--host','127.0.0.1','--port','18765','--workers','1'],{cwd:process.cwd(),env:{...process.env,MEET_DATA_DIR:dataDir,MEET_EXTENSION_ID:extensionId,MEET_DEV_ORIGIN:'',DEEPSEEK_API_KEY:''},windowsHide:true});
+        at ClientRequest.<anonymous> (D:\meetEX\e2e\extension.spec.ts:25:239)
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\extension-Genuine-MV3-exte-91f06-correlated-rendered-latency\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\extension-Genuine-MV3-exte-91f06-correlated-rendered-latency\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e\extension.spec.ts:100:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency 
+  3 passed (1.3m)

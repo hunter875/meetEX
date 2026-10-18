@@ -1,6 +1,6 @@
-# Caption adapter · meet-calibrated-v1
+# Caption adapter · calibrated profile + Phase 2 capture
 
-**Chưa kiểm chứng trên Meet thật.** Đã kiểm tra reducer/DOM synthetic và nạp MV3 thật trong Chromium 141.0.7390.37 trên Windows. Evidence nằm trong `evidence/extension-tests.json`, `evidence/e2e-results.json`, `evidence/capture-fixture.json`.
+**Chưa kiểm chứng trên Meet thật.** Kết quả hiện tại: [Phase 2 A–G](PHASE2_REPORT.md), [56 frontend tests](evidence/phase2/frontend-final.json), [4 browser E2E](evidence/phase2/browser-final-results.json). Profile `meet-calibrated-v1` đang lưu vẫn tương thích; capture algorithm theo source commit Phase 2, default reducer version v2. Profile không chứng minh DOM Meet live.
 
 Không có selector production viết từ trí nhớ. Profile ban đầu rỗng → `unsupported_dom`. Khi người dùng chủ động chọn DOM đang hiển thị, extension tạo selector từ các element được chọn. Đây là adapter phụ thuộc giao diện, không phải API Google.
 
@@ -16,14 +16,16 @@ Profile synthetic dùng trong tests như `#captions .block .words` **chỉ nằm
 
 ## Hành vi
 
-- MutationObserver chỉ quan sát caption root; debounce 70 ms. Watchdog tìm lại root mỗi 500 ms; timer ổn định riêng 100 ms. Stable mặc định sau 1000 ms không đổi, là heuristic, không phải final flag Google.
+- MutationObserver chỉ quan sát caption root, đọc ngay mỗi batch đã giao. Watchdog tìm lại root mỗi 500 ms; timer ổn định riêng 100 ms. Stable mặc định sau 1000 ms không đổi, là heuristic, không phải final flag Google. Stop/off disconnect observer; stop dọn timer, không để instance calibration cũ tiếp tục chạy.
 - Cùng turn sửa text → cùng segment ID, revision tăng. Event ID giữ nguyên khi retry; capture_epoch thay khi document/adapter khởi động lại. Speaker đổi hoặc turn mới rõ ràng → segment mới. Không global dedup text.
-- Node render lại ở cùng visible slot được đối chiếu với speaker/text hiện tại; node bị recycle sau stable có heuristic turn mới. Hai câu y hệt liên tiếp từ cùng speaker không có DOM dấu hiệu phân biệt vẫn có thể mơ hồ.
+- Node replacement đối chiếu unique candidate vừa mất, độc lập slot; kết hợp speaker, timing và lexical anchors, không dùng similarity một mình. Cửa sổ text có overlap giữ prefix đã thấy, raw text không bị normalize. [Ngưỡng/giới hạn chưa hiệu chuẩn live](PHASE2_REPORT.md). Hai câu y hệt không có lifecycle signal và correction ngoài phần còn hiện vẫn mơ hồ.
 - Mất container → reattach, status unknown/unsupported và gap. Im lặng không suy ra captions_off. Toggle chỉ được coi off khi profile có selector được quan sát và `aria-pressed=false`; calibration cơ bản không tự đoán toggle/meeting-left.
 - Adapter heartbeat 20 giây, độc lập WebSocket heartbeat. Mất heartbeat adapter thì capture unknown/gap; backend connected không có nghĩa caption đang thu.
 - Worker kiểm tra sender extension ID, Meet origin, tab, document và meeting path; DOM không được chọn project/session hoặc fetch URL tùy ý.
-- Chuyển khỏi Meet, đóng tab hoặc đổi meeting làm interrupted. Reload cùng meeting rebind document và ghi possible gap. Đóng panel không dừng content script.
-- Outbox RAM giới hạn 500 events / 5 MiB. ACK rồi mới xóa, replay cùng event ID. Overflow hoặc End không ACK trong 2 giây có gap. Backend restart yêu cầu Resume; các pending không an toàn khi interrupted được bỏ với cảnh báo.
+- Chuyển khỏi Meet, đóng tab, đổi meeting hoặc reload document làm interrupted. Reload cập nhật document nhưng đòi Resume rõ ràng, bỏ pending cũ kèm warning và prime caption đang hiện. Đóng panel không dừng content script. Backend chặn socket document/connection cũ sau rebind.
+- Outbox RAM giới hạn 500 events / 5 MiB. ACK rồi mới xóa, retry cùng ID sau ≥2 s cả khi socket còn sống. Overflow/End thiếu ACK có gap. Gap mới có ID/ACK/retry riêng. Pause không mang pending chưa ACK sang Resume; bỏ có reason trong backend. Backend restart local yêu cầu Resume; RAM mất, không chuyển disk.
+
+UI hiển thị backend connected, content alive, adapter status, pending và nguy cơ thiếu dữ liệu riêng. Heartbeat không chứng minh selector đúng. [Runbook 15–20 phút, recorder và form](PHASE2_LIVE_RUNBOOK.md) dùng để đóng gate thật.
 
 ## Checklist đóng gate Meet thật
 

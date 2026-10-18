@@ -1,0 +1,84 @@
+{
+  "client_date": "2026-10-18",
+  "timezone": "America/Los_Angeles",
+  "cwd": "D:/meetEX",
+  "starting_branch": "codex/phase1-correctness",
+  "starting_commit": "c81a95b1c24726a1b1ebaa309bdd5d6890cb3833",
+  "starting_worktree": "clean",
+  "branch": "codex/phase2-capture",
+  "paid_provider_calls": 0,
+  "real_meet_sessions": 0,
+  "outbound_meeting_messages": 0,
+  "checks": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q --junitxml=docs/evidence/phase2/backend-final.xml",
+      "exit_code": 0,
+      "artifact": "backend-final.xml",
+      "result": "228 passed; includes full Phase 1 and Phase 2 regressions"
+    },
+    {
+      "command": "node node_modules/vitest/vitest.mjs run --root extension --maxWorkers=1 --minWorkers=1 --reporter=json --outputFile=../docs/evidence/phase2/frontend-final.json",
+      "exit_code": 0,
+      "artifact": "frontend-final.json",
+      "result": "56 passed"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit_code": 0,
+      "artifact": "typecheck-final.log"
+    },
+    {
+      "command": "npm run build",
+      "exit_code": 0,
+      "artifact": "build-final.log"
+    },
+    {
+      "command": "npm run contracts",
+      "exit_code": 0,
+      "artifact": "contracts-final.log"
+    },
+    {
+      "command": "node node_modules/@playwright/test/cli.js test",
+      "environment": {
+        "MEET_E2E_EVIDENCE_DIR": "docs/evidence/phase2/browser-final",
+        "MEET_E2E_RESULTS_FILE": "docs/evidence/phase2/browser-final-results.json"
+      },
+      "exit_code": 0,
+      "artifact": "browser-final-results.json",
+      "result": "4 passed; Chromium MV3, real FastAPI/SQLite, WS proxy outages 5/20 seconds, synthetic DOM and intercepted provider SSE"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/evaluate_phase1.py --output docs/evidence/phase2/semantic-regression.json --base-commit c81a95b1c24726a1b1ebaa309bdd5d6890cb3833 --starting-branch codex/phase1-correctness",
+      "exit_code": 0,
+      "artifact": "semantic-regression.json"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/evaluate_phase2.py",
+      "exit_code": 0,
+      "artifact": "review.json"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/documentation.py",
+      "exit_code": 0,
+      "result": "Generated current tables; original specs retained"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/check_docs.py",
+      "exit_code": 0,
+      "artifact": "documentation-qa.json"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/collect_phase2_evidence.py --help; node --check scripts/caption-observation-recorder.js",
+      "exit_code": 0,
+      "artifact": "collector-help.log",
+      "scope": "Help/syntax only; live helper was not run against a real meeting"
+    }
+  ],
+  "notes": [
+    "No external reference code copied into product; private .local clones ignored by Git.",
+    "Schema-only components and UI type import were added after the final capture E2E; subsequent full backend/frontend/build/contracts checks passed. Built UI JS hash main-s2q52cuN.js remained identical.",
+    "Baseline frontend and early browser commands initially wrote the legacy default result file. Own generated output was moved/copied to phase2 and legacy tracked files restored. No Phase 1/spec changes.",
+    "Final failed proxy harness log/JSON retained as browser-candidate-5; final E2E rerun passed after guarding headers on aborted HTTP requests.",
+    "Raw intermediate failures are retained; only named final artifacts support the current PASS claims."
+  ]
+}

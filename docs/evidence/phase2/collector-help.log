@@ -1,0 +1,12 @@
+usage: collect_phase2_evidence.py [-h] --meeting-id MEETING_ID
+                                  [--token-file TOKEN_FILE]
+                                  [--observations OBSERVATIONS]
+                                  [--output OUTPUT]
+
+options:
+  -h, --help            show this help message and exit
+  --meeting-id MEETING_ID
+  --token-file TOKEN_FILE
+  --observations OBSERVATIONS
+                        Optional manually collected DOM observation JSON
+  --output OUTPUT

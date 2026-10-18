@@ -32,3 +32,15 @@ Create/resume dùng cùng slot active/paused trên disk/RAM, lock một process/
 Các lỗi guard mới dùng cùng error envelope hiện có: AI_NUMERIC, AI_CLAIM, AI_UNVERIFIED; REPORT_NUMERIC, REPORT_CLAIM, REPORT_TASK, REPORT_PROPOSAL. AI_COMMITMENT/REPORT_DUE được siết theo task. Schema/ID/revision, routing và tối đa một repair vẫn giữ; lỗi cuối không có ready và không thay phiên bản user edit. Proposal không được gán confirmed/owner/deadline như fact.
 
 Input hash có salt nội bộ `bounded-evidence-v1`; timing không tham gia hash. Không tái dùng cache được duyệt bằng policy trước. Trích dẫn vẫn trỏ ID gốc; số liệu dùng excerpt thật, cam kết dùng các turn hỗ trợ được model cite trong snapshot. [Chi tiết phạm vi và evidence](PHASE1_REPORT.md).
+
+## Phase 2 — capture và timing
+
+`Caption.text` và segment text giữ nguyên whitespace/newline; không đổi field schema. Revision/speaker correction làm stale/bỏ memory confirmation liên quan. Reload document giờ interrupted, đòi Resume và không replay pending của document trước. API control reason `interrupted_pending_discarded` ghi gap khi pause/end bỏ event chưa ACK. Backend chỉ socket capture owner hiện tại được gửi caption/status, scope lỗi trả BINDING_SCOPE.
+
+WebSocket ACK caption thêm segment_id, segment_revision, backend_applied và processing_ms, đều additive. `backend_applied` là kết quả apply/idempotent ACK, không phải timestamp khác clock. capture.gap payload có event_id tùy chọn; client mới lưu/retry tới `capture.gap.ack {protocol_version,session_id,event_id,reason}`; backend dedup qua applied_events. Client cũ không có event_id vẫn hoạt động theo best effort.
+
+SuggestionDTO/AIRequestDTO thêm timing nullable mặc định null cho lịch sử cũ; RequestTimingDTO có trigger, temperature (client cold/warm), retrieval, provider_mode, outcome, marks (stage + offset_ms), provider_ms, validation_ms, stable_to_scheduled_ms optional. Metrics thêm latency_records RAM bounded 1000, gồm thất bại/cancel/supersede; không có transcript/key/token. OpenAPI và generated TypeScript đã tạo lại, contract check pass. Duration cùng perf_counter process, không so clock khác nhau.
+
+Extension ui.state thêm capture_diagnostics (backend_connected, content_alive, adapter_status, pending_gap), giữ fields cũ. Session RAM telemetry mới có meeting/event/segment revision/request ID và duration, không text; content clock tương quan chính xác epoch/revision, render notification sau 2 rAF. `captureTimings` cũ giữ emit-event→ACK, không trộn với observed→ACK mới. Xem [Phase 2](PHASE2_REPORT.md).
+
+Các component `CaptionAckDTO`, `CaptureGapAckDTO`, `CaptureDiagnosticsDTO` được export trong OpenAPI cùng request timing và generated TypeScript dù không có HTTP route riêng; UI dùng type diagnostics được sinh. WebSocket/extension fields vì vậy có schema và không phải chỉ prose.
