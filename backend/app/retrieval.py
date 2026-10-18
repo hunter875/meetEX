@@ -2,6 +2,13 @@ from __future__ import annotations
 import json
 import re
 import time
+import asyncio
+import sqlite3
+import threading
+from concurrent.futures import ThreadPoolExecutor
+from collections import OrderedDict
+from types import SimpleNamespace
+from pathlib import Path
 from .config import E5_MODEL,E5_REVISION
 from .errors import AppError
 
@@ -38,7 +45,49 @@ class Semantic:
         return self.model.encode('query: '+text,normalize_embeddings=True).tolist()
 
 class Retrieval:
-    def __init__(self,store,semantic):self.store=store;self.semantic=semantic;self.timings=[]
+    def __init__(self,store,semantic):
+        self.store=store;self.semantic=semantic;self.timings=[]
+        self._executor=None;self._inflight={};self._cache=OrderedDict();self._vectors=OrderedDict();self._vector_lock=threading.RLock();self.cache_hits=0
+    async def aclose(self):
+        if self._executor:
+            executor,self._executor=self._executor,None
+            await asyncio.to_thread(executor.shutdown,wait=True,cancel_futures=True)
+        self._cache.clear();self._vectors.clear()
+    async def search_async(self,project_id,query,limit=5):
+        began=time.perf_counter()
+        # Read metadata on the owning loop. The worker owns a separate read-only SQLite connection.
+        project=self.store.project(project_id);settings=self.store.settings()
+        sources=self.store.sources(project_id)
+        generation=tuple(sorted((s['id'],s['generation'],s.get('stale',False)) for s in sources))
+        key=(project_id,query,limit,generation,json.dumps(project['glossary'],sort_keys=True),settings['semantic_enabled'],self.semantic.ready)
+        if key in self._cache:
+            self.cache_hits+=1;value=json.loads(json.dumps(self._cache[key]));value['cache_hit']=True;self._cache.move_to_end(key);value['worker_duration_ms']=value['duration_ms'];value['duration_ms']=(time.perf_counter()-began)*1000;self.timings.append(value['duration_ms']);self.timings=self.timings[-1000:];return value
+        if key not in self._inflight:
+            if len(self._inflight)>=8:raise AppError('RETRIEVAL_BUSY','Retrieval capacity reached; retry shortly',503,True)
+            if self._executor is None:self._executor=ThreadPoolExecutor(max_workers=1,thread_name_prefix='meet-retrieval')
+            path=self.store.disk.execute('PRAGMA database_list').fetchone()['file']
+            def isolated():
+                db=sqlite3.connect(Path(path).as_uri()+'?mode=ro',uri=True);db.row_factory=sqlite3.Row
+                try:
+                    db.execute('BEGIN')
+                    source_rows={r['id']:json.loads(r['payload']) for r in db.execute('SELECT id,payload FROM sources WHERE project_id=?',(project_id,))}
+                    current_project=dict(db.execute('SELECT * FROM projects WHERE id=?',(project_id,)).fetchone());current_project['glossary']=json.loads(current_project['glossary'])
+                    view=SimpleNamespace(disk=db,project=lambda id:current_project,settings=lambda:settings,source=lambda id:source_rows[id])
+                    worker=Retrieval(view,self.semantic);worker._vectors=self._vectors;worker._vector_lock=self._vector_lock
+                    value=worker.search(project_id,query,limit);value['index_generation']={id:s['generation'] for id,s in source_rows.items()};return value
+                finally:db.close()
+            future=asyncio.get_running_loop().run_in_executor(self._executor,isolated)
+            self._inflight[key]=future
+            def completed(done):
+                self._inflight.pop(key,None)
+                if not done.cancelled() and done.exception() is None:
+                    value=done.result()
+                    if tuple(sorted(value['index_generation'].items()))==tuple(sorted((s['id'],s['generation']) for s in sources)):
+                        self._cache[key]=value;self._cache.move_to_end(key)
+                        while len(self._cache)>128:self._cache.popitem(last=False)
+            future.add_done_callback(completed)
+        result=json.loads(json.dumps(await asyncio.shield(self._inflight[key])));result['worker_duration_ms']=result['duration_ms'];result['duration_ms']=(time.perf_counter()-began)*1000;self.timings.append(result['duration_ms']);self.timings=self.timings[-1000:]
+        return result
     def search(self,project_id,query,limit=5):
         began=time.perf_counter();project=self.store.project(project_id);expanded=query
         for word,meaning in project['glossary'].items():
@@ -54,10 +103,28 @@ class Retrieval:
         if self.store.settings()['semantic_enabled'] and self.semantic.ready:
             import numpy as np
             q=np.array(self.semantic.query(expanded))
-            candidates=list(db.execute('SELECT * FROM chunks WHERE project_id=? AND vector IS NOT NULL',(project_id,)))
-            candidates.sort(key=lambda r:float(np.dot(q,json.loads(r['vector']))),reverse=True)
-            for n,r in enumerate(candidates[:40],1):
-                all_rows[r['id']]=dict(r);rank[r['id']]=rank.get(r['id'],0)+1/(60+n)
+            generations=tuple((r['source_id'],r['generation'],r['n']) for r in db.execute('SELECT source_id,generation,count(*) n FROM chunks WHERE project_id=? AND vector IS NOT NULL GROUP BY source_id,generation ORDER BY source_id,generation',(project_id,)))
+            vector_key=(project_id,generations)
+            with self._vector_lock:
+                cached=self._vectors.get(vector_key)
+                if cached is None:
+                    candidates=[];matrix=np.empty((sum(g[2] for g in generations),len(q)),dtype=np.float32)
+                    for index,row in enumerate(db.execute('SELECT * FROM chunks WHERE project_id=? AND vector IS NOT NULL',(project_id,))):
+                        candidate=dict(row);encoded=candidate.pop('vector')
+                        # Index vectors are canonical numeric JSON arrays, written by ingestion.
+                        # Parse directly into native memory instead of 384 Python float objects per row.
+                        vector=np.fromstring(encoded.strip()[1:-1],sep=',',dtype=np.float32)
+                        if len(vector)!=len(q) or not np.isfinite(vector).all():raise AppError('E5_VECTOR','Invalid indexed vector dimensions or values',503)
+                        matrix[index]=vector;candidates.append(candidate)
+                    cached=(candidates,matrix);self._vectors[vector_key]=cached
+                    while len(self._vectors)>2:self._vectors.popitem(last=False)
+                candidates,matrix=cached
+                if candidates:
+                    scores=matrix@q.astype(np.float32)
+                    order=np.argsort(-scores,kind='stable')[:40]
+                else:order=[]
+                for n,index in enumerate(order,1):
+                    r=candidates[int(index)];all_rows[r['id']]=r;rank[r['id']]=rank.get(r['id'],0)+1/(60+n)
             mode='hybrid';warning=None
         results=[]
         # Exact entity IDs get a boost without assuming their deployment status.

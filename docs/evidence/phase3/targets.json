@@ -1,0 +1,14 @@
+{
+  "fixed_before_implementation": true,
+  "baseline_commit": "bccc6f5bbb94711ae71e13c654b65dfe687940c3",
+  "targets": {
+    "mandatory_eligible_missed": 0,
+    "false_triggers_reduction_fraction_min": 0.5,
+    "logical_requests_reduction_fraction_min": 0.2,
+    "short_question_schedule_wait_max_ms": 500,
+    "nonstarvation_max_batch_wait_ms": 2000,
+    "context_fixture_wire_reduction_fraction_min": 0.2,
+    "single_live_provider_generation_max": 1
+  },
+  "scope": "Synthetic controlled replay; real provider and Meet gates NOT TESTED"
+}

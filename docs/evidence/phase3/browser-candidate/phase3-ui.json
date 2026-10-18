@@ -1,0 +1,2081 @@
+{
+  "provenance": "synthetic demo + genuine MV3 UI/backend; no model calls",
+  "snapshot": {
+    "id": "e3aacdcd-624d-469c-8894-456940bf7089",
+    "project_id": "9cb23dd6-d257-4815-ad49-0f45be001a41",
+    "title": "SYNTHETIC PHASE3 UI",
+    "timezone": "America/Los_Angeles",
+    "persistence_mode": "memory",
+    "demo": true,
+    "meeting_key": null,
+    "status": "active",
+    "started_at": "2026-10-18T15:06:29.493589+00:00",
+    "ended_at": null,
+    "transcript_revision": 6,
+    "capture_status": "starting",
+    "last_caption_at": "2026-10-18T15:06:30.731Z",
+    "self_speaker": "Me",
+    "auto_mode": true,
+    "confirmed_segment_ids": [],
+    "scheduler": {
+      "state": "cached",
+      "reason": "cache_hit",
+      "policy_version": "content-trigger-v1"
+    },
+    "segments": [
+      {
+        "id": "a8425646-1804-4c38-92d9-f5a81f83d5f6",
+        "capture_epoch": "phase3-ui",
+        "revision": 1,
+        "speaker": "Me",
+        "text": "Hello",
+        "stable": true,
+        "observed_from": "2026-10-18T15:06:29.497Z",
+        "observed_to": "2026-10-18T15:06:29.497Z"
+      },
+      {
+        "id": "ffdf31a3-2312-45f6-bf1d-7fee6cde4846",
+        "capture_epoch": "phase3-ui",
+        "revision": 1,
+        "speaker": "Client",
+        "text": "Let me finish.",
+        "stable": true,
+        "observed_from": "2026-10-18T15:06:29.869Z",
+        "observed_to": "2026-10-18T15:06:29.869Z"
+      },
+      {
+        "id": "8dd95c2d-b313-4cdc-8e0f-0f9fd1636328",
+        "capture_epoch": "phase3-ui",
+        "revision": 1,
+        "speaker": "Client",
+        "text": "Thanks!",
+        "stable": true,
+        "observed_from": "2026-10-18T15:06:30.056Z",
+        "observed_to": "2026-10-18T15:06:30.056Z"
+      },
+      {
+        "id": "9476c8bc-6038-49d8-9f90-29d3f5e25017",
+        "capture_epoch": "phase3-ui",
+        "revision": 1,
+        "speaker": "Client",
+        "text": "Why is the cache blocked?",
+        "stable": true,
+        "observed_from": "2026-10-18T15:06:30.220Z",
+        "observed_to": "2026-10-18T15:06:30.220Z"
+      },
+      {
+        "id": "f3aa2239-367b-4c70-b0f4-0b483190a827",
+        "capture_epoch": "phase3-ui",
+        "revision": 1,
+        "speaker": "Client",
+        "text": "Which environment?",
+        "stable": true,
+        "observed_from": "2026-10-18T15:06:30.227Z",
+        "observed_to": "2026-10-18T15:06:30.227Z"
+      },
+      {
+        "id": "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f",
+        "capture_epoch": "phase3-ui",
+        "revision": 1,
+        "speaker": "Client",
+        "text": "Why is production blocked?",
+        "stable": true,
+        "observed_from": "2026-10-18T15:06:30.731Z",
+        "observed_to": "2026-10-18T15:06:30.731Z"
+      }
+    ],
+    "suggestions": [
+      {
+        "id": "f2e0b159-fcfb-457b-aff2-7a0f915fc6fe",
+        "request_id": "5357e453-b634-4f66-bcd3-b9674fcb91ee",
+        "created_at": "2026-10-18T15:06:30.409098+00:00",
+        "mode": "demo",
+        "payload": {
+          "input_revision": 5,
+          "intent": "other",
+          "meaning_vi": "DEMO: đoạn phụ đề thử; chưa chạy provider dịch/ngữ nghĩa thật.",
+          "findings": [],
+          "reply_en": "Could you clarify the environment and the expected result?",
+          "reply_vi": "Bạn có thể làm rõ môi trường và kết quả mong muốn không?",
+          "clarification_en": "Could you confirm the details?",
+          "evidence_status": "missing",
+          "uncertainties": [
+            "Demo controlled output; không phải đánh giá AI."
+          ],
+          "supporting_segment_ids": [
+            "f3aa2239-367b-4c70-b0f4-0b483190a827"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+          "project_id": "9cb23dd6-d257-4815-ad49-0f45be001a41",
+          "transcript_revision": 5,
+          "index_generation": {
+            "bd4a99f9-58d1-4587-9446-23e3701a9989": 1
+          },
+          "segments": [
+            {
+              "id": "a8425646-1804-4c38-92d9-f5a81f83d5f6",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Me",
+              "text": "Hello",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.497Z",
+              "observed_to": "2026-10-18T15:06:29.497Z"
+            },
+            {
+              "id": "ffdf31a3-2312-45f6-bf1d-7fee6cde4846",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Let me finish.",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.869Z",
+              "observed_to": "2026-10-18T15:06:29.869Z"
+            },
+            {
+              "id": "8dd95c2d-b313-4cdc-8e0f-0f9fd1636328",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Thanks!",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.056Z",
+              "observed_to": "2026-10-18T15:06:30.056Z"
+            },
+            {
+              "id": "9476c8bc-6038-49d8-9f90-29d3f5e25017",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Why is the cache blocked?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.220Z",
+              "observed_to": "2026-10-18T15:06:30.220Z"
+            },
+            {
+              "id": "f3aa2239-367b-4c70-b0f4-0b483190a827",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Which environment?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.227Z",
+              "observed_to": "2026-10-18T15:06:30.227Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "auto",
+          "question": "",
+          "input_hash": "6eba5be1a4136ad1d866a3b18f3474ce3713ad8d13646b486702679e00c07fd2",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "f3aa2239-367b-4c70-b0f4-0b483190a827"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.09519996820017695
+          },
+          "focus_segment_ids": [
+            "9476c8bc-6038-49d8-9f90-29d3f5e25017",
+            "f3aa2239-367b-4c70-b0f4-0b483190a827"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Me",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.3542999620549381
+        },
+        "stale": false,
+        "automatic": true,
+        "duration_ms": 2.9291000100784004,
+        "timing": {
+          "trigger": "auto",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "demo",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 2.1612000418826938
+            }
+          ],
+          "provider_ms": 0,
+          "validation_ms": 0.4687000182457268,
+          "stable_to_scheduled_ms": 172.72470000898466,
+          "scheduler_wait_ms": 0.9964000200852752,
+          "retrieval_ms": 0.3542999620549381,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1"
+        }
+      },
+      {
+        "id": "33b3d135-392b-4544-bd43-21fa0de27897",
+        "request_id": "d422322f-a4fc-4d41-a8aa-97f6be755e11",
+        "created_at": "2026-10-18T15:06:31.170367+00:00",
+        "mode": "demo",
+        "payload": {
+          "input_revision": 6,
+          "intent": "other",
+          "meaning_vi": "DEMO: đoạn phụ đề thử; chưa chạy provider dịch/ngữ nghĩa thật.",
+          "findings": [],
+          "reply_en": "Could you clarify the environment and the expected result?",
+          "reply_vi": "Bạn có thể làm rõ môi trường và kết quả mong muốn không?",
+          "clarification_en": "Could you confirm the details?",
+          "evidence_status": "missing",
+          "uncertainties": [
+            "Demo controlled output; không phải đánh giá AI."
+          ],
+          "supporting_segment_ids": [
+            "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+          "project_id": "9cb23dd6-d257-4815-ad49-0f45be001a41",
+          "transcript_revision": 6,
+          "index_generation": {
+            "bd4a99f9-58d1-4587-9446-23e3701a9989": 1
+          },
+          "segments": [
+            {
+              "id": "a8425646-1804-4c38-92d9-f5a81f83d5f6",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Me",
+              "text": "Hello",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.497Z",
+              "observed_to": "2026-10-18T15:06:29.497Z"
+            },
+            {
+              "id": "ffdf31a3-2312-45f6-bf1d-7fee6cde4846",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Let me finish.",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.869Z",
+              "observed_to": "2026-10-18T15:06:29.869Z"
+            },
+            {
+              "id": "8dd95c2d-b313-4cdc-8e0f-0f9fd1636328",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Thanks!",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.056Z",
+              "observed_to": "2026-10-18T15:06:30.056Z"
+            },
+            {
+              "id": "9476c8bc-6038-49d8-9f90-29d3f5e25017",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Why is the cache blocked?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.220Z",
+              "observed_to": "2026-10-18T15:06:30.220Z"
+            },
+            {
+              "id": "f3aa2239-367b-4c70-b0f4-0b483190a827",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Which environment?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.227Z",
+              "observed_to": "2026-10-18T15:06:30.227Z"
+            },
+            {
+              "id": "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Why is production blocked?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.731Z",
+              "observed_to": "2026-10-18T15:06:30.731Z"
+            }
+          ],
+          "memory": [],
+          "sources": [
+            {
+              "id": "209bc3ce-63f4-49f4-8b47-3baf3f50fe02",
+              "source_id": "bd4a99f9-58d1-4587-9446-23e3701a9989",
+              "project_id": "9cb23dd6-d257-4815-ad49-0f45be001a41",
+              "generation": 1,
+              "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
+              "title": "API deployment notes",
+              "kind": "text",
+              "path": "API deployment notes",
+              "line_start": 1,
+              "line_end": 1,
+              "indexed_at": "2026-10-18T15:05:27.920375+00:00",
+              "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
+              "stale": false,
+              "source_changed": false,
+              "source_deleted": false,
+              "section": "",
+              "origin_updated_at": null,
+              "canonical_locator": null,
+              "score": 0.01639344262295082
+            }
+          ],
+          "action": "suggest",
+          "question": "Please clarify this question.",
+          "input_hash": "8f1590c06649f9cb73b088b20a34bf08d1e0a3a5fa93650e933779b3b380d1cb",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+            ],
+            "risks": [],
+            "evidence_state": "available",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.06649998249486089
+          },
+          "focus_segment_ids": [
+            "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Me",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.7866000523790717
+        },
+        "stale": false,
+        "automatic": false,
+        "duration_ms": 2.2536999895237386,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "demo",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 2.1180000039748847
+            }
+          ],
+          "provider_ms": 0,
+          "validation_ms": 0.4723999882116914,
+          "stable_to_scheduled_ms": 430.2085000090301,
+          "scheduler_wait_ms": 0.8798000053502619,
+          "retrieval_ms": 0.7866000523790717,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1"
+        }
+      }
+    ],
+    "requests": [
+      {
+        "id": "5357e453-b634-4f66-bcd3-b9674fcb91ee",
+        "action": "auto",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+          "project_id": "9cb23dd6-d257-4815-ad49-0f45be001a41",
+          "transcript_revision": 5,
+          "index_generation": {
+            "bd4a99f9-58d1-4587-9446-23e3701a9989": 1
+          },
+          "segments": [
+            {
+              "id": "a8425646-1804-4c38-92d9-f5a81f83d5f6",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Me",
+              "text": "Hello",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.497Z",
+              "observed_to": "2026-10-18T15:06:29.497Z"
+            },
+            {
+              "id": "ffdf31a3-2312-45f6-bf1d-7fee6cde4846",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Let me finish.",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.869Z",
+              "observed_to": "2026-10-18T15:06:29.869Z"
+            },
+            {
+              "id": "8dd95c2d-b313-4cdc-8e0f-0f9fd1636328",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Thanks!",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.056Z",
+              "observed_to": "2026-10-18T15:06:30.056Z"
+            },
+            {
+              "id": "9476c8bc-6038-49d8-9f90-29d3f5e25017",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Why is the cache blocked?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.220Z",
+              "observed_to": "2026-10-18T15:06:30.220Z"
+            },
+            {
+              "id": "f3aa2239-367b-4c70-b0f4-0b483190a827",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Which environment?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.227Z",
+              "observed_to": "2026-10-18T15:06:30.227Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "auto",
+          "question": "",
+          "input_hash": "6eba5be1a4136ad1d866a3b18f3474ce3713ad8d13646b486702679e00c07fd2",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "f3aa2239-367b-4c70-b0f4-0b483190a827"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.09519996820017695
+          },
+          "focus_segment_ids": [
+            "9476c8bc-6038-49d8-9f90-29d3f5e25017",
+            "f3aa2239-367b-4c70-b0f4-0b483190a827"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Me",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.3542999620549381
+        },
+        "timing": {
+          "trigger": "auto",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "demo",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 2.1612000418826938
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 4.965500032994896
+            }
+          ],
+          "provider_ms": 0,
+          "validation_ms": 0.4687000182457268,
+          "stable_to_scheduled_ms": 172.72470000898466,
+          "scheduler_wait_ms": 0.9964000200852752,
+          "retrieval_ms": 0.3542999620549381,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1"
+        },
+        "created_at": "2026-10-18T15:06:30.405185+00:00",
+        "started_at": "2026-10-18T15:06:30.406205+00:00",
+        "duration_ms": 3.9487999747507274,
+        "stable_to_request_ms": 173.72110002906993
+      },
+      {
+        "id": "d422322f-a4fc-4d41-a8aa-97f6be755e11",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+          "project_id": "9cb23dd6-d257-4815-ad49-0f45be001a41",
+          "transcript_revision": 6,
+          "index_generation": {
+            "bd4a99f9-58d1-4587-9446-23e3701a9989": 1
+          },
+          "segments": [
+            {
+              "id": "a8425646-1804-4c38-92d9-f5a81f83d5f6",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Me",
+              "text": "Hello",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.497Z",
+              "observed_to": "2026-10-18T15:06:29.497Z"
+            },
+            {
+              "id": "ffdf31a3-2312-45f6-bf1d-7fee6cde4846",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Let me finish.",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:29.869Z",
+              "observed_to": "2026-10-18T15:06:29.869Z"
+            },
+            {
+              "id": "8dd95c2d-b313-4cdc-8e0f-0f9fd1636328",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Thanks!",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.056Z",
+              "observed_to": "2026-10-18T15:06:30.056Z"
+            },
+            {
+              "id": "9476c8bc-6038-49d8-9f90-29d3f5e25017",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Why is the cache blocked?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.220Z",
+              "observed_to": "2026-10-18T15:06:30.220Z"
+            },
+            {
+              "id": "f3aa2239-367b-4c70-b0f4-0b483190a827",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Which environment?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.227Z",
+              "observed_to": "2026-10-18T15:06:30.227Z"
+            },
+            {
+              "id": "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f",
+              "capture_epoch": "phase3-ui",
+              "revision": 1,
+              "speaker": "Client",
+              "text": "Why is production blocked?",
+              "stable": true,
+              "observed_from": "2026-10-18T15:06:30.731Z",
+              "observed_to": "2026-10-18T15:06:30.731Z"
+            }
+          ],
+          "memory": [],
+          "sources": [
+            {
+              "id": "209bc3ce-63f4-49f4-8b47-3baf3f50fe02",
+              "source_id": "bd4a99f9-58d1-4587-9446-23e3701a9989",
+              "project_id": "9cb23dd6-d257-4815-ad49-0f45be001a41",
+              "generation": 1,
+              "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
+              "title": "API deployment notes",
+              "kind": "text",
+              "path": "API deployment notes",
+              "line_start": 1,
+              "line_end": 1,
+              "indexed_at": "2026-10-18T15:05:27.920375+00:00",
+              "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
+              "stale": false,
+              "source_changed": false,
+              "source_deleted": false,
+              "section": "",
+              "origin_updated_at": null,
+              "canonical_locator": null,
+              "score": 0.01639344262295082
+            }
+          ],
+          "action": "suggest",
+          "question": "Please clarify this question.",
+          "input_hash": "8f1590c06649f9cb73b088b20a34bf08d1e0a3a5fa93650e933779b3b380d1cb",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+            ],
+            "risks": [],
+            "evidence_state": "available",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.06649998249486089
+          },
+          "focus_segment_ids": [
+            "29cf8197-8d3f-4a6f-bf16-5ce0cc9e989f"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Me",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.7866000523790717
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "demo",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 2.1180000039748847
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 4.074099997524172
+            }
+          ],
+          "provider_ms": 0,
+          "validation_ms": 0.4723999882116914,
+          "stable_to_scheduled_ms": 430.2085000090301,
+          "scheduler_wait_ms": 0.8798000053502619,
+          "retrieval_ms": 0.7866000523790717,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1"
+        },
+        "created_at": "2026-10-18T15:06:31.167248+00:00",
+        "started_at": "2026-10-18T15:06:31.168151+00:00",
+        "duration_ms": 3.174800018314272,
+        "stable_to_request_ms": 431.08830001438037
+      }
+    ],
+    "reports": [],
+    "gaps": [],
+    "binding": null,
+    "epochs": {
+      "phase3-ui": 6
+    },
+    "latest_request": "d422322f-a4fc-4d41-a8aa-97f6be755e11",
+    "pause_from": null,
+    "context_revision": 1
+  },
+  "metrics": {
+    "orchestration_counts": {
+      "speaker_unknown": 20,
+      "important_change": 1,
+      "logical_request": 14,
+      "auto_ready": 4,
+      "provider_generation": 14,
+      "validated_result": 12,
+      "direct_question": 5,
+      "manual_priority": 10,
+      "PROVIDER_AUTH": 1,
+      "speaker_unfinished": 4,
+      "new_information": 1,
+      "small_talk": 1,
+      "AUTO_QUOTA": 1,
+      "cache_hit": 1
+    },
+    "scheduler_states": {
+      "00e0e304-7ff7-4338-a06f-39640ae7e641": {
+        "state": "listening",
+        "reason": "session_control",
+        "policy_version": "content-trigger-v1"
+      },
+      "c2ff53b8-c4a6-40f4-b547-3d234b68773d": {
+        "state": "listening",
+        "reason": "session_control",
+        "policy_version": "content-trigger-v1"
+      },
+      "e3aacdcd-624d-469c-8894-456940bf7089": {
+        "state": "cached",
+        "reason": "cache_hit",
+        "policy_version": "content-trigger-v1"
+      }
+    },
+    "trigger_records": [
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "waiting",
+        "reason": "important_change",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "queued",
+        "reason": "auto_ready",
+        "policy_version": "content-trigger-v1",
+        "request_id": "f133fe68-032f-4e11-bf33-2748bec512f8",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "f133fe68-032f-4e11-bf33-2748bec512f8"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "f133fe68-032f-4e11-bf33-2748bec512f8"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "waiting",
+        "reason": "direct_question",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "queued",
+        "reason": "auto_ready",
+        "policy_version": "content-trigger-v1",
+        "request_id": "ab96178c-bd00-4216-9d6b-c286dedd8b96",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "ab96178c-bd00-4216-9d6b-c286dedd8b96"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "ab96178c-bd00-4216-9d6b-c286dedd8b96"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "586ce3a7-8769-4671-a852-843ae2190cfe",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "586ce3a7-8769-4671-a852-843ae2190cfe"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "stale",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "586ce3a7-8769-4671-a852-843ae2190cfe"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "639be3ed-222f-4500-aa16-706b26b2a60f",
+        "route": "deep"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "639be3ed-222f-4500-aa16-706b26b2a60f"
+      },
+      {
+        "meeting_id": "00e0e304-7ff7-4338-a06f-39640ae7e641",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "639be3ed-222f-4500-aa16-706b26b2a60f"
+      },
+      {
+        "meeting_id": "20628620-4048-4052-a3af-79fc70facc15",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "20628620-4048-4052-a3af-79fc70facc15",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "20628620-4048-4052-a3af-79fc70facc15",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "20628620-4048-4052-a3af-79fc70facc15",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "20628620-4048-4052-a3af-79fc70facc15",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "20628620-4048-4052-a3af-79fc70facc15",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "20628620-4048-4052-a3af-79fc70facc15",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "cd045b18-0845-4c76-94cc-5a62216c3214",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "cd045b18-0845-4c76-94cc-5a62216c3214"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "cd045b18-0845-4c76-94cc-5a62216c3214"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "8e08b580-9a9f-42aa-8790-8df5cec05847",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "8e08b580-9a9f-42aa-8790-8df5cec05847"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "8e08b580-9a9f-42aa-8790-8df5cec05847"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "ec14af00-7065-443c-81a5-c5d82b9d319d",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "ec14af00-7065-443c-81a5-c5d82b9d319d"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "ec14af00-7065-443c-81a5-c5d82b9d319d"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "43fc7234-9c12-46ac-bf0a-ff973d330068",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "43fc7234-9c12-46ac-bf0a-ff973d330068"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "error",
+        "reason": "PROVIDER_AUTH",
+        "policy_version": "content-trigger-v1",
+        "request_id": "43fc7234-9c12-46ac-bf0a-ff973d330068"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "78f93725-cc4d-4de9-80d7-765e43c98019",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "78f93725-cc4d-4de9-80d7-765e43c98019"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "stale",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "78f93725-cc4d-4de9-80d7-765e43c98019"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "0d406500-68db-4714-bd69-12eca51c0f10",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "0d406500-68db-4714-bd69-12eca51c0f10"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "6888c3de-7468-459c-ace7-fdcc3383b280",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "6888c3de-7468-459c-ace7-fdcc3383b280"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "6888c3de-7468-459c-ace7-fdcc3383b280"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "waiting",
+        "reason": "speaker_unfinished",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "waiting",
+        "reason": "direct_question",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "queued",
+        "reason": "auto_ready",
+        "policy_version": "content-trigger-v1",
+        "request_id": "002452f9-ba3f-4d98-bd55-5818ef150d95",
+        "route": "deep"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "002452f9-ba3f-4d98-bd55-5818ef150d95"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "002452f9-ba3f-4d98-bd55-5818ef150d95"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "waiting",
+        "reason": "speaker_unfinished",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "waiting",
+        "reason": "speaker_unfinished",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "c2ff53b8-c4a6-40f4-b547-3d234b68773d",
+        "state": "waiting",
+        "reason": "new_information",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "listening",
+        "reason": "speaker_unknown",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "waiting",
+        "reason": "speaker_unfinished",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "listening",
+        "reason": "small_talk",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "waiting",
+        "reason": "direct_question",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "coalesced",
+        "reason": "direct_question",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "queued",
+        "reason": "auto_ready",
+        "policy_version": "content-trigger-v1",
+        "request_id": "5357e453-b634-4f66-bcd3-b9674fcb91ee",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "5357e453-b634-4f66-bcd3-b9674fcb91ee"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "5357e453-b634-4f66-bcd3-b9674fcb91ee"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "waiting",
+        "reason": "direct_question",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "quota",
+        "reason": "AUTO_QUOTA",
+        "policy_version": "content-trigger-v1"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "d422322f-a4fc-4d41-a8aa-97f6be755e11",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "d422322f-a4fc-4d41-a8aa-97f6be755e11"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "ready",
+        "reason": "validated_result",
+        "policy_version": "content-trigger-v1",
+        "request_id": "d422322f-a4fc-4d41-a8aa-97f6be755e11"
+      },
+      {
+        "meeting_id": "e3aacdcd-624d-469c-8894-456940bf7089",
+        "state": "cached",
+        "reason": "cache_hit",
+        "policy_version": "content-trigger-v1",
+        "request_id": "d422322f-a4fc-4d41-a8aa-97f6be755e11"
+      }
+    ],
+    "retrieval_cache_hits": 9,
+    "latency_records": [
+      {
+        "request_id": "f133fe68-032f-4e11-bf33-2748bec512f8",
+        "policy_version": "content-trigger-v1",
+        "trigger": "auto",
+        "temperature": "cold",
+        "retrieval": "keyword",
+        "provider_mode": "demo",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 10.248599981423467
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 14.820099982898682
+          }
+        ],
+        "provider_ms": 0,
+        "validation_ms": 3.975299943704158,
+        "stable_to_scheduled_ms": 807.451399974525,
+        "scheduler_wait_ms": 3.7244000122882426,
+        "retrieval_ms": 0.7239999831654131,
+        "http_attempts": 0,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 0,
+        "wire_input_chars_total": 0
+      },
+      {
+        "request_id": "ab96178c-bd00-4216-9d6b-c286dedd8b96",
+        "policy_version": "content-trigger-v1",
+        "trigger": "auto",
+        "temperature": "cold",
+        "retrieval": "keyword",
+        "provider_mode": "demo",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 12.74919998832047
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 17.83849997445941
+          }
+        ],
+        "provider_ms": 0,
+        "validation_ms": 0.9703999967314303,
+        "stable_to_scheduled_ms": 190.40240003960207,
+        "scheduler_wait_ms": 8.741199970245361,
+        "retrieval_ms": 1.0222000419162214,
+        "http_attempts": 0,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 0,
+        "wire_input_chars_total": 0
+      },
+      {
+        "request_id": "586ce3a7-8769-4671-a852-843ae2190cfe",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "cold",
+        "retrieval": "keyword",
+        "provider_mode": "demo",
+        "outcome": "stale",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 6.949000002350658
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 9.878600016236305
+          }
+        ],
+        "provider_ms": 0,
+        "validation_ms": 0.7876000017859042,
+        "scheduler_wait_ms": 3.8481999654322863,
+        "retrieval_ms": 0.7239999831654131,
+        "http_attempts": 0,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 0,
+        "wire_input_chars_total": 0
+      },
+      {
+        "request_id": "639be3ed-222f-4500-aa16-706b26b2a60f",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "cold",
+        "retrieval": "keyword",
+        "provider_mode": "demo",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 6.8227999727241695
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 10.324899980332702
+          }
+        ],
+        "provider_ms": 0,
+        "validation_ms": 1.0946000111289322,
+        "stable_to_scheduled_ms": 2138.022200029809,
+        "scheduler_wait_ms": 3.62249999307096,
+        "retrieval_ms": 0.7860999903641641,
+        "http_attempts": 0,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 0,
+        "wire_input_chars_total": 0
+      },
+      {
+        "request_id": "cd045b18-0845-4c76-94cc-5a62216c3214",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "cold",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 4.388100001960993
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 17.06080004805699
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 17.656800046097487
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 18.43260001624003
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 22.229099995456636
+          }
+        ],
+        "provider_ms": 12.664099980611354,
+        "validation_ms": 1.1532999924384058,
+        "stable_to_scheduled_ms": 800.7920999662019,
+        "scheduler_wait_ms": 2.9242000309750438,
+        "retrieval_ms": 0.8703999919816852,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 1009
+      },
+      {
+        "request_id": "8e08b580-9a9f-42aa-8790-8df5cec05847",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 4.289699951186776
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 8.229999977629632
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 8.831499959342182
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 9.563100000377744
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 12.417499965522438
+          }
+        ],
+        "provider_ms": 3.9322999655269086,
+        "validation_ms": 1.1365999816916883,
+        "stable_to_scheduled_ms": 1057.2272000135854,
+        "scheduler_wait_ms": 2.679399971384555,
+        "retrieval_ms": 0.7132000173442066,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 1009
+      },
+      {
+        "request_id": "ec14af00-7065-443c-81a5-c5d82b9d319d",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 4.369799979031086
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 8.031899982597679
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 8.5562999593094
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 9.1829999582842
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 12.155099946539849
+          }
+        ],
+        "provider_ms": 3.6568999639712274,
+        "validation_ms": 1.001099997665733,
+        "stable_to_scheduled_ms": 1310.3771000169218,
+        "scheduler_wait_ms": 2.910299983341247,
+        "retrieval_ms": 0.5530999624170363,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 1009
+      },
+      {
+        "request_id": "43fc7234-9c12-46ac-bf0a-ff973d330068",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "error",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 4.463200049940497
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 7.873499998822808
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 8.525700017344207
+          }
+        ],
+        "provider_ms": 3.403700015041977,
+        "validation_ms": 0,
+        "stable_to_scheduled_ms": 1557.8475999645889,
+        "scheduler_wait_ms": 2.7247000252828,
+        "retrieval_ms": 0.5119999987073243,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 1007
+      },
+      {
+        "request_id": "78f93725-cc4d-4de9-80d7-765e43c98019",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "stale",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 5.7805999531410635
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 812.6662999857217
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 813.0263999919407
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 813.4699999936856
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 817.5185999716632
+          }
+        ],
+        "provider_ms": 806.8795999861322,
+        "validation_ms": 0.6603999645449221,
+        "stable_to_scheduled_ms": 1657.329200010281,
+        "scheduler_wait_ms": 4.040399973746389,
+        "retrieval_ms": 2.2208000300452113,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 1012
+      },
+      {
+        "request_id": "0d406500-68db-4714-bd69-12eca51c0f10",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "cancelled",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 4.266000003553927
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 77.60440005222335
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 79.08710004994646
+          }
+        ],
+        "provider_ms": 73.33169999765232,
+        "validation_ms": 0,
+        "scheduler_wait_ms": 2.5261000264436007,
+        "retrieval_ms": 0.6576000014320016,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 1023
+      },
+      {
+        "request_id": "6888c3de-7468-459c-ace7-fdcc3383b280",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 26.17989998543635
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 29.680199979338795
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 30.2440999657847
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 30.86759999860078
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 33.748699992429465
+          }
+        ],
+        "provider_ms": 3.4950999543070793,
+        "validation_ms": 1.0021000052802265,
+        "scheduler_wait_ms": 24.054499983321875,
+        "retrieval_ms": 1.8801999976858497,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 1030
+      },
+      {
+        "request_id": "002452f9-ba3f-4d98-bd55-5818ef150d95",
+        "policy_version": "content-trigger-v1",
+        "trigger": "auto",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "real",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "provider_started",
+            "offset_ms": 4.641899955458939
+          },
+          {
+            "stage": "provider_completed",
+            "offset_ms": 8.274299965705723
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 10.477299976628274
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 12.074499973095953
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 17.206299991812557
+          }
+        ],
+        "provider_ms": 3.626100020483136,
+        "validation_ms": 3.612399974372238,
+        "stable_to_scheduled_ms": 154.05970002757385,
+        "scheduler_wait_ms": 2.8444999479688704,
+        "retrieval_ms": 0.33110001822933555,
+        "http_attempts": 1,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 1,
+        "wire_input_chars_total": 877
+      },
+      {
+        "request_id": "5357e453-b634-4f66-bcd3-b9674fcb91ee",
+        "policy_version": "content-trigger-v1",
+        "trigger": "auto",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "demo",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 2.1612000418826938
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 4.965500032994896
+          }
+        ],
+        "provider_ms": 0,
+        "validation_ms": 0.4687000182457268,
+        "stable_to_scheduled_ms": 172.72470000898466,
+        "scheduler_wait_ms": 0.9964000200852752,
+        "retrieval_ms": 0.3542999620549381,
+        "http_attempts": 0,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 0,
+        "wire_input_chars_total": 0
+      },
+      {
+        "request_id": "d422322f-a4fc-4d41-a8aa-97f6be755e11",
+        "policy_version": "content-trigger-v1",
+        "trigger": "manual",
+        "temperature": "warm",
+        "retrieval": "keyword",
+        "provider_mode": "demo",
+        "outcome": "ready",
+        "marks": [
+          {
+            "stage": "suggestion_scheduled",
+            "offset_ms": 0
+          },
+          {
+            "stage": "validation_completed",
+            "offset_ms": 2.1180000039748847
+          },
+          {
+            "stage": "request_completed",
+            "offset_ms": 4.074099997524172
+          }
+        ],
+        "provider_ms": 0,
+        "validation_ms": 0.4723999882116914,
+        "stable_to_scheduled_ms": 430.2085000090301,
+        "scheduler_wait_ms": 0.8798000053502619,
+        "retrieval_ms": 0.7866000523790717,
+        "http_attempts": 0,
+        "repair_attempts": 0,
+        "usage_unknown_attempts": 0,
+        "wire_input_chars_total": 0
+      }
+    ],
+    "classifier": {
+      "n": 51,
+      "median_ms": 0.10260002454742789,
+      "p95_ms": 0.4555999767035246,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "provider_by_route": {
+      "fast": {
+        "n": 7,
+        "median_ms": 1.7092999769374728,
+        "p95_ms": 804.8192000132985,
+        "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+      },
+      "explain": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+      },
+      "deep": {
+        "n": 1,
+        "median_ms": 1.4807999832555652,
+        "p95_ms": 1.4807999832555652,
+        "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+      },
+      "clarify": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+      }
+    },
+    "request_count": 8,
+    "known_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    },
+    "unknown_usage_count": 8,
+    "estimated_cost": null,
+    "price_date": null,
+    "cost_note": "Estimate from configured per-million token prices, not a bill.",
+    "capture_apply": {
+      "n": 23,
+      "median_ms": 1.617099973373115,
+      "p95_ms": 4.577699990477413,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "retrieval": {
+      "n": 17,
+      "median_ms": 0.7132000173442066,
+      "p95_ms": 2.2208000300452113,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "provider": {
+      "n": 8,
+      "median_ms": 1.7092999769374728,
+      "p95_ms": 804.8192000132985,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "provider_first_token": {
+      "n": 6,
+      "median_ms": 1.436999998986721,
+      "p95_ms": 804.6313999802805,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "backend_stable_to_request": {
+      "n": 11,
+      "median_ms": 811.1757999868132,
+      "p95_ms": 2141.64470002288,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "backend_stable_to_validated": {
+      "n": 10,
+      "median_ms": 822.0008999924175,
+      "p95_ms": 2474.157699965872,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "report": {
+      "n": 1,
+      "median_ms": 22.54689997062087,
+      "p95_ms": 22.54689997062087,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "records": [
+      {
+        "id": "13a7fe51-72c8-4dcd-a42b-66e6218212b4",
+        "mode": "real",
+        "status": "ready",
+        "usage": null,
+        "duration_ms": 5.402199982199818,
+        "first_token_ms": 1.8362000118941069,
+        "client_reused": false,
+        "request_kind": "suggestion",
+        "wire_input_chars": 1009,
+        "route": "fast",
+        "logical_request_id": "cd045b18-0845-4c76-94cc-5a62216c3214",
+        "automatic": false,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2469,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      },
+      {
+        "id": "e9d3ef44-9b36-4598-9b66-7ba40ce53d27",
+        "mode": "real",
+        "status": "ready",
+        "usage": null,
+        "duration_ms": 1.7092999769374728,
+        "first_token_ms": 1.436999998986721,
+        "client_reused": true,
+        "request_kind": "suggestion",
+        "wire_input_chars": 1009,
+        "route": "fast",
+        "logical_request_id": "8e08b580-9a9f-42aa-8790-8df5cec05847",
+        "automatic": false,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2469,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      },
+      {
+        "id": "92421a34-c111-4ca2-9255-cecebacf8fb0",
+        "mode": "real",
+        "status": "ready",
+        "usage": null,
+        "duration_ms": 1.417500025127083,
+        "first_token_ms": 1.2042000307701528,
+        "client_reused": true,
+        "request_kind": "suggestion",
+        "wire_input_chars": 1009,
+        "route": "fast",
+        "logical_request_id": "ec14af00-7065-443c-81a5-c5d82b9d319d",
+        "automatic": false,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2469,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      },
+      {
+        "id": "df17c29c-5ff3-4e29-9591-7811e1cd5d49",
+        "mode": "real",
+        "status": "PROVIDER_AUTH",
+        "usage": null,
+        "duration_ms": 1.1200999724678695,
+        "first_token_ms": null,
+        "client_reused": true,
+        "request_kind": "suggestion",
+        "wire_input_chars": 1007,
+        "route": "fast",
+        "logical_request_id": "43fc7234-9c12-46ac-bf0a-ff973d330068",
+        "automatic": false,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2468,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      },
+      {
+        "id": "a0679e04-92d7-47c1-9d6f-fe284ce264a2",
+        "mode": "real",
+        "status": "ready",
+        "usage": null,
+        "duration_ms": 804.8192000132985,
+        "first_token_ms": 804.6313999802805,
+        "client_reused": true,
+        "request_kind": "suggestion",
+        "wire_input_chars": 1012,
+        "route": "fast",
+        "logical_request_id": "78f93725-cc4d-4de9-80d7-765e43c98019",
+        "automatic": false,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2470,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      },
+      {
+        "id": "8ebccd8e-fa44-4272-9e4c-a52d5dc653b7",
+        "mode": "real",
+        "status": "cancelled",
+        "usage": null,
+        "duration_ms": 71.28390000434592,
+        "first_token_ms": null,
+        "client_reused": true,
+        "request_kind": "suggestion",
+        "wire_input_chars": 1023,
+        "route": "fast",
+        "logical_request_id": "0d406500-68db-4714-bd69-12eca51c0f10",
+        "automatic": false,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2474,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      },
+      {
+        "id": "e1c44cd3-cf03-49c9-a578-2d7d5fe0a344",
+        "mode": "real",
+        "status": "ready",
+        "usage": null,
+        "duration_ms": 1.4120999840088189,
+        "first_token_ms": 1.1859999503940344,
+        "client_reused": true,
+        "request_kind": "suggestion",
+        "wire_input_chars": 1030,
+        "route": "fast",
+        "logical_request_id": "6888c3de-7468-459c-ace7-fdcc3383b280",
+        "automatic": false,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2476,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      },
+      {
+        "id": "6c169f8b-33af-4137-b4b6-46e8a6d3105a",
+        "mode": "real",
+        "status": "ready",
+        "usage": null,
+        "duration_ms": 1.4807999832555652,
+        "first_token_ms": 1.2600999907590449,
+        "client_reused": true,
+        "request_kind": "suggestion",
+        "wire_input_chars": 877,
+        "route": "deep",
+        "logical_request_id": "002452f9-ba3f-4d98-bd55-5818ef150d95",
+        "automatic": true,
+        "generation_attempt": 1,
+        "http_attempt": 1,
+        "attempt_reason": "initial",
+        "input_token_estimate": 2549,
+        "token_estimate_method": "UTF-8 character count / 3; not tokenizer usage"
+      }
+    ]
+  }
+}

@@ -154,4 +154,23 @@ test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet
     await control('end');await meet.close();await api('/api/v1/provider/credential','DELETE');
   });
 
+  test('PHASE3 scheduler UI explains waiting/listening/quota and manual cache remains available',async()=>{
+    const m=await api('/api/v1/meetings','POST',{project_id:projectId,title:'SYNTHETIC PHASE3 UI',timezone:'America/Los_Angeles',persistence_mode:'memory',demo:true});
+    const emit=async(text:string,speaker='Client',id=crypto.randomUUID(),revision=1)=>await api(`/api/v1/meetings/${m.id}/demo-caption`,'POST',{type:'caption.upsert',protocol_version:1,event_id:crypto.randomUUID(),capture_epoch:'phase3-ui',segment_id:id,revision,seq:++sequence,speaker_label:speaker,text,observed_at:new Date().toISOString(),stable:true,adapter_version:'synthetic-phase3-ui'});
+    let sequence=0;await emit('Hello','Me');await api(`/api/v1/meetings/${m.id}`,'PATCH',{self_speaker:'Me'});
+    await page.evaluate(id=>chrome.runtime.sendMessage({type:'ui.bind',session_id:id}),m.id);
+    const panel=await context.newPage();await panel.goto(`chrome-extension://${extensionId}/sidepanel.html`);await panel.evaluate(id=>sessionStorage.setItem('meet-ui-session',id),m.id);await panel.reload();
+    await emit('Let me finish.');await expect(panel.getByTestId('scheduler-state')).toContainText('Đang chờ người nói kết thúc');
+    await emit('Thanks!');await expect(panel.getByTestId('scheduler-state')).toContainText('Tiếp tục nghe');expect((await api('/api/v1/meetings/'+m.id)).requests).toHaveLength(0);
+    await api('/api/v1/settings','PATCH',{auto_per_minute:1});
+    await emit('Why is the cache blocked?');await emit('Which environment?');await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).requests.filter((r:any)=>r.status==='ready').length).toBe(1);
+    const batch=await api('/api/v1/meetings/'+m.id);expect(batch.requests[0].snapshot.focus_segment_ids).toHaveLength(2);await expect(panel.getByTestId('english-reply')).toBeVisible();
+    await panel.getByRole('button',{name:'Giữ câu',exact:true}).click();const held=await panel.getByTestId('english-reply').innerText();
+    await emit('Why is production blocked?');await expect(panel.getByTestId('scheduler-state')).toContainText('giới hạn tự động');expect(await panel.getByTestId('english-reply').innerText()).toBe(held);
+    const body={action:'suggest',question:'Please clarify this question.'};const [a,b]=await Promise.all([api(`/api/v1/meetings/${m.id}/suggest`,'POST',body),api(`/api/v1/meetings/${m.id}/suggest`,'POST',body)]);expect(a.request_id).toBe(b.request_id);
+    await expect.poll(async()=>(await api('/api/v1/meetings/'+m.id)).requests.find((r:any)=>r.id===a.request_id)?.status).toBe('ready');expect(await panel.getByTestId('english-reply').innerText()).toBe(held);await expect(panel.getByRole('button',{name:'Có gợi ý mới',exact:true})).toBeVisible();
+    await panel.screenshot({path:evidencePath('phase3-scheduler-ui.png'),fullPage:true});await writeFile(evidencePath('phase3-ui.json'),JSON.stringify({provenance:'synthetic demo + genuine MV3 UI/backend; no model calls',snapshot:await api('/api/v1/meetings/'+m.id),metrics:await api('/api/v1/metrics')},null,2));
+    await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.control',action:'end',idempotency_key:crypto.randomUUID()}));await panel.close();await api('/api/v1/settings','PATCH',{auto_per_minute:12});
+  });
+
 });

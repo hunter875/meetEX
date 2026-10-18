@@ -1,0 +1,139 @@
+{
+  "result": "PARTIAL: controlled improvements verified; two predeclared targets unmet",
+  "client_date": "2026-10-18",
+  "timezone": "America/Los_Angeles",
+  "base_commit": "bccc6f5bbb94711ae71e13c654b65dfe687940c3",
+  "initial_branch": "codex/phase2-capture",
+  "initial_worktree": "clean",
+  "branch": "codex/phase3-orchestration",
+  "reference_commits": {
+    "tfp24601/live-meeting-assistant": "47d518101023300b1a8feeaaa7f56a3c69cd53c6",
+    "krystiangw/meet-live-assist-extension": "c26b04e6eb875a44536bed5afb3e80ce49b56ff1"
+  },
+  "objectives": {
+    "mandatory_eligible_missed": {
+      "actual": 0,
+      "target": 0,
+      "passed": true
+    },
+    "false_triggers_reduction_fraction_min": {
+      "actual": 1.0,
+      "target": 0.5,
+      "passed": true
+    },
+    "logical_requests_reduction_fraction_min": {
+      "actual": 0.18367346938775508,
+      "target": 0.2,
+      "passed": false
+    },
+    "short_question_schedule_wait_max_ms": {
+      "actual": 2900.0000000000055,
+      "target": 500,
+      "passed": false
+    },
+    "context_fixture_wire_reduction_fraction_min": {
+      "actual": 0.6619718309859155,
+      "target": 0.2,
+      "passed": true
+    },
+    "nonstarvation_max_batch_wait_ms": {
+      "actual": 2000.0,
+      "target": 2000,
+      "passed": true,
+      "evidence": "production virtual replay; first bounded batch during continuous stable revisions"
+    },
+    "single_live_provider_generation_max": {
+      "actual": 1,
+      "target": 1,
+      "passed": true,
+      "evidence": "max_active_live_generations JUnit property"
+    }
+  },
+  "baseline": {
+    "eligible": 39,
+    "processed": 37,
+    "missed": 2,
+    "false_trigger": 7,
+    "logical_requests": 49,
+    "http_attempts": 51,
+    "repair_attempts": 1,
+    "transient_retry_attempts": 1,
+    "cards": 45,
+    "ready_cards_proxy": 43,
+    "wire_chars_total": 32384,
+    "duplicate_cards_same_context": 0,
+    "usage_known_attempts": 0,
+    "usage_unknown_attempts": 51
+  },
+  "after": {
+    "eligible": 39,
+    "processed": 39,
+    "missed": 0,
+    "false_trigger": 0,
+    "logical_requests": 40,
+    "http_attempts": 42,
+    "repair_attempts": 1,
+    "transient_retry_attempts": 1,
+    "cards": 37,
+    "ready_cards_proxy": 35,
+    "wire_chars_total": 27197,
+    "duplicate_cards_same_context": 0,
+    "usage_known_attempts": 0,
+    "usage_unknown_attempts": 42
+  },
+  "heldout": {
+    "tuning": {
+      "eligible": 33,
+      "processed": 33,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 35,
+      "http_attempts": 37
+    },
+    "evaluation": {
+      "eligible": 6,
+      "processed": 6,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 5,
+      "http_attempts": 5
+    }
+  },
+  "regression": {
+    "backend": 276,
+    "frontend": 58,
+    "browser": 5,
+    "semantic": "PASS"
+  },
+  "paid_provider_calls": 0,
+  "real_provider_benchmark": "NOT TESTED",
+  "live_meet": "NOT TESTED",
+  "tokens_cost": "Unknown; no real usage. Estimates explicitly labelled, cancelled attempts not free.",
+  "hash_format": "utf8-lf",
+  "source_hashes": {
+    "backend/app/llm.py": "34c3429299cb1b70fdccf383bd850d421c956764e9b98b9add5e437757bbdccc",
+    "backend/app/main.py": "73609de345d194bba30ffb746cd0b30577e7cc116e6535fe5fad0c56eb38bbb9",
+    "backend/app/models.py": "37b53876241c9339025c50c9df7bb3e4d762b5069e4580f71b5fff533d17b048",
+    "backend/app/orchestration.py": "ec8953b217add334feaa9454a8145f7153fc03b8867746c78c56f5591b5cfe1e",
+    "backend/app/retrieval.py": "cf4ea1a9a43b488638b98436a3d3a9673b3a4b6914fc382800fde8c1fd236a26",
+    "backend/app/service.py": "d10c4c4e713de432bf5161f99dfcfc5a21521650a8f37f69a7257ef9981b0e12",
+    "backend/tests/test_ai.py": "401119f89ce0333271ce1e472bcfdabebc5298f34f24e48ccc817c3e453330c9",
+    "backend/tests/test_phase3_orchestration.py": "f7da31be75d2d5bdbac98ccd225861d8654047fd1e8bf0a9bc0b30f28389f19e",
+    "backend/tests/test_phase3_retrieval.py": "fb86aaeec5f846898c22998c54db7acc6ac1b96a71a6292fac2565513df2e0f1",
+    "e2e/extension.spec.ts": "a9686c13cc09fa211d257f59403b67e2e1afdfc1c9339f0e8604594ee8cfca4a",
+    "extension/src/api-schema.d.ts": "801f1d9887eddd09d9376fde9936d878edb5b3fb8015a3e180e2f42cf26f31fe",
+    "extension/src/ui/card-reducer.ts": "b92c0ae1940461915b734341f8d09b0d3dcb269a519015f991d591dc002a04e2",
+    "extension/src/ui/live.tsx": "00d39e7413954eef5307ebd0782e132a8f7c247309942342e3d3485a931ee0e7",
+    "extension/src/ui/settings.tsx": "d4fb8d32b2ce509485fd508c474de209fc5f48ef383e78abaa549e2c4bcc2381",
+    "extension/tests/phase3-state.test.ts": "5a97dac0b498a0c41d6d873fab2e79ea7ae9050095e920812d9f17edeffe79e8",
+    "extension/tests/state.test.ts": "e540c0d382b64eb535ed2e169b1221bd206776af12728964228f9e66cf3d5d64",
+    "fixtures/phase3/orchestration-replay.json": "2671cde83b010cc54a6def6f2ee4e5e1e52a6f37fcaa843c3923f790cb4acedb",
+    "fixtures/phase3/ui-lifecycle-replay.json": "8946bbf77c9a7e92c9d29423291ea8ba2d83841a860a7d6f5a22decc37c32e14",
+    "scripts/benchmark_phase3.py": "96ebe6a4e62cdf6155323ff043a80e6ba3166da5b338661b75ad92d37038dec5",
+    "scripts/benchmark_phase3_retrieval.py": "863681daa04237bd80b731cf9d878ef539476795f01d3f4485778da66af86b03",
+    "scripts/check_docs.py": "80536be38d14a280ecc9d2cc0b85b45a5179af2c4a7172cde72ed0398924834b",
+    "scripts/documentation.py": "e14646c365fc30e61e6a9c42e9c433f396fdeef8cb17553f1135299e7d71ff8c",
+    "scripts/evaluate_phase3.py": "de67884a0790aeaa5d2d10c173148dc394f7863a4ed3a58bae1a27b17abb6aa2"
+  },
+  "limitations": "31 synthetic scenarios with 4 held-out variants; controlled output quality/ready is a publication proxy. Real E5 tested only on existing 12-chunk demo; 100/1000/10000 vector scaling is controlled. Timing samples small; cold/warm/cache hits separated. Manual priority can exceed 500 ms Auto wait; request reduction remains below 20% target."
+}

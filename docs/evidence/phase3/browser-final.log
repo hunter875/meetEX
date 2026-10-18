@@ -1,0 +1,14 @@
+
+Running 5 tests using 1 worker
+
+(node:12948) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12948) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\extension.spec.ts:34:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export (8.6s)
+  ok 2 e2e\extension.spec.ts:68:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › SEC-06 provider key goes only to backend RAM; production key test never fakes success (423ms)
+  ok 3 e2e\extension.spec.ts:73:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › CAP/TRN integrated worker and content script with calibrated synthetic Meet DOM (2.5s)
+  ok 4 e2e\extension.spec.ts:100:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency (52.7s)
+  ok 5 e2e\extension.spec.ts:157:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE3 scheduler UI explains waiting/listening/quota and manual cache remains available (2.7s)
+
+  5 passed (1.3m)

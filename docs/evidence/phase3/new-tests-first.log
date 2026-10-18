@@ -1,0 +1,26 @@
+.........................F......                                         [100%]
+================================== FAILURES ===================================
+__________ test_response_mode_and_context_revision_invalidate_cache ___________
+
+store = <app.storage.Storage object at 0x0000021B5E7D8B40>
+meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+
+    def test_response_mode_and_context_revision_invalidate_cache(store,meeting):
+        service=configured(store,meeting);id=meeting['id'];store.apply_caption(id,caption())
+        a=service.prepare(id,dict(action='suggest',response_mode='auto'))
+        assert a['input_hash']!=service.prepare(id,dict(action='suggest',response_mode='fast'))['input_hash']
+>       m=store.meeting(id);m['context_revision']+=1;store.save_meeting(store.db_for(id),m)
+                            ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'context_revision'
+
+backend\tests\test_phase3_orchestration.py:96: KeyError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--- generated xml file: D:\meetEX\docs\evidence\phase3\new-tests-first.xml ----
+=========================== short test summary info ===========================
+FAILED backend/tests/test_phase3_orchestration.py::test_response_mode_and_context_revision_invalidate_cache
+1 failed, 31 passed, 1 warning in 3.48s

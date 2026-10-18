@@ -1,0 +1,8 @@
+
+> meet-copilot@0.1.0 contracts
+> node scripts/check-contracts.mjs
+
+Backend OpenAPI matches saved contract
+✨ openapi-typescript 7.10.1
+🚀 docs/openapi.json → C:\Users\minhl\AppData\Local\Temp\meet-contract-esxUVM\api-schema.d.ts [508.9ms]
+Frontend contract matches backend schema

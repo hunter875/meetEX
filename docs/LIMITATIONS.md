@@ -1,5 +1,7 @@
 # Giới hạn và phần chờ kiểm chứng
 
+Phase 3 **PARTIAL**: [báo cáo](PHASE3_REPORT.md). Logical request giảm 18,37% chưa đạt 20%; Auto đợi manual chậm 2,9 s chưa đạt 500 ms mọi câu ngắn. 39/39 chỉ là eligible đã attempted trên synthetic replay, không phải câu trả lời hữu ích. Card dedup rất hẹp, chưa xử lý paraphrase/topic; rules có thể miss indirect questions/tiếng Việt có dấu/cách nói mới. Focus tối đa 32 (vượt trả lỗi), retrieval tối đa 8 distinct inflight/1 worker, query LRU 128 và matrices 2 bộ không giới hạn byte RSS. Corpus 10k dùng vectors điều khiển; E5 thật chỉ 12 chunks. Keyword cold và E5 p95 có hồi quy được công khai. Narrow freshness chỉ cho cosmetic/new small talk khi revision log liên tục đủ; substantive changes vẫn stale. Không có paid provider call mới hoặc Meet thật được nghiệm thu.
+
 Trạng thái: **implementation chạy local, chờ nghiệm thu live**. Không gọi đây là MVP VERIFIED. P2 connector/DB sống/PDF-DOCX/installer chưa triển khai và không có nút giả đã kết nối.
 
 ## Capture
@@ -41,7 +43,7 @@ Source deletion bỏ current index và đánh dấu historical citation missing;
 
 Các số đo capture ít mẫu và chỉ DOM synthetic. Đã ghi timing/usage thật trên nhóm 16 provider attempts (suggestion/report/connection/correction gộp): median khoảng 2,90 giây; đây không phải SLA hay thời gian riêng của gợi ý. Không có hóa đơn hay benchmark dài hạn chứng minh mục tiêu 2–5 giây. Usage thiếu giữ unknown; bảng giá do người dùng cấu hình có ngày, estimate không phải billing.
 
-Sau tối ưu, [LATENCY_REPORT.md](LATENCY_REPORT.md) tách riêng gợi ý: median 1,498 s trên 10 mẫu tương ứng và 1,520 s trên 16 mẫu cuối; 6/16 request ≤1,5 s, max 3,399 s. Chưa đảm bảo deadline cứng 1,5 s. Đo sau connection test làm ấm client; cold-first-suggestion, mạng chậm và Meet thật chưa được xác minh. Auto vẫn cộng khoảng 1 s ổn định phụ đề + 2 s debounce. Các lời giải thích live ngắn hơn; muốn giải thích chi tiết dùng action explain/ask, có thể chậm hơn.
+[LATENCY_REPORT.md](LATENCY_REPORT.md) giữ số đo provider lịch sử trước routing/Phase 1–3: median 1,498 s trên 10 mẫu, 1,520 s trên 16 mẫu, max 3,399 s; chưa phải deadline cứng. Phase 3 thay debounce 2 s bằng trigger 150/800 ms, max batch 2 s khi rảnh; vẫn cộng thời gian adapter stable/retrieval/provider/render và chờ manual. Provider thật trên build mới/cold-first-suggestion/mạng/Meet thật chưa được xác minh.
 
 ## Bộ phân loại mới
 

@@ -113,10 +113,18 @@ def live_context(context,aliases=None):
     for field in ('segments','memory'):
         result[field]=[{**{k:s[k] for k in ('speaker','text') if k in s},'id':segment_ids[s['id']]} for s in context.get(field,[])]
     result['sources']=[{**{k:s[k] for k in ('kind','title','content','stale','indexed_at') if k in s},'id':source_ids[s['id']]} for s in context.get('sources',[])]
-    if context.get('segments'):result['focus_segment_id']=segment_ids[context['segments'][-1]['id']]
+    if context.get('segments'):
+        focus=context.get('focus_segment_ids') or [context['segments'][-1]['id']]
+        result['focus_segment_id']=segment_ids[focus[-1]]
+    if context.get('focus_segment_ids'):result['focus_segment_ids']=[segment_ids[id] for id in context['focus_segment_ids'] if id in segment_ids]
+    for name in ('context_omitted_count','source_omitted_count'):
+        if name in context:result[name]=context[name]
     result['output_constraints']=dict(input_revision=context.get('transcript_revision'),
         allowed_source_ids=list(source_aliases),allowed_supporting_segment_ids=list(segment_aliases))
     return result
+
+from contextvars import ContextVar
+provider_context=ContextVar('provider_request_context',default={})
 
 class Provider:
     def __init__(self,config,settings):
@@ -139,7 +147,7 @@ class Provider:
         prompt_context=live_context(context,aliases) if live else dict(context)
         system=LIVE_SYSTEM if live else SYSTEM
         if live:
-            system+='\nFocus on focus_segment_id (the latest turn); earlier turns and memory remain context. Do not offer to apply changes without acceptance.'
+            system+='\nAnswer focus_segment_ids / focus_segment_id (pending questions or important changes); other turns and memory remain context. Do not offer to apply changes without acceptance.'
             system+='\nResponse route: '+prompt_routing(context.get('routing'))
             if not context.get('self_speaker') and not context.get('sources'):
                 system+='\nFor THIS request, user role and project evidence are missing. reply_en must be one neutral clarification question about the latest turn, without acknowledgement or declarative claims. Do not invent an instruction attack or ask who should act on QA examples that explicitly assign no work.'
@@ -148,6 +156,8 @@ class Provider:
         timeout=settings['report_timeout_s'] if report else settings['live_timeout_s']
         for attempt in range(2):
             record=dict(id=uid(),mode='real',status='started',usage=None,duration_ms=None,first_token_ms=None,client_reused=self._client is not None and not self._client.is_closed,request_kind='report' if report else 'suggestion',wire_input_chars=len(body['messages'][1]['content']),route=context.get('routing',{}).get('route'))
+            correlation=provider_context.get()
+            record.update(logical_request_id=correlation.get('request_id'),automatic=correlation.get('automatic'),generation_attempt=correlation.get('generation_attempt',1),http_attempt=attempt+1,attempt_reason='repair_retry' if correlation.get('repair') and attempt else 'repair' if correlation.get('repair') else 'transient_retry' if attempt else 'initial',input_token_estimate=(len(body['messages'][0]['content'])+len(body['messages'][1]['content'])+2)//3,token_estimate_method='Unicode characters / 3; not tokenizer usage')
             self.metrics.append(record);self.metrics=self.metrics[-2000:]
             began=time.perf_counter();content='';got_content=False
             try:

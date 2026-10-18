@@ -1,0 +1,191 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "provenance": "Synthetic SQL chunks and controlled orthogonal 384-D vectors for 100/1000/10000 scaling; optional separately labelled genuine E5 on existing demo corpus",
+  "real_provider_calls": 0,
+  "rows": [
+    {
+      "chunks": 100,
+      "mode": "keyword",
+      "cold_ms": 8.123299980070442,
+      "warm": {
+        "n": 11,
+        "median_ms": 4.840000008698553,
+        "p95_ms": 6.109699956141412,
+        "max_ms": 6.109699956141412
+      },
+      "uncached": {
+        "n": 12,
+        "median_ms": 4.861599998548627,
+        "p95_ms": 8.123299980070442,
+        "max_ms": 8.123299980070442
+      },
+      "cache_hits": 0,
+      "python_peak_bytes": 151505,
+      "query_n": 12,
+      "hit_top5": 12,
+      "event_loop_tick": {
+        "n": 4,
+        "median_ms": 6.041650020051748,
+        "p95_ms": 12.86640000762418,
+        "max_ms": 12.86640000762418
+      },
+      "scope_violations": 0
+    },
+    {
+      "chunks": 100,
+      "mode": "hybrid-controlled-vectors",
+      "cold_ms": 110.18299998249859,
+      "warm": {
+        "n": 11,
+        "median_ms": 100.51250003743917,
+        "p95_ms": 144.5030000177212,
+        "max_ms": 144.5030000177212
+      },
+      "uncached": {
+        "n": 12,
+        "median_ms": 102.24955002195202,
+        "p95_ms": 144.5030000177212,
+        "max_ms": 144.5030000177212
+      },
+      "cache_hits": 0,
+      "python_peak_bytes": 419971,
+      "query_n": 12,
+      "hit_top5": 12,
+      "event_loop_tick": {
+        "n": 4,
+        "median_ms": 14.312050014268607,
+        "p95_ms": 15.572100004646927,
+        "max_ms": 15.572100004646927
+      },
+      "scope_violations": 0
+    },
+    {
+      "chunks": 1000,
+      "mode": "keyword",
+      "cold_ms": 36.71429998939857,
+      "warm": {
+        "n": 11,
+        "median_ms": 35.70519998902455,
+        "p95_ms": 39.23759999452159,
+        "max_ms": 39.23759999452159
+      },
+      "uncached": {
+        "n": 12,
+        "median_ms": 35.78199999174103,
+        "p95_ms": 39.23759999452159,
+        "max_ms": 39.23759999452159
+      },
+      "cache_hits": 0,
+      "python_peak_bytes": 141348,
+      "query_n": 12,
+      "hit_top5": 12,
+      "event_loop_tick": {
+        "n": 4,
+        "median_ms": 8.259049995103851,
+        "p95_ms": 33.47090003080666,
+        "max_ms": 33.47090003080666
+      },
+      "scope_violations": 0
+    },
+    {
+      "chunks": 1000,
+      "mode": "hybrid-controlled-vectors",
+      "cold_ms": 1383.5670000407845,
+      "warm": {
+        "n": 11,
+        "median_ms": 922.7839999948628,
+        "p95_ms": 1215.2297999709845,
+        "max_ms": 1215.2297999709845
+      },
+      "uncached": {
+        "n": 12,
+        "median_ms": 927.3184000048786,
+        "p95_ms": 1383.5670000407845,
+        "max_ms": 1383.5670000407845
+      },
+      "cache_hits": 0,
+      "python_peak_bytes": 2802306,
+      "query_n": 12,
+      "hit_top5": 12,
+      "event_loop_tick": {
+        "n": 4,
+        "median_ms": 12.71574999555014,
+        "p95_ms": 142.02410000143573,
+        "max_ms": 142.02410000143573
+      },
+      "scope_violations": 0
+    },
+    {
+      "chunks": 10000,
+      "mode": "keyword",
+      "cold_ms": 168.31710003316402,
+      "warm": {
+        "n": 11,
+        "median_ms": 160.54650000296533,
+        "p95_ms": 164.98780000256374,
+        "max_ms": 164.98780000256374
+      },
+      "uncached": {
+        "n": 12,
+        "median_ms": 160.7174000237137,
+        "p95_ms": 168.31710003316402,
+        "max_ms": 168.31710003316402
+      },
+      "cache_hits": 0,
+      "python_peak_bytes": 138123,
+      "query_n": 12,
+      "hit_top5": 12,
+      "event_loop_tick": {
+        "n": 4,
+        "median_ms": 10.78749998123385,
+        "p95_ms": 160.82699998514727,
+        "max_ms": 160.82699998514727
+      },
+      "scope_violations": 0
+    },
+    {
+      "chunks": 10000,
+      "mode": "hybrid-controlled-vectors",
+      "cold_ms": 8369.533199991565,
+      "warm": {
+        "n": 11,
+        "median_ms": 9598.466600000393,
+        "p95_ms": 10286.317399994005,
+        "max_ms": 10286.317399994005
+      },
+      "uncached": {
+        "n": 12,
+        "median_ms": 9377.737850008998,
+        "p95_ms": 10286.317399994005,
+        "max_ms": 10286.317399994005
+      },
+      "cache_hits": 0,
+      "python_peak_bytes": 26759457,
+      "query_n": 12,
+      "hit_top5": 12,
+      "event_loop_tick": {
+        "n": 4,
+        "median_ms": 16.00524998502806,
+        "p95_ms": 1716.7600000393577,
+        "max_ms": 1716.7600000393577
+      },
+      "scope_violations": 0
+    },
+    {
+      "mode": "real-E5-hybrid-CPU",
+      "model": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "load_ms": 22979.261400003452,
+      "queries": 10,
+      "hit_top5": 10,
+      "timing": {
+        "n": 10,
+        "median_ms": 45.74644999229349,
+        "p95_ms": 52.95230000047013,
+        "max_ms": 52.95230000047013
+      },
+      "corpus": "fixtures/demo-project.json"
+    }
+  ],
+  "limitations": "Controlled-vector ranking is a scaling fixture, not semantic accuracy. Python tracemalloc excludes native/model RSS. Timing samples are small and include cache hits; cold and warm separated."
+}

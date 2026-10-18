@@ -1,0 +1,2757 @@
+{
+  "mode": "synthetic virtual time; production Service + Provider + validators, intercepted SSE; zero paid calls",
+  "fixture_sha256": "fd7ca8d79c779b42182cd517534c3f51c047042fb6db143fd378eb8730bdb895",
+  "harness_sha256": "5d6c3f26b18b90c5a4cf8436e406f2a162010e362ebb6f627e72aa2e4379e019",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "policy": "baseline-phase2",
+  "config": {
+    "virtual_tick_ms": 25,
+    "provider_normal_delay_ms": 300,
+    "provider_slow_delay_ms": 3000,
+    "auto_spacing_s": 2,
+    "input_chars": 18000,
+    "output_tokens": 800,
+    "retrieval": "synchronous keyword wrapper for both scheduler runs; wall-clock async retrieval measured separately"
+  },
+  "rows": [
+    {
+      "id": "small-talk",
+      "origin_at": 0.0,
+      "split": "tuning",
+      "eligible": 0,
+      "processed": 0,
+      "missed": 0,
+      "false_trigger": 4,
+      "logical_requests": 4,
+      "http_attempts": 4,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 4,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 2,
+        "duplicate": 0
+      },
+      "cards": 4,
+      "ready_cards_proxy": 4,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 4,
+        "median": 583.5,
+        "p95": 749,
+        "max": 749
+      },
+      "wire_chars_total": 2401,
+      "eligible_wait_ms": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 4,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 2.0,
+          "request_id": "559f5d84-3553-43d4-bfb6-5fc6231f363d",
+          "wire_chars": 485,
+          "repair": false
+        },
+        {
+          "at": 5.0,
+          "request_id": "0fc55f8c-4e00-49e7-a28f-baf10b8eb171",
+          "wire_chars": 551,
+          "repair": false
+        },
+        {
+          "at": 8.0,
+          "request_id": "865ab073-ee71-4dcb-a92b-972158581860",
+          "wire_chars": 616,
+          "repair": false
+        },
+        {
+          "at": 14.0,
+          "request_id": "91e4054c-00d3-4b1e-a53e-0aa9f10253f6",
+          "wire_chars": 749,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 4,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 4,
+          "median": 300.0000000000002,
+          "p95": 300.0000000000007,
+          "max": 300.0000000000007
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "short-questions",
+      "origin_at": 24.0,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 520.0,
+        "p95": 554,
+        "max": 554
+      },
+      "wire_chars_total": 1040,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 26.0,
+          "request_id": "90ed3302-de1c-4649-8950-4aae5591880b",
+          "wire_chars": 486,
+          "repair": false
+        },
+        {
+          "at": 30.0,
+          "request_id": "9d0cb756-d83f-4191-b0d7-57e33e8fa5ea",
+          "wire_chars": 554,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 1,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 1,
+          "median": 300.0000000000007,
+          "p95": 300.0000000000007,
+          "max": 300.0000000000007
+        },
+        "explain": {
+          "n": 1,
+          "median": 300.0000000000007,
+          "p95": 300.0000000000007,
+          "max": 300.0000000000007
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "long-question",
+      "origin_at": 37.0,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 564,
+        "p95": 564,
+        "max": 564
+      },
+      "wire_chars_total": 564,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 39.0,
+          "request_id": "63b30eb5-19e8-4fde-8080-981a589ac6a7",
+          "wire_chars": 564,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 1,
+          "median": 299.99999999999716,
+          "p95": 299.99999999999716,
+          "max": 299.99999999999716
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "other-person",
+      "origin_at": 46.0,
+      "split": "tuning",
+      "eligible": 0,
+      "processed": 0,
+      "missed": 0,
+      "false_trigger": 1,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 0,
+        "stale": 1,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 1,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 0,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 482,
+        "p95": 482,
+        "max": 482
+      },
+      "wire_chars_total": 482,
+      "eligible_wait_ms": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 48.0,
+          "request_id": "2878a268-ce1d-40d9-bca9-90881a7302b9",
+          "wire_chars": 482,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 1,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 1,
+          "median": 299.99999999999716,
+          "p95": 299.99999999999716,
+          "max": 299.99999999999716
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "own-turn",
+      "origin_at": 57.0,
+      "split": "tuning",
+      "eligible": 0,
+      "processed": 0,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 0,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 0,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 0,
+      "ready_cards_proxy": 0,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "wire_chars_total": 0,
+      "eligible_wait_ms": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "tokens": null,
+      "cost": null,
+      "attempts": [],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "let-me-finish",
+      "origin_at": 66.0,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 1,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 598,
+        "p95": 598,
+        "max": 598
+      },
+      "wire_chars_total": 598,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 72.0,
+          "request_id": "67b5d741-9d2f-4326-a469-a69d87b09c5e",
+          "wire_chars": 598,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 1,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 1,
+          "median": 299.99999999999716,
+          "p95": 299.99999999999716,
+          "max": 299.99999999999716
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "stable-correction-burst",
+      "origin_at": 79.0,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 535,
+        "p95": 535,
+        "max": 535
+      },
+      "wire_chars_total": 535,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 84.2,
+          "request_id": "66acdc27-4d90-498d-9c80-47dd55d39c0c",
+          "wire_chars": 535,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 1,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 1,
+          "median": 299.99999999999716,
+          "p95": 299.99999999999716,
+          "max": 299.99999999999716
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "cosmetic",
+      "origin_at": 91.2,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 3,
+      "http_attempts": 3,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 3,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 3,
+      "ready_cards_proxy": 3,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 3,
+        "median": 508,
+        "p95": 508,
+        "max": 508
+      },
+      "wire_chars_total": 1524,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 3,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 93.2,
+          "request_id": "8ca1a819-ce26-4535-a76a-a77d20049084",
+          "wire_chars": 508,
+          "repair": false
+        },
+        {
+          "at": 97.2,
+          "request_id": "694ffe0f-e817-4b23-9c2a-6eefad980bf3",
+          "wire_chars": 508,
+          "repair": false
+        },
+        {
+          "at": 101.2,
+          "request_id": "662fbf55-82e6-468f-b9a8-4e2c046a5789",
+          "wire_chars": 508,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 3,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 3,
+          "median": 299.99999999999716,
+          "p95": 299.99999999999716,
+          "max": 299.99999999999716
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "negation",
+      "origin_at": 108.2,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 517.5,
+        "p95": 519,
+        "max": 519
+      },
+      "wire_chars_total": 1035,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 110.2,
+          "request_id": "20b60634-ca95-41ba-996d-c9fe1cdd3dc4",
+          "wire_chars": 516,
+          "repair": false
+        },
+        {
+          "at": 114.2,
+          "request_id": "d67b31a0-1971-464c-9d6f-5dd561cc90f6",
+          "wire_chars": 519,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 2,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 2,
+          "median": 299.99999999999716,
+          "p95": 299.99999999999716,
+          "max": 299.99999999999716
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "number",
+      "origin_at": 121.2,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 505.0,
+        "p95": 505,
+        "max": 505
+      },
+      "wire_chars_total": 1010,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 123.2,
+          "request_id": "f6c6d1e4-01d0-4839-98fe-9fa36678789e",
+          "wire_chars": 505,
+          "repair": false
+        },
+        {
+          "at": 127.2,
+          "request_id": "6334b19f-e160-42c8-b457-cf7b80578231",
+          "wire_chars": 505,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 2,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 2,
+          "median": 299.99999999999716,
+          "p95": 299.99999999999716,
+          "max": 299.99999999999716
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "deadline",
+      "origin_at": 134.2,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 516.0,
+        "p95": 516,
+        "max": 516
+      },
+      "wire_chars_total": 1032,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 136.2,
+          "request_id": "30350b58-56c3-4e0d-89a2-0e5e679704da",
+          "wire_chars": 516,
+          "repair": false
+        },
+        {
+          "at": 140.2,
+          "request_id": "d7cb1523-71ba-4c7b-a77c-7438b5b87362",
+          "wire_chars": 516,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 2,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 2,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "owner",
+      "origin_at": 147.2,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 504.0,
+        "p95": 504,
+        "max": 504
+      },
+      "wire_chars_total": 1008,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 149.2,
+          "request_id": "a72a9fa0-b723-4bf0-93b8-5523c9d87cca",
+          "wire_chars": 504,
+          "repair": false
+        },
+        {
+          "at": 153.2,
+          "request_id": "164df657-8ba8-41d1-9c39-3e242772fc4f",
+          "wire_chars": 504,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 2,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 2,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "environment",
+      "origin_at": 160.2,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 536.5,
+        "p95": 546,
+        "max": 546
+      },
+      "wire_chars_total": 1073,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 162.2,
+          "request_id": "4866a9c7-549e-4260-8af5-b1f54d8725aa",
+          "wire_chars": 527,
+          "repair": false
+        },
+        {
+          "at": 166.2,
+          "request_id": "463a2e0e-b294-463b-8b4c-b76e041667dc",
+          "wire_chars": 546,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 1,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 1,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "asked-again",
+      "origin_at": 173.2,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 532.5,
+        "p95": 568,
+        "max": 568
+      },
+      "wire_chars_total": 1065,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 175.2,
+          "request_id": "3dc6d084-36db-491a-a85e-563583cbbc0f",
+          "wire_chars": 497,
+          "repair": false
+        },
+        {
+          "at": 179.2,
+          "request_id": "456108b7-f0b4-4bf3-a7a9-68ce58202951",
+          "wire_chars": 568,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 2,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 2,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "two-questions",
+      "origin_at": 186.2,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 1,
+      "missed": 1,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 591,
+        "p95": 591,
+        "max": 591
+      },
+      "wire_chars_total": 591,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0000000000284,
+        "p95": 2000.0000000000284,
+        "max": 2000.0000000000284
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 188.3,
+          "request_id": "9f182095-fbda-46ca-a016-5fc01a9bbc5c",
+          "wire_chars": 591,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 1,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 1,
+          "median": 299.99999999998295,
+          "p95": 299.99999999998295,
+          "max": 299.99999999998295
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "topic-switch",
+      "origin_at": 195.29999999999998,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 547.5,
+        "p95": 589,
+        "max": 589
+      },
+      "wire_chars_total": 1095,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0000000000284,
+        "p95": 2000.0000000000284,
+        "max": 2000.0000000000284
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 197.3,
+          "request_id": "3b3ee780-6fee-4f1c-9a4c-39e2a2e24488",
+          "wire_chars": 506,
+          "repair": false
+        },
+        {
+          "at": 201.3,
+          "request_id": "8dfc5fd8-fe97-4dd5-a54b-1189300a5c37",
+          "wire_chars": 589,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 2,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 2,
+          "median": 299.99999999998295,
+          "p95": 299.99999999998295,
+          "max": 299.99999999998295
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "slow-manual",
+      "origin_at": 208.29999999999998,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 3,
+      "http_attempts": 3,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 1,
+        "error": 0,
+        "cancelled": 1,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 3,
+        "median": 530,
+        "p95": 577,
+        "max": 577
+      },
+      "wire_chars_total": 1616,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2450.000000000017,
+        "p95": 2900.0000000000055,
+        "max": 2900.0000000000055
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 3,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 210.3,
+          "request_id": "9d9a4c83-aceb-4471-8584-1d04c26fff48",
+          "wire_chars": 509,
+          "repair": false
+        },
+        {
+          "at": 210.49999999999997,
+          "request_id": "60859daa-175f-493f-9894-9bcc08104af4",
+          "wire_chars": 530,
+          "repair": false
+        },
+        {
+          "at": 213.5,
+          "request_id": "b95c20e2-aa3e-4649-871e-901766d66fa8",
+          "wire_chars": 577,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 1,
+        "explain": 2,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 1,
+          "median": 3000.0,
+          "p95": 3000.0,
+          "max": 3000.0
+        },
+        "explain": {
+          "n": 2,
+          "median": 1599.999999999994,
+          "p95": 3000.000000000028,
+          "max": 3000.000000000028
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "same-manual",
+      "origin_at": 219.6,
+      "split": "tuning",
+      "eligible": 0,
+      "processed": 0,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 1,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 521.0,
+        "p95": 521,
+        "max": 521
+      },
+      "wire_chars_total": 1042,
+      "eligible_wait_ms": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 220.6,
+          "request_id": "a71aa52e-151b-4322-a06d-ebc4e094c609",
+          "wire_chars": 521,
+          "repair": false
+        },
+        {
+          "at": 220.60999999999999,
+          "request_id": "a4982263-5939-4ea8-8c6e-32b5959d6a21",
+          "wire_chars": 521,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 2,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 2,
+          "median": 1505.0000000000095,
+          "p95": 3000.000000000028,
+          "max": 3000.000000000028
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "retry",
+      "origin_at": 229.60999999999999,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 1,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 510.0,
+        "p95": 510,
+        "max": 510
+      },
+      "wire_chars_total": 1020,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0000000000284,
+        "p95": 2000.0000000000284,
+        "max": 2000.0000000000284
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 231.61,
+          "request_id": "bf1f2ad9-24d4-4f01-bcb6-92f6fb1810fe",
+          "wire_chars": 510,
+          "repair": false
+        },
+        {
+          "at": 232.41,
+          "request_id": "bf1f2ad9-24d4-4f01-bcb6-92f6fb1810fe",
+          "wire_chars": 510,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 1,
+          "median": 1099.9999999999943,
+          "p95": 1099.9999999999943,
+          "max": 1099.9999999999943
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "repair",
+      "origin_at": 238.60999999999999,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 2,
+      "repair_attempts": 1,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 627.5,
+        "p95": 744,
+        "max": 744
+      },
+      "wire_chars_total": 1255,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0000000000284,
+        "p95": 2000.0000000000284,
+        "max": 2000.0000000000284
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 240.61,
+          "request_id": "c07e741f-c5fc-4ade-9d93-2fadbd6e25f3",
+          "wire_chars": 511,
+          "repair": false
+        },
+        {
+          "at": 240.91,
+          "request_id": "c07e741f-c5fc-4ade-9d93-2fadbd6e25f3",
+          "wire_chars": 744,
+          "repair": true
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 1,
+          "median": 599.9999999999943,
+          "p95": 599.9999999999943,
+          "max": 599.9999999999943
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "error",
+      "origin_at": 247.60999999999999,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 0,
+        "stale": 0,
+        "error": 1,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 0,
+      "ready_cards_proxy": 0,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 510,
+        "p95": 510,
+        "max": 510
+      },
+      "wire_chars_total": 510,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0000000000284,
+        "p95": 2000.0000000000284,
+        "max": 2000.0000000000284
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 249.61,
+          "request_id": "1664d2b0-83d9-4aad-8ba1-e0abbecb51f9",
+          "wire_chars": 510,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 1,
+          "median": 299.99999999998295,
+          "p95": 299.99999999998295,
+          "max": 299.99999999998295
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "pause-pending",
+      "origin_at": 256.61,
+      "split": "tuning",
+      "eligible": 0,
+      "processed": 0,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 0,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 0,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 0,
+      "ready_cards_proxy": 0,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "wire_chars_total": 0,
+      "eligible_wait_ms": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "tokens": null,
+      "cost": null,
+      "attempts": [],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "end-active",
+      "origin_at": 265.66,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 0,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 1,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 0,
+      "ready_cards_proxy": 0,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 502,
+        "p95": 502,
+        "max": 502
+      },
+      "wire_chars_total": 502,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 267.66,
+          "request_id": "197ff836-fa28-4d50-923d-aad29420d075",
+          "wire_chars": 502,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 1,
+          "median": 199.99999999998863,
+          "p95": 199.99999999998863,
+          "max": 199.99999999998863
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "source-generation",
+      "origin_at": 276.86,
+      "split": "tuning",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 547.5,
+        "p95": 587,
+        "max": 587
+      },
+      "wire_chars_total": 1095,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 278.86,
+          "request_id": "c90885a9-2dc7-4555-8717-e5508e4db647",
+          "wire_chars": 508,
+          "repair": false
+        },
+        {
+          "at": 282.96,
+          "request_id": "3d01dbed-fe04-4b17-a71f-5849bcf4e13d",
+          "wire_chars": 587,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 2,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 2,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "heartbeat-reconnect",
+      "origin_at": 289.96,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 508,
+        "p95": 508,
+        "max": 508
+      },
+      "wire_chars_total": 508,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 291.96,
+          "request_id": "8d7d446c-1443-4730-ad7f-3e23ffeb83fd",
+          "wire_chars": 508,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "partial-stream",
+      "origin_at": 303.96,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 520,
+        "p95": 520,
+        "max": 520
+      },
+      "wire_chars_total": 520,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 307.96,
+          "request_id": "68a8dc70-a1a6-4075-ac74-53b29c9d081d",
+          "wire_chars": 520,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "heldout-short",
+      "origin_at": 314.96,
+      "split": "evaluation",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 521.5,
+        "p95": 553,
+        "max": 553
+      },
+      "wire_chars_total": 1043,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 316.96,
+          "request_id": "5cea7d53-c3bd-408d-9dde-277211ea97a7",
+          "wire_chars": 490,
+          "repair": false
+        },
+        {
+          "at": 320.96,
+          "request_id": "a3083b76-5c19-4b32-a1a8-c4deff8b7868",
+          "wire_chars": 553,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 1,
+        "explain": 1,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "explain": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "heldout-small-talk",
+      "origin_at": 327.96,
+      "split": "evaluation",
+      "eligible": 0,
+      "processed": 0,
+      "missed": 0,
+      "false_trigger": 2,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 1,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 546.0,
+        "p95": 610,
+        "max": 610
+      },
+      "wire_chars_total": 1092,
+      "eligible_wait_ms": {
+        "n": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 329.96,
+          "request_id": "774482f1-28ed-48c2-9c5d-578567da31d4",
+          "wire_chars": 482,
+          "repair": false
+        },
+        {
+          "at": 335.96,
+          "request_id": "3d7feb0f-fb96-4f9a-8366-cfdbade348b2",
+          "wire_chars": 610,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 2,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 2,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "heldout-critical",
+      "origin_at": 342.96,
+      "split": "evaluation",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 2,
+      "http_attempts": 2,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 2,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 2,
+        "median": 500.0,
+        "p95": 500,
+        "max": 500
+      },
+      "wire_chars_total": 1000,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 2,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 344.96,
+          "request_id": "d7d4f826-1180-42aa-a5c9-17a1ba029444",
+          "wire_chars": 500,
+          "repair": false
+        },
+        {
+          "at": 348.96,
+          "request_id": "1cec7180-d9eb-4665-be78-3a3060fe5236",
+          "wire_chars": 500,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 2,
+        "explain": 0,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 2,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "heldout-questions",
+      "origin_at": 355.96,
+      "split": "evaluation",
+      "eligible": 2,
+      "processed": 1,
+      "missed": 1,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 590,
+        "p95": 590,
+        "max": 590
+      },
+      "wire_chars_total": 590,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 358.08,
+          "request_id": "76ee16b3-52e2-4db9-9194-7154d40772c7",
+          "wire_chars": 590,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 1,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    },
+    {
+      "id": "context-budget",
+      "origin_at": 365.08,
+      "split": "tuning",
+      "eligible": 1,
+      "processed": 1,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 1,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 1,
+        "stale": 0,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 1,
+      "ready_cards_proxy": 1,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 1,
+        "median": 5538,
+        "p95": 5538,
+        "max": 5538
+      },
+      "wire_chars_total": 5538,
+      "eligible_wait_ms": {
+        "n": 1,
+        "median": 2000.0,
+        "p95": 2000.0,
+        "max": 2000.0
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 371.08,
+          "request_id": "8fa2a9da-eb17-4a4a-9d3c-bd0c1519332d",
+          "wire_chars": 5538,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 0,
+        "explain": 0,
+        "deep": 1,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "explain": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "deep": {
+          "n": 1,
+          "median": 300.00000000001137,
+          "p95": 300.00000000001137,
+          "max": 300.00000000001137
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": null
+    }
+  ],
+  "totals": {
+    "eligible": 39,
+    "processed": 37,
+    "missed": 2,
+    "false_trigger": 7,
+    "logical_requests": 49,
+    "http_attempts": 51,
+    "repair_attempts": 1,
+    "transient_retry_attempts": 1,
+    "cards": 45,
+    "ready_cards_proxy": 43,
+    "wire_chars_total": 32384,
+    "duplicate_cards_same_context": 0,
+    "usage_known_attempts": 0,
+    "usage_unknown_attempts": 51
+  },
+  "limitations": "Coverage means scheduled focus evidence, not semantic answer quality. Error/cancel/stale counted as processed attempts, reported separately. Ready cards are a publication proxy, not human-rated usefulness. Virtual durations describe deterministic scheduler/provider delay, not CPU or model latency. Tokens/cost unknown without real usage."
+}

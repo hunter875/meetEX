@@ -33,7 +33,7 @@ Hiện luồng, lý do, cần xác minh và mục tiêu thời gian. Card đang 
 
 ## Mục tiêu và giới hạn
 
-Mục tiêu sau khi có context sẵn: fast 1–2 s, explain 2–4 s, deep 5–10 s, clarify 1–3 s. Không phải timeout/SLA/thời gian im lặng áp dụng mọi cuộc họp. Không cố tình sleep cho đủ khoảng này. Stable ~1 s, Auto debounce 2 s, retrieval, cold start, mạng và render cần đo riêng.
+Mục tiêu sau khi có context sẵn: fast 1–2 s, explain 2–4 s, deep 5–10 s, clarify 1–3 s. Không phải timeout/SLA/thời gian im lặng áp dụng mọi cuộc họp. Không cố tình sleep cho đủ khoảng này. Stable của adapter, chờ trigger/scheduler, retrieval, cold start, mạng và render cần đo riêng; debounce 2 s cố định là hành vi lịch sử trước Phase 3.
 
 Số đo 1,498/1,520 giây trước đây thuộc build trước routing, không chứng minh luồng mới đạt mục tiêu. Deep vẫn dùng output budget/timeout live hiện có và lời nói 1–3 câu, chưa là phân tích dài đầy đủ. Khi thiếu self_speaker và nguồn, quy tắc hỏi trung lập vẫn ưu tiên hơn yêu cầu đưa phương án.
 
@@ -53,3 +53,9 @@ npm test
 npm run build
 npm run test:e2e
 ```
+
+## Phase 3 — trigger và routing tách vai trò
+
+`content-trigger-v1` quyết định có tạo Auto request hay chờ/bỏ qua; `rules-v1` vẫn chọn route và cờ cần xác minh của snapshot. Không gọi thêm LLM. Câu hỏi ngắn được chờ 150 ms khi rảnh; thông tin/correction 800 ms, batch đầu không quá 2 s. Partial/let-finish chờ lượt ổn định; self/unknown speaker/participant khác không tự đoán cần đáp. Manual ưu tiên, vì thế Auto sau manual chậm đo được 2,9 s, chưa đạt mục tiêu 500 ms mọi câu ngắn.
+
+Focus có thể gồm nhiều câu đang chờ và tiền đề nguyên turn; routing nhìn focus sau cùng, provider thấy toàn bộ focus. Cache xét response_mode/policy/prompt/provider configuration và source/context; pin action giữ snapshot đã chọn. [Báo cáo đầy đủ](PHASE3_REPORT.md) và [review controlled](evidence/phase3/review.json): 0 missed/false trigger trên nhãn replay, không phải accuracy tổng quát. UI hiện chờ người nói/kết thúc, xử lý, tiếp tục nghe, gợi ý mới, quota hoặc stale; reason codes ở metrics/API.

@@ -174,5 +174,15 @@ if phase2_path.exists():
     text+='\nPhase 2: [capture/recovery/latency, before-after và gate A–G](PHASE2_REPORT.md). Kết quả tự động 228 backend / 56 frontend / 4 browser; Meet thật NOT TESTED, không có paid provider call mới. Số đo lịch sử phía trên không phải benchmark Phase 2.\n'
     with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
         stream.write('\nPhase 2: replay/capture/recovery/telemetry đã triển khai; [A–G và giới hạn](PHASE2_REPORT.md), [runbook live](PHASE2_LIVE_RUNBOOK.md). 228 backend / 56 frontend / 4 browser; Meet thật NOT TESTED.\n')
+phase3_path=docs/'evidence/phase3/review.json'
+if phase3_path.exists():
+    current=json.loads(phase3_path.read_text('utf8'));counts=current['regression']
+    text=text.replace('**228 tests**',f'**{counts["backend"]} tests**').replace('**56 passed**',f'**{counts["frontend"]} passed**').replace('(4 cases)','(5 cases)')
+    for name in ('backend-final.xml','frontend-final.json','browser-final-results.json','documentation-qa.json','browser-final/capture-fixture.json','browser-final/runtime-metrics-fixture.json','browser-final/projects.png','browser-final/report.png','browser-final/live-pinned.png','browser-final/sidepanel-320.png'):
+        text=text.replace('phase2/'+name,'phase3/'+name)
+    text=text.replace('Cập nhật Phase 2 2026-10-18;','Cập nhật Phase 3 2026-10-18;')
+    text+='\nPhase 3: **PARTIAL** theo mục tiêu đặt trước. [Báo cáo A–F và benchmark đối chiếu](PHASE3_REPORT.md). 39/39 eligible đã có attempted generation, 0 missed/false trigger; logical 49 → 40 (giảm 18,37%, chưa đạt 20%); Auto đợi manual có thể 2,9 s (chưa đạt 500 ms mọi câu ngắn). Không suy ra chất lượng trả lời thật hoặc SLA. Regression '+f'{counts["backend"]} backend / {counts["frontend"]} frontend / {counts["browser"]} browser. Meet/provider thật mới NOT TESTED; paid calls mới = 0.\n'
+    with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
+        stream.write('\nPhase 3: **PARTIAL** · trigger/scheduler/dedup/context/retrieval/accounting/UI đã triển khai và đối chiếu; hai mục tiêu request/Auto wait chưa đạt. [A–F, số đo và giới hạn](PHASE3_REPORT.md). Không mở rộng sang decision memory/connector/STT/agent/multiworker.\n')
 (docs/'ACCEPTANCE_REPORT.md').write_text(text+'\n',encoding='utf8')
 print('Generated traceability, task status and mode-specific acceptance report')

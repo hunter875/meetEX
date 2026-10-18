@@ -1,0 +1,105 @@
+.............FF......................................................... [ 31%]
+........................................................................ [ 63%]
+........................................................................ [ 94%]
+............                                                             [100%]
+================================== FAILURES ===================================
+____________ test_one_active_latest_queued_stale_and_card_snapshot ____________
+
+store = <app.storage.Storage object at 0x0000022349C81450>
+meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+
+    @pytest.mark.acceptance('AI-05','AI-09','UX-02')
+    async def test_one_active_latest_queued_stale_and_card_snapshot(store,meeting):
+        provider=SlowProvider();service=Service(store,Retrieval(store,Semantic(Path('.'))),provider);id=meeting['id']
+        store.apply_caption(id,caption(text='Question A'))
+        a=service.schedule(id,dict(action='auto'));await settle(lambda:len(provider.waiters)==1)
+        store.apply_caption(id,caption(text='Question B',segment='s2',seq=2))
+        b=service.schedule(id,dict(action='auto'));c=service.schedule(id,dict(action='auto'))
+>       assert store.objects(id,'ai_requests')[1]['status']=='superseded'
+E       AssertionError: assert 'queued' == 'superseded'
+E         
+E         - superseded
+E         + queued
+
+backend\tests\test_ai.py:223: AssertionError
+____ test_immediate_manual_cancellation_and_auto_quota_still_allow_manual _____
+
+store = <app.storage.Storage object at 0x0000022349B17A50>
+meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+
+    @pytest.mark.acceptance('AI-09')
+    async def test_immediate_manual_cancellation_and_auto_quota_still_allow_manual(store,meeting):
+        provider=SlowProvider();service=Service(store,Retrieval(store,Semantic(Path('.'))),provider);id=meeting['id'];store.apply_caption(id,caption())
+        service.schedule(id,dict(action='auto'))
+        # Cancel the runner before its first event-loop turn: it must still launch the latest manual job.
+        latest=service.schedule(id,dict(action='suggest'))
+        assert service.schedule(id,dict(action='auto'))==latest
+        await settle(lambda:len(provider.waiters)==1)
+        assert provider.started[0]['action']=='suggest'
+        store.set_settings({'auto_per_minute':1});service.rate[id].append(__import__('time').monotonic())
+        with pytest.raises(AppError) as e:service.schedule(id,dict(action='auto'))
+        assert e.value.code=='AUTO_QUOTA'
+>       manual=service.schedule(id,dict(action='suggest'));await settle(lambda:provider.cancelled==1)
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_ai.py:248: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+predicate = <function test_immediate_manual_cancellation_and_auto_quota_still_allow_manual.<locals>.<lambda> at 0x0000022349C51A80>
+timeout = 2
+
+    async def settle(predicate,timeout=2):
+        until=asyncio.get_running_loop().time()+timeout
+        while not predicate():
+>           if asyncio.get_running_loop().time()>until:raise AssertionError('Background condition did not complete')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: Background condition did not complete
+
+backend\tests\test_ai.py:213: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+backend/tests/test_api.py::test_http_auth_host_origin_and_secret_redaction
+  D:\meetEX\.venv\Lib\site-packages\_pytest\unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <coroutine object Service.run_live at 0x0000022349A93240>
+  
+  Traceback (most recent call last):
+    File "D:\meetEX\.venv\Lib\site-packages\pydantic\type_adapter.py", line 287, in _init_core_attrs
+      self.core_schema = _getattr_no_parents(self._type, '__pydantic_core_schema__')
+                         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "D:\meetEX\.venv\Lib\site-packages\pydantic\type_adapter.py", line 56, in _getattr_no_parents
+      raise AttributeError(attribute)
+  AttributeError: __pydantic_core_schema__
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "D:\meetEX\backend\app\service.py", line 248, in run_live
+      output=demo_suggestion(r['snapshot']) if m['demo'] else await self.generate_suggestion(r['snapshot'],r)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  GeneratorExit
+  
+  During handling of the above exception, another exception occurred:
+  
+  Traceback (most recent call last):
+    File "D:\meetEX\backend\app\service.py", line 277, in run_live
+      try:self.save_request(id,r)
+          ~~~~~~~~~~~~~~~~~^^^^^^
+    File "D:\meetEX\backend\app\service.py", line 44, in save_request
+      db=self.store.db_for(id)
+    File "D:\meetEX\backend\app\storage.py", line 76, in db_for
+      if db.execute('SELECT 1 FROM meetings WHERE id=?',(id,)).fetchone():return db
+         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  sqlite3.ProgrammingError: Cannot operate on a closed database.
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+---- generated xml file: D:\meetEX\docs\evidence\phase3\backend-first.xml -----
+=========================== short test summary info ===========================
+FAILED backend/tests/test_ai.py::test_one_active_latest_queued_stale_and_card_snapshot
+FAILED backend/tests/test_ai.py::test_immediate_manual_cancellation_and_auto_quota_still_allow_manual
+2 failed, 226 passed, 2 warnings in 14.89s

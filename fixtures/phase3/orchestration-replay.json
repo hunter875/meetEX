@@ -1,0 +1,1212 @@
+[
+  {
+    "id": "small-talk",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Hello!",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 3,
+        "text": "Good morning.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 6,
+        "text": "How are you?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 9,
+        "text": "Thank you.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 12,
+        "text": "Nice to meet you.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 15,
+        "text": "Okay.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "short-questions",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "Which environment?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "long-question",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Can you explain how the cache invalidation works with the query index?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "other-person",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Hello",
+        "speaker": "Alex",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2,
+        "text": "Alex, why is this blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "own-turn",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why does the cache expire?",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "let-me-finish",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Let me finish the explanation first.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "Which option should we choose?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "stable-correction-burst",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0.0,
+        "text": "The timeout is 15 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.4,
+        "text": "The timeout is 16 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 2,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.8,
+        "text": "The timeout is 17 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 3,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.2000000000000002,
+        "text": "The timeout is 18 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 4,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.6,
+        "text": "The timeout is 19 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 5,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.0,
+        "text": "The timeout is 20 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 6,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.4000000000000004,
+        "text": "The timeout is 21 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 7,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.8000000000000003,
+        "text": "The timeout is 22 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 8,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 3.2,
+        "text": "The timeout is 23 seconds, and the service is blocked.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 9,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "cosmetic",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why does the cache expire?",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "why does the cache expire?",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 2,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 8,
+        "text": "WHY does the cache expire?",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 3,
+        "eligible": false,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "negation",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "We can deploy to staging.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "We cannot deploy to staging.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 2,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "number",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Timeout is 15.5 seconds.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "Timeout is 50.5 seconds.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 2,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "deadline",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "The deadline is Friday.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "The deadline is Monday.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 2,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "owner",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Minh owns the CSV review.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "Alex owns the CSV review.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 2,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "environment",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "The approved environment is staging.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "The approved environment is production.",
+        "speaker": "Client",
+        "segment": "same",
+        "revision": 2,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "asked-again",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Which environment?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "Which environment?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "two-questions",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is the cache disabled?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 0.1,
+        "text": "Which environment should we test?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "topic-switch",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "How does the cache work?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "Why is the CSV export blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "slow-manual",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "slow",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is the service blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 2.2,
+        "text": "Explain the cache.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "manual"
+      },
+      {
+        "at": 2.3,
+        "text": "Which environment?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "same-manual",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "slow",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is the service blocked?",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1,
+        "text": "Explain this.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "manual"
+      },
+      {
+        "at": 1.01,
+        "text": "Explain this.",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "manual"
+      }
+    ]
+  },
+  {
+    "id": "retry",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "retry",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is PHASE3_RETRY blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "repair",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "repair",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is PHASE3_REPAIR blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "error",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "error",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is PHASE3_ERROR blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "pause-pending",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is this blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.05,
+        "text": "",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "pause"
+      }
+    ]
+  },
+  {
+    "id": "end-active",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "slow",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why is this blocked?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 2.2,
+        "text": "",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "end"
+      }
+    ]
+  },
+  {
+    "id": "source-generation",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why does the cache expire?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "source_change"
+      },
+      {
+        "at": 4.1,
+        "text": "Why does the cache expire?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "heartbeat-reconnect",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why does the cache expire?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "heartbeat"
+      },
+      {
+        "at": 5,
+        "text": "",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "reconnect"
+      }
+    ]
+  },
+  {
+    "id": "partial-stream",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0.0,
+        "text": "Could you explain the cache ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 1,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 0.2,
+        "text": "Could you explain the cache and index ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 2,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 0.4,
+        "text": "Could you explain the cache and index and index ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 3,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 0.6000000000000001,
+        "text": "Could you explain the cache and index and index and index ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 4,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 0.8,
+        "text": "Could you explain the cache and index and index and index and index ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 5,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 1.0,
+        "text": "Could you explain the cache and index and index and index and index and index ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 6,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 1.2000000000000002,
+        "text": "Could you explain the cache and index and index and index and index and index and index ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 7,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 1.4000000000000001,
+        "text": "Could you explain the cache and index and index and index and index and index and index and index ",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 8,
+        "eligible": false,
+        "op": "caption",
+        "stable": false
+      },
+      {
+        "at": 2,
+        "text": "Could you explain the cache and index?",
+        "speaker": "Client",
+        "segment": "partial",
+        "revision": 9,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "heldout-short",
+    "split": "evaluation",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why not?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "Which region?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "heldout-small-talk",
+    "split": "evaluation",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Hi!",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 3,
+        "text": "Thanks!",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 6,
+        "text": "Good afternoon!",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "heldout-critical",
+    "split": "evaluation",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "The retry count is 2.",
+        "speaker": "Client",
+        "segment": "critical",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "The retry count is 3.",
+        "speaker": "Client",
+        "segment": "critical",
+        "revision": 2,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "heldout-questions",
+    "split": "evaluation",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "How should we handle the migration?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 0.12,
+        "text": "What about that option?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  },
+  {
+    "id": "context-budget",
+    "split": "tuning",
+    "provenance": "synthetic; labels fixed before tuning",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0.0,
+        "text": "Historical note 0: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.1,
+        "text": "Historical note 1: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.2,
+        "text": "Historical note 2: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.30000000000000004,
+        "text": "Historical note 3: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.4,
+        "text": "Historical note 4: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.5,
+        "text": "Historical note 5: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.6000000000000001,
+        "text": "Historical note 6: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.7000000000000001,
+        "text": "Historical note 7: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.8,
+        "text": "Historical note 8: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 0.9,
+        "text": "Historical note 9: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.0,
+        "text": "Historical note 10: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.1,
+        "text": "Historical note 11: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.2000000000000002,
+        "text": "Historical note 12: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.3,
+        "text": "Historical note 13: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.4000000000000001,
+        "text": "Historical note 14: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.5,
+        "text": "Historical note 15: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.6,
+        "text": "Historical note 16: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.7000000000000002,
+        "text": "Historical note 17: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.8,
+        "text": "Historical note 18: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 1.9000000000000001,
+        "text": "Historical note 19: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.0,
+        "text": "Historical note 20: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.1,
+        "text": "Historical note 21: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.2,
+        "text": "Historical note 22: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.3000000000000003,
+        "text": "Historical note 23: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 2.4000000000000004,
+        "text": "Historical note 24: the team reviewed documentation for the old module and no action was assigned. This is background context with no new question.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 3,
+        "text": "Option B uses the cache while the index remains unchanged.",
+        "speaker": "Me",
+        "segment": null,
+        "revision": 1,
+        "eligible": false,
+        "op": "caption"
+      },
+      {
+        "at": 4,
+        "text": "What about that option?",
+        "speaker": "Client",
+        "segment": null,
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      }
+    ]
+  }
+]

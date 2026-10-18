@@ -67,7 +67,7 @@ def create_app(config=None):
     async def lifespan(app):
         worker=asyncio.create_task(maintenance())
         yield
-        worker.cancel();await asyncio.gather(worker,return_exceptions=True);await service.shutdown();await provider.aclose();store.close()
+        worker.cancel();await asyncio.gather(worker,return_exceptions=True);await service.shutdown();await provider.aclose();await retrieval.aclose();store.close()
 
     app=FastAPI(title='Meet Copilot local API',version='0.1.0',lifespan=lifespan)
     app.state.store=store;app.state.service=service;app.state.provider=provider;app.state.ingestion=ingestion;app.state.retrieval=retrieval
@@ -160,7 +160,7 @@ def create_app(config=None):
         if row:return json.loads(row[0])
         raise AppError('NOT_FOUND','Job not found',404)
     @app.post('/api/v1/projects/{id}/search')
-    async def search(id:str,body:SearchInput):return retrieval.search(id,body.query,body.limit)
+    async def search(id:str,body:SearchInput):return await retrieval.search_async(id,body.query,body.limit)
     @app.get('/api/v1/meetings',response_model=list[MeetingDTO])
     async def meetings(project_id:str|None=None,query:str='',date_from:str|None=None,date_to:str|None=None):
         out=[]
@@ -178,7 +178,7 @@ def create_app(config=None):
     @app.post('/api/v1/meetings',status_code=201,response_model=MeetingDTO)
     async def create_meeting(body:MeetingCreate):return store.create_meeting(body.model_dump())
     @app.get('/api/v1/meetings/{id}',response_model=SnapshotDTO)
-    async def meeting(id:str):return store.snapshot(id)
+    async def meeting(id:str):return dict(**store.snapshot(id),scheduler=service.scheduler_states.get(id))
     @app.patch('/api/v1/meetings/{id}')
     async def meeting_prefs(id:str,body:MeetingPrefs):
         m=store.meeting(id);patch=body.model_dump(exclude_unset=True)
@@ -204,11 +204,11 @@ def create_app(config=None):
     async def delete_meeting(id:str):
         service.forget(id);store.delete_meeting(id);await service.emit('meeting.deleted',meeting_id=id);return dict(deleted=True)
     @app.post('/api/v1/meetings/{id}/suggest',status_code=202)
-    async def suggest(id:str,body:SuggestInput):return dict(request_id=service.schedule(id,body.model_dump()))
+    async def suggest(id:str,body:SuggestInput):return dict(request_id=await service.schedule_async(id,body.model_dump()))
     @app.post('/api/v1/meetings/{id}/classify',response_model=RoutingDecision)
     async def classify_request(id:str,body:SuggestInput):
         # Preview the same scoped routing policy without scheduling or billing AI.
-        return service.prepare(id,body.model_dump())['routing']
+        return (await service.prepare_async(id,body.model_dump()))['routing']
     @app.get('/api/v1/meetings/{id}/suggestions/{sid}/citations',response_model=list[CitationDTO])
     async def citations(id:str,sid:str):
         suggestion=service.find_suggestion(id,sid);out=[]
@@ -274,7 +274,7 @@ def create_app(config=None):
         unknown=len(records)-len(usage);sett=store.settings();estimate=None
         if not unknown and records and sett['price_input'] is not None and sett['price_output'] is not None and sett['price_date']:
             estimate=(known['prompt_tokens']*sett['price_input']+known['completion_tokens']*sett['price_output'])/1e6
-        return dict(latency_records=service.latency_records,classifier=summary(service.routing_timings),provider_by_route={route:summary([r['duration_ms'] for r in records if r.get('route')==route and r['duration_ms'] is not None]) for route in ('fast','explain','deep','clarify')},request_count=len(records),known_usage=known,unknown_usage_count=unknown,estimated_cost=estimate,price_date=sett['price_date'],cost_note='Estimate from configured per-million token prices, not a bill.',capture_apply=summary(ack_timings),retrieval=summary(retrieval.timings),provider=summary([r['duration_ms'] for r in records if r['duration_ms'] is not None]),provider_first_token=summary([r['first_token_ms'] for r in records if r['first_token_ms'] is not None]),backend_stable_to_request=summary(service.stable_to_request),backend_stable_to_validated=summary(service.stable_to_ready),report=summary([j['duration_ms'] for j in service.report_jobs.values() if j.get('duration_ms') is not None]),records=records)
+        return dict(orchestration_counts=dict(service.orchestration_counts),scheduler_states=service.scheduler_states,trigger_records=list(service.trigger_metrics),retrieval_cache_hits=retrieval.cache_hits,latency_records=service.latency_records,classifier=summary(service.routing_timings),provider_by_route={route:summary([r['duration_ms'] for r in records if r.get('route')==route and r['duration_ms'] is not None]) for route in ('fast','explain','deep','clarify')},request_count=len(records),known_usage=known,unknown_usage_count=unknown,estimated_cost=estimate,price_date=sett['price_date'],cost_note='Estimate from configured per-million token prices, not a bill.',capture_apply=summary(ack_timings),retrieval=summary(retrieval.timings),provider=summary([r['duration_ms'] for r in records if r['duration_ms'] is not None]),provider_first_token=summary([r['first_token_ms'] for r in records if r['first_token_ms'] is not None]),backend_stable_to_request=summary(service.stable_to_request),backend_stable_to_validated=summary(service.stable_to_ready),report=summary([j['duration_ms'] for j in service.report_jobs.values() if j.get('duration_ms') is not None]),records=records)
 
     @app.websocket('/api/v1/events')
     async def events(ws:WebSocket):

@@ -4,7 +4,7 @@ Trợ lý dành cho developer Việt Nam họp với khách nói tiếng Anh: đ
 
 Repository: [hunter875/meetEX](https://github.com/hunter875/meetEX) (GitHub báo public khi kiểm tra 2026-10-18). [Mục lục tài liệu và trạng thái hiện tại](docs/README.md).
 
-Snapshot Phase 2: **228 backend tests, 56 frontend tests, 4 browser E2E pass**, có replay caption, recovery 5/20 giây và timing tương quan. [Báo cáo A–G và giới hạn](docs/PHASE2_REPORT.md); [Meet thật còn NOT TESTED](docs/PHASE2_LIVE_RUNBOOK.md). Bộ phân loại local đạt **34/34 fixture Anh–Việt**, chưa phải accuracy họp thật. Bảng phương án trọng số còn trong [danh sách ưu tiên](docs/NEXT_PRIORITIES.md).
+Snapshot Phase 3: **276 backend tests, 58 frontend tests, 5 browser E2E pass**. [Báo cáo A–F](docs/PHASE3_REPORT.md): **PARTIAL** theo mục tiêu đặt trước; replay 39/39 eligible attempted, false trigger 7 → 0, logical requests 49 → 40 (giảm 18,37%, chưa đạt 20%). Auto ưu tiên manual nên wait có thể 2,9 s; không cam kết 1,5 s đầu cuối. [Phase 2 capture/recovery](docs/PHASE2_REPORT.md) được regression lại; [Meet thật còn NOT TESTED](docs/PHASE2_LIVE_RUNBOOK.md). Không có paid provider call mới. Bộ phân loại local 34/34 fixture Anh–Việt chưa phải accuracy họp thật; bảng phương án trọng số còn trong [danh sách ưu tiên](docs/NEXT_PRIORITIES.md).
 
 Có năm màn hình: **Dự án & dữ liệu, Đang họp, Báo cáo, Lịch sử, Cài đặt**. Chrome MV3 + React/TypeScript/Vite; FastAPI một worker; SQLite WAL/FTS5; E5 CPU tùy chọn. Không cần Docker/GPU. Không thu audio, tự nói, gửi chat/email, chạy source/SQL hoặc kết nối production DB.
 
@@ -12,7 +12,7 @@ Trạng thái triển khai và kết quả chạy thực tế ở [docs/ACCEPTAN
 
 Đã thử thêm [10 kịch bản mở rộng và 6 báo cáo](docs/EXTENDED_LIVE_REPORT.md): đổi deadline/owner, CSV/JSON/schema, injection trong tài liệu, cách ly project và transcript 43 turns qua hai map. Hai lỗi lượt đầu được sửa và có targeted retest; evidence trước sửa vẫn giữ nguyên.
 
-[Tối ưu latency](docs/LATENCY_REPORT.md): cùng 10 mẫu, median gợi ý hoàn chỉnh giảm 2,67 → 1,50 s; 16 mẫu cuối median 1,52 s, max 3,40 s. Dùng client/keepalive chung, prompt live gọn và ID tạm ngắn; vẫn validate trước khi hiện. Đây là benchmark synthetic sau connection test, không phải cam kết mọi request ≤1,5 s hoặc thời gian từ lời nói tới UI.
+[Latency provider lịch sử trước routing/Phase 1–3](docs/LATENCY_REPORT.md): cùng 10 mẫu, median giảm 2,67 → 1,50 s; 16 mẫu cuối median 1,52 s, max 3,40 s. Phase 3 đo scheduler controlled và retrieval riêng; chưa đo lại provider thật. Mọi output vẫn validate trước khi hiện.
 
 ## Chạy trên Windows
 

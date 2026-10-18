@@ -1,0 +1,17 @@
+
+> meet-copilot@0.1.0 build
+> npm run build -w extension
+
+
+> @meet-copilot/extension@0.1.0 build
+> tsc --noEmit && vite build && node build-content.mjs
+
+tests/state.test.ts(7,328): error TS2322: Type '{ meeting_id: string; project_id: string; transcript_revision: number; index_generation: {}; segments: never[]; memory: never[]; sources: never[]; action: string; question: string; input_hash: string; }' is not assignable to type '{ meeting_id: string; project_id: string; transcript_revision: number; index_generation: { [key: string]: number; }; segments: ({ id: string; capture_epoch: string; revision: number; speaker: string | null; text: string; stable: boolean; observed_from: string; observed_to: string; } & { ...; })[]; ... 11 more ...; r...'.
+  Type '{ meeting_id: string; project_id: string; transcript_revision: number; index_generation: {}; segments: never[]; memory: never[]; sources: never[]; action: string; question: string; input_hash: string; }' is missing the following properties from type '{ meeting_id: string; project_id: string; transcript_revision: number; index_generation: { [key: string]: number; }; segments: ({ id: string; capture_epoch: string; revision: number; speaker: string | null; text: string; stable: boolean; observed_from: string; observed_to: string; } & { ...; })[]; ... 11 more ...; r...': context_omitted_count, source_omitted_count, response_mode
+npm error Lifecycle script `build` failed with error:
+npm error code 2
+npm error path D:\meetEX\extension
+npm error workspace @meet-copilot/extension@0.1.0
+npm error location D:\meetEX\extension
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc --noEmit && vite build && node build-content.mjs

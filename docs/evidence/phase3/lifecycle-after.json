@@ -1,0 +1,131 @@
+{
+  "mode": "synthetic virtual time; production Service + Provider + validators, intercepted SSE; zero paid calls",
+  "fixture_sha256": "df8bb68b6ba0e9aec82860bfd5f4eaa05ea5ca2d42bc17a0292e6d528c1b0ef6",
+  "harness_sha256": "5d6c3f26b18b90c5a4cf8436e406f2a162010e362ebb6f627e72aa2e4379e019",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "policy": "content-trigger-v1",
+  "config": {
+    "virtual_tick_ms": 25,
+    "provider_normal_delay_ms": 300,
+    "provider_slow_delay_ms": 3000,
+    "auto_spacing_s": 2,
+    "input_chars": 18000,
+    "output_tokens": 800,
+    "retrieval": "synchronous keyword wrapper for both scheduler runs; wall-clock async retrieval measured separately"
+  },
+  "rows": [
+    {
+      "id": "pin-manual-held-snapshot",
+      "origin_at": 0.0,
+      "split": "supplementary-not-tuned",
+      "eligible": 2,
+      "processed": 2,
+      "missed": 0,
+      "false_trigger": 0,
+      "logical_requests": 3,
+      "http_attempts": 3,
+      "repair_attempts": 0,
+      "transient_retry_attempts": 0,
+      "outcomes": {
+        "ready": 2,
+        "stale": 1,
+        "error": 0,
+        "cancelled": 0,
+        "superseded": 0,
+        "skipped": 0,
+        "duplicate": 0
+      },
+      "cards": 3,
+      "ready_cards_proxy": 2,
+      "duplicate_cards_same_context": 0,
+      "wire_chars": {
+        "n": 3,
+        "median": 595,
+        "p95": 660,
+        "max": 660
+      },
+      "wire_chars_total": 1847,
+      "eligible_wait_ms": {
+        "n": 2,
+        "median": 150.00000000000017,
+        "p95": 150.00000000000034,
+        "max": 150.00000000000034
+      },
+      "usage_known_attempts": 0,
+      "usage_unknown_attempts": 3,
+      "tokens": null,
+      "cost": null,
+      "attempts": [
+        {
+          "at": 0.15,
+          "request_id": "a7ececfa-6d53-4603-a424-bee227db5d68",
+          "wire_chars": 592,
+          "repair": false
+        },
+        {
+          "at": 4.15,
+          "request_id": "553045b4-1505-435c-a484-7f59ec1f6174",
+          "wire_chars": 660,
+          "repair": false
+        },
+        {
+          "at": 7.0,
+          "request_id": "3ea764e2-9d38-4761-8411-bf2ee024cefd",
+          "wire_chars": 595,
+          "repair": false
+        }
+      ],
+      "routes": {
+        "fast": 1,
+        "explain": 2,
+        "deep": 0,
+        "clarify": 0,
+        "listen": 0
+      },
+      "route_latency_ms": {
+        "fast": {
+          "n": 1,
+          "median": 299.99999999999983,
+          "p95": 299.99999999999983,
+          "max": 299.99999999999983
+        },
+        "explain": {
+          "n": 2,
+          "median": 299.99999999999994,
+          "p95": 300.00000000000006,
+          "max": 300.00000000000006
+        },
+        "deep": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        },
+        "clarify": {
+          "n": 0,
+          "median": null,
+          "p95": null,
+          "max": null
+        }
+      },
+      "pinned_action_snapshot_matches": true
+    }
+  ],
+  "totals": {
+    "eligible": 2,
+    "processed": 2,
+    "missed": 0,
+    "false_trigger": 0,
+    "logical_requests": 3,
+    "http_attempts": 3,
+    "repair_attempts": 0,
+    "transient_retry_attempts": 0,
+    "cards": 3,
+    "ready_cards_proxy": 2,
+    "wire_chars_total": 1847,
+    "duplicate_cards_same_context": 0,
+    "usage_known_attempts": 0,
+    "usage_unknown_attempts": 3
+  },
+  "limitations": "Coverage means scheduled focus evidence, not semantic answer quality. Error/cancel/stale counted as processed attempts, reported separately. Ready cards are a publication proxy, not human-rated usefulness. Virtual durations describe deterministic scheduler/provider delay, not CPU or model latency. Tokens/cost unknown without real usage."
+}

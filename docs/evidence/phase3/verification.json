@@ -1,0 +1,126 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu": "AMD Ryzen 7 5800H with Radeon Graphics",
+    "cores": 8,
+    "logical_cpus": 16,
+    "python": "3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)]",
+    "node": "v22.20.0"
+  },
+  "base_commit": "bccc6f5bbb94711ae71e13c654b65dfe687940c3",
+  "checks": [
+    {
+      "command": "npm.cmd run typecheck",
+      "exit_code": 0,
+      "output": "verification-typecheck.log"
+    },
+    {
+      "command": "npm.cmd run build",
+      "exit_code": 0,
+      "output": "verification-build.log"
+    },
+    {
+      "command": "npm.cmd run contracts",
+      "exit_code": 0,
+      "output": "verification-contracts.log"
+    },
+    {
+      "name": "backend tests",
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q --junitxml=docs/evidence/phase3/backend-final.xml",
+      "exit_code": 0,
+      "evidence": "backend-final.xml",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "frontend tests",
+      "command": "node node_modules/vitest/vitest.mjs run --root extension --reporter=json --outputFile=../docs/evidence/phase3/frontend-final.json",
+      "exit_code": 0,
+      "evidence": "frontend-final.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "browser E2E",
+      "command": "MEET_E2E_EVIDENCE_DIR=docs/evidence/phase3/browser-final MEET_E2E_RESULTS_FILE=docs/evidence/phase3/browser-final-results.json node node_modules/@playwright/test/cli.js test",
+      "exit_code": 0,
+      "evidence": "browser-final-results.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "semantic regression",
+      "command": ".venv/Scripts/python.exe scripts/evaluate_phase1.py --output docs/evidence/phase3/semantic-regression.json --base-commit bccc6f5bbb94711ae71e13c654b65dfe687940c3 --starting-branch codex/phase2-capture",
+      "exit_code": 0,
+      "evidence": "semantic-regression.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "paired scheduler baseline",
+      "command": "MEET_BENCH_BACKEND=.local/phase3-baseline/backend .venv/Scripts/python.exe scripts/benchmark_phase3.py --output docs/evidence/phase3/orchestration-baseline.json",
+      "exit_code": 0,
+      "evidence": "orchestration-baseline.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "paired scheduler after",
+      "command": ".venv/Scripts/python.exe scripts/benchmark_phase3.py --output docs/evidence/phase3/orchestration-after.json",
+      "exit_code": 0,
+      "evidence": "orchestration-after.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "paired lifecycle baseline",
+      "command": "MEET_BENCH_BACKEND=.local/phase3-baseline/backend .venv/Scripts/python.exe scripts/benchmark_phase3.py --fixture fixtures/phase3/ui-lifecycle-replay.json --output docs/evidence/phase3/lifecycle-baseline.json",
+      "exit_code": 0,
+      "evidence": "lifecycle-baseline.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "paired lifecycle after",
+      "command": ".venv/Scripts/python.exe scripts/benchmark_phase3.py --fixture fixtures/phase3/ui-lifecycle-replay.json --output docs/evidence/phase3/lifecycle-after.json",
+      "exit_code": 0,
+      "evidence": "lifecycle-after.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "name": "retrieval sequential baseline/after",
+      "command": "See PHASE3_REPORT.md: preload frozen app.retrieval, then run benchmark_phase3_retrieval.py --real-e5",
+      "exit_code": 0,
+      "evidence": "retrieval-after.json",
+      "recording": "Completed tool session, not rerun by this manifest writer"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/evaluate_phase3.py",
+      "exit_code": 0,
+      "evidence": "review.json",
+      "result": "PARTIAL, two predeclared targets unmet"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/documentation.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/check_docs.py",
+      "exit_code": 0,
+      "evidence": "documentation-qa.json"
+    }
+  ],
+  "paid_provider_calls": 0,
+  "real_provider": "NOT TESTED",
+  "live_meet": "NOT TESTED",
+  "artifact_sha256": {
+    "orchestration-baseline.json": "ca708e5f6570ad74666987caa13c82355eba6aae3be47e7ee9cd4d3f79a86c15",
+    "orchestration-after.json": "ff12269ab1e5bca79080c08e26d50a0aae36cfb6061bdc8097da1ea9569403a0",
+    "retrieval-baseline.json": "2af1d5c531a776ada36ceb40cdb9cf175a4f32590b9fc0ef20282a0288a1ae98",
+    "retrieval-after.json": "dfa212fa9871a2e6fe87660d46bde27042fcdbec3d675f3b077f28fbe9bed7f1",
+    "backend-final.xml": "f920792dcde3b5559d8fbac0ab756ae5f3b6ecdce7b21a671c5f57491613ac35",
+    "frontend-final.json": "9ad42956d8edd56c957f13b1e7ff575ff6a8a279d67de69076d88768508e5d41",
+    "browser-final-results.json": "a7bd3c1904163ad2e3930d0749a36cdf949b071f034781b0d26b0910899297cb"
+  },
+  "notes": [
+    "Schema export succeeded; direct TS generation encountered transient Windows UNKNOWN write error. Contracts regenerated into a temporary directory and verified exact schema equality, exit 0.",
+    "A mistyped non-existing evaluate_semantics.py helper returned exit 2; corrected to evaluate_phase1.py above. No paid call or test bypass.",
+    "Documentation QA first attempt found its not-yet-written evidence/verification links. Final QA generates its own file only after all checks pass.",
+    "Earlier failed assertions/benchmarks preserved as first/candidate artifacts; final result remains PARTIAL for two unmet targets.",
+    "Final review narrowed freshness social append exception to greetings/thanks; Yes/No route as important changes; OK acknowledgements invalidate inflight output. Added 5 cases, reran full backend (276 passed), paired replay and all 5 browser tests; counts unchanged."
+  ],
+  "artifact_hash_format": "utf8-lf"
+}

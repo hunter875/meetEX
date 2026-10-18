@@ -2,6 +2,16 @@
 
 Các thay đổi trong phạm vi yêu cầu; spec gốc được giữ nguyên trong `spec/`. OpenAPI trong `openapi.json` và TypeScript sinh từ nó là hợp đồng executable.
 
+## Phase 3 (additive và thay đổi hành vi)
+
+- `AISnapshot`: thêm focus_segment_ids, omitted turn/excerpt counts, response_mode, orchestration/prompt version, capture_cursor. Backend giữ đầy đủ snapshot/provenance, chỉ prompt bỏ metadata không cần thiết. Cache hash xét mode/provider URL/model/output/input/timeout/policy/source generations và context.
+- Meeting snapshot có `scheduler` nullable: state/reason/policy_version. Timing thêm scheduler_wait_ms, retrieval_ms, http_attempts, repair_attempts, usage_unknown_attempts, wire_input_chars_total, freshness_reason/policy_version. Metrics thêm orchestration counts, bounded trigger records/states và retrieval cache hits; trigger/latency records tối đa 1.000, provider records tối đa 2.000 như trước, không lưu caption/key vào telemetry.
+- `/suggest`, `/classify`, `/search` và Auto dùng async retrieval worker với SQLite RO transaction riêng; retrieval busy/timeout báo lỗi. Latest manual preparation supersedes cũ (`PREPARATION_SUPERSEDED`, 409); Auto không thay manual. Double-click cùng context trả cùng request ID thay vì cancel/restart; cache hit giữ provenance.
+- Narrow exact card duplicate trong Auto kết thúc request `duplicate`, reused_suggestion_id, không phát ready/card mới. Reducer dọn matching manual intent khi error/cancel/superseded/duplicate và bỏ offer cũ theo created_at; explicit held-card action giữ quyền người dùng chọn snapshot cũ.
+- Freshness cho phép cosmetic-only/new lời chào-cảm ơn khi revision log liên tục đủ (Yes/No/OK không được ngoại lệ này); giữ nguyên revision payload và kiểm tra evidence. NOT/số/owner/deadline/environment/source/context thay đổi vẫn stale; không có log đầy đủ thì bảo thủ. Live deadline tổng gồm retry/repair; không tăng model/output budget hoặc bỏ validation.
+
+[Báo cáo và regression](PHASE3_REPORT.md) mô tả giới hạn, mục tiêu chưa đạt và cách tái tạo. DTO mới có defaults để đọc snapshot cũ; TypeScript/OpenAPI được đồng bộ. Không có migration DB mới.
+
 | Phần | Quyết định triển khai |
 | --- | --- |
 | DOM adapter | `meet-calibrated-v1`, profile tạo từ DOM người dùng chọn; không ship selector Meet chưa quan sát. Live gate chưa đóng. |

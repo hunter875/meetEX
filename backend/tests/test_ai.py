@@ -219,7 +219,9 @@ async def test_one_active_latest_queued_stale_and_card_snapshot(store,meeting):
     store.apply_caption(id,caption(text='Question A'))
     a=service.schedule(id,dict(action='auto'));await settle(lambda:len(provider.waiters)==1)
     store.apply_caption(id,caption(text='Question B',segment='s2',seq=2))
-    b=service.schedule(id,dict(action='auto'));c=service.schedule(id,dict(action='auto'))
+    b=service.schedule(id,dict(action='auto'))
+    assert service.schedule(id,dict(action='auto'))==b  # Same context is single-flight in Phase 3.
+    c=service.schedule(id,dict(action='auto',question='A different follow-up question'))
     assert store.objects(id,'ai_requests')[1]['status']=='superseded'
     provider.waiters[0].set_result(True);await settle(lambda:len(provider.waiters)==2)
     assert store.objects(id,'suggestions')[0]['stale']
@@ -245,7 +247,7 @@ async def test_immediate_manual_cancellation_and_auto_quota_still_allow_manual(s
     store.set_settings({'auto_per_minute':1});service.rate[id].append(__import__('time').monotonic())
     with pytest.raises(AppError) as e:service.schedule(id,dict(action='auto'))
     assert e.value.code=='AUTO_QUOTA'
-    manual=service.schedule(id,dict(action='suggest'));await settle(lambda:provider.cancelled==1)
+    manual=service.schedule(id,dict(action='suggest',question='A distinct manual follow-up'));await settle(lambda:provider.cancelled==1)
     await settle(lambda:len(provider.waiters)==2)
     provider.waiters[-1].set_result(True);await settle(lambda:any(s['request_id']==manual for s in store.objects(id,'suggestions')))
     await service.shutdown()

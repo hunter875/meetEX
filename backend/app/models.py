@@ -225,6 +225,13 @@ class AISnapshot(DTO):
     question:str
     input_hash:str
     routing:RoutingDecision|None=None
+    focus_segment_ids:list[str]=Field(default_factory=list)
+    context_omitted_count:int=0
+    source_omitted_count:int=0
+    orchestration_policy:str|None=None
+    prompt_version:str|None=None
+    response_mode:str='auto'
+    capture_cursor:int|None=None
 
 class CaptionAckDTO(DTO):
     type: Literal['caption.ack']
@@ -262,6 +269,14 @@ class RequestTimingDTO(DTO):
     provider_ms: float = 0
     validation_ms: float = 0
     stable_to_scheduled_ms: float | None = None
+    scheduler_wait_ms: float | None = None
+    retrieval_ms: float | None = None
+    http_attempts: int = 0
+    repair_attempts: int = 0
+    usage_unknown_attempts: int = 0
+    wire_input_chars_total: int = 0
+    policy_version:str|None=None
+    freshness_reason:str|None=None
 
 class SuggestionDTO(DTO):
     id:str
@@ -313,7 +328,13 @@ class AIRequestDTO(DTO):
     snapshot:AISnapshot
     timing:RequestTimingDTO|None=None
 
+class SchedulerStateDTO(DTO):
+    state:str
+    reason:str
+    policy_version:str
+
 class SnapshotDTO(MeetingDTO):
+    scheduler:SchedulerStateDTO|None=None
     segments:list[SegmentDTO]
     suggestions:list[SuggestionDTO]
     requests:list[AIRequestDTO]

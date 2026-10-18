@@ -1,5 +1,9 @@
 # Chức năng nên bổ sung sau bộ phân loại
 
+## Sau Phase 3
+
+[Kết quả Phase 3](PHASE3_REPORT.md): **PARTIAL**, hai mục tiêu request/Auto wait vẫn mở. Phase 4 ưu tiên corpus cuộc họp được phép dùng, chấm trigger/card hữu ích theo người, benchmark provider thật với budget mới và đóng Meet live gate; sau đó hiệu chỉnh indirect/multilingual trigger, paraphrase dedup, full RSS/index writer và cold retrieval. Không hạ ngưỡng hoặc bỏ câu hỏi/validator để hợp thức hóa PASS. Bảng phương án/trọng số và decision memory dưới đây vẫn chưa triển khai.
+
 Bộ phân loại đã triển khai: [RESPONSE_ROUTING.md](RESPONSE_ROUTING.md). Giai đoạn 1 đã đóng các probe gốc và bất biến phiên trong phạm vi đã kiểm thử: [PHASE1_REPORT.md](PHASE1_REPORT.md). Các mục dưới là đề xuất tiếp theo, chưa triển khai chỉ vì được ghi trong tài liệu.
 
 | Ưu tiên | Chức năng | Tiêu chí cần đạt |

@@ -537,6 +537,29 @@ export interface components {
             /** Input Hash */
             input_hash: string;
             routing?: components["schemas"]["RoutingDecision"] | null;
+            /** Focus Segment Ids */
+            focus_segment_ids?: string[];
+            /**
+             * Context Omitted Count
+             * @default 0
+             */
+            context_omitted_count: number;
+            /**
+             * Source Omitted Count
+             * @default 0
+             */
+            source_omitted_count: number;
+            /** Orchestration Policy */
+            orchestration_policy?: string | null;
+            /** Prompt Version */
+            prompt_version?: string | null;
+            /**
+             * Response Mode
+             * @default auto
+             */
+            response_mode: string;
+            /** Capture Cursor */
+            capture_cursor?: number | null;
         } & {
             [key: string]: unknown;
         };
@@ -896,6 +919,34 @@ export interface components {
             validation_ms: number;
             /** Stable To Scheduled Ms */
             stable_to_scheduled_ms?: number | null;
+            /** Scheduler Wait Ms */
+            scheduler_wait_ms?: number | null;
+            /** Retrieval Ms */
+            retrieval_ms?: number | null;
+            /**
+             * Http Attempts
+             * @default 0
+             */
+            http_attempts: number;
+            /**
+             * Repair Attempts
+             * @default 0
+             */
+            repair_attempts: number;
+            /**
+             * Usage Unknown Attempts
+             * @default 0
+             */
+            usage_unknown_attempts: number;
+            /**
+             * Wire Input Chars Total
+             * @default 0
+             */
+            wire_input_chars_total: number;
+            /** Policy Version */
+            policy_version?: string | null;
+            /** Freshness Reason */
+            freshness_reason?: string | null;
         } & {
             [key: string]: unknown;
         };
@@ -941,6 +992,17 @@ export interface components {
             target_max_s: number;
             /** Classifier Ms */
             classifier_ms: number;
+        };
+        /** SchedulerStateDTO */
+        SchedulerStateDTO: {
+            /** State */
+            state: string;
+            /** Reason */
+            reason: string;
+            /** Policy Version */
+            policy_version: string;
+        } & {
+            [key: string]: unknown;
         };
         /** SearchInput */
         SearchInput: {
@@ -1032,6 +1094,7 @@ export interface components {
             auto_mode: boolean;
             /** Confirmed Segment Ids */
             confirmed_segment_ids?: string[];
+            scheduler?: components["schemas"]["SchedulerStateDTO"] | null;
             /** Segments */
             segments: components["schemas"]["SegmentDTO"][];
             /** Suggestions */

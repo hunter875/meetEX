@@ -1,0 +1,22 @@
+warning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'backend/app/llm.py', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'backend/app/main.py', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'backend/app/retrieval.py', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'backend/app/service.py', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/ACCEPTANCE_REPORT.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/CONTRACT_CHANGES.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/IMPLEMENTATION_STATUS.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/LATENCY_REPORT.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/LIMITATIONS.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/NEXT_PRIORITIES.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/README.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/RESPONSE_ROUTING.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/SYSTEM_ASSESSMENT.md', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'docs/openapi.json', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'e2e/extension.spec.ts', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'extension/src/ui/live.tsx', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'extension/src/ui/settings.tsx', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'extension/tests/state.test.ts', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'scripts/check_docs.py', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'scripts/documentation.py', CRLF will be replaced by LF the next time Git touches it
+{"result": "PARTIAL: controlled improvements verified; two predeclared targets unmet", "objectives": {"mandatory_eligible_missed": {"actual": 0, "target": 0, "passed": true}, "false_triggers_reduction_fraction_min": {"actual": 1.0, "target": 0.5, "passed": true}, "logical_requests_reduction_fraction_min": {"actual": 0.18367346938775508, "target": 0.2, "passed": false}, "short_question_schedule_wait_max_ms": {"actual": 2900.0000000000055, "target": 500, "passed": false}, "context_fixture_wire_reduction_fraction_min": {"actual": 0.6619718309859155, "target": 0.2, "passed": true}, "nonstarvation_max_batch_wait_ms": {"actual": 2000.0, "target": 2000, "passed": true, "evidence": "production virtual replay; first bounded batch during continuous stable revisions"}, "single_live_provider_generation_max": {"actual": 1, "target": 1, "passed": true, "evidence": "max_active_live_generations JUnit property"}}, "regression": {"backend": 276, "frontend": 58, "browser": 5, "semantic": "PASS"}, "heldout": {"tuning": {"eligible": 33, "processed": 33, "missed": 0, "false_trigger": 0, "logical_requests": 35, "http_attempts": 37}, "evaluation": {"eligible": 6, "processed": 6, "missed": 0, "false_trigger": 0, "logical_requests": 5, "http_attempts": 5}}}

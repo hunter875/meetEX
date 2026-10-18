@@ -1,6 +1,8 @@
 # Tối ưu thời gian gợi ý hoàn chỉnh
 
-**Kết quả thực đo: khoảng 1,5 giây trung vị; chưa bảo đảm mọi request ≤1,5 giây.** DeepSeek `deepseek-flash` thật, dữ liệu synthetic. Giữ bước parse JSON, đổi alias về ID gốc, kiểm tra evidence/negation/role/commitment rồi mới publish; không hiển thị token chưa kiểm tra.
+**Số đo provider phía dưới là lịch sử trước routing và Phase 1–3**, không đại diện build hiện tại. Benchmark provider thật mới: NOT TESTED. [Phase 3](PHASE3_REPORT.md) đo scheduler controlled và retrieval riêng, không có paid calls mới. Idle short-question wait 2.000 → 150 ms clock ảo; Auto sau manual chậm vẫn 2.900 ms. Đây không phải speech-to-UI hoặc model latency.
+
+Kết quả lịch sử: khoảng 1,5 giây trung vị; chưa bảo đảm mọi request ≤1,5 giây. DeepSeek `deepseek-flash` thật, dữ liệu synthetic. Giữ bước parse JSON, đổi alias về ID gốc, kiểm tra evidence/negation/role/commitment rồi mới publish; không hiển thị token chưa kiểm tra.
 
 | Phép đo | Trước | Sau |
 | --- | --- | --- |
@@ -23,7 +25,11 @@ Median trên bộ 10 mẫu tương ứng giảm 44.0%. So sánh lịch sử cùn
 
 Đo thời gian tạo và kiểm tra gợi ý tại backend, gồm lượt sửa nếu có. Connection test làm ấm client trước corpus; request đầu lạnh chưa được chứng minh ở 1,5 giây. Không dùng cache câu trả lời của ứng dụng để tạo số đo, nhưng prefix cache của provider vẫn hoạt động.
 
-Auto vẫn giữ stable khoảng 1 s và debounce 2 s theo cấu hình hiện tại. Vì thế 1,5 s ở đây không phải từ lúc người khác bắt đầu nói hoặc từ khi phụ đề đang đổi tới UI. Meet thật, cold start, corpus lớn và mạng chậm vẫn cần đo riêng.
+Trong benchmark lịch sử Auto dùng stable khoảng 1 s và debounce 2 s. Phase 3 thay debounce bằng trigger 150/800 ms, max batch 2 s khi rảnh; adapter stable vẫn là heuristic riêng. Vì thế 1,5 s ở đây không phải từ lời nói tới UI. Meet thật, cold start, corpus thật lớn và mạng chậm vẫn cần đo riêng.
+
+## Số đo Phase 3 riêng
+
+31 scenario synthetic, 39 eligible; logical 49 → 40, HTTP attempts 51 → 42, retry/repair đều được tính. Wire user JSON 32.384 → 27.197 ký tự; không quy đổi thành token thật hoặc tiền. Hybrid controlled-vector 10k cold 8.369,53 → 2.490,17 ms; warm median 9.598,47 → 1,00 ms sau 9/12 cache hits. Uncached mới median 252,00 ms (n=3), không phải 1 ms. Keyword cold 10k xấu hơn 168,32 → 218,30 ms. E5 thật corpus nhỏ median 45,75 → 36,11 ms nhưng p95 52,95 → 68,97 ms. [Bảng đầy đủ, RAM/tick/ACK và lệnh tái tạo](PHASE3_REPORT.md#context-retrieval-và-trade-off). Không dùng p95 mẫu nhỏ làm SLA.
 
 ## Giữ lại các lượt thử chưa đạt
 

@@ -1,5 +1,9 @@
 # Đánh giá hệ thống hiện tại
 
+## Trạng thái Phase 3
+
+[Phase 3](PHASE3_REPORT.md) **PARTIAL theo mục tiêu đặt trước**; 276 backend / 58 frontend / 5 browser pass. Trigger/scheduler/manual/context/retrieval và accounting đã cải thiện trên replay: eligible attempted 37/39 → 39/39, false trigger 7 → 0, logical 49 → 40. Giảm 18,37% chưa đạt 20%; Auto sau manual chậm 2,9 s chưa đạt 500 ms. Không suy ra chất lượng model thật từ controlled ready cards. Guard Phase 1 và capture Phase 2 vẫn regression pass; live Meet/provider benchmark mới NOT TESTED. Bảng đánh giá lịch sử dưới đây không thay kết luận hiện tại.
+
 ## Trạng thái sau giai đoạn 1
 
 Đã đóng bất biến phiên và ba probe sai nghĩa gốc **trong phạm vi guard có cấu trúc/alias đã kiểm thử**. Kết quả A–E, 219 backend tests và 82 fixture positive/negative ở [PHASE1_REPORT.md](PHASE1_REPORT.md); [evidence mới](evidence/phase1/semantic-review.json) giữ riêng khỏi các probe trước sửa. Không coi đây là xác minh ngữ nghĩa tổng quát hoặc MVP VERIFIED.

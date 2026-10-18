@@ -1668,6 +1668,61 @@
                 "type": "null"
               }
             ]
+          },
+          "focus_segment_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Focus Segment Ids"
+          },
+          "context_omitted_count": {
+            "type": "integer",
+            "title": "Context Omitted Count",
+            "default": 0
+          },
+          "source_omitted_count": {
+            "type": "integer",
+            "title": "Source Omitted Count",
+            "default": 0
+          },
+          "orchestration_policy": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Orchestration Policy"
+          },
+          "prompt_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Prompt Version"
+          },
+          "response_mode": {
+            "type": "string",
+            "title": "Response Mode",
+            "default": "auto"
+          },
+          "capture_cursor": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Capture Cursor"
           }
         },
         "additionalProperties": true,
@@ -2596,6 +2651,70 @@
               }
             ],
             "title": "Stable To Scheduled Ms"
+          },
+          "scheduler_wait_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scheduler Wait Ms"
+          },
+          "retrieval_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retrieval Ms"
+          },
+          "http_attempts": {
+            "type": "integer",
+            "title": "Http Attempts",
+            "default": 0
+          },
+          "repair_attempts": {
+            "type": "integer",
+            "title": "Repair Attempts",
+            "default": 0
+          },
+          "usage_unknown_attempts": {
+            "type": "integer",
+            "title": "Usage Unknown Attempts",
+            "default": 0
+          },
+          "wire_input_chars_total": {
+            "type": "integer",
+            "title": "Wire Input Chars Total",
+            "default": 0
+          },
+          "policy_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Policy Version"
+          },
+          "freshness_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Freshness Reason"
           }
         },
         "additionalProperties": true,
@@ -2711,6 +2830,30 @@
           "classifier_ms"
         ],
         "title": "RoutingDecision"
+      },
+      "SchedulerStateDTO": {
+        "properties": {
+          "state": {
+            "type": "string",
+            "title": "State"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "policy_version": {
+            "type": "string",
+            "title": "Policy Version"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "state",
+          "reason",
+          "policy_version"
+        ],
+        "title": "SchedulerStateDTO"
       },
       "SearchInput": {
         "properties": {
@@ -3029,6 +3172,16 @@
             },
             "type": "array",
             "title": "Confirmed Segment Ids"
+          },
+          "scheduler": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SchedulerStateDTO"
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "segments": {
             "items": {

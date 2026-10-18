@@ -1,0 +1,31 @@
+{
+  "result": "PASS pattern/path audit",
+  "files": 112,
+  "bytes": 3269323,
+  "secret_pattern_matches": 0,
+  "forbidden_files": [],
+  "largest_files": [
+    {
+      "bytes": 155784,
+      "path": "docs/evidence/phase3/browser-candidate/report.png"
+    },
+    {
+      "bytes": 155014,
+      "path": "docs/evidence/phase3/browser-final/report.png"
+    },
+    {
+      "bytes": 146551,
+      "path": "docs/evidence/phase3/browser-final/routing-ui.png"
+    },
+    {
+      "bytes": 145876,
+      "path": "docs/evidence/phase3/browser-candidate/routing-ui.png"
+    },
+    {
+      "bytes": 144526,
+      "path": "docs/evidence/phase3/browser-final/live-pinned.png"
+    }
+  ],
+  "repository_public": true,
+  "limits": "Pattern/path scan, not a proof of absence of every possible secret. Only synthetic fixture/evidence data intended for this commit."
+}

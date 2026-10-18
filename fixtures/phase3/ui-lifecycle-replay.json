@@ -1,0 +1,39 @@
+[
+  {
+    "id": "pin-manual-held-snapshot",
+    "split": "supplementary-not-tuned",
+    "provenance": "synthetic supplementary lifecycle regression, excluded from predeclared primary target denominator",
+    "provider": "normal",
+    "events": [
+      {
+        "at": 0,
+        "text": "Why does the cache expire?",
+        "speaker": "Client",
+        "segment": "a",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 3,
+        "text": "",
+        "op": "pin"
+      },
+      {
+        "at": 4,
+        "text": "Which environment?",
+        "speaker": "Client",
+        "segment": "b",
+        "revision": 1,
+        "eligible": true,
+        "op": "caption"
+      },
+      {
+        "at": 7,
+        "text": "",
+        "op": "manual",
+        "action": "shorter"
+      }
+    ]
+  }
+]
