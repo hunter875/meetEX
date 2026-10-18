@@ -1,6 +1,6 @@
 # Báo cáo nghiệm thu thực tế
 
-**Implementation chạy local, chờ live validation. Không phải MVP VERIFIED.** Ngày bàn giao 2026-10-17; app 0.1.0, adapter meet-calibrated-v1; working tree chưa commit.
+**Implementation chạy local, chờ live validation. Không phải MVP VERIFIED.** Ngày bàn giao 2026-10-17; app 0.1.0, adapter meet-calibrated-v1; mã nguồn được quản lý theo commit trong repository.
 
 ## Môi trường và kết quả
 
