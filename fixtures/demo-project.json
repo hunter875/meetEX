@@ -1,0 +1,31 @@
+{
+  "name":"DEMO · Customer Portal",
+  "description":"Synthetic corpus để kiểm tra retrieval và luồng ứng dụng; không phải dữ liệu khách thật.",
+  "glossary":{"đăng nhập":"authentication login OAuth", "hóa đơn":"billing invoice proration", "nhật ký":"audit log retention", "múi giờ":"timezone UTC", "chữ ký":"webhook signature", "xuất dữ liệu":"CSV export limit", "bộ nhớ đệm":"cache TTL", "ngoại tuyến":"mobile offline", "phát hành":"release staging approval", "trạng thái rỗng":"nullable status schema"},
+  "sources":[
+    {"key":"api17-ticket","kind":"text","title":"Ticket API-17","pasted_text":"API-17 — Authentication errors. Requirement: expired token returns HTTP 403. Status: needs staging QA. No production deployment date has been approved."},
+    {"key":"api17-code","kind":"text","title":"Source snapshot auth.ts","pasted_text":"// Local code snapshot for API-17, not proof of deployed behavior.\nfunction expiredToken() { return { status: 401 }; }\n// Conflicts with ticket requirement 403. Ask which behavior is approved."},
+    {"key":"auth4","kind":"text","title":"AUTH-4 Login design","pasted_text":"AUTH-4 Authentication login uses OAuth. Session expiry is 30 minutes. The refresh token is handled only by the server."},
+    {"key":"bill8","kind":"text","title":"BILL-8 Billing","pasted_text":"BILL-8 Billing invoices support proration for plan changes. A canceled invoice must not be charged again."},
+    {"key":"audit6","kind":"text","title":"AUD-6 Audit","pasted_text":"AUD-6 Audit log retention is 90 days in the product requirement. Audit records contain the actor, event type and UTC timestamp."},
+    {"key":"time3","kind":"text","title":"TIME-3 Timezone","pasted_text":"TIME-3 Database timestamp storage uses UTC. Display dates in the account timezone, with America/Los_Angeles as a sample."},
+    {"key":"pay2","kind":"text","title":"PAY-2 Webhook","pasted_text":"PAY-2 Payment webhook signature must be verified before processing. Repeated event IDs are idempotent. Retry failed deliveries up to three times."},
+    {"key":"export9","kind":"text","title":"EXP-9 CSV export","pasted_text":"EXP-9 CSV export limit is 10000 rows per download. Exports are snapshots and do not connect to live production databases."},
+    {"key":"perf5","kind":"text","title":"PERF-5 Caching","pasted_text":"PERF-5 Product metadata cache TTL is 60 seconds. Invalidate cache after a successful metadata update."},
+    {"key":"mobile7","kind":"text","title":"MOB-7 Mobile","pasted_text":"MOB-7 Mobile offline mode is not supported in this release. The mobile client needs an active network connection."},
+    {"key":"release12","kind":"text","title":"REL-12 Release process","pasted_text":"REL-12 Release workflow requires staging approval before production. A release date and owner must be explicitly confirmed by the team."},
+    {"key":"data10","kind":"schema","title":"DATA-10 Schema snapshot","pasted_text":"-- DATA-10 schema export, read as text only\nCREATE TABLE requests (id INTEGER PRIMARY KEY, status TEXT NULL, created_at TEXT NOT NULL);\n-- Nullable status is allowed; created_at is a UTC timestamp."}
+  ],
+  "queries":[
+    {"query":"AUTH-4 login session expiry","expected_source_key":"auth4"},
+    {"query":"hóa đơn tính phí thay đổi gói","expected_source_key":"bill8"},
+    {"query":"nhật ký giữ bao lâu AUD-6","expected_source_key":"audit6"},
+    {"query":"múi giờ trong dữ liệu TIME-3","expected_source_key":"time3"},
+    {"query":"chữ ký webhook PAY-2","expected_source_key":"pay2"},
+    {"query":"xuất dữ liệu giới hạn CSV EXP-9","expected_source_key":"export9"},
+    {"query":"bộ nhớ đệm TTL PERF-5","expected_source_key":"perf5"},
+    {"query":"ngoại tuyến trên mobile MOB-7","expected_source_key":"mobile7"},
+    {"query":"phát hành cần staging approval REL-12","expected_source_key":"release12"},
+    {"query":"trạng thái rỗng trong schema DATA-10","expected_source_key":"data10"}
+  ]
+}

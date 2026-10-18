@@ -1,0 +1,4 @@
+id,title,description,status,updated_at,url
+API-17,Authentication response,Expired token should return 403,Needs staging QA,2026-10-17,https://example.invalid/tickets/API-17
+EXP-9,Export data,Limit CSV download to 10000 rows,Approved requirement,2026-10-17,https://example.invalid/tickets/EXP-9
+,Invalid example,This row demonstrates an import error,Unknown,,

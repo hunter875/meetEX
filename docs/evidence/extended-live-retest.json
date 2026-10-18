@@ -1,0 +1,1577 @@
+{
+  "created_at": "2026-10-18T05:48:21.426760+00:00",
+  "synthetic_input": true,
+  "provider_mode": "real",
+  "meet_dom_tested": false,
+  "model": "deepseek-flash",
+  "cases": [
+    {
+      "name": "ambiguous-we-owner",
+      "synthetic_input": true,
+      "expectations": [
+        "No named owner or due date; no confirmed assignment."
+      ],
+      "checks": {
+        "validated_suggestion": true,
+        "validated_report": true
+      },
+      "suggestions": [
+        {
+          "id": "b5c84716-b297-488b-a905-e891ca30aab6",
+          "request_id": "784028cf-e837-4aed-bcae-2082e85098e0",
+          "created_at": "2026-10-18T05:48:26.541600+00:00",
+          "mode": "real",
+          "payload": {
+            "input_revision": 2,
+            "intent": "question",
+            "meaning_vi": "Alex đề nghị điều tra lỗi hóa đơn trùng lặp, nhưng nói rõ chưa giao cho ai và chưa thống nhất hạn chót. Minh hỏi ai sẽ nhận việc, và xác nhận chưa có ai nhận. Chưa có nguồn tài liệu dự án nào được cung cấp.",
+            "findings": [],
+            "reply_en": "Can we confirm who will take the duplicate invoice investigation? No owner or deadline is agreed yet.",
+            "reply_vi": "Chúng ta có thể xác nhận ai sẽ nhận việc điều tra hóa đơn trùng lặp không? Hiện chưa có người phụ trách hay hạn chót nào được thống nhất.",
+            "clarification_en": "Who should own the duplicate invoice investigation, and is there any agreed deadline?",
+            "evidence_status": "missing",
+            "uncertainties": [
+              "Chưa có ai nhận việc điều tra hóa đơn trùng lặp.",
+              "Chưa có hạn chót được thống nhất.",
+              "Không có nguồn tài liệu dự án nào trong yêu cầu này."
+            ],
+            "supporting_segment_ids": [
+              "s1",
+              "s2"
+            ]
+          },
+          "snapshot": {
+            "meeting_id": "960a1f77-3ebb-4ac0-9e78-6df2af46a955",
+            "project_id": "95193d6b-0b1a-42f1-82b2-8b8567e2a6f5",
+            "transcript_revision": 2,
+            "index_generation": {},
+            "segments": [
+              {
+                "id": "s1",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "We should investigate the duplicate invoice issue. We have not assigned anyone and have not agreed a deadline.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:23.667550+00:00",
+                "observed_to": "2026-10-18T05:48:23.667550+00:00"
+              },
+              {
+                "id": "s2",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Minh",
+                "text": "Understood. Who should take it? No owner has accepted it yet.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:23.669725+00:00",
+                "observed_to": "2026-10-18T05:48:23.669725+00:00"
+              }
+            ],
+            "memory": [],
+            "sources": [],
+            "action": "suggest",
+            "question": "",
+            "input_hash": "0a8fcf695d1726510f9650bd17688712c8152854f8602b47cf36eac77bd7266e",
+            "context_revision": 1,
+            "memory_omitted_count": 0,
+            "glossary": {},
+            "self_speaker": "Minh",
+            "sentence_limit": 3,
+            "provider_config": {
+              "provider_url": "https://api.deepseek.com",
+              "model": "deepseek-flash"
+            }
+          },
+          "stale": false,
+          "automatic": false,
+          "duration_ms": 2856.9808999891393
+        }
+      ],
+      "stage": "complete",
+      "request_status": "ready",
+      "error": null,
+      "transcript": [
+        {
+          "id": "s1",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "We should investigate the duplicate invoice issue. We have not assigned anyone and have not agreed a deadline.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:23.667550+00:00",
+          "observed_to": "2026-10-18T05:48:23.667550+00:00"
+        },
+        {
+          "id": "s2",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Minh",
+          "text": "Understood. Who should take it? No owner has accepted it yet.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:23.669725+00:00",
+          "observed_to": "2026-10-18T05:48:23.669725+00:00"
+        }
+      ],
+      "report_job": {
+        "id": "1baf24ba-6886-4013-b30f-14938ae840ea",
+        "meeting_id": "960a1f77-3ebb-4ac0-9e78-6df2af46a955",
+        "status": "ready",
+        "error": null,
+        "progress": 100,
+        "report_id": "a349d7c9-2a8b-4dc2-a080-170c4a6a0dc0",
+        "duration_ms": 2521.161500015296
+      },
+      "report": {
+        "id": "a349d7c9-2a8b-4dc2-a080-170c4a6a0dc0",
+        "meeting_id": "960a1f77-3ebb-4ac0-9e78-6df2af46a955",
+        "version": 1,
+        "transcript_revision": 2,
+        "payload": {
+          "summary_vi": "Nhóm nên điều tra vấn đề hóa đơn trùng lặp. Chưa có ai được giao việc và chưa có thời hạn nào được thống nhất.",
+          "summary_en": "The team should investigate the duplicate invoice issue. No one has been assigned and no deadline has been agreed.",
+          "summary_segment_ids": [
+            "s1",
+            "s2"
+          ],
+          "requirements": [
+            {
+              "id": "1efbc30c-224a-4842-9253-6528e8e5d7ce",
+              "text": "Cần điều tra vấn đề hóa đơn trùng lặp.",
+              "text_en": "The duplicate invoice issue should be investigated.",
+              "evidence_segment_ids": [
+                "s1"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "decisions": [],
+          "action_items": [],
+          "open_questions": [
+            {
+              "id": "97808d35-784a-4db0-b1bb-572bc2f34157",
+              "text": "Ai sẽ nhận việc điều tra hóa đơn trùng lặp? Chưa có ai nhận.",
+              "text_en": "Who should take on the duplicate invoice investigation? No owner has accepted it yet.",
+              "evidence_segment_ids": [
+                "s1",
+                "s2"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "65e5fb46-9918-43f3-862d-7f102e196b03",
+              "text": "Thời hạn cho việc này là gì? Chưa có thời hạn nào được thống nhất.",
+              "text_en": "What is the deadline? No deadline has been agreed.",
+              "evidence_segment_ids": [
+                "s1"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "ai_proposals": [],
+          "capture_warnings": [
+            "Báo cáo chỉ bao phủ phụ đề đã quan sát; hãy kiểm tra nghĩa và bằng chứng trước khi gửi.",
+            "Chưa có nguồn dự án để đối chiếu."
+          ]
+        },
+        "user_edits": false,
+        "reviewed_at": null,
+        "mode": "real",
+        "created_at": "2026-10-18T05:48:29.083794+00:00",
+        "parent_id": null
+      }
+    },
+    {
+      "name": "long-report-start-middle-tail",
+      "synthetic_input": true,
+      "expectations": [
+        "Real provider report must use multiple map chunks, cover all input turns, and retain all three requirements with the correct segment evidence."
+      ],
+      "checks": {
+        "validated_suggestion": true,
+        "validated_report": true
+      },
+      "suggestions": [
+        {
+          "id": "55acd639-7f36-46e0-a340-1ecdd9a5d8ec",
+          "request_id": "11042343-8c59-4de6-9e68-9066d8f4868c",
+          "created_at": "2026-10-18T05:48:31.904086+00:00",
+          "mode": "real",
+          "payload": {
+            "input_revision": 43,
+            "intent": "decision",
+            "meaning_vi": "Alex nêu một yêu cầu cuối cùng: đầu ra CSV phải giữ UTF-8 BOM để mở được trong Excel. Các ý trước đó chỉ là ghi chú QA mẫu, không giao việc và không xác nhận trình duyệt hay phiên bản bảng tính.",
+            "findings": [],
+            "reply_en": "Can you confirm who owns implementing the UTF-8 BOM requirement and when it will be verified?",
+            "reply_vi": "Bạn có thể xác nhận ai phụ trách việc thêm UTF-8 BOM và khi nào sẽ kiểm tra không?",
+            "clarification_en": "Who is assigned to implement and verify the UTF-8 BOM requirement for CSV output?",
+            "evidence_status": "missing",
+            "uncertainties": [
+              "Không rõ ai chịu trách nhiệm triển khai yêu cầu UTF-8 BOM.",
+              "Không có thông tin về phiên bản trình duyệt và bảng tính.",
+              "Không có nguồn dự án nào được cung cấp."
+            ],
+            "supporting_segment_ids": [
+              "s43"
+            ]
+          },
+          "snapshot": {
+            "meeting_id": "aa7fafe2-8218-4dd0-a4a4-be2adeb3dcfd",
+            "project_id": "95193d6b-0b1a-42f1-82b2-8b8567e2a6f5",
+            "transcript_revision": 43,
+            "index_generation": {},
+            "segments": [
+              {
+                "id": "s25",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-02. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.166831+00:00",
+                "observed_to": "2026-10-18T05:48:29.166831+00:00"
+              },
+              {
+                "id": "s26",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-03. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.169205+00:00",
+                "observed_to": "2026-10-18T05:48:29.169205+00:00"
+              },
+              {
+                "id": "s27",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-04. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.171466+00:00",
+                "observed_to": "2026-10-18T05:48:29.171466+00:00"
+              },
+              {
+                "id": "s28",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-05. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.173760+00:00",
+                "observed_to": "2026-10-18T05:48:29.173760+00:00"
+              },
+              {
+                "id": "s29",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-06. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.177303+00:00",
+                "observed_to": "2026-10-18T05:48:29.177303+00:00"
+              },
+              {
+                "id": "s30",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-07. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.180755+00:00",
+                "observed_to": "2026-10-18T05:48:29.180755+00:00"
+              },
+              {
+                "id": "s31",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-08. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.183194+00:00",
+                "observed_to": "2026-10-18T05:48:29.183194+00:00"
+              },
+              {
+                "id": "s32",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-09. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.185661+00:00",
+                "observed_to": "2026-10-18T05:48:29.185661+00:00"
+              },
+              {
+                "id": "s33",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-10. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.188003+00:00",
+                "observed_to": "2026-10-18T05:48:29.188003+00:00"
+              },
+              {
+                "id": "s34",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-11. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.190349+00:00",
+                "observed_to": "2026-10-18T05:48:29.190349+00:00"
+              },
+              {
+                "id": "s35",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-12. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.192777+00:00",
+                "observed_to": "2026-10-18T05:48:29.192777+00:00"
+              },
+              {
+                "id": "s36",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-13. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.195056+00:00",
+                "observed_to": "2026-10-18T05:48:29.195056+00:00"
+              },
+              {
+                "id": "s37",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-14. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.197873+00:00",
+                "observed_to": "2026-10-18T05:48:29.197873+00:00"
+              },
+              {
+                "id": "s38",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-15. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.200810+00:00",
+                "observed_to": "2026-10-18T05:48:29.200810+00:00"
+              },
+              {
+                "id": "s39",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-16. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.203179+00:00",
+                "observed_to": "2026-10-18T05:48:29.203179+00:00"
+              },
+              {
+                "id": "s40",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-17. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.205337+00:00",
+                "observed_to": "2026-10-18T05:48:29.205337+00:00"
+              },
+              {
+                "id": "s41",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Observed sample B-18. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.207609+00:00",
+                "observed_to": "2026-10-18T05:48:29.207609+00:00"
+              },
+              {
+                "id": "s42",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Observed sample B-19. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.210681+00:00",
+                "observed_to": "2026-10-18T05:48:29.210681+00:00"
+              },
+              {
+                "id": "s43",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "FINAL REQUIREMENT: CSV output must retain the UTF-8 BOM for Excel.",
+                "stable": true,
+                "observed_from": "2026-10-18T05:48:29.213008+00:00",
+                "observed_to": "2026-10-18T05:48:29.213008+00:00"
+              }
+            ],
+            "memory": [],
+            "sources": [],
+            "action": "suggest",
+            "question": "",
+            "input_hash": "f9755a9bd34807072cb6d644625c7e2a6b6f3a9de5ada703e13d4f36c40dffef",
+            "context_revision": 0,
+            "memory_omitted_count": 0,
+            "glossary": {},
+            "self_speaker": null,
+            "sentence_limit": 3,
+            "provider_config": {
+              "provider_url": "https://api.deepseek.com",
+              "model": "deepseek-flash"
+            }
+          },
+          "stale": false,
+          "automatic": false,
+          "duration_ms": 2680.816499982029
+        }
+      ],
+      "stage": "complete",
+      "request_status": "ready",
+      "error": null,
+      "transcript": [
+        {
+          "id": "s1",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "FIRST REQUIREMENT: exported account IDs must preserve leading zeros.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.107222+00:00",
+          "observed_to": "2026-10-18T05:48:29.107222+00:00"
+        },
+        {
+          "id": "s2",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-00. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.109548+00:00",
+          "observed_to": "2026-10-18T05:48:29.109548+00:00"
+        },
+        {
+          "id": "s3",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-01. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.112189+00:00",
+          "observed_to": "2026-10-18T05:48:29.112189+00:00"
+        },
+        {
+          "id": "s4",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-02. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.114467+00:00",
+          "observed_to": "2026-10-18T05:48:29.114467+00:00"
+        },
+        {
+          "id": "s5",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-03. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.116496+00:00",
+          "observed_to": "2026-10-18T05:48:29.116496+00:00"
+        },
+        {
+          "id": "s6",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-04. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.118827+00:00",
+          "observed_to": "2026-10-18T05:48:29.118827+00:00"
+        },
+        {
+          "id": "s7",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-05. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.121360+00:00",
+          "observed_to": "2026-10-18T05:48:29.121360+00:00"
+        },
+        {
+          "id": "s8",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-06. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.123478+00:00",
+          "observed_to": "2026-10-18T05:48:29.123478+00:00"
+        },
+        {
+          "id": "s9",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-07. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.125587+00:00",
+          "observed_to": "2026-10-18T05:48:29.125587+00:00"
+        },
+        {
+          "id": "s10",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-08. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.127824+00:00",
+          "observed_to": "2026-10-18T05:48:29.127824+00:00"
+        },
+        {
+          "id": "s11",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-09. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.130671+00:00",
+          "observed_to": "2026-10-18T05:48:29.130671+00:00"
+        },
+        {
+          "id": "s12",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-10. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.133693+00:00",
+          "observed_to": "2026-10-18T05:48:29.133693+00:00"
+        },
+        {
+          "id": "s13",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-11. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.136020+00:00",
+          "observed_to": "2026-10-18T05:48:29.136020+00:00"
+        },
+        {
+          "id": "s14",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-12. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.138384+00:00",
+          "observed_to": "2026-10-18T05:48:29.138384+00:00"
+        },
+        {
+          "id": "s15",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-13. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.140823+00:00",
+          "observed_to": "2026-10-18T05:48:29.140823+00:00"
+        },
+        {
+          "id": "s16",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-14. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.143713+00:00",
+          "observed_to": "2026-10-18T05:48:29.143713+00:00"
+        },
+        {
+          "id": "s17",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-15. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.146535+00:00",
+          "observed_to": "2026-10-18T05:48:29.146535+00:00"
+        },
+        {
+          "id": "s18",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-16. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.149476+00:00",
+          "observed_to": "2026-10-18T05:48:29.149476+00:00"
+        },
+        {
+          "id": "s19",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-17. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.152059+00:00",
+          "observed_to": "2026-10-18T05:48:29.152059+00:00"
+        },
+        {
+          "id": "s20",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample A-18. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.154505+00:00",
+          "observed_to": "2026-10-18T05:48:29.154505+00:00"
+        },
+        {
+          "id": "s21",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample A-19. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.156867+00:00",
+          "observed_to": "2026-10-18T05:48:29.156867+00:00"
+        },
+        {
+          "id": "s22",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "MIDDLE REQUIREMENT: CSV cells beginning with = must be escaped to prevent spreadsheet formula execution.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.158998+00:00",
+          "observed_to": "2026-10-18T05:48:29.158998+00:00"
+        },
+        {
+          "id": "s23",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-00. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.161239+00:00",
+          "observed_to": "2026-10-18T05:48:29.161239+00:00"
+        },
+        {
+          "id": "s24",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-01. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.164124+00:00",
+          "observed_to": "2026-10-18T05:48:29.164124+00:00"
+        },
+        {
+          "id": "s25",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-02. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.166831+00:00",
+          "observed_to": "2026-10-18T05:48:29.166831+00:00"
+        },
+        {
+          "id": "s26",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-03. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.169205+00:00",
+          "observed_to": "2026-10-18T05:48:29.169205+00:00"
+        },
+        {
+          "id": "s27",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-04. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.171466+00:00",
+          "observed_to": "2026-10-18T05:48:29.171466+00:00"
+        },
+        {
+          "id": "s28",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-05. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.173760+00:00",
+          "observed_to": "2026-10-18T05:48:29.173760+00:00"
+        },
+        {
+          "id": "s29",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-06. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.177303+00:00",
+          "observed_to": "2026-10-18T05:48:29.177303+00:00"
+        },
+        {
+          "id": "s30",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-07. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.180755+00:00",
+          "observed_to": "2026-10-18T05:48:29.180755+00:00"
+        },
+        {
+          "id": "s31",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-08. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.183194+00:00",
+          "observed_to": "2026-10-18T05:48:29.183194+00:00"
+        },
+        {
+          "id": "s32",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-09. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.185661+00:00",
+          "observed_to": "2026-10-18T05:48:29.185661+00:00"
+        },
+        {
+          "id": "s33",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-10. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.188003+00:00",
+          "observed_to": "2026-10-18T05:48:29.188003+00:00"
+        },
+        {
+          "id": "s34",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-11. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.190349+00:00",
+          "observed_to": "2026-10-18T05:48:29.190349+00:00"
+        },
+        {
+          "id": "s35",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-12. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.192777+00:00",
+          "observed_to": "2026-10-18T05:48:29.192777+00:00"
+        },
+        {
+          "id": "s36",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-13. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.195056+00:00",
+          "observed_to": "2026-10-18T05:48:29.195056+00:00"
+        },
+        {
+          "id": "s37",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-14. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.197873+00:00",
+          "observed_to": "2026-10-18T05:48:29.197873+00:00"
+        },
+        {
+          "id": "s38",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-15. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.200810+00:00",
+          "observed_to": "2026-10-18T05:48:29.200810+00:00"
+        },
+        {
+          "id": "s39",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-16. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.203179+00:00",
+          "observed_to": "2026-10-18T05:48:29.203179+00:00"
+        },
+        {
+          "id": "s40",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-17. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.205337+00:00",
+          "observed_to": "2026-10-18T05:48:29.205337+00:00"
+        },
+        {
+          "id": "s41",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Observed sample B-18. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.207609+00:00",
+          "observed_to": "2026-10-18T05:48:29.207609+00:00"
+        },
+        {
+          "id": "s42",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Observed sample B-19. Observed QA note: the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. This observation records a test example only; it does not assign work, approve a release, or add a new requirement. The browser and spreadsheet versions are not known in this synthetic note. The original record remains available for comparison.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.210681+00:00",
+          "observed_to": "2026-10-18T05:48:29.210681+00:00"
+        },
+        {
+          "id": "s43",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "FINAL REQUIREMENT: CSV output must retain the UTF-8 BOM for Excel.",
+          "stable": true,
+          "observed_from": "2026-10-18T05:48:29.213008+00:00",
+          "observed_to": "2026-10-18T05:48:29.213008+00:00"
+        }
+      ],
+      "report_job": {
+        "id": "f405395d-f1a9-4904-be02-1d7122a343af",
+        "meeting_id": "aa7fafe2-8218-4dd0-a4a4-be2adeb3dcfd",
+        "status": "ready",
+        "error": null,
+        "progress": 100,
+        "report_id": "1919040f-4d5e-469b-88a6-04bfbf6b3f3e",
+        "duration_ms": 9162.004700046964
+      },
+      "report": {
+        "id": "1919040f-4d5e-469b-88a6-04bfbf6b3f3e",
+        "meeting_id": "aa7fafe2-8218-4dd0-a4a4-be2adeb3dcfd",
+        "version": 1,
+        "transcript_revision": 43,
+        "payload": {
+          "summary_vi": "Alex nêu yêu cầu đầu tiên: ID tài khoản khi xuất phải giữ số 0 ở đầu (s1). Priya nêu yêu cầu giữa: ô CSV bắt đầu bằng dấu = phải được escape để tránh thực thi công thức (s22). Ngoài ra là các ghi chú QA quan sát mẫu A-00 đến A-19 và B-00, B-01: workbook mẫu có hóa đơn nhiều loại tiền và ngôn ngữ; việc soát so sánh ô hiển thị với văn bản xuất gốc, gồm dấu phẩy, dấu ngoặc kép, giá trị rỗng và ký tự xuống dòng. Các ghi chú này chỉ là ví dụ kiểm thử, không gán việc, không duyệt phát hành, không thêm yêu cầu mới; phiên bản trình duyệt và bảng tính không rõ. Không có quyết định, việc cần làm hay người phụ trách nào được xác nhận.\nCác đoạn ghi chú QA lặp lại cho thấy workbook mẫu chứa hóa đơn từ nhiều loại tiền tệ và ngôn ngữ. Việc kiểm tra so sánh ô hiển thị với văn bản gốc đã xuất, bao gồm dấu phẩy, dấu nháy, giá trị rỗng và ký tự xuống dòng. Các ghi chú này chỉ là ví dụ kiểm thử, không giao việc, không phê duyệt phát hành và không thêm yêu cầu mới. Phiên bản trình duyệt và bảng tính không được xác định. Một yêu cầu cuối được nêu: đầu ra CSV phải giữ BOM UTF-8 cho Excel.",
+          "summary_en": "Alex stated the first requirement: exported account IDs must preserve leading zeros (s1). Priya stated a middle requirement: CSV cells beginning with = must be escaped to prevent formula execution (s22). The rest are QA observations of sample workbooks A-00 to A-19 and B-00, B-01: samples contain invoices in several currencies and locales; the review compares displayed cells with original exported text, including commas, quotes, empty values and newlines. These notes are test examples only; they do not assign work, approve a release, or add a new requirement, and browser/spreadsheet versions are unknown. No decisions, action items or owners were confirmed.\nRepeated QA notes say the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. The notes are test examples only; they assign no work, approve no release and add no new requirement. Browser and spreadsheet versions are unknown. One final requirement was stated: CSV output must retain the UTF-8 BOM for Excel.",
+          "summary_segment_ids": [
+            "s1",
+            "s22",
+            "s2",
+            "s23",
+            "s24",
+            "s25",
+            "s26",
+            "s27",
+            "s28",
+            "s29",
+            "s30",
+            "s31",
+            "s32",
+            "s33",
+            "s34",
+            "s35",
+            "s36",
+            "s37",
+            "s38",
+            "s39",
+            "s40",
+            "s41",
+            "s42",
+            "s43"
+          ],
+          "requirements": [
+            {
+              "id": "92b488de-d8fd-4d8b-8b3f-f12422b9f36c",
+              "text": "ID tài khoản khi xuất phải giữ số 0 ở đầu.",
+              "text_en": "Exported account IDs must preserve leading zeros.",
+              "evidence_segment_ids": [
+                "s1"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "658e8d62-eb0f-4f97-a74a-14943995010f",
+              "text": "Ô CSV bắt đầu bằng dấu = phải được escape để tránh thực thi công thức trong bảng tính.",
+              "text_en": "CSV cells beginning with = must be escaped to prevent spreadsheet formula execution.",
+              "evidence_segment_ids": [
+                "s22"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "16e317fe-75fb-4ed3-aa0d-90236ea51889",
+              "text": "Đầu ra CSV phải giữ BOM UTF-8 cho Excel.",
+              "text_en": "CSV output must retain the UTF-8 BOM for Excel.",
+              "evidence_segment_ids": [
+                "s43"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "decisions": [],
+          "action_items": [],
+          "open_questions": [
+            {
+              "id": "87d60dec-0b6b-4eb3-b6f2-a523ec06ed65",
+              "text": "Cần soát ô hiển thị với văn bản xuất gốc, gồm dấu phẩy, dấu ngoặc kép, giá trị rỗng và ký tự xuống dòng — nhưng ghi chú QA không gán việc cho ai; ai sẽ phụ trách việc soát này?",
+              "text_en": "The review comparing displayed cells with original exported text (including commas, quotes, empty values, newlines) is described, but no owner is assigned. Who should own this review?",
+              "evidence_segment_ids": [
+                "s2",
+                "s3",
+                "s23",
+                "s24"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "5e9c75b3-ca4b-4eac-8a18-47e416c731a0",
+              "text": "Phiên bản trình duyệt và bảng tính dùng cho việc soát mẫu là gì? Ghi chú cho biết không rõ.",
+              "text_en": "What browser and spreadsheet versions are used for the sample review? The notes say these are not known.",
+              "evidence_segment_ids": [
+                "s2",
+                "s24"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "aca07dd0-47a4-4f6c-8f0c-d35450202ba5",
+              "text": "Phiên bản trình duyệt và bảng tính dùng để kiểm tra là gì? Ghi chú nói không xác định.",
+              "text_en": "Which browser and spreadsheet versions are used for the review? The note says they are not known.",
+              "evidence_segment_ids": [
+                "s24",
+                "s25"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "93344013-cf47-4e98-81c1-441c4daf9914",
+              "text": "Ai chịu trách nhiệm cho yêu cầu giữ BOM UTF-8 trong đầu ra CSV?",
+              "text_en": "Who owns the requirement to retain the UTF-8 BOM in CSV output?",
+              "evidence_segment_ids": [
+                "s43"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "ai_proposals": [],
+          "capture_warnings": [
+            "Không có nguồn tài liệu/dự án nào được cung cấp (sources rỗng).",
+            "Ghi chú QA lặp lại nhiều lần với nội dung giống nhau; không rõ đây là các mẫu riêng biệt hay bản ghi trùng.",
+            "Báo cáo chỉ bao phủ phụ đề đã quan sát; hãy kiểm tra nghĩa và bằng chứng trước khi gửi.",
+            "Chưa xác định participant là Tôi; tên người nói chỉ là nhãn caption.",
+            "Chưa có nguồn dự án để đối chiếu."
+          ]
+        },
+        "user_edits": false,
+        "reviewed_at": null,
+        "mode": "real",
+        "created_at": "2026-10-18T05:48:41.098399+00:00",
+        "parent_id": null
+      }
+    }
+  ],
+  "raw_outputs": [
+    {
+      "schema": "SuggestionPayload",
+      "report": false,
+      "case_name": null,
+      "segment_ids": [
+        "connection-test"
+      ],
+      "input_chars": 162,
+      "input_revision": 1,
+      "validation_feedback": null,
+      "payload": {
+        "input_revision": 1,
+        "intent": "question",
+        "meaning_vi": "Đây là câu hỏi yêu cầu làm rõ, nhưng chưa rõ nội dung cần làm rõ là gì.",
+        "findings": [],
+        "reply_en": "Can you clarify what exactly you need me to clarify?",
+        "reply_vi": "Bạn có thể nói rõ bạn cần tôi làm rõ điều gì không?",
+        "clarification_en": "What topic or detail should be clarified?",
+        "evidence_status": "missing",
+        "uncertainties": [
+          "Không có nguồn dự án nào được cung cấp để làm rõ nội dung."
+        ],
+        "supporting_segment_ids": [
+          "connection-test"
+        ]
+      }
+    },
+    {
+      "schema": "SuggestionPayload",
+      "report": false,
+      "case_name": "ambiguous-we-owner",
+      "segment_ids": [
+        "s1",
+        "s2"
+      ],
+      "input_chars": 1126,
+      "input_revision": 2,
+      "validation_feedback": null,
+      "payload": {
+        "input_revision": 2,
+        "intent": "question",
+        "meaning_vi": "Alex đề nghị điều tra lỗi hóa đơn trùng lặp, nhưng nói rõ chưa giao cho ai và chưa thống nhất hạn chót. Minh hỏi ai sẽ nhận việc, và xác nhận chưa có ai nhận. Chưa có nguồn tài liệu dự án nào được cung cấp.",
+        "findings": [],
+        "reply_en": "Can we confirm who will take the duplicate invoice investigation? No owner or deadline is agreed yet.",
+        "reply_vi": "Chúng ta có thể xác nhận ai sẽ nhận việc điều tra hóa đơn trùng lặp không? Hiện chưa có người phụ trách hay hạn chót nào được thống nhất.",
+        "clarification_en": "Who should own the duplicate invoice investigation, and is there any agreed deadline?",
+        "evidence_status": "missing",
+        "uncertainties": [
+          "Chưa có ai nhận việc điều tra hóa đơn trùng lặp.",
+          "Chưa có hạn chót được thống nhất.",
+          "Không có nguồn tài liệu dự án nào trong yêu cầu này."
+        ],
+        "supporting_segment_ids": [
+          "s1",
+          "s2"
+        ]
+      }
+    },
+    {
+      "schema": "ReportPayload",
+      "report": true,
+      "case_name": "ambiguous-we-owner",
+      "segment_ids": [
+        "s1",
+        "s2"
+      ],
+      "input_chars": 869,
+      "input_revision": 2,
+      "validation_feedback": null,
+      "payload": {
+        "summary_vi": "Nhóm nên điều tra vấn đề hóa đơn trùng lặp. Chưa có ai được giao việc và chưa có thời hạn nào được thống nhất.",
+        "summary_en": "The team should investigate the duplicate invoice issue. No one has been assigned and no deadline has been agreed.",
+        "summary_segment_ids": [
+          "s1",
+          "s2"
+        ],
+        "requirements": [
+          {
+            "id": "r1",
+            "text": "Cần điều tra vấn đề hóa đơn trùng lặp.",
+            "text_en": "The duplicate invoice issue should be investigated.",
+            "evidence_segment_ids": [
+              "s1"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [
+          {
+            "id": "q1",
+            "text": "Ai sẽ nhận việc điều tra hóa đơn trùng lặp? Chưa có ai nhận.",
+            "text_en": "Who should take on the duplicate invoice investigation? No owner has accepted it yet.",
+            "evidence_segment_ids": [
+              "s1",
+              "s2"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "q2",
+            "text": "Thời hạn cho việc này là gì? Chưa có thời hạn nào được thống nhất.",
+            "text_en": "What is the deadline? No deadline has been agreed.",
+            "evidence_segment_ids": [
+              "s1"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "ai_proposals": [],
+        "capture_warnings": []
+      }
+    },
+    {
+      "schema": "SuggestionPayload",
+      "report": false,
+      "case_name": "long-report-start-middle-tail",
+      "segment_ids": [
+        "s25",
+        "s26",
+        "s27",
+        "s28",
+        "s29",
+        "s30",
+        "s31",
+        "s32",
+        "s33",
+        "s34",
+        "s35",
+        "s36",
+        "s37",
+        "s38",
+        "s39",
+        "s40",
+        "s41",
+        "s42",
+        "s43"
+      ],
+      "input_chars": 13612,
+      "input_revision": 43,
+      "validation_feedback": null,
+      "payload": {
+        "input_revision": 43,
+        "intent": "decision",
+        "meaning_vi": "Alex nêu một yêu cầu cuối cùng: đầu ra CSV phải giữ UTF-8 BOM để mở được trong Excel. Các ý trước đó chỉ là ghi chú QA mẫu, không giao việc và không xác nhận trình duyệt hay phiên bản bảng tính.",
+        "findings": [],
+        "reply_en": "Can you confirm who owns implementing the UTF-8 BOM requirement and when it will be verified?",
+        "reply_vi": "Bạn có thể xác nhận ai phụ trách việc thêm UTF-8 BOM và khi nào sẽ kiểm tra không?",
+        "clarification_en": "Who is assigned to implement and verify the UTF-8 BOM requirement for CSV output?",
+        "evidence_status": "missing",
+        "uncertainties": [
+          "Không rõ ai chịu trách nhiệm triển khai yêu cầu UTF-8 BOM.",
+          "Không có thông tin về phiên bản trình duyệt và bảng tính.",
+          "Không có nguồn dự án nào được cung cấp."
+        ],
+        "supporting_segment_ids": [
+          "s43"
+        ]
+      }
+    },
+    {
+      "schema": "ReportPayload",
+      "report": true,
+      "case_name": "long-report-start-middle-tail",
+      "segment_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "s16",
+        "s17",
+        "s18",
+        "s19",
+        "s20",
+        "s21",
+        "s22",
+        "s23",
+        "s24"
+      ],
+      "input_chars": 16518,
+      "input_revision": 43,
+      "validation_feedback": null,
+      "payload": {
+        "summary_vi": "Alex nêu yêu cầu đầu tiên: ID tài khoản khi xuất phải giữ số 0 ở đầu (s1). Priya nêu yêu cầu giữa: ô CSV bắt đầu bằng dấu = phải được escape để tránh thực thi công thức (s22). Ngoài ra là các ghi chú QA quan sát mẫu A-00 đến A-19 và B-00, B-01: workbook mẫu có hóa đơn nhiều loại tiền và ngôn ngữ; việc soát so sánh ô hiển thị với văn bản xuất gốc, gồm dấu phẩy, dấu ngoặc kép, giá trị rỗng và ký tự xuống dòng. Các ghi chú này chỉ là ví dụ kiểm thử, không gán việc, không duyệt phát hành, không thêm yêu cầu mới; phiên bản trình duyệt và bảng tính không rõ. Không có quyết định, việc cần làm hay người phụ trách nào được xác nhận.",
+        "summary_en": "Alex stated the first requirement: exported account IDs must preserve leading zeros (s1). Priya stated a middle requirement: CSV cells beginning with = must be escaped to prevent formula execution (s22). The rest are QA observations of sample workbooks A-00 to A-19 and B-00, B-01: samples contain invoices in several currencies and locales; the review compares displayed cells with original exported text, including commas, quotes, empty values and newlines. These notes are test examples only; they do not assign work, approve a release, or add a new requirement, and browser/spreadsheet versions are unknown. No decisions, action items or owners were confirmed.",
+        "summary_segment_ids": [
+          "s1",
+          "s22",
+          "s2",
+          "s23",
+          "s24"
+        ],
+        "requirements": [
+          {
+            "id": "r1",
+            "text": "ID tài khoản khi xuất phải giữ số 0 ở đầu.",
+            "text_en": "Exported account IDs must preserve leading zeros.",
+            "evidence_segment_ids": [
+              "s1"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "r2",
+            "text": "Ô CSV bắt đầu bằng dấu = phải được escape để tránh thực thi công thức trong bảng tính.",
+            "text_en": "CSV cells beginning with = must be escaped to prevent spreadsheet formula execution.",
+            "evidence_segment_ids": [
+              "s22"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [
+          {
+            "id": "q1",
+            "text": "Cần soát ô hiển thị với văn bản xuất gốc, gồm dấu phẩy, dấu ngoặc kép, giá trị rỗng và ký tự xuống dòng — nhưng ghi chú QA không gán việc cho ai; ai sẽ phụ trách việc soát này?",
+            "text_en": "The review comparing displayed cells with original exported text (including commas, quotes, empty values, newlines) is described, but no owner is assigned. Who should own this review?",
+            "evidence_segment_ids": [
+              "s2",
+              "s3",
+              "s23",
+              "s24"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "q2",
+            "text": "Phiên bản trình duyệt và bảng tính dùng cho việc soát mẫu là gì? Ghi chú cho biết không rõ.",
+            "text_en": "What browser and spreadsheet versions are used for the sample review? The notes say these are not known.",
+            "evidence_segment_ids": [
+              "s2",
+              "s24"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "ai_proposals": [],
+        "capture_warnings": []
+      }
+    },
+    {
+      "schema": "ReportPayload",
+      "report": true,
+      "case_name": "long-report-start-middle-tail",
+      "segment_ids": [
+        "s24",
+        "s25",
+        "s26",
+        "s27",
+        "s28",
+        "s29",
+        "s30",
+        "s31",
+        "s32",
+        "s33",
+        "s34",
+        "s35",
+        "s36",
+        "s37",
+        "s38",
+        "s39",
+        "s40",
+        "s41",
+        "s42",
+        "s43"
+      ],
+      "input_chars": 14068,
+      "input_revision": 43,
+      "validation_feedback": null,
+      "payload": {
+        "summary_vi": "Các đoạn ghi chú QA lặp lại cho thấy workbook mẫu chứa hóa đơn từ nhiều loại tiền tệ và ngôn ngữ. Việc kiểm tra so sánh ô hiển thị với văn bản gốc đã xuất, bao gồm dấu phẩy, dấu nháy, giá trị rỗng và ký tự xuống dòng. Các ghi chú này chỉ là ví dụ kiểm thử, không giao việc, không phê duyệt phát hành và không thêm yêu cầu mới. Phiên bản trình duyệt và bảng tính không được xác định. Một yêu cầu cuối được nêu: đầu ra CSV phải giữ BOM UTF-8 cho Excel.",
+        "summary_en": "Repeated QA notes say the sample workbook contains invoices from several currencies and locales. The review compares the displayed cell with the original exported text, including commas, quotes, empty values and newline characters. The notes are test examples only; they assign no work, approve no release and add no new requirement. Browser and spreadsheet versions are unknown. One final requirement was stated: CSV output must retain the UTF-8 BOM for Excel.",
+        "summary_segment_ids": [
+          "s24",
+          "s25",
+          "s26",
+          "s27",
+          "s28",
+          "s29",
+          "s30",
+          "s31",
+          "s32",
+          "s33",
+          "s34",
+          "s35",
+          "s36",
+          "s37",
+          "s38",
+          "s39",
+          "s40",
+          "s41",
+          "s42",
+          "s43"
+        ],
+        "requirements": [
+          {
+            "id": "r1",
+            "text": "Đầu ra CSV phải giữ BOM UTF-8 cho Excel.",
+            "text_en": "CSV output must retain the UTF-8 BOM for Excel.",
+            "evidence_segment_ids": [
+              "s43"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [
+          {
+            "id": "q1",
+            "text": "Phiên bản trình duyệt và bảng tính dùng để kiểm tra là gì? Ghi chú nói không xác định.",
+            "text_en": "Which browser and spreadsheet versions are used for the review? The note says they are not known.",
+            "evidence_segment_ids": [
+              "s24",
+              "s25"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "q2",
+            "text": "Ai chịu trách nhiệm cho yêu cầu giữ BOM UTF-8 trong đầu ra CSV?",
+            "text_en": "Who owns the requirement to retain the UTF-8 BOM in CSV output?",
+            "evidence_segment_ids": [
+              "s43"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "ai_proposals": [],
+        "capture_warnings": [
+          "Không có nguồn tài liệu/dự án nào được cung cấp (sources rỗng).",
+          "Ghi chú QA lặp lại nhiều lần với nội dung giống nhau; không rõ đây là các mẫu riêng biệt hay bản ghi trùng."
+        ]
+      }
+    }
+  ],
+  "connection": {
+    "status": "pass",
+    "http_status": 200,
+    "result": {
+      "connected": true,
+      "mode": "real",
+      "model": "deepseek-flash"
+    },
+    "duration_ms": 2100.841199979186
+  },
+  "active_case": "long-report-start-middle-tail",
+  "credential_cleared": true,
+  "provider_attempts": [
+    {
+      "id": "b03f93c6-f890-4aea-8ccf-d4c206074cf7",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 1460,
+        "completion_tokens": 170,
+        "total_tokens": 1630,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1204
+      },
+      "duration_ms": 2088.862999982666,
+      "first_token_ms": 1384.4058999675326
+    },
+    {
+      "id": "4f88cfd5-0ccc-4428-ac2d-68df0efefcf8",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 1847,
+        "completion_tokens": 313,
+        "total_tokens": 2160,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 695
+      },
+      "duration_ms": 2850.611400033813,
+      "first_token_ms": 1646.8726000166498
+    },
+    {
+      "id": "cecb80af-e68a-4de7-9632-083746c0e659",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 1853,
+        "completion_tokens": 445,
+        "total_tokens": 2298,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 1213
+      },
+      "duration_ms": 2513.396799971815,
+      "first_token_ms": 1156.6982999793254
+    },
+    {
+      "id": "bb392a41-7196-45bb-94ab-443a1586f315",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 5129,
+        "completion_tokens": 279,
+        "total_tokens": 5408,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 3977
+      },
+      "duration_ms": 2667.801600007806,
+      "first_token_ms": 1552.5436000316404
+    },
+    {
+      "id": "4b781475-7623-428a-aed9-b87e125d66f4",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 5909,
+        "completion_tokens": 1013,
+        "total_tokens": 6922,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 4501
+      },
+      "duration_ms": 5083.543299988378,
+      "first_token_ms": 1762.9556999891065
+    },
+    {
+      "id": "eefa9768-810c-421b-bc2a-b2491b07b8cb",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 5248,
+        "completion_tokens": 816,
+        "total_tokens": 6064,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 3840
+      },
+      "duration_ms": 4056.667800003197,
+      "first_token_ms": 1448.8760000094771
+    }
+  ],
+  "metrics": {
+    "attempts": 6,
+    "successful": 6,
+    "median_ms": 2759.2065000208095,
+    "total_tokens": 24482,
+    "usage_known": true
+  }
+}

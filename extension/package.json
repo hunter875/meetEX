@@ -1,0 +1,14 @@
+{
+  "name": "@meet-copilot/extension",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && vite build && node build-content.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --maxWorkers=1 --minWorkers=1 --reporter=default --reporter=json --outputFile=../docs/evidence/extension-tests.json",
+    "dev": "vite --host 127.0.0.1"
+  },
+  "dependencies": {"react": "19.2.0", "react-dom": "19.2.0", "lucide-react": "0.468.0", "zod": "4.1.12"},
+  "devDependencies": {"@types/chrome": "0.1.24", "@types/react": "19.2.2", "@types/react-dom": "19.2.2", "@vitejs/plugin-react": "5.0.4", "vite": "7.1.12", "typescript": "5.9.3", "vitest": "3.2.4", "jsdom": "26.1.0", "esbuild": "0.25.11"}
+}

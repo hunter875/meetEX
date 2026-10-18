@@ -1,0 +1,130 @@
+{
+  "created_at": "2026-10-18T06:21:49.151001+00:00",
+  "scope": "Direct local validator probes with deliberately forged model outputs; no provider calls, no estimate of real model error rate.",
+  "probes": [
+    {
+      "name": "unrelated_first_person_commitment",
+      "validator_accepted": true,
+      "known_false_or_unsupported": "Only CSV formatting was accepted; rewriting authentication was not accepted.",
+      "payload": {
+        "input_revision": 1,
+        "intent": "update",
+        "meaning_vi": "Review CSV formatting.",
+        "findings": [],
+        "reply_en": "I will rewrite the authentication service.",
+        "reply_vi": "I will rewrite the authentication service.",
+        "clarification_en": "",
+        "evidence_status": "missing",
+        "uncertainties": [],
+        "supporting_segment_ids": [
+          "s1"
+        ]
+      },
+      "snapshot": {
+        "transcript_revision": 1,
+        "self_speaker": "Minh",
+        "segments": [
+          {
+            "id": "s1",
+            "speaker": "Minh",
+            "text": "I will review the CSV formatting."
+          }
+        ],
+        "memory": [],
+        "sources": [
+          {
+            "id": "c1",
+            "content": "Approved timeout is 15 seconds."
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "name": "false_fact_with_valid_citation",
+      "validator_accepted": true,
+      "known_false_or_unsupported": "Cited source says 15 seconds; generated finding says 90 seconds.",
+      "payload": {
+        "input_revision": 1,
+        "intent": "update",
+        "meaning_vi": "Review CSV formatting.",
+        "findings": [
+          {
+            "text_vi": "Approved timeout is 90 seconds.",
+            "source_ids": [
+              "c1"
+            ]
+          }
+        ],
+        "reply_en": "The approved timeout is 90 seconds.",
+        "reply_vi": "Please clarify.",
+        "clarification_en": "",
+        "evidence_status": "supported",
+        "uncertainties": [],
+        "supporting_segment_ids": [
+          "s1"
+        ]
+      },
+      "snapshot": {
+        "transcript_revision": 1,
+        "self_speaker": "Minh",
+        "segments": [
+          {
+            "id": "s1",
+            "speaker": "Minh",
+            "text": "I will review the CSV formatting."
+          }
+        ],
+        "memory": [],
+        "sources": [
+          {
+            "id": "c1",
+            "content": "Approved timeout is 15 seconds."
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "name": "false_decision_from_unrelated_confirmation",
+      "validator_accepted": true,
+      "known_false_or_unsupported": "Confirmed refers to staging; production approval remains pending.",
+      "payload": {
+        "summary_vi": "",
+        "summary_en": "Production deployment is approved.",
+        "summary_segment_ids": [
+          "s1"
+        ],
+        "requirements": [],
+        "decisions": [
+          {
+            "id": "r1",
+            "text": "Production deployment is approved.",
+            "text_en": "Production deployment is approved.",
+            "evidence_segment_ids": [
+              "s1"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "action_items": [],
+        "open_questions": [],
+        "ai_proposals": [],
+        "capture_warnings": []
+      },
+      "segments": [
+        {
+          "id": "s1",
+          "speaker": "Alex",
+          "text": "Confirmed: test in staging only. Production approval is still pending."
+        }
+      ],
+      "error": null
+    }
+  ]
+}

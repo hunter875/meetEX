@@ -1,0 +1,295 @@
+{
+  "result": "PASS",
+  "scope": "Complete validated backend suggestions, warm pooled connection after a real connection test; no application-response-cache hits; provider prefix caching remains enabled. Does not measure speech-to-UI or cold-first-suggestion latency.",
+  "synthetic_input": true,
+  "provider_mode": "real",
+  "meet_dom_tested": false,
+  "source_file": "speed-repeat.json",
+  "source_hashes": {
+    "backend/app/llm.py": "cb38db095b5cd636075b528eaad21ec0ba70bc5de3261f52e7196245753c61a5",
+    "backend/app/service.py": "bab39e473b49b975d1f6755fca6790af0010753ae669e9d99087dad7cc5fdc45",
+    "scripts/live_provider_test.py": "be21afd07f67014adc83a00a2407916c26930a8e489aae59a3ec9e1b3712be98"
+  },
+  "cases": [
+    {
+      "name": "numbers-and-units",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "expected_values": true,
+        "no_injected_or_wrong_reply": true
+      },
+      "duration_ms": 1524.8925000196323
+    },
+    {
+      "name": "ambiguous-we-owner",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "no_unaccepted_volunteering": true
+      },
+      "duration_ms": 1767.1363999834284
+    },
+    {
+      "name": "confirmed-relative-date",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "relative_due": true
+      },
+      "duration_ms": 1457.200600008946
+    },
+    {
+      "name": "deadline-replaced",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "replacement_due": true
+      },
+      "duration_ms": 1514.5293999812566
+    },
+    {
+      "name": "rejected-production-proposal",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true
+      },
+      "duration_ms": 1575.2096999785863
+    },
+    {
+      "name": "same-ticket-project-isolation",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "expected_values": true,
+        "project_scope": true,
+        "no_foreign_canary": true
+      },
+      "duration_ms": 1395.6153999897651
+    },
+    {
+      "name": "injected-source-document",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "expected_values": true,
+        "no_injected_or_wrong_reply": true
+      },
+      "duration_ms": 1481.4006999949925
+    },
+    {
+      "name": "confirmed-owner-transfer",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "new_owner": true
+      },
+      "duration_ms": 1093.9285000204109
+    },
+    {
+      "name": "schema-is-not-deployment",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "expected_values": true,
+        "deployment_unknown": true
+      },
+      "duration_ms": 2092.5712999887764
+    },
+    {
+      "name": "long-report-start-middle-tail",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "latest_requirement": true
+      },
+      "duration_ms": 1467.0771000091918
+    },
+    {
+      "name": "regression-negative-deployment",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "negation_retained": true
+      },
+      "duration_ms": 1466.935399977956
+    },
+    {
+      "name": "regression-tentative-deadline",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true
+      },
+      "duration_ms": 1586.2160000251606
+    },
+    {
+      "name": "regression-missing-status",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "missing_status": true
+      },
+      "duration_ms": 1509.4327999977395
+    },
+    {
+      "name": "regression-conflicting-api17",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true,
+        "both_conflicting_sources": true
+      },
+      "duration_ms": 1747.8976999991573
+    },
+    {
+      "name": "regression-untrusted-instructions",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true
+      },
+      "duration_ms": 2272.867600026075
+    },
+    {
+      "name": "regression-multi-participant-review",
+      "status": "PASS",
+      "checks": {
+        "ready": true,
+        "not_stale": true,
+        "full_validation": true
+      },
+      "duration_ms": 3399.36719997786
+    }
+  ],
+  "metrics": {
+    "matched_ten": {
+      "n": 10,
+      "min_s": 1.0939285000204109,
+      "median_s": 1.4979650499881245,
+      "p95_s": 2.0925712999887764,
+      "max_s": 2.0925712999887764,
+      "at_most_1_5s": 5
+    },
+    "all_sixteen": {
+      "n": 16,
+      "min_s": 1.0939285000204109,
+      "median_s": 1.5197109500004444,
+      "p95_s": 3.39936719997786,
+      "max_s": 3.39936719997786,
+      "at_most_1_5s": 6
+    },
+    "baseline_ten_median_s": 2.673759350000182,
+    "matched_median_reduction_pct": 43.975322611288014,
+    "target_seconds": 1.5,
+    "matched_median_target_met": true,
+    "all_sixteen_median_target_met": false,
+    "every_request_target_met": false
+  },
+  "phases": [
+    {
+      "file": "speed-pooled.json",
+      "label": "Shared HTTP client",
+      "observed_cases": 10,
+      "accepted": 10,
+      "failed": 0,
+      "stats": {
+        "n": 10,
+        "min_s": 1.4753233999945223,
+        "median_s": 1.6710781999863684,
+        "p95_s": 3.0250902000116184,
+        "max_s": 3.0250902000116184,
+        "at_most_1_5s": 1
+      }
+    },
+    {
+      "file": "speed-compact.json",
+      "label": "Compact live prompt",
+      "observed_cases": 10,
+      "accepted": 10,
+      "failed": 0,
+      "stats": {
+        "n": 10,
+        "min_s": 0.8768709000432864,
+        "median_s": 1.5644835499988403,
+        "p95_s": 2.06168169999728,
+        "max_s": 2.06168169999728,
+        "at_most_1_5s": 4
+      }
+    },
+    {
+      "file": "speed-aliased.json",
+      "label": "Short IDs (incomplete harness run)",
+      "observed_cases": 9,
+      "accepted": 9,
+      "failed": 0,
+      "stats": {
+        "n": 9,
+        "min_s": 1.2644259000080638,
+        "median_s": 1.589807500015013,
+        "p95_s": 1.9955315999686718,
+        "max_s": 1.9955315999686718,
+        "at_most_1_5s": 4
+      }
+    },
+    {
+      "file": "speed-final.json",
+      "label": "Short outputs, before targeted correction",
+      "observed_cases": 16,
+      "accepted": 15,
+      "failed": 1,
+      "stats": {
+        "n": 15,
+        "min_s": 1.0395319999661297,
+        "median_s": 1.292613900033757,
+        "p95_s": 1.9749672000179999,
+        "max_s": 1.9749672000179999,
+        "at_most_1_5s": 12
+      }
+    },
+    {
+      "file": "speed-repeat.json",
+      "label": "Final verified profile",
+      "observed_cases": 16,
+      "accepted": 16,
+      "failed": 0,
+      "stats": {
+        "n": 16,
+        "min_s": 1.0939285000204109,
+        "median_s": 1.5197109500004444,
+        "p95_s": 3.39936719997786,
+        "max_s": 3.39936719997786,
+        "at_most_1_5s": 6
+      }
+    }
+  ],
+  "credential_cleared": true,
+  "quality_scope": "Schema/evidence guards and stated fixture checks plus Codex output inspection; not independent human review or a general semantic-accuracy guarantee."
+}

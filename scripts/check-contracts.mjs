@@ -1,0 +1,11 @@
+import {spawnSync} from 'node:child_process';
+import {readFile,mkdtemp,rm,rmdir} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+const run=(cmd,args)=>{const result=spawnSync(cmd,args,{cwd:process.cwd(),stdio:'inherit',windowsHide:true});if(result.status!==0)process.exit(result.status||1);};
+run(path.resolve('.venv/Scripts/python.exe'),['scripts/export_openapi.py','--check']);
+const dir=await mkdtemp(path.join(tmpdir(),'meet-contract-'));const target=path.join(dir,'api-schema.d.ts');
+run(process.execPath,['node_modules/openapi-typescript/bin/cli.js','docs/openapi.json','-o',target]);
+const normalise=text=>text.replaceAll('\r\n','\n').trim();
+if(normalise(await readFile(target,'utf8'))!==normalise(await readFile('extension/src/api-schema.d.ts','utf8')))throw new Error('Frontend generated contract differs from backend OpenAPI');
+await rm(target);await rmdir(dir);console.log('Frontend contract matches backend schema');

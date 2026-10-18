@@ -1,0 +1,10 @@
+{
+  "scope": "Staged Git blobs before initial commit; no secret values printed or recorded",
+  "files_scanned": 146,
+  "bytes_scanned": 2978904,
+  "local_pairing_tokens_checked": 2,
+  "allowed_synthetic_private_key_fixture_matches": 1,
+  "findings": [],
+  "result": "PASS",
+  "limitations": "Pattern and known-local-token scan, not a comprehensive security audit."
+}

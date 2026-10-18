@@ -1,0 +1,867 @@
+{
+  "created_at": "2026-10-18T06:54:04.937371+00:00",
+  "mode": "local rules, synthetic fixtures, no provider",
+  "hash_format": "utf8-lf",
+  "classifier_sha256": "5dbe1b861fe5d42b0cf4d916fa36defe0b1c60c7743a8ce1ba72e03b49c9eb3f",
+  "fixture_sha256": "934fba2037b452aa93e0f92d1826c3ed01632f08bc473f5c375b53b7f4a7dcb6",
+  "passed": 34,
+  "total": 34,
+  "cases": [
+    {
+      "name": "fact-with-source",
+      "expected": "fast",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "fast",
+        "automatic_route": "fast",
+        "source": "automatic",
+        "reasons": [
+          "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+          "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+        ],
+        "risks": [],
+        "evidence_state": "available",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 2.0,
+        "classifier_ms": 7.443399983458221
+      }
+    },
+    {
+      "name": "fact-without-source",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Chưa có nguồn hiện hành để đối chiếu câu hỏi về dữ kiện dự án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.44679996790364385
+      }
+    },
+    {
+      "name": "stale-fact",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Chưa có nguồn hiện hành để đối chiếu câu hỏi về dữ kiện dự án.",
+          "Nguồn được truy xuất có bản cũ; cần đối chiếu lại."
+        ],
+        "risks": [],
+        "evidence_state": "stale",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.07810001261532307
+      }
+    },
+    {
+      "name": "generic-explanation",
+      "expected": "explain",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "explain",
+        "automatic_route": "explain",
+        "source": "automatic",
+        "reasons": [
+          "Cần giải thích nguyên nhân/cách hoạt động và giới hạn.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 2.0,
+        "target_max_s": 4.0,
+        "classifier_ms": 0.0632999581284821
+      }
+    },
+    {
+      "name": "explanation-vietnamese",
+      "expected": "explain",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "explain",
+        "automatic_route": "explain",
+        "source": "automatic",
+        "reasons": [
+          "Cần giải thích nguyên nhân/cách hoạt động và giới hạn.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 2.0,
+        "target_max_s": 4.0,
+        "classifier_ms": 1.0244000004604459
+      }
+    },
+    {
+      "name": "compare-alternatives",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "deep",
+        "source": "automatic",
+        "reasons": [
+          "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.09699998190626502
+      }
+    },
+    {
+      "name": "direction-vietnamese",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "deep",
+        "source": "automatic",
+        "reasons": [
+          "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.09430001955479383
+      }
+    },
+    {
+      "name": "direction-unaccented",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "deep",
+        "source": "automatic",
+        "reasons": [
+          "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.06320001557469368
+      }
+    },
+    {
+      "name": "short-high-risk",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "deployment",
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.04509999416768551
+      }
+    },
+    {
+      "name": "source-is-not-approval",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+        ],
+        "risks": [
+          "deployment",
+          "commitment"
+        ],
+        "evidence_state": "available",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.056200020480901
+      }
+    },
+    {
+      "name": "delete-data",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "data_loss"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.05400000372901559
+      }
+    },
+    {
+      "name": "security-tradeoff",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "deep",
+        "source": "automatic",
+        "reasons": [
+          "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "security"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.0678999931551516
+      }
+    },
+    {
+      "name": "deadline",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.06150000263005495
+      }
+    },
+    {
+      "name": "explicit-conflict",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Có dấu hiệu thông tin mâu thuẫn; cần làm rõ trước khi kết luận."
+        ],
+        "risks": [
+          "commitment"
+        ],
+        "evidence_state": "conflicting",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.07960002403706312
+      }
+    },
+    {
+      "name": "known-source-conflict",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Có dấu hiệu thông tin mâu thuẫn; cần làm rõ trước khi kết luận."
+        ],
+        "risks": [],
+        "evidence_state": "conflicting",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.045199994929134846
+      }
+    },
+    {
+      "name": "continuing-turn",
+      "expected": "listen",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "listen",
+        "automatic_route": "listen",
+        "source": "automatic",
+        "reasons": [
+          "Tiếp tục nghe: chưa có yêu cầu cần bạn trả lời hoặc đang nhường lượt nói.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 0.0,
+        "target_max_s": 0.0,
+        "classifier_ms": 0.05520001286640763
+      }
+    },
+    {
+      "name": "thanks-auto",
+      "expected": "listen",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "listen",
+        "automatic_route": "listen",
+        "source": "automatic",
+        "reasons": [
+          "Tiếp tục nghe: chưa có yêu cầu cần bạn trả lời hoặc đang nhường lượt nói.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 0.0,
+        "target_max_s": 0.0,
+        "classifier_ms": 0.03559998003765941
+      }
+    },
+    {
+      "name": "own-turn",
+      "expected": "listen",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "listen",
+        "automatic_route": "listen",
+        "source": "automatic",
+        "reasons": [
+          "Tiếp tục nghe: chưa có yêu cầu cần bạn trả lời hoặc đang nhường lượt nói.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 0.0,
+        "target_max_s": 0.0,
+        "classifier_ms": 0.045300053898245096
+      }
+    },
+    {
+      "name": "partial-auto",
+      "expected": "listen",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "listen",
+        "automatic_route": "listen",
+        "source": "automatic",
+        "reasons": [
+          "Tiếp tục nghe: chưa có yêu cầu cần bạn trả lời hoặc đang nhường lượt nói.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 0.0,
+        "target_max_s": 0.0,
+        "classifier_ms": 0.03509997623041272
+      }
+    },
+    {
+      "name": "other-addressee",
+      "expected": "listen",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "listen",
+        "automatic_route": "listen",
+        "source": "automatic",
+        "reasons": [
+          "Tiếp tục nghe: chưa có yêu cầu cần bạn trả lời hoặc đang nhường lượt nói.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 0.0,
+        "target_max_s": 0.0,
+        "classifier_ms": 0.5383000243455172
+      }
+    },
+    {
+      "name": "addressed-user",
+      "expected": "explain",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "explain",
+        "automatic_route": "explain",
+        "source": "automatic",
+        "reasons": [
+          "Cần giải thích nguyên nhân/cách hoạt động và giới hạn.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 2.0,
+        "target_max_s": 4.0,
+        "classifier_ms": 0.07579999510198832
+      }
+    },
+    {
+      "name": "manual-question-wins",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "deep",
+        "source": "automatic",
+        "reasons": [
+          "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.0543000060133636
+      }
+    },
+    {
+      "name": "explicit-explain-action",
+      "expected": "explain",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "explain",
+        "automatic_route": "explain",
+        "source": "automatic",
+        "reasons": [
+          "Bạn yêu cầu giải thích từ snapshot đã chọn.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 2.0,
+        "target_max_s": 4.0,
+        "classifier_ms": 0.05909998435527086
+      }
+    },
+    {
+      "name": "explicit-clarify-action",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Bạn yêu cầu tạo câu hỏi làm rõ.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.05229999078437686
+      }
+    },
+    {
+      "name": "fast-cannot-bypass-deploy",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "manual",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Giữ bước xác minh dù bạn chọn chế độ khác.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "deployment",
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.06049999501556158
+      }
+    },
+    {
+      "name": "manual-deep",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "fast",
+        "source": "manual",
+        "reasons": [
+          "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+          "Chế độ do bạn chọn cho yêu cầu này.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.05129998316988349
+      }
+    },
+    {
+      "name": "long-clear-fact",
+      "expected": "fast",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "fast",
+        "automatic_route": "fast",
+        "source": "automatic",
+        "reasons": [
+          "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+          "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+        ],
+        "risks": [
+          "commitment"
+        ],
+        "evidence_state": "available",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 2.0,
+        "classifier_ms": 0.14380004722625017
+      }
+    },
+    {
+      "name": "negation-risk",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "deployment",
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.05520001286640763
+      }
+    },
+    {
+      "name": "delivery-commitment",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.05930004408583045
+      }
+    },
+    {
+      "name": "delivery-vietnamese",
+      "expected": "clarify",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "clarify",
+        "automatic_route": "clarify",
+        "source": "automatic",
+        "reasons": [
+          "Cần xác minh quyền thực hiện/cam kết; có nguồn chưa đồng nghĩa đã được duyệt.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": true,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 1.0,
+        "target_max_s": 3.0,
+        "classifier_ms": 0.35310001112520695
+      }
+    },
+    {
+      "name": "strategy-question",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "deep",
+        "source": "automatic",
+        "reasons": [
+          "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "deployment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.06399996345862746
+      }
+    },
+    {
+      "name": "explain-is-not-permission",
+      "expected": "explain",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "explain",
+        "automatic_route": "explain",
+        "source": "automatic",
+        "reasons": [
+          "Cần giải thích nguyên nhân/cách hoạt động và giới hạn.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [
+          "deployment",
+          "commitment"
+        ],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 2.0,
+        "target_max_s": 4.0,
+        "classifier_ms": 0.06960000609979033
+      }
+    },
+    {
+      "name": "delivery-explanation-is-not-acceptance",
+      "expected": "explain",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "explain",
+        "automatic_route": "explain",
+        "source": "automatic",
+        "reasons": [
+          "Cần giải thích nguyên nhân/cách hoạt động và giới hạn.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 2.0,
+        "target_max_s": 4.0,
+        "classifier_ms": 0.06930000381544232
+      }
+    },
+    {
+      "name": "recommendation-vietnamese",
+      "expected": "deep",
+      "passed": true,
+      "decision": {
+        "version": "rules-v1",
+        "route": "deep",
+        "automatic_route": "deep",
+        "source": "automatic",
+        "reasons": [
+          "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+          "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+        ],
+        "risks": [],
+        "evidence_state": "missing",
+        "requires_verification": false,
+        "trigger_segment_ids": [
+          "s1"
+        ],
+        "target_min_s": 5.0,
+        "target_max_s": 10.0,
+        "classifier_ms": 0.08810003055259585
+      }
+    }
+  ],
+  "timing": {
+    "n": 1000,
+    "median_ms": 0.047600013203918934,
+    "p95_ms": 0.09009998757392168,
+    "max_ms": 0.2297000028192997
+  },
+  "limitation": "Fixture coverage is not general classification accuracy; time targets are unbenchmarked product goals."
+}

@@ -1,0 +1,14 @@
+import type {components} from '../api-schema';
+export type Project=components['schemas']['ProjectDTO'];
+export type Meeting=components['schemas']['MeetingDTO'];
+export type Snapshot=components['schemas']['SnapshotDTO'];
+export type Segment=components['schemas']['SegmentDTO'];
+export type Suggestion=Snapshot['suggestions'][number];
+export type Report=components['schemas']['ReportDTO'];
+export type ReportPayload=components['schemas']['ReportPayload'];
+export type ReportItem=components['schemas']['ReportItem'];
+export type Citation=components['schemas']['CitationDTO'];
+export type RoutingDecision=components['schemas']['RoutingDecision'];
+export type SourceInput=components['schemas']['SourceInput'];
+export type Source={id:string;project_id:string;kind:string;title:string;status:string;generation:number;file_count:number;chunk_count:number;total_bytes:number;indexed_at:string|null;error:string|null;stale:boolean;canonical_locator?:string;row_errors?:{row:number;reason:string}[];skipped?:{path:string;reason:string}[]};
+export type Settings={provider_url:string;model:string;has_key:boolean;auto_mode:boolean;auto_per_minute:number;retention_days:number;persistence_mode:'local'|'memory';semantic_enabled:boolean;semantic_status:string;semantic_error?:string;semantic_model:string;semantic_revision:string;sentence_limit:number;price_input:number|null;price_output:number|null;price_date:string|null;paired_origins:string[]};

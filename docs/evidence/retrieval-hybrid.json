@@ -1,0 +1,230 @@
+{
+  "mode": "hybrid",
+  "corpus": "fixtures/demo-project.json",
+  "source_count": 12,
+  "chunk_count": 12,
+  "machine": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.4",
+  "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "logical_cpus": 16,
+  "model": "intfloat/multilingual-e5-small",
+  "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "n": 300,
+  "median_ms": 38.07344997767359,
+  "p95_ms": 49.772400001529604,
+  "hit_top5": 10,
+  "query_count": 10,
+  "queries": [
+    {
+      "query": "AUTH-4 login session expiry",
+      "expected_source_key": "auth4",
+      "expected_source_id": "68e4710d-4862-49f0-b1ac-7f6e91f0901e",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "68e4710d-4862-49f0-b1ac-7f6e91f0901e",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "9771dec8-71ca-4488-838f-e9f0895aaf4d",
+        "d61e5dd2-3305-4b48-b28f-3a4b03ffcac7"
+      ],
+      "actual_titles": [
+        "AUTH-4 Login design",
+        "Source snapshot auth.ts",
+        "Ticket API-17",
+        "AUD-6 Audit",
+        "EXP-9 CSV export"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "hóa đơn tính phí thay đổi gói",
+      "expected_source_key": "bill8",
+      "expected_source_id": "e5fb2334-398d-4443-b12a-133c763386fe",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "e5fb2334-398d-4443-b12a-133c763386fe",
+        "d9a8091d-ab39-40b4-91a3-9d5b519a9cf0",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "9cb92d9e-eb42-41d7-a84f-b247885a6874"
+      ],
+      "actual_titles": [
+        "BILL-8 Billing",
+        "PAY-2 Webhook",
+        "Source snapshot auth.ts",
+        "Ticket API-17",
+        "PERF-5 Caching"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "nhật ký giữ bao lâu AUD-6",
+      "expected_source_key": "audit6",
+      "expected_source_id": "9771dec8-71ca-4488-838f-e9f0895aaf4d",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "9771dec8-71ca-4488-838f-e9f0895aaf4d",
+        "68e4710d-4862-49f0-b1ac-7f6e91f0901e",
+        "9cb92d9e-eb42-41d7-a84f-b247885a6874",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "d9a8091d-ab39-40b4-91a3-9d5b519a9cf0"
+      ],
+      "actual_titles": [
+        "AUD-6 Audit",
+        "AUTH-4 Login design",
+        "PERF-5 Caching",
+        "Ticket API-17",
+        "PAY-2 Webhook"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "múi giờ trong dữ liệu TIME-3",
+      "expected_source_key": "time3",
+      "expected_source_id": "f16910e8-a4e0-4964-bf6d-50d2fee5de83",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "f16910e8-a4e0-4964-bf6d-50d2fee5de83",
+        "9771dec8-71ca-4488-838f-e9f0895aaf4d",
+        "4b17816b-67b4-4cdb-99b9-12d6a2dd1579",
+        "9cb92d9e-eb42-41d7-a84f-b247885a6874",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236"
+      ],
+      "actual_titles": [
+        "TIME-3 Timezone",
+        "AUD-6 Audit",
+        "DATA-10 Schema snapshot",
+        "PERF-5 Caching",
+        "Ticket API-17"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "chữ ký webhook PAY-2",
+      "expected_source_key": "pay2",
+      "expected_source_id": "d9a8091d-ab39-40b4-91a3-9d5b519a9cf0",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "d9a8091d-ab39-40b4-91a3-9d5b519a9cf0",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "4b17816b-67b4-4cdb-99b9-12d6a2dd1579",
+        "68e4710d-4862-49f0-b1ac-7f6e91f0901e"
+      ],
+      "actual_titles": [
+        "PAY-2 Webhook",
+        "Source snapshot auth.ts",
+        "Ticket API-17",
+        "DATA-10 Schema snapshot",
+        "AUTH-4 Login design"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "xuất dữ liệu giới hạn CSV EXP-9",
+      "expected_source_key": "export9",
+      "expected_source_id": "d61e5dd2-3305-4b48-b28f-3a4b03ffcac7",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "d61e5dd2-3305-4b48-b28f-3a4b03ffcac7",
+        "4b17816b-67b4-4cdb-99b9-12d6a2dd1579",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "9cb92d9e-eb42-41d7-a84f-b247885a6874",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac"
+      ],
+      "actual_titles": [
+        "EXP-9 CSV export",
+        "DATA-10 Schema snapshot",
+        "Ticket API-17",
+        "PERF-5 Caching",
+        "Source snapshot auth.ts"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "bộ nhớ đệm TTL PERF-5",
+      "expected_source_key": "perf5",
+      "expected_source_id": "9cb92d9e-eb42-41d7-a84f-b247885a6874",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "9cb92d9e-eb42-41d7-a84f-b247885a6874",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac",
+        "d61e5dd2-3305-4b48-b28f-3a4b03ffcac7",
+        "9771dec8-71ca-4488-838f-e9f0895aaf4d"
+      ],
+      "actual_titles": [
+        "PERF-5 Caching",
+        "Ticket API-17",
+        "Source snapshot auth.ts",
+        "EXP-9 CSV export",
+        "AUD-6 Audit"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "ngoại tuyến trên mobile MOB-7",
+      "expected_source_key": "mobile7",
+      "expected_source_id": "597144f7-9ff8-4903-b4dc-14a78e8fdb18",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "597144f7-9ff8-4903-b4dc-14a78e8fdb18",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "d61e5dd2-3305-4b48-b28f-3a4b03ffcac7",
+        "4b17816b-67b4-4cdb-99b9-12d6a2dd1579"
+      ],
+      "actual_titles": [
+        "MOB-7 Mobile",
+        "Source snapshot auth.ts",
+        "Ticket API-17",
+        "EXP-9 CSV export",
+        "DATA-10 Schema snapshot"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "phát hành cần staging approval REL-12",
+      "expected_source_key": "release12",
+      "expected_source_id": "4e49529f-2660-496e-a2cb-e03244348e3b",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "4e49529f-2660-496e-a2cb-e03244348e3b",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "597144f7-9ff8-4903-b4dc-14a78e8fdb18",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac",
+        "9cb92d9e-eb42-41d7-a84f-b247885a6874"
+      ],
+      "actual_titles": [
+        "REL-12 Release process",
+        "Ticket API-17",
+        "MOB-7 Mobile",
+        "Source snapshot auth.ts",
+        "PERF-5 Caching"
+      ],
+      "mode": "hybrid"
+    },
+    {
+      "query": "trạng thái rỗng trong schema DATA-10",
+      "expected_source_key": "data10",
+      "expected_source_id": "4b17816b-67b4-4cdb-99b9-12d6a2dd1579",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "4b17816b-67b4-4cdb-99b9-12d6a2dd1579",
+        "aaa0a4cd-2f2a-4258-8b16-43ace84f5236",
+        "669dc0e8-4aef-485a-a4c7-2befb7ddd4ac",
+        "d61e5dd2-3305-4b48-b28f-3a4b03ffcac7",
+        "9cb92d9e-eb42-41d7-a84f-b247885a6874"
+      ],
+      "actual_titles": [
+        "DATA-10 Schema snapshot",
+        "Ticket API-17",
+        "Source snapshot auth.ts",
+        "EXP-9 CSV export",
+        "PERF-5 Caching"
+      ],
+      "mode": "hybrid"
+    }
+  ],
+  "note": "Small synthetic corpus benchmark, not general accuracy or an SLA."
+}

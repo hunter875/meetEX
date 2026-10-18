@@ -1,0 +1,164 @@
+{
+  "mode": "keyword",
+  "corpus": "fixtures/demo-project.json",
+  "source_count": 12,
+  "chunk_count": 12,
+  "machine": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.4",
+  "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "logical_cpus": 16,
+  "model": null,
+  "model_revision": null,
+  "n": 300,
+  "median_ms": 0.680350000038743,
+  "p95_ms": 0.8651999814901501,
+  "hit_top5": 10,
+  "query_count": 10,
+  "queries": [
+    {
+      "query": "AUTH-4 login session expiry",
+      "expected_source_key": "auth4",
+      "expected_source_id": "446db792-df79-4f52-abd7-bec2227395e6",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "446db792-df79-4f52-abd7-bec2227395e6"
+      ],
+      "actual_titles": [
+        "AUTH-4 Login design"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "hóa đơn tính phí thay đổi gói",
+      "expected_source_key": "bill8",
+      "expected_source_id": "9c485565-f0b0-4940-be58-eb4b5619f426",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "9c485565-f0b0-4940-be58-eb4b5619f426"
+      ],
+      "actual_titles": [
+        "BILL-8 Billing"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "nhật ký giữ bao lâu AUD-6",
+      "expected_source_key": "audit6",
+      "expected_source_id": "ecd2a64b-9bbd-438f-b2e0-eebcf406a8c4",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "ecd2a64b-9bbd-438f-b2e0-eebcf406a8c4"
+      ],
+      "actual_titles": [
+        "AUD-6 Audit"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "múi giờ trong dữ liệu TIME-3",
+      "expected_source_key": "time3",
+      "expected_source_id": "0bd4eebf-ef9c-426e-b18e-115c2abb4ea9",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "0bd4eebf-ef9c-426e-b18e-115c2abb4ea9",
+        "ecd2a64b-9bbd-438f-b2e0-eebcf406a8c4",
+        "b32017c6-2769-493f-a5dd-80bd544213d2"
+      ],
+      "actual_titles": [
+        "TIME-3 Timezone",
+        "AUD-6 Audit",
+        "DATA-10 Schema snapshot"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "chữ ký webhook PAY-2",
+      "expected_source_key": "pay2",
+      "expected_source_id": "deac246c-8c31-4f79-b629-b5fe9a47de0b",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "deac246c-8c31-4f79-b629-b5fe9a47de0b"
+      ],
+      "actual_titles": [
+        "PAY-2 Webhook"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "xuất dữ liệu giới hạn CSV EXP-9",
+      "expected_source_key": "export9",
+      "expected_source_id": "b94b56bd-c22c-4bc1-b756-ad8b5619c9ff",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "b94b56bd-c22c-4bc1-b756-ad8b5619c9ff",
+        "b32017c6-2769-493f-a5dd-80bd544213d2"
+      ],
+      "actual_titles": [
+        "EXP-9 CSV export",
+        "DATA-10 Schema snapshot"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "bộ nhớ đệm TTL PERF-5",
+      "expected_source_key": "perf5",
+      "expected_source_id": "f8874e07-5f00-4396-90bb-5628d1c4718f",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "f8874e07-5f00-4396-90bb-5628d1c4718f"
+      ],
+      "actual_titles": [
+        "PERF-5 Caching"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "ngoại tuyến trên mobile MOB-7",
+      "expected_source_key": "mobile7",
+      "expected_source_id": "a0cc3d92-beb5-4921-b541-f87ba199b2f9",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "a0cc3d92-beb5-4921-b541-f87ba199b2f9"
+      ],
+      "actual_titles": [
+        "MOB-7 Mobile"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "phát hành cần staging approval REL-12",
+      "expected_source_key": "release12",
+      "expected_source_id": "78109234-b6b6-406e-b3db-37b6937407d2",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "78109234-b6b6-406e-b3db-37b6937407d2",
+        "a0cc3d92-beb5-4921-b541-f87ba199b2f9",
+        "a555aeb4-80c5-40c1-addc-dbf911841ec3"
+      ],
+      "actual_titles": [
+        "REL-12 Release process",
+        "MOB-7 Mobile",
+        "Ticket API-17"
+      ],
+      "mode": "keyword"
+    },
+    {
+      "query": "trạng thái rỗng trong schema DATA-10",
+      "expected_source_key": "data10",
+      "expected_source_id": "b32017c6-2769-493f-a5dd-80bd544213d2",
+      "hit_top5": true,
+      "actual_source_ids": [
+        "b32017c6-2769-493f-a5dd-80bd544213d2",
+        "a555aeb4-80c5-40c1-addc-dbf911841ec3",
+        "fa80d746-bcc1-4bba-9ce5-0a1309cb527e"
+      ],
+      "actual_titles": [
+        "DATA-10 Schema snapshot",
+        "Ticket API-17",
+        "Source snapshot auth.ts"
+      ],
+      "mode": "keyword"
+    }
+  ],
+  "note": "Small synthetic corpus benchmark, not general accuracy or an SLA."
+}

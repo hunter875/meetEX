@@ -1,0 +1,19 @@
+{
+  "mode": "calibrated synthetic DOM + actual MV3 worker + real backend",
+  "native_sidepanel_gesture_tested": false,
+  "worker_restart_tested": true,
+  "sidepanel_close_tested": true,
+  "browser": "141.0.7390.37",
+  "n": 6,
+  "median_ms": 8,
+  "p95_ms": 10.399999976158142,
+  "samples_ms": [
+    5.799999952316284,
+    5.899999976158142,
+    7.100000023841858,
+    8,
+    9.299999952316284,
+    10.399999976158142
+  ],
+  "note": "Adapter observed event to backend ACK using content-script monotonic clock. Few samples, not reliable p95 or a Meet live result."
+}

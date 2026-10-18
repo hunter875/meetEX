@@ -1,0 +1,9 @@
+fastapi==0.119.1
+uvicorn[standard]==0.38.0
+pydantic==2.12.3
+httpx==0.28.1
+python-dotenv==1.1.1
+pathspec==0.12.1
+tzdata==2026.5
+pytest==8.4.2
+pytest-asyncio==1.2.0

@@ -1,0 +1,714 @@
+{
+  "created_at": "2026-10-17T16:35:22.736862+00:00",
+  "synthetic_input": true,
+  "provider_mode": "real",
+  "meet_dom_tested": false,
+  "model": "deepseek-flash",
+  "cases": [
+    {
+      "name": "multi-participant-review",
+      "synthetic_input": true,
+      "expectations": [
+        "Keep first leading-zero and final UTF-8 BOM requirements; confirmed staging only; Minh owns explicit 2026-10-20 action; no Friday production promise; auth conflict remains open."
+      ],
+      "checks": {
+        "validated_suggestion": true,
+        "validated_report": true
+      },
+      "suggestions": [
+        {
+          "id": "53a96227-d9c5-4889-a54c-2f340c54b517",
+          "request_id": "91edd305-6e9f-46db-93b0-0786004fdf28",
+          "created_at": "2026-10-17T16:35:29.152839+00:00",
+          "mode": "real",
+          "payload": {
+            "input_revision": 8,
+            "intent": "update",
+            "meaning_vi": "Alex đặt yêu cầu: xuất CSV hóa đơn phải giữ số 0 ở đầu trong mã tài khoản, và phải giữ UTF-8 BOM cho Excel. Bạn (Minh) đã nhận việc điều tra định dạng CSV và chưa xác nhận ngày phát hành. Priya xác nhận chỉ kiểm thử ở staging, triển khai production chưa được duyệt; thứ Sáu chỉ là khả năng, không triển khai nếu chưa có phê duyệt. Bạn đã xác nhận sẽ phụ trách kiểm thử staging và chia sẻ kết quả trước 2026-10-20. Priya nêu mâu thuẫn API-17: mã cục bộ trả HTTP 401 nhưng ticket chấp nhận ghi HTTP 403, chưa thống nhất.",
+            "findings": [
+              {
+                "text_vi": "Ticket chấp nhận API-17 yêu cầu HTTP 403 cho token không hợp lệ, trạng thái In Review; ticket không chứng minh mã đã được triển khai.",
+                "source_ids": [
+                  "df7d80ec-22c8-4aac-bcb2-deb0a29e3a3b"
+                ]
+              },
+              {
+                "text_vi": "Snapshot mã cục bộ API-17 trả HTTP 401 cho token không hợp lệ; snapshot cục bộ không xác định trạng thái triển khai production.",
+                "source_ids": [
+                  "a0f1c928-3493-416e-a024-0462330f9160"
+                ]
+              }
+            ],
+            "reply_en": "Understood. I will investigate the CSV export formatting, including leading zeros and the UTF-8 BOM. I have not confirmed a release date, and I will share the staging test results by 2026-10-20.",
+            "reply_vi": "Đã hiểu. Tôi sẽ điều tra định dạng xuất CSV, gồm số 0 ở đầu và UTF-8 BOM. Tôi chưa xác nhận ngày phát hành, và sẽ chia sẻ kết quả kiểm thử staging trước 2026-10-20.",
+            "clarification_en": "API-17 has a conflict: the local code returns HTTP 401 but the ticket expects HTTP 403. Which code should be correct?",
+            "evidence_status": "conflicting",
+            "uncertainties": [
+              "Chưa thống nhất mã lỗi đúng cho API-17: mã cục bộ là 401, ticket là 403.",
+              "Trạng thái triển khai production của API-17 là không rõ.",
+              "Ngày phát hành chưa được xác nhận; thứ Sáu chỉ là khả năng."
+            ],
+            "supporting_segment_ids": [
+              "s1",
+              "s2",
+              "s3",
+              "s4",
+              "s5",
+              "s6",
+              "s7",
+              "s8"
+            ]
+          },
+          "snapshot": {
+            "meeting_id": "4cf588c5-7ac3-4168-bb64-6453aeb06cfb",
+            "project_id": "ca60b56e-dbea-4968-abec-91538abd9789",
+            "transcript_revision": 8,
+            "index_generation": {
+              "152199a1-3ae3-4be6-95df-d738de079c20": 1,
+              "3eae0d9c-e207-459d-b981-0cfcfdf85d83": 1
+            },
+            "segments": [
+              {
+                "id": "s1",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Requirement: invoice CSV exports must preserve leading zeros in account IDs.",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.067156+00:00",
+                "observed_to": "2026-10-17T16:35:25.067156+00:00"
+              },
+              {
+                "id": "s2",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Minh",
+                "text": "Understood. I will investigate the CSV export formatting. I have not confirmed a release date.",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.069336+00:00",
+                "observed_to": "2026-10-17T16:35:25.069336+00:00"
+              },
+              {
+                "id": "s3",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Maybe Friday for production, but this is only a possibility. We will NOT deploy on Friday without approval.",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.072027+00:00",
+                "observed_to": "2026-10-17T16:35:25.072027+00:00"
+              },
+              {
+                "id": "s4",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "Confirmed: we will test the CSV export in staging only. Production deployment is not approved.",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.074740+00:00",
+                "observed_to": "2026-10-17T16:35:25.074740+00:00"
+              },
+              {
+                "id": "s5",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "Minh, can you own the staging test and share the results by 2026-10-20?",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.077331+00:00",
+                "observed_to": "2026-10-17T16:35:25.077331+00:00"
+              },
+              {
+                "id": "s6",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Minh",
+                "text": "Yes, confirmed. Minh will own the staging test and share the results by 2026-10-20.",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.079709+00:00",
+                "observed_to": "2026-10-17T16:35:25.079709+00:00"
+              },
+              {
+                "id": "s7",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Priya",
+                "text": "API-17 local auth code returns HTTP 401, but the acceptance ticket says HTTP 403. We have not agreed which is correct.",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.082252+00:00",
+                "observed_to": "2026-10-17T16:35:25.082252+00:00"
+              },
+              {
+                "id": "s8",
+                "capture_epoch": "synthetic-epoch",
+                "revision": 1,
+                "speaker": "Alex",
+                "text": "The final requirement is that CSV exports must retain the UTF-8 BOM for Excel. Please keep this in the report.",
+                "stable": true,
+                "observed_from": "2026-10-17T16:35:25.084799+00:00",
+                "observed_to": "2026-10-17T16:35:25.084799+00:00"
+              }
+            ],
+            "memory": [],
+            "sources": [
+              {
+                "id": "df7d80ec-22c8-4aac-bcb2-deb0a29e3a3b",
+                "source_id": "3eae0d9c-e207-459d-b981-0cfcfdf85d83",
+                "project_id": "ca60b56e-dbea-4968-abec-91538abd9789",
+                "generation": 1,
+                "content": "API-17 auth invalid token acceptance ticket: expected HTTP 403. Status: In Review. The ticket does not prove any code is deployed.",
+                "title": "API-17 issue tracker",
+                "kind": "text",
+                "path": "API-17 issue tracker",
+                "line_start": 1,
+                "line_end": 1,
+                "indexed_at": "2026-10-17T16:35:25.052699+00:00",
+                "content_hash": "44dfd33c6f83ceea35a8fdc21b277fccd24fefc1415657737eef429db515f7bc",
+                "stale": false,
+                "source_changed": false,
+                "source_deleted": false,
+                "section": "",
+                "origin_updated_at": null,
+                "canonical_locator": null,
+                "score": 0.01639344262295082
+              },
+              {
+                "id": "a0f1c928-3493-416e-a024-0462330f9160",
+                "source_id": "152199a1-3ae3-4be6-95df-d738de079c20",
+                "project_id": "ca60b56e-dbea-4968-abec-91538abd9789",
+                "generation": 1,
+                "content": "API-17 auth handler local source: invalid token returns HTTP 401. This local snapshot does not establish production deployment status.",
+                "title": "API-17 local code snapshot",
+                "kind": "text",
+                "path": "API-17 local code snapshot",
+                "line_start": 1,
+                "line_end": 1,
+                "indexed_at": "2026-10-17T16:35:25.022478+00:00",
+                "content_hash": "0af98ec3401a0336d4271beb1bbc0abb62e168ae004d4b8ced4d381d1c0d235b",
+                "stale": false,
+                "source_changed": false,
+                "source_deleted": false,
+                "section": "",
+                "origin_updated_at": null,
+                "canonical_locator": null,
+                "score": 0.016129032258064516
+              }
+            ],
+            "action": "suggest",
+            "question": "",
+            "input_hash": "0f6b5da5ae2b51ef0ed879f88c9158216ed6479ed2e3f94c5216a57f3cb44a18",
+            "context_revision": 1,
+            "memory_omitted_count": 0,
+            "glossary": {},
+            "self_speaker": "Minh",
+            "sentence_limit": 3,
+            "provider_config": {
+              "provider_url": "https://api.deepseek.com",
+              "model": "deepseek-flash"
+            }
+          },
+          "stale": false,
+          "automatic": false,
+          "duration_ms": 4054.4128000037745
+        }
+      ],
+      "request_status": "ready",
+      "error": null,
+      "transcript": [
+        {
+          "id": "s1",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Requirement: invoice CSV exports must preserve leading zeros in account IDs.",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.067156+00:00",
+          "observed_to": "2026-10-17T16:35:25.067156+00:00"
+        },
+        {
+          "id": "s2",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Minh",
+          "text": "Understood. I will investigate the CSV export formatting. I have not confirmed a release date.",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.069336+00:00",
+          "observed_to": "2026-10-17T16:35:25.069336+00:00"
+        },
+        {
+          "id": "s3",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Maybe Friday for production, but this is only a possibility. We will NOT deploy on Friday without approval.",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.072027+00:00",
+          "observed_to": "2026-10-17T16:35:25.072027+00:00"
+        },
+        {
+          "id": "s4",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "Confirmed: we will test the CSV export in staging only. Production deployment is not approved.",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.074740+00:00",
+          "observed_to": "2026-10-17T16:35:25.074740+00:00"
+        },
+        {
+          "id": "s5",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "Minh, can you own the staging test and share the results by 2026-10-20?",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.077331+00:00",
+          "observed_to": "2026-10-17T16:35:25.077331+00:00"
+        },
+        {
+          "id": "s6",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Minh",
+          "text": "Yes, confirmed. Minh will own the staging test and share the results by 2026-10-20.",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.079709+00:00",
+          "observed_to": "2026-10-17T16:35:25.079709+00:00"
+        },
+        {
+          "id": "s7",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Priya",
+          "text": "API-17 local auth code returns HTTP 401, but the acceptance ticket says HTTP 403. We have not agreed which is correct.",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.082252+00:00",
+          "observed_to": "2026-10-17T16:35:25.082252+00:00"
+        },
+        {
+          "id": "s8",
+          "capture_epoch": "synthetic-epoch",
+          "revision": 1,
+          "speaker": "Alex",
+          "text": "The final requirement is that CSV exports must retain the UTF-8 BOM for Excel. Please keep this in the report.",
+          "stable": true,
+          "observed_from": "2026-10-17T16:35:25.084799+00:00",
+          "observed_to": "2026-10-17T16:35:25.084799+00:00"
+        }
+      ],
+      "report_job": {
+        "id": "07560328-f94d-4bff-855e-0ef0700453fd",
+        "meeting_id": "4cf588c5-7ac3-4168-bb64-6453aeb06cfb",
+        "status": "ready",
+        "error": null,
+        "progress": 100,
+        "report_id": "5857c600-089f-474d-90db-938c9034646a",
+        "duration_ms": 4254.64979998651
+      },
+      "report": {
+        "id": "5857c600-089f-474d-90db-938c9034646a",
+        "meeting_id": "4cf588c5-7ac3-4168-bb64-6453aeb06cfb",
+        "version": 1,
+        "transcript_revision": 8,
+        "payload": {
+          "summary_vi": "Nhóm đã nêu yêu cầu về định dạng CSV (giữ số 0 đầu trong mã tài khoản và giữ BOM UTF-8 cho Excel). Minh nhận làm staging test và chia sẻ kết quả; triển khai production chưa được phê duyệt. Có điểm chưa thống nhất về mã lỗi HTTP 401 và 403 trong API-17.",
+          "summary_en": "The team stated CSV export requirements (preserve leading zeros in account IDs and keep the UTF-8 BOM for Excel). Minh confirmed owning the staging test and sharing results; production deployment is not approved. There is an unresolved conflict about HTTP 401 versus 403 for API-17.",
+          "summary_segment_ids": [
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "Xuất CSV hóa đơn phải giữ số 0 ở đầu trong mã tài khoản.",
+              "text_en": "Invoice CSV exports must preserve leading zeros in account IDs.",
+              "evidence_segment_ids": [
+                "s1"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "r2",
+              "text": "Xuất CSV phải giữ BOM UTF-8 cho Excel.",
+              "text_en": "CSV exports must retain the UTF-8 BOM for Excel.",
+              "evidence_segment_ids": [
+                "s8"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "decisions": [
+            {
+              "id": "d1",
+              "text": "Chỉ kiểm thử xuất CSV trong môi trường staging; triển khai production chưa được phê duyệt.",
+              "text_en": "Test the CSV export in staging only; production deployment is not approved.",
+              "evidence_segment_ids": [
+                "s4"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "action_items": [
+            {
+              "id": "a1",
+              "text": "Minh phụ trách staging test và chia sẻ kết quả.",
+              "text_en": "Minh will own the staging test and share the results.",
+              "evidence_segment_ids": [
+                "s5",
+                "s6"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": "Minh",
+              "raw_due_text": "2026-10-20",
+              "normalized_due": "2026-10-20",
+              "status": "open"
+            },
+            {
+              "id": "a2",
+              "text": "Minh sẽ điều tra định dạng xuất CSV.",
+              "text_en": "Minh will investigate the CSV export formatting.",
+              "evidence_segment_ids": [
+                "s2"
+              ],
+              "origin": "transcript",
+              "confirmation": "confirmed",
+              "owner": "Minh",
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "open_questions": [
+            {
+              "id": "q1",
+              "text": "API-17: mã local trả HTTP 401 nhưng ticket nghiệm thu nói HTTP 403; nhóm chưa thống nhất mã đúng.",
+              "text_en": "API-17: the local code returns HTTP 401 but the acceptance ticket says HTTP 403; the team has not agreed which is correct.",
+              "evidence_segment_ids": [
+                "s7"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            },
+            {
+              "id": "q2",
+              "text": "Có gợi ý \"Maybe Friday\" cho production, nhưng đây chỉ là khả năng và không triển khai thứ Sáu nếu chưa được phê duyệt; chưa có ngày phát hành được xác nhận.",
+              "text_en": "There is a \"Maybe Friday\" suggestion for production, but it is only a possibility and no Friday deployment without approval; no release date is confirmed.",
+              "evidence_segment_ids": [
+                "s3",
+                "s2"
+              ],
+              "origin": "transcript",
+              "confirmation": "unconfirmed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "status": "open"
+            }
+          ],
+          "ai_proposals": [],
+          "capture_warnings": [
+            "Báo cáo chỉ bao phủ phụ đề đã quan sát; hãy kiểm tra nghĩa và bằng chứng trước khi gửi."
+          ]
+        },
+        "user_edits": false,
+        "reviewed_at": null,
+        "mode": "real",
+        "created_at": "2026-10-17T16:35:33.440189+00:00",
+        "parent_id": null
+      }
+    }
+  ],
+  "raw_outputs": [
+    {
+      "schema": "SuggestionPayload",
+      "report": false,
+      "input_revision": 1,
+      "validation_feedback": null,
+      "payload": {
+        "input_revision": 1,
+        "intent": "question",
+        "meaning_vi": "Câu này hỏi người kia giải thích rõ hơn. Không có nguồn dự án nào được cung cấp.",
+        "findings": [],
+        "reply_en": "Can you clarify what you need me to explain?",
+        "reply_vi": "Bạn có thể nói rõ bạn cần tôi giải thích điều gì không?",
+        "clarification_en": "What specific topic should be clarified?",
+        "evidence_status": "missing",
+        "uncertainties": [
+          "Không có nguồn dự án nào trong yêu cầu."
+        ],
+        "supporting_segment_ids": [
+          "connection-test"
+        ]
+      }
+    },
+    {
+      "schema": "SuggestionPayload",
+      "report": false,
+      "input_revision": 8,
+      "validation_feedback": null,
+      "payload": {
+        "input_revision": 8,
+        "intent": "update",
+        "meaning_vi": "Alex đặt yêu cầu: xuất CSV hóa đơn phải giữ số 0 ở đầu trong mã tài khoản, và phải giữ UTF-8 BOM cho Excel. Bạn (Minh) đã nhận việc điều tra định dạng CSV và chưa xác nhận ngày phát hành. Priya xác nhận chỉ kiểm thử ở staging, triển khai production chưa được duyệt; thứ Sáu chỉ là khả năng, không triển khai nếu chưa có phê duyệt. Bạn đã xác nhận sẽ phụ trách kiểm thử staging và chia sẻ kết quả trước 2026-10-20. Priya nêu mâu thuẫn API-17: mã cục bộ trả HTTP 401 nhưng ticket chấp nhận ghi HTTP 403, chưa thống nhất.",
+        "findings": [
+          {
+            "text_vi": "Ticket chấp nhận API-17 yêu cầu HTTP 403 cho token không hợp lệ, trạng thái In Review; ticket không chứng minh mã đã được triển khai.",
+            "source_ids": [
+              "df7d80ec-22c8-4aac-bcb2-deb0a29e3a3b"
+            ]
+          },
+          {
+            "text_vi": "Snapshot mã cục bộ API-17 trả HTTP 401 cho token không hợp lệ; snapshot cục bộ không xác định trạng thái triển khai production.",
+            "source_ids": [
+              "a0f1c928-3493-416e-a024-0462330f9160"
+            ]
+          }
+        ],
+        "reply_en": "Understood. I will investigate the CSV export formatting, including leading zeros and the UTF-8 BOM. I have not confirmed a release date, and I will share the staging test results by 2026-10-20.",
+        "reply_vi": "Đã hiểu. Tôi sẽ điều tra định dạng xuất CSV, gồm số 0 ở đầu và UTF-8 BOM. Tôi chưa xác nhận ngày phát hành, và sẽ chia sẻ kết quả kiểm thử staging trước 2026-10-20.",
+        "clarification_en": "API-17 has a conflict: the local code returns HTTP 401 but the ticket expects HTTP 403. Which code should be correct?",
+        "evidence_status": "conflicting",
+        "uncertainties": [
+          "Chưa thống nhất mã lỗi đúng cho API-17: mã cục bộ là 401, ticket là 403.",
+          "Trạng thái triển khai production của API-17 là không rõ.",
+          "Ngày phát hành chưa được xác nhận; thứ Sáu chỉ là khả năng."
+        ],
+        "supporting_segment_ids": [
+          "s1",
+          "s2",
+          "s3",
+          "s4",
+          "s5",
+          "s6",
+          "s7",
+          "s8"
+        ]
+      }
+    },
+    {
+      "schema": "ReportPayload",
+      "report": true,
+      "input_revision": 8,
+      "validation_feedback": null,
+      "payload": {
+        "summary_vi": "Nhóm đã nêu yêu cầu về định dạng CSV (giữ số 0 đầu trong mã tài khoản và giữ BOM UTF-8 cho Excel). Minh nhận làm staging test và chia sẻ kết quả; triển khai production chưa được phê duyệt. Có điểm chưa thống nhất về mã lỗi HTTP 401 và 403 trong API-17.",
+        "summary_en": "The team stated CSV export requirements (preserve leading zeros in account IDs and keep the UTF-8 BOM for Excel). Minh confirmed owning the staging test and sharing results; production deployment is not approved. There is an unresolved conflict about HTTP 401 versus 403 for API-17.",
+        "summary_segment_ids": [
+          "s1",
+          "s3",
+          "s4",
+          "s5",
+          "s6",
+          "s7",
+          "s8"
+        ],
+        "requirements": [
+          {
+            "id": "r1",
+            "text": "Xuất CSV hóa đơn phải giữ số 0 ở đầu trong mã tài khoản.",
+            "text_en": "Invoice CSV exports must preserve leading zeros in account IDs.",
+            "evidence_segment_ids": [
+              "s1"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "r2",
+            "text": "Xuất CSV phải giữ BOM UTF-8 cho Excel.",
+            "text_en": "CSV exports must retain the UTF-8 BOM for Excel.",
+            "evidence_segment_ids": [
+              "s8"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "decisions": [
+          {
+            "id": "d1",
+            "text": "Chỉ kiểm thử xuất CSV trong môi trường staging; triển khai production chưa được phê duyệt.",
+            "text_en": "Test the CSV export in staging only; production deployment is not approved.",
+            "evidence_segment_ids": [
+              "s4"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "action_items": [
+          {
+            "id": "a1",
+            "text": "Minh phụ trách staging test và chia sẻ kết quả.",
+            "text_en": "Minh will own the staging test and share the results.",
+            "evidence_segment_ids": [
+              "s5",
+              "s6"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": "Minh",
+            "raw_due_text": "2026-10-20",
+            "normalized_due": "2026-10-20",
+            "status": "open"
+          },
+          {
+            "id": "a2",
+            "text": "Minh sẽ điều tra định dạng xuất CSV.",
+            "text_en": "Minh will investigate the CSV export formatting.",
+            "evidence_segment_ids": [
+              "s2"
+            ],
+            "origin": "transcript",
+            "confirmation": "confirmed",
+            "owner": "Minh",
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "open_questions": [
+          {
+            "id": "q1",
+            "text": "API-17: mã local trả HTTP 401 nhưng ticket nghiệm thu nói HTTP 403; nhóm chưa thống nhất mã đúng.",
+            "text_en": "API-17: the local code returns HTTP 401 but the acceptance ticket says HTTP 403; the team has not agreed which is correct.",
+            "evidence_segment_ids": [
+              "s7"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "q2",
+            "text": "Có gợi ý \"Maybe Friday\" cho production, nhưng đây chỉ là khả năng và không triển khai thứ Sáu nếu chưa được phê duyệt; chưa có ngày phát hành được xác nhận.",
+            "text_en": "There is a \"Maybe Friday\" suggestion for production, but it is only a possibility and no Friday deployment without approval; no release date is confirmed.",
+            "evidence_segment_ids": [
+              "s3",
+              "s2"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "ai_proposals": [],
+        "capture_warnings": []
+      }
+    }
+  ],
+  "connection": {
+    "status": "pass",
+    "http_status": 200,
+    "result": {
+      "connected": true,
+      "mode": "real",
+      "model": "deepseek-flash"
+    },
+    "duration_ms": 2194.273400004022
+  },
+  "credential_cleared": true,
+  "provider_attempts": [
+    {
+      "id": "9e33c041-d8a2-48ac-9224-4397d9c88d3c",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 1405,
+        "completion_tokens": 160,
+        "total_tokens": 1565,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 253
+      },
+      "duration_ms": 2185.899900010554,
+      "first_token_ms": 1578.2564000110142
+    },
+    {
+      "id": "4a969c0f-e0c9-4295-833b-10b919a8f3d2",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 3143,
+        "completion_tokens": 699,
+        "total_tokens": 3842,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 1863
+      },
+      "duration_ms": 4050.2746000129264,
+      "first_token_ms": 1513.2857999997213
+    },
+    {
+      "id": "99f26faf-729e-44cc-9f5d-6d88fe7e6866",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 2488,
+        "completion_tokens": 835,
+        "total_tokens": 3323,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 1848
+      },
+      "duration_ms": 4247.77929999982,
+      "first_token_ms": 1464.702999975998
+    }
+  ],
+  "metrics": {
+    "attempts": 3,
+    "successful": 3,
+    "median_ms": 4050.2746000129264,
+    "total_tokens": 8730,
+    "usage_known": true
+  }
+}

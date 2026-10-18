@@ -1,0 +1,17 @@
+{
+  "requirements": 30,
+  "tasks": 28,
+  "checks": 46,
+  "local_links_valid": true,
+  "claimed_pass_evidence_exists": true,
+  "backend_failures": 0,
+  "frontend_failures": 0,
+  "e2e_passed": 3,
+  "live_gates": {
+    "Meet": "NOT TESTED",
+    "provider_synthetic": "6 initial + 10 extended reviewed samples"
+  },
+  "result": "PASS",
+  "latency_target": "~1.5 s median on matched synthetic corpus; not a per-request SLA",
+  "routing": "Local synthetic fixtures pass; not real-meeting accuracy or new provider latency"
+}

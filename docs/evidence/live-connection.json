@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-10-17T16:23:38.340639+00:00",
+  "synthetic_input": true,
+  "provider_mode": "real",
+  "meet_dom_tested": false,
+  "model": "deepseek-flash",
+  "cases": [],
+  "connection": {
+    "status": "fail",
+    "http_status": 502,
+    "result": {
+      "code": "AI_CITATION",
+      "message": "AI referenced a source outside this request",
+      "retryable": false,
+      "request_id": "2d52d3d6-0d2e-4f74-b0ef-69768eecdffc"
+    },
+    "duration_ms": 2731.5442000108305
+  },
+  "credential_cleared": true,
+  "provider_attempts": [
+    {
+      "id": "009e6ddc-1c07-4630-88e1-89d820d73a2b",
+      "mode": "real",
+      "status": "ready",
+      "usage": {
+        "prompt_tokens": 887,
+        "completion_tokens": 246,
+        "total_tokens": 1133,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 887
+      },
+      "duration_ms": 2723.363800003426,
+      "first_token_ms": 1703.719099983573
+    }
+  ],
+  "metrics": {
+    "attempts": 1,
+    "successful": 1,
+    "median_ms": 2723.363800003426,
+    "total_tokens": 1133,
+    "usage_known": true
+  }
+}
