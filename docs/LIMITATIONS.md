@@ -12,6 +12,9 @@ Chromium đã nạp manifest MV3, chạy content script, rebind/restart worker, 
 
 ## AI và bằng chứng
 
+Giai đoạn 1 đã chặn ba probe gốc và thêm đối chiếu claim có giới hạn: [phạm vi, test và hạn chế](PHASE1_REPORT.md). 219 backend tests và 82 fixture không chứng minh mọi claim đúng. Nguồn số liệu hỗ trợ các nhãn/đơn vị được khai báo; task/confirmation dùng alias và mệnh đề, không có entailment/coreference tổng quát. Unknown confirmed/supported trong phạm vi guard sẽ bị chặn hoặc yêu cầu partial/hỏi lại; câu hỏi dẫn dắt, phủ định lồng, named entity/cách nói mới và bản dịch ngoài alias vẫn có thể lọt hoặc bị chặn nhầm. User edit và lịch sử cũ không được tự sửa hay tái chứng nhận. Cache có phiên bản validation policy để không tái dùng kết quả cũ cho yêu cầu mới.
+
+
 Đã dùng key do người dùng cung cấp qua RAM để chạy `deepseek-flash` thật: [6 tình huống ban đầu](LIVE_PROVIDER_REPORT.md) và [10 tình huống mở rộng](EXTENDED_LIVE_REPORT.md). Key được xóa khỏi backend sau mỗi run. Đã thử transcript synthetic 43 turns/gần 20 nghìn ký tự qua hai map thật và giữ yêu cầu đầu/giữa/cuối. Chưa thử buổi họp hàng giờ, corpus dự án thật hoặc đủ nhiều prompt injection để suy accuracy/an toàn tổng quát. Các tests mặc định không gọi API trả phí; script live phải chạy chủ động và nhập key. Demo vẫn là controlled output có nhãn.
 
 Validation chặn schema, ID ngoài scope, revision sai, claim deploy đối nghịch một số mẫu phủ định, owner/date thiếu bằng chứng và một số confirmation mơ hồ. Những guard này có thể bảo thủ và **không chứng minh mọi claim đúng nghĩa**. ID nguồn hợp lệ chỉ chứng minh nguồn tồn tại. Cần mở excerpt/transcript và xem lại trước khi nói/gửi báo cáo.
@@ -42,4 +45,4 @@ Sau tối ưu, [LATENCY_REPORT.md](LATENCY_REPORT.md) tách riêng gợi ý: med
 
 ## Bộ phân loại mới
 
-[Response routing](RESPONSE_ROUTING.md) đã triển khai bằng quy tắc local Anh–Việt, chưa hiệu chuẩn trên corpus họp thật. Có thể phân loại sai câu gián tiếp/trích dẫn/cách nói mới. Preview không gọi AI nhưng vẫn có retrieval; available không chứng minh claim đúng. Deep mới đổi hướng dẫn trong schema gợi ý, chưa có bảng điểm trọng số. Mục tiêu 1–2/2–4/5–10 s theo luồng chưa được đo bằng provider thật trên build mới. Gate xác minh bổ sung không giải quyết toàn bộ ba probe sai nghĩa trong [SYSTEM_ASSESSMENT.md](SYSTEM_ASSESSMENT.md). Các việc tiếp theo ở [NEXT_PRIORITIES.md](NEXT_PRIORITIES.md).
+[Response routing](RESPONSE_ROUTING.md) đã triển khai bằng quy tắc local Anh–Việt, chưa hiệu chuẩn trên corpus họp thật. Có thể phân loại sai câu gián tiếp/trích dẫn/cách nói mới. Preview không gọi AI nhưng vẫn có retrieval; available không chứng minh claim đúng. Deep mới đổi hướng dẫn trong schema gợi ý, chưa có bảng điểm trọng số. Mục tiêu 1–2/2–4/5–10 s theo luồng chưa được đo bằng provider thật trên build mới. Routing không thay semantic validation; ba probe gốc đã được giai đoạn 1 chặn trong [phạm vi được kiểm thử](PHASE1_REPORT.md). Chưa có provider benchmark sau thay đổi này. Các việc tiếp theo ở [NEXT_PRIORITIES.md](NEXT_PRIORITIES.md).

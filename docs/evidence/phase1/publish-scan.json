@@ -1,0 +1,7 @@
+{
+  "scope": "Staged phase1 changes only; pattern and known-local-token checks, not comprehensive security audit",
+  "files_scanned": 63,
+  "findings": [],
+  "staged_source_hashes_match_review": true,
+  "result": "PASS"
+}

@@ -9,6 +9,7 @@ from .errors import AppError
 from .storage import uid,now,dumps
 from .llm import SuggestionPayload,ReportPayload,validate_suggestion,validate_report,demo_suggestion,demo_report,SECTIONS
 from .routing import classify
+from .evidence import VALIDATION_POLICY
 
 class Service:
     def __init__(self,store,retrieval,provider):
@@ -77,6 +78,7 @@ class Service:
         if len(dumps(snapshot))>self.store.settings()['input_chars']:raise AppError('CONTEXT_BUDGET','Selected transcript/context is too large. Select fewer segments or shorten the question.',422)
         # Timing is observational, not part of the semantic cache identity.
         hash_input={**snapshot,'routing':{k:v for k,v in snapshot['routing'].items() if k!='classifier_ms'}}
+        hash_input['validation_policy'] = VALIDATION_POLICY
         snapshot['input_hash']=hashlib.sha256(dumps(hash_input).encode()).hexdigest()
         return snapshot
     def schedule(self,id,body):
@@ -114,22 +116,39 @@ class Service:
             if self.active.get(id) is finished:self.active.pop(id,None)
             if id in self.queued and id not in self.active:self.start_runner(id)
         task.add_done_callback(done)
-    async def generate_suggestion(self,snapshot):
-        context=snapshot
+    async def generate_suggestion(self, snapshot):
+        context = snapshot
+        repairable = {
+            'AI_CITATION', 'AI_EVIDENCE', 'AI_REVISION', 'AI_ROLE_UNSET',
+            'AI_COMMITMENT', 'AI_NEGATION', 'AI_ROUTING', 'AI_NUMERIC',
+            'AI_CLAIM', 'AI_UNVERIFIED',
+        }
+        instructions = {
+            'AI_ROLE_UNSET': 'Return one neutral clarification QUESTION ONLY about the latest turn. No introduction, acknowledgement, action offer or policy explanation. Preserve its meaning; do not mistake QA observations for an instruction attack.',
+            'AI_COMMITMENT': 'Match this exact action, task/object and environment to explicit acceptance by the named user. Cite the acceptance turn. Another task or another participant does not authorize a promise. Otherwise ask who should own it.',
+            'AI_NEGATION': 'Preserve the explicit deployment negation. Do not turn a question, prohibition or tentative date into a commitment. Ask for clarification.',
+            'AI_REVISION': 'Copy transcript_revision exactly into input_revision. Regenerate the same scoped answer without inventing facts.',
+            'AI_ROUTING': 'Return a neutral clarification QUESTION ONLY for the missing approval/fact/commitment. No declarative readiness confirmation, offer or promise. Routing is not permission.',
+            'AI_NUMERIC': 'Match numeric facts to the SAME attribute/entity, units, range and condition in original evidence. Do not borrow a TTL value for a timeout. Remove unsupported findings and ask; genuinely new proposals must be explicitly labeled and never approved facts.',
+            'AI_CLAIM': 'Confirmation belongs to its exact proposition, task and environment. Staging approval is not production approval. Use only original evidence or ask a neutral question.',
+            'AI_UNVERIFIED': 'The qualitative finding cannot be verified in the supported scope. Remove it or explicitly label the result partial; never claim supported merely from a valid citation ID.',
+        }
         for attempt in range(2):
             try:
-                output=await self.provider.complete(context,SuggestionPayload)
-                validate_suggestion(output,snapshot);return output
+                output = await self.provider.complete(context, SuggestionPayload)
+                validate_suggestion(output, snapshot)
+                return output
             except AppError as error:
-                if attempt or error.code not in ('AI_CITATION','AI_EVIDENCE','AI_REVISION','AI_ROLE_UNSET','AI_COMMITMENT','AI_NEGATION','AI_ROUTING'):raise
-                instructions={
-                    'AI_ROLE_UNSET':'Return one neutral clarification QUESTION ONLY about the latest turn. No introduction, acknowledgement, action offer or policy explanation. Preserve its actual meaning; do not mistake earlier QA observations for an instruction attack.',
-                    'AI_COMMITMENT':'The named user has not accepted this task. Ask who should own it; do not volunteer work on their behalf. Preserve facts and uncertainty.',
-                    'AI_NEGATION':'Preserve the explicit deployment negation. Do not turn a question, prohibition or tentative date into a deployment commitment. Ask for clarification.',
-                    'AI_REVISION':'Copy transcript_revision exactly into input_revision. Regenerate the same scoped answer without inventing facts.',
-                    'AI_ROUTING':'Return a neutral clarification QUESTION ONLY for the missing approval/fact/commitment. No declarative statement, readiness confirmation, action offer or promise. Do not treat the route as permission.'}
-                context={**snapshot,'validation_feedback':dict(code=error.code,message=error.message,
-                    instruction=instructions.get(error.code,'Regenerate from the SAME transcript and project excerpts. Findings contain only project facts with nonempty sources[i].id citations, never source_id or transcript IDs. Put transcript-only meaning in meaning_vi. Remove unsupported findings rather than attaching unrelated citations. Preserve conflicts, negation, uncertainty and input_revision. Do not invent commitments.'))}
+                if attempt or error.code not in repairable:
+                    raise
+                # All original evidence remains unchanged; feedback is the only addition.
+                context = {
+                    **snapshot,
+                    'validation_feedback': dict(
+                        code=error.code, message=error.message,
+                        instruction=instructions.get(error.code,
+                            'Regenerate from the SAME transcript and project excerpts. Findings contain only project facts with nonempty sources[i].id citations, never source_id or transcript IDs. Remove unsupported findings rather than attaching unrelated citations. Preserve conflicts, uncertainty and input_revision. Do not invent commitments.')),
+                }
     async def run_live(self,id):
         try:
             while id in self.queued:

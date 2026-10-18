@@ -22,3 +22,13 @@ Nguồn xác minh: [DeepSeek Chat Completions](https://api-docs.deepseek.com/api
 ## Response routing bổ sung
 
 SuggestInput thêm response_mode (auto/fast/explain/deep/clarify, mặc định auto); POST meetings/{id}/classify trả RoutingDecision mà không schedule provider. AISnapshot.routing nullable cho lịch sử cũ; request Auto có thể có status skipped. Metrics thêm classifier, provider_by_route và route trên provider record. Client không truyền routing. Cache bỏ classifier_ms khỏi hash; vẫn giữ route/policy version trong hash. Xem [RESPONSE_ROUTING.md](RESPONSE_ROUTING.md). OpenAPI và TypeScript được tạo lại cùng thay đổi.
+
+## Giai đoạn 1 — hành vi đúng đắn, không đổi schema
+
+Không thêm field output/API/event hoặc đổi DTO; OpenAPI và TypeScript kiểm tra khớp, không sửa generated types bằng tay. Client cũ tiếp tục đọc dữ liệu/snapshot/report cũ. Các kết quả cũ không được tự tái chứng nhận bằng validator mới.
+
+Create/resume dùng cùng slot active/paused trên disk/RAM, lock một process/worker từ check đến commit. Resume xung đột trả 409 ACTIVE_MEETING; chuyển trạng thái không hợp lệ trả 409 INVALID_STATE. Replay cùng idempotency key giữ response lịch sử nhưng không áp dụng lại state hay gap. Không tự kết thúc phiên khác.
+
+Các lỗi guard mới dùng cùng error envelope hiện có: AI_NUMERIC, AI_CLAIM, AI_UNVERIFIED; REPORT_NUMERIC, REPORT_CLAIM, REPORT_TASK, REPORT_PROPOSAL. AI_COMMITMENT/REPORT_DUE được siết theo task. Schema/ID/revision, routing và tối đa một repair vẫn giữ; lỗi cuối không có ready và không thay phiên bản user edit. Proposal không được gán confirmed/owner/deadline như fact.
+
+Input hash có salt nội bộ `bounded-evidence-v1`; timing không tham gia hash. Không tái dùng cache được duyệt bằng policy trước. Trích dẫn vẫn trỏ ID gốc; số liệu dùng excerpt thật, cam kết dùng các turn hỗ trợ được model cite trong snapshot. [Chi tiết phạm vi và evidence](PHASE1_REPORT.md).

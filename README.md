@@ -4,7 +4,7 @@ Trợ lý dành cho developer Việt Nam họp với khách nói tiếng Anh: đ
 
 Repository: [hunter875/meetEX](https://github.com/hunter875/meetEX) (private). [Mục lục tài liệu và trạng thái hiện tại](docs/README.md).
 
-Snapshot kiểm tra hiện tại: **91 backend tests, 13 frontend tests, 3 browser E2E đều pass**; bộ phân loại local đạt **34/34 fixture Anh–Việt**. Đây không phải accuracy họp thật. Bộ phân loại đã có 5 luồng; bảng phương án có trọng số và kiểm tra sai nghĩa đầy đủ còn trong [danh sách ưu tiên](docs/NEXT_PRIORITIES.md).
+Snapshot kiểm tra hiện tại: **219 backend tests, 13 frontend tests, 3 browser E2E đều pass**; bộ phân loại local đạt **34/34 fixture Anh–Việt**. Đây không phải accuracy họp thật. Bộ phân loại đã có 5 luồng; bảng phương án có trọng số và kiểm tra sai nghĩa đầy đủ còn trong [danh sách ưu tiên](docs/NEXT_PRIORITIES.md).
 
 Có năm màn hình: **Dự án & dữ liệu, Đang họp, Báo cáo, Lịch sử, Cài đặt**. Chrome MV3 + React/TypeScript/Vite; FastAPI một worker; SQLite WAL/FTS5; E5 CPU tùy chọn. Không cần Docker/GPU. Không thu audio, tự nói, gửi chat/email, chạy source/SQL hoặc kết nối production DB.
 
@@ -138,3 +138,7 @@ Giới hạn và checklist live: [docs/LIMITATIONS.md](docs/LIMITATIONS.md), [do
 ## Phân loại mức xử lý câu hỏi
 
 Đã thêm 5 luồng local: nhanh, giải thích, phân tích sâu, hỏi lại/xác minh và tiếp tục nghe. Có preview/lý do, chọn mode thủ công và nút Phân tích sâu trên card. Auto nhường lượt thì không gọi AI; chọn nhanh không bỏ qua cờ cần xác minh. [Hành vi/API/giới hạn](docs/RESPONSE_ROUTING.md) · [Chức năng nên làm tiếp](docs/NEXT_PRIORITIES.md). Mục tiêu thời gian các luồng chưa được benchmark bằng provider thật; số đo 1,5 s trước đây thuộc build trước routing.
+
+## Củng cố giai đoạn 1
+
+Đã sửa tranh slot create/resume giữa local và RAM và chặn ba probe sai nghĩa gốc bằng guard có giới hạn, áp dụng qua pipeline/repair/map/merge. [Báo cáo A–E, phạm vi semantic và kết quả 82 fixture](docs/PHASE1_REPORT.md). Evidence mới nằm riêng trong docs/evidence/phase1; không thay bằng chứng lịch sử. Chưa nghiệm thu Meet thật hoặc đo provider/latency sau sửa.

@@ -1,6 +1,6 @@
 # Trạng thái triển khai theo task
 
-Ngày bàn giao: 2026-10-17 · app 0.1.0 · Windows local. IMPLEMENTED không đóng gate live. Spec gốc vẫn giữ status TODO như tài liệu đầu vào.
+Cập nhật giai đoạn 1: 2026-10-18 · baseline bàn giao 2026-10-17 · Windows local. Spec gốc giữ nguyên; live gate chưa đóng.
 
 | Task | Nội dung | Trạng thái / bằng chứng |
 | --- | --- | --- |
@@ -34,3 +34,5 @@ Ngày bàn giao: 2026-10-17 · app 0.1.0 · Windows local. IMPLEMENTED không đ
 | T-028 | Kiểm tra truy vết và bàn giao | IMPLEMENTED · registry/contract/evidence QA; release live gate còn mở |
 
 Bổ sung response routing: IMPLEMENTED trong backend/UI, quy tắc local 5 luồng và API preview. Xem [RESPONSE_ROUTING.md](RESPONSE_ROUTING.md); chưa nghiệm thu Meet/provider thật cho luồng mới. [Ưu tiên tiếp theo](NEXT_PRIORITIES.md).
+
+Giai đoạn 1: A–E PASS trong phạm vi guard đã thử, không mở rộng phạm vi sản phẩm. REQ-01/05/13/14/19/20/21/28/30 có thêm regression tests cho slot phiên, claim và pipeline. Xem [PHASE1_REPORT.md](PHASE1_REPORT.md).

@@ -1,0 +1,1036 @@
+[
+  {
+    "name": "wrong-timeout",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Approved timeout is 15 seconds.",
+    "claim": "The approved timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "borrow-ttl",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds. Cache TTL is 90 seconds.",
+    "claim": "Timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "borrow-other-endpoint",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "API-1 timeout is 15 seconds. API-2 timeout is 90 seconds.",
+    "claim": "API-1 timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "equivalent-ms",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15000 milliseconds.",
+    "claim": "Timeout is 15 seconds.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "equivalent-minutes",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds.",
+    "claim": "Timeout is 0.25 minutes.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "correct-timeout",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Approved timeout is 15 seconds.",
+    "claim": "The approved timeout is 15 seconds.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "correct-ttl",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds. Cache TTL is 90 seconds.",
+    "claim": "Cache TTL is 90 seconds.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "wrong-retries",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Retry at most 3 times. Cache TTL is 15 seconds.",
+    "claim": "Retry at most 15 times.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "correct-retries",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Retry at most 3 times.",
+    "claim": "Retry at most 3 times.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "wrong-comparator",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Retry at most 3 times.",
+    "claim": "Retry at least 3 times.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "negative-value",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is not 90 seconds.",
+    "claim": "Timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "retain-negative",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is not 90 seconds.",
+    "claim": "Timeout is not 90 seconds.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "range-not-point",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 to 30 seconds.",
+    "claim": "Timeout is 15 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "same-range",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 to 30 seconds.",
+    "claim": "Timeout is 15 to 30 seconds.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "drop-condition",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds if staging is used.",
+    "claim": "Timeout is 15 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "keep-condition",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds if staging is used.",
+    "claim": "Timeout is 15 seconds if staging is used.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "ambiguous-source",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Approved values are 15 seconds and 90 seconds.",
+    "claim": "Timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "qualitative-no-number",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "CSV exports preserve leading zeros.",
+    "claim": "CSV exports preserve leading zeros.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "vietnamese-conversion",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15000 ms.",
+    "claim": "Thời gian chờ là 15 giây.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "bad-translation",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds.",
+    "claim": "Thời gian chờ là 90 giây.",
+    "field": "reply_vi",
+    "accept": false
+  },
+  {
+    "name": "explicit-new-proposal",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds.",
+    "claim": "We could try a timeout of 30 seconds.",
+    "field": "reply_en",
+    "accept": true
+  },
+  {
+    "name": "proposal-as-approved",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds.",
+    "claim": "The approved timeout is 30 seconds.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "proposal-in-facts",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds.",
+    "claim": "We propose a timeout of 30 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "wrong-task",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV formatting."
+      }
+    ],
+    "claim": "I will rewrite the authentication service.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "correct-task",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV formatting."
+      }
+    ],
+    "claim": "I will review the CSV formatting.",
+    "field": "reply_en",
+    "accept": true
+  },
+  {
+    "name": "valid-paraphrase",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV formatting."
+      }
+    ],
+    "claim": "I'll inspect the CSV export formatting.",
+    "field": "reply_en",
+    "accept": true
+  },
+  {
+    "name": "different-csv-task",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV formatting."
+      }
+    ],
+    "claim": "I will review CSV security.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "ability-not-acceptance",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I can review the CSV."
+      }
+    ],
+    "claim": "I will review the CSV.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "request-not-acceptance",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Can you review the CSV?"
+      }
+    ],
+    "claim": "I will review the CSV.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "other-participant",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Priya",
+        "text": "I will review the CSV."
+      }
+    ],
+    "claim": "I will review the CSV.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "negative-acceptance",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will not review the CSV."
+      }
+    ],
+    "claim": "I will review the CSV.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "two-accepted-tasks",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV. I will rewrite the authentication service."
+      }
+    ],
+    "claim": "I will rewrite the authentication service.",
+    "field": "reply_en",
+    "accept": true
+  },
+  {
+    "name": "two-people",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV."
+      },
+      {
+        "id": "s2",
+        "speaker": "Priya",
+        "text": "I will rewrite the authentication service."
+      }
+    ],
+    "claim": "I will rewrite the authentication service.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "vietnamese-task",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV formatting."
+      }
+    ],
+    "claim": "Tôi sẽ rà soát định dạng CSV.",
+    "field": "reply_vi",
+    "accept": true
+  },
+  {
+    "name": "ordinary-reply",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV."
+      }
+    ],
+    "claim": "Thanks for explaining the issue.",
+    "field": "reply_en",
+    "accept": true
+  },
+  {
+    "name": "wrong-task-deadline",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV by Friday. I will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "I will review the CSV by Monday.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "correct-task-deadline",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV by Friday. I will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "I will review the CSV by Friday.",
+    "field": "reply_en",
+    "accept": true
+  },
+  {
+    "name": "wrong-production",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: test in staging only. Production approval is still pending."
+      }
+    ],
+    "claim": "Production deployment is approved.",
+    "accept": false,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "valid-staging",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: test in staging only. Production approval is still pending."
+      }
+    ],
+    "claim": "Test in staging only.",
+    "accept": true,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "explicit-production",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Production deployment is explicitly approved."
+      }
+    ],
+    "claim": "Production deployment is approved.",
+    "accept": true,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "rephrased-production",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "We agreed to deploy in production."
+      }
+    ],
+    "claim": "Deploy to production.",
+    "accept": true,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "not-approved",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Production deployment is not approved."
+      }
+    ],
+    "claim": "Production deployment is approved.",
+    "accept": false,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "tentative-date",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Maybe deploy on Friday."
+      }
+    ],
+    "claim": "Deploy on Friday.",
+    "accept": false,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "summary-wrong",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: test in staging only. Production approval is still pending."
+      }
+    ],
+    "claim": "Production deployment is approved.",
+    "accept": false,
+    "section": "summary",
+    "field": "summary_en"
+  },
+  {
+    "name": "summary-vi-wrong",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: test in staging only. Production approval is still pending."
+      }
+    ],
+    "claim": "Triển khai production đã được duyệt.",
+    "accept": false,
+    "section": "summary",
+    "field": "summary_vi"
+  },
+  {
+    "name": "item-en-wrong",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: test in staging only. Production approval is still pending."
+      }
+    ],
+    "claim": "Production deployment is approved.",
+    "accept": false,
+    "section": "decisions",
+    "field": "text_en"
+  },
+  {
+    "name": "item-vi-correct",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: test in staging only. Production approval is still pending."
+      }
+    ],
+    "claim": "Chỉ kiểm thử staging; production chưa được duyệt.",
+    "accept": true,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "drop-approval-condition",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: deploy to production if the staging test passes."
+      }
+    ],
+    "claim": "Deploy to production.",
+    "accept": false,
+    "section": "decisions",
+    "field": "text"
+  },
+  {
+    "name": "correct-owner-date",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: Minh will review the CSV by Friday. Confirmed: Priya will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Review the CSV.",
+    "accept": true,
+    "section": "action_items",
+    "field": "text",
+    "owner": "Minh",
+    "raw_due_text": "Friday"
+  },
+  {
+    "name": "wrong-owner",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: Minh will review the CSV by Friday. Confirmed: Priya will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Review the CSV.",
+    "accept": false,
+    "section": "action_items",
+    "field": "text",
+    "owner": "Priya",
+    "raw_due_text": "Friday"
+  },
+  {
+    "name": "wrong-date",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: Minh will review the CSV by Friday. Confirmed: Priya will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Review the CSV.",
+    "accept": false,
+    "section": "action_items",
+    "field": "text",
+    "owner": "Minh",
+    "raw_due_text": "Monday"
+  },
+  {
+    "name": "wrong-task-owner",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: Minh will review the CSV by Friday. Confirmed: Priya will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Rewrite the authentication service.",
+    "accept": false,
+    "section": "action_items",
+    "field": "text",
+    "owner": "Minh",
+    "raw_due_text": "Monday"
+  },
+  {
+    "name": "summary-wrong-owner-task",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: Minh will review the CSV by Friday. Confirmed: Priya will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Minh will rewrite the authentication service.",
+    "accept": false,
+    "section": "summary",
+    "field": "summary_en"
+  },
+  {
+    "name": "summary-correct-owner-task",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: Minh will review the CSV by Friday. Confirmed: Priya will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Minh will review the CSV by Friday.",
+    "accept": true,
+    "section": "summary",
+    "field": "summary_en"
+  },
+  {
+    "name": "mention-is-not-acceptance",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Minh asked Priya to review the CSV. Confirmed: Priya will review the CSV."
+      }
+    ],
+    "claim": "Review the CSV.",
+    "accept": false,
+    "section": "action_items",
+    "field": "text",
+    "owner": "Minh"
+  },
+  {
+    "name": "same-clause-other-property",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds, cache TTL is 90 seconds.",
+    "claim": "Timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "same-clause-endpoint",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "API-1 timeout is 15 seconds, API-2 timeout is 90 seconds.",
+    "claim": "API-1 timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "preserve-attribute-vietnamese",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds. Cache TTL is 90 seconds.",
+    "claim": "Thời gian chờ là 90 giây.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "summary-wrong-task-date",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: Minh will review the CSV by Friday. Confirmed: Priya will rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Minh will review the CSV by Monday.",
+    "section": "summary",
+    "field": "summary_en",
+    "accept": false
+  },
+  {
+    "name": "confirmed-unrelated-action",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: test in staging only. We have not assigned the authentication rewrite."
+      }
+    ],
+    "claim": "Rewrite the authentication service.",
+    "section": "action_items",
+    "field": "text",
+    "accept": false
+  },
+  {
+    "name": "single-turn-other-actor",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV and Priya will rewrite the authentication service."
+      }
+    ],
+    "claim": "I will rewrite the authentication service.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "different-negated-action",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: we will not test in staging."
+      }
+    ],
+    "claim": "Test in staging.",
+    "section": "decisions",
+    "field": "text",
+    "accept": false
+  },
+  {
+    "name": "confirmed-conditional-action",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Confirmed: review the CSV if staging is available."
+      }
+    ],
+    "claim": "Review the CSV.",
+    "section": "action_items",
+    "field": "text",
+    "accept": false
+  },
+  {
+    "name": "unknown-qualitative-supported",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "CSV exports preserve leading zeros.",
+    "claim": "CSV exports include every invoice field.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "translated-qualitative-supported",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "CSV exports preserve leading zeros.",
+    "claim": "CSV giữ lại số 0 ở đầu.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "shared-subject-wrong-date",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV by Friday and rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Review the CSV.",
+    "section": "action_items",
+    "field": "text",
+    "owner": "Minh",
+    "raw_due_text": "Monday",
+    "accept": false
+  },
+  {
+    "name": "shared-subject-correct-date",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV by Friday and rewrite the authentication service by Monday."
+      }
+    ],
+    "claim": "Review the CSV.",
+    "section": "action_items",
+    "field": "text",
+    "owner": "Minh",
+    "raw_due_text": "Friday",
+    "accept": true
+  },
+  {
+    "name": "pending-alone-not-decision",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Production approval is pending."
+      }
+    ],
+    "claim": "Production is not approved.",
+    "section": "decisions",
+    "field": "text",
+    "accept": false
+  },
+  {
+    "name": "current-fact-not-proposal",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds.",
+    "claim": "I suggest the current timeout is 90 seconds.",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "question-not-supported-fact",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 seconds.",
+    "claim": "Timeout is 90 seconds?",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "promise-with-question-tag",
+    "group": "task",
+    "kind": "suggestion",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Minh",
+        "text": "I will review the CSV."
+      }
+    ],
+    "claim": "I will rewrite the authentication service, okay?",
+    "field": "reply_en",
+    "accept": false
+  },
+  {
+    "name": "question-not-confirmed-action",
+    "group": "decision",
+    "kind": "report",
+    "speech": [
+      {
+        "id": "s1",
+        "speaker": "Alex",
+        "text": "Can you review the CSV?"
+      }
+    ],
+    "claim": "Who will review the CSV?",
+    "section": "action_items",
+    "field": "text",
+    "accept": false
+  },
+  {
+    "name": "cannot-be-value",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout cannot be 90 seconds.",
+    "claim": "Timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "negative-before-attribute",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Not a timeout of 90 seconds.",
+    "claim": "Timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "retain-upper-bound",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout must not exceed 15 seconds.",
+    "claim": "Timeout is at most 15 seconds.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "drop-upper-bound",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout must not exceed 15 seconds.",
+    "claim": "Timeout is 15 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "tentative-numeric",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Maybe timeout is 15 seconds.",
+    "claim": "Timeout is 15 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "alternative-values",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Timeout is 15 or 90 seconds.",
+    "claim": "Timeout is 90 seconds.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "binary-size-normalization",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Upload limit is 2 MiB.",
+    "claim": "Upload limit is 2097152 bytes.",
+    "field": "finding",
+    "accept": true
+  },
+  {
+    "name": "binary-not-decimal",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Upload limit is 2 MiB.",
+    "claim": "Upload limit is 2 MB.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "unnamed-http-value",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "Recorded value is 403.",
+    "claim": "HTTP status is 403.",
+    "field": "finding",
+    "accept": false
+  },
+  {
+    "name": "explicit-http-value",
+    "group": "numeric",
+    "kind": "suggestion",
+    "source": "HTTP status is 403.",
+    "claim": "HTTP status is 403.",
+    "field": "finding",
+    "accept": true
+  }
+]

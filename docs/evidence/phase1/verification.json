@@ -1,0 +1,123 @@
+{
+  "created_at": "2026-10-18T09:54:30.709248+00:00",
+  "client_date": "2026-10-18",
+  "client_timezone": "America/Los_Angeles",
+  "base_commit": "cd6b79f876a6d3e00f26801dacfebb10bb87cbfb",
+  "starting_branch": "main",
+  "starting_working_tree": "clean",
+  "branch": "codex/phase1-correctness",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)]",
+    "node": "v22.20.0"
+  },
+  "checks": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q --junitxml=docs/evidence/phase1/baseline-backend.xml",
+      "stage": "baseline",
+      "exit_code": 0,
+      "evidence": "baseline-backend.xml",
+      "tests": 91,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "command": "node ../node_modules/vitest/vitest.mjs run --maxWorkers=1 --minWorkers=1 --reporter=default --reporter=json --outputFile=../docs/evidence/phase1/baseline-frontend.json",
+      "cwd": "extension",
+      "stage": "baseline",
+      "exit_code": 0,
+      "evidence": "baseline-frontend.json",
+      "tests": 13
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests/test_phase1_semantics.py backend/tests/test_phase1_sessions.py::test_http_interrupted_resume_cannot_steal_active_slot -q --junitxml=docs/evidence/phase1/before-fixes.xml",
+      "stage": "before fixes",
+      "exit_code": 1,
+      "expected_failure": true,
+      "evidence": "before-fixes.xml",
+      "tests": 4,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q --junitxml=docs/evidence/phase1/backend-final.xml",
+      "stage": "after fixes",
+      "exit_code": 0,
+      "evidence": "backend-final.xml",
+      "tests": 219,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests/test_phase1_sessions.py -q --junitxml=docs/evidence/phase1/sessions-final.xml",
+      "stage": "binding/transcript preservation recheck",
+      "exit_code": 0,
+      "evidence": "sessions-final.xml",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "command": "node ../node_modules/vitest/vitest.mjs run --maxWorkers=1 --minWorkers=1 --reporter=default --reporter=json --outputFile=../docs/evidence/phase1/frontend-final.json",
+      "cwd": "extension",
+      "stage": "after fixes",
+      "exit_code": 0,
+      "evidence": "frontend-final.json",
+      "tests": 13,
+      "failures": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "stage": "after fixes",
+      "exit_code": 0,
+      "evidence": "typecheck.log"
+    },
+    {
+      "command": "npm run build",
+      "stage": "after fixes",
+      "exit_code": 0,
+      "evidence": "build.log"
+    },
+    {
+      "command": "npm run contracts",
+      "stage": "after fixes",
+      "exit_code": 0,
+      "evidence": "contracts-final.log"
+    },
+    {
+      "command": ".venv/Scripts/python.exe scripts/evaluate_phase1.py",
+      "stage": "after fixes",
+      "exit_code": 0,
+      "evidence": "semantic-review.json",
+      "cases": 82,
+      "result": "PASS"
+    },
+    {
+      "command": "npx playwright test --reporter=list,json --output=test-results/phase1-final",
+      "environment_overrides": {
+        "MEET_E2E_EVIDENCE_DIR": "docs/evidence/phase1/browser-final",
+        "PLAYWRIGHT_JSON_OUTPUT_FILE": "docs/evidence/phase1/browser-final-results.json"
+      },
+      "stage": "after fixes",
+      "exit_code": 0,
+      "evidence": "browser-final-results.json",
+      "passed": 3,
+      "failures": 0
+    }
+  ],
+  "baseline_not_run": [
+    "typecheck",
+    "extension build",
+    "browser E2E",
+    "contract checks"
+  ],
+  "paid_provider_calls": 0,
+  "real_meetings_created": 0,
+  "outbound_messages_sent": 0,
+  "result": "PASS within declared phase1 scope",
+  "limitations": "No real-provider quality/latency, Meet live, long meeting or clean Windows certification. Intermediate failures kept in separate artifacts."
+}

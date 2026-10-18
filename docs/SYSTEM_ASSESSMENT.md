@@ -1,5 +1,13 @@
 # Đánh giá hệ thống hiện tại
 
+## Trạng thái sau giai đoạn 1
+
+Đã đóng bất biến phiên và ba probe sai nghĩa gốc **trong phạm vi guard có cấu trúc/alias đã kiểm thử**. Kết quả A–E, 219 backend tests và 82 fixture positive/negative ở [PHASE1_REPORT.md](PHASE1_REPORT.md); [evidence mới](evidence/phase1/semantic-review.json) giữ riêng khỏi các probe trước sửa. Không coi đây là xác minh ngữ nghĩa tổng quát hoặc MVP VERIFIED.
+
+Source hiện kiểm tra số theo thuộc tính/đơn vị/phủ định/điều kiện, task theo đúng hành động/đối tượng/người nhận, và confirmation theo đúng mệnh đề/môi trường; áp dụng trong pipeline và repair, cả summary/item và hai trường ngôn ngữ. Những phát hiện phía dưới là lịch sử trước sửa, không phải kết luận hiện tại. Meet thật và các gate vận hành vẫn còn mở.
+
+## Đánh giá trước giai đoạn 1 — lịch sử
+
 Kết luận: phù hợp để bắt đầu thử nghiệm có giám sát; chưa đủ bằng chứng để nghiệm thu sử dụng thực tế. Phần lõi đã triển khai và có kiểm tra, nhưng đầu vào Meet thật chưa được xác minh và validator chưa xác minh toàn bộ quan hệ giữa lời khẳng định và bằng chứng.
 
 ## Kiểm tra trong lượt đánh giá này

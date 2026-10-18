@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib,json,re,platform,xml.etree.ElementTree as ET
 root=Path(__file__).resolve().parents[1];docs=root/'docs';spec=docs/'spec'
+phase1 = (docs/'evidence/phase1/semantic-review.json').exists()
 live_path=docs/'evidence/live-provider-review.json'
 live=json.loads(live_path.read_text('utf8')) if live_path.exists() else None
 live_cases={c['name']:c for c in live['cases']} if live else {}
@@ -36,6 +37,8 @@ for task in tasks:
     if task[0]=='T-027' and extended:status='PARTIAL · 6 mẫu ban đầu + 10 mẫu mở rộng; report synthetic 43 turns/2 map thật pass. Fault live/corpus thật/latency dài hạn còn chờ. Xem EXTENDED_LIVE_REPORT.'
     if task[0]=='T-028':status='IMPLEMENTED · registry/contract/evidence QA; release live gate còn mở'
     rows.append(f'| {task[0]} | {task[3]} | {status} |')
+if phase1:
+    rows[2]='Cập nhật giai đoạn 1: 2026-10-18 · baseline bàn giao 2026-10-17 · Windows local. Spec gốc giữ nguyên; live gate chưa đóng.'
 (docs/'IMPLEMENTATION_STATUS.md').write_text('\n'.join(rows)+'\n',encoding='utf8')
 if (docs/'RESPONSE_ROUTING.md').exists():
     with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
@@ -90,10 +93,10 @@ evidence={
  'SCP-01':('Manifest/config inspection + runtime','backend-tests.xml; e2e-results.json','Chỉ Meet captions, không audio permissions/tools/SQL execution; snapshot có nhãn.'),
  'DOC-01':('Documentation/contract QA','documentation-qa.json; backend-tests.xml; extension-tests.json; e2e-results.json','30 REQ/28 tasks/46 checks được nối; PASS có evidence; live tách NOT TESTED.')}
 assert set(evidence)=={c[0] for c in checks}
-backend=ET.parse(docs/'evidence/backend-tests.xml').getroot();suite=backend.find('testsuite') if backend.tag=='testsuites' else backend
-front=json.loads((docs/'evidence/extension-tests.json').read_text('utf8'))
+backend=ET.parse(docs/('evidence/phase1/backend-final.xml' if phase1 else 'evidence/backend-tests.xml')).getroot();suite=backend.find('testsuite') if backend.tag=='testsuites' else backend
+front=json.loads((docs/('evidence/phase1/frontend-final.json' if phase1 else 'evidence/extension-tests.json')).read_text('utf8'))
 keyword=json.loads((docs/'evidence/retrieval-keyword.json').read_text('utf8'));hybrid=json.loads((docs/'evidence/retrieval-hybrid.json').read_text('utf8'))
-capture=json.loads((docs/'evidence/capture-fixture.json').read_text('utf8'))
+capture=json.loads((docs/('evidence/phase1/browser-final/capture-fixture.json' if phase1 else 'evidence/capture-fixture.json')).read_text('utf8'))
 manifest=root/'extension/public/manifest.json';corpus=root/'fixtures/demo-project.json'
 rows=['# Báo cáo nghiệm thu thực tế','', '**Implementation chạy local, chờ live validation. Không phải MVP VERIFIED.** Ngày bàn giao 2026-10-17; app 0.1.0, adapter meet-calibrated-v1; mã nguồn được quản lý theo commit trong repository.','', '## Môi trường và kết quả','',f'- {keyword["machine"]}; CPU {keyword["cpu"]}; {keyword["logical_cpus"]} logical CPUs. Python {keyword["python"]}, Node 22.20.0, npm 10.9.3; Chromium {capture["browser"]} do Playwright nạp MV3. UI Việt, caption synthetic Anh.',f'- Backend: **{suite.attrib["tests"]} tests**, failures={suite.attrib.get("failures","0")}, errors={suite.attrib.get("errors","0")}; extension unit: **{front["numPassedTests"]} passed**. E2E: xem e2e-results.json (3 cases). Không cộng số test thành số acceptance checks đã nghiệm thu live.',f'- Corpus SHA256: `{hashlib.sha256(corpus.read_bytes()).hexdigest()}`. Manifest SHA256: `{hashlib.sha256(manifest.read_bytes()).hexdigest()}`.', '- Dependency locks: package-lock.json, backend/requirements.lock và requirements-semantic.lock. Migration 001, FK/WAL/FTS5; persistent và RAM mode thử riêng.','', '## Số đo','', '| Mode / phép đo | Corpus / n | Median | p95 | Giới hạn |','| --- | --- | --- | --- | --- |',f'| FTS5 retrieval | 12 nguồn/12 chunks; n={keyword["n"]} | {keyword["median_ms"]:.3f} ms | {keyword["p95_ms"]:.3f} ms | 10/10 source top-5 trên corpus synthetic |',f'| E5 hybrid CPU | 12 nguồn/12 chunks; n={hybrid["n"]} | {hybrid["median_ms"]:.3f} ms | {hybrid["p95_ms"]:.3f} ms | 10/10 source top-5; revision {hybrid["model_revision"][:12]} |',f'| Adapter event → ACK | DOM synthetic + worker thật; n={capture["n"]} | {capture["median_ms"]:.3f} ms | {capture["p95_ms"]:.3f} ms | Mẫu rất ít; percentile không đủ tin cậy cho SLA |', '| Provider/report live | Chưa có key | Unknown | Unknown | Không claim mục tiêu 2–5 s hoặc token/billing thật |','', '## Check theo từng mode','', '| Check | Environment/mode | Result | Evidence trong docs/evidence | Actual result / pending |','| --- | --- | --- | --- | --- |']
 for check in checks:
@@ -137,5 +140,27 @@ if speed_path.exists():
 
 if (docs/'RESPONSE_ROUTING.md').exists():
     text+='\nResponse routing: backend/UI và API preview đã triển khai; xem [RESPONSE_ROUTING.md](RESPONSE_ROUTING.md) và [offline routing review](evidence/routing-review.json). Bộ quy tắc chưa có accuracy corpus thật; số đo latency/provider phía trên là lịch sử trước routing. Các lỗ hổng sai nghĩa trong [SYSTEM_ASSESSMENT.md](SYSTEM_ASSESSMENT.md) vẫn mở.\n'
+
+if phase1:
+    text=text.replace('Ngày bàn giao 2026-10-17;', 'Cập nhật giai đoạn 1 2026-10-18; baseline bàn giao 2026-10-17;')
+    paths = {
+        'backend-tests.xml':'phase1/backend-final.xml',
+        'extension-tests.json':'phase1/frontend-final.json',
+        'e2e-results.json':'phase1/browser-final-results.json',
+        'documentation-qa.json':'phase1/documentation-qa.json',
+        'capture-fixture.json':'phase1/browser-final/capture-fixture.json',
+        'runtime-metrics-fixture.json':'phase1/browser-final/runtime-metrics-fixture.json',
+        'projects.png':'phase1/browser-final/projects.png',
+        'report.png':'phase1/browser-final/report.png',
+        'live-pinned.png':'phase1/browser-final/live-pinned.png',
+        'sidepanel-320.png':'phase1/browser-final/sidepanel-320.png',
+    }
+    for old,new in paths.items():
+        text=text.replace(old,new)
+    text=text.replace('Các lỗ hổng sai nghĩa trong [SYSTEM_ASSESSMENT.md](SYSTEM_ASSESSMENT.md) vẫn mở.',
+        'Ba probe gốc đã bị chặn trong phạm vi giai đoạn 1; chưa có semantic entailment tổng quát.')
+    text+='\nGiai đoạn 1: [kết quả A–E và giới hạn](PHASE1_REPORT.md); evidence cũ giữ nguyên, các check automated ở bảng trên dùng evidence mới. Provider/latency trước sửa là lịch sử. Không phải MVP VERIFIED.\n'
+    with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
+        stream.write('\nGiai đoạn 1: A–E PASS trong phạm vi guard đã thử, không mở rộng phạm vi sản phẩm. REQ-01/05/13/14/19/20/21/28/30 có thêm regression tests cho slot phiên, claim và pipeline. Xem [PHASE1_REPORT.md](PHASE1_REPORT.md).\n')
 (docs/'ACCEPTANCE_REPORT.md').write_text(text+'\n',encoding='utf8')
 print('Generated traceability, task status and mode-specific acceptance report')

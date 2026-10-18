@@ -1,6 +1,7 @@
 from pathlib import Path
 import json,re,xml.etree.ElementTree as ET
 root=Path(__file__).resolve().parents[1];docs=root/'docs'
+phase1=(docs/'evidence/phase1/semantic-review.json').exists()
 req=set(re.findall(r'^\| (REQ-\d+)',(docs/'spec/REQUIREMENTS.md').read_text('utf8'),re.M))
 tasks=set(re.findall(r'^\| (T-\d+)',(docs/'spec/IMPLEMENTATION_PLAN.md').read_text('utf8'),re.M))
 checks=set(re.findall(r'^\| ([A-Z]+-\d+)',(docs/'spec/ACCEPTANCE_SPEC.md').read_text('utf8'),re.M))
@@ -20,11 +21,11 @@ assert not bad,bad
 for line in report.splitlines():
     if line.startswith('| ') and ' | PASS | ' in line:
         files=line.split('|')[4].strip().split('; ')
-        assert all((docs/'evidence'/file).exists() for file in files if file!='documentation-qa.json'),line
-tree=ET.parse(docs/'evidence/backend-tests.xml').getroot()
+        assert all((docs/'evidence'/file).exists() for file in files if file.split('/')[-1]!='documentation-qa.json'),line
+tree=ET.parse(docs/('evidence/phase1/backend-final.xml' if phase1 else 'evidence/backend-tests.xml')).getroot()
 assert all(int(s.get('failures','0'))==0 and int(s.get('errors','0'))==0 for s in tree.iter('testsuite'))
-front=json.loads((docs/'evidence/extension-tests.json').read_text('utf8'));assert front['numFailedTests']==0 and front['numPassedTests']>0
-browser=json.loads((docs/'evidence/e2e-results.json').read_text('utf8'));assert browser['stats']['unexpected']==0 and browser['stats']['expected']==3
+front=json.loads((docs/('evidence/phase1/frontend-final.json' if phase1 else 'evidence/extension-tests.json')).read_text('utf8'));assert front['numFailedTests']==0 and front['numPassedTests']>0
+browser=json.loads((docs/('evidence/phase1/browser-final-results.json' if phase1 else 'evidence/e2e-results.json')).read_text('utf8'));assert browser['stats']['unexpected']==0 and browser['stats']['expected']==3
 live_review=docs/'evidence/live-provider-review.json'
 if live_review.exists():
     live=json.loads(live_review.read_text('utf8'))
@@ -52,4 +53,21 @@ if routing_review.exists():
     assert routing['classifier_sha256']==hashlib.sha256((root/'backend/app/routing.py').read_text('utf8').encode('utf8')).hexdigest()
     assert routing['fixture_sha256']==hashlib.sha256((root/'fixtures/routing-scenarios.json').read_text('utf8').encode('utf8')).hexdigest()
     record['routing']='Local synthetic fixtures pass; not real-meeting accuracy or new provider latency'
-(docs/'evidence/documentation-qa.json').write_text(json.dumps(record,indent=2),encoding='utf8');print(json.dumps(record))
+
+if phase1:
+    import hashlib
+    phase=json.loads((docs/'evidence/phase1/semantic-review.json').read_text('utf8'))
+    assert phase['result']=='PASS' and all(p['blocked'] for p in phase['original_probes'])
+    assert all(g['false_accepts']==g['false_rejects']==0 for g in phase['groups'].values())
+    for path,expected in phase['source_hashes'].items():
+        assert hashlib.sha256((root/path).read_text('utf8').encode('utf8')).hexdigest()==expected,path
+    record['phase1']='PASS within declared grammar/alias scope; not general entailment'
+    record['latency_target']='Historical pre-phase1 benchmark; current provider latency NOT TESTED'
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument('--output')
+args=parser.parse_args()
+output=root/args.output if args.output else docs/('evidence/phase1/documentation-qa.json' if phase1 else 'evidence/documentation-qa.json')
+output.parent.mkdir(parents=True,exist_ok=True)
+output.write_text(json.dumps(record,indent=2),encoding='utf8')
+print(json.dumps(record))

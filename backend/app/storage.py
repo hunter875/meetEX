@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 import sqlite3
 import uuid
+from threading import RLock
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from .config import DEFAULTS
@@ -14,6 +15,7 @@ def decoded(rows): return [json.loads(row['payload']) for row in rows]
 
 class Storage:
     def __init__(self, data_dir: Path):
+        self.session_lock = RLock()
         data_dir.mkdir(parents=True,exist_ok=True)
         self.disk = self.connect(str(data_dir/'copilot.sqlite3'))
         self.ram = self.connect(':memory:')
@@ -79,41 +81,72 @@ class Storage:
     def meetings(self):
         return sorted(decoded(self.disk.execute('SELECT payload FROM meetings'))+decoded(self.ram.execute('SELECT payload FROM meetings')),key=lambda m:m['started_at'],reverse=True)
     def save_meeting(self,db,m): db.execute('UPDATE meetings SET payload=? WHERE id=?',(dumps(m),m['id']))
-    def create_meeting(self,body):
-        p=self.project(body['project_id'])
-        if any(m['status'] in ('active','paused') for m in self.meetings()):raise AppError('ACTIVE_MEETING','End the active meeting before starting another',409)
-        m=dict(id=uid(),status='active',started_at=now(),ended_at=None,transcript_revision=0,capture_status='starting',last_caption_at=None,binding=None,self_speaker=None,confirmed_segment_ids=[],auto_mode=self.settings()['auto_mode'],epochs={},latest_request=None,pause_from=None,**body)
-        db=self.ram if m['persistence_mode']=='memory' else self.disk
-        with db:
-            if db is self.ram:db.execute('INSERT OR IGNORE INTO projects VALUES(?,?,?,?,?)',(p['id'],p['name'],p['description'],dumps(p['glossary']),p['created_at']))
-            db.execute('INSERT INTO meetings VALUES(?,?,?)',(m['id'],m['project_id'],dumps(m)))
-        return m
+    def ensure_session_slot(self, exclude_id=None):
+        """Caller holds session_lock across this check and the state commit."""
+        if any(m['id'] != exclude_id and m['status'] in ('active', 'paused')
+               for m in self.meetings()):
+            raise AppError('ACTIVE_MEETING', 'End the active or paused meeting before starting/resuming another', 409)
+
+    def create_meeting(self, body):
+        with self.session_lock:
+            project = self.project(body['project_id'])
+            self.ensure_session_slot()
+            meeting = dict(
+                id=uid(), status='active', started_at=now(), ended_at=None,
+                transcript_revision=0, capture_status='starting', last_caption_at=None,
+                binding=None, self_speaker=None, confirmed_segment_ids=[],
+                auto_mode=self.settings()['auto_mode'], epochs={}, latest_request=None,
+                pause_from=None, **body)
+            db = self.ram if meeting['persistence_mode'] == 'memory' else self.disk
+            with db:
+                if db is self.ram:
+                    db.execute('INSERT OR IGNORE INTO projects VALUES(?,?,?,?,?)', (
+                        project['id'], project['name'], project['description'],
+                        dumps(project['glossary']), project['created_at']))
+                db.execute('INSERT INTO meetings VALUES(?,?,?)', (
+                    meeting['id'], meeting['project_id'], dumps(meeting)))
+            return meeting
     def transcript(self,id):return decoded(self.db_for(id).execute('SELECT payload FROM caption_segments WHERE meeting_id=? ORDER BY rowid',(id,)))
     def gap(self,db,id,reason,start=None,end=None,certainty='certain'):
         g=dict(id=uid(),reason=reason,from_at=start or now(),to_at=end,certainty=certainty)
         db.execute('INSERT INTO capture_gaps VALUES(?,?,?)',(g['id'],id,dumps(g)));return g
     def gaps(self,id):return decoded(self.db_for(id).execute('SELECT payload FROM capture_gaps WHERE meeting_id=?',(id,)))
-    def control(self,id,body):
-        db=self.db_for(id);m=self.meeting(id);action=body['action']
-        old=db.execute('SELECT response FROM controls WHERE meeting_id=? AND key=?',(id,body['idempotency_key'])).fetchone()
-        if old:return json.loads(old[0])
-        with db:
-            if m['status']=='ended' and action=='end':pass
-            elif action=='pause' and m['status']=='active':m.update(status='paused',pause_from=now(),capture_status='paused')
-            elif action=='resume' and m['status'] in ('paused','interrupted'):
-                self.gap(db,id,'pause' if m['status']=='paused' else 'interrupted',m['pause_from'] or m['last_caption_at'] or now(),now())
-                m.update(status='active',pause_from=None,capture_status='starting')
-            elif action=='end' and m['status'] in ('active','paused','interrupted'):
-                if body.get('reason')=='end_flush_timeout':self.gap(db,id,'end_flush_timeout',certainty='possible')
-                if m['pause_from']:self.gap(db,id,'pause',m['pause_from'],now())
-                m.update(status='ended',ended_at=now(),capture_status='meeting_left')
-            elif action=='interrupt' and m['status'] in ('active','paused'):
-                self.gap(db,id,body.get('reason') or 'tab_closed',certainty='possible')
-                m.update(status='interrupted',capture_status='disconnected')
-            else:raise AppError('INVALID_STATE',f'Cannot {action} a {m["status"]} meeting',409)
-            self.save_meeting(db,m)
-            db.execute('INSERT INTO controls VALUES(?,?,?)',(id,body['idempotency_key'],dumps(m)))
-        return m
+    def control(self, id, body):
+        # One process/worker: local and RAM share the same state-transition lock.
+        # Replays return the recorded response without reapplying any transition.
+        with self.session_lock:
+            db = self.db_for(id)
+            meeting = self.meeting(id)
+            action = body['action']
+            old = db.execute('SELECT response FROM controls WHERE meeting_id=? AND key=?',
+                             (id, body['idempotency_key'])).fetchone()
+            if old:
+                return json.loads(old[0])
+            if action == 'resume' and meeting['status'] in ('paused', 'interrupted'):
+                self.ensure_session_slot(exclude_id=id)
+            with db:
+                if meeting['status'] == 'ended' and action == 'end':
+                    pass
+                elif action == 'pause' and meeting['status'] == 'active':
+                    meeting.update(status='paused', pause_from=now(), capture_status='paused')
+                elif action == 'resume' and meeting['status'] in ('paused', 'interrupted'):
+                    self.gap(db, id, 'pause' if meeting['status'] == 'paused' else 'interrupted',
+                             meeting['pause_from'] or meeting['last_caption_at'] or now(), now())
+                    meeting.update(status='active', pause_from=None, capture_status='starting')
+                elif action == 'end' and meeting['status'] in ('active', 'paused', 'interrupted'):
+                    if body.get('reason') == 'end_flush_timeout':
+                        self.gap(db, id, 'end_flush_timeout', certainty='possible')
+                    if meeting['pause_from']:
+                        self.gap(db, id, 'pause', meeting['pause_from'], now())
+                    meeting.update(status='ended', ended_at=now(), capture_status='meeting_left')
+                elif action == 'interrupt' and meeting['status'] in ('active', 'paused'):
+                    self.gap(db, id, body.get('reason') or 'tab_closed', certainty='possible')
+                    meeting.update(status='interrupted', capture_status='disconnected')
+                else:
+                    raise AppError('INVALID_STATE', f'Cannot {action} a {meeting["status"]} meeting', 409)
+                self.save_meeting(db, meeting)
+                db.execute('INSERT INTO controls VALUES(?,?,?)', (id, body['idempotency_key'], dumps(meeting)))
+            return meeting
     def apply_caption(self,id,event):
         db=self.db_for(id);m=self.meeting(id);e=event
         prior=db.execute('SELECT ack FROM applied_events WHERE meeting_id=? AND event_id=?',(id,e['event_id'])).fetchone()

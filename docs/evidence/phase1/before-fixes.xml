@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="0.872" timestamp="2026-10-18T00:35:45.538877-07:00" hostname="hunter875"><testcase classname="backend.tests.test_phase1_semantics" name="test_original_false_claim_is_rejected[unrelated_first_person_commitment]" time="0.004"><failure message="Failed: DID NOT RAISE &lt;class 'app.errors.AppError'&gt;">probe = {'error': None, 'known_false_or_unsupported': 'Only CSV formatting was accepted; rewriting authentication was not acce...ent', 'payload': {'clarification_en': '', 'evidence_status': 'missing', 'findings': [], 'input_revision': 1, ...}, ...}
+
+    @pytest.mark.parametrize('probe', PROBES, ids=[p['name'] for p in PROBES])
+    def test_original_false_claim_is_rejected(probe):
+&gt;       with pytest.raises(AppError):
+             ^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'app.errors.AppError'&gt;
+
+backend\tests\test_phase1_semantics.py:15: Failed</failure></testcase><testcase classname="backend.tests.test_phase1_semantics" name="test_original_false_claim_is_rejected[false_fact_with_valid_citation]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'app.errors.AppError'&gt;">probe = {'error': None, 'known_false_or_unsupported': 'Cited source says 15 seconds; generated finding says 90 seconds.', 'nam...d', 'findings': [{'source_ids': ['c1'], 'text_vi': 'Approved timeout is 90 seconds.'}], 'input_revision': 1, ...}, ...}
+
+    @pytest.mark.parametrize('probe', PROBES, ids=[p['name'] for p in PROBES])
+    def test_original_false_claim_is_rejected(probe):
+&gt;       with pytest.raises(AppError):
+             ^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'app.errors.AppError'&gt;
+
+backend\tests\test_phase1_semantics.py:15: Failed</failure></testcase><testcase classname="backend.tests.test_phase1_semantics" name="test_original_false_claim_is_rejected[false_decision_from_unrelated_confirmation]" time="0.004"><failure message="Failed: DID NOT RAISE &lt;class 'app.errors.AppError'&gt;">probe = {'error': None, 'known_false_or_unsupported': 'Confirmed refers to staging; production approval remains pending.', 'na...': [{'confirmation': 'confirmed', 'evidence_segment_ids': ['s1'], 'id': 'r1', 'normalized_due': None, ...}], ...}, ...}
+
+    @pytest.mark.parametrize('probe', PROBES, ids=[p['name'] for p in PROBES])
+    def test_original_false_claim_is_rejected(probe):
+&gt;       with pytest.raises(AppError):
+             ^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'app.errors.AppError'&gt;
+
+backend\tests\test_phase1_semantics.py:15: Failed</failure></testcase><testcase classname="backend.tests.test_phase1_sessions" name="test_http_interrupted_resume_cannot_steal_active_slot" time="0.148"><failure message="AssertionError: {&quot;id&quot;:&quot;5dee2be3-40f2-4b8a-88c4-cd6de1b13a97&quot;,&quot;status&quot;:&quot;active&quot;,&quot;started_at&quot;:&quot;2026-10-18T07:35:46.360425+00:00&quot;,&quot;ended_at&quot;:null,&quot;transcript_revision&quot;:0,&quot;capture_status&quot;:&quot;starting&quot;,&quot;last_caption_at&quot;:null,&quot;binding&quot;:null,&quot;self_speaker&quot;:null,&quot;confirmed_segment_ids&quot;:[],&quot;auto_mode&quot;:true,&quot;epochs&quot;:{},&quot;latest_request&quot;:null,&quot;pause_from&quot;:null,&quot;project_id&quot;:&quot;8ae8703a-8309-4c06-bf3d-03eee8d35280&quot;,&quot;title&quot;:&quot;Test&quot;,&quot;timezone&quot;:&quot;America/Los_Angeles&quot;,&quot;persistence_mode&quot;:&quot;local&quot;,&quot;demo&quot;:false,&quot;meeting_key&quot;:null}&#10;assert 200 == 409&#10; +  where 200 = &lt;Response [200 OK]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x000002707F752CF0&gt;
+
+    def test_http_interrupted_resume_cannot_steal_active_slot(client):
+        project=client.post('/api/v1/projects', json={'name':'Phase 1'}).json()
+        def start(mode):
+            response=client.post('/api/v1/meetings',json=dict(project_id=project['id'],title='Test',persistence_mode=mode))
+            assert response.status_code==201
+            return response.json()['id']
+        a=start('local')
+        assert client.post(f'/api/v1/meetings/{a}/control',json={'action':'interrupt','idempotency_key':'interrupt'}).status_code==200
+        b=start('memory')
+        before_a=client.get(f'/api/v1/meetings/{a}').json()
+        before_b=client.get(f'/api/v1/meetings/{b}').json()
+        response=client.post(f'/api/v1/meetings/{a}/control',json={'action':'resume','idempotency_key':'resume'})
+&gt;       assert response.status_code==409, response.text
+E       AssertionError: {"id":"5dee2be3-40f2-4b8a-88c4-cd6de1b13a97","status":"active","started_at":"2026-10-18T07:35:46.360425+00:00","ended_at":null,"transcript_revision":0,"capture_status":"starting","last_caption_at":null,"binding":null,"self_speaker":null,"confirmed_segment_ids":[],"auto_mode":true,"epochs":{},"latest_request":null,"pause_from":null,"project_id":"8ae8703a-8309-4c06-bf3d-03eee8d35280","title":"Test","timezone":"America/Los_Angeles","persistence_mode":"local","demo":false,"meeting_key":null}
+E       assert 200 == 409
+E        +  where 200 = &lt;Response [200 OK]&gt;.status_code
+
+backend\tests\test_phase1_sessions.py:29: AssertionError</failure></testcase></testsuite></testsuites>

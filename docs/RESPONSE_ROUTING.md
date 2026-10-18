@@ -37,7 +37,7 @@ Mục tiêu sau khi có context sẵn: fast 1–2 s, explain 2–4 s, deep 5–1
 
 Số đo 1,498/1,520 giây trước đây thuộc build trước routing, không chứng minh luồng mới đạt mục tiêu. Deep vẫn dùng output budget/timeout live hiện có và lời nói 1–3 câu, chưa là phân tích dài đầy đủ. Khi thiếu self_speaker và nguồn, quy tắc hỏi trung lập vẫn ưu tiên hơn yêu cầu đưa phương án.
 
-Đây là bộ quy tắc Anh–Việt, chưa hiệu chỉnh trên corpus họp thực tế. Có thể sai với câu gián tiếp, trích dẫn, cách nói mới hoặc code-switching. `available` chỉ là có excerpt, không chứng minh đủ bằng chứng; `conflicting` mới nhận metadata/tín hiệu rõ, chưa tìm được mọi mâu thuẫn giữa nguồn. Không trả confidence phần trăm chưa hiệu chuẩn. Không phát hiện kết thúc lượt bằng audio. Chưa giải quyết toàn bộ ba lỗ hổng trong SYSTEM_ASSESSMENT.
+Đây là bộ quy tắc Anh–Việt, chưa hiệu chỉnh trên corpus họp thực tế. Có thể sai với câu gián tiếp, trích dẫn, cách nói mới hoặc code-switching. `available` chỉ là có excerpt, không chứng minh đủ bằng chứng; `conflicting` mới nhận metadata/tín hiệu rõ, chưa tìm được mọi mâu thuẫn giữa nguồn. Không trả confidence phần trăm chưa hiệu chuẩn. Không phát hiện kết thúc lượt bằng audio. Guard giai đoạn 1 được áp dụng cho mọi luồng, gồm repair; ba probe gốc đã bị chặn trong [phạm vi hỗ trợ](PHASE1_REPORT.md). Routing không vô hiệu hóa guard, không tạo bộ xác minh ngữ nghĩa tổng quát.
 
 ## Kiểm tra
 

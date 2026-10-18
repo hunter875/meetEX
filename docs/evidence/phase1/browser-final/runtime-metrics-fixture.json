@@ -1,0 +1,86 @@
+{
+  "classifier": {
+    "n": 12,
+    "median_ms": 0.16300001880154014,
+    "p95_ms": 8.782199991401285,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider_by_route": {
+    "fast": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "explain": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "deep": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "clarify": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    }
+  },
+  "request_count": 0,
+  "known_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "unknown_usage_count": 0,
+  "estimated_cost": null,
+  "price_date": null,
+  "cost_note": "Estimate from configured per-million token prices, not a bill.",
+  "capture_apply": {
+    "n": 6,
+    "median_ms": 1.874100009445101,
+    "p95_ms": 2.4405000149272382,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "retrieval": {
+    "n": 12,
+    "median_ms": 0.7460000342689455,
+    "p95_ms": 2.015499980188906,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider": {
+    "n": 0,
+    "median_ms": null,
+    "p95_ms": null,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider_first_token": {
+    "n": 0,
+    "median_ms": null,
+    "p95_ms": null,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "backend_stable_to_request": {
+    "n": 3,
+    "median_ms": 2008.8010000181384,
+    "p95_ms": 4177.013900014572,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "backend_stable_to_validated": {
+    "n": 3,
+    "median_ms": 2021.602900000289,
+    "p95_ms": 4182.246599986684,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "report": {
+    "n": 1,
+    "median_ms": 25.321000022813678,
+    "p95_ms": 25.321000022813678,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "records": []
+}

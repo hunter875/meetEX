@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="21" time="4.060" timestamp="2026-10-18T00:48:16.325408-07:00" hostname="hunter875"><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-False-fast]" time="0.188"><failure message="AssertionError: {&quot;source_id&quot;:&quot;78caecfb-d122-45d9-8c62-4b2d3d93f62a&quot;,&quot;job_id&quot;:&quot;667cc396-c3d3-4c16-9dfd-25c71cd7398e&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;667cc396-c3d3-4c16-9dfd-25c71cd7398e&quot;,&quot;source_id&quot;:&quot;78caecfb-d122-45d9-8c62-4b2d3d93f62a&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFC1EF90&gt;
+mode = 'fast', repair = False, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"78caecfb-d122-45d9-8c62-4b2d3d93f62a","job_id":"667cc396-c3d3-4c16-9dfd-25c71cd7398e","job":{"id":"667cc396-c3d3-4c16-9dfd-25c71cd7398e","source_id":"78caecfb-d122-45d9-8c62-4b2d3d93f62a","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-False-explain]" time="0.151"><failure message="AssertionError: {&quot;source_id&quot;:&quot;85618266-6449-412e-9262-0acbf0620e04&quot;,&quot;job_id&quot;:&quot;51fbbbda-72b1-48a7-8e26-b48144b008be&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;51fbbbda-72b1-48a7-8e26-b48144b008be&quot;,&quot;source_id&quot;:&quot;85618266-6449-412e-9262-0acbf0620e04&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFD5CF50&gt;
+mode = 'explain', repair = False, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"85618266-6449-412e-9262-0acbf0620e04","job_id":"51fbbbda-72b1-48a7-8e26-b48144b008be","job":{"id":"51fbbbda-72b1-48a7-8e26-b48144b008be","source_id":"85618266-6449-412e-9262-0acbf0620e04","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-False-deep]" time="0.166"><failure message="AssertionError: {&quot;source_id&quot;:&quot;d1b0bfff-c5c0-4aaa-8711-a50977b85249&quot;,&quot;job_id&quot;:&quot;6e03f098-2018-4453-a5f2-522481837148&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;6e03f098-2018-4453-a5f2-522481837148&quot;,&quot;source_id&quot;:&quot;d1b0bfff-c5c0-4aaa-8711-a50977b85249&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFCD1310&gt;
+mode = 'deep', repair = False, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"d1b0bfff-c5c0-4aaa-8711-a50977b85249","job_id":"6e03f098-2018-4453-a5f2-522481837148","job":{"id":"6e03f098-2018-4453-a5f2-522481837148","source_id":"d1b0bfff-c5c0-4aaa-8711-a50977b85249","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-False-clarify]" time="0.173"><failure message="AssertionError: {&quot;source_id&quot;:&quot;b180a711-5760-434e-9fda-ed4942b99d63&quot;,&quot;job_id&quot;:&quot;a7684681-65f1-4b19-93ed-aaa579d70851&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;a7684681-65f1-4b19-93ed-aaa579d70851&quot;,&quot;source_id&quot;:&quot;b180a711-5760-434e-9fda-ed4942b99d63&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFCD8C30&gt;
+mode = 'clarify', repair = False, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"b180a711-5760-434e-9fda-ed4942b99d63","job_id":"a7684681-65f1-4b19-93ed-aaa579d70851","job":{"id":"a7684681-65f1-4b19-93ed-aaa579d70851","source_id":"b180a711-5760-434e-9fda-ed4942b99d63","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-True-fast]" time="0.154"><failure message="AssertionError: {&quot;source_id&quot;:&quot;23c64e3b-72e9-4fdd-84f7-66b90744ba64&quot;,&quot;job_id&quot;:&quot;515b7a1a-70c6-45c1-8c81-d290bdbd9cad&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;515b7a1a-70c6-45c1-8c81-d290bdbd9cad&quot;,&quot;source_id&quot;:&quot;23c64e3b-72e9-4fdd-84f7-66b90744ba64&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFCDA9E0&gt;
+mode = 'fast', repair = True, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"23c64e3b-72e9-4fdd-84f7-66b90744ba64","job_id":"515b7a1a-70c6-45c1-8c81-d290bdbd9cad","job":{"id":"515b7a1a-70c6-45c1-8c81-d290bdbd9cad","source_id":"23c64e3b-72e9-4fdd-84f7-66b90744ba64","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-True-explain]" time="0.152"><failure message="AssertionError: {&quot;source_id&quot;:&quot;d3f49526-f920-4aaf-a1e3-6311c3a1e919&quot;,&quot;job_id&quot;:&quot;a5fe8eda-d130-40c5-8881-d94970a89eff&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;a5fe8eda-d130-40c5-8881-d94970a89eff&quot;,&quot;source_id&quot;:&quot;d3f49526-f920-4aaf-a1e3-6311c3a1e919&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFF32450&gt;
+mode = 'explain', repair = True, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"d3f49526-f920-4aaf-a1e3-6311c3a1e919","job_id":"a5fe8eda-d130-40c5-8881-d94970a89eff","job":{"id":"a5fe8eda-d130-40c5-8881-d94970a89eff","source_id":"d3f49526-f920-4aaf-a1e3-6311c3a1e919","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-True-deep]" time="0.151"><failure message="AssertionError: {&quot;source_id&quot;:&quot;132c6bc7-1c00-45a0-bf94-2134c0dccde2&quot;,&quot;job_id&quot;:&quot;a061906b-2f32-402c-aefc-11084dd3dcd9&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;a061906b-2f32-402c-aefc-11084dd3dcd9&quot;,&quot;source_id&quot;:&quot;132c6bc7-1c00-45a0-bf94-2134c0dccde2&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFD7AAD0&gt;
+mode = 'deep', repair = True, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"132c6bc7-1c00-45a0-bf94-2134c0dccde2","job_id":"a061906b-2f32-402c-aefc-11084dd3dcd9","job":{"id":"a061906b-2f32-402c-aefc-11084dd3dcd9","source_id":"132c6bc7-1c00-45a0-bf94-2134c0dccde2","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[numeric-True-clarify]" time="0.150"><failure message="AssertionError: {&quot;source_id&quot;:&quot;723ab7b6-43fa-4b14-a9d5-a19147acccbb&quot;,&quot;job_id&quot;:&quot;75f0f2fb-f774-4829-a01b-825fe737ee3e&quot;,&quot;job&quot;:{&quot;id&quot;:&quot;75f0f2fb-f774-4829-a01b-825fe737ee3e&quot;,&quot;source_id&quot;:&quot;723ab7b6-43fa-4b14-a9d5-a19147acccbb&quot;,&quot;status&quot;:&quot;ready&quot;,&quot;progress&quot;:100,&quot;error&quot;:null}}&#10;assert 201 == 200&#10; +  where 201 = &lt;Response [201 Created]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x0000018EBFC6E030&gt;
+mode = 'clarify', repair = True, kind = 'numeric'
+
+    @pytest.mark.parametrize('mode',['fast','explain','deep','clarify'])
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('kind',['numeric','task'])
+    def test_suggestion_guards_repair_and_publication_through_http(client,mode,repair,kind):
+        speech=[('Minh','I will review the CSV formatting.'),('Alex','Please restate the accepted work.')]
+        if kind=='numeric':speech=[('Alex','What is the approved timeout?')]
+        project,meeting=real_meeting(client,speech)
+        id=meeting['id']
+        if kind=='numeric':
+            imported=client.post(f'/api/v1/projects/{project["id"]}/sources',json=dict(kind='text',title='Timeout setting',pasted_text='Approved timeout is 15 seconds.'))
+&gt;           assert imported.status_code==200,imported.text
+E           AssertionError: {"source_id":"723ab7b6-43fa-4b14-a9d5-a19147acccbb","job_id":"75f0f2fb-f774-4829-a01b-825fe737ee3e","job":{"id":"75f0f2fb-f774-4829-a01b-825fe737ee3e","source_id":"723ab7b6-43fa-4b14-a9d5-a19147acccbb","status":"ready","progress":100,"error":null}}
+E           assert 201 == 200
+E            +  where 201 = &lt;Response [201 Created]&gt;.status_code
+
+backend\tests\test_phase1_pipeline.py:51: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-False-fast]" time="0.156" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-False-explain]" time="0.139" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-False-deep]" time="0.141" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-False-clarify]" time="0.166" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-True-fast]" time="0.146" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-True-explain]" time="0.150" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-True-deep]" time="0.150" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_suggestion_guards_repair_and_publication_through_http[task-True-clarify]" time="0.149" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_report_repair_preserves_user_version_and_only_publishes_valid_report[summary-False]" time="0.151" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_report_repair_preserves_user_version_and_only_publishes_valid_report[summary-True]" time="0.164" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_report_repair_preserves_user_version_and_only_publishes_valid_report[item-False]" time="0.150" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_report_repair_preserves_user_version_and_only_publishes_valid_report[item-True]" time="0.155" /><testcase classname="backend.tests.test_phase1_pipeline" name="test_final_merge_is_validated_before_save" time="0.083" /></testsuite></testsuites>

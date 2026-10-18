@@ -1,0 +1,19 @@
+
+> meet-copilot@0.1.0 build
+> npm run build -w extension
+
+
+> @meet-copilot/extension@0.1.0 build
+> tsc --noEmit && vite build && node build-content.mjs
+
+vite v7.1.12 building for production...
+transforming...
+✓ 1589 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/dashboard.html              0.35 kB │ gzip:  0.26 kB
+dist/sidepanel.html              0.37 kB │ gzip:  0.28 kB
+dist/assets/main-DhqSzltE.css   24.53 kB │ gzip:  6.29 kB
+dist/background.js              10.91 kB │ gzip:  3.95 kB
+dist/assets/main-BF8CPoyn.js   281.08 kB │ gzip: 84.66 kB
+✓ built in 6.56s

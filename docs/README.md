@@ -13,7 +13,7 @@ Snapshot đưa lên repository private [hunter875/meetEX](https://github.com/hun
 ## Trạng thái và kiểm tra
 
 - [Trạng thái triển khai](IMPLEMENTATION_STATUS.md), [truy vết yêu cầu](TRACEABILITY.md), [báo cáo nghiệm thu](ACCEPTANCE_REPORT.md).
-- Kết quả đã ghi: **91 backend tests, 13 frontend unit tests, 3 browser E2E pass**. E2E dùng MV3/backend thật, DOM Meet synthetic và AI controlled; không thay cho nghiệm thu Meet/provider thật.
+- Kết quả đã ghi: **219 backend tests, 13 frontend unit tests, 3 browser E2E pass**. E2E dùng MV3/backend thật, DOM Meet synthetic và AI controlled; không thay cho nghiệm thu Meet/provider thật.
 - [Response routing](RESPONSE_ROUTING.md): local rules-v1, 5 luồng, preview/lý do, chọn mode thủ công, gate xác minh; [34/34 fixture](evidence/routing-review.json) là phạm vi synthetic, không phải accuracy tổng quát.
 - [Đánh giá hệ thống](SYSTEM_ASSESSMENT.md), [giới hạn](LIMITATIONS.md), [các chức năng ưu tiên tiếp theo](NEXT_PRIORITIES.md).
 
@@ -26,7 +26,7 @@ Snapshot đưa lên repository private [hunter875/meetEX](https://github.com/hun
 
 ## Các phần chưa hoàn thành
 
-Meet thật/Windows sạch/outage thực tế chưa nghiệm thu. Ba lỗ hổng sai nghĩa trong SYSTEM_ASSESSMENT vẫn mở; routing không thay bộ kiểm tra claim. Luồng deep mới dùng prompt trong schema gợi ý, chưa có bảng phương án/trọng số. Chưa có bộ nhớ quyết định có trạng thái thay thế/hủy, connector đồng bộ sống hoặc PDF/DOCX trực tiếp.
+Meet thật/Windows sạch/outage thực tế chưa nghiệm thu. Ba probe gốc đã bị chặn trong phạm vi giai đoạn 1; guard vẫn chưa xác minh mọi claim. Routing không thay bộ kiểm tra bằng chứng. Luồng deep mới dùng prompt trong schema gợi ý, chưa có bảng phương án/trọng số. Chưa có bộ nhớ quyết định có trạng thái thay thế/hủy, connector đồng bộ sống hoặc PDF/DOCX trực tiếp.
 
 ## Đưa lên Git và tái tạo tài liệu
 
@@ -40,3 +40,7 @@ npm run contracts
 ```
 
 Chạy từ gốc repository sau setup. Quy trình test đầy đủ ở README. `documentation.py` dựng lại trạng thái/nghiệm thu từ evidence; không chạy lại provider trả phí. Hash routing được chuẩn hóa UTF-8/LF để kiểm tra được sau clone trên các hệ điều hành.
+
+## Kết quả giai đoạn 1
+
+[Báo cáo A–E và phạm vi giới hạn](PHASE1_REPORT.md) · [Semantic review mới](evidence/phase1/semantic-review.json) · [Backend 219 tests](evidence/phase1/backend-final.xml) · [Browser E2E mới](evidence/phase1/browser-final-results.json). Baseline 91 tests và các lần lỗi trước sửa được giữ riêng trong evidence/phase1.
