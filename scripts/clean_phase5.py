@@ -181,7 +181,7 @@ def main():
             dict(project_id=project["id"], title="SYNTHETIC CLEAN", demo=True, timezone="UTC"),
         )
         mid = meeting["id"]
-        api(f"/api/v1/meetings/{mid}", "PATCH", dict(auto_mode=False, self_speaker="Minh"))
+        api(f"/api/v1/meetings/{mid}", "PATCH", dict(auto_mode=False))
         for seq, text in enumerate(
             ["Confirmed: test API-17 in staging.", "I will review API-71 by tomorrow."], 1
         ):
@@ -203,6 +203,7 @@ def main():
                     adapter_version="synthetic-clean",
                 ),
             )
+        api(f"/api/v1/meetings/{mid}", "PATCH", dict(self_speaker="Minh"))
         api(f"/api/v1/meetings/{mid}/suggest", "POST", dict(action="suggest"))
         time.sleep(0.3)
         api(
