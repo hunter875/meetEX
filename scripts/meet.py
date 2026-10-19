@@ -332,7 +332,9 @@ def main():
         return
     if not PYTHON.exists():
         raise RuntimeError("DEPENDENCIES_MISSING: run python scripts/meet.py setup first.")
-    if Path(sys.executable).resolve() != PYTHON.resolve():
+    # POSIX venv executables are often symlinks to the base interpreter. Compare
+    # prefixes, otherwise a global interpreter looks like the venv executable.
+    if Path(sys.prefix).resolve() != (ROOT / ".venv").resolve():
         result = subprocess.run(
             [str(PYTHON), str(Path(__file__).resolve()), *sys.argv[1:]], cwd=Path.cwd()
         )
