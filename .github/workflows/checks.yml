@@ -17,7 +17,7 @@ jobs:
       DEEPSEEK_API_KEY: ''
       MEET_EXTENSION_ID: ''
       MEET_DEV_ORIGIN: ''
-      MEET_DATA_DIR: ${{ runner.temp }}/meet-ci-synthetic-data
+      MEET_DATA_DIR: .local/ci-synthetic-data
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

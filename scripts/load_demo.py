@@ -2,10 +2,13 @@ import json,sys,urllib.request
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(root/'backend'))
-from app.config import Config
-config=Config.load()
+from dotenv import load_dotenv
+from app.config import data_directory
+load_dotenv(root/'.env')
+try:token=(data_directory()/'pairing-token').read_text('utf8').strip()
+except OSError:raise SystemExit('Start backend with the same data directory before loading demo.')
 def api(path,body=None):
-    request=urllib.request.Request('http://127.0.0.1:8765'+path,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+config.token,'Content-Type':'application/json'})
+    request=urllib.request.Request('http://127.0.0.1:8765'+path,data=json.dumps(body).encode() if body is not None else None,headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'})
     with urllib.request.urlopen(request,timeout=90) as response:return json.load(response)
 corpus=json.loads((root/'fixtures/demo-project.json').read_text('utf8'))
 existing=next((p for p in api('/api/v1/projects') if p['name']==corpus['name']),None)

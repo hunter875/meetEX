@@ -317,6 +317,7 @@ def main():
             "rotate-token",
             "update",
             "package",
+            "demo",
         ],
     )
     parser.add_argument("--data-dir", type=Path)
@@ -345,6 +346,8 @@ def main():
     os.environ["MEET_DATA_DIR"] = str(directory)
     if args.command == "build":
         run([NPM, "run", "build"])
+    elif args.command == "demo":
+        run([PYTHON, ROOT / "scripts/load_demo.py"])
     elif args.command == "test":
         try:
             test(args.browser)

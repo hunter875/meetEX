@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory=$true)]
-    [ValidateSet('setup','build','start','stop','doctor','test','backup','restore','rotate-token','update','package')]
+    [ValidateSet('setup','build','start','stop','doctor','test','backup','restore','rotate-token','update','package','demo')]
     [string]$Command,
     [string]$DataDir,
     [string]$Path,

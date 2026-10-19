@@ -2,7 +2,7 @@
   "result": "PARTIAL: internal release candidate; independent/live gates remain open",
   "date": "2026-10-19",
   "base_commit": "9a5ac7153343a4b84256fbc1343267eeb285de55",
-  "source_commit_at_review": "9a5ac7153343a4b84256fbc1343267eeb285de55",
+  "source_commit_at_review": "2030844b7b2085aec34fee2c85778b9058784100",
   "app_version": "0.1.0",
   "protocol_version": 1,
   "schema_version": 2,
@@ -99,12 +99,12 @@
     "extension/src/ui/report.tsx": "f2c843c4a40e6467eb5f6edaa66912fbb5359112e4493a6c180607688842b4be",
     "extension/src/ui/settings.tsx": "78dbd8b9d4df803e65c8f13fc8f1bd54b38070ee7b3aeb39c38a06af16f7ab59",
     "extension/src/ui/shared.tsx": "b276e07a95cafe7c7900099433d0b45feda64cea5dc4cb1c246b0ae358c2e10d",
-    "scripts/meet.py": "338294615e06382ab2a1e070c764f1555a4e1712f25de3180a07a5161a1f408f",
+    "scripts/meet.py": "892eba4bac4074e34c64b058e0f334d3d27f22e46696ccb49c5ffab7505044db",
     "scripts/package_local.py": "e213752ee4a3acc611839c55b6e097470e41020a1275027d893512104579ec49",
     "scripts/soak_phase5.py": "38563f6b4a4c1f608cfd42f3ee27bea240246347d959cf92337db8ed5025a355",
     "backend/requirements.lock": "f469511787705eeb35e11f1c3b0676175f4abcefbafc374ed2daefe4b0328fcc",
     "backend/requirements-dev.lock": "b11288a6bef0778f32fbc262ad22dbf7252ef360e02968fa07a6a2a9e71f0acf",
     "package-lock.json": "0210b4066b83ebc1c934f4f2075b5be7ee5666f93674e7c0288f71e6bbba15fd",
-    ".github/workflows/checks.yml": "f112410958ff77a4610253a636d2335c1d5a516ddf512c95cdd07c3e5eeb4ae9"
+    ".github/workflows/checks.yml": "7bf4f588119c635ececf047445e6693e94f01ba820088a31ff29506f6a35dbe6"
   }
 }
