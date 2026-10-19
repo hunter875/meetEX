@@ -11,6 +11,7 @@ from .storage import uid,now,dumps
 from .llm import provider_context,SuggestionPayload,ReportPayload,validate_suggestion,validate_report,demo_suggestion,demo_report,SECTIONS
 from .routing import classify
 from .evidence import VALIDATION_POLICY
+from . import meeting_memory
 from .orchestration import TriggerPolicy,decide,meaning_key,card_key,retrieval_query,freshness_safe_smalltalk,POLICY_VERSION,PROMPT_VERSION
 
 class Service:
@@ -104,11 +105,26 @@ class Service:
             retrieval_result=retrieval_result if retrieval_result is not None else self.retrieval.search(m['project_id'],query)
             sources=retrieval_result['results']
             confirmed=[s for s in self.store.transcript(id) if s['id'] in m.get('confirmed_segment_ids',[])]
+            all_ledger=self.store.memory(id)
+            inactive={e['segment_id'] for item in all_ledger if item['kind'] in ('decision','action_item') and (not meeting_memory.current(item) or item['status'] in ('cancelled','disputed','invalidated')) for e in item['evidence']}
             memory=[];memory_budget=3000
-            for candidate in reversed(confirmed):
+            for candidate in reversed([s for s in confirmed if s['id'] not in inactive]):
                 if len(dumps(candidate))<=memory_budget and len(memory)<8:memory.insert(0,candidate);memory_budget-=len(dumps(candidate))
+            confirmed_kept=len(memory)
+            relevance=query+' '+' '.join(s['text'] for s in memory+segments[-3:])
+            ledger,ledger_omitted=meeting_memory.select(all_ledger,relevance)
+            fitted_ledger=[]
+            for item in ledger:
+                needed=[]
+                for ref in item['evidence']:
+                    candidate=self.store.evidence_revision(id,ref['segment_id'],ref['revision'])
+                    if not any(s['id']==candidate['id'] and s['revision']==candidate['revision'] for s in segments+memory+needed):needed.append(candidate)
+                size=sum(len(dumps(s)) for s in needed)
+                if size<=memory_budget and len(memory)+len(needed)<=8:
+                    memory.extend(needed);memory_budget-=size;fitted_ledger.append(item)
+                else:ledger_omitted+=1
             glossary=self.store.project(m['project_id'])['glossary']
-            remaining=self.store.settings()['input_chars']-len(dumps(segments))-len(dumps(memory))-len(dumps(glossary))-len(body.get('question',''))-1500;fitted=[]
+            remaining=self.store.settings()['input_chars']-len(dumps(segments))-len(dumps(memory))-len(dumps(fitted_ledger))-len(dumps(glossary))-len(body.get('question',''))-1500;fitted=[]
             seen_excerpts=set()
             for source in sources:
                 identity=(source['content'],source.get('stale',False),source.get('conflicting',False))
@@ -116,7 +132,8 @@ class Service:
                 if len(dumps(source))>remaining:continue
                 seen_excerpts.add(identity)
                 fitted.append(source);remaining-=len(dumps(source))
-            snapshot=dict(meeting_id=id,project_id=m['project_id'],transcript_revision=m['transcript_revision'],context_revision=m.get('context_revision',0),index_generation={s['id']:s['generation'] for s in self.store.sources(m['project_id'])},segments=segments,memory=memory,memory_omitted_count=len(confirmed)-len(memory),sources=fitted,glossary=glossary,self_speaker=m['self_speaker'],focus_segment_ids=focus,context_omitted_count=total_turns-len(segments),source_omitted_count=len(sources)-len(fitted))
+            snapshot=dict(meeting_id=id,project_id=m['project_id'],transcript_revision=m['transcript_revision'],context_revision=m.get('context_revision',0),index_generation={s['id']:s['generation'] for s in self.store.sources(m['project_id'])},segments=segments,memory=memory,memory_omitted_count=len(confirmed)-confirmed_kept,sources=fitted,glossary=glossary,self_speaker=m['self_speaker'],focus_segment_ids=focus,context_omitted_count=total_turns-len(segments),source_omitted_count=len(sources)-len(fitted))
+            snapshot.update(structured_memory=fitted_ledger,memory_revision=m.get('memory_revision',0),ledger_omitted_count=ledger_omitted)
         return self.finalize_snapshot(snapshot,body)
     def finalize_snapshot(self,snapshot,body):
         snapshot['action']=body['action'];snapshot['question']=body.get('question','');snapshot['sentence_limit']=self.store.settings()['sentence_limit']
@@ -159,7 +176,7 @@ class Service:
         return self.finalize_snapshot(snapshot,body)
     async def schedule_async(self,id,body):
         meeting=self.store.meeting(id)
-        identity=dumps([body,meeting['transcript_revision'],meeting.get('context_revision',0),meeting['self_speaker'],self.store.settings(),[(s['id'],s['generation'],s.get('stale',False)) for s in self.store.sources(meeting['project_id'])]])
+        identity=dumps([body,meeting['transcript_revision'],meeting.get('context_revision',0),meeting.get('memory_revision',0),meeting['self_speaker'],self.store.settings(),[(s['id'],s['generation'],s.get('stale',False)) for s in self.store.sources(meeting['project_id'])]])
         previous=self.preparation_jobs.get(id)
         if previous and not previous['task'].done() and (previous['identity']==identity or (body['action']=='auto' and not previous['automatic'])):
             work=previous['task'];self.orchestration_counts['preparation_coalesced']+=1
@@ -317,6 +334,7 @@ class Service:
                     equivalent=self.equivalent_changes_only(id,r['snapshot']) if m['transcript_revision']!=r['snapshot']['transcript_revision'] else False
                     stale=m['latest_request']!=r['id'] or generations!=r['snapshot']['index_generation'] or (content_stale and not equivalent) or (m['transcript_revision']!=r['snapshot']['transcript_revision'] and not equivalent) or m['self_speaker']!=r['snapshot'].get('self_speaker') or m.get('context_revision',0)!=r['snapshot'].get('context_revision',0) or self.store.project(m['project_id'])['glossary']!=r['snapshot'].get('glossary',{})
                     if equivalent:r['timing']['freshness_reason']='cosmetic_or_new_smalltalk_only'
+                    stale=stale or m.get('memory_revision',0)!=r['snapshot'].get('memory_revision',0)
                     stale=stale or r['snapshot'].get('provider_config')!={key:self.store.settings()[key] for key in ('provider_url','model','output_tokens','input_chars','live_timeout_s')}
                     if r['action']=='auto' and not stale:
                         fingerprint=card_key(output,r['snapshot'])
@@ -453,7 +471,9 @@ class Service:
     async def generate_report_part(self,context):
         original=context
         for attempt in range(2):
-            result=await self.provider.complete(context,ReportPayload,True)
+            correlation=provider_context.set(dict(request_id=original.get('report_job_id'),automatic=False,generation_attempt=attempt+1,repair=attempt>0,accounting=self.report_jobs.get(original.get('report_job_id'))))
+            try:result=await self.provider.complete({k:v for k,v in context.items() if k!='report_job_id'},ReportPayload,True)
+            finally:provider_context.reset(correlation)
             try:
                 validate_report(result,original['segments']);return result
             except AppError as failure:
@@ -472,10 +492,16 @@ class Service:
         began=time.perf_counter();job['status']='running'
         try:
             m=self.store.meeting(id);parts=self.report_chunks(segments);payload=ReportPayload()
+            if len(parts)>64:raise AppError('REPORT_CAPACITY','Report exceeds 64 maps; no silent truncation',422)
+            ledger=self.store.memory(id);memory_revision=m.get('memory_revision',0)
             for n,part in enumerate(parts):
                 context=dict(segments=part,timezone=m['timezone'],meeting_started_at=m['started_at'],transcript_revision=revision,task='report map; preserve each requirement/decision/action/open question, with evidence. Summarize only supplied observations.')
-                result=demo_report(part) if m['demo'] else await self.generate_report_part(context)
+                context['report_job_id']=job['id']
+                async with asyncio.timeout(self.store.settings()['report_timeout_s']):
+                    result=demo_report(part) if m['demo'] else await self.generate_report_part(context)
                 validate_report(result,part)
+                if any(len('\n'.join(filter(None,(getattr(payload,key),getattr(result,key)))))>15000 for key in ('summary_vi','summary_en')):
+                    raise AppError('REPORT_SUMMARY_BUDGET','Combined map summaries exceed budget; no truncated summary was published. Previous versions are preserved.',422)
                 if result.summary_vi.strip():payload.summary_vi='\n'.join(filter(None,(payload.summary_vi,result.summary_vi)))
                 if result.summary_en.strip():payload.summary_en='\n'.join(filter(None,(payload.summary_en,result.summary_en)))
                 payload.summary_segment_ids=list(dict.fromkeys(payload.summary_segment_ids+result.summary_segment_ids))
@@ -496,25 +522,32 @@ class Service:
             if not self.store.sources(m['project_id']):payload.capture_warnings.append('Chưa có nguồn dự án để đối chiếu.')
             if m['demo']:payload.capture_warnings.append('DEMO — không phải kết quả provider thật.')
             validate_report(payload,segments)
-            report=self.save_report(id,payload,revision,mode='demo' if m['demo'] else 'real')
+            from .report_ledger import reconcile_report
+            payload,history,reconciliation=reconcile_report(payload,ledger,segments)
+            if self.store.meeting(id).get('memory_revision',0)!=memory_revision:raise AppError('REVISION_CONFLICT','Memory changed during report; previous versions preserved',409)
+            report=self.save_report(id,payload,revision,mode='demo' if m['demo'] else 'real',metadata=dict(memory_snapshot=ledger,memory_revision=memory_revision,historical_payload=history.model_dump(),reconciliation=reconciliation))
             job.update(status='ready',progress=100,report_id=report['id']);await self.emit('report.ready',id,report=report)
         except asyncio.CancelledError:job['status']='cancelled';raise
         except Exception as e:job.update(status='error',error=e.payload() if isinstance(e,AppError) else AppError('REPORT_ERROR','Report failed; previous versions were preserved',500).payload())
         finally:
             job['duration_ms']=(time.perf_counter()-began)*1000
+            attempts=[r for r in getattr(self.provider,'metrics',[]) if r.get('logical_request_id')==job['id']]
+            job['maps']=len(locals().get('parts',[]))
+            for key in ('http_attempts','repair_attempts','transient_retry_attempts','usage_unknown_attempts'):job.setdefault(key,0)
             self.report_tasks.pop(job['id'],None)
-    def save_report(self,id,payload,revision,mode='real',user_edits=False,reviewed=False,parent=None):
+    def save_report(self,id,payload,revision,mode='real',user_edits=False,reviewed=False,parent=None,metadata=None):
         db=self.store.db_for(id)
         with db:
             row=db.execute('SELECT MAX(version) FROM reports WHERE meeting_id=?',(id,)).fetchone()
             version=(row[0] or 0)+1
             report=dict(id=uid(),meeting_id=id,version=version,transcript_revision=revision,payload=payload.model_dump(),user_edits=user_edits,reviewed_at=now() if reviewed else None,mode=mode,created_at=now(),parent_id=parent)
+            report.update(metadata or {});report.setdefault('evidence_snapshot',self.store.transcript(id))
             db.execute('INSERT INTO reports VALUES(?,?,?,?)',(report['id'],id,version,dumps(report)))
         return report
     def get_report(self,rid):
         for db in (self.store.ram,self.store.disk):
             row=db.execute('SELECT payload FROM reports WHERE id=?',(rid,)).fetchone()
-            if row:return json.loads(row[0])
+            if row:return self.store.report_view(json.loads(row[0]))
         raise AppError('NOT_FOUND','Report not found',404)
     def edit_report(self,rid,body):
         old=self.get_report(rid);reports=self.store.objects(old['meeting_id'],'reports');current=reports[-1]
@@ -524,8 +557,10 @@ class Service:
         for section in SECTIONS:
             originals={x['id']:x for x in old['payload'][section]}
             for item in getattr(body.payload,section):
-                if item.model_dump()!=originals.get(item.id) and section!='ai_proposals':item.origin='user_edit'
-        return self.save_report(old['meeting_id'],body.payload,old['transcript_revision'],old['mode'],True,body.reviewed,rid)
+                if item.model_dump()!=originals.get(item.id):item.origin='user_edit'
+        metadata={k:old[k] for k in ('evidence_snapshot','memory_snapshot','memory_revision','historical_payload','reconciliation') if k in old}
+        metadata['edit_provenance']=dict(actor='local_user',parent_id=rid,summary_changed=body.payload.summary_vi!=old['payload']['summary_vi'] or body.payload.summary_en!=old['payload']['summary_en'],changed_item_ids=[item.id for section in SECTIONS for item in getattr(body.payload,section) if item.origin=='user_edit'])
+        return self.save_report(old['meeting_id'],body.payload,old['transcript_revision'],old['mode'],True,body.reviewed,rid,metadata)
     async def shutdown(self):
         for task in list(self.tasks):task.cancel()
         await asyncio.gather(*self.tasks,return_exceptions=True)
@@ -533,6 +568,7 @@ class Service:
             if m['status'] in ('active','paused'):self.store.control(m['id'],dict(action='interrupt',idempotency_key=uid(),reason='backend_shutdown'))
     def forget(self,id):
         self.cancel(id);self.rate.pop(id,None);self.stable_times.pop(id,None)
+        if hasattr(self.retrieval,'forget_queries'):self.retrieval.forget_queries()
         self.scheduler_states.pop(id,None);self.seen_stable.pop(id,None);self.preparation_locks.pop(id,None);self.auto_deadlines.pop(id,None)
         self.change_log.pop(id,None)
         for key,job in list(self.report_jobs.items()):

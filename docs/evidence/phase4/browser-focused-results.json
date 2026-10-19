@@ -1,0 +1,177 @@
+{
+  "config": {
+    "configFile": "D:\\meetEX\\playwright.config.ts",
+    "rootDir": "D:/meetEX/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase4/browser-focused-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/meetEX/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/meetEX/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "extension.spec.ts",
+      "file": "extension.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Genuine MV3 extension + real local backend; synthetic Meet/controlled AI",
+          "file": "extension.spec.ts",
+          "line": 16,
+          "column": 15,
+          "specs": [
+            {
+              "title": "UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9432,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:56:29.310Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-6e7cc1f0d88535cb93ec",
+              "file": "extension.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "PHASE4 memory revisions, user provenance, report regeneration and exports",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 60003,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                            "column": 325,
+                            "line": 187
+                          },
+                          "message": "Error: locator.selectOption: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByLabel('Trạng thái memory', { exact: true })\u001b[22m\n\n\n  185 |     const decision=memory.getByTestId('memory-item').filter({hasText:'API-17'});await expect(decision).toContainText('Chưa xác nhận');await decision.getByRole('button',{name:'Lịch sử mục',exact:true}).click();await expect(view.getByRole('heading',{name:'Lịch sử version memory',exact:true})).toBeVisible();await expect(view.getByText('Confirmed: test API-17 in staging.',{exact:true})).toBeVisible();await view.getByRole('button',{name:'Đóng nguồn',exact:true}).click();\n  186 |     await decision.getByRole('button',{name:'Mở evidence revision',exact:true}).click();await expect(view.getByText('decision · r2',{exact:true})).toBeVisible();await view.getByRole('button',{name:'Đóng nguồn',exact:true}).click();\n> 187 |     await memory.getByTestId('memory-item').filter({hasText:'API-71'}).getByRole('button',{name:'Chỉnh mục',exact:true}).click();await view.getByLabel('Owner memory',{exact:true}).fill('Alex');await view.getByLabel('Deadline memory',{exact:true}).fill('Maybe Friday');await view.getByLabel('Trạng thái memory',{exact:true}).selectOption('cancelled');await view.getByRole('button',{name:'Lưu thay đổi memory',exact:true}).click();await expect(memory.getByTestId('memory-item').filter({hasText:'API-71'})).toContainText('Bạn ghi/chỉnh sửa');\n      |                                                                                                                                                                                                                                                                                                                                     ^\n  188 |     await view.screenshot({path:evidencePath('phase4-memory-ui.png'),fullPage:true});\n  189 |     await view.getByRole('button',{name:'Kết thúc',exact:true}).click();await view.goto(`chrome-extension://${extensionId}/dashboard.html#/meetings/${m.id}/report`);\n  190 |     await view.getByRole('button',{name:'Tạo báo cáo nháp',exact:true}).first().click();await expect(view.getByLabel('Tóm tắt tiếng Việt',{exact:true})).toBeVisible();\n    at D:\\meetEX\\e2e\\extension.spec.ts:187:325"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:56:46.978Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\meetEX\\test-results\\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "da119938d3268322a91b-0b81c87b6a3504b5a591",
+              "file": "extension.spec.ts",
+              "line": 176,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T11:56:25.795Z",
+    "duration": 83602.232,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

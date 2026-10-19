@@ -1,0 +1,40 @@
+
+Running 2 tests using 1 worker
+
+(node:25100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\extension.spec.ts:34:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export (8.2s)
+  x  2 e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports (1.8s)
+
+
+  1) e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+
+    Error: {"id":"c655bc10-cece-4286-b329-3f326bd0381a","meeting_id":"a794c009-b126-47be-b125-6eb94e8b7d38","status":"error","error":{"code":"REPORT_CLAIM","message":"Confirmation/status does not match the cited proposition, action and environment.","retryable":false,"request_id":null},"progress":100,"report_id":null,"duration_ms":10.37709997035563,"maps":1,"http_attempts":0,"repair_attempts":0,"transient_retry_attempts":0,"usage_unknown_attempts":0}
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"ready"[39m
+    Received: [31m"error"[39m
+
+      188 |     await view.screenshot({path:evidencePath('phase4-memory-ui.png'),fullPage:true});
+      189 |     await view.getByRole('button',{name:'Kết thúc',exact:true}).click();await view.goto(`chrome-extension://${extensionId}/dashboard.html#/meetings/${m.id}/report`);
+    > 190 |     const generated=view.waitForResponse(r=>r.request().method()==='POST'&&r.url().endsWith(`/meetings/${m.id}/reports`));await view.getByRole('button',{name:'Tạo báo cáo nháp',exact:true}).first().click();const reportJob=await (await generated).json();await expect.poll(async()=>(await api('/api/v1/jobs/'+reportJob.id)).status).toMatch(/ready|error/);const reportDone=await api('/api/v1/jobs/'+reportJob.id);expect(reportDone.status,JSON.stringify(reportDone)).toBe('ready');await expect(view.getByLabel('Tóm tắt tiếng Việt',{exact:true})).toBeVisible();
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+      191 |     await view.getByLabel('Tóm tắt tiếng Việt',{exact:true}).fill('PHASE4 USER EDIT preserved');await expect(view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true})).toBeDisabled();await view.getByRole('button',{name:'Lưu bản nháp',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v2',exact:true})).toBeVisible();
+      192 |     const saved=(await api(`/api/v1/meetings/${m.id}`)).reports.find((r:any)=>r.version===2);await view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v3',exact:true})).toBeVisible();expect((await api(`/api/v1/reports/${saved.id}`)).payload.summary_vi).toBe('PHASE4 USER EDIT preserved');
+      193 |     const final=await api(`/api/v1/meetings/${m.id}`);expect(final.reports.at(-1).memory_snapshot.find((i:any)=>i.entity==='API-71').origin).toBe('user_edit');
+        at D:\meetEX\e2e\extension.spec.ts:190:464
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+  1 passed (21.1s)

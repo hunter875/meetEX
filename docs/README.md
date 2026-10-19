@@ -5,7 +5,7 @@ Snapshot trong [hunter875/meetEX](https://github.com/hunter875/meetEX), GitHub b
 ## Bắt đầu và kiến trúc
 
 - [Cài đặt, pairing extension, chạy và xử lý lỗi](../README.md)
-- [Thiết kế kỹ thuật ban đầu](spec/TECHNICAL_DESIGN.md)
+- [Thiết kế kỹ thuật ban đầu](spec/TECHNICAL_DESIGN.md) và [kiến trúc/API bộ nhớ hiện tại](MEETING_MEMORY.md)
 - [Các quyết định và thay đổi contract khi triển khai](CONTRACT_CHANGES.md)
 - [OpenAPI hiện tại](openapi.json) và [TypeScript sinh từ schema](../extension/src/api-schema.d.ts)
 - [Adapter caption và checklist Meet thật](CAPTION_ADAPTER.md)
@@ -13,7 +13,8 @@ Snapshot trong [hunter875/meetEX](https://github.com/hunter875/meetEX), GitHub b
 ## Trạng thái và kiểm tra
 
 - [Trạng thái triển khai](IMPLEMENTATION_STATUS.md), [truy vết yêu cầu](TRACEABILITY.md), [báo cáo nghiệm thu](ACCEPTANCE_REPORT.md).
-- Phase 3: **276 backend tests, 58 frontend unit tests, 5 browser E2E pass**. [Báo cáo A–F, PARTIAL theo mục tiêu đặt trước](PHASE3_REPORT.md), [review/source hashes](evidence/phase3/review.json). 39/39 eligible attempted, false trigger 7 → 0, logical 49 → 40; hai mục tiêu request/Auto wait chưa đạt. Zero paid calls mới, Meet/provider thật mới NOT TESTED.
+- Phase 4: **331 backend / 60 frontend / 6 browser pass**. [A–F, PARTIAL và phạm vi](PHASE4_REPORT.md), [review](evidence/phase4/review.json): 38/38 labelled items/evidence, 321-turn/16-map controlled report; model/Meet thật NOT TESTED.
+- Phase 3 lịch sử: **276 backend tests, 58 frontend unit tests, 5 browser E2E pass**. [Báo cáo A–F, PARTIAL theo mục tiêu đặt trước](PHASE3_REPORT.md), [review/source hashes](evidence/phase3/review.json). 39/39 eligible attempted, false trigger 7 → 0, logical 49 → 40; hai mục tiêu request/Auto wait chưa đạt. Zero paid calls mới, Meet/provider thật mới NOT TESTED.
 - Phase 2 lịch sử: [capture/recovery A–G](PHASE2_REPORT.md), [review](evidence/phase2/review.json), [runbook live](PHASE2_LIVE_RUNBOOK.md). Các regression đã chạy lại trong Phase 3 với MV3/backend thật, DOM synthetic/provider intercepted.
 - [Response routing](RESPONSE_ROUTING.md): local rules-v1, 5 luồng, preview/lý do, chọn mode thủ công, gate xác minh; [34/34 fixture](evidence/routing-review.json) là phạm vi synthetic, không phải accuracy tổng quát.
 - [Đánh giá hệ thống](SYSTEM_ASSESSMENT.md), [giới hạn](LIMITATIONS.md), [các chức năng ưu tiên tiếp theo](NEXT_PRIORITIES.md).
@@ -35,7 +36,7 @@ Repository chứa source, dependency locks, schema, tests, fixtures và bằng c
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\evaluate_routing.py
-.\.venv\Scripts\python.exe scripts\evaluate_phase3.py
+.\.venv\Scripts\python.exe scripts\review_phase4.py
 .\.venv\Scripts\python.exe scripts\documentation.py
 .\.venv\Scripts\python.exe scripts\check_docs.py
 npm run contracts

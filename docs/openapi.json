@@ -1014,6 +1014,299 @@
         }
       }
     },
+    "/api/v1/meetings/{id}/memory": {
+      "get": {
+        "summary": "Memory",
+        "operationId": "memory_api_v1_meetings__id__memory_get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemorySnapshotDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Memory",
+        "operationId": "create_memory_api_v1_meetings__id__memory_post",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryItemDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/meetings/{id}/evidence/{segment_id}": {
+      "get": {
+        "summary": "Memory Evidence",
+        "operationId": "memory_evidence_api_v1_meetings__id__evidence__segment_id__get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          },
+          {
+            "name": "segment_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Segment Id"
+            }
+          },
+          {
+            "name": "revision",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "title": "Revision"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SegmentDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/meetings/{id}/memory/{item_id}/history": {
+      "get": {
+        "summary": "Memory History",
+        "operationId": "memory_history_api_v1_meetings__id__memory__item_id__history_get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          },
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MemoryItemDTO"
+                  },
+                  "title": "Response Memory History Api V1 Meetings  Id  Memory  Item Id  History Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/meetings/{id}/memory/{item_id}": {
+      "patch": {
+        "summary": "Edit Memory",
+        "operationId": "edit_memory_api_v1_meetings__id__memory__item_id__patch",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          },
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryPatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryItemDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/meetings/{id}/memory-rebuild": {
+      "post": {
+        "summary": "Rebuild Memory",
+        "operationId": "rebuild_memory_api_v1_meetings__id__memory_rebuild_post",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemorySnapshotDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/meetings/{id}/classify": {
       "post": {
         "summary": "Classify Request",
@@ -1723,6 +2016,24 @@
               }
             ],
             "title": "Capture Cursor"
+          },
+          "structured_memory": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Structured Memory"
+          },
+          "memory_revision": {
+            "type": "integer",
+            "title": "Memory Revision",
+            "default": 0
+          },
+          "ledger_omitted_count": {
+            "type": "integer",
+            "title": "Ledger Omitted Count",
+            "default": 0
           }
         },
         "additionalProperties": true,
@@ -1967,6 +2278,26 @@
           "api_key"
         ],
         "title": "Credential"
+      },
+      "EvidenceRefDTO": {
+        "properties": {
+          "segment_id": {
+            "type": "string",
+            "title": "Segment Id"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Revision"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "segment_id",
+          "revision"
+        ],
+        "title": "EvidenceRefDTO"
       },
       "Finding": {
         "properties": {
@@ -2218,6 +2549,329 @@
         "type": "object",
         "title": "MeetingPrefs"
       },
+      "MemoryCreate": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "requirement",
+              "proposal",
+              "decision",
+              "action_item",
+              "open_question",
+              "spoken_fact"
+            ],
+            "title": "Kind"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Text"
+          },
+          "status": {
+            "type": "string",
+            "maxLength": 30,
+            "title": "Status"
+          },
+          "entity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Entity"
+          },
+          "owner": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Owner"
+          },
+          "raw_due_text": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 150
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw Due Text"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "kind",
+          "text",
+          "status"
+        ],
+        "title": "MemoryCreate"
+      },
+      "MemoryItemDTO": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "meeting_id": {
+            "type": "string",
+            "title": "Meeting Id"
+          },
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "entity": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Entity"
+          },
+          "action": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action"
+          },
+          "environment": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Environment"
+          },
+          "speaker": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Speaker"
+          },
+          "owner": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Owner"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "raw_due_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw Due Text"
+          },
+          "normalized_due": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Normalized Due"
+          },
+          "due_rule": {
+            "type": "string",
+            "title": "Due Rule"
+          },
+          "due_anchor": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Due Anchor"
+          },
+          "origin": {
+            "type": "string",
+            "title": "Origin"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceRefDTO"
+            },
+            "type": "array",
+            "title": "Evidence"
+          },
+          "relations": {
+            "items": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Relations"
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "id",
+          "meeting_id",
+          "project_id",
+          "kind",
+          "text",
+          "status",
+          "due_rule",
+          "origin",
+          "evidence",
+          "relations",
+          "version"
+        ],
+        "title": "MemoryItemDTO"
+      },
+      "MemoryPatch": {
+        "properties": {
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 4000,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          },
+          "owner": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Owner"
+          },
+          "raw_due_text": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 150
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw Due Text"
+          },
+          "status": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 30
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "expected_version"
+        ],
+        "title": "MemoryPatch"
+      },
+      "MemorySnapshotDTO": {
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "policy": {
+            "type": "string",
+            "title": "Policy"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryItemDTO"
+            },
+            "type": "array",
+            "title": "Items"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "revision",
+          "policy",
+          "items"
+        ],
+        "title": "MemorySnapshotDTO"
+      },
       "ProjectCreate": {
         "properties": {
           "name": {
@@ -2386,6 +3040,70 @@
               }
             ],
             "title": "Parent Id"
+          },
+          "memory_snapshot": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryItemDTO"
+            },
+            "type": "array",
+            "title": "Memory Snapshot"
+          },
+          "memory_revision": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Memory Revision"
+          },
+          "evidence_snapshot": {
+            "items": {
+              "$ref": "#/components/schemas/SegmentDTO"
+            },
+            "type": "array",
+            "title": "Evidence Snapshot"
+          },
+          "evidence_changed": {
+            "type": "boolean",
+            "title": "Evidence Changed",
+            "default": false
+          },
+          "historical_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ReportPayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "edit_provenance": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edit Provenance"
+          },
+          "reconciliation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reconciliation"
           }
         },
         "additionalProperties": true,
@@ -3182,6 +3900,11 @@
                 "type": "null"
               }
             ]
+          },
+          "memory_revision": {
+            "type": "integer",
+            "title": "Memory Revision",
+            "default": 0
           },
           "segments": {
             "items": {

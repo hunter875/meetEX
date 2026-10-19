@@ -1,0 +1,45 @@
+
+Running 2 tests using 1 worker
+
+(node:25796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\extension.spec.ts:34:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export (8.2s)
+  x  2 e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports (14.1s)
+
+
+  1) e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByLabel('Tóm tắt tiếng Việt', { exact: true })
+    Expected: visible
+    Timeout: 12000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 12000ms[22m
+    [2m  - waiting for getByLabel('Tóm tắt tiếng Việt', { exact: true })[22m
+
+
+      188 |     await view.screenshot({path:evidencePath('phase4-memory-ui.png'),fullPage:true});
+      189 |     await view.getByRole('button',{name:'Kết thúc',exact:true}).click();await view.goto(`chrome-extension://${extensionId}/dashboard.html#/meetings/${m.id}/report`);
+    > 190 |     await view.getByRole('button',{name:'Tạo báo cáo nháp',exact:true}).first().click();await expect(view.getByLabel('Tóm tắt tiếng Việt',{exact:true})).toBeVisible();
+          |                                                                                                                                                          ^
+      191 |     await view.getByLabel('Tóm tắt tiếng Việt',{exact:true}).fill('PHASE4 USER EDIT preserved');await expect(view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true})).toBeDisabled();await view.getByRole('button',{name:'Lưu bản nháp',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v2',exact:true})).toBeVisible();
+      192 |     const saved=(await api(`/api/v1/meetings/${m.id}`)).reports.find((r:any)=>r.version===2);await view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v3',exact:true})).toBeVisible();expect((await api(`/api/v1/reports/${saved.id}`)).payload.summary_vi).toBe('PHASE4 USER EDIT preserved');
+      193 |     const final=await api(`/api/v1/meetings/${m.id}`);expect(final.reports.at(-1).memory_snapshot.find((i:any)=>i.entity==='API-71').origin).toBe('user_edit');
+        at D:\meetEX\e2e\extension.spec.ts:190:154
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+  1 passed (34.8s)

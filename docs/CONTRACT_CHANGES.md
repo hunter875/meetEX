@@ -1,5 +1,13 @@
 # Contracts triển khai so với bộ đặc tả 1.1
 
+## Phase 4 — memory/report contract
+
+Versioned migration 002 thêm memory_items/memory_versions/segment_revisions trong đúng DB local/RAM; không reset/nâng legacy thành verified. [Kiến trúc và scoped API](MEETING_MEMORY.md), [states/evidence/rebuild/backward compatibility](PHASE4_REPORT.md). AISnapshot thêm structured_memory, memory_revision, ledger_omitted_count; memory revision tham gia cache/freshness. Legacy confirmed_segment_ids vẫn hoạt động.
+
+ReportDTO thêm memory_snapshot/revision, evidence_snapshot, evidence_changed, historical_payload, reconciliation/edit_provenance. Payload giữ schema; model vẫn không được origin user_edit. User sửa/thêm proposal trong AI-proposal bucket được ghi user_edit và vẫn cấm confirmed owner/deadline trong bucket này. relative normalized due mới nằm trong ledger, không nới ReportItem guard. Regenerate tạo version mới; JSON/Markdown tách current/history/user edit và revision evidence. User-edited memory chỉ là ghi chú của user, không tái chứng nhận participant speech. Original report snapshots không bị sửa khi evidence đổi.
+
+Report map tổng tối đa 64; total deadline 90 s/map mặc định gồm retry/repair, tối đa 4 HTTP/map; deterministic reconciliation không thêm model call. Counters per job cộng trực tiếp để không mất count khi provider metrics buffer 2.000 bị evict. `/metrics` thêm memory_update bounded 1.000 samples; không caption/key trong timing. Retrieval cache keys là query digest, eviction epoch ngăn worker cũ repopulate sau xóa.
+
 Các thay đổi trong phạm vi yêu cầu; spec gốc được giữ nguyên trong `spec/`. OpenAPI trong `openapi.json` và TypeScript sinh từ nó là hợp đồng executable.
 
 ## Phase 3 (additive và thay đổi hành vi)

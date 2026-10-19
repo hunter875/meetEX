@@ -1,0 +1,251 @@
+........................................................FFFF............ [ 23%]
+........................................................................ [ 47%]
+........................................................................ [ 71%]
+........................................................................ [ 95%]
+.............                                                            [100%]
+================================== FAILURES ===================================
+_ test_report_repair_preserves_user_version_and_only_publishes_valid_report[summary-False] _
+
+client = <starlette.testclient.TestClient object at 0x000001D072B06250>
+repair = False, wrong_field = 'summary'
+
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('wrong_field',['summary','item'])
+    def test_report_repair_preserves_user_version_and_only_publishes_valid_report(client,repair,wrong_field):
+        _,meeting=real_meeting(client,[('Alex','Confirmed: test in staging only. Production approval is still pending.')])
+        id=meeting['id']
+        assert client.post(f'/api/v1/meetings/{id}/control',json={'action':'end','idempotency_key':'end'}).status_code==200
+        service=client.app.state.service
+        segments=client.app.state.store.transcript(id)
+        valid=ReportPayload(summary_en='Test in staging only.',summary_segment_ids=[s['id'] for s in segments],
+                            decisions=[dict(id='d',text='Test in staging only.',evidence_segment_ids=[s['id'] for s in segments],origin='transcript',confirmation='confirmed')])
+        initial=service.save_report(id,valid,1)
+        edit=copy.deepcopy(initial['payload']);edit['summary_vi']='USER_EDIT_PRESERVED'
+        saved=client.patch('/api/v1/reports/'+initial['id'],json={'expected_version':1,'payload':edit,'reviewed':True}).json()
+        assert saved['version']==2
+        before=copy.deepcopy(saved)
+        events=capture_events(service)
+        requests=[]
+        async def handler(request):
+            wire=json.loads(json.loads(request.content)['messages'][1]['content'])
+            requests.append(wire)
+            if len(requests)==2:
+                assert wire['segments']==requests[0]['segments']
+                assert 'validation_feedback' in wire
+                assert len(client.app.state.store.objects(id,'reports'))==2
+            payload=valid.model_dump()
+            if len(requests)==1 or not repair:
+                if wrong_field=='summary':payload['summary_en']='Production deployment is approved.'
+                else:payload['decisions'][0]['text_en']='Production deployment is approved.'
+            return sse(payload)
+        client.app.state.provider.transport=httpx.MockTransport(handler)
+        revision=client.get(f'/api/v1/meetings/{id}').json()['transcript_revision']
+        response=client.post(f'/api/v1/meetings/{id}/reports',json={'transcript_revision':revision})
+        assert response.status_code==202,response.text
+        job=until(client,'/api/v1/jobs/'+response.json()['id'],lambda j:j['status'] in ('ready','error'))
+        assert len(requests)==2
+        ready=[event for event in events if event['type']=='report.ready']
+        assert len(ready)==(1 if repair else 0)
+        assert 'Production deployment is approved.' not in json.dumps(ready)
+        assert job['status']==('ready' if repair else 'error')
+        if not repair:assert job['error']['code']=='REPORT_CLAIM'
+        assert client.get('/api/v1/reports/'+saved['id']).json()==before
+>       assert client.get('/api/v1/reports/'+saved['id']+'/export?format=json').json()==before
+E       AssertionError: assert {'created_at'...', ...}], ...} == {'created_at'...', ...}], ...}
+E         
+E         Omitting 13 identical items, use -vv to show
+E         Right contains 4 more items:
+E         {'historical_payload': None,
+E          'memory_revision': None,
+E          'memory_snapshot': [],
+E          'reconciliation': None}
+E         Use -v to get more diff
+
+backend\tests\test_phase1_pipeline.py:134: AssertionError
+_ test_report_repair_preserves_user_version_and_only_publishes_valid_report[summary-True] _
+
+client = <starlette.testclient.TestClient object at 0x000001D0725727A0>
+repair = True, wrong_field = 'summary'
+
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('wrong_field',['summary','item'])
+    def test_report_repair_preserves_user_version_and_only_publishes_valid_report(client,repair,wrong_field):
+        _,meeting=real_meeting(client,[('Alex','Confirmed: test in staging only. Production approval is still pending.')])
+        id=meeting['id']
+        assert client.post(f'/api/v1/meetings/{id}/control',json={'action':'end','idempotency_key':'end'}).status_code==200
+        service=client.app.state.service
+        segments=client.app.state.store.transcript(id)
+        valid=ReportPayload(summary_en='Test in staging only.',summary_segment_ids=[s['id'] for s in segments],
+                            decisions=[dict(id='d',text='Test in staging only.',evidence_segment_ids=[s['id'] for s in segments],origin='transcript',confirmation='confirmed')])
+        initial=service.save_report(id,valid,1)
+        edit=copy.deepcopy(initial['payload']);edit['summary_vi']='USER_EDIT_PRESERVED'
+        saved=client.patch('/api/v1/reports/'+initial['id'],json={'expected_version':1,'payload':edit,'reviewed':True}).json()
+        assert saved['version']==2
+        before=copy.deepcopy(saved)
+        events=capture_events(service)
+        requests=[]
+        async def handler(request):
+            wire=json.loads(json.loads(request.content)['messages'][1]['content'])
+            requests.append(wire)
+            if len(requests)==2:
+                assert wire['segments']==requests[0]['segments']
+                assert 'validation_feedback' in wire
+                assert len(client.app.state.store.objects(id,'reports'))==2
+            payload=valid.model_dump()
+            if len(requests)==1 or not repair:
+                if wrong_field=='summary':payload['summary_en']='Production deployment is approved.'
+                else:payload['decisions'][0]['text_en']='Production deployment is approved.'
+            return sse(payload)
+        client.app.state.provider.transport=httpx.MockTransport(handler)
+        revision=client.get(f'/api/v1/meetings/{id}').json()['transcript_revision']
+        response=client.post(f'/api/v1/meetings/{id}/reports',json={'transcript_revision':revision})
+        assert response.status_code==202,response.text
+        job=until(client,'/api/v1/jobs/'+response.json()['id'],lambda j:j['status'] in ('ready','error'))
+        assert len(requests)==2
+        ready=[event for event in events if event['type']=='report.ready']
+        assert len(ready)==(1 if repair else 0)
+        assert 'Production deployment is approved.' not in json.dumps(ready)
+        assert job['status']==('ready' if repair else 'error')
+        if not repair:assert job['error']['code']=='REPORT_CLAIM'
+        assert client.get('/api/v1/reports/'+saved['id']).json()==before
+>       assert client.get('/api/v1/reports/'+saved['id']+'/export?format=json').json()==before
+E       AssertionError: assert {'created_at'...', ...}], ...} == {'created_at'...', ...}], ...}
+E         
+E         Omitting 13 identical items, use -vv to show
+E         Right contains 4 more items:
+E         {'historical_payload': None,
+E          'memory_revision': None,
+E          'memory_snapshot': [],
+E          'reconciliation': None}
+E         Use -v to get more diff
+
+backend\tests\test_phase1_pipeline.py:134: AssertionError
+_ test_report_repair_preserves_user_version_and_only_publishes_valid_report[item-False] _
+
+client = <starlette.testclient.TestClient object at 0x000001D072571150>
+repair = False, wrong_field = 'item'
+
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('wrong_field',['summary','item'])
+    def test_report_repair_preserves_user_version_and_only_publishes_valid_report(client,repair,wrong_field):
+        _,meeting=real_meeting(client,[('Alex','Confirmed: test in staging only. Production approval is still pending.')])
+        id=meeting['id']
+        assert client.post(f'/api/v1/meetings/{id}/control',json={'action':'end','idempotency_key':'end'}).status_code==200
+        service=client.app.state.service
+        segments=client.app.state.store.transcript(id)
+        valid=ReportPayload(summary_en='Test in staging only.',summary_segment_ids=[s['id'] for s in segments],
+                            decisions=[dict(id='d',text='Test in staging only.',evidence_segment_ids=[s['id'] for s in segments],origin='transcript',confirmation='confirmed')])
+        initial=service.save_report(id,valid,1)
+        edit=copy.deepcopy(initial['payload']);edit['summary_vi']='USER_EDIT_PRESERVED'
+        saved=client.patch('/api/v1/reports/'+initial['id'],json={'expected_version':1,'payload':edit,'reviewed':True}).json()
+        assert saved['version']==2
+        before=copy.deepcopy(saved)
+        events=capture_events(service)
+        requests=[]
+        async def handler(request):
+            wire=json.loads(json.loads(request.content)['messages'][1]['content'])
+            requests.append(wire)
+            if len(requests)==2:
+                assert wire['segments']==requests[0]['segments']
+                assert 'validation_feedback' in wire
+                assert len(client.app.state.store.objects(id,'reports'))==2
+            payload=valid.model_dump()
+            if len(requests)==1 or not repair:
+                if wrong_field=='summary':payload['summary_en']='Production deployment is approved.'
+                else:payload['decisions'][0]['text_en']='Production deployment is approved.'
+            return sse(payload)
+        client.app.state.provider.transport=httpx.MockTransport(handler)
+        revision=client.get(f'/api/v1/meetings/{id}').json()['transcript_revision']
+        response=client.post(f'/api/v1/meetings/{id}/reports',json={'transcript_revision':revision})
+        assert response.status_code==202,response.text
+        job=until(client,'/api/v1/jobs/'+response.json()['id'],lambda j:j['status'] in ('ready','error'))
+        assert len(requests)==2
+        ready=[event for event in events if event['type']=='report.ready']
+        assert len(ready)==(1 if repair else 0)
+        assert 'Production deployment is approved.' not in json.dumps(ready)
+        assert job['status']==('ready' if repair else 'error')
+        if not repair:assert job['error']['code']=='REPORT_CLAIM'
+        assert client.get('/api/v1/reports/'+saved['id']).json()==before
+>       assert client.get('/api/v1/reports/'+saved['id']+'/export?format=json').json()==before
+E       AssertionError: assert {'created_at'...', ...}], ...} == {'created_at'...', ...}], ...}
+E         
+E         Omitting 13 identical items, use -vv to show
+E         Right contains 4 more items:
+E         {'historical_payload': None,
+E          'memory_revision': None,
+E          'memory_snapshot': [],
+E          'reconciliation': None}
+E         Use -v to get more diff
+
+backend\tests\test_phase1_pipeline.py:134: AssertionError
+_ test_report_repair_preserves_user_version_and_only_publishes_valid_report[item-True] _
+
+client = <starlette.testclient.TestClient object at 0x000001D0728B3F00>
+repair = True, wrong_field = 'item'
+
+    @pytest.mark.parametrize('repair',[False,True])
+    @pytest.mark.parametrize('wrong_field',['summary','item'])
+    def test_report_repair_preserves_user_version_and_only_publishes_valid_report(client,repair,wrong_field):
+        _,meeting=real_meeting(client,[('Alex','Confirmed: test in staging only. Production approval is still pending.')])
+        id=meeting['id']
+        assert client.post(f'/api/v1/meetings/{id}/control',json={'action':'end','idempotency_key':'end'}).status_code==200
+        service=client.app.state.service
+        segments=client.app.state.store.transcript(id)
+        valid=ReportPayload(summary_en='Test in staging only.',summary_segment_ids=[s['id'] for s in segments],
+                            decisions=[dict(id='d',text='Test in staging only.',evidence_segment_ids=[s['id'] for s in segments],origin='transcript',confirmation='confirmed')])
+        initial=service.save_report(id,valid,1)
+        edit=copy.deepcopy(initial['payload']);edit['summary_vi']='USER_EDIT_PRESERVED'
+        saved=client.patch('/api/v1/reports/'+initial['id'],json={'expected_version':1,'payload':edit,'reviewed':True}).json()
+        assert saved['version']==2
+        before=copy.deepcopy(saved)
+        events=capture_events(service)
+        requests=[]
+        async def handler(request):
+            wire=json.loads(json.loads(request.content)['messages'][1]['content'])
+            requests.append(wire)
+            if len(requests)==2:
+                assert wire['segments']==requests[0]['segments']
+                assert 'validation_feedback' in wire
+                assert len(client.app.state.store.objects(id,'reports'))==2
+            payload=valid.model_dump()
+            if len(requests)==1 or not repair:
+                if wrong_field=='summary':payload['summary_en']='Production deployment is approved.'
+                else:payload['decisions'][0]['text_en']='Production deployment is approved.'
+            return sse(payload)
+        client.app.state.provider.transport=httpx.MockTransport(handler)
+        revision=client.get(f'/api/v1/meetings/{id}').json()['transcript_revision']
+        response=client.post(f'/api/v1/meetings/{id}/reports',json={'transcript_revision':revision})
+        assert response.status_code==202,response.text
+        job=until(client,'/api/v1/jobs/'+response.json()['id'],lambda j:j['status'] in ('ready','error'))
+        assert len(requests)==2
+        ready=[event for event in events if event['type']=='report.ready']
+        assert len(ready)==(1 if repair else 0)
+        assert 'Production deployment is approved.' not in json.dumps(ready)
+        assert job['status']==('ready' if repair else 'error')
+        if not repair:assert job['error']['code']=='REPORT_CLAIM'
+        assert client.get('/api/v1/reports/'+saved['id']).json()==before
+>       assert client.get('/api/v1/reports/'+saved['id']+'/export?format=json').json()==before
+E       AssertionError: assert {'created_at'...', ...}], ...} == {'created_at'...', ...}], ...}
+E         
+E         Omitting 13 identical items, use -vv to show
+E         Right contains 4 more items:
+E         {'historical_payload': None,
+E          'memory_revision': None,
+E          'memory_snapshot': [],
+E          'reconciliation': None}
+E         Use -v to get more diff
+
+backend\tests\test_phase1_pipeline.py:134: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+---- generated xml file: D:\meetEX\docs\evidence\phase4\backend-first.xml -----
+=========================== short test summary info ===========================
+FAILED backend/tests/test_phase1_pipeline.py::test_report_repair_preserves_user_version_and_only_publishes_valid_report[summary-False]
+FAILED backend/tests/test_phase1_pipeline.py::test_report_repair_preserves_user_version_and_only_publishes_valid_report[summary-True]
+FAILED backend/tests/test_phase1_pipeline.py::test_report_repair_preserves_user_version_and_only_publishes_valid_report[item-False]
+FAILED backend/tests/test_phase1_pipeline.py::test_report_repair_preserves_user_version_and_only_publishes_valid_report[item-True]
+4 failed, 297 passed, 1 warning in 19.57s

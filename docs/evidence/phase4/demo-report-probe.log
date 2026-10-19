@@ -1,0 +1,47 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+___ test_demo_report_keeps_manual_cancel_as_user_edit_not_participant_fact ____
+
+store = <app.storage.Storage object at 0x00000188837C8E10>
+meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+
+    async def test_demo_report_keeps_manual_cancel_as_user_edit_not_participant_fact(store,meeting):
+        from app.meeting_memory import edit
+        apply(store,meeting,'I will review API-71 by tomorrow.',segment='task')
+        apply(store,meeting,'Confirmed: test API-17 in staging.',segment='decision',speaker='Client',seq=2)
+        apply(store,meeting,'We have NOT approved test API-17 in staging.',segment='decision',revision=2,speaker='Client',seq=3)
+        m=store.meeting(meeting['id']);db=store.db_for(m['id']);item=store.memory(m['id'])[0]
+        with db:
+            edit(db,m,item['id'],dict(text=item['text'],owner='Alex',raw_due_text='Maybe Friday',status='cancelled'),item['version']);m['demo']=True;store.save_meeting(db,m)
+>       service,_,_,report=await generate(store,m)
+                           ^^^^^^^^^^^^^^^^^^^^^^^
+
+backend\tests\test_phase4_reports.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+store = <app.storage.Storage object at 0x00000188837C8E10>
+meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+
+    async def generate(store,meeting):
+        provider=ReportProvider();service=Service(store,Retrieval(store,Semantic(Path('.'))),provider)
+        store.control(meeting['id'],dict(action='end',idempotency_key=uid()));job=service.report(meeting['id'],store.meeting(meeting['id'])['transcript_revision'])
+        for _ in range(300):
+            if job['status'] in ('ready','error'):break
+            await asyncio.sleep(.01)
+>       assert job['status']=='ready',job
+E       AssertionError: {'duration_ms': 28.269300004467368, 'error': {'code': 'REPORT_CLAIM', 'message': 'Confirmation/status does not match t...ment.', 'request_id': None, 'retryable': False}, 'http_attempts': 0, 'id': '6b21a5b3-2834-4296-86a2-1106b6ef80b9', ...}
+E       assert 'error' == 'ready'
+E         
+E         - ready
+E         + error
+
+backend\tests\test_phase4_reports.py:25: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED backend/tests/test_phase4_reports.py::test_demo_report_keeps_manual_cancel_as_user_edit_not_participant_fact
+1 failed, 1 warning in 1.11s

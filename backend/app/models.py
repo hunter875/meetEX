@@ -94,6 +94,21 @@ class SuggestInput(Strict):
     question: str = Field(default='', max_length=2000)
     response_mode: Literal['auto', 'fast', 'explain', 'deep', 'clarify'] = 'auto'
 
+class MemoryPatch(Strict):
+    expected_version:int=Field(ge=1)
+    text:str|None=Field(default=None,min_length=1,max_length=4000)
+    owner:str|None=Field(default=None,max_length=200)
+    raw_due_text:str|None=Field(default=None,max_length=150)
+    status:str|None=Field(default=None,max_length=30)
+
+class MemoryCreate(Strict):
+    kind:Literal['requirement','proposal','decision','action_item','open_question','spoken_fact']
+    text:str=Field(min_length=1,max_length=4000)
+    status:str=Field(max_length=30)
+    entity:str|None=Field(default=None,max_length=100)
+    owner:str|None=Field(default=None,max_length=200)
+    raw_due_text:str|None=Field(default=None,max_length=150)
+
 class RoutingDecision(Strict):
     version: str = 'rules-v1'
     route: Literal['fast', 'explain', 'deep', 'clarify', 'listen']
@@ -196,6 +211,36 @@ class SegmentDTO(DTO):
     observed_from:str
     observed_to:str
 
+class EvidenceRefDTO(Strict):
+    segment_id:str
+    revision:int=Field(ge=1)
+
+class MemoryItemDTO(DTO):
+    id:str
+    meeting_id:str
+    project_id:str
+    kind:str
+    text:str
+    entity:str|None=None
+    action:str|None=None
+    environment:str|None=None
+    speaker:str|None=None
+    owner:str|None=None
+    status:str
+    raw_due_text:str|None=None
+    normalized_due:str|None=None
+    due_rule:str
+    due_anchor:str|None=None
+    origin:str
+    evidence:list[EvidenceRefDTO]
+    relations:list[dict[str,str]]
+    version:int
+
+class MemorySnapshotDTO(DTO):
+    revision:int
+    policy:str
+    items:list[MemoryItemDTO]
+
 class CitationDTO(DTO):
     id:str
     source_id:str
@@ -232,6 +277,9 @@ class AISnapshot(DTO):
     prompt_version:str|None=None
     response_mode:str='auto'
     capture_cursor:int|None=None
+    structured_memory:list[dict[str,Any]]=Field(default_factory=list)
+    memory_revision:int=0
+    ledger_omitted_count:int=0
 
 class CaptionAckDTO(DTO):
     type: Literal['caption.ack']
@@ -301,6 +349,13 @@ class ReportDTO(DTO):
     mode:str
     created_at:str
     parent_id:str|None
+    memory_snapshot:list[MemoryItemDTO]=Field(default_factory=list)
+    memory_revision:int|None=None
+    evidence_snapshot:list[SegmentDTO]=Field(default_factory=list)
+    evidence_changed:bool=False
+    historical_payload:ReportPayload|None=None
+    edit_provenance:dict[str,Any]|None=None
+    reconciliation:dict[str,Any]|None=None
 
 class MeetingDTO(DTO):
     id:str
@@ -335,6 +390,7 @@ class SchedulerStateDTO(DTO):
 
 class SnapshotDTO(MeetingDTO):
     scheduler:SchedulerStateDTO|None=None
+    memory_revision:int=0
     segments:list[SegmentDTO]
     suggestions:list[SuggestionDTO]
     requests:list[AIRequestDTO]

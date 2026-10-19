@@ -1,0 +1,30 @@
+.F.                                                                      [100%]
+================================== FAILURES ===================================
+______ test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup _______
+
+store = <app.storage.Storage object at 0x00000239546325D0>
+meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+
+    async def test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup(store,meeting):
+        from app.retrieval import Retrieval,Semantic
+        from pathlib import Path
+        import threading
+        store.set_settings(dict(semantic_enabled=True));began=threading.Event();release=threading.Event()
+        class Held:
+            ready=True
+            def query(self,text):began.set();release.wait(2);return [1.,0.]
+        retrieval=Retrieval(store,Held());lookup=asyncio.create_task(retrieval.search_async(meeting['project_id'],'private meeting phrase API-17'))
+>       assert await asyncio.to_thread(began.wait,1)
+E       assert False
+
+backend\tests\test_phase4_api.py:37: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+------ generated xml file: D:\meetEX\docs\evidence\phase4\api-first.xml -------
+=========================== short test summary info ===========================
+FAILED backend/tests/test_phase4_api.py::test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup
+1 failed, 2 passed, 1 warning in 2.94s

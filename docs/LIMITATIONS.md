@@ -1,5 +1,11 @@
 # Giới hạn và phần chờ kiểm chứng
 
+## Phase 4 — giới hạn bộ nhớ/báo cáo
+
+[Phase 4 PARTIAL](PHASE4_REPORT.md). 38/38 items, 11/11 owner, 6/6 normalized due trong nhãn synthetic không là accuracy cuộc họp thật. Grammar chủ yếu Anh/task IDs/action/environment rõ; bare Yes không tự bind owner, authority/coreference/paraphrase/multilingual còn mở. Ngày mơ hồ giữ raw, past due không đổi state. Fact participant phát biểu không là fact đã xác minh; chưa tìm được mọi factual/source contradiction. Compound clause có thể giữ unresolved thay vì tách đủ task.
+
+Memory revision strict có thể stale thêm output; relevance/budget có thể bỏ item. Report canonical summary chỉ phần ledger nhận diện; map claims ngoài scope vẫn có giới hạn Phase 1, không bảo đảm completeness. User-edit memory xuất riêng, không là participant speech. 321 turns/16 maps synthetic không phải nghiệm thu họp nhiều giờ. Max 64 maps × 90 s/job vẫn cần total-budget/concurrency hardening. RAM test không chứng nhận chống OS swap/dump. Model-quality và Meet thật mới NOT TESTED, paid calls mới 0.
+
 Phase 3 **PARTIAL**: [báo cáo](PHASE3_REPORT.md). Logical request giảm 18,37% chưa đạt 20%; Auto đợi manual chậm 2,9 s chưa đạt 500 ms mọi câu ngắn. 39/39 chỉ là eligible đã attempted trên synthetic replay, không phải câu trả lời hữu ích. Card dedup rất hẹp, chưa xử lý paraphrase/topic; rules có thể miss indirect questions/tiếng Việt có dấu/cách nói mới. Focus tối đa 32 (vượt trả lỗi), retrieval tối đa 8 distinct inflight/1 worker, query LRU 128 và matrices 2 bộ không giới hạn byte RSS. Corpus 10k dùng vectors điều khiển; E5 thật chỉ 12 chunks. Keyword cold và E5 p95 có hồi quy được công khai. Narrow freshness chỉ cho cosmetic/new small talk khi revision log liên tục đủ; substantive changes vẫn stale. Không có paid provider call mới hoặc Meet thật được nghiệm thu.
 
 Trạng thái: **implementation chạy local, chờ nghiệm thu live**. Không gọi đây là MVP VERIFIED. P2 connector/DB sống/PDF-DOCX/installer chưa triển khai và không có nút giả đã kết nối.
@@ -21,9 +27,9 @@ Giai đoạn 1 đã chặn ba probe gốc và thêm đối chiếu claim có gi�
 
 Validation chặn schema, ID ngoài scope, revision sai, claim deploy đối nghịch một số mẫu phủ định, owner/date thiếu bằng chứng và một số confirmation mơ hồ. Những guard này có thể bảo thủ và **không chứng minh mọi claim đúng nghĩa**. ID nguồn hợp lệ chỉ chứng minh nguồn tồn tại. Cần mở excerpt/transcript và xem lại trước khi nói/gửi báo cáo.
 
-Live context dùng cửa sổ gần đây cùng nguồn chọn lọc, glossary và tối đa 8 đoạn memory do người dùng chọn rõ là đã xác nhận. Budget hiện giới hạn ký tự JSON (18.000), không phải tokenizer DeepSeek chính xác. Memory dài vượt budget có count bị bỏ, không cắt ngầm một câu thành fact. Caption sửa memory thì bỏ xác nhận và đánh dấu card liên quan stale.
+Live context dùng cửa sổ gần đây cùng nguồn chọn lọc, glossary, legacy confirmed segments và structured ledger Phase 4 được chọn theo relevance/state. Budget hiện giới hạn ký tự JSON (18.000), không phải tokenizer DeepSeek chính xác. Memory dài vượt budget có count bị bỏ, không cắt ngầm một câu thành fact. Caption sửa memory thì bỏ xác nhận và đánh dấu card liên quan stale.
 
-Streaming được buffer rồi validate JSON; không hiển thị token preview. Suggestion/report vi phạm kiểm tra evidence/ngữ nghĩa có tối đa một lượt yêu cầu model sửa từ cùng transcript/sources, có thêm chi phí/latency. Vẫn sai thì báo lỗi, không xuất bản bản nháp bị chặn. JSON sai schema vẫn lỗi ngay. Guard không chứng minh mọi claim đúng; kiểm tra coverage hiện nhận một số cam kết tiếng Anh “I will”, không phải bộ phân tích mọi ngôn ngữ. Report dài map theo turn/overlap và merge/dedup theo text/evidence; summary các phần được ghép, chưa phải một lượt tổng hợp ngữ nghĩa cuối riêng.
+Streaming được buffer rồi validate JSON; không hiển thị token preview. Suggestion/report vi phạm kiểm tra evidence/ngữ nghĩa có tối đa một lượt yêu cầu model sửa từ cùng transcript/sources, có thêm chi phí/latency. Vẫn sai thì báo lỗi, không xuất bản bản nháp bị chặn. JSON sai schema vẫn lỗi ngay. Guard không chứng minh mọi claim đúng; kiểm tra coverage hiện nhận một số cam kết tiếng Anh “I will”, không phải bộ phân tích mọi ngôn ngữ. Report dài map theo turn/overlap và merge/dedup theo text/evidence; trước Phase 4 chỉ ghép map summaries. Phase 4 thêm deterministic ledger reconciliation/current-history; chưa là tổng hợp ngữ nghĩa tổng quát bằng model.
 
 Backend cấp ID riêng cho các mục sau merge, tránh ID model lặp giữa các map. Các câu hỏi tương tự nhưng diễn đạt khác vẫn có thể lặp; việc phân loại requirement/open question có thể cần chỉnh tay. Kiểm tra nhận việc dùng một số mẫu câu của đúng speaker; không chứng minh mọi lời hứa đều khớp chính xác một task đã nhận.
 

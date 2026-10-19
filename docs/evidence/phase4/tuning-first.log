@@ -1,0 +1,50 @@
+Traceback (most recent call last):
+  File "D:\meetEX\scripts\evaluate_phase4.py", line 70, in run
+    evidence_correct+=bool(valid and expected_refs[index] in refs)
+                                     ~~~~~~~~~~~~~^^^^^^^
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\minhl\\AppData\\Local\\Temp\\meet-phase4-rhb8vq2a\\staging-production\\copilot.sqlite3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\meetEX\scripts\evaluate_phase4.py", line 77, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--split',choices=['tuning','evaluation','all'],default='all');args=parser.parse_args();asyncio.run(run(args.output,args.split))
+                                                                                                                                                                                               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "D:\meetEX\scripts\evaluate_phase4.py", line 50, in run
+    with tempfile.TemporaryDirectory(prefix='meet-phase4-') as tmp:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 909, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\minhl\\AppData\\Local\\Temp\\meet-phase4-rhb8vq2a\\staging-production\\copilot.sqlite3'

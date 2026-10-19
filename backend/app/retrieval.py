@@ -1,5 +1,6 @@
 from __future__ import annotations
 import json
+import hashlib
 import re
 import time
 import asyncio
@@ -48,6 +49,9 @@ class Retrieval:
     def __init__(self,store,semantic):
         self.store=store;self.semantic=semantic;self.timings=[]
         self._executor=None;self._inflight={};self._cache=OrderedDict();self._vectors=OrderedDict();self._vector_lock=threading.RLock();self.cache_hits=0
+        self._cache_epoch=0
+    def forget_queries(self):
+        self._cache_epoch+=1;self._cache.clear();self._vectors=OrderedDict()
     async def aclose(self):
         if self._executor:
             executor,self._executor=self._executor,None
@@ -59,10 +63,12 @@ class Retrieval:
         project=self.store.project(project_id);settings=self.store.settings()
         sources=self.store.sources(project_id)
         generation=tuple(sorted((s['id'],s['generation'],s.get('stale',False)) for s in sources))
-        key=(project_id,query,limit,generation,json.dumps(project['glossary'],sort_keys=True),settings['semantic_enabled'],self.semantic.ready)
+        key=(project_id,hashlib.sha256(query.encode('utf8')).hexdigest(),limit,generation,json.dumps(project['glossary'],sort_keys=True),settings['semantic_enabled'],self.semantic.ready)
         if key in self._cache:
             self.cache_hits+=1;value=json.loads(json.dumps(self._cache[key]));value['cache_hit']=True;self._cache.move_to_end(key);value['worker_duration_ms']=value['duration_ms'];value['duration_ms']=(time.perf_counter()-began)*1000;self.timings.append(value['duration_ms']);self.timings=self.timings[-1000:];return value
         if key not in self._inflight:
+            cache_epoch=self._cache_epoch
+            vector_cache=self._vectors
             if len(self._inflight)>=8:raise AppError('RETRIEVAL_BUSY','Retrieval capacity reached; retry shortly',503,True)
             if self._executor is None:self._executor=ThreadPoolExecutor(max_workers=1,thread_name_prefix='meet-retrieval')
             path=self.store.disk.execute('PRAGMA database_list').fetchone()['file']
@@ -73,7 +79,7 @@ class Retrieval:
                     source_rows={r['id']:json.loads(r['payload']) for r in db.execute('SELECT id,payload FROM sources WHERE project_id=?',(project_id,))}
                     current_project=dict(db.execute('SELECT * FROM projects WHERE id=?',(project_id,)).fetchone());current_project['glossary']=json.loads(current_project['glossary'])
                     view=SimpleNamespace(disk=db,project=lambda id:current_project,settings=lambda:settings,source=lambda id:source_rows[id])
-                    worker=Retrieval(view,self.semantic);worker._vectors=self._vectors;worker._vector_lock=self._vector_lock
+                    worker=Retrieval(view,self.semantic);worker._vectors=vector_cache;worker._vector_lock=self._vector_lock
                     value=worker.search(project_id,query,limit);value['index_generation']={id:s['generation'] for id,s in source_rows.items()};return value
                 finally:db.close()
             future=asyncio.get_running_loop().run_in_executor(self._executor,isolated)
@@ -82,7 +88,7 @@ class Retrieval:
                 self._inflight.pop(key,None)
                 if not done.cancelled() and done.exception() is None:
                     value=done.result()
-                    if tuple(sorted(value['index_generation'].items()))==tuple(sorted((s['id'],s['generation']) for s in sources)):
+                    if cache_epoch==self._cache_epoch and tuple(sorted(value['index_generation'].items()))==tuple(sorted((s['id'],s['generation']) for s in sources)):
                         self._cache[key]=value;self._cache.move_to_end(key)
                         while len(self._cache)>128:self._cache.popitem(last=False)
             future.add_done_callback(completed)

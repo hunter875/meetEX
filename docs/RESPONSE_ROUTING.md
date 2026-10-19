@@ -1,5 +1,9 @@
 # Phân loại mức xử lý câu hỏi
 
+## Phase 4 — memory trong routing/live
+
+Snapshot live có structured ledger còn hiệu lực/cần làm rõ và raw evidence revision, cùng source retrieval riêng. Memory revision vào hash/freshness; old card action giữ snapshot với cảnh báo stale. Không lấy user note/AI proposal làm participant acceptance. Guard bổ sung chặn current claims trái cancelled/disputed và buộc quy nguồn user edit; mọi route vẫn qua guard Phase 1. [Budget/cadence/API/phạm vi](MEETING_MEMORY.md). Bare Yes/authority/coreference chưa được tự xác nhận, không trả confidence chưa hiệu chuẩn.
+
 Trạng thái: đã triển khai quy tắc local `rules-v1`, API xem trước, scheduler/provider và giao diện. Chưa nghiệm thu Meet thật hoặc đo chất lượng đầu ra/độ trễ bằng provider thật sau thay đổi này. Không thêm lượt gọi model để phân loại.
 
 ## Luồng xử lý

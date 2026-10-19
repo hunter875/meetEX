@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-19",
+  "timezone": "America/Los_Angeles",
+  "base_commit": "af868491a77a168e3ab68b457bb6a10c65f0c3f7",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)]",
+    "node": "v22.20.0",
+    "cpu": "AMD Ryzen 7 5800H",
+    "cores": 8,
+    "logical_cpus": 16
+  },
+  "checks": [
+    {
+      "name": "baseline backend",
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q --junitxml=docs/evidence/phase4/baseline-backend.xml",
+      "exit_code": 0,
+      "evidence": "baseline-backend.xml",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "baseline frontend",
+      "command": "node node_modules/vitest/vitest.mjs run --root extension --reporter=json --outputFile=../docs/evidence/phase4/baseline-frontend.json",
+      "exit_code": 0,
+      "evidence": "baseline-frontend.json",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "backend final",
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q --junitxml=docs/evidence/phase4/backend-final.xml",
+      "exit_code": 0,
+      "evidence": "backend-final.xml",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "frontend final",
+      "command": "node node_modules/vitest/vitest.mjs run --root extension --reporter=json --outputFile=../docs/evidence/phase4/frontend-final.json",
+      "exit_code": 0,
+      "evidence": "frontend-final.json",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "typecheck",
+      "command": "npm run typecheck",
+      "exit_code": 0,
+      "evidence": "typecheck-final.log",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "exit_code": 0,
+      "evidence": "build-final.log",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "contracts",
+      "command": "npm run contracts",
+      "exit_code": 0,
+      "evidence": "contracts-final.log",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "browser final",
+      "command": "MEET_E2E_EVIDENCE_DIR=docs/evidence/phase4/browser-final MEET_E2E_RESULTS_FILE=docs/evidence/phase4/browser-final-results.json node node_modules/@playwright/test/cli.js test",
+      "exit_code": 0,
+      "evidence": "browser-final-results.json",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "semantic regression",
+      "command": ".venv/Scripts/python.exe scripts/evaluate_phase1.py --output docs/evidence/phase4/semantic-regression.json --base-commit af868491a77a168e3ab68b457bb6a10c65f0c3f7 --starting-branch codex/phase3-orchestration",
+      "exit_code": 0,
+      "evidence": "semantic-regression.json",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "scheduler regression",
+      "command": ".venv/Scripts/python.exe scripts/benchmark_phase3.py --output docs/evidence/phase4/orchestration-regression.json",
+      "exit_code": 0,
+      "evidence": "orchestration-regression.json",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "paired old backend",
+      "command": "MEET_PHASE4_BACKEND=.local/phase4-baseline/backend .venv/Scripts/python.exe scripts/evaluate_phase4.py --output docs/evidence/phase4/evaluation-baseline.json",
+      "exit_code": 0,
+      "evidence": "evaluation-baseline.json",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "paired new backend",
+      "command": ".venv/Scripts/python.exe scripts/evaluate_phase4.py --output docs/evidence/phase4/evaluation-after.json",
+      "exit_code": 0,
+      "evidence": "evaluation-after.json",
+      "provenance": "Completed tool execution; this manifest does not rerun paid providers"
+    },
+    {
+      "name": "Phase 4 audit",
+      "command": ".venv/Scripts/python.exe scripts/review_phase4.py",
+      "evidence": "review.json",
+      "exit_code": 0,
+      "result": "PARTIAL"
+    },
+    {
+      "name": "documentation generation",
+      "command": ".venv/Scripts/python.exe scripts/documentation.py",
+      "exit_code": 0
+    },
+    {
+      "name": "documentation QA",
+      "command": ".venv/Scripts/python.exe scripts/check_docs.py",
+      "evidence": "documentation-qa.json",
+      "exit_code": 0
+    }
+  ],
+  "regression": {
+    "backend": 331,
+    "frontend": 60,
+    "browser": 6
+  },
+  "provider_paid_calls": 0,
+  "model_quality": "NOT TESTED",
+  "live_meet": "NOT TESTED",
+  "artifact_hash_format": "utf8-lf",
+  "artifact_sha256": {
+    "backend-final.xml": "4830489a8a4e9738c8aa31df8af2b28f021e5c540686493ed567d074e55f6ad8",
+    "frontend-final.json": "b52079b2c644328b33314922c106e15472f0e7faed70a1d3fe122097436d9a8b",
+    "browser-final-results.json": "9836bfed55c88a711dd81c32c527d3d1de5fce49e782870305e9d614359e739e",
+    "evaluation-baseline.json": "6a8bb126dbe338fd17f2a188f262c237cd3c732d5f5d7f83d97cc34a6517fcec",
+    "evaluation-after.json": "158f75b3d52c6dd224284435338e136ce3b0cd995fee1f2d16e5f94d5f8e694c",
+    "orchestration-regression.json": "403866aaa6fc1cf21259f0056857e0229b22a6d51b43646f323598a67a660f10",
+    "semantic-regression.json": "e2bfe0ed9bec82d385842639044384006fdaf207bd74d01d6f1825091e8572b9"
+  },
+  "notes": [
+    "Baseline and after use the same immutable fixture/harness with a frozen source archive for old backend. Measured sequentially after test/build load stopped.",
+    "Initial item/state labels predeclared; graph assertions added after initial engine draft and not claimed independently held-out.",
+    "first/candidate/focused artifacts preserve failed product/harness assertions and retests. Phase 1-3 assertions not weakened; TS fixture only gains additive DTO defaults.",
+    "After full browser run, final edits add backend provenance/budget/legacy-memory guards covered by final backend suite, and UI copy only (rebuilt). No new UI/API behavior or schema change after six-case E2E.",
+    "Model extraction/generation is intercepted. Tokens/cost unknown, cancelled attempts not assumed free.",
+    "Overall result remains PARTIAL for bounded extraction/linking/completeness and real model/Meet gates.",
+    "Final six-case E2E also exercises adding a user-origin proposal in the hypotheses bucket; model-origin forgery/owner/deadline guard retained. Final named-owner live check preserves Vietnamese first-person compatibility (82 semantic fixtures).",
+    "Final backend 329 passed; 60 frontend and all six E2E passed. Vietnamese self-pronoun false rejection captured in semantic-named-first.json then corrected without weakening self-commitment proof. Final semantic 82/82 and three original probes blocked.",
+    "Final 331 backend includes immutable speech bases beneath user overlays and correction lineage; superseded decisions stay historical after successor edits and later captions. Documentation updater rerun with explicit UTF-8 after default Windows encoding error; final QA verifies evidence and source hashes."
+  ]
+}

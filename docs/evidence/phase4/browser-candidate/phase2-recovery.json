@@ -1,0 +1,3421 @@
+{
+  "provenance": "synthetic calibrated DOM, genuine MV3 Chromium, real FastAPI/SQLite, httpx.MockTransport SSE provider, zero paid/network provider calls",
+  "browser": "141.0.7390.37",
+  "faults": [
+    {
+      "outage_ms": 5000,
+      "transcript_recovered": true,
+      "unacked": 0
+    },
+    {
+      "outage_ms": 20000,
+      "transcript_recovered": true,
+      "unacked": 0
+    }
+  ],
+  "snapshot": {
+    "id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+    "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+    "title": "SYNTHETIC PHASE 2 RECOVERY",
+    "timezone": "America/Los_Angeles",
+    "persistence_mode": "local",
+    "demo": false,
+    "meeting_key": "/phase2-room",
+    "status": "active",
+    "started_at": "2026-10-19T11:54:13.342080+00:00",
+    "ended_at": null,
+    "transcript_revision": 15,
+    "capture_status": "observing",
+    "last_caption_at": "2026-10-19T11:55:04.562Z",
+    "self_speaker": "Client",
+    "auto_mode": true,
+    "confirmed_segment_ids": [],
+    "scheduler": {
+      "state": "waiting",
+      "reason": "speaker_unfinished",
+      "policy_version": "content-trigger-v1"
+    },
+    "memory_revision": 6,
+    "segments": [
+      {
+        "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+        "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+        "revision": 3,
+        "speaker": "Client",
+        "text": "Timeout 50.5 ms API-71",
+        "stable": true,
+        "observed_from": "2026-10-19T11:54:13.454Z",
+        "observed_to": "2026-10-19T11:54:14.523Z"
+      },
+      {
+        "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+        "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+        "revision": 2,
+        "speaker": "Client",
+        "text": "During outage 5000 NOT API-17",
+        "stable": true,
+        "observed_from": "2026-10-19T11:54:14.898Z",
+        "observed_to": "2026-10-19T11:54:15.926Z"
+      },
+      {
+        "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+        "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+        "revision": 2,
+        "speaker": "Client",
+        "text": "During outage 20000 NOT API-17",
+        "stable": true,
+        "observed_from": "2026-10-19T11:54:22.983Z",
+        "observed_to": "2026-10-19T11:54:24.019Z"
+      },
+      {
+        "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+        "revision": 4,
+        "speaker": "Another client",
+        "text": "Could you explain the revised next step?",
+        "stable": true,
+        "observed_from": "2026-10-19T11:54:56.687Z",
+        "observed_to": "2026-10-19T11:55:00.645Z"
+      },
+      {
+        "id": "7c9f0895-6a47-4c4f-a6a4-d6d09a851076",
+        "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+        "revision": 2,
+        "speaker": "Another client",
+        "text": "Which option should we choose next?",
+        "stable": true,
+        "observed_from": "2026-10-19T11:55:00.925Z",
+        "observed_to": "2026-10-19T11:55:01.944Z"
+      },
+      {
+        "id": "69341cdf-fb42-488c-a370-467f35926c1a",
+        "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+        "revision": 1,
+        "speaker": "Another client",
+        "text": "Could you clarify after the panel closes?",
+        "stable": false,
+        "observed_from": "2026-10-19T11:55:02.992Z",
+        "observed_to": "2026-10-19T11:55:02.992Z"
+      },
+      {
+        "id": "dac2fe24-813d-42dc-876d-e26395f82812",
+        "capture_epoch": "0b970872-50ac-46b5-8699-06e28716c125",
+        "revision": 1,
+        "speaker": "Fresh speaker",
+        "text": "Fresh after reload",
+        "stable": false,
+        "observed_from": "2026-10-19T11:55:04.562Z",
+        "observed_to": "2026-10-19T11:55:04.562Z"
+      }
+    ],
+    "suggestions": [
+      {
+        "id": "5663d1e5-959d-466e-b37c-0c1b6cfe3015",
+        "request_id": "b86f1d79-5eca-44a3-83f5-be095c554eb8",
+        "created_at": "2026-10-19T11:54:58.567867+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+            "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+            "d573c797-4066-4e81-9147-e0d5554ec6de",
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 0",
+          "input_hash": "d3505b72774a139ae98af968f8b8b19e2a62a61f0f4b78e9cc12317a0f52fb68",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.11969998013228178
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 53.33610001252964
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 19.705799990333617,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "cold",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.623899971600622
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 21.338399965316057
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 22.055599954910576
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 22.976199979893863
+            }
+          ],
+          "provider_ms": 14.700100000482053,
+          "validation_ms": 1.250099972821772,
+          "stable_to_scheduled_ms": 798.4910000232048,
+          "scheduler_wait_ms": 4.371299990452826,
+          "retrieval_ms": 53.33610001252964,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "d0edf80a-816b-4abe-bc70-8eb3f2e5963e",
+        "request_id": "78f48a27-a1a4-46d4-9292-bb60e6cb63a1",
+        "created_at": "2026-10-19T11:54:58.866163+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+            "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+            "d573c797-4066-4e81-9147-e0d5554ec6de",
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 1",
+          "input_hash": "c44b6080f91625c03d1d02a28a72ed5a4501a8fd44a6daf2c38b7e3d3658a1de",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.06550003308802843
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 33.0812000320293
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 7.4754999950528145,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 8.486199949402362
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 12.006299977656454
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 12.427799985744059
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 13.193299993872643
+            }
+          ],
+          "provider_ms": 3.5119999665766954,
+          "validation_ms": 0.9979999740608037,
+          "stable_to_scheduled_ms": 1106.4354000263847,
+          "scheduler_wait_ms": 6.940699997358024,
+          "retrieval_ms": 33.0812000320293,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "7ad37619-a284-4650-930c-ba20b3ecf31d",
+        "request_id": "d50c7120-5f54-452b-bfc3-8f5d1a968f28",
+        "created_at": "2026-10-19T11:54:59.072402+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+            "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+            "d573c797-4066-4e81-9147-e0d5554ec6de",
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 2",
+          "input_hash": "d726e905b3c6b36fe609216584a247c2c5adf005e69d242238844d9e0ec9c612",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.09739998495206237
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 24.860400008037686
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 7.585200015455484,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 5.596499948296696
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 9.137499961070716
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 9.668699989560992
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 10.410099988803267
+            }
+          ],
+          "provider_ms": 3.5357000306248665,
+          "validation_ms": 1.0885000228881836,
+          "stable_to_scheduled_ms": 1315.6530000269413,
+          "scheduler_wait_ms": 3.8647999754175544,
+          "retrieval_ms": 24.860400008037686,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "bc30dc67-27dc-46f0-97fb-e5b0ebf755e9",
+        "request_id": "885d6d84-60cd-48bf-a78f-74cc71377eee",
+        "created_at": "2026-10-19T11:55:00.319660+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+            "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+            "d573c797-4066-4e81-9147-e0d5554ec6de",
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_SLOW_STALE",
+          "input_hash": "35fd320eeaec733147f36d77cd374872a14674cd4a7d7635d6777fe275347195",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.10260002454742789
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 45.45229999348521
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 815.8889999613166,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "stale",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.300900015048683
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 817.8516000043601
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 818.5546000022441
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 819.3025999935344
+            }
+          ],
+          "provider_ms": 811.5420999820344,
+          "validation_ms": 1.2045000330545008,
+          "stable_to_scheduled_ms": 1754.0599000058137,
+          "scheduler_wait_ms": 4.45080001372844,
+          "retrieval_ms": 45.45229999348521,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "d0bb6803-36c4-40c3-a492-b2574a735969",
+        "request_id": "badc356f-5bf2-4e75-a9f2-00fb576fe58b",
+        "created_at": "2026-10-19T11:55:00.772326+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 11,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+            "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+            "d573c797-4066-4e81-9147-e0d5554ec6de",
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 11,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:55:00.645Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY_AFTER_CANCEL",
+          "input_hash": "39d608f2b8bd3cf96dbc61d4b3f80a1cda5f400f08064ed9ba82049e206db1c5",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.11790002463385463
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 48.072799982037395
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 9.426300006452948,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 13.857199985068291
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 17.88439997471869
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 18.505499989259988
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 19.457100017461926
+            }
+          ],
+          "provider_ms": 4.01959998998791,
+          "validation_ms": 1.242100028321147,
+          "stable_to_scheduled_ms": 82.64089998556301,
+          "scheduler_wait_ms": 11.40249997843057,
+          "retrieval_ms": 48.072799982037395,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "e38a05a2-79dc-4866-8e5c-94806ced4787",
+        "request_id": "ea52e888-5299-47b0-be85-116baa855ad8",
+        "created_at": "2026-10-19T11:55:02.138506+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 13,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+            "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+            "d573c797-4066-4e81-9147-e0d5554ec6de",
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+            "7c9f0895-6a47-4c4f-a6a4-d6d09a851076"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 13,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:55:00.645Z"
+            },
+            {
+              "id": "7c9f0895-6a47-4c4f-a6a4-d6d09a851076",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Which option should we choose next?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:55:00.925Z",
+              "observed_to": "2026-10-19T11:55:01.944Z"
+            }
+          ],
+          "memory": [],
+          "sources": [
+            {
+              "id": "8d6ffbd7-2551-46a6-8098-0f3bcb0d589a",
+              "source_id": "12f01225-f1d7-426f-96e4-56e5324ad825",
+              "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+              "generation": 1,
+              "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
+              "title": "API deployment notes",
+              "kind": "text",
+              "path": "API deployment notes",
+              "line_start": 1,
+              "line_end": 1,
+              "indexed_at": "2026-10-19T11:54:00.047179+00:00",
+              "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
+              "stale": false,
+              "source_changed": false,
+              "source_deleted": false,
+              "section": "",
+              "origin_updated_at": null,
+              "canonical_locator": null,
+              "score": 0.3163934426229508
+            }
+          ],
+          "action": "auto",
+          "question": "",
+          "input_hash": "4656726d909088f21ed676cdfdc939259ac3181df2de49223a6f6678d13d97aa",
+          "routing": {
+            "version": "rules-v1",
+            "route": "deep",
+            "automatic_route": "deep",
+            "source": "automatic",
+            "reasons": [
+              "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+              "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+            ],
+            "risks": [],
+            "evidence_state": "available",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "7c9f0895-6a47-4c4f-a6a4-d6d09a851076"
+            ],
+            "target_min_s": 5,
+            "target_max_s": 10,
+            "classifier_ms": 0.12520002201199532
+          },
+          "focus_segment_ids": [
+            "7c9f0895-6a47-4c4f-a6a4-d6d09a851076"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 8,
+          "structured_memory": [
+            {
+              "id": "2ae4d04c2a11f6e7208b12b2",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "d573c797-4066-4e81-9147-e0d5554ec6de"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "f81bc0e1414bf064fb05b543",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "68537ba6c0459297a2f8321c",
+              "kind": "proposal",
+              "text": "Could you explain the revised next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 4,
+                  "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+                }
+              ],
+              "version": 3,
+              "relations": []
+            },
+            {
+              "id": "bf7e2902d0a53b21550bcc58",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "027017f6-7c59-41ad-ae6c-dd5f459275d1"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Client",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.20100001711398363
+        },
+        "stale": false,
+        "automatic": true,
+        "duration_ms": 13.000699982512742,
+        "timing": {
+          "trigger": "auto",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 5.956400011200458
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 9.925799968186766
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 12.19209999544546
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 13.86909995926544
+            }
+          ],
+          "provider_ms": 3.962900023907423,
+          "validation_ms": 3.7429999792948365,
+          "stable_to_scheduled_ms": 169.85400003613904,
+          "scheduler_wait_ms": 3.9277999894693494,
+          "retrieval_ms": 0.20100001711398363,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      }
+    ],
+    "requests": [
+      {
+        "id": "b86f1d79-5eca-44a3-83f5-be095c554eb8",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 0",
+          "input_hash": "d3505b72774a139ae98af968f8b8b19e2a62a61f0f4b78e9cc12317a0f52fb68",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.11969998013228178
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 53.33610001252964
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "cold",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.623899971600622
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 21.338399965316057
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 22.055599954910576
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 22.976199979893863
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 26.570299989543855
+            }
+          ],
+          "provider_ms": 14.700100000482053,
+          "validation_ms": 1.250099972821772,
+          "stable_to_scheduled_ms": 798.4910000232048,
+          "scheduler_wait_ms": 4.371299990452826,
+          "retrieval_ms": 53.33610001252964,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 791,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:54:58.543813+00:00",
+        "started_at": "2026-10-19T11:54:58.548226+00:00",
+        "duration_ms": 22.172699973452836,
+        "stable_to_request_ms": 802.8623000136577
+      },
+      {
+        "id": "78f48a27-a1a4-46d4-9292-bb60e6cb63a1",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 1",
+          "input_hash": "c44b6080f91625c03d1d02a28a72ed5a4501a8fd44a6daf2c38b7e3d3658a1de",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.06550003308802843
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 33.0812000320293
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 8.486199949402362
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 12.006299977656454
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 12.427799985744059
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 13.193299993872643
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 16.399499960243702
+            }
+          ],
+          "provider_ms": 3.5119999665766954,
+          "validation_ms": 0.9979999740608037,
+          "stable_to_scheduled_ms": 1106.4354000263847,
+          "scheduler_wait_ms": 6.940699997358024,
+          "retrieval_ms": 33.0812000320293,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 791,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:54:58.851768+00:00",
+        "started_at": "2026-10-19T11:54:58.858738+00:00",
+        "duration_ms": 9.434899955522269,
+        "stable_to_request_ms": 1113.3761000237428
+      },
+      {
+        "id": "d50c7120-5f54-452b-bfc3-8f5d1a968f28",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 2",
+          "input_hash": "d726e905b3c6b36fe609216584a247c2c5adf005e69d242238844d9e0ec9c612",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.09739998495206237
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 24.860400008037686
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 5.596499948296696
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 9.137499961070716
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 9.668699989560992
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 10.410099988803267
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 13.47369997529313
+            }
+          ],
+          "provider_ms": 3.5357000306248665,
+          "validation_ms": 1.0885000228881836,
+          "stable_to_scheduled_ms": 1315.6530000269413,
+          "scheduler_wait_ms": 3.8647999754175544,
+          "retrieval_ms": 24.860400008037686,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 791,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:54:59.060987+00:00",
+        "started_at": "2026-10-19T11:54:59.064881+00:00",
+        "duration_ms": 9.586900006979704,
+        "stable_to_request_ms": 1319.5178000023589
+      },
+      {
+        "id": "c55f5ad5-d4be-4edf-b84f-0a6920cab2a4",
+        "action": "suggest",
+        "status": "error",
+        "error": {
+          "code": "PROVIDER_AUTH",
+          "message": "Provider HTTP 401. Check key/model/settings; retry only when appropriate.",
+          "retryable": false,
+          "request_id": "c55f5ad5-d4be-4edf-b84f-0a6920cab2a4"
+        },
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_ERROR",
+          "input_hash": "f4f6845297e93357d2b1ffd2eb3af3bebf3542eb0716785428b011792b0e14a4",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.09109999518841505
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 35.024299984797835
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "error",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 13.487700023688376
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 16.704700014088303
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 17.236199986655265
+            }
+          ],
+          "provider_ms": 3.209600050467998,
+          "validation_ms": 0,
+          "stable_to_scheduled_ms": 1627.5751999928616,
+          "scheduler_wait_ms": 11.564399988856167,
+          "retrieval_ms": 35.024299984797835,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 789,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:54:59.372899+00:00",
+        "started_at": "2026-10-19T11:54:59.384505+00:00",
+        "duration_ms": 5.6573000038042665,
+        "stable_to_request_ms": 1639.1395999817178
+      },
+      {
+        "id": "885d6d84-60cd-48bf-a78f-74cc71377eee",
+        "action": "suggest",
+        "status": "stale",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 9,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:57.738Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_SLOW_STALE",
+          "input_hash": "35fd320eeaec733147f36d77cd374872a14674cd4a7d7635d6777fe275347195",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.10260002454742789
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 45.45229999348521
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "stale",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.300900015048683
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 817.8516000043601
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 818.5546000022441
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 819.3025999935344
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 822.593400022015
+            }
+          ],
+          "provider_ms": 811.5420999820344,
+          "validation_ms": 1.2045000330545008,
+          "stable_to_scheduled_ms": 1754.0599000058137,
+          "scheduler_wait_ms": 4.45080001372844,
+          "retrieval_ms": 45.45229999348521,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 794,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:54:59.499397+00:00",
+        "started_at": "2026-10-19T11:54:59.503874+00:00",
+        "duration_ms": 818.120599957183,
+        "stable_to_request_ms": 1758.5107000195421
+      },
+      {
+        "id": "c4ac300d-cdcc-42f7-8539-cc3d6efd685f",
+        "action": "suggest",
+        "status": "cancelled",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 10,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 3,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": false,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:54:59.586Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_SLOW_CANCEL",
+          "input_hash": "eeb1df8c48e6ccd5e81825ac71deb94a383c7d24c495f448612adfbd28716720",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.06989995017647743
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 5,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 24.011900008190423
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "cancelled",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.816000037360936
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 177.84880002727732
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 179.37530000926927
+            }
+          ],
+          "provider_ms": 171.02449998492375,
+          "validation_ms": 0,
+          "stable_to_scheduled_ms": null,
+          "scheduler_wait_ms": 4.7429000260308385,
+          "retrieval_ms": 24.011900008190423,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 805,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:55:00.580569+00:00",
+        "started_at": "2026-10-19T11:55:00.585348+00:00",
+        "duration_ms": 174.60249998839572
+      },
+      {
+        "id": "badc356f-5bf2-4e75-a9f2-00fb576fe58b",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 11,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:55:00.645Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY_AFTER_CANCEL",
+          "input_hash": "39d608f2b8bd3cf96dbc61d4b3f80a1cda5f400f08064ed9ba82049e206db1c5",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.11790002463385463
+          },
+          "focus_segment_ids": [
+            "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 48.072799982037395
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 13.857199985068291
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 17.88439997471869
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 18.505499989259988
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 19.457100017461926
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 23.506099998485297
+            }
+          ],
+          "provider_ms": 4.01959998998791,
+          "validation_ms": 1.242100028321147,
+          "stable_to_scheduled_ms": 82.64089998556301,
+          "scheduler_wait_ms": 11.40249997843057,
+          "retrieval_ms": 48.072799982037395,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 812,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:55:00.751536+00:00",
+        "started_at": "2026-10-19T11:55:00.762990+00:00",
+        "duration_ms": 12.08100002259016,
+        "stable_to_request_ms": 94.04339996399358
+      },
+      {
+        "id": "ea52e888-5299-47b0-be85-116baa855ad8",
+        "action": "auto",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+          "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+          "transcript_revision": 13,
+          "index_generation": {
+            "12f01225-f1d7-426f-96e4-56e5324ad825": 1
+          },
+          "segments": [
+            {
+              "id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:13.454Z",
+              "observed_to": "2026-10-19T11:54:14.523Z"
+            },
+            {
+              "id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:14.898Z",
+              "observed_to": "2026-10-19T11:54:15.926Z"
+            },
+            {
+              "id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+              "capture_epoch": "517931ad-cc2f-4134-ab4e-e5397c27480a",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:22.983Z",
+              "observed_to": "2026-10-19T11:54:24.019Z"
+            },
+            {
+              "id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:54:56.687Z",
+              "observed_to": "2026-10-19T11:55:00.645Z"
+            },
+            {
+              "id": "7c9f0895-6a47-4c4f-a6a4-d6d09a851076",
+              "capture_epoch": "9c5f781d-e060-4b96-a608-85af0299ee20",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Which option should we choose next?",
+              "stable": true,
+              "observed_from": "2026-10-19T11:55:00.925Z",
+              "observed_to": "2026-10-19T11:55:01.944Z"
+            }
+          ],
+          "memory": [],
+          "sources": [
+            {
+              "id": "8d6ffbd7-2551-46a6-8098-0f3bcb0d589a",
+              "source_id": "12f01225-f1d7-426f-96e4-56e5324ad825",
+              "project_id": "e9250002-923d-40f3-bf31-b8996a8f7857",
+              "generation": 1,
+              "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
+              "title": "API deployment notes",
+              "kind": "text",
+              "path": "API deployment notes",
+              "line_start": 1,
+              "line_end": 1,
+              "indexed_at": "2026-10-19T11:54:00.047179+00:00",
+              "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
+              "stale": false,
+              "source_changed": false,
+              "source_deleted": false,
+              "section": "",
+              "origin_updated_at": null,
+              "canonical_locator": null,
+              "score": 0.3163934426229508
+            }
+          ],
+          "action": "auto",
+          "question": "",
+          "input_hash": "4656726d909088f21ed676cdfdc939259ac3181df2de49223a6f6678d13d97aa",
+          "routing": {
+            "version": "rules-v1",
+            "route": "deep",
+            "automatic_route": "deep",
+            "source": "automatic",
+            "reasons": [
+              "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+              "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+            ],
+            "risks": [],
+            "evidence_state": "available",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "7c9f0895-6a47-4c4f-a6a4-d6d09a851076"
+            ],
+            "target_min_s": 5,
+            "target_max_s": 10,
+            "classifier_ms": 0.12520002201199532
+          },
+          "focus_segment_ids": [
+            "7c9f0895-6a47-4c4f-a6a4-d6d09a851076"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 8,
+          "structured_memory": [
+            {
+              "id": "2ae4d04c2a11f6e7208b12b2",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "d573c797-4066-4e81-9147-e0d5554ec6de"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "f81bc0e1414bf064fb05b543",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "68537ba6c0459297a2f8321c",
+              "kind": "proposal",
+              "text": "Could you explain the revised next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 4,
+                  "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d"
+                }
+              ],
+              "version": 3,
+              "relations": []
+            },
+            {
+              "id": "bf7e2902d0a53b21550bcc58",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "027017f6-7c59-41ad-ae6c-dd5f459275d1"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Client",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.20100001711398363
+        },
+        "timing": {
+          "trigger": "auto",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 5.956400011200458
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 9.925799968186766
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 12.19209999544546
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 13.86909995926544
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 19.287000002805144
+            }
+          ],
+          "provider_ms": 3.962900023907423,
+          "validation_ms": 3.7429999792948365,
+          "stable_to_scheduled_ms": 169.85400003613904,
+          "scheduler_wait_ms": 3.9277999894693494,
+          "retrieval_ms": 0.20100001711398363,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2566,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T11:55:02.121609+00:00",
+        "started_at": "2026-10-19T11:55:02.125568+00:00",
+        "duration_ms": 15.339199977461249,
+        "stable_to_request_ms": 173.7818000256084
+      }
+    ],
+    "reports": [],
+    "gaps": [
+      {
+        "id": "eb280a64-df81-4b5f-bd63-8c60fe1d939b",
+        "reason": "transport_disconnected",
+        "from_at": "2026-10-19T11:54:14.792609+00:00",
+        "to_at": "2026-10-19T11:54:22.324843+00:00",
+        "certainty": "possible"
+      },
+      {
+        "id": "5ad0b008-ad37-4f2b-94da-30a49c867879",
+        "reason": "transport_disconnected",
+        "from_at": "2026-10-19T11:54:22.917590+00:00",
+        "to_at": "2026-10-19T11:54:53.693776+00:00",
+        "certainty": "possible"
+      },
+      {
+        "id": "f72126e3-7cfe-4b3d-be3d-4c92f982ee5f",
+        "reason": "pause",
+        "from_at": "2026-10-19T11:54:54.164190+00:00",
+        "to_at": "2026-10-19T11:54:55.429649+00:00",
+        "certainty": "certain"
+      },
+      {
+        "id": "39566f31-4911-4e5b-9127-accf004c5afe",
+        "reason": "adapter_replaced",
+        "from_at": "2026-10-19T11:55:00.939964+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      },
+      {
+        "id": "51dbb043-ecc9-4a3b-97b3-5f9b8e6b4f38",
+        "reason": "adapter_replaced",
+        "from_at": "2026-10-19T11:55:02.998540+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      },
+      {
+        "id": "fee57728-f2f4-4252-a11b-7558852caa99",
+        "reason": "document_reloaded",
+        "from_at": "2026-10-19T11:55:03.132817+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      },
+      {
+        "id": "181716b8-8d76-4136-b71b-67793fcc8de2",
+        "reason": "interrupted",
+        "from_at": "2026-10-19T11:55:02.992Z",
+        "to_at": "2026-10-19T11:55:03.304934+00:00",
+        "certainty": "certain"
+      },
+      {
+        "id": "18dacd28-ade0-470f-b69b-2691c7721c19",
+        "reason": "document_reloaded",
+        "from_at": "2026-10-19T11:55:03.319995+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      }
+    ],
+    "binding": {
+      "tab_id": 1167570156,
+      "document_id": "C5DBF37791552690502A76B116C710A5",
+      "meeting_key": "/phase2-room"
+    },
+    "epochs": {
+      "517931ad-cc2f-4134-ab4e-e5397c27480a": 7,
+      "9c5f781d-e060-4b96-a608-85af0299ee20": 7,
+      "0b970872-50ac-46b5-8699-06e28716c125": 1
+    },
+    "latest_request": "ea52e888-5299-47b0-be85-116baa855ad8",
+    "pause_from": null,
+    "transport_gap_id": null,
+    "context_revision": 1
+  },
+  "telemetry": {
+    "captureTimings": [
+      13.800000011920929,
+      29.5,
+      14.300000011920929,
+      13.399999976158142,
+      32.10000002384186,
+      9.399999976158142,
+      8.599999964237213,
+      12.400000035762787,
+      18.600000023841858,
+      10.300000011920929,
+      7446.699999988079,
+      6425.099999964237,
+      30724.30000001192,
+      29694.30000001192,
+      10.900000035762787,
+      7.600000023841858,
+      37.5,
+      28.299999952316284,
+      31.600000023841858,
+      8.399999976158142,
+      21.30000001192093,
+      10.600000023841858
+    ],
+    "latencyRecords": [
+      {
+        "clock": "content_monotonic",
+        "event_id": "d415fb7a-230e-441b-afa8-7e6019437177",
+        "meeting_id": "7e742d7d-534a-42b9-a83f-74f4c78f35d7",
+        "observed_to_ack_ms": 13.800000011920929,
+        "revision": 1,
+        "segment_id": "6244053e-cfd8-4b94-9def-f7f3ec3e27b2",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "894a2364-b0e0-495f-86c6-126c216f6df2",
+        "meeting_id": "7e742d7d-534a-42b9-a83f-74f4c78f35d7",
+        "observed_to_ack_ms": 29.399999976158142,
+        "revision": 2,
+        "segment_id": "6244053e-cfd8-4b94-9def-f7f3ec3e27b2",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "da12c0c8-7346-4d30-9bf4-d90342bd71b4",
+        "meeting_id": "7e742d7d-534a-42b9-a83f-74f4c78f35d7",
+        "observed_to_ack_ms": 14.199999988079071,
+        "revision": 3,
+        "segment_id": "6244053e-cfd8-4b94-9def-f7f3ec3e27b2",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "86d4ffd7-8645-4170-9622-ba04ddc12f87",
+        "meeting_id": "7e742d7d-534a-42b9-a83f-74f4c78f35d7",
+        "observed_to_ack_ms": 13.299999952316284,
+        "revision": 4,
+        "segment_id": "6244053e-cfd8-4b94-9def-f7f3ec3e27b2",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "daef1277-55e5-4e47-a55f-be930ae68824",
+        "meeting_id": "7e742d7d-534a-42b9-a83f-74f4c78f35d7",
+        "observed_to_ack_ms": 67.59999996423721,
+        "revision": 5,
+        "segment_id": "6244053e-cfd8-4b94-9def-f7f3ec3e27b2",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "5ae0a546-c64d-49fa-aa5f-558338275b51",
+        "meeting_id": "7e742d7d-534a-42b9-a83f-74f4c78f35d7",
+        "observed_to_ack_ms": 9.299999952316284,
+        "revision": 1,
+        "segment_id": "b7bf2ec2-39b6-4664-8f6b-80e1382c7e82",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "e37c9e26-b7c8-4478-9829-c98def4c0de0",
+        "meeting_id": "7e742d7d-534a-42b9-a83f-74f4c78f35d7",
+        "observed_to_ack_ms": 183.69999998807907,
+        "revision": 2,
+        "segment_id": "b7bf2ec2-39b6-4664-8f6b-80e1382c7e82",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "46c96aea-1d70-4743-8e8c-05e07607fbdf",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 12.399999976158142,
+        "revision": 1,
+        "segment_id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "c043e755-1d28-46c7-b266-61bf3ce0500c",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 18.399999976158142,
+        "revision": 2,
+        "segment_id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "2c61681b-652a-4938-99d9-839eba4daf28",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 1041.699999988079,
+        "revision": 3,
+        "segment_id": "027017f6-7c59-41ad-ae6c-dd5f459275d1",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "66da2c65-6f92-4b74-9065-7c69e10dae58",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 7446.600000023842,
+        "revision": 1,
+        "segment_id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "02dfa15a-2d80-4a45-b35c-a97be9ed6b1e",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 7453.300000011921,
+        "revision": 2,
+        "segment_id": "7d8cdce9-be42-4aff-a7c6-f1e7cfc33532",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "8b704f97-5013-4c51-a8dc-0d44a286e3e2",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 30724.200000047684,
+        "revision": 1,
+        "segment_id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "8467786d-186c-4382-8ebe-01cef95e7d20",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 30730.100000023842,
+        "revision": 2,
+        "segment_id": "d573c797-4066-4e81-9147-e0d5554ec6de",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "23cc28d2-174f-4157-8219-6d6af15ea6cd",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 10.800000011920929,
+        "revision": 1,
+        "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "e85af759-8e1a-412d-9139-0ce105ac455a",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 1058.699999988079,
+        "revision": 2,
+        "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "request_id": "b86f1d79-5eca-44a3-83f5-be095c554eb8",
+        "stable_to_schedule_received_ms": 814.4000000357628,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_rendered_notification_ms": 2031.800000011921,
+        "outcome": "ready",
+        "request_id": "b86f1d79-5eca-44a3-83f5-be095c554eb8",
+        "revision": 2,
+        "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "stable_to_rendered_notification_ms": 980.8000000119209,
+        "stage": "card_rendered_notification",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "request_id": "78f48a27-a1a4-46d4-9292-bb60e6cb63a1",
+        "stable_to_schedule_received_ms": 1121.1000000238419,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_rendered_notification_ms": 2312,
+        "outcome": "ready",
+        "request_id": "78f48a27-a1a4-46d4-9292-bb60e6cb63a1",
+        "revision": 2,
+        "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "stable_to_rendered_notification_ms": 1261,
+        "stage": "card_rendered_notification",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "request_id": "d50c7120-5f54-452b-bfc3-8f5d1a968f28",
+        "stable_to_schedule_received_ms": 1328.1000000238419,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_rendered_notification_ms": 2565,
+        "outcome": "ready",
+        "request_id": "d50c7120-5f54-452b-bfc3-8f5d1a968f28",
+        "revision": 2,
+        "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "stable_to_rendered_notification_ms": 1514,
+        "stage": "card_rendered_notification",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "request_id": "c55f5ad5-d4be-4edf-b84f-0a6920cab2a4",
+        "stable_to_schedule_received_ms": 1647,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "request_id": "885d6d84-60cd-48bf-a78f-74cc71377eee",
+        "stable_to_schedule_received_ms": 1766.4000000357628,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "50ecac51-da24-4082-a5de-33643e7f4e79",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 37.40000003576279,
+        "revision": 3,
+        "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "78c1092d-87ef-4fdc-8d14-dbeeb4bf11bc",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 1087.4000000357628,
+        "revision": 4,
+        "segment_id": "d0d16cf5-e8f6-4b45-8298-b51809b9173d",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "request_id": "badc356f-5bf2-4e75-a9f2-00fb576fe58b",
+        "stable_to_schedule_received_ms": 118.59999996423721,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "a3f82f25-71eb-4ed3-9b51-291cccf12128",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 31.600000023841858,
+        "revision": 1,
+        "segment_id": "7c9f0895-6a47-4c4f-a6a4-d6d09a851076",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "301ba9a4-1f23-4da9-8c4a-f1b12a451048",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 1027,
+        "revision": 2,
+        "segment_id": "7c9f0895-6a47-4c4f-a6a4-d6d09a851076",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "request_id": "ea52e888-5299-47b0-be85-116baa855ad8",
+        "stable_to_schedule_received_ms": 200.69999998807907,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "auto"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_rendered_notification_ms": 1382.1000000238419,
+        "outcome": "ready",
+        "request_id": "ea52e888-5299-47b0-be85-116baa855ad8",
+        "revision": 2,
+        "segment_id": "7c9f0895-6a47-4c4f-a6a4-d6d09a851076",
+        "stable_to_rendered_notification_ms": 363.39999997615814,
+        "stage": "card_rendered_notification",
+        "trigger": "auto"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "6dc7fe3a-078c-41d5-bf28-59d21c62038c",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 21.30000001192093,
+        "revision": 1,
+        "segment_id": "69341cdf-fb42-488c-a370-467f35926c1a",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "e965d32d-da94-42db-aa76-5e9c3aa69f39",
+        "meeting_id": "bcf877fc-ffac-42a8-af77-2ae0512e6246",
+        "observed_to_ack_ms": 10.600000023841858,
+        "revision": 1,
+        "segment_id": "dac2fe24-813d-42dc-876d-e26395f82812",
+        "stage": "ack_received"
+      }
+    ]
+  },
+  "backend_latency": [
+    {
+      "request_id": "c863713b-d5c9-4e5c-9c95-e52bfe9bc301",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 13.754000014159828
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 18.35700002266094
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 6.980900012422353,
+      "stable_to_scheduled_ms": 810.4354999959469,
+      "scheduler_wait_ms": 4.470900050364435,
+      "retrieval_ms": 0.37970003904774785,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "2423d961-7106-48bb-86cb-e80f327bb9f5",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 7.501599960960448
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 12.845799967180938
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 1.0510999709367752,
+      "stable_to_scheduled_ms": 217.20559999812394,
+      "scheduler_wait_ms": 3.8627999601885676,
+      "retrieval_ms": 49.20370003674179,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "f5694f19-6971-43da-9b9a-3245f91d174c",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "stale",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 9.988799982238561
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 14.237899973522872
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 1.0349999647587538,
+      "scheduler_wait_ms": 4.372499999590218,
+      "retrieval_ms": 0.37970003904774785,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "5ebdbbc3-6847-4818-943a-42354ac4925a",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 26.928899984341115
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 32.26349997567013
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 1.7796999891288579,
+      "stable_to_scheduled_ms": 2170.8567999885418,
+      "scheduler_wait_ms": 12.997400015592575,
+      "retrieval_ms": 0.6882000016048551,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "b86f1d79-5eca-44a3-83f5-be095c554eb8",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 6.623899971600622
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 21.338399965316057
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 22.055599954910576
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 22.976199979893863
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 26.570299989543855
+        }
+      ],
+      "provider_ms": 14.700100000482053,
+      "validation_ms": 1.250099972821772,
+      "stable_to_scheduled_ms": 798.4910000232048,
+      "scheduler_wait_ms": 4.371299990452826,
+      "retrieval_ms": 53.33610001252964,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 791
+    },
+    {
+      "request_id": "78f48a27-a1a4-46d4-9292-bb60e6cb63a1",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 8.486199949402362
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 12.006299977656454
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 12.427799985744059
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 13.193299993872643
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 16.399499960243702
+        }
+      ],
+      "provider_ms": 3.5119999665766954,
+      "validation_ms": 0.9979999740608037,
+      "stable_to_scheduled_ms": 1106.4354000263847,
+      "scheduler_wait_ms": 6.940699997358024,
+      "retrieval_ms": 33.0812000320293,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 791
+    },
+    {
+      "request_id": "d50c7120-5f54-452b-bfc3-8f5d1a968f28",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 5.596499948296696
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 9.137499961070716
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 9.668699989560992
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 10.410099988803267
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 13.47369997529313
+        }
+      ],
+      "provider_ms": 3.5357000306248665,
+      "validation_ms": 1.0885000228881836,
+      "stable_to_scheduled_ms": 1315.6530000269413,
+      "scheduler_wait_ms": 3.8647999754175544,
+      "retrieval_ms": 24.860400008037686,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 791
+    },
+    {
+      "request_id": "c55f5ad5-d4be-4edf-b84f-0a6920cab2a4",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "error",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 13.487700023688376
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 16.704700014088303
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 17.236199986655265
+        }
+      ],
+      "provider_ms": 3.209600050467998,
+      "validation_ms": 0,
+      "stable_to_scheduled_ms": 1627.5751999928616,
+      "scheduler_wait_ms": 11.564399988856167,
+      "retrieval_ms": 35.024299984797835,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 789
+    },
+    {
+      "request_id": "885d6d84-60cd-48bf-a78f-74cc71377eee",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "stale",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 6.300900015048683
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 817.8516000043601
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 818.5546000022441
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 819.3025999935344
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 822.593400022015
+        }
+      ],
+      "provider_ms": 811.5420999820344,
+      "validation_ms": 1.2045000330545008,
+      "stable_to_scheduled_ms": 1754.0599000058137,
+      "scheduler_wait_ms": 4.45080001372844,
+      "retrieval_ms": 45.45229999348521,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 794
+    },
+    {
+      "request_id": "c4ac300d-cdcc-42f7-8539-cc3d6efd685f",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "cancelled",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 6.816000037360936
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 177.84880002727732
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 179.37530000926927
+        }
+      ],
+      "provider_ms": 171.02449998492375,
+      "validation_ms": 0,
+      "scheduler_wait_ms": 4.7429000260308385,
+      "retrieval_ms": 24.011900008190423,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 805
+    },
+    {
+      "request_id": "badc356f-5bf2-4e75-a9f2-00fb576fe58b",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 13.857199985068291
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 17.88439997471869
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 18.505499989259988
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 19.457100017461926
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 23.506099998485297
+        }
+      ],
+      "provider_ms": 4.01959998998791,
+      "validation_ms": 1.242100028321147,
+      "stable_to_scheduled_ms": 82.64089998556301,
+      "scheduler_wait_ms": 11.40249997843057,
+      "retrieval_ms": 48.072799982037395,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 812
+    },
+    {
+      "request_id": "ea52e888-5299-47b0-be85-116baa855ad8",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 5.956400011200458
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 9.925799968186766
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 12.19209999544546
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 13.86909995926544
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 19.287000002805144
+        }
+      ],
+      "provider_ms": 3.962900023907423,
+      "validation_ms": 3.7429999792948365,
+      "stable_to_scheduled_ms": 169.85400003613904,
+      "scheduler_wait_ms": 3.9277999894693494,
+      "retrieval_ms": 0.20100001711398363,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2566
+    }
+  ],
+  "live_meet_tested": false
+}

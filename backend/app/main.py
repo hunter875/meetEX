@@ -21,17 +21,32 @@ from .ingestion import Ingestion
 from .retrieval import Semantic,Retrieval
 from .llm import Provider,SuggestionPayload
 from .service import Service,SECTIONS
-from .models import ProjectDTO,MeetingDTO,SnapshotDTO,ReportDTO,CitationDTO,RoutingDecision
+from .models import ProjectDTO,MeetingDTO,SnapshotDTO,ReportDTO,CitationDTO,RoutingDecision,MemorySnapshotDTO,MemoryItemDTO,MemoryPatch,MemoryCreate,SegmentDTO
+from . import meeting_memory
 
 def markdown_report(report,language='vi'):
     p=report['payload'];lines=[f'# Meet Copilot · Report v{report["version"]}',f'Mode: {report["mode"]} · Draft/reviewed: {report["reviewed_at"] or "draft"}',p['summary_en' if language=='en' else 'summary_vi'],'Summary evidence: '+', '.join(p.get('summary_segment_ids',[]))]
-    headings=dict(requirements='Yêu cầu',decisions='Quyết định đã xác nhận',action_items='Action items',open_questions='Câu hỏi bỏ ngỏ',ai_proposals='Đề xuất AI')
+    headings=dict(requirements='Yêu cầu',decisions='Quyết định đã xác nhận',action_items='Action items',open_questions='Câu hỏi bỏ ngỏ',ai_proposals='Đề xuất phương án (AI/user edit)')
     for section in SECTIONS:
         lines+=['',f'## {headings[section]}']
         for item in p[section]:
             lines.append('- '+(item.get('text_en') or item['text'] if language=='en' else item['text'])+f' [{item["origin"]}; {item["confirmation"]}]')
             if section=='action_items':lines.append(f'  Owner: {item["owner"] or "Chưa xác nhận"}; Due: {item["normalized_due"] or item["raw_due_text"] or "Chưa xác nhận"}; Status: {item["status"]}')
             lines.append('  Evidence: '+', '.join(item['evidence_segment_ids']))
+    if report.get('memory_snapshot'):
+        lines+=['','## Bộ nhớ tại thời điểm tạo báo cáo (tách khỏi chỉnh sửa của bạn)']
+        for item in report['memory_snapshot']:
+            label='Hiện hành' if meeting_memory.current(item) else 'Lịch sử'
+            lines.append(f'- [{label}; {item["kind"]}; {item["status"]}; {item["origin"]}; v{item["version"]}] '+item['text'])
+            lines.append(f'  Owner: {item.get("owner") or "Chưa xác nhận"}; Due raw: {item.get("raw_due_text") or "—"}; normalized: {item.get("normalized_due") or "—"}; rule: {item.get("due_rule")}')
+            lines.append('  Evidence revisions: '+', '.join(f'{e["segment_id"]}@r{e["revision"]}' for e in item['evidence']))
+            if item['relations']:lines.append('  Relations: '+json.dumps(item['relations'],ensure_ascii=False))
+    if report.get('historical_payload'):
+        lines+=['','## Lịch sử đã tách khỏi trạng thái hiện hành']
+        for section in SECTIONS:
+            for item in report['historical_payload'][section]:lines.append('- [history; '+item['origin']+'] '+item['text']+' · Evidence: '+', '.join(item['evidence_segment_ids']))
+    if report.get('edit_provenance'):lines+=['','User edit provenance: '+json.dumps(report['edit_provenance'],ensure_ascii=False)]
+    if report.get('evidence_changed'):lines+=['','WARNING: Evidence/memory changed since this immutable report snapshot.']
     lines+=['','## Cảnh báo']+['- '+w for w in p['capture_warnings']]
     return '\n'.join(lines)
 
@@ -116,6 +131,7 @@ def create_app(config=None):
             for m in store.meetings():
                 if m['project_id']==id:service.forget(m['id'])
             store.delete_project(id)
+            retrieval.forget_queries()
         for meeting_id in affected:await service.emit('meeting.deleted',meeting_id=meeting_id)
         return dict(deleted=True)
     @app.post('/api/v1/sources/preview')
@@ -147,7 +163,7 @@ def create_app(config=None):
         async with index_lock:
             s=store.source(id)
             with store.disk:store.disk.execute('DELETE FROM sources WHERE id=?',(id,))
-        service.source_changed(s['project_id']);return dict(deleted=True,historical_excerpts_retained=True)
+        retrieval.forget_queries();service.source_changed(s['project_id']);return dict(deleted=True,historical_excerpts_retained=True)
     @app.get('/api/v1/chunks/{id}')
     async def chunk(id:str):
         row=store.disk.execute('SELECT * FROM chunks WHERE id=?',(id,)).fetchone()
@@ -205,6 +221,36 @@ def create_app(config=None):
         service.forget(id);store.delete_meeting(id);await service.emit('meeting.deleted',meeting_id=id);return dict(deleted=True)
     @app.post('/api/v1/meetings/{id}/suggest',status_code=202)
     async def suggest(id:str,body:SuggestInput):return dict(request_id=await service.schedule_async(id,body.model_dump()))
+    @app.get('/api/v1/meetings/{id}/memory',response_model=MemorySnapshotDTO)
+    async def memory(id:str):return dict(revision=store.meeting(id).get('memory_revision',0),policy=meeting_memory.POLICY,items=store.memory(id))
+    @app.get('/api/v1/meetings/{id}/evidence/{segment_id}',response_model=SegmentDTO)
+    async def memory_evidence(id:str,segment_id:str,revision:int=Query(ge=1)):return store.evidence_revision(id,segment_id,revision)
+    @app.get('/api/v1/meetings/{id}/memory/{item_id}/history',response_model=list[MemoryItemDTO])
+    async def memory_history(id:str,item_id:str):
+        return [json.loads(r[0]) for r in store.db_for(id).execute('SELECT payload FROM memory_versions WHERE meeting_id=? AND id=? ORDER BY version',(id,item_id))]
+    @app.patch('/api/v1/meetings/{id}/memory/{item_id}',response_model=MemoryItemDTO)
+    async def edit_memory(id:str,item_id:str,body:MemoryPatch):
+        values=body.model_dump(exclude_unset=True);version=values.pop('expected_version')
+        if any(values.get(k)==None for k in ('text','status') if k in values):raise AppError('INVALID_INPUT','Text/status cannot be null',422)
+        db=store.db_for(id);m=store.meeting(id)
+        with db:
+            item=meeting_memory.edit(db,m,item_id,values,version);store.save_meeting(db,m)
+        service.invalidate_suggestions(id);await service.emit('memory.updated',id,memory_revision=m.get('memory_revision',0));return item
+    @app.post('/api/v1/meetings/{id}/memory',response_model=MemoryItemDTO,status_code=201)
+    async def create_memory(id:str,body:MemoryCreate):
+        db=store.db_for(id);m=store.meeting(id)
+        with db:
+            item=meeting_memory.create(db,m,body.model_dump(),uid());store.save_meeting(db,m)
+        service.invalidate_suggestions(id);await service.emit('memory.updated',id,memory_revision=m['memory_revision']);return item
+    @app.post('/api/v1/meetings/{id}/memory-rebuild',response_model=MemorySnapshotDTO)
+    async def rebuild_memory(id:str):
+        db=store.db_for(id);m=store.meeting(id)
+        with db:
+            for segment in store.transcript(id):
+                db.execute('INSERT OR IGNORE INTO segment_revisions VALUES(?,?,?,?)',(id,segment['id'],segment['revision'],dumps(segment)))
+                meeting_memory.update(db,m,segment)
+            store.save_meeting(db,m)
+        service.invalidate_suggestions(id);return dict(revision=m.get('memory_revision',0),policy=meeting_memory.POLICY,items=store.memory(id))
     @app.post('/api/v1/meetings/{id}/classify',response_model=RoutingDecision)
     async def classify_request(id:str,body:SuggestInput):
         # Preview the same scoped routing policy without scheduling or billing AI.
@@ -274,7 +320,7 @@ def create_app(config=None):
         unknown=len(records)-len(usage);sett=store.settings();estimate=None
         if not unknown and records and sett['price_input'] is not None and sett['price_output'] is not None and sett['price_date']:
             estimate=(known['prompt_tokens']*sett['price_input']+known['completion_tokens']*sett['price_output'])/1e6
-        return dict(orchestration_counts=dict(service.orchestration_counts),scheduler_states=service.scheduler_states,trigger_records=list(service.trigger_metrics),retrieval_cache_hits=retrieval.cache_hits,latency_records=service.latency_records,classifier=summary(service.routing_timings),provider_by_route={route:summary([r['duration_ms'] for r in records if r.get('route')==route and r['duration_ms'] is not None]) for route in ('fast','explain','deep','clarify')},request_count=len(records),known_usage=known,unknown_usage_count=unknown,estimated_cost=estimate,price_date=sett['price_date'],cost_note='Estimate from configured per-million token prices, not a bill.',capture_apply=summary(ack_timings),retrieval=summary(retrieval.timings),provider=summary([r['duration_ms'] for r in records if r['duration_ms'] is not None]),provider_first_token=summary([r['first_token_ms'] for r in records if r['first_token_ms'] is not None]),backend_stable_to_request=summary(service.stable_to_request),backend_stable_to_validated=summary(service.stable_to_ready),report=summary([j['duration_ms'] for j in service.report_jobs.values() if j.get('duration_ms') is not None]),records=records)
+        return dict(memory_update=summary(store.memory_update_timings),orchestration_counts=dict(service.orchestration_counts),scheduler_states=service.scheduler_states,trigger_records=list(service.trigger_metrics),retrieval_cache_hits=retrieval.cache_hits,latency_records=service.latency_records,classifier=summary(service.routing_timings),provider_by_route={route:summary([r['duration_ms'] for r in records if r.get('route')==route and r['duration_ms'] is not None]) for route in ('fast','explain','deep','clarify')},request_count=len(records),known_usage=known,unknown_usage_count=unknown,estimated_cost=estimate,price_date=sett['price_date'],cost_note='Estimate from configured per-million token prices, not a bill.',capture_apply=summary(ack_timings),retrieval=summary(retrieval.timings),provider=summary([r['duration_ms'] for r in records if r['duration_ms'] is not None]),provider_first_token=summary([r['first_token_ms'] for r in records if r['first_token_ms'] is not None]),backend_stable_to_request=summary(service.stable_to_request),backend_stable_to_validated=summary(service.stable_to_ready),report=summary([j['duration_ms'] for j in service.report_jobs.values() if j.get('duration_ms') is not None]),records=records)
 
     @app.websocket('/api/v1/events')
     async def events(ws:WebSocket):

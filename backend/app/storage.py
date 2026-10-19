@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 import sqlite3
 import uuid
+import time
 from threading import RLock
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -16,6 +17,7 @@ def decoded(rows): return [json.loads(row['payload']) for row in rows]
 class Storage:
     def __init__(self, data_dir: Path):
         self.session_lock = RLock()
+        self.memory_update_timings=[]
         data_dir.mkdir(parents=True,exist_ok=True)
         self.disk = self.connect(str(data_dir/'copilot.sqlite3'))
         self.ram = self.connect(':memory:')
@@ -39,7 +41,12 @@ class Storage:
         except sqlite3.OperationalError:
             raise RuntimeError('SQLite runtime lacks FTS5. Install official Python with SQLite FTS5 support.')
         for migration in sorted((Path(__file__).parent/'migrations').glob('*.sql')):
-            db.executescript(migration.read_text('utf8'))
+            version=int(migration.stem)
+            exists=db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='schema_version'").fetchone()
+            if exists and db.execute('SELECT 1 FROM schema_version WHERE version=?',(version,)).fetchone():continue
+            try:db.executescript('BEGIN IMMEDIATE;\n'+migration.read_text('utf8')+f'\nINSERT OR IGNORE INTO schema_version VALUES({version});\nCOMMIT;')
+            except Exception:
+                db.rollback();raise
         return db
 
     def close(self): self.disk.close(); self.ram.close()
@@ -167,7 +174,14 @@ class Storage:
                         m['confirmed_segment_ids'].remove(e['segment_id']);m['memory_revision_warnings']=m.get('memory_revision_warnings',0)+1
                     seg=dict(id=e['segment_id'],capture_epoch=e['capture_epoch'],revision=e['revision'],speaker=e['speaker_label'],text=e['text'],stable=e['stable'],observed_from=old.get('observed_from',e['observed_at']),observed_to=e['observed_at'])
                     db.execute('INSERT INTO caption_segments VALUES(?,?,?,?,?) ON CONFLICT(meeting_id,id) DO UPDATE SET revision=excluded.revision,payload=excluded.payload',(seg['id'],id,e['capture_epoch'],e['revision'],dumps(seg)))
+                    db.execute('INSERT INTO segment_revisions VALUES(?,?,?,?)',(id,seg['id'],seg['revision'],dumps(seg)))
                     m['transcript_revision']+=1;m['last_caption_at']=e['observed_at'];changed=True
+                    from .meeting_memory import update
+                    memory_began=time.perf_counter()
+                    if update(db,m,seg):
+                        for record in decoded(db.execute('SELECT payload FROM suggestions WHERE meeting_id=?',(id,))):
+                            record['stale']=True;db.execute('UPDATE suggestions SET payload=? WHERE id=?',(dumps(record),record['id']))
+                    self.memory_update_timings.append((time.perf_counter()-memory_began)*1000);self.memory_update_timings=self.memory_update_timings[-1000:]
                     for s in decoded(db.execute('SELECT payload FROM suggestions WHERE meeting_id=?',(id,))):
                         if any(x['id']==seg['id'] and (x['text']!=seg['text'] or x.get('speaker')!=seg['speaker']) for x in s['snapshot']['segments']+s['snapshot'].get('memory',[])):
                             s['stale']=True;db.execute('UPDATE suggestions SET payload=? WHERE id=?',(dumps(s),s['id']))
@@ -178,7 +192,20 @@ class Storage:
     def objects(self,id,table):
         assert table in ('suggestions','ai_requests','reports')
         return decoded(self.db_for(id).execute(f'SELECT payload FROM {table} WHERE meeting_id=? ORDER BY rowid',(id,)))
-    def snapshot(self,id):return dict(**self.meeting(id),segments=self.transcript(id),gaps=self.gaps(id),suggestions=self.objects(id,'suggestions'),requests=self.objects(id,'ai_requests'),reports=self.objects(id,'reports'))
+    def report_view(self,report):
+        refs=report.get('evidence_snapshot',[])
+        current={s['id']:s for s in self.transcript(report['meeting_id'])}
+        changed=any(s['id'] not in current or current[s['id']]['revision']!=s['revision'] for s in refs)
+        changed=changed or (report.get('memory_revision') is not None and report['memory_revision']!=self.meeting(report['meeting_id']).get('memory_revision',0))
+        return {**dict(memory_snapshot=[],memory_revision=None,evidence_snapshot=[],historical_payload=None,reconciliation=None,edit_provenance=None),**report,'evidence_changed':changed}
+    def snapshot(self,id):return dict(**self.meeting(id),segments=self.transcript(id),gaps=self.gaps(id),suggestions=self.objects(id,'suggestions'),requests=self.objects(id,'ai_requests'),reports=[self.report_view(r) for r in self.objects(id,'reports')])
+    def memory(self,id):
+        from .meeting_memory import rows
+        return rows(self.db_for(id),id)
+    def evidence_revision(self,id,segment_id,revision):
+        row=self.db_for(id).execute('SELECT payload FROM segment_revisions WHERE meeting_id=? AND segment_id=? AND revision=?',(id,segment_id,revision)).fetchone()
+        if not row:raise AppError('NOT_FOUND','Evidence revision not available; legacy history was not fabricated',404)
+        return json.loads(row[0])
     def delete_meeting(self,id):
         db=self.db_for(id)
         with db:db.execute('DELETE FROM meetings WHERE id=?',(id,))

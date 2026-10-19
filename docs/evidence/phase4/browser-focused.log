@@ -1,0 +1,40 @@
+
+Running 2 tests using 1 worker
+
+(node:12144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:12144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\extension.spec.ts:34:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export (9.4s)
+  x  2 e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports (1.0m)
+
+
+  1) e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+
+    [31mTest timeout of 60000ms exceeded.[39m
+
+    Error: locator.selectOption: Target page, context or browser has been closed
+    Call log:
+    [2m  - waiting for getByLabel('Trạng thái memory', { exact: true })[22m
+
+
+      185 |     const decision=memory.getByTestId('memory-item').filter({hasText:'API-17'});await expect(decision).toContainText('Chưa xác nhận');await decision.getByRole('button',{name:'Lịch sử mục',exact:true}).click();await expect(view.getByRole('heading',{name:'Lịch sử version memory',exact:true})).toBeVisible();await expect(view.getByText('Confirmed: test API-17 in staging.',{exact:true})).toBeVisible();await view.getByRole('button',{name:'Đóng nguồn',exact:true}).click();
+      186 |     await decision.getByRole('button',{name:'Mở evidence revision',exact:true}).click();await expect(view.getByText('decision · r2',{exact:true})).toBeVisible();await view.getByRole('button',{name:'Đóng nguồn',exact:true}).click();
+    > 187 |     await memory.getByTestId('memory-item').filter({hasText:'API-71'}).getByRole('button',{name:'Chỉnh mục',exact:true}).click();await view.getByLabel('Owner memory',{exact:true}).fill('Alex');await view.getByLabel('Deadline memory',{exact:true}).fill('Maybe Friday');await view.getByLabel('Trạng thái memory',{exact:true}).selectOption('cancelled');await view.getByRole('button',{name:'Lưu thay đổi memory',exact:true}).click();await expect(memory.getByTestId('memory-item').filter({hasText:'API-71'})).toContainText('Bạn ghi/chỉnh sửa');
+          |                                                                                                                                                                                                                                                                                                                                     ^
+      188 |     await view.screenshot({path:evidencePath('phase4-memory-ui.png'),fullPage:true});
+      189 |     await view.getByRole('button',{name:'Kết thúc',exact:true}).click();await view.goto(`chrome-extension://${extensionId}/dashboard.html#/meetings/${m.id}/report`);
+      190 |     await view.getByRole('button',{name:'Tạo báo cáo nháp',exact:true}).first().click();await expect(view.getByLabel('Tóm tắt tiếng Việt',{exact:true})).toBeVisible();
+        at D:\meetEX\e2e\extension.spec.ts:187:325
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+  1 passed (1.4m)

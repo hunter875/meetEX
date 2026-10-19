@@ -1,0 +1,170 @@
+{
+  "result": "PARTIAL: verified bounded grammar/controlled pipeline; broader semantic linking and real model/live evaluation remain open",
+  "client_date": "2026-10-19",
+  "timezone": "America/Los_Angeles",
+  "base_commit": "af868491a77a168e3ab68b457bb6a10c65f0c3f7",
+  "starting_branch": "codex/phase3-orchestration",
+  "starting_tree": "clean",
+  "branch": "codex/phase4-meeting-memory",
+  "areas": {
+    "A": "PARTIAL: typed evidence/version model PASS; extraction grammar limited",
+    "B": "PARTIAL: explicit transitions PASS; bare Yes/authority/coreference unresolved",
+    "C": "PASS controlled live scope, budget, revision/cache/guard tests",
+    "D": "PARTIAL: controlled cross-map current/history PASS; general summary completeness not established",
+    "E": "PASS automated UI/edit/history/export scope",
+    "F": "PASS labelled synthetic audit; not general accuracy"
+  },
+  "fixture_sha256": "662192bf32ca0bf2c61236afb85046af3d5c24fa11f7b9fb431956d90177ae6e",
+  "harness_sha256": "95b0b7e5e34dc9c6e3b3cb51565b2d8b9e104dfd0310279cef7528574abdc69b",
+  "item_quality": {
+    "expected_items": 38,
+    "correct_items": 38,
+    "wrong_items": 0,
+    "missing_items": 0,
+    "extra_items": 0,
+    "evidence_correct": 38,
+    "evidence_expected": 38
+  },
+  "field_quality": {
+    "owner_expected": 11,
+    "owner_correct": 11,
+    "owner_wrong": 0,
+    "false_owner": 0,
+    "normalized_due_expected": 6,
+    "normalized_due_correct": 6,
+    "normalized_due_wrong": 0,
+    "false_normalized_due": 0,
+    "confirmed_or_accepted_expected": 14,
+    "confirmed_or_accepted_correct": 14,
+    "false_confirmation": 0
+  },
+  "relation_quality": {
+    "expected": 12,
+    "correct": 12,
+    "wrong": 0,
+    "extra": 0
+  },
+  "relations_label_note": "State/item labels predeclared before implementation. Edge assertions added after initial grammar draft; not a held-out relation benchmark.",
+  "splits": {
+    "tuning": {
+      "expected_items": 29,
+      "correct_items": 29,
+      "wrong_items": 0,
+      "missing_items": 0,
+      "extra_items": 0,
+      "evidence_correct": 29
+    },
+    "evaluation": {
+      "expected_items": 9,
+      "correct_items": 9,
+      "wrong_items": 0,
+      "missing_items": 0,
+      "extra_items": 0,
+      "evidence_correct": 9
+    }
+  },
+  "regression": {
+    "backend": 331,
+    "frontend": 60,
+    "browser": 6,
+    "semantic": "PASS"
+  },
+  "long_before": {
+    "turns": 321,
+    "maps": 16,
+    "provider_mode": "actual Provider SSE adapter, MockTransport, 5 ms controlled delay; no model extraction quality",
+    "http_attempts": 16,
+    "retry_attempts": 0,
+    "repair_attempts": 0,
+    "usage_unknown_attempts": 16,
+    "real_tokens": null,
+    "real_cost": null,
+    "status": "ready",
+    "error": null,
+    "latency_ms": 645.8814999787137,
+    "caption_apply": {
+      "n": 321,
+      "median_ms": 0.12900005094707012,
+      "p95_ms": 0.24690001737326384,
+      "max_ms": 0.7118000066839159
+    },
+    "memory_update": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    "expired_confirmed_decisions_current": 2,
+    "expired_deadlines_current": 1,
+    "summary_current_cancellation_covered": false,
+    "summary_contradicts_final": false
+  },
+  "long_after": {
+    "turns": 321,
+    "maps": 16,
+    "provider_mode": "actual Provider SSE adapter, MockTransport, 5 ms controlled delay; no model extraction quality",
+    "http_attempts": 16,
+    "retry_attempts": 0,
+    "repair_attempts": 0,
+    "usage_unknown_attempts": 16,
+    "real_tokens": null,
+    "real_cost": null,
+    "status": "ready",
+    "error": null,
+    "latency_ms": 703.7728999857791,
+    "caption_apply": {
+      "n": 321,
+      "median_ms": 0.8214999688789248,
+      "p95_ms": 0.9197000181302428,
+      "max_ms": 1.0417000157758594
+    },
+    "memory_update": {
+      "n": 321,
+      "median_ms": 0.632000039331615,
+      "p95_ms": 0.6856999825686216,
+      "max_ms": 0.8574000094085932
+    },
+    "expired_confirmed_decisions_current": 0,
+    "expired_deadlines_current": 0,
+    "summary_current_cancellation_covered": true,
+    "summary_contradicts_final": false
+  },
+  "provider_paid_calls": 0,
+  "real_model_quality": "NOT TESTED",
+  "live_meet": "NOT TESTED",
+  "hash_format": "utf8-lf",
+  "source_hashes": {
+    "backend/app/llm.py": "b0dcbdf4c99367bf542ea1b6cce0cbd2d1888bb04bcbfce0edec274b22762c21",
+    "backend/app/main.py": "59ab60e8ab689f82bc214998ae148de548a7c842af3798b22affa8952bd01677",
+    "backend/app/meeting_memory.py": "09f7b22cb51d14acfba9efdba264e4d66f9333094030be7968c006205b138f0c",
+    "backend/app/migrations/002.sql": "f531b2eb4a965020be7fb4f74c978e53e8e1669c6daa4fc70c3ccdc1ded41431",
+    "backend/app/models.py": "9e8f5f85215e0290e03de308faad6626577c6be091c757cec42331bfbc436c5b",
+    "backend/app/report_ledger.py": "79c0f0fcf7791e7db604a0b42a9e1996d2ffafdb7f6d6b117d6cf715d44e9b3a",
+    "backend/app/retrieval.py": "93ee92d4aa3a788f5c65c201943e3cc727bfc25c97b73c48106257983bd42689",
+    "backend/app/service.py": "6b8db3f43a41076270843d65809572fc198b3651b4502128096713ed0840a150",
+    "backend/app/storage.py": "e79c58e732aff572797b521179bffcd64b8eb06d2e0840fc043532eec1e94b1d",
+    "backend/tests/test_phase4_api.py": "5d3b61c967a08f93ec093c1f524f2bc91e1b479a4d995349faf2853f1ff36dbb",
+    "backend/tests/test_phase4_memory.py": "cd05314d7dd81cec6948b64b5cc0a147ddd60f6a0f6113546a32754221c5328a",
+    "backend/tests/test_phase4_reports.py": "fa487f80894ea79cb3a627579df95d6468edae3bbdb34fe2bb4fb3ff1998d2e4",
+    "e2e/extension.spec.ts": "1d6703739e5f3173889a950cf1277a2000322ef98ec35218c46d3c469dc3d808",
+    "extension/src/api-schema.d.ts": "feaa81050d80dbc3bccfe782eb176ecc8b049e53c8b5f1dc9afc0d6803d7d5c8",
+    "extension/src/ui/live.tsx": "bbab5312879b8a208ad33cc8eedf8bc739588a544f61e3266729edecdb6b55c9",
+    "extension/src/ui/memory.tsx": "5b787865de3c0fc5333440cbd9a2b478f00a479ae30391a905a7629a2ddb72e9",
+    "extension/src/ui/report.tsx": "f2c843c4a40e6467eb5f6edaa66912fbb5359112e4493a6c180607688842b4be",
+    "extension/tests/phase4-memory.test.ts": "8d4240c3e3597523b4148a0c69243980d93ace674b5b4437c758c4e22cecde33",
+    "extension/tests/state.test.ts": "8d63e80fcf00d522234cbc150f85fe492ab6422c3b481b2927222391ba461396",
+    "fixtures/phase4/meeting-memory.json": "662192bf32ca0bf2c61236afb85046af3d5c24fa11f7b9fb431956d90177ae6e",
+    "scripts/build_phase4_corpus.py": "54ed8270f5daa366c0f0b3b79fff8aee8e250914cb4188cf79bf5ca571414014",
+    "scripts/check_docs.py": "151b6dbcc26a6da7fcbb9c72f489bab133137b000b94d869121eaeef0ad25830",
+    "scripts/documentation.py": "54dea11a1ad98566f87eae83c8cf05f033f149a9383144e03f1d621c99786fd6",
+    "scripts/evaluate_phase4.py": "95b0b7e5e34dc9c6e3b3cb51565b2d8b9e104dfd0310279cef7528574abdc69b",
+    "scripts/review_phase4.py": "8a54367ff92a44de9296e661f516f46da8faed5f7bd73c913d293b190b1fa8c9"
+  },
+  "limitations": [
+    "23 short synthetic scenarios, 18 tuning/5 held-out variants; 38 items, not human-meeting accuracy. Separate 321-turn controlled report is a pipeline test, not hours-long real meeting.",
+    "Bare Yes does not bind an owner even with a plausible antecedent; unbound denial requests clarification. Explicit IDs/actions/environment dominate automatic linking.",
+    "Structured source facts remain in project retrieval; AI proposals stay distinct; no summary becomes evidence. User-edit ledger is exported separately, not recertified as participant speech.",
+    "No general paraphrase, authority or multilingual extraction. Unrecognized map claims retain Phase 1 validators, which do not prove general entailment.",
+    "Revision-strict memory may stale extra generations compared with Phase 3 cosmetic handling; no new real provider latency/cost measurement."
+  ]
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="2.854" timestamp="2026-10-19T04:53:05.661056-07:00" hostname="hunter875"><testcase classname="backend.tests.test_phase4_api" name="test_actual_report_provider_counts_retry_and_repair" time="0.757" /><testcase classname="backend.tests.test_phase4_api" name="test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup" time="1.055"><failure message="assert False">store = &lt;app.storage.Storage object at 0x00000239546325D0&gt;
+meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+
+    async def test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup(store,meeting):
+        from app.retrieval import Retrieval,Semantic
+        from pathlib import Path
+        import threading
+        store.set_settings(dict(semantic_enabled=True));began=threading.Event();release=threading.Event()
+        class Held:
+            ready=True
+            def query(self,text):began.set();release.wait(2);return [1.,0.]
+        retrieval=Retrieval(store,Held());lookup=asyncio.create_task(retrieval.search_async(meeting['project_id'],'private meeting phrase API-17'))
+&gt;       assert await asyncio.to_thread(began.wait,1)
+E       assert False
+
+backend\tests\test_phase4_api.py:37: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase4_api" name="test_local_restart_and_api_edit_snapshot_history" time="0.139" /></testsuite></testsuites>

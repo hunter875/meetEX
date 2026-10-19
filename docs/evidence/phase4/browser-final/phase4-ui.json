@@ -1,0 +1,711 @@
+{
+  "provenance": "Synthetic fixture + real MV3/backend, no paid calls",
+  "memory": {
+    "revision": 4,
+    "policy": "meeting-ledger-v1",
+    "items": [
+      {
+        "id": "01af586d738870ce3f4a5620",
+        "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+        "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+        "kind": "action_item",
+        "text": "I will review API-71 by tomorrow.",
+        "entity": "API-71",
+        "action": "review",
+        "environment": null,
+        "speaker": "Minh",
+        "owner": "Alex",
+        "status": "cancelled",
+        "raw_due_text": "Maybe Friday",
+        "normalized_due": null,
+        "due_rule": "user-raw-unverified",
+        "due_anchor": null,
+        "origin": "user_edit",
+        "evidence": [
+          {
+            "segment_id": "task",
+            "revision": 1
+          }
+        ],
+        "relations": [],
+        "version": 2,
+        "ambiguous": false,
+        "candidate_owner": null,
+        "edit_provenance": {
+          "actor": "local_user",
+          "changed_fields": [
+            "owner",
+            "raw_due_text",
+            "status"
+          ],
+          "previous_version": 1
+        },
+        "entities": [
+          "API-71"
+        ],
+        "event_status": "accepted",
+        "explicit_replace": false,
+        "negative": false,
+        "order": [
+          7,
+          0
+        ],
+        "policy": "meeting-ledger-v1",
+        "replaces_owner": null
+      },
+      {
+        "id": "d56cf3ce01b47d08f2961190",
+        "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+        "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+        "kind": "decision",
+        "text": "We have NOT approved test API-17 in staging.",
+        "entity": "API-17",
+        "action": "test",
+        "environment": "staging",
+        "speaker": "Client",
+        "owner": null,
+        "status": "unconfirmed",
+        "raw_due_text": null,
+        "normalized_due": null,
+        "due_rule": "none",
+        "due_anchor": null,
+        "origin": "transcript",
+        "evidence": [
+          {
+            "segment_id": "decision",
+            "revision": 2
+          }
+        ],
+        "relations": [],
+        "version": 2,
+        "ambiguous": false,
+        "candidate_owner": null,
+        "entities": [
+          "API-17"
+        ],
+        "event_status": "unconfirmed",
+        "explicit_replace": false,
+        "negative": true,
+        "order": [
+          8,
+          0
+        ],
+        "policy": "meeting-ledger-v1",
+        "replaces_owner": null
+      }
+    ]
+  },
+  "reports": [
+    {
+      "id": "bf6d3fe0-89eb-4efd-9b09-3090e33f140f",
+      "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+      "version": 1,
+      "transcript_revision": 3,
+      "payload": {
+        "summary_vi": "Cần làm rõ test API-17 staging (chưa xác nhận)?",
+        "summary_en": "API-17 staging: test unconfirmed; check evidence and clarify if unresolved.",
+        "summary_segment_ids": [
+          "decision"
+        ],
+        "requirements": [],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [],
+        "ai_proposals": [],
+        "capture_warnings": [
+          "Demo dùng controlled provider; nội dung không được diễn giải bằng AI thật.",
+          "Báo cáo chỉ bao phủ phụ đề đã quan sát; hãy kiểm tra nghĩa và bằng chứng trước khi gửi.",
+          "DEMO — không phải kết quả provider thật.",
+          "Tổng quan trạng thái được dựng từ grammar memory có giới hạn; map summary gốc nằm trong lịch sử, không là nguồn sự thật.",
+          "Ghi chú/chỉnh sửa memory của bạn chỉ ở memory snapshot có nhãn user_edit; không được tái chứng nhận là participant đã nói."
+        ]
+      },
+      "user_edits": false,
+      "reviewed_at": null,
+      "mode": "demo",
+      "created_at": "2026-10-19T12:48:47.344510+00:00",
+      "parent_id": null,
+      "memory_snapshot": [
+        {
+          "id": "01af586d738870ce3f4a5620",
+          "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "kind": "action_item",
+          "text": "I will review API-71 by tomorrow.",
+          "entity": "API-71",
+          "action": "review",
+          "environment": null,
+          "speaker": "Minh",
+          "owner": "Alex",
+          "status": "cancelled",
+          "raw_due_text": "Maybe Friday",
+          "normalized_due": null,
+          "due_rule": "user-raw-unverified",
+          "due_anchor": null,
+          "origin": "user_edit",
+          "evidence": [
+            {
+              "segment_id": "task",
+              "revision": 1
+            }
+          ],
+          "relations": [],
+          "version": 2,
+          "ambiguous": false,
+          "candidate_owner": null,
+          "edit_provenance": {
+            "actor": "local_user",
+            "changed_fields": [
+              "owner",
+              "raw_due_text",
+              "status"
+            ],
+            "previous_version": 1
+          },
+          "entities": [
+            "API-71"
+          ],
+          "event_status": "accepted",
+          "explicit_replace": false,
+          "negative": false,
+          "order": [
+            7,
+            0
+          ],
+          "policy": "meeting-ledger-v1",
+          "replaces_owner": null
+        },
+        {
+          "id": "d56cf3ce01b47d08f2961190",
+          "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "kind": "decision",
+          "text": "We have NOT approved test API-17 in staging.",
+          "entity": "API-17",
+          "action": "test",
+          "environment": "staging",
+          "speaker": "Client",
+          "owner": null,
+          "status": "unconfirmed",
+          "raw_due_text": null,
+          "normalized_due": null,
+          "due_rule": "none",
+          "due_anchor": null,
+          "origin": "transcript",
+          "evidence": [
+            {
+              "segment_id": "decision",
+              "revision": 2
+            }
+          ],
+          "relations": [],
+          "version": 2,
+          "ambiguous": false,
+          "candidate_owner": null,
+          "entities": [
+            "API-17"
+          ],
+          "event_status": "unconfirmed",
+          "explicit_replace": false,
+          "negative": true,
+          "order": [
+            8,
+            0
+          ],
+          "policy": "meeting-ledger-v1",
+          "replaces_owner": null
+        }
+      ],
+      "memory_revision": 4,
+      "evidence_snapshot": [
+        {
+          "id": "task",
+          "capture_epoch": "phase4-ui",
+          "revision": 1,
+          "speaker": "Minh",
+          "text": "I will review API-71 by tomorrow.",
+          "stable": true,
+          "observed_from": "2026-10-19T00:30:00Z",
+          "observed_to": "2026-10-19T00:30:00Z"
+        },
+        {
+          "id": "decision",
+          "capture_epoch": "phase4-ui",
+          "revision": 2,
+          "speaker": "Client",
+          "text": "We have NOT approved test API-17 in staging.",
+          "stable": true,
+          "observed_from": "2026-10-19T00:30:00Z",
+          "observed_to": "2026-10-19T00:30:00Z"
+        }
+      ],
+      "evidence_changed": false,
+      "historical_payload": {
+        "summary_vi": "DEMO: bản nháp từ phụ đề thử, cần người dùng đánh giá.",
+        "summary_en": "DEMO: transcript review draft.",
+        "summary_segment_ids": [
+          "task",
+          "decision"
+        ],
+        "requirements": [],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [
+          {
+            "id": "b5654e33-23fc-4088-9ef3-ca48f971cb77",
+            "text": "I will review API-71 by tomorrow.",
+            "text_en": "I will review API-71 by tomorrow.",
+            "evidence_segment_ids": [
+              "task"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "9e404607-5466-476a-95fb-f0f4f06d0ff3",
+            "text": "We have NOT approved test API-17 in staging.",
+            "text_en": "We have NOT approved test API-17 in staging.",
+            "evidence_segment_ids": [
+              "decision"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "ai_proposals": [],
+        "capture_warnings": []
+      },
+      "edit_provenance": null,
+      "reconciliation": {
+        "policy": "meeting-ledger-v1",
+        "removed_from_current": 2,
+        "added_from_evidence": 0,
+        "user_edit_memory_items": 1,
+        "history_validated": true,
+        "scope": "bounded explicit grammar; other map items retain original validators, not general entailment"
+      }
+    },
+    {
+      "id": "dea7c9f5-8342-428e-8063-ebb35153cec8",
+      "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+      "version": 2,
+      "transcript_revision": 3,
+      "payload": {
+        "summary_vi": "PHASE4 USER EDIT preserved",
+        "summary_en": "API-17 staging: test unconfirmed; check evidence and clarify if unresolved.",
+        "summary_segment_ids": [
+          "decision"
+        ],
+        "requirements": [],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [],
+        "ai_proposals": [
+          {
+            "id": "df0b0ab3-64cc-4bde-8639-d3e0020280c5",
+            "text": "USER PROPOSAL: consider a staged rollout.",
+            "text_en": "",
+            "evidence_segment_ids": [],
+            "origin": "user_edit",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "capture_warnings": [
+          "Demo dùng controlled provider; nội dung không được diễn giải bằng AI thật.",
+          "Báo cáo chỉ bao phủ phụ đề đã quan sát; hãy kiểm tra nghĩa và bằng chứng trước khi gửi.",
+          "DEMO — không phải kết quả provider thật.",
+          "Tổng quan trạng thái được dựng từ grammar memory có giới hạn; map summary gốc nằm trong lịch sử, không là nguồn sự thật.",
+          "Ghi chú/chỉnh sửa memory của bạn chỉ ở memory snapshot có nhãn user_edit; không được tái chứng nhận là participant đã nói."
+        ]
+      },
+      "user_edits": true,
+      "reviewed_at": null,
+      "mode": "demo",
+      "created_at": "2026-10-19T12:48:47.715304+00:00",
+      "parent_id": "bf6d3fe0-89eb-4efd-9b09-3090e33f140f",
+      "memory_snapshot": [
+        {
+          "id": "01af586d738870ce3f4a5620",
+          "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "kind": "action_item",
+          "text": "I will review API-71 by tomorrow.",
+          "entity": "API-71",
+          "action": "review",
+          "environment": null,
+          "speaker": "Minh",
+          "owner": "Alex",
+          "status": "cancelled",
+          "raw_due_text": "Maybe Friday",
+          "normalized_due": null,
+          "due_rule": "user-raw-unverified",
+          "due_anchor": null,
+          "origin": "user_edit",
+          "evidence": [
+            {
+              "segment_id": "task",
+              "revision": 1
+            }
+          ],
+          "relations": [],
+          "version": 2,
+          "ambiguous": false,
+          "candidate_owner": null,
+          "edit_provenance": {
+            "actor": "local_user",
+            "changed_fields": [
+              "owner",
+              "raw_due_text",
+              "status"
+            ],
+            "previous_version": 1
+          },
+          "entities": [
+            "API-71"
+          ],
+          "event_status": "accepted",
+          "explicit_replace": false,
+          "negative": false,
+          "order": [
+            7,
+            0
+          ],
+          "policy": "meeting-ledger-v1",
+          "replaces_owner": null
+        },
+        {
+          "id": "d56cf3ce01b47d08f2961190",
+          "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "kind": "decision",
+          "text": "We have NOT approved test API-17 in staging.",
+          "entity": "API-17",
+          "action": "test",
+          "environment": "staging",
+          "speaker": "Client",
+          "owner": null,
+          "status": "unconfirmed",
+          "raw_due_text": null,
+          "normalized_due": null,
+          "due_rule": "none",
+          "due_anchor": null,
+          "origin": "transcript",
+          "evidence": [
+            {
+              "segment_id": "decision",
+              "revision": 2
+            }
+          ],
+          "relations": [],
+          "version": 2,
+          "ambiguous": false,
+          "candidate_owner": null,
+          "entities": [
+            "API-17"
+          ],
+          "event_status": "unconfirmed",
+          "explicit_replace": false,
+          "negative": true,
+          "order": [
+            8,
+            0
+          ],
+          "policy": "meeting-ledger-v1",
+          "replaces_owner": null
+        }
+      ],
+      "memory_revision": 4,
+      "evidence_snapshot": [
+        {
+          "id": "task",
+          "capture_epoch": "phase4-ui",
+          "revision": 1,
+          "speaker": "Minh",
+          "text": "I will review API-71 by tomorrow.",
+          "stable": true,
+          "observed_from": "2026-10-19T00:30:00Z",
+          "observed_to": "2026-10-19T00:30:00Z"
+        },
+        {
+          "id": "decision",
+          "capture_epoch": "phase4-ui",
+          "revision": 2,
+          "speaker": "Client",
+          "text": "We have NOT approved test API-17 in staging.",
+          "stable": true,
+          "observed_from": "2026-10-19T00:30:00Z",
+          "observed_to": "2026-10-19T00:30:00Z"
+        }
+      ],
+      "evidence_changed": false,
+      "historical_payload": {
+        "summary_vi": "DEMO: bản nháp từ phụ đề thử, cần người dùng đánh giá.",
+        "summary_en": "DEMO: transcript review draft.",
+        "summary_segment_ids": [
+          "task",
+          "decision"
+        ],
+        "requirements": [],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [
+          {
+            "id": "b5654e33-23fc-4088-9ef3-ca48f971cb77",
+            "text": "I will review API-71 by tomorrow.",
+            "text_en": "I will review API-71 by tomorrow.",
+            "evidence_segment_ids": [
+              "task"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "9e404607-5466-476a-95fb-f0f4f06d0ff3",
+            "text": "We have NOT approved test API-17 in staging.",
+            "text_en": "We have NOT approved test API-17 in staging.",
+            "evidence_segment_ids": [
+              "decision"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "ai_proposals": [],
+        "capture_warnings": []
+      },
+      "edit_provenance": {
+        "actor": "local_user",
+        "parent_id": "bf6d3fe0-89eb-4efd-9b09-3090e33f140f",
+        "summary_changed": true,
+        "changed_item_ids": [
+          "df0b0ab3-64cc-4bde-8639-d3e0020280c5"
+        ]
+      },
+      "reconciliation": {
+        "policy": "meeting-ledger-v1",
+        "removed_from_current": 2,
+        "added_from_evidence": 0,
+        "user_edit_memory_items": 1,
+        "history_validated": true,
+        "scope": "bounded explicit grammar; other map items retain original validators, not general entailment"
+      }
+    },
+    {
+      "id": "092773a7-a1cf-401b-9a75-48975f04cd44",
+      "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+      "version": 3,
+      "transcript_revision": 3,
+      "payload": {
+        "summary_vi": "Cần làm rõ test API-17 staging (chưa xác nhận)?",
+        "summary_en": "API-17 staging: test unconfirmed; check evidence and clarify if unresolved.",
+        "summary_segment_ids": [
+          "decision"
+        ],
+        "requirements": [],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [],
+        "ai_proposals": [],
+        "capture_warnings": [
+          "Demo dùng controlled provider; nội dung không được diễn giải bằng AI thật.",
+          "Báo cáo chỉ bao phủ phụ đề đã quan sát; hãy kiểm tra nghĩa và bằng chứng trước khi gửi.",
+          "DEMO — không phải kết quả provider thật.",
+          "Tổng quan trạng thái được dựng từ grammar memory có giới hạn; map summary gốc nằm trong lịch sử, không là nguồn sự thật.",
+          "Ghi chú/chỉnh sửa memory của bạn chỉ ở memory snapshot có nhãn user_edit; không được tái chứng nhận là participant đã nói."
+        ]
+      },
+      "user_edits": false,
+      "reviewed_at": null,
+      "mode": "demo",
+      "created_at": "2026-10-19T12:48:48.175599+00:00",
+      "parent_id": null,
+      "memory_snapshot": [
+        {
+          "id": "01af586d738870ce3f4a5620",
+          "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "kind": "action_item",
+          "text": "I will review API-71 by tomorrow.",
+          "entity": "API-71",
+          "action": "review",
+          "environment": null,
+          "speaker": "Minh",
+          "owner": "Alex",
+          "status": "cancelled",
+          "raw_due_text": "Maybe Friday",
+          "normalized_due": null,
+          "due_rule": "user-raw-unverified",
+          "due_anchor": null,
+          "origin": "user_edit",
+          "evidence": [
+            {
+              "segment_id": "task",
+              "revision": 1
+            }
+          ],
+          "relations": [],
+          "version": 2,
+          "ambiguous": false,
+          "candidate_owner": null,
+          "edit_provenance": {
+            "actor": "local_user",
+            "changed_fields": [
+              "owner",
+              "raw_due_text",
+              "status"
+            ],
+            "previous_version": 1
+          },
+          "entities": [
+            "API-71"
+          ],
+          "event_status": "accepted",
+          "explicit_replace": false,
+          "negative": false,
+          "order": [
+            7,
+            0
+          ],
+          "policy": "meeting-ledger-v1",
+          "replaces_owner": null
+        },
+        {
+          "id": "d56cf3ce01b47d08f2961190",
+          "meeting_id": "0323d225-a01c-45a4-b383-6c61b8c55170",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "kind": "decision",
+          "text": "We have NOT approved test API-17 in staging.",
+          "entity": "API-17",
+          "action": "test",
+          "environment": "staging",
+          "speaker": "Client",
+          "owner": null,
+          "status": "unconfirmed",
+          "raw_due_text": null,
+          "normalized_due": null,
+          "due_rule": "none",
+          "due_anchor": null,
+          "origin": "transcript",
+          "evidence": [
+            {
+              "segment_id": "decision",
+              "revision": 2
+            }
+          ],
+          "relations": [],
+          "version": 2,
+          "ambiguous": false,
+          "candidate_owner": null,
+          "entities": [
+            "API-17"
+          ],
+          "event_status": "unconfirmed",
+          "explicit_replace": false,
+          "negative": true,
+          "order": [
+            8,
+            0
+          ],
+          "policy": "meeting-ledger-v1",
+          "replaces_owner": null
+        }
+      ],
+      "memory_revision": 4,
+      "evidence_snapshot": [
+        {
+          "id": "task",
+          "capture_epoch": "phase4-ui",
+          "revision": 1,
+          "speaker": "Minh",
+          "text": "I will review API-71 by tomorrow.",
+          "stable": true,
+          "observed_from": "2026-10-19T00:30:00Z",
+          "observed_to": "2026-10-19T00:30:00Z"
+        },
+        {
+          "id": "decision",
+          "capture_epoch": "phase4-ui",
+          "revision": 2,
+          "speaker": "Client",
+          "text": "We have NOT approved test API-17 in staging.",
+          "stable": true,
+          "observed_from": "2026-10-19T00:30:00Z",
+          "observed_to": "2026-10-19T00:30:00Z"
+        }
+      ],
+      "evidence_changed": false,
+      "historical_payload": {
+        "summary_vi": "DEMO: bản nháp từ phụ đề thử, cần người dùng đánh giá.",
+        "summary_en": "DEMO: transcript review draft.",
+        "summary_segment_ids": [
+          "task",
+          "decision"
+        ],
+        "requirements": [],
+        "decisions": [],
+        "action_items": [],
+        "open_questions": [
+          {
+            "id": "387cac27-8041-49a1-b7e2-742f47634730",
+            "text": "I will review API-71 by tomorrow.",
+            "text_en": "I will review API-71 by tomorrow.",
+            "evidence_segment_ids": [
+              "task"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          },
+          {
+            "id": "daf11c1d-6e3b-496e-b74a-9aca5bd0003c",
+            "text": "We have NOT approved test API-17 in staging.",
+            "text_en": "We have NOT approved test API-17 in staging.",
+            "evidence_segment_ids": [
+              "decision"
+            ],
+            "origin": "transcript",
+            "confirmation": "unconfirmed",
+            "owner": null,
+            "raw_due_text": null,
+            "normalized_due": null,
+            "status": "open"
+          }
+        ],
+        "ai_proposals": [],
+        "capture_warnings": []
+      },
+      "edit_provenance": null,
+      "reconciliation": {
+        "policy": "meeting-ledger-v1",
+        "removed_from_current": 2,
+        "added_from_evidence": 0,
+        "user_edit_memory_items": 1,
+        "history_validated": true,
+        "scope": "bounded explicit grammar; other map items retain original validators, not general entailment"
+      }
+    }
+  ]
+}

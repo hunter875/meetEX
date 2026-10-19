@@ -184,5 +184,16 @@ if phase3_path.exists():
     text+='\nPhase 3: **PARTIAL** theo mục tiêu đặt trước. [Báo cáo A–F và benchmark đối chiếu](PHASE3_REPORT.md). 39/39 eligible đã có attempted generation, 0 missed/false trigger; logical 49 → 40 (giảm 18,37%, chưa đạt 20%); Auto đợi manual có thể 2,9 s (chưa đạt 500 ms mọi câu ngắn). Không suy ra chất lượng trả lời thật hoặc SLA. Regression '+f'{counts["backend"]} backend / {counts["frontend"]} frontend / {counts["browser"]} browser. Meet/provider thật mới NOT TESTED; paid calls mới = 0.\n'
     with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
         stream.write('\nPhase 3: **PARTIAL** · trigger/scheduler/dedup/context/retrieval/accounting/UI đã triển khai và đối chiếu; hai mục tiêu request/Auto wait chưa đạt. [A–F, số đo và giới hạn](PHASE3_REPORT.md). Không mở rộng sang decision memory/connector/STT/agent/multiworker.\n')
+phase4_path=docs/'evidence/phase4/review.json'
+if phase4_path.exists():
+    current=json.loads(phase4_path.read_text('utf8'));counts=current['regression']
+    text=text.replace('**276 tests**',f'**{counts["backend"]} tests**').replace('**58 passed**',f'**{counts["frontend"]} passed**').replace('(5 cases)','(6 cases)')
+    for name in ('backend-final.xml','frontend-final.json','browser-final-results.json','documentation-qa.json','browser-final/capture-fixture.json','browser-final/runtime-metrics-fixture.json','browser-final/projects.png','browser-final/report.png','browser-final/live-pinned.png','browser-final/sidepanel-320.png'):
+        text=text.replace('phase3/'+name,'phase4/'+name)
+    text=text.replace('Cập nhật Phase 3 2026-10-18;','Cập nhật Phase 4 2026-10-19;')
+    text=text.replace('Migration 001, FK/WAL/FTS5','Migrations 001→002 (versioned), FK/WAL/FTS5')
+    text+='\nPhase 4: **PARTIAL** · [A–F, schema/states, corpus và giới hạn](PHASE4_REPORT.md). 23 synthetic scenarios (5 held-out), 38/38 expected items/evidence; pipeline dài 321 turns/16 maps giữ cancellation và deadline mới. Không là accuracy/model-quality thật. Regression '+f'{counts["backend"]} backend / {counts["frontend"]} frontend / 6 browser. Meet/model thật NOT TESTED, paid calls mới = 0.\n'
+    with (docs/'IMPLEMENTATION_STATUS.md').open('a',encoding='utf8') as stream:
+        stream.write('\nPhase 4: **PARTIAL** · evidence ledger/versioned migration 002, live context, report reconciliation/current-history và UI/export đã triển khai trong phạm vi grammar có giới hạn. [Báo cáo A–F](PHASE4_REPORT.md). Bare Yes/authority/coreference ngoài phạm vi vẫn cần làm rõ; không tự chứng nhận model quality hay Meet live.\n')
 (docs/'ACCEPTANCE_REPORT.md').write_text(text+'\n',encoding='utf8')
 print('Generated traceability, task status and mode-specific acceptance report')

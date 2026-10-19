@@ -1,0 +1,4420 @@
+{
+  "provenance": "synthetic calibrated DOM, genuine MV3 Chromium, real FastAPI/SQLite, httpx.MockTransport SSE provider, zero paid/network provider calls",
+  "browser": "141.0.7390.37",
+  "faults": [
+    {
+      "outage_ms": 5000,
+      "transcript_recovered": true,
+      "unacked": 0
+    },
+    {
+      "outage_ms": 20000,
+      "transcript_recovered": true,
+      "unacked": 0
+    }
+  ],
+  "snapshot": {
+    "id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+    "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+    "title": "SYNTHETIC PHASE 2 RECOVERY",
+    "timezone": "America/Los_Angeles",
+    "persistence_mode": "local",
+    "demo": false,
+    "meeting_key": "/phase2-room",
+    "status": "active",
+    "started_at": "2026-10-19T12:47:50.818018+00:00",
+    "ended_at": null,
+    "transcript_revision": 15,
+    "capture_status": "observing",
+    "last_caption_at": "2026-10-19T12:48:42.190Z",
+    "self_speaker": "Client",
+    "auto_mode": true,
+    "confirmed_segment_ids": [],
+    "scheduler": {
+      "state": "waiting",
+      "reason": "speaker_unfinished",
+      "policy_version": "content-trigger-v1"
+    },
+    "memory_revision": 6,
+    "segments": [
+      {
+        "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+        "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+        "revision": 3,
+        "speaker": "Client",
+        "text": "Timeout 50.5 ms API-71",
+        "stable": true,
+        "observed_from": "2026-10-19T12:47:50.930Z",
+        "observed_to": "2026-10-19T12:47:52.001Z"
+      },
+      {
+        "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+        "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+        "revision": 2,
+        "speaker": "Client",
+        "text": "During outage 5000 NOT API-17",
+        "stable": true,
+        "observed_from": "2026-10-19T12:47:52.302Z",
+        "observed_to": "2026-10-19T12:47:53.407Z"
+      },
+      {
+        "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+        "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+        "revision": 2,
+        "speaker": "Client",
+        "text": "During outage 20000 NOT API-17",
+        "stable": true,
+        "observed_from": "2026-10-19T12:48:00.342Z",
+        "observed_to": "2026-10-19T12:48:01.396Z"
+      },
+      {
+        "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+        "revision": 4,
+        "speaker": "Another client",
+        "text": "Could you explain the revised next step?",
+        "stable": true,
+        "observed_from": "2026-10-19T12:48:34.027Z",
+        "observed_to": "2026-10-19T12:48:38.293Z"
+      },
+      {
+        "id": "534d608a-63d0-487f-b888-e4729e4f1b55",
+        "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+        "revision": 2,
+        "speaker": "Another client",
+        "text": "Which option should we choose next?",
+        "stable": true,
+        "observed_from": "2026-10-19T12:48:38.619Z",
+        "observed_to": "2026-10-19T12:48:39.696Z"
+      },
+      {
+        "id": "8b571ae4-4afa-4ca7-b4ad-785d4c2f906d",
+        "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+        "revision": 1,
+        "speaker": "Another client",
+        "text": "Could you clarify after the panel closes?",
+        "stable": false,
+        "observed_from": "2026-10-19T12:48:40.654Z",
+        "observed_to": "2026-10-19T12:48:40.654Z"
+      },
+      {
+        "id": "9310bf9f-4984-411f-9414-8f052a3adfb2",
+        "capture_epoch": "4d7b59d3-9654-4adb-8713-6559c4f58c10",
+        "revision": 1,
+        "speaker": "Fresh speaker",
+        "text": "Fresh after reload",
+        "stable": false,
+        "observed_from": "2026-10-19T12:48:42.190Z",
+        "observed_to": "2026-10-19T12:48:42.190Z"
+      }
+    ],
+    "suggestions": [
+      {
+        "id": "1e4cc78a-0cc5-42c1-8b39-9068dcf71614",
+        "request_id": "44f164a6-2204-400f-80c2-fbace2777354",
+        "created_at": "2026-10-19T12:48:36.070721+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "bf2cf178-c7a9-4650-b517-236e141e1a11",
+            "7323eaeb-9946-4993-a54d-a9d90b485695",
+            "17cf86f9-3a39-43f9-9940-992bdcad63da",
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 0",
+          "input_hash": "90f45d6ceaa23900d46c23856fe6dd9f6176a0470e8dc6a1bba164a89f001ee0",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.17229997320100665
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 52.511900023091584
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 18.964999995660037,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "cold",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 7.122499984689057
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 20.54850000422448
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 21.160000003874302
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 22.01489999424666
+            }
+          ],
+          "provider_ms": 13.412400032393634,
+          "validation_ms": 1.262800011318177,
+          "stable_to_scheduled_ms": 954.5684999902733,
+          "scheduler_wait_ms": 4.285800037905574,
+          "retrieval_ms": 52.511900023091584,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "898461e3-2e10-49fb-997b-2805bbd982f7",
+        "request_id": "6e51327b-f129-476c-af22-ac8e587b884c",
+        "created_at": "2026-10-19T12:48:36.369190+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "bf2cf178-c7a9-4650-b517-236e141e1a11",
+            "7323eaeb-9946-4993-a54d-a9d90b485695",
+            "17cf86f9-3a39-43f9-9940-992bdcad63da",
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 1",
+          "input_hash": "003899e722fd9ff79f4c51d9084cc393537ebb2e9432416f822c37259aff7f36",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.10880001354962587
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 34.02099997038022
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 8.214799978304654,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.654899974819273
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 10.535399953369051
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 11.248999973759055
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 11.809999996330589
+            }
+          ],
+          "provider_ms": 3.8714000256732106,
+          "validation_ms": 1.1101000127382576,
+          "stable_to_scheduled_ms": 1263.6946000275202,
+          "scheduler_wait_ms": 4.391599970404059,
+          "retrieval_ms": 34.02099997038022,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "bee43719-2c51-4248-80ff-e9524ee48626",
+        "request_id": "28ba7825-457b-445d-99c9-54528563665d",
+        "created_at": "2026-10-19T12:48:36.713678+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "bf2cf178-c7a9-4650-b517-236e141e1a11",
+            "7323eaeb-9946-4993-a54d-a9d90b485695",
+            "17cf86f9-3a39-43f9-9940-992bdcad63da",
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 2",
+          "input_hash": "b850432248557096c00c05b8ff9593f947e41949595ad617bee6386acf6dd947",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.13289996422827244
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 32.08519995678216
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 8.097300014924258,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 12.36100000096485
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 16.06190000893548
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 16.65629999479279
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 17.1449999907054
+            }
+          ],
+          "provider_ms": 3.693699953146279,
+          "validation_ms": 0.9260000078938901,
+          "stable_to_scheduled_ms": 1602.7785000042059,
+          "scheduler_wait_ms": 9.873799979686737,
+          "retrieval_ms": 32.08519995678216,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "c3aeb600-437f-4afe-aca8-7eda232866c3",
+        "request_id": "9d99d56a-f5f9-487e-9c34-455cd05f4922",
+        "created_at": "2026-10-19T12:48:38.006083+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 9,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "bf2cf178-c7a9-4650-b517-236e141e1a11",
+            "7323eaeb-9946-4993-a54d-a9d90b485695",
+            "17cf86f9-3a39-43f9-9940-992bdcad63da",
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_SLOW_STALE",
+          "input_hash": "060bb0674c0d6072b127243c50f4ed004af4f5d468d5dc43209662edbd69939a",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.10449998080730438
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 34.95210001710802
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 809.934200020507,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "stale",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.5534000168554485
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 812.7205999917351
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 813.1114999996498
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 813.5867000091821
+            }
+          ],
+          "provider_ms": 806.160100037232,
+          "validation_ms": 0.7205999572761357,
+          "stable_to_scheduled_ms": 2098.710899997968,
+          "scheduler_wait_ms": 4.509399994276464,
+          "retrieval_ms": 34.95210001710802,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "a8a6ef6a-0f96-471d-854f-ac727da6e990",
+        "request_id": "d5df59e8-8e3a-4b7d-b68a-9084bb703bc4",
+        "created_at": "2026-10-19T12:48:38.480631+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 11,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "bf2cf178-c7a9-4650-b517-236e141e1a11",
+            "7323eaeb-9946-4993-a54d-a9d90b485695",
+            "17cf86f9-3a39-43f9-9940-992bdcad63da",
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 11,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:38.293Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY_AFTER_CANCEL",
+          "input_hash": "11104c289037d29ecbd49892c5ab98defb0e129217fc95bf63e32f8984cdaaa4",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.14949997421354055
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the revised next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 4,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 3,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 28.667100006714463
+        },
+        "stale": true,
+        "automatic": false,
+        "duration_ms": 10.208799969404936,
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 15.083700011018664
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 19.822900008875877
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 20.802700018975884
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 21.617399994283915
+            }
+          ],
+          "provider_ms": 4.731399996671826,
+          "validation_ms": 1.5694999601691961,
+          "stable_to_scheduled_ms": 142.9319999879226,
+          "scheduler_wait_ms": 12.820000003557652,
+          "retrieval_ms": 28.667100006714463,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      },
+      {
+        "id": "ff3cff43-2024-48cf-9210-9e66b0d8af2b",
+        "request_id": "3df604ca-93ec-4555-962d-780d78fa948a",
+        "created_at": "2026-10-19T12:48:39.885637+00:00",
+        "mode": "real",
+        "payload": {
+          "input_revision": 13,
+          "intent": "question",
+          "meaning_vi": "Cần làm rõ bước tiếp theo.",
+          "findings": [],
+          "reply_en": "Could you clarify the next step?",
+          "reply_vi": "Bạn làm rõ bước tiếp theo được không?",
+          "clarification_en": "",
+          "evidence_status": "missing",
+          "uncertainties": [],
+          "supporting_segment_ids": [
+            "bf2cf178-c7a9-4650-b517-236e141e1a11",
+            "7323eaeb-9946-4993-a54d-a9d90b485695",
+            "17cf86f9-3a39-43f9-9940-992bdcad63da",
+            "3930e415-4dee-4471-b52b-6003337b14c0",
+            "534d608a-63d0-487f-b888-e4729e4f1b55"
+          ]
+        },
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 13,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:38.293Z"
+            },
+            {
+              "id": "534d608a-63d0-487f-b888-e4729e4f1b55",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Which option should we choose next?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:38.619Z",
+              "observed_to": "2026-10-19T12:48:39.696Z"
+            }
+          ],
+          "memory": [],
+          "sources": [
+            {
+              "id": "89949f36-ddab-412a-8291-96cb4ac74a7d",
+              "source_id": "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63",
+              "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+              "generation": 1,
+              "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
+              "title": "API deployment notes",
+              "kind": "text",
+              "path": "API deployment notes",
+              "line_start": 1,
+              "line_end": 1,
+              "indexed_at": "2026-10-19T12:47:39.459361+00:00",
+              "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
+              "stale": false,
+              "source_changed": false,
+              "source_deleted": false,
+              "section": "",
+              "origin_updated_at": null,
+              "canonical_locator": null,
+              "score": 0.3163934426229508
+            }
+          ],
+          "action": "auto",
+          "question": "",
+          "input_hash": "a309cbca9efb0ba1b9ab6ea426289b510dff2360fc2f2ce4172f3b224d94e7bd",
+          "routing": {
+            "version": "rules-v1",
+            "route": "deep",
+            "automatic_route": "deep",
+            "source": "automatic",
+            "reasons": [
+              "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+              "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+            ],
+            "risks": [],
+            "evidence_state": "available",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "534d608a-63d0-487f-b888-e4729e4f1b55"
+            ],
+            "target_min_s": 5,
+            "target_max_s": 10,
+            "classifier_ms": 0.07839995669201016
+          },
+          "focus_segment_ids": [
+            "534d608a-63d0-487f-b888-e4729e4f1b55"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 8,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the revised next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 4,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 3,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Client",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.19380002049729228
+        },
+        "stale": false,
+        "automatic": true,
+        "duration_ms": 12.006599979940802,
+        "timing": {
+          "trigger": "auto",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 5.389900004956871
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 9.318099997472018
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 11.226399976294488
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 12.445999949704856
+            }
+          ],
+          "provider_ms": 3.919999988283962,
+          "validation_ms": 2.8526000096462667,
+          "stable_to_scheduled_ms": 167.79760003555566,
+          "scheduler_wait_ms": 3.2600999693386257,
+          "retrieval_ms": 0.19380002049729228,
+          "http_attempts": 0,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 0,
+          "wire_input_chars_total": 0,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        }
+      }
+    ],
+    "requests": [
+      {
+        "id": "44f164a6-2204-400f-80c2-fbace2777354",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 0",
+          "input_hash": "90f45d6ceaa23900d46c23856fe6dd9f6176a0470e8dc6a1bba164a89f001ee0",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.17229997320100665
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 52.511900023091584
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "cold",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 7.122499984689057
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 20.54850000422448
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 21.160000003874302
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 22.01489999424666
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 26.14159998483956
+            }
+          ],
+          "provider_ms": 13.412400032393634,
+          "validation_ms": 1.262800011318177,
+          "stable_to_scheduled_ms": 954.5684999902733,
+          "scheduler_wait_ms": 4.285800037905574,
+          "retrieval_ms": 52.511900023091584,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2254,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:36.047491+00:00",
+        "started_at": "2026-10-19T12:48:36.051839+00:00",
+        "duration_ms": 21.83159999549389,
+        "stable_to_request_ms": 958.8543000281788
+      },
+      {
+        "id": "6e51327b-f129-476c-af22-ac8e587b884c",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 1",
+          "input_hash": "003899e722fd9ff79f4c51d9084cc393537ebb2e9432416f822c37259aff7f36",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.10880001354962587
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 34.02099997038022
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.654899974819273
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 10.535399953369051
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 11.248999973759055
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 11.809999996330589
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 15.430399973411113
+            }
+          ],
+          "provider_ms": 3.8714000256732106,
+          "validation_ms": 1.1101000127382576,
+          "stable_to_scheduled_ms": 1263.6946000275202,
+          "scheduler_wait_ms": 4.391599970404059,
+          "retrieval_ms": 34.02099997038022,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2254,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:36.356623+00:00",
+        "started_at": "2026-10-19T12:48:36.361060+00:00",
+        "duration_ms": 11.011200025677681,
+        "stable_to_request_ms": 1268.0861999979243
+      },
+      {
+        "id": "28ba7825-457b-445d-99c9-54528563665d",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY 2",
+          "input_hash": "b850432248557096c00c05b8ff9593f947e41949595ad617bee6386acf6dd947",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.13289996422827244
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 32.08519995678216
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 12.36100000096485
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 16.06190000893548
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 16.65629999479279
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 17.1449999907054
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 20.595300011336803
+            }
+          ],
+          "provider_ms": 3.693699953146279,
+          "validation_ms": 0.9260000078938901,
+          "stable_to_scheduled_ms": 1602.7785000042059,
+          "scheduler_wait_ms": 9.873799979686737,
+          "retrieval_ms": 32.08519995678216,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2254,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:36.695714+00:00",
+        "started_at": "2026-10-19T12:48:36.705628+00:00",
+        "duration_ms": 10.70300000719726,
+        "stable_to_request_ms": 1612.6522999838926
+      },
+      {
+        "id": "c8ddfaba-b2b7-4310-b699-dcc8ca98f348",
+        "action": "suggest",
+        "status": "error",
+        "error": {
+          "code": "PROVIDER_AUTH",
+          "message": "Provider HTTP 401. Check key/model/settings; retry only when appropriate.",
+          "retryable": false,
+          "request_id": "c8ddfaba-b2b7-4310-b699-dcc8ca98f348"
+        },
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_ERROR",
+          "input_hash": "47d0c4940c922df0e6b7e5d23ffa62ea2366568a7946649e98dcf82370a9ccad",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.11140003334730864
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 37.015500012785196
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "error",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 8.399799990002066
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 12.594600033480674
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 13.475000043399632
+            }
+          ],
+          "provider_ms": 4.186799982562661,
+          "validation_ms": 0,
+          "stable_to_scheduled_ms": 1939.1182999825105,
+          "scheduler_wait_ms": 6.008800002746284,
+          "retrieval_ms": 37.015500012785196,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2252,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:37.032060+00:00",
+        "started_at": "2026-10-19T12:48:37.038105+00:00",
+        "duration_ms": 7.410500023979694,
+        "stable_to_request_ms": 1945.1270999852568
+      },
+      {
+        "id": "9d99d56a-f5f9-487e-9c34-455cd05f4922",
+        "action": "suggest",
+        "status": "stale",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 9,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Could you explain the next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:35.085Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_SLOW_STALE",
+          "input_hash": "060bb0674c0d6072b127243c50f4ed004af4f5d468d5dc43209662edbd69939a",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.10449998080730438
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 4,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 34.95210001710802
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "stale",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 6.5534000168554485
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 812.7205999917351
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 813.1114999996498
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 813.5867000091821
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 817.2414000146091
+            }
+          ],
+          "provider_ms": 806.160100037232,
+          "validation_ms": 0.7205999572761357,
+          "stable_to_scheduled_ms": 2098.710899997968,
+          "scheduler_wait_ms": 4.509399994276464,
+          "retrieval_ms": 34.95210001710802,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2257,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:37.191641+00:00",
+        "started_at": "2026-10-19T12:48:37.196194+00:00",
+        "duration_ms": 812.7080000122078,
+        "stable_to_request_ms": 2103.2202999922447
+      },
+      {
+        "id": "c1fa081e-d953-4072-9a1e-e96532d31b9b",
+        "action": "suggest",
+        "status": "cancelled",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 10,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 3,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": false,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:37.281Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_SLOW_CANCEL",
+          "input_hash": "7ae91af7a38e0d716023ba226a101c29da1ac950efa22df1ebc989adb5451b0d",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.10710000060498714
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 5,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 49.71849999856204
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "cancelled",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 17.882700019981712
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 141.4076000219211
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 143.224100000225
+            }
+          ],
+          "provider_ms": 123.5166999977082,
+          "validation_ms": 0,
+          "stable_to_scheduled_ms": null,
+          "scheduler_wait_ms": 15.864700020756572,
+          "retrieval_ms": 49.71849999856204,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 1957,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:38.320598+00:00",
+        "started_at": "2026-10-19T12:48:38.336500+00:00",
+        "duration_ms": 127.3277000291273
+      },
+      {
+        "id": "d5df59e8-8e3a-4b7d-b68a-9084bb703bc4",
+        "action": "suggest",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 11,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:38.293Z"
+            }
+          ],
+          "memory": [],
+          "sources": [],
+          "action": "suggest",
+          "question": "PHASE2_READY_AFTER_CANCEL",
+          "input_hash": "11104c289037d29ecbd49892c5ab98defb0e129217fc95bf63e32f8984cdaaa4",
+          "routing": {
+            "version": "rules-v1",
+            "route": "fast",
+            "automatic_route": "fast",
+            "source": "automatic",
+            "reasons": [
+              "Chưa thấy yêu cầu phân tích nhiều hướng; ưu tiên câu trả lời ngắn có căn cứ.",
+              "Chưa có nguồn dự án; phương án nếu có chỉ là đề xuất cần kiểm chứng."
+            ],
+            "risks": [],
+            "evidence_state": "missing",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "3930e415-4dee-4471-b52b-6003337b14c0"
+            ],
+            "target_min_s": 1,
+            "target_max_s": 2,
+            "classifier_ms": 0.14949997421354055
+          },
+          "focus_segment_ids": [
+            "3930e415-4dee-4471-b52b-6003337b14c0"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 7,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the revised next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 4,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 3,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 0,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": null,
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 28.667100006714463
+        },
+        "timing": {
+          "trigger": "manual",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 15.083700011018664
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 19.822900008875877
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 20.802700018975884
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 21.617399994283915
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 25.410600006580353
+            }
+          ],
+          "provider_ms": 4.731399996671826,
+          "validation_ms": 1.5694999601691961,
+          "stable_to_scheduled_ms": 142.9319999879226,
+          "scheduler_wait_ms": 12.820000003557652,
+          "retrieval_ms": 28.667100006714463,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2283,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:38.457623+00:00",
+        "started_at": "2026-10-19T12:48:38.470484+00:00",
+        "duration_ms": 12.561899959109724,
+        "stable_to_request_ms": 155.75199999148026
+      },
+      {
+        "id": "3df604ca-93ec-4555-962d-780d78fa948a",
+        "action": "auto",
+        "status": "ready",
+        "error": null,
+        "snapshot": {
+          "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+          "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+          "transcript_revision": 13,
+          "index_generation": {
+            "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63": 1
+          },
+          "segments": [
+            {
+              "id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 3,
+              "speaker": "Client",
+              "text": "Timeout 50.5 ms API-71",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:50.930Z",
+              "observed_to": "2026-10-19T12:47:52.001Z"
+            },
+            {
+              "id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 5000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:47:52.302Z",
+              "observed_to": "2026-10-19T12:47:53.407Z"
+            },
+            {
+              "id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+              "capture_epoch": "8bc79992-bcfb-438e-9fc7-d6cbb73537ae",
+              "revision": 2,
+              "speaker": "Client",
+              "text": "During outage 20000 NOT API-17",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:00.342Z",
+              "observed_to": "2026-10-19T12:48:01.396Z"
+            },
+            {
+              "id": "3930e415-4dee-4471-b52b-6003337b14c0",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 4,
+              "speaker": "Another client",
+              "text": "Could you explain the revised next step?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:34.027Z",
+              "observed_to": "2026-10-19T12:48:38.293Z"
+            },
+            {
+              "id": "534d608a-63d0-487f-b888-e4729e4f1b55",
+              "capture_epoch": "acccfb22-96a8-4264-8396-ff9f6b8937a7",
+              "revision": 2,
+              "speaker": "Another client",
+              "text": "Which option should we choose next?",
+              "stable": true,
+              "observed_from": "2026-10-19T12:48:38.619Z",
+              "observed_to": "2026-10-19T12:48:39.696Z"
+            }
+          ],
+          "memory": [],
+          "sources": [
+            {
+              "id": "89949f36-ddab-412a-8291-96cb4ac74a7d",
+              "source_id": "3b1104c4-a2e3-43d4-ad0d-3f1d48e1bd63",
+              "project_id": "0ff4f7fb-93a8-459f-9f03-216721702e29",
+              "generation": 1,
+              "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
+              "title": "API deployment notes",
+              "kind": "text",
+              "path": "API deployment notes",
+              "line_start": 1,
+              "line_end": 1,
+              "indexed_at": "2026-10-19T12:47:39.459361+00:00",
+              "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
+              "stale": false,
+              "source_changed": false,
+              "source_deleted": false,
+              "section": "",
+              "origin_updated_at": null,
+              "canonical_locator": null,
+              "score": 0.3163934426229508
+            }
+          ],
+          "action": "auto",
+          "question": "",
+          "input_hash": "a309cbca9efb0ba1b9ab6ea426289b510dff2360fc2f2ce4172f3b224d94e7bd",
+          "routing": {
+            "version": "rules-v1",
+            "route": "deep",
+            "automatic_route": "deep",
+            "source": "automatic",
+            "reasons": [
+              "Câu hỏi yêu cầu cân nhắc hướng xử lý hoặc so sánh phương án.",
+              "Có đoạn nguồn để đối chiếu; chưa chứng minh mọi khẳng định đúng."
+            ],
+            "risks": [],
+            "evidence_state": "available",
+            "requires_verification": false,
+            "trigger_segment_ids": [
+              "534d608a-63d0-487f-b888-e4729e4f1b55"
+            ],
+            "target_min_s": 5,
+            "target_max_s": 10,
+            "classifier_ms": 0.07839995669201016
+          },
+          "focus_segment_ids": [
+            "534d608a-63d0-487f-b888-e4729e4f1b55"
+          ],
+          "context_omitted_count": 0,
+          "source_omitted_count": 0,
+          "orchestration_policy": "content-trigger-v1",
+          "prompt_version": "live-context-v2",
+          "response_mode": "auto",
+          "capture_cursor": 8,
+          "structured_memory": [
+            {
+              "id": "b52cd070683786a1f1fe90c7",
+              "kind": "spoken_fact",
+              "text": "During outage 20000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "63377b2089226378af3374db",
+              "kind": "spoken_fact",
+              "text": "During outage 5000 NOT API-17",
+              "entity": "API-17",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 2,
+                  "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            },
+            {
+              "id": "c8ab6829979086c8b23633a5",
+              "kind": "proposal",
+              "text": "Could you explain the revised next step?",
+              "entity": null,
+              "action": null,
+              "environment": null,
+              "status": "proposed",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 4,
+                  "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0"
+                }
+              ],
+              "version": 3,
+              "relations": []
+            },
+            {
+              "id": "79b8169d6929c315c2ef9203",
+              "kind": "spoken_fact",
+              "text": "Timeout 50.5 ms API-71",
+              "entity": "API-71",
+              "action": null,
+              "environment": null,
+              "status": "stated",
+              "owner": null,
+              "raw_due_text": null,
+              "normalized_due": null,
+              "origin": "transcript",
+              "evidence": [
+                {
+                  "revision": 3,
+                  "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11"
+                }
+              ],
+              "version": 1,
+              "relations": []
+            }
+          ],
+          "memory_revision": 6,
+          "ledger_omitted_count": 0,
+          "context_revision": 1,
+          "memory_omitted_count": 0,
+          "glossary": {},
+          "self_speaker": "Client",
+          "sentence_limit": 3,
+          "provider_config": {
+            "provider_url": "https://api.deepseek.com",
+            "model": "deepseek-flash",
+            "output_tokens": 800,
+            "input_chars": 18000,
+            "live_timeout_s": 20
+          },
+          "retrieval_ms": 0.19380002049729228
+        },
+        "timing": {
+          "trigger": "auto",
+          "temperature": "warm",
+          "retrieval": "keyword",
+          "provider_mode": "real",
+          "outcome": "ready",
+          "marks": [
+            {
+              "stage": "suggestion_scheduled",
+              "offset_ms": 0
+            },
+            {
+              "stage": "provider_started",
+              "offset_ms": 5.389900004956871
+            },
+            {
+              "stage": "provider_completed",
+              "offset_ms": 9.318099997472018
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 11.226399976294488
+            },
+            {
+              "stage": "validation_completed",
+              "offset_ms": 12.445999949704856
+            },
+            {
+              "stage": "request_completed",
+              "offset_ms": 17.557299986947328
+            }
+          ],
+          "provider_ms": 3.919999988283962,
+          "validation_ms": 2.8526000096462667,
+          "stable_to_scheduled_ms": 167.79760003555566,
+          "scheduler_wait_ms": 3.2600999693386257,
+          "retrieval_ms": 0.19380002049729228,
+          "http_attempts": 1,
+          "repair_attempts": 0,
+          "usage_unknown_attempts": 1,
+          "wire_input_chars_total": 2566,
+          "policy_version": "content-trigger-v1",
+          "freshness_reason": null
+        },
+        "created_at": "2026-10-19T12:48:39.870395+00:00",
+        "started_at": "2026-10-19T12:48:39.873679+00:00",
+        "duration_ms": 14.27220000186935,
+        "stable_to_request_ms": 171.0577000048943
+      }
+    ],
+    "reports": [],
+    "gaps": [
+      {
+        "id": "47c3ba65-d58d-46be-a800-ca0b454cc2dc",
+        "reason": "transport_disconnected",
+        "from_at": "2026-10-19T12:47:52.226716+00:00",
+        "to_at": "2026-10-19T12:47:59.679129+00:00",
+        "certainty": "possible"
+      },
+      {
+        "id": "0771c9dd-682d-4bbc-8665-13652e8a80a9",
+        "reason": "transport_disconnected",
+        "from_at": "2026-10-19T12:48:00.281336+00:00",
+        "to_at": "2026-10-19T12:48:31.210970+00:00",
+        "certainty": "possible"
+      },
+      {
+        "id": "c4474eaf-a8a7-479d-95ee-25a884557806",
+        "reason": "pause",
+        "from_at": "2026-10-19T12:48:31.506911+00:00",
+        "to_at": "2026-10-19T12:48:32.776623+00:00",
+        "certainty": "certain"
+      },
+      {
+        "id": "512600f4-c62b-4e37-88f5-41143dd6e4e2",
+        "reason": "adapter_replaced",
+        "from_at": "2026-10-19T12:48:38.642363+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      },
+      {
+        "id": "39ee4911-ffea-4d15-b53d-088de28d6597",
+        "reason": "adapter_replaced",
+        "from_at": "2026-10-19T12:48:40.657924+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      },
+      {
+        "id": "b9a49496-f0b1-46de-be5d-6f8348f3d29c",
+        "reason": "document_reloaded",
+        "from_at": "2026-10-19T12:48:40.762095+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      },
+      {
+        "id": "0e26eb85-38ef-4de0-b9db-1866aa04a89c",
+        "reason": "interrupted",
+        "from_at": "2026-10-19T12:48:40.654Z",
+        "to_at": "2026-10-19T12:48:40.932773+00:00",
+        "certainty": "certain"
+      },
+      {
+        "id": "ab9483f1-e4a8-4edd-8d89-4e236a97847f",
+        "reason": "document_reloaded",
+        "from_at": "2026-10-19T12:48:40.946118+00:00",
+        "to_at": null,
+        "certainty": "possible"
+      }
+    ],
+    "binding": {
+      "tab_id": 116957089,
+      "document_id": "E45E5059BE7DF1C3913E14812C540FFB",
+      "meeting_key": "/phase2-room"
+    },
+    "epochs": {
+      "8bc79992-bcfb-438e-9fc7-d6cbb73537ae": 7,
+      "acccfb22-96a8-4264-8396-ff9f6b8937a7": 7,
+      "4d7b59d3-9654-4adb-8713-6559c4f58c10": 1
+    },
+    "latest_request": "3df604ca-93ec-4555-962d-780d78fa948a",
+    "pause_from": null,
+    "transport_gap_id": null,
+    "context_revision": 1
+  },
+  "telemetry": {
+    "captureTimings": [
+      10.800000011920929,
+      27.5,
+      11,
+      16.69999998807907,
+      25.200000047683716,
+      11.099999964237213,
+      7.600000023841858,
+      15.899999976158142,
+      12.900000035762787,
+      6.900000035762787,
+      7390.300000011921,
+      6295,
+      30883.900000035763,
+      29838,
+      8.5,
+      8.100000023841858,
+      17.80000001192093,
+      22.5,
+      33.60000002384186,
+      6.900000035762787,
+      12,
+      9.599999964237213
+    ],
+    "latencyRecords": [
+      {
+        "clock": "content_monotonic",
+        "event_id": "96f8b561-3ef5-4953-a731-1c308bedea87",
+        "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+        "observed_to_ack_ms": 10.600000023841858,
+        "revision": 1,
+        "segment_id": "e1ce2bf5-17b8-4810-82ab-331eb2de9939",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "f7ef3811-e648-4329-8dee-ebf71ff5a558",
+        "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+        "observed_to_ack_ms": 27.5,
+        "revision": 2,
+        "segment_id": "e1ce2bf5-17b8-4810-82ab-331eb2de9939",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "49bedc0b-9f33-4b6e-950c-2e8d1297b76d",
+        "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+        "observed_to_ack_ms": 10.800000011920929,
+        "revision": 3,
+        "segment_id": "e1ce2bf5-17b8-4810-82ab-331eb2de9939",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "15b94f4a-3a7f-4ef0-8fde-8465eacd2849",
+        "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+        "observed_to_ack_ms": 16.5,
+        "revision": 4,
+        "segment_id": "e1ce2bf5-17b8-4810-82ab-331eb2de9939",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "2dac164c-151c-4938-8bd7-bbd863ed0761",
+        "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+        "observed_to_ack_ms": 67.80000001192093,
+        "revision": 5,
+        "segment_id": "e1ce2bf5-17b8-4810-82ab-331eb2de9939",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "df8cd704-c7c1-464b-9899-b81af52f903a",
+        "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+        "observed_to_ack_ms": 11,
+        "revision": 1,
+        "segment_id": "e5c4f23b-6d5a-4dcd-8d72-ca6b1ac365ec",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "7af70f93-ce87-409d-8457-f1c2c04c9b5a",
+        "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+        "observed_to_ack_ms": 147.79999995231628,
+        "revision": 2,
+        "segment_id": "e5c4f23b-6d5a-4dcd-8d72-ca6b1ac365ec",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "5b1aaa07-79f6-4efd-9e17-73de15911ecb",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 15.899999976158142,
+        "revision": 1,
+        "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "b45ab809-bcce-451b-83c4-34c5acacb69e",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 12.700000047683716,
+        "revision": 2,
+        "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "7e86b730-2304-48e8-ae9a-cdfe85013504",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 1038.9000000357628,
+        "revision": 3,
+        "segment_id": "bf2cf178-c7a9-4650-b517-236e141e1a11",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "3bfeb1cc-46d6-415b-9298-a6527ec199d3",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 7390.199999988079,
+        "revision": 1,
+        "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "552fcc46-cffd-45b2-83c1-a8dcf0dd8872",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 7399.800000011921,
+        "revision": 2,
+        "segment_id": "7323eaeb-9946-4993-a54d-a9d90b485695",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "5186ddf5-e8fc-46f4-9c82-18b53ebb1428",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 30883.69999998808,
+        "revision": 1,
+        "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "47967af7-e708-48a2-83f2-d7abe8b98df2",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 30891.80000001192,
+        "revision": 2,
+        "segment_id": "17cf86f9-3a39-43f9-9940-992bdcad63da",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "7c81e790-71a8-4f25-85a2-d8abc2155359",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 8.5,
+        "revision": 1,
+        "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "9ce29e45-e916-4038-a141-f2d918803aa6",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 1066.0999999642372,
+        "revision": 2,
+        "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "request_id": "44f164a6-2204-400f-80c2-fbace2777354",
+        "stable_to_schedule_received_ms": 969.3999999761581,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_rendered_notification_ms": 2195.5,
+        "outcome": "ready",
+        "request_id": "44f164a6-2204-400f-80c2-fbace2777354",
+        "revision": 2,
+        "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "stable_to_rendered_notification_ms": 1137.5,
+        "stage": "card_rendered_notification",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "request_id": "6e51327b-f129-476c-af22-ac8e587b884c",
+        "stable_to_schedule_received_ms": 1276.199999988079,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_rendered_notification_ms": 2487.7999999523163,
+        "outcome": "ready",
+        "request_id": "6e51327b-f129-476c-af22-ac8e587b884c",
+        "revision": 2,
+        "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "stable_to_rendered_notification_ms": 1429.7999999523163,
+        "stage": "card_rendered_notification",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "request_id": "28ba7825-457b-445d-99c9-54528563665d",
+        "stable_to_schedule_received_ms": 1620.699999988079,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_rendered_notification_ms": 2869.7999999523163,
+        "outcome": "ready",
+        "request_id": "28ba7825-457b-445d-99c9-54528563665d",
+        "revision": 2,
+        "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "stable_to_rendered_notification_ms": 1811.7999999523163,
+        "stage": "card_rendered_notification",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "request_id": "c8ddfaba-b2b7-4310-b699-dcc8ca98f348",
+        "stable_to_schedule_received_ms": 1953.3999999761581,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "request_id": "9d99d56a-f5f9-487e-9c34-455cd05f4922",
+        "stable_to_schedule_received_ms": 2113.399999976158,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "1372cb5e-e915-41d1-bd4b-2da8ea04d537",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 17.69999998807907,
+        "revision": 3,
+        "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "ff402218-0ddb-45ca-ab81-09d12a5f6c0b",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 1034.300000011921,
+        "revision": 4,
+        "segment_id": "3930e415-4dee-4471-b52b-6003337b14c0",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "request_id": "d5df59e8-8e3a-4b7d-b68a-9084bb703bc4",
+        "stable_to_schedule_received_ms": 171.29999995231628,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "manual"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "e2508302-8d27-4b3e-93ec-fa784aee9c1e",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 33.5,
+        "revision": 1,
+        "segment_id": "534d608a-63d0-487f-b888-e4729e4f1b55",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "aa7da735-a05f-40f0-9c2e-9e0e2f802787",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 1083.8999999761581,
+        "revision": 2,
+        "segment_id": "534d608a-63d0-487f-b888-e4729e4f1b55",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "request_id": "3df604ca-93ec-4555-962d-780d78fa948a",
+        "stable_to_schedule_received_ms": 197,
+        "stage": "suggestion_scheduled_received",
+        "trigger": "auto"
+      },
+      {
+        "clock": "content_monotonic",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_rendered_notification_ms": 1446.6000000238419,
+        "outcome": "ready",
+        "request_id": "3df604ca-93ec-4555-962d-780d78fa948a",
+        "revision": 2,
+        "segment_id": "534d608a-63d0-487f-b888-e4729e4f1b55",
+        "stable_to_rendered_notification_ms": 369.4000000357628,
+        "stage": "card_rendered_notification",
+        "trigger": "auto"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "ae2d8a12-8be0-4de1-b57c-04e3b5ee4822",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 11.899999976158142,
+        "revision": 1,
+        "segment_id": "8b571ae4-4afa-4ca7-b4ad-785d4c2f906d",
+        "stage": "ack_received"
+      },
+      {
+        "clock": "content_monotonic",
+        "event_id": "03396b69-a5fe-4e22-89ea-06a6716eefa1",
+        "meeting_id": "47c792fd-1673-4fbf-845a-0b8b89afb73e",
+        "observed_to_ack_ms": 9.600000023841858,
+        "revision": 1,
+        "segment_id": "9310bf9f-4984-411f-9414-8f052a3adfb2",
+        "stage": "ack_received"
+      }
+    ]
+  },
+  "backend_latency": [
+    {
+      "request_id": "3d73941c-2fe8-4dfd-97e7-6deb2a24702c",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 8.615800004918128
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 12.24690000526607
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 3.6506999749690294,
+      "stable_to_scheduled_ms": 813.5378999868408,
+      "scheduler_wait_ms": 3.280900011304766,
+      "retrieval_ms": 0.19689998589456081,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "5bc9a831-b362-4809-bb1a-7f583caff179",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 6.393600022420287
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 10.755900002550334
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.8074000361375511,
+      "stable_to_scheduled_ms": 179.45879994658753,
+      "scheduler_wait_ms": 3.518400015309453,
+      "retrieval_ms": 22.93959999224171,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "c2d518aa-3519-46bd-9d34-9b82f977ff55",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "stale",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 6.5178999793715775
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 10.354399972129613
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.8694000425748527,
+      "scheduler_wait_ms": 3.539700002875179,
+      "retrieval_ms": 0.19689998589456081,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "806309e3-1152-4b3b-b6d8-f2874a8dd2d9",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 6.897300016134977
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 9.87060001352802
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.9306999854743481,
+      "stable_to_scheduled_ms": 2030.219899956137,
+      "scheduler_wait_ms": 3.694300015922636,
+      "retrieval_ms": 0.3554999711923301,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "44f164a6-2204-400f-80c2-fbace2777354",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 7.122499984689057
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 20.54850000422448
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 21.160000003874302
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 22.01489999424666
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 26.14159998483956
+        }
+      ],
+      "provider_ms": 13.412400032393634,
+      "validation_ms": 1.262800011318177,
+      "stable_to_scheduled_ms": 954.5684999902733,
+      "scheduler_wait_ms": 4.285800037905574,
+      "retrieval_ms": 52.511900023091584,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2254
+    },
+    {
+      "request_id": "6e51327b-f129-476c-af22-ac8e587b884c",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 6.654899974819273
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 10.535399953369051
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 11.248999973759055
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 11.809999996330589
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 15.430399973411113
+        }
+      ],
+      "provider_ms": 3.8714000256732106,
+      "validation_ms": 1.1101000127382576,
+      "stable_to_scheduled_ms": 1263.6946000275202,
+      "scheduler_wait_ms": 4.391599970404059,
+      "retrieval_ms": 34.02099997038022,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2254
+    },
+    {
+      "request_id": "28ba7825-457b-445d-99c9-54528563665d",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 12.36100000096485
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 16.06190000893548
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 16.65629999479279
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 17.1449999907054
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 20.595300011336803
+        }
+      ],
+      "provider_ms": 3.693699953146279,
+      "validation_ms": 0.9260000078938901,
+      "stable_to_scheduled_ms": 1602.7785000042059,
+      "scheduler_wait_ms": 9.873799979686737,
+      "retrieval_ms": 32.08519995678216,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2254
+    },
+    {
+      "request_id": "c8ddfaba-b2b7-4310-b699-dcc8ca98f348",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "error",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 8.399799990002066
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 12.594600033480674
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 13.475000043399632
+        }
+      ],
+      "provider_ms": 4.186799982562661,
+      "validation_ms": 0,
+      "stable_to_scheduled_ms": 1939.1182999825105,
+      "scheduler_wait_ms": 6.008800002746284,
+      "retrieval_ms": 37.015500012785196,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2252
+    },
+    {
+      "request_id": "9d99d56a-f5f9-487e-9c34-455cd05f4922",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "stale",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 6.5534000168554485
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 812.7205999917351
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 813.1114999996498
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 813.5867000091821
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 817.2414000146091
+        }
+      ],
+      "provider_ms": 806.160100037232,
+      "validation_ms": 0.7205999572761357,
+      "stable_to_scheduled_ms": 2098.710899997968,
+      "scheduler_wait_ms": 4.509399994276464,
+      "retrieval_ms": 34.95210001710802,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2257
+    },
+    {
+      "request_id": "c1fa081e-d953-4072-9a1e-e96532d31b9b",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "cancelled",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 17.882700019981712
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 141.4076000219211
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 143.224100000225
+        }
+      ],
+      "provider_ms": 123.5166999977082,
+      "validation_ms": 0,
+      "scheduler_wait_ms": 15.864700020756572,
+      "retrieval_ms": 49.71849999856204,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 1957
+    },
+    {
+      "request_id": "d5df59e8-8e3a-4b7d-b68a-9084bb703bc4",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 15.083700011018664
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 19.822900008875877
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 20.802700018975884
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 21.617399994283915
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 25.410600006580353
+        }
+      ],
+      "provider_ms": 4.731399996671826,
+      "validation_ms": 1.5694999601691961,
+      "stable_to_scheduled_ms": 142.9319999879226,
+      "scheduler_wait_ms": 12.820000003557652,
+      "retrieval_ms": 28.667100006714463,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2283
+    },
+    {
+      "request_id": "3df604ca-93ec-4555-962d-780d78fa948a",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "warm",
+      "retrieval": "keyword",
+      "provider_mode": "real",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "provider_started",
+          "offset_ms": 5.389900004956871
+        },
+        {
+          "stage": "provider_completed",
+          "offset_ms": 9.318099997472018
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 11.226399976294488
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 12.445999949704856
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 17.557299986947328
+        }
+      ],
+      "provider_ms": 3.919999988283962,
+      "validation_ms": 2.8526000096462667,
+      "stable_to_scheduled_ms": 167.79760003555566,
+      "scheduler_wait_ms": 3.2600999693386257,
+      "retrieval_ms": 0.19380002049729228,
+      "http_attempts": 1,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 1,
+      "wire_input_chars_total": 2566
+    }
+  ],
+  "live_meet_tested": false
+}

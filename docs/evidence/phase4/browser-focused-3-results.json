@@ -1,0 +1,185 @@
+{
+  "config": {
+    "configFile": "D:\\meetEX\\playwright.config.ts",
+    "rootDir": "D:/meetEX/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase4/browser-focused-3-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/meetEX/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/meetEX/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "extension.spec.ts",
+      "file": "extension.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Genuine MV3 extension + real local backend; synthetic Meet/controlled AI",
+          "file": "extension.spec.ts",
+          "line": 16,
+          "column": 15,
+          "specs": [
+            {
+              "title": "UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8199,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T12:03:56.158Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-6e7cc1f0d88535cb93ec",
+              "file": "extension.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "PHASE4 memory revisions, user provenance, report regeneration and exports",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1842,
+                      "error": {
+                        "message": "Error: {\"id\":\"c655bc10-cece-4286-b329-3f326bd0381a\",\"meeting_id\":\"a794c009-b126-47be-b125-6eb94e8b7d38\",\"status\":\"error\",\"error\":{\"code\":\"REPORT_CLAIM\",\"message\":\"Confirmation/status does not match the cited proposition, action and environment.\",\"retryable\":false,\"request_id\":null},\"progress\":100,\"report_id\":null,\"duration_ms\":10.37709997035563,\"maps\":1,\"http_attempts\":0,\"repair_attempts\":0,\"transient_retry_attempts\":0,\"usage_unknown_attempts\":0}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"ready\"\u001b[39m\nReceived: \u001b[31m\"error\"\u001b[39m",
+                        "stack": "Error: {\"id\":\"c655bc10-cece-4286-b329-3f326bd0381a\",\"meeting_id\":\"a794c009-b126-47be-b125-6eb94e8b7d38\",\"status\":\"error\",\"error\":{\"code\":\"REPORT_CLAIM\",\"message\":\"Confirmation/status does not match the cited proposition, action and environment.\",\"retryable\":false,\"request_id\":null},\"progress\":100,\"report_id\":null,\"duration_ms\":10.37709997035563,\"maps\":1,\"http_attempts\":0,\"repair_attempts\":0,\"transient_retry_attempts\":0,\"usage_unknown_attempts\":0}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"ready\"\u001b[39m\nReceived: \u001b[31m\"error\"\u001b[39m\n    at D:\\meetEX\\e2e\\extension.spec.ts:190:464",
+                        "location": {
+                          "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                          "column": 464,
+                          "line": 190
+                        },
+                        "snippet": "  188 |     await view.screenshot({path:evidencePath('phase4-memory-ui.png'),fullPage:true});\n  189 |     await view.getByRole('button',{name:'Kết thúc',exact:true}).click();await view.goto(`chrome-extension://${extensionId}/dashboard.html#/meetings/${m.id}/report`);\n> 190 |     const generated=view.waitForResponse(r=>r.request().method()==='POST'&&r.url().endsWith(`/meetings/${m.id}/reports`));await view.getByRole('button',{name:'Tạo báo cáo nháp',exact:true}).first().click();const reportJob=await (await generated).json();await expect.poll(async()=>(await api('/api/v1/jobs/'+reportJob.id)).status).toMatch(/ready|error/);const reportDone=await api('/api/v1/jobs/'+reportJob.id);expect(reportDone.status,JSON.stringify(reportDone)).toBe('ready');await expect(view.getByLabel('Tóm tắt tiếng Việt',{exact:true})).toBeVisible();\n      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  191 |     await view.getByLabel('Tóm tắt tiếng Việt',{exact:true}).fill('PHASE4 USER EDIT preserved');await expect(view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true})).toBeDisabled();await view.getByRole('button',{name:'Lưu bản nháp',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v2',exact:true})).toBeVisible();\n  192 |     const saved=(await api(`/api/v1/meetings/${m.id}`)).reports.find((r:any)=>r.version===2);await view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v3',exact:true})).toBeVisible();expect((await api(`/api/v1/reports/${saved.id}`)).payload.summary_vi).toBe('PHASE4 USER EDIT preserved');\n  193 |     const final=await api(`/api/v1/meetings/${m.id}`);expect(final.reports.at(-1).memory_snapshot.find((i:any)=>i.entity==='API-71').origin).toBe('user_edit');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                            "column": 464,
+                            "line": 190
+                          },
+                          "message": "Error: {\"id\":\"c655bc10-cece-4286-b329-3f326bd0381a\",\"meeting_id\":\"a794c009-b126-47be-b125-6eb94e8b7d38\",\"status\":\"error\",\"error\":{\"code\":\"REPORT_CLAIM\",\"message\":\"Confirmation/status does not match the cited proposition, action and environment.\",\"retryable\":false,\"request_id\":null},\"progress\":100,\"report_id\":null,\"duration_ms\":10.37709997035563,\"maps\":1,\"http_attempts\":0,\"repair_attempts\":0,\"transient_retry_attempts\":0,\"usage_unknown_attempts\":0}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"ready\"\u001b[39m\nReceived: \u001b[31m\"error\"\u001b[39m\n\n  188 |     await view.screenshot({path:evidencePath('phase4-memory-ui.png'),fullPage:true});\n  189 |     await view.getByRole('button',{name:'Kết thúc',exact:true}).click();await view.goto(`chrome-extension://${extensionId}/dashboard.html#/meetings/${m.id}/report`);\n> 190 |     const generated=view.waitForResponse(r=>r.request().method()==='POST'&&r.url().endsWith(`/meetings/${m.id}/reports`));await view.getByRole('button',{name:'Tạo báo cáo nháp',exact:true}).first().click();const reportJob=await (await generated).json();await expect.poll(async()=>(await api('/api/v1/jobs/'+reportJob.id)).status).toMatch(/ready|error/);const reportDone=await api('/api/v1/jobs/'+reportJob.id);expect(reportDone.status,JSON.stringify(reportDone)).toBe('ready');await expect(view.getByLabel('Tóm tắt tiếng Việt',{exact:true})).toBeVisible();\n      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  191 |     await view.getByLabel('Tóm tắt tiếng Việt',{exact:true}).fill('PHASE4 USER EDIT preserved');await expect(view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true})).toBeDisabled();await view.getByRole('button',{name:'Lưu bản nháp',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v2',exact:true})).toBeVisible();\n  192 |     const saved=(await api(`/api/v1/meetings/${m.id}`)).reports.find((r:any)=>r.version===2);await view.getByRole('button',{name:'Tạo lại thành phiên bản mới',exact:true}).click();await expect(view.getByRole('heading',{name:'Báo cáo v3',exact:true})).toBeVisible();expect((await api(`/api/v1/reports/${saved.id}`)).payload.summary_vi).toBe('PHASE4 USER EDIT preserved');\n  193 |     const final=await api(`/api/v1/meetings/${m.id}`);expect(final.reports.at(-1).memory_snapshot.find((i:any)=>i.entity==='API-71').origin).toBe('user_edit');\n    at D:\\meetEX\\e2e\\extension.spec.ts:190:464"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T12:04:10.360Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\meetEX\\test-results\\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                        "column": 464,
+                        "line": 190
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "da119938d3268322a91b-0b81c87b6a3504b5a591",
+              "file": "extension.spec.ts",
+              "line": 176,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T12:03:52.810Z",
+    "duration": 21136.391,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "result": "PASS pattern/path audit",
+  "files": 151,
+  "bytes": 8518272,
+  "secret_pattern_matches": 0,
+  "forbidden_files": [],
+  "largest_files": [
+    {
+      "bytes": 371442,
+      "path": "docs/evidence/phase4/evaluation-after.json"
+    },
+    {
+      "bytes": 370660,
+      "path": "docs/evidence/phase4/evaluation-first.json"
+    },
+    {
+      "bytes": 354931,
+      "path": "docs/evidence/phase4/tuning-candidate.json"
+    },
+    {
+      "bytes": 210182,
+      "path": "docs/evidence/phase4/browser-final/report.png"
+    },
+    {
+      "bytes": 208723,
+      "path": "docs/evidence/phase4/browser-focused/report.png"
+    }
+  ],
+  "repository_public": true,
+  "scope": "Only changed/new task files; synthetic fixtures and explicitly saved test evidence. Not a proof against every possible secret pattern."
+}

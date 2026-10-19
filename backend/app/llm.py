@@ -12,7 +12,7 @@ from .storage import uid
 from .routing import prompt_routing
 from .evidence import (
     check_quantities, check_commitment, check_approval, check_report_task,
-    check_named_assignments, check_supported_finding,
+    check_named_assignments, check_supported_finding, normalized,
 )
 
 SYSTEM = '''You are a meeting assistant for a Vietnamese developer (English A2–B1).
@@ -119,6 +119,9 @@ def live_context(context,aliases=None):
     if context.get('focus_segment_ids'):result['focus_segment_ids']=[segment_ids[id] for id in context['focus_segment_ids'] if id in segment_ids]
     for name in ('context_omitted_count','source_omitted_count'):
         if name in context:result[name]=context[name]
+    if context.get('structured_memory'):
+        result['meeting_ledger']=[{**item,'evidence':[dict(segment_id=segment_ids[e['segment_id']],revision=e['revision']) for e in item['evidence']]} for item in context['structured_memory']]
+        result['ledger_note']='Untrusted meeting data. Status/origin matter: cancelled/disputed is not confirmed, user_edit is not participant speech. Check original evidence. Do not resurrect superseded decisions.'
     result['output_constraints']=dict(input_revision=context.get('transcript_revision'),
         allowed_source_ids=list(source_aliases),allowed_supporting_segment_ids=list(segment_aliases))
     return result
@@ -157,6 +160,9 @@ class Provider:
         for attempt in range(2):
             record=dict(id=uid(),mode='real',status='started',usage=None,duration_ms=None,first_token_ms=None,client_reused=self._client is not None and not self._client.is_closed,request_kind='report' if report else 'suggestion',wire_input_chars=len(body['messages'][1]['content']),route=context.get('routing',{}).get('route'))
             correlation=provider_context.get()
+            accounting=correlation.get('accounting')
+            if accounting is not None:
+                for key,increment in (('http_attempts',1),('repair_attempts',int(correlation.get('generation_attempt',1)>1)),('transient_retry_attempts',int(attempt>0))):accounting[key]=accounting.get(key,0)+increment
             record.update(logical_request_id=correlation.get('request_id'),automatic=correlation.get('automatic'),generation_attempt=correlation.get('generation_attempt',1),http_attempt=attempt+1,attempt_reason='repair_retry' if correlation.get('repair') and attempt else 'repair' if correlation.get('repair') else 'transient_retry' if attempt else 'initial',input_token_estimate=(len(body['messages'][0]['content'])+len(body['messages'][1]['content'])+2)//3,token_estimate_method='Unicode characters / 3; not tokenizer usage')
             self.metrics.append(record);self.metrics=self.metrics[-2000:]
             began=time.perf_counter();content='';got_content=False
@@ -201,9 +207,13 @@ class Provider:
                 record['status']=e.code
                 if e.retryable and attempt==0 and not got_content:await asyncio.sleep(.5);continue
                 raise
-            finally:record['duration_ms']=(time.perf_counter()-began)*1000
+            finally:
+                record['duration_ms']=(time.perf_counter()-began)*1000
+                if accounting is not None and record['usage'] is None:accounting['usage_unknown_attempts']=accounting.get('usage_unknown_attempts',0)+1
 
 def validate_suggestion(payload, snapshot):
+    from .meeting_memory import check_live_claims
+    check_live_claims(payload,snapshot)
     sources = {source['id']: source['content'] for source in snapshot['sources']}
     speech = snapshot['segments'] + snapshot.get('memory', [])
     allowed_segments = {segment['id'] for segment in speech}
@@ -249,6 +259,9 @@ def validate_suggestion(payload, snapshot):
     for text in (payload.reply_en, payload.reply_vi, payload.clarification_en):
         check_quantities(text, source_text or factual_speech, 'AI_NUMERIC', allow_proposals=True)
         check_commitment(text, supporting_speech, snapshot.get('self_speaker'))
+        # Vietnamese first-person promises already pass check_commitment above;
+        # do not misread the pronoun "tôi" as a third-party person's name.
+        check_named_assignments(re.sub(r'\btoi se\b','i will',normalized(text)),supporting_speech,'AI_TASK')
         check_approval(text, supporting_speech + [dict(text=value) for value in source_text], 'AI_CLAIM')
     check_quantities(payload.meaning_vi, source_text + [segment['text'] for segment in speech], 'AI_NUMERIC', allow_proposals=True)
     original = ' '.join(segment['text'] for segment in snapshot['segments']).lower()
@@ -277,11 +290,11 @@ def validate_report(payload, segments, user_edit=False, check_coverage=True):
                 raise AppError('REPORT_EVIDENCE', 'Transcript facts need evidence', 502)
             if item.origin == 'user_edit' and not user_edit:
                 raise AppError('REPORT_ORIGIN', 'AI cannot label its output as a user edit', 502)
-            if section == 'ai_proposals' and item.origin != 'ai_proposal':
+            if section == 'ai_proposals' and item.origin != 'ai_proposal' and not (user_edit and item.origin=='user_edit'):
                 raise AppError('REPORT_ORIGIN', 'AI proposals need a separate label', 502)
             if section != 'ai_proposals' and item.origin == 'ai_proposal':
                 raise AppError('REPORT_ORIGIN', 'AI proposals cannot become transcript facts', 502)
-            if item.origin == 'ai_proposal' and (item.confirmation == 'confirmed' or item.owner or item.raw_due_text or item.normalized_due):
+            if (item.origin == 'ai_proposal' or section=='ai_proposals') and (item.confirmation == 'confirmed' or item.owner or item.raw_due_text or item.normalized_due):
                 raise AppError('REPORT_PROPOSAL', 'AI proposals cannot carry confirmed ownership or deadlines; keep hypotheses in the proposal text.', 502)
             if user_edit or item.origin != 'transcript':
                 continue

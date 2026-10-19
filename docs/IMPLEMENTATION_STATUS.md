@@ -40,3 +40,5 @@ Giai đoạn 1: A–E PASS trong phạm vi guard đã thử, không mở rộng 
 Phase 2: replay/capture/recovery/telemetry đã triển khai; [A–G và giới hạn](PHASE2_REPORT.md), [runbook live](PHASE2_LIVE_RUNBOOK.md). 228 backend / 56 frontend / 4 browser; Meet thật NOT TESTED.
 
 Phase 3: **PARTIAL** · trigger/scheduler/dedup/context/retrieval/accounting/UI đã triển khai và đối chiếu; hai mục tiêu request/Auto wait chưa đạt. [A–F, số đo và giới hạn](PHASE3_REPORT.md). Không mở rộng sang decision memory/connector/STT/agent/multiworker.
+
+Phase 4: **PARTIAL** · evidence ledger/versioned migration 002, live context, report reconciliation/current-history và UI/export đã triển khai trong phạm vi grammar có giới hạn. [Báo cáo A–F](PHASE4_REPORT.md). Bare Yes/authority/coreference ngoài phạm vi vẫn cần làm rõ; không tự chứng nhận model quality hay Meet live.

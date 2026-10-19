@@ -4,7 +4,8 @@ root=Path(__file__).resolve().parents[1];docs=root/'docs'
 phase1=(docs/'evidence/phase1/semantic-review.json').exists()
 phase2=(docs/'evidence/phase2/review.json').exists()
 phase3=(docs/'evidence/phase3/review.json').exists()
-current_phase='phase3' if phase3 else 'phase2' if phase2 else 'phase1' if phase1 else None
+phase4=(docs/'evidence/phase4/review.json').exists()
+current_phase='phase4' if phase4 else 'phase3' if phase3 else 'phase2' if phase2 else 'phase1' if phase1 else None
 qa_path=docs/(f'evidence/{current_phase}/documentation-qa.json' if current_phase else 'evidence/documentation-qa.json')
 req=set(re.findall(r'^\| (REQ-\d+)',(docs/'spec/REQUIREMENTS.md').read_text('utf8'),re.M))
 tasks=set(re.findall(r'^\| (T-\d+)',(docs/'spec/IMPLEMENTATION_PLAN.md').read_text('utf8'),re.M))
@@ -30,7 +31,7 @@ for line in report.splitlines():
 tree=ET.parse(docs/(f'evidence/{current_phase}/backend-final.xml' if current_phase else 'evidence/backend-tests.xml')).getroot()
 assert all(int(s.get('failures','0'))==0 and int(s.get('errors','0'))==0 for s in tree.iter('testsuite'))
 front=json.loads((docs/(f'evidence/{current_phase}/frontend-final.json' if current_phase else 'evidence/extension-tests.json')).read_text('utf8'));assert front['numFailedTests']==0 and front['numPassedTests']>0
-browser=json.loads((docs/(f'evidence/{current_phase}/browser-final-results.json' if current_phase else 'evidence/e2e-results.json')).read_text('utf8'));assert browser['stats']['unexpected']==0 and browser['stats']['expected']==(5 if phase3 else 4 if phase2 else 3)
+browser=json.loads((docs/(f'evidence/{current_phase}/browser-final-results.json' if current_phase else 'evidence/e2e-results.json')).read_text('utf8'));assert browser['stats']['unexpected']==0 and browser['stats']['expected']==(6 if phase4 else 5 if phase3 else 4 if phase2 else 3)
 live_review=docs/'evidence/live-provider-review.json'
 if live_review.exists():
     live=json.loads(live_review.read_text('utf8'))
@@ -61,7 +62,7 @@ if routing_review.exists():
 
 if phase1:
     import hashlib
-    phase=json.loads((docs/('evidence/phase3/semantic-regression.json' if phase3 else 'evidence/phase2/semantic-regression.json' if phase2 else 'evidence/phase1/semantic-review.json')).read_text('utf8'))
+    phase=json.loads((docs/('evidence/phase4/semantic-regression.json' if phase4 else 'evidence/phase3/semantic-regression.json' if phase3 else 'evidence/phase2/semantic-regression.json' if phase2 else 'evidence/phase1/semantic-review.json')).read_text('utf8'))
     assert phase['result']=='PASS' and all(p['blocked'] for p in phase['original_probes'])
     assert all(g['false_accepts']==g['false_rejects']==0 for g in phase['groups'].values())
     for path,expected in phase['source_hashes'].items():
@@ -72,7 +73,7 @@ if phase2:
     latest=json.loads((docs/'evidence/phase2/review.json').read_text('utf8'))
     assert latest['live_gate']=='NOT TESTED' and latest['provider_paid_calls']==0
     for path,expected in latest['source_hashes'].items():
-        if phase3 and not (path=='backend/app/storage.py' or path.startswith(('extension/src/content/','extension/src/background/'))):continue
+        if phase3 and not ((path=='backend/app/storage.py' and not phase4) or path.startswith(('extension/src/content/','extension/src/background/'))):continue
         assert hashlib.sha256((root/path).read_text('utf8').encode('utf8')).hexdigest()==expected,path
     record['phase2']='Automated capture/recovery/clock checks PASS; live NOT TESTED'
 if phase3:
@@ -82,10 +83,19 @@ if phase3:
     assert not latest['objectives']['logical_requests_reduction_fraction_min']['passed']
     assert not latest['objectives']['short_question_schedule_wait_max_ms']['passed']
     for path,expected in latest['source_hashes'].items():
+        if phase4 and path in json.loads((docs/'evidence/phase4/review.json').read_text('utf8'))['source_hashes']:continue
         assert hashlib.sha256((root/path).read_text('utf8').encode('utf8')).hexdigest()==expected,path
     assert 'PARTIAL' in report and 'PHASE3_REPORT.md' in report
     record['phase3']=latest['result']
     record['live_gates']['phase3_provider']='NOT TESTED'
+if phase4:
+    latest=json.loads((docs/'evidence/phase4/review.json').read_text('utf8'))
+    assert latest['result'].startswith('PARTIAL') and latest['provider_paid_calls']==0
+    assert latest['item_quality']['correct_items']==latest['item_quality']['expected_items']==38
+    assert latest['relation_quality']['wrong']==latest['relation_quality']['extra']==0
+    for path,expected in latest['source_hashes'].items():assert hashlib.sha256((root/path).read_text('utf8').encode('utf8')).hexdigest()==expected,path
+    assert 'PHASE4_REPORT.md' in report
+    record['phase4']=latest['result'];record['live_gates']['phase4_model']='NOT TESTED'
 import argparse
 parser=argparse.ArgumentParser()
 parser.add_argument('--output')

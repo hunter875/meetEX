@@ -1,0 +1,44 @@
+
+Running 6 tests using 1 worker
+
+(node:24728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 e2e\extension.spec.ts:34:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export (11.5s)
+  ok 2 e2e\extension.spec.ts:68:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › SEC-06 provider key goes only to backend RAM; production key test never fakes success (631ms)
+  ok 3 e2e\extension.spec.ts:73:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › CAP/TRN integrated worker and content script with calibrated synthetic Meet DOM (2.8s)
+  ok 4 e2e\extension.spec.ts:100:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency (52.0s)
+  ok 5 e2e\extension.spec.ts:157:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE3 scheduler UI explains waiting/listening/quota and manual cache remains available (2.5s)
+  x  6 e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports (22ms)
+
+
+  1) e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+
+    Error: {"code":"UNKNOWN_SPEAKER","message":"Choose a name observed in captions","retryable":false,"request_id":"79efe60e-b73f-4aaa-8711-0f9eb0c2c21a"}
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      12 | let proxy:Server;let transportBlocked=false;const transportClients=new Set<Socket>();
+      13 | function dropTransport(){for(const socket of transportClients)socket.destroy();transportClients.clear();}
+    > 14 | async function api(route:string,method='GET',body?:unknown){const response=await fetch(base+route,{method,headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const value=await response.json();expect(response.ok,JSON.stringify(value)).toBeTruthy();return value;}
+         |                                                                                                                                                                                                                                                                                                                        ^
+      15 | async function pair(target:Page){await target.goto(`chrome-extension://${extensionId}/dashboard.html#/settings`);await target.getByLabel('Pairing token ứng dụng local').fill(token);await target.getByRole('button',{name:'Lưu kết nối',exact:true}).click();await expect(target.getByText('Provider văn bản',{exact:true})).toBeVisible();}
+      16 | test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet/controlled AI',()=>{
+      17 |   test.beforeAll(async()=>{
+        at api (D:\meetEX\e2e\extension.spec.ts:14:312)
+        at D:\meetEX\e2e\extension.spec.ts:178:5
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    e2e\extension.spec.ts:176:7 › Genuine MV3 extension + real local backend; synthetic Meet/controlled AI › PHASE4 memory revisions, user provenance, report regeneration and exports 
+  5 passed (1.4m)

@@ -1,0 +1,413 @@
+{
+  "memory_update": {
+    "n": 9,
+    "median_ms": 0.08610001532360911,
+    "p95_ms": 5.721499968785793,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "orchestration_counts": {
+    "speaker_unknown": 7,
+    "important_change": 1,
+    "context_retrieval": 4,
+    "logical_request": 4,
+    "auto_ready": 2,
+    "provider_generation": 4,
+    "validated_result": 4,
+    "direct_question": 1,
+    "manual_priority": 2
+  },
+  "scheduler_states": {
+    "1d00ff0d-9217-4a18-836a-2d17c253d78d": {
+      "state": "listening",
+      "reason": "session_control",
+      "policy_version": "content-trigger-v1"
+    },
+    "0b5195c5-f8d6-451c-826e-bc32011ebb34": {
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    }
+  },
+  "trigger_records": [
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "waiting",
+      "reason": "important_change",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "context_retrieval",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "queued",
+      "reason": "auto_ready",
+      "policy_version": "content-trigger-v1",
+      "request_id": "3d73941c-2fe8-4dfd-97e7-6deb2a24702c",
+      "route": "fast"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "provider_generation",
+      "policy_version": "content-trigger-v1",
+      "request_id": "3d73941c-2fe8-4dfd-97e7-6deb2a24702c"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "ready",
+      "reason": "validated_result",
+      "policy_version": "content-trigger-v1",
+      "request_id": "3d73941c-2fe8-4dfd-97e7-6deb2a24702c"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "waiting",
+      "reason": "direct_question",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "context_retrieval",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "queued",
+      "reason": "auto_ready",
+      "policy_version": "content-trigger-v1",
+      "request_id": "5bc9a831-b362-4809-bb1a-7f583caff179",
+      "route": "fast"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "provider_generation",
+      "policy_version": "content-trigger-v1",
+      "request_id": "5bc9a831-b362-4809-bb1a-7f583caff179"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "ready",
+      "reason": "validated_result",
+      "policy_version": "content-trigger-v1",
+      "request_id": "5bc9a831-b362-4809-bb1a-7f583caff179"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "context_retrieval",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "queued",
+      "reason": "manual_priority",
+      "policy_version": "content-trigger-v1",
+      "request_id": "c2d518aa-3519-46bd-9d34-9b82f977ff55",
+      "route": "fast"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "provider_generation",
+      "policy_version": "content-trigger-v1",
+      "request_id": "c2d518aa-3519-46bd-9d34-9b82f977ff55"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "stale",
+      "reason": "validated_result",
+      "policy_version": "content-trigger-v1",
+      "request_id": "c2d518aa-3519-46bd-9d34-9b82f977ff55"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "context_retrieval",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "queued",
+      "reason": "manual_priority",
+      "policy_version": "content-trigger-v1",
+      "request_id": "806309e3-1152-4b3b-b6d8-f2874a8dd2d9",
+      "route": "deep"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "processing",
+      "reason": "provider_generation",
+      "policy_version": "content-trigger-v1",
+      "request_id": "806309e3-1152-4b3b-b6d8-f2874a8dd2d9"
+    },
+    {
+      "meeting_id": "1d00ff0d-9217-4a18-836a-2d17c253d78d",
+      "state": "ready",
+      "reason": "validated_result",
+      "policy_version": "content-trigger-v1",
+      "request_id": "806309e3-1152-4b3b-b6d8-f2874a8dd2d9"
+    },
+    {
+      "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    },
+    {
+      "meeting_id": "0b5195c5-f8d6-451c-826e-bc32011ebb34",
+      "state": "listening",
+      "reason": "speaker_unknown",
+      "policy_version": "content-trigger-v1"
+    }
+  ],
+  "retrieval_cache_hits": 4,
+  "latency_records": [
+    {
+      "request_id": "3d73941c-2fe8-4dfd-97e7-6deb2a24702c",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 8.615800004918128
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 12.24690000526607
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 3.6506999749690294,
+      "stable_to_scheduled_ms": 813.5378999868408,
+      "scheduler_wait_ms": 3.280900011304766,
+      "retrieval_ms": 0.19689998589456081,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "5bc9a831-b362-4809-bb1a-7f583caff179",
+      "policy_version": "content-trigger-v1",
+      "trigger": "auto",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 6.393600022420287
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 10.755900002550334
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.8074000361375511,
+      "stable_to_scheduled_ms": 179.45879994658753,
+      "scheduler_wait_ms": 3.518400015309453,
+      "retrieval_ms": 22.93959999224171,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "c2d518aa-3519-46bd-9d34-9b82f977ff55",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "stale",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 6.5178999793715775
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 10.354399972129613
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.8694000425748527,
+      "scheduler_wait_ms": 3.539700002875179,
+      "retrieval_ms": 0.19689998589456081,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    },
+    {
+      "request_id": "806309e3-1152-4b3b-b6d8-f2874a8dd2d9",
+      "policy_version": "content-trigger-v1",
+      "trigger": "manual",
+      "temperature": "cold",
+      "retrieval": "keyword",
+      "provider_mode": "demo",
+      "outcome": "ready",
+      "marks": [
+        {
+          "stage": "suggestion_scheduled",
+          "offset_ms": 0
+        },
+        {
+          "stage": "validation_completed",
+          "offset_ms": 6.897300016134977
+        },
+        {
+          "stage": "request_completed",
+          "offset_ms": 9.87060001352802
+        }
+      ],
+      "provider_ms": 0,
+      "validation_ms": 0.9306999854743481,
+      "stable_to_scheduled_ms": 2030.219899956137,
+      "scheduler_wait_ms": 3.694300015922636,
+      "retrieval_ms": 0.3554999711923301,
+      "http_attempts": 0,
+      "repair_attempts": 0,
+      "usage_unknown_attempts": 0,
+      "wire_input_chars_total": 0
+    }
+  ],
+  "classifier": {
+    "n": 17,
+    "median_ms": 0.14600000577047467,
+    "p95_ms": 5.4932000348344445,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider_by_route": {
+    "fast": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "explain": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "deep": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    },
+    "clarify": {
+      "n": 0,
+      "median_ms": null,
+      "p95_ms": null,
+      "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+    }
+  },
+  "request_count": 0,
+  "known_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "unknown_usage_count": 0,
+  "estimated_cost": null,
+  "price_date": null,
+  "cost_note": "Estimate from configured per-million token prices, not a bill.",
+  "capture_apply": {
+    "n": 6,
+    "median_ms": 2.6541000115685165,
+    "p95_ms": 3.183000022545457,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "retrieval": {
+    "n": 9,
+    "median_ms": 3.0479999841190875,
+    "p95_ms": 22.953599982429296,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider": {
+    "n": 0,
+    "median_ms": null,
+    "p95_ms": null,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "provider_first_token": {
+    "n": 0,
+    "median_ms": null,
+    "p95_ms": null,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "backend_stable_to_request": {
+    "n": 3,
+    "median_ms": 816.8187999981456,
+    "p95_ms": 2033.9141999720596,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "backend_stable_to_validated": {
+    "n": 3,
+    "median_ms": 824.7534999973141,
+    "p95_ms": 2039.0845999936573,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "report": {
+    "n": 1,
+    "median_ms": 31.570299994200468,
+    "p95_ms": 31.570299994200468,
+    "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
+  },
+  "records": []
+}

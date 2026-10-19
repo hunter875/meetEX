@@ -284,6 +284,92 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/meetings/{id}/memory": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Memory */
+        get: operations["memory_api_v1_meetings__id__memory_get"];
+        put?: never;
+        /** Create Memory */
+        post: operations["create_memory_api_v1_meetings__id__memory_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/meetings/{id}/evidence/{segment_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Memory Evidence */
+        get: operations["memory_evidence_api_v1_meetings__id__evidence__segment_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/meetings/{id}/memory/{item_id}/history": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Memory History */
+        get: operations["memory_history_api_v1_meetings__id__memory__item_id__history_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/meetings/{id}/memory/{item_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        /** Edit Memory */
+        patch: operations["edit_memory_api_v1_meetings__id__memory__item_id__patch"];
+        trace?: never;
+    };
+    "/api/v1/meetings/{id}/memory-rebuild": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Rebuild Memory */
+        post: operations["rebuild_memory_api_v1_meetings__id__memory_rebuild_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/meetings/{id}/classify": {
         parameters: {
             query?: never;
@@ -560,6 +646,20 @@ export interface components {
             response_mode: string;
             /** Capture Cursor */
             capture_cursor?: number | null;
+            /** Structured Memory */
+            structured_memory?: {
+                [key: string]: unknown;
+            }[];
+            /**
+             * Memory Revision
+             * @default 0
+             */
+            memory_revision: number;
+            /**
+             * Ledger Omitted Count
+             * @default 0
+             */
+            ledger_omitted_count: number;
         } & {
             [key: string]: unknown;
         };
@@ -662,6 +762,13 @@ export interface components {
              */
             api_key: string;
         };
+        /** EvidenceRefDTO */
+        EvidenceRefDTO: {
+            /** Segment Id */
+            segment_id: string;
+            /** Revision */
+            revision: number;
+        };
         /** Finding */
         Finding: {
             /** Text Vi */
@@ -745,6 +852,93 @@ export interface components {
             /** Confirmed Segment Ids */
             confirmed_segment_ids?: string[] | null;
         };
+        /** MemoryCreate */
+        MemoryCreate: {
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "requirement" | "proposal" | "decision" | "action_item" | "open_question" | "spoken_fact";
+            /** Text */
+            text: string;
+            /** Status */
+            status: string;
+            /** Entity */
+            entity?: string | null;
+            /** Owner */
+            owner?: string | null;
+            /** Raw Due Text */
+            raw_due_text?: string | null;
+        };
+        /** MemoryItemDTO */
+        MemoryItemDTO: {
+            /** Id */
+            id: string;
+            /** Meeting Id */
+            meeting_id: string;
+            /** Project Id */
+            project_id: string;
+            /** Kind */
+            kind: string;
+            /** Text */
+            text: string;
+            /** Entity */
+            entity?: string | null;
+            /** Action */
+            action?: string | null;
+            /** Environment */
+            environment?: string | null;
+            /** Speaker */
+            speaker?: string | null;
+            /** Owner */
+            owner?: string | null;
+            /** Status */
+            status: string;
+            /** Raw Due Text */
+            raw_due_text?: string | null;
+            /** Normalized Due */
+            normalized_due?: string | null;
+            /** Due Rule */
+            due_rule: string;
+            /** Due Anchor */
+            due_anchor?: string | null;
+            /** Origin */
+            origin: string;
+            /** Evidence */
+            evidence: components["schemas"]["EvidenceRefDTO"][];
+            /** Relations */
+            relations: {
+                [key: string]: string;
+            }[];
+            /** Version */
+            version: number;
+        } & {
+            [key: string]: unknown;
+        };
+        /** MemoryPatch */
+        MemoryPatch: {
+            /** Expected Version */
+            expected_version: number;
+            /** Text */
+            text?: string | null;
+            /** Owner */
+            owner?: string | null;
+            /** Raw Due Text */
+            raw_due_text?: string | null;
+            /** Status */
+            status?: string | null;
+        };
+        /** MemorySnapshotDTO */
+        MemorySnapshotDTO: {
+            /** Revision */
+            revision: number;
+            /** Policy */
+            policy: string;
+            /** Items */
+            items: components["schemas"]["MemoryItemDTO"][];
+        } & {
+            [key: string]: unknown;
+        };
         /** ProjectCreate */
         ProjectCreate: {
             /** Name */
@@ -809,6 +1003,26 @@ export interface components {
             created_at: string;
             /** Parent Id */
             parent_id: string | null;
+            /** Memory Snapshot */
+            memory_snapshot?: components["schemas"]["MemoryItemDTO"][];
+            /** Memory Revision */
+            memory_revision?: number | null;
+            /** Evidence Snapshot */
+            evidence_snapshot?: components["schemas"]["SegmentDTO"][];
+            /**
+             * Evidence Changed
+             * @default false
+             */
+            evidence_changed: boolean;
+            historical_payload?: components["schemas"]["ReportPayload"] | null;
+            /** Edit Provenance */
+            edit_provenance?: {
+                [key: string]: unknown;
+            } | null;
+            /** Reconciliation */
+            reconciliation?: {
+                [key: string]: unknown;
+            } | null;
         } & {
             [key: string]: unknown;
         };
@@ -1095,6 +1309,11 @@ export interface components {
             /** Confirmed Segment Ids */
             confirmed_segment_ids?: string[];
             scheduler?: components["schemas"]["SchedulerStateDTO"] | null;
+            /**
+             * Memory Revision
+             * @default 0
+             */
+            memory_revision: number;
             /** Segments */
             segments: components["schemas"]["SegmentDTO"][];
             /** Suggestions */
@@ -2073,6 +2292,205 @@ export interface operations {
                 };
                 content: {
                     "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    memory_api_v1_meetings__id__memory_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemorySnapshotDTO"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    create_memory_api_v1_meetings__id__memory_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MemoryCreate"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemoryItemDTO"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    memory_evidence_api_v1_meetings__id__evidence__segment_id__get: {
+        parameters: {
+            query: {
+                revision: number;
+            };
+            header?: never;
+            path: {
+                id: string;
+                segment_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SegmentDTO"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    memory_history_api_v1_meetings__id__memory__item_id__history_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+                item_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemoryItemDTO"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    edit_memory_api_v1_meetings__id__memory__item_id__patch: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+                item_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MemoryPatch"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemoryItemDTO"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    rebuild_memory_api_v1_meetings__id__memory_rebuild_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MemorySnapshotDTO"];
                 };
             };
             /** @description Validation Error */

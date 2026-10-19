@@ -1,5 +1,9 @@
 # Chức năng nên bổ sung sau bộ phân loại
 
+## Sau Phase 4 — Phase 5
+
+[Phase 4 PARTIAL và các giới hạn](PHASE4_REPORT.md). Ưu tiên CI/regression suite + fixtures, refactor ledger/report/API/DTO, setup/update/backup, upgrade/rollback/migration fault tests, total report budget/queue/concurrency, durable usage accounting, full RSS/corpus lớn và nghiệm thu Windows/Meet/recovery vận hành. Đánh giá model thật cần authorization + budget mới. Coreference/authority/multilingual và weighted options không tự được coi là đã triển khai từ ledger; không hạ guard để làm PASS.
+
 ## Sau Phase 3
 
 [Kết quả Phase 3](PHASE3_REPORT.md): **PARTIAL**, hai mục tiêu request/Auto wait vẫn mở. Phase 4 ưu tiên corpus cuộc họp được phép dùng, chấm trigger/card hữu ích theo người, benchmark provider thật với budget mới và đóng Meet live gate; sau đó hiệu chỉnh indirect/multilingual trigger, paraphrase dedup, full RSS/index writer và cold retrieval. Không hạ ngưỡng hoặc bỏ câu hỏi/validator để hợp thức hóa PASS. Bảng phương án/trọng số và decision memory dưới đây vẫn chưa triển khai.

@@ -1,5 +1,11 @@
 # Tối ưu thời gian gợi ý hoàn chỉnh
 
+## Phase 4 — overhead có evidence
+
+[Paired report/memory evaluation](PHASE4_REPORT.md): 321 synthetic turns/16 maps, Provider SSE adapter intercepted 5 ms controlled delay. Report 645,88 → 703,77 ms; HTTP attempts vẫn 16, retry/repair 0, usage unknown 16. Full caption apply median/p95 0,129/0,247 → 0,821/0,920 ms; memory update median/p95 0,632/0,686 ms. Đây là RAM fixture/samples nhỏ, không SLA/disk/Meet/model latency.
+
+Replay Phase 3 vẫn 40 logical/42 HTTP và 39/39 eligible attempted; wire user JSON 27.197 → 28.931 ký tự (+6,38%) do memory. Không quy thành token/cost thật. No extraction/synthesis model call mới; chưa benchmark provider trả phí sau Phase 4.
+
 **Số đo provider phía dưới là lịch sử trước routing và Phase 1–3**, không đại diện build hiện tại. Benchmark provider thật mới: NOT TESTED. [Phase 3](PHASE3_REPORT.md) đo scheduler controlled và retrieval riêng, không có paid calls mới. Idle short-question wait 2.000 → 150 ms clock ảo; Auto sau manual chậm vẫn 2.900 ms. Đây không phải speech-to-UI hoặc model latency.
 
 Kết quả lịch sử: khoảng 1,5 giây trung vị; chưa bảo đảm mọi request ≤1,5 giây. DeepSeek `deepseek-flash` thật, dữ liệu synthetic. Giữ bước parse JSON, đổi alias về ID gốc, kiểm tra evidence/negation/role/commitment rồi mới publish; không hiển thị token chưa kiểm tra.

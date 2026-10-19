@@ -1,0 +1,321 @@
+{
+  "config": {
+    "configFile": "D:\\meetEX\\playwright.config.ts",
+    "rootDir": "D:/meetEX/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/phase4/browser-candidate-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/meetEX/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "D:/meetEX/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "extension.spec.ts",
+      "file": "extension.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Genuine MV3 extension + real local backend; synthetic Meet/controlled AI",
+          "file": "extension.spec.ts",
+          "line": 16,
+          "column": 15,
+          "specs": [
+            {
+              "title": "UX-01/SRC-01/HIS-01/REP-02 five-screen demo journey with pin and exact export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11543,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:53:47.957Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-6e7cc1f0d88535cb93ec",
+              "file": "extension.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "SEC-06 provider key goes only to backend RAM; production key test never fakes success",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 631,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:54:09.115Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-17ff8c717e732863f0a3",
+              "file": "extension.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "CAP/TRN integrated worker and content script with calibrated synthetic Meet DOM",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2844,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:54:09.806Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-2d7f59d9f0381b34df5a",
+              "file": "extension.spec.ts",
+              "line": 73,
+              "column": 7
+            },
+            {
+              "title": "PHASE2 actual browser outage/recovery, scope, controls and correlated rendered latency",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 52024,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:54:12.764Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-45c772dcf96f91e5b058",
+              "file": "extension.spec.ts",
+              "line": 100,
+              "column": 7
+            },
+            {
+              "title": "PHASE3 scheduler UI explains waiting/listening/quota and manual cache remains available",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2469,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:55:04.834Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "da119938d3268322a91b-74b5b2678a100315cdfd",
+              "file": "extension.spec.ts",
+              "line": 157,
+              "column": 7
+            },
+            {
+              "title": "PHASE4 memory revisions, user provenance, report regeneration and exports",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 22,
+                      "error": {
+                        "message": "Error: {\"code\":\"UNKNOWN_SPEAKER\",\"message\":\"Choose a name observed in captions\",\"retryable\":false,\"request_id\":\"79efe60e-b73f-4aaa-8711-0f9eb0c2c21a\"}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: {\"code\":\"UNKNOWN_SPEAKER\",\"message\":\"Choose a name observed in captions\",\"retryable\":false,\"request_id\":\"79efe60e-b73f-4aaa-8711-0f9eb0c2c21a\"}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at api (D:\\meetEX\\e2e\\extension.spec.ts:14:312)\n    at D:\\meetEX\\e2e\\extension.spec.ts:178:5",
+                        "location": {
+                          "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                          "column": 312,
+                          "line": 14
+                        },
+                        "snippet": "  12 | let proxy:Server;let transportBlocked=false;const transportClients=new Set<Socket>();\n  13 | function dropTransport(){for(const socket of transportClients)socket.destroy();transportClients.clear();}\n> 14 | async function api(route:string,method='GET',body?:unknown){const response=await fetch(base+route,{method,headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const value=await response.json();expect(response.ok,JSON.stringify(value)).toBeTruthy();return value;}\n     |                                                                                                                                                                                                                                                                                                                        ^\n  15 | async function pair(target:Page){await target.goto(`chrome-extension://${extensionId}/dashboard.html#/settings`);await target.getByLabel('Pairing token ứng dụng local').fill(token);await target.getByRole('button',{name:'Lưu kết nối',exact:true}).click();await expect(target.getByText('Provider văn bản',{exact:true})).toBeVisible();}\n  16 | test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet/controlled AI',()=>{\n  17 |   test.beforeAll(async()=>{"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                            "column": 312,
+                            "line": 14
+                          },
+                          "message": "Error: {\"code\":\"UNKNOWN_SPEAKER\",\"message\":\"Choose a name observed in captions\",\"retryable\":false,\"request_id\":\"79efe60e-b73f-4aaa-8711-0f9eb0c2c21a\"}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  12 | let proxy:Server;let transportBlocked=false;const transportClients=new Set<Socket>();\n  13 | function dropTransport(){for(const socket of transportClients)socket.destroy();transportClients.clear();}\n> 14 | async function api(route:string,method='GET',body?:unknown){const response=await fetch(base+route,{method,headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const value=await response.json();expect(response.ok,JSON.stringify(value)).toBeTruthy();return value;}\n     |                                                                                                                                                                                                                                                                                                                        ^\n  15 | async function pair(target:Page){await target.goto(`chrome-extension://${extensionId}/dashboard.html#/settings`);await target.getByLabel('Pairing token ứng dụng local').fill(token);await target.getByRole('button',{name:'Lưu kết nối',exact:true}).click();await expect(target.getByText('Provider văn bản',{exact:true})).toBeVisible();}\n  16 | test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet/controlled AI',()=>{\n  17 |   test.beforeAll(async()=>{\n    at api (D:\\meetEX\\e2e\\extension.spec.ts:14:312)\n    at D:\\meetEX\\e2e\\extension.spec.ts:178:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T11:55:07.346Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\meetEX\\test-results\\extension-Genuine-MV3-exte-34221-rt-regeneration-and-exports\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\meetEX\\e2e\\extension.spec.ts",
+                        "column": 312,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "da119938d3268322a91b-0b81c87b6a3504b5a591",
+              "file": "extension.spec.ts",
+              "line": 176,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T11:53:45.037Z",
+    "duration": 85221.46800000001,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
