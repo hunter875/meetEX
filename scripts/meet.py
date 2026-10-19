@@ -20,6 +20,27 @@ ROOT = Path(__file__).resolve().parents[1]
 PYTHON = ROOT / ".venv" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
 NPM = "npm.cmd" if os.name == "nt" else "npm"
 sys.path.insert(0, str(ROOT / "backend"))
+QUALITY_FILES = [
+    "backend/app/main.py",
+    "backend/app/config.py",
+    "backend/app/storage.py",
+    "backend/app/ownership.py",
+    "backend/app/report_export.py",
+    "backend/app/migration.py",
+    "backend/app/backup.py",
+    "backend/app/runner.py",
+    "backend/app/version.py",
+    "backend/tests/test_phase5_operations.py",
+    "scripts/meet.py",
+    "scripts/package_local.py",
+    "scripts/soak_phase5.py",
+    "scripts/ci_check.py",
+    "scripts/diagnostics.py",
+    "scripts/clean_phase5.py",
+    "scripts/review_phase5.py",
+    "scripts/check_phase5_docs.py",
+    "scripts/load_demo.py",
+]
 
 
 def run(arguments, **kwargs):
@@ -232,63 +253,9 @@ def test(browser=False):
     run([NPM, "run", "typecheck"])
     run([NPM, "run", "build"])
     run([NPM, "run", "contracts"])
-    run(
-        [
-            PYTHON,
-            "-m",
-            "ruff",
-            "check",
-            "backend",
-            "scripts/meet.py",
-            "scripts/package_local.py",
-            "scripts/soak_phase5.py",
-        ]
-    )
-    run(
-        [
-            PYTHON,
-            "-m",
-            "ruff",
-            "check",
-            "--select",
-            "E4,E7,E9,F",
-            "backend/app/main.py",
-            "backend/app/config.py",
-            "backend/app/storage.py",
-            "backend/app/ownership.py",
-            "backend/app/report_export.py",
-            "backend/app/migration.py",
-            "backend/app/backup.py",
-            "backend/app/runner.py",
-            "backend/app/version.py",
-            "backend/tests/test_phase5_operations.py",
-            "scripts/meet.py",
-            "scripts/package_local.py",
-            "scripts/soak_phase5.py",
-        ]
-    )
-    run(
-        [
-            PYTHON,
-            "-m",
-            "ruff",
-            "format",
-            "--check",
-            "backend/app/main.py",
-            "backend/app/config.py",
-            "backend/app/storage.py",
-            "backend/app/ownership.py",
-            "backend/app/report_export.py",
-            "backend/app/migration.py",
-            "backend/app/backup.py",
-            "backend/app/runner.py",
-            "backend/app/version.py",
-            "backend/tests/test_phase5_operations.py",
-            "scripts/meet.py",
-            "scripts/package_local.py",
-            "scripts/soak_phase5.py",
-        ]
-    )
+    run([PYTHON, "-m", "ruff", "check", "backend", *QUALITY_FILES])
+    run([PYTHON, "-m", "ruff", "check", "--select", "E4,E7,E9,F", *QUALITY_FILES])
+    run([PYTHON, "-m", "ruff", "format", "--check", *QUALITY_FILES])
     run([NPM, "run", "format:check"])
     # Original Phase 1 semantic probes and Phase 2-4 regressions are included in pytest/vitest/E2E.
     if browser:
