@@ -1,3 +1,5 @@
+> Hiện hành: [Phase 5 / release gates](PHASE5_REPORT.md). Ma trận bên dưới là snapshot Phase 4 và truy vết spec gốc, không phải nghiệm thu Phase 5.
+
 # Báo cáo nghiệm thu thực tế
 
 **Implementation chạy local, chờ live validation. Không phải MVP VERIFIED.** Cập nhật Phase 4 2026-10-19; baseline bàn giao 2026-10-17; app 0.1.0, adapter meet-calibrated-v1; mã nguồn được quản lý theo commit trong repository.

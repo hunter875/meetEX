@@ -1,0 +1,722 @@
+{
+  "created_at": "2026-10-19T14:06:39.081399+00:00",
+  "client_timezone": "America/Los_Angeles",
+  "base_commit": "cd6b79f876a6d3e00f26801dacfebb10bb87cbfb",
+  "starting_branch": "main",
+  "starting_working_tree": "clean",
+  "branch": "codex/phase5-local-operations",
+  "head_at_evaluation": "9a5ac7153343a4b84256fbc1343267eeb285de55",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "D:\\meetEX\\.venv\\Scripts\\python.exe"
+  },
+  "command": ".venv/Scripts/python.exe scripts/evaluate_phase1.py --output docs/evidence/phase5/semantic-regression.json --base-commit cd6b79f876a6d3e00f26801dacfebb10bb87cbfb --starting-branch main",
+  "mode": "Offline deterministic validation, synthetic evidence, no provider or real meeting",
+  "validation_policy": "bounded-evidence-v1",
+  "hash_format": "utf8-lf",
+  "source_hashes": {
+    "backend/app/storage.py": "953a70dd5078de306d397c5e77bfec567542d22b3f489301f858f502b776c531",
+    "backend/app/evidence.py": "01831e53cd93356ef97ae8799a9b8ee1c370a932bbda9dd199cbad216396e652",
+    "backend/app/llm.py": "b0dcbdf4c99367bf542ea1b6cce0cbd2d1888bb04bcbfce0edec274b22762c21",
+    "backend/app/service.py": "1841f104c02a5d37aeb3b3d8b14c48e6c0b59ea9fc0ad3790a3fd27dcc7eed05",
+    "fixtures/phase1-semantic-cases.json": "91e8583dd3b77d3d00eb6f227b05543d4b61372c77c900998b29b591f7ac1a62"
+  },
+  "groups": {
+    "decision": {
+      "valid_cases": 7,
+      "invalid_cases": 19,
+      "false_accepts": 0,
+      "false_rejects": 0
+    },
+    "numeric": {
+      "valid_cases": 15,
+      "invalid_cases": 25,
+      "false_accepts": 0,
+      "false_rejects": 0
+    },
+    "task": {
+      "valid_cases": 6,
+      "invalid_cases": 10,
+      "false_accepts": 0,
+      "false_rejects": 0
+    }
+  },
+  "cases": [
+    {
+      "name": "wrong-timeout",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "borrow-ttl",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "borrow-other-endpoint",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "equivalent-ms",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "equivalent-minutes",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "correct-timeout",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "correct-ttl",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "wrong-retries",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "correct-retries",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "wrong-comparator",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "negative-value",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "retain-negative",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "range-not-point",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "same-range",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "drop-condition",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "keep-condition",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "ambiguous-source",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "qualitative-no-number",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "vietnamese-conversion",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "bad-translation",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "explicit-new-proposal",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "proposal-as-approved",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "proposal-in-facts",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "wrong-task",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "correct-task",
+      "group": "task",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "valid-paraphrase",
+      "group": "task",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "different-csv-task",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "ability-not-acceptance",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "request-not-acceptance",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "other-participant",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "negative-acceptance",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "two-accepted-tasks",
+      "group": "task",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "two-people",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "vietnamese-task",
+      "group": "task",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "ordinary-reply",
+      "group": "task",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "wrong-task-deadline",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "correct-task-deadline",
+      "group": "task",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "wrong-production",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "valid-staging",
+      "group": "decision",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "explicit-production",
+      "group": "decision",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "rephrased-production",
+      "group": "decision",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "not-approved",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "tentative-date",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "summary-wrong",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "summary-vi-wrong",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "item-en-wrong",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "item-vi-correct",
+      "group": "decision",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "drop-approval-condition",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "correct-owner-date",
+      "group": "decision",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "wrong-owner",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "wrong-date",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_DUE",
+      "passed": true
+    },
+    {
+      "name": "wrong-task-owner",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "summary-wrong-owner-task",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "summary-correct-owner-task",
+      "group": "decision",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "mention-is-not-acceptance",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "same-clause-other-property",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "same-clause-endpoint",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "preserve-attribute-vietnamese",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "summary-wrong-task-date",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "confirmed-unrelated-action",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "single-turn-other-actor",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "different-negated-action",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "confirmed-conditional-action",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "unknown-qualitative-supported",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_UNVERIFIED",
+      "passed": true
+    },
+    {
+      "name": "translated-qualitative-supported",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "shared-subject-wrong-date",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_DUE",
+      "passed": true
+    },
+    {
+      "name": "shared-subject-correct-date",
+      "group": "decision",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "pending-alone-not-decision",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_CLAIM",
+      "passed": true
+    },
+    {
+      "name": "current-fact-not-proposal",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "question-not-supported-fact",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_UNVERIFIED",
+      "passed": true
+    },
+    {
+      "name": "promise-with-question-tag",
+      "group": "task",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_COMMITMENT",
+      "passed": true
+    },
+    {
+      "name": "question-not-confirmed-action",
+      "group": "decision",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "REPORT_TASK",
+      "passed": true
+    },
+    {
+      "name": "cannot-be-value",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "negative-before-attribute",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "retain-upper-bound",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "drop-upper-bound",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "tentative-numeric",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "alternative-values",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "binary-size-normalization",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "name": "binary-not-decimal",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "unnamed-http-value",
+      "group": "numeric",
+      "expected_accept": false,
+      "accepted": false,
+      "error": "AI_NUMERIC",
+      "passed": true
+    },
+    {
+      "name": "explicit-http-value",
+      "group": "numeric",
+      "expected_accept": true,
+      "accepted": true,
+      "error": null,
+      "passed": true
+    }
+  ],
+  "original_probes": [
+    {
+      "name": "unrelated_first_person_commitment",
+      "blocked": true,
+      "error": "AI_COMMITMENT"
+    },
+    {
+      "name": "false_fact_with_valid_citation",
+      "blocked": true,
+      "error": "AI_NUMERIC"
+    },
+    {
+      "name": "false_decision_from_unrelated_confirmation",
+      "blocked": true,
+      "error": "REPORT_CLAIM"
+    }
+  ],
+  "result": "PASS",
+  "limitations": "Fixture false accepts/rejects are not real-meeting accuracy. Bounded aliases and grammar; no general semantic entailment or real provider latency claim."
+}

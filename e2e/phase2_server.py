@@ -21,4 +21,11 @@ async def controlled_provider(request):
     return httpx.Response(200,content='data: '+json.dumps({'choices':[{'delta':{'content':json.dumps(payload)}}]})+'\n\ndata: [DONE]\n\n')
 
 
-app.state.provider.transport=httpx.MockTransport(controlled_provider)
+from contextlib import asynccontextmanager
+original_lifespan=app.router.lifespan_context
+@asynccontextmanager
+async def fixture_lifespan(application):
+    async with original_lifespan(application):
+        application.state.provider.transport=httpx.MockTransport(controlled_provider)
+        yield
+app.router.lifespan_context=fixture_lifespan

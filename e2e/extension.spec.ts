@@ -25,7 +25,7 @@ test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet
     proxy=createServer((req,res)=>{const upstream=forwardHTTP({hostname:'127.0.0.1',port:18765,path:req.url,method:req.method,headers:req.headers},r=>{res.writeHead(r.statusCode||502,r.headers);r.on('error',()=>res.destroy());r.pipe(res);});upstream.on('error',()=>{if(!res.headersSent)res.writeHead(502);res.end();});res.on('close',()=>upstream.destroy());req.pipe(upstream);});
     proxy.on('upgrade',(req,client,head)=>{if(transportBlocked){client.destroy();return;}transportClients.add(client);const upstream=connectTCP(18765,'127.0.0.1',()=>{upstream.write(`${req.method} ${req.url} HTTP/1.1\r\n`+req.rawHeaders.reduce((s,h,i)=>s+h+(i%2?'\r\n':': '),'')+'\r\n');if(head.length)upstream.write(head);client.pipe(upstream);upstream.pipe(client);});client.on('close',()=>{transportClients.delete(client);upstream.destroy();});client.on('error',()=>upstream.destroy());upstream.on('error',()=>client.destroy());upstream.on('close',()=>client.destroy());});
     await new Promise<void>(resolve=>proxy.listen(8765,'127.0.0.1',resolve));
-    backend=spawn(path.resolve('.venv/Scripts/python.exe'),['-m','uvicorn','phase2_server:app','--app-dir','e2e','--host','127.0.0.1','--port','18765','--workers','1'],{cwd:process.cwd(),env:{...process.env,MEET_DATA_DIR:dataDir,MEET_EXTENSION_ID:extensionId,MEET_DEV_ORIGIN:'',DEEPSEEK_API_KEY:''},windowsHide:true});
+    backend=spawn(path.resolve(process.platform==='win32'?'.venv/Scripts/python.exe':'.venv/bin/python'),['-m','uvicorn','phase2_server:app','--app-dir','e2e','--host','127.0.0.1','--port','18765','--workers','1'],{cwd:process.cwd(),env:{...process.env,MEET_DATA_DIR:dataDir,MEET_EXTENSION_ID:extensionId,MEET_DEV_ORIGIN:'',DEEPSEEK_API_KEY:''},windowsHide:true});
     backend.stdout?.on('data',d=>logs+=String(d));backend.stderr?.on('data',d=>logs+=String(d));
     await expect.poll(async()=>{try{return (await fetch(base+'/health')).ok;}catch{return false;}},{timeout:20000}).toBe(true);
     token=(await readFile(path.join(dataDir,'pairing-token'),'utf8')).trim();page=await context.newPage();page.on('pageerror',e=>console.error('UI error:',e.message));await pair(page);
@@ -193,6 +193,25 @@ test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet
     const final=await api(`/api/v1/meetings/${m.id}`);expect(final.reports.at(-1).memory_snapshot.find((i:any)=>i.entity==='API-71').origin).toBe('user_edit');
     const exported=await fetch(base+`/api/v1/reports/${saved.id}/export?format=json`,{headers:{Authorization:'Bearer '+token}}).then(r=>r.json());expect(exported.edit_provenance.actor).toBe('local_user');expect(exported.evidence_snapshot.find((s:any)=>s.id==='decision').revision).toBe(2);
     await view.screenshot({path:evidencePath('phase4-report-ui.png'),fullPage:true});await writeFile(evidencePath('phase4-ui.json'),JSON.stringify({provenance:'Synthetic fixture + real MV3/backend, no paid calls',memory:await api(`/api/v1/meetings/${m.id}/memory`),reports:final.reports},null,2));await view.close();
+  });
+
+  test('PHASE5 rotation closes worker connection; re-pair and disconnect clear credential',async()=>{
+    await page.goto(`chrome-extension://${extensionId}/dashboard.html#/settings`);
+    await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).connected).toBe(true);
+    const previous=token;
+    await api('/api/v1/local/pairing/rotate','POST',{});
+    expect((await fetch(base+'/api/v1/projects',{headers:{Authorization:'Bearer '+previous}})).status).toBe(401);
+    await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).pairing_status).toBe('invalid');
+    await expect(page.getByRole('alert').filter({hasText:'Pairing đã hết hiệu lực'})).toBeVisible();
+    token=(await readFile(path.join(dataDir,'pairing-token'),'utf8')).trim();await pair(page);
+    await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).connected).toBe(true);
+    await page.getByRole('button',{name:'Ngắt kết nối',exact:true}).click();
+    await expect.poll(async()=>(await page.evaluate(()=>chrome.storage.local.get('config'))).config.token).toBe('');
+    await page.reload();await expect(page.getByLabel('Pairing token ứng dụng local')).toHaveValue('');
+    const state=await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}));expect(state.connected).toBe(false);expect(state.binding).toBeNull();expect(state.pending).toBe(0);
+    const storage=await page.evaluate(()=>chrome.storage.session.get(null));expect(Object.keys(storage).filter(k=>k.startsWith('reading_'))).toHaveLength(0);
+    await page.screenshot({path:evidencePath('phase5-disconnected.png'),fullPage:true});
+    await writeFile(evidencePath('phase5-pairing.json'),JSON.stringify({synthetic:true,old_rest_status:401,open_socket_invalidated:true,re_pair:true,disconnect_cleared:true,paid_calls:0},null,2));
   });
 
 });

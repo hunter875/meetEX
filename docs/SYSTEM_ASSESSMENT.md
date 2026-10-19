@@ -1,5 +1,8 @@
 # Đánh giá hệ thống hiện tại
 
+**Trạng thái hiện hành:** [Phase 5 và release gates](PHASE5_REPORT.md), [runbook local](LOCAL_OPERATIONS.md). Các snapshot Phase 1–4 bên dưới giữ giá trị lịch sử/phạm vi riêng.
+
+
 ## Trạng thái Phase 4
 
 [Phase 4](PHASE4_REPORT.md) **PARTIAL**. Memory evidence/state/version, migration 002, live budget/cache, report current-history và UI edit/export đã có; 331 backend / 60 frontend / 6 browser pass. 23 synthetic scenarios/38 items đúng, 321-turn/16-map pipeline bỏ 2 decision/1 deadline cũ khỏi current. Không có general entailment/authority/coreference hoặc chứng nhận model-quality thật. Paid calls mới 0, Meet/model evaluation mới NOT TESTED. Các đánh giá Phase 1–3 phía dưới là lịch sử có phạm vi riêng.

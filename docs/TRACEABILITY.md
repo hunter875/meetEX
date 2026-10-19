@@ -1,3 +1,5 @@
+> Hiện hành: [Phase 5 / release gates](PHASE5_REPORT.md). Ma trận bên dưới là snapshot Phase 4 và truy vết spec gốc, không phải nghiệm thu Phase 5.
+
 # REQ → task → check
 
 Bảng dựng lại từ registry trong sáu tệp được cung cấp; không thay đổi spec gốc. Kết quả được tách theo mode trong [ACCEPTANCE_REPORT.md](ACCEPTANCE_REPORT.md).

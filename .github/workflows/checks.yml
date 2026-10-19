@@ -1,0 +1,44 @@
+name: Local regression
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  keyword:
+    name: Keyword / ${{ matrix.os }} / Python 3.13
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      DEEPSEEK_API_KEY: ''
+      MEET_EXTENSION_ID: ''
+      MEET_DEV_ORIGIN: ''
+      MEET_DATA_DIR: ${{ runner.temp }}/meet-ci-synthetic-data
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.20.0'
+          cache: npm
+      - run: python scripts/meet.py setup
+      - if: runner.os == 'Linux'
+        run: npx playwright install --with-deps chromium
+      - run: python scripts/ci_check.py
+      - name: Retain synthetic diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-failure-${{ matrix.os }}
+          path: |
+            .local/checks/
+            test-results/
+          retention-days: 7
+          if-no-files-found: error
+  # Optional E5 model/network validation is not represented as a green keyword gate.

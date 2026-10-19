@@ -1,5 +1,7 @@
 # Tài liệu Meet Copilot
 
+**Bản hiện hành Phase 5:** [trạng thái/gates](PHASE5_REPORT.md), [kiến trúc](ARCHITECTURE.md), [runbook local](LOCAL_OPERATIONS.md). Các số liệu Phase 1–4 bên dưới là lịch sử, không tự đóng nghiệm thu của build mới.
+
 Snapshot trong [hunter875/meetEX](https://github.com/hunter875/meetEX), GitHub báo public khi kiểm tra 2026-10-18. Ứng dụng chạy local; chưa nghiệm thu Google Meet thật. Thư mục spec giữ nguyên tài liệu đầu vào, không dùng trạng thái TODO trong đó thay cho kết quả triển khai hiện tại.
 
 ## Bắt đầu và kiến trúc
@@ -10,7 +12,7 @@ Snapshot trong [hunter875/meetEX](https://github.com/hunter875/meetEX), GitHub b
 - [OpenAPI hiện tại](openapi.json) và [TypeScript sinh từ schema](../extension/src/api-schema.d.ts)
 - [Adapter caption và checklist Meet thật](CAPTION_ADAPTER.md)
 
-## Trạng thái và kiểm tra
+## Trạng thái và kiểm tra lịch sử
 
 - [Trạng thái triển khai](IMPLEMENTATION_STATUS.md), [truy vết yêu cầu](TRACEABILITY.md), [báo cáo nghiệm thu](ACCEPTANCE_REPORT.md).
 - Phase 4: **331 backend / 60 frontend / 6 browser pass**. [A–F, PARTIAL và phạm vi](PHASE4_REPORT.md), [review](evidence/phase4/review.json): 38/38 labelled items/evidence, 321-turn/16-map controlled report; model/Meet thật NOT TESTED.
@@ -28,7 +30,7 @@ Snapshot trong [hunter875/meetEX](https://github.com/hunter875/meetEX), GitHub b
 
 ## Các phần chưa hoàn thành
 
-Meet thật/Windows sạch/outage thực tế chưa nghiệm thu. Ba probe gốc đã bị chặn trong phạm vi giai đoạn 1; guard vẫn chưa xác minh mọi claim. Routing không thay bộ kiểm tra bằng chứng. Luồng deep mới dùng prompt trong schema gợi ý, chưa có bảng phương án/trọng số. Chưa có bộ nhớ quyết định có trạng thái thay thế/hủy, connector đồng bộ sống hoặc PDF/DOCX trực tiếp.
+Meet thật/Windows sạch/outage thực tế chưa nghiệm thu. Ba probe gốc đã bị chặn trong phạm vi giai đoạn 1; guard vẫn chưa xác minh mọi claim. Routing không thay bộ kiểm tra bằng chứng. Luồng deep mới dùng prompt trong schema gợi ý, chưa có bảng phương án/trọng số. Bộ nhớ có trạng thái đã có ở Phase 4 trong grammar công bố; chưa có coreference/authority tổng quát, connector đồng bộ sống hoặc PDF/DOCX trực tiếp.
 
 ## Đưa lên Git và tái tạo tài liệu
 

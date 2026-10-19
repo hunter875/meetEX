@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="14" time="4.843" timestamp="2026-10-19T06:43:05.245069-07:00" hostname="hunter875"><testcase classname="backend.tests.test_phase5_operations" name="test_import_schema_has_no_data_or_environment_side_effect" time="2.185" /><testcase classname="backend.tests.test_phase5_operations" name="test_os_lock_ignores_stale_pid_and_rejects_other_process" time="0.279" /><testcase classname="backend.tests.test_phase5_operations" name="test_two_asgi_apps_cannot_own_same_data" time="0.238" /><testcase classname="backend.tests.test_phase5_operations" name="test_start_failure_releases_os_lock_and_never_ready" time="0.090" /><testcase classname="backend.tests.test_phase5_operations" name="test_future_schema_rejected_before_wal_or_data_changes" time="0.020" /><testcase classname="backend.tests.test_phase5_operations" name="test_migration_failure_rolls_back_and_history_gaps_rejected" time="0.039" /><testcase classname="backend.tests.test_phase5_operations" name="test_v1_full_fixture_upgrade_preserves_rows_and_fts" time="0.178" /><testcase classname="backend.tests.test_phase5_operations" name="test_online_wal_backup_restore_preserves_all_rows_and_recovery" time="0.277" /><testcase classname="backend.tests.test_phase5_operations" name="test_backup_excludes_ram_sessions" time="0.083" /><testcase classname="backend.tests.test_phase5_operations" name="test_restore_refuses_live_writer_and_bad_checksum_without_touching_data" time="0.107" /><testcase classname="backend.tests.test_phase5_operations" name="test_restore_replace_fault_preserves_current_and_recoverable_preimage" time="0.168" /><testcase classname="backend.tests.test_phase5_operations" name="test_atomic_credential_failure_keeps_previous_value" time="0.106" /><testcase classname="backend.tests.test_phase5_operations" name="test_rotation_invalidates_rest_and_open_websocket_preserving_meeting" time="0.212"><failure message="AssertionError: assert 500 == 200&#10; +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code&#10; +    where &lt;Response [500 Internal Server Error]&gt; = get(('/api/v1/meetings/' + 'db2d7591-fdfd-47ac-9c70-46a021515200'), headers={'Authorization': 'Bearer [REDACTED_EPHEMERAL_TEST_TOKEN]'})&#10; +      where get = &lt;starlette.testclient.TestClient object at 0x0000015749FC4510&gt;.get">client = &lt;starlette.testclient.TestClient object at 0x0000015749FC4510&gt;
+
+    def test_rotation_invalidates_rest_and_open_websocket_preserving_meeting(client):
+        store = client.app.state.store
+        project = store.create_project(dict(name='Keep', description='', glossary={}))
+        meeting = store.create_meeting(dict(project_id=project['id'], title='Keep', timezone='UTC', persistence_mode='local', demo=True))
+        origin = 'chrome-extension://' + 'a' * 32
+        with client.websocket_connect('/api/v1/events', headers={'Origin': origin, 'Host': '127.0.0.1:8765'}) as ws:
+            ws.send_json(dict(type='auth', protocol_version=1, token='test-pairing-token'))
+            assert ws.receive_json()['type'] == 'auth.ok'
+            response = client.post('/api/v1/local/pairing/rotate')
+            assert response.status_code == 200 and 'token' not in response.json()
+            with pytest.raises(WebSocketDisconnect) as error:
+                ws.receive_json()
+            assert error.value.code == 4401
+        assert client.get('/api/v1/projects').status_code == 401
+        config = client.app.state.provider
+        assert config.key == ''  # Pairing rotation does not set a provider key.
+        directory = Path(store.disk.execute('PRAGMA database_list').fetchone()[2]).parent
+        new = (directory / 'pairing-token').read_text().strip()
+        assert len(new) &gt;= 43 and new != 'test-pairing-token'
+        headers = {'Authorization': 'Bearer ' + new}
+&gt;       assert client.get('/api/v1/meetings/' + meeting['id'], headers=headers).status_code == 200
+E       AssertionError: assert 500 == 200
+E        +  where 500 = &lt;Response [500 Internal Server Error]&gt;.status_code
+E        +    where &lt;Response [500 Internal Server Error]&gt; = get(('/api/v1/meetings/' + 'db2d7591-fdfd-47ac-9c70-46a021515200'), headers={'Authorization': 'Bearer [REDACTED_EPHEMERAL_TEST_TOKEN]'})
+E        +      where get = &lt;starlette.testclient.TestClient object at 0x0000015749FC4510&gt;.get
+
+backend\tests\test_phase5_operations.py:259: AssertionError</failure></testcase><testcase classname="backend.tests.test_phase5_operations" name="test_shutdown_rejects_unverified_instance_and_requires_auth" time="0.186" /></testsuite></testsuites>

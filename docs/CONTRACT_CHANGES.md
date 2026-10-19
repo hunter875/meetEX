@@ -1,5 +1,12 @@
 # Contracts triển khai so với bộ đặc tả 1.1
 
+## Phase 5 — local operations, protocol vẫn 1
+
+OpenAPI import inert; resource lifecycle chuyển startup/shutdown. Health response cũ giữ nguyên; thêm GET /ready (version/protocol/schema/capabilities/instance), POST /api/v1/local/shutdown (authenticated + instance nonce), POST /api/v1/local/pairing/rotate (authenticated, không trả token). Host/Origin vẫn exact. Rotation đóng WS 4401; token cũ REST 401. Extension disconnect xóa credential/state tạm và dừng reconnect, version/protocol mismatch có nhãn. Không đổi DTO capture/report/evidence cũ; generated TS/OpenAPI đồng bộ.
+
+Một report job toàn cục: REPORT_BUSY 429, tổng chờ provider 300 s, mặc định 90 s/map, REPORT_DEADLINE khi hết budget; report đã lưu giữ nguyên. Data schema vẫn 2, migration runner từ chối future/gapped versions, không reset DB. Chi tiết: [runbook](LOCAL_OPERATIONS.md), [Phase 5 gates](PHASE5_REPORT.md).
+
+
 ## Phase 4 — memory/report contract
 
 Versioned migration 002 thêm memory_items/memory_versions/segment_revisions trong đúng DB local/RAM; không reset/nâng legacy thành verified. [Kiến trúc và scoped API](MEETING_MEMORY.md), [states/evidence/rebuild/backward compatibility](PHASE4_REPORT.md). AISnapshot thêm structured_memory, memory_revision, ledger_omitted_count; memory revision tham gia cache/freshness. Legacy confirmed_segment_ids vẫn hoạt động.

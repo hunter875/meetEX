@@ -1,0 +1,213 @@
+........................................................................ [ 20%]
+........................................................................ [ 41%]
+........................................................................ [ 62%]
+........................................................................ [ 83%]
+.........................................................                [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+----------- generated xml file: D:\meetEX\.local\checks\backend.xml -----------
+345 passed, 1 warning in 34.10s
+
+> meet-copilot@0.1.0 test
+> npm run test -w extension
+
+
+> @meet-copilot/extension@0.1.0 test
+> vitest run --maxWorkers=1 --minWorkers=1 --reporter=default --reporter=json
+
+
+ RUN  v3.2.4 D:/meetEX/extension
+
+ ❯ tests/phase2-transport.test.ts (15 tests | 14 failed) 259ms
+   × buffers actual worker commands during 5000 ms outage and resends identical IDs 144ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × buffers actual worker commands during 20000 ms outage and resends identical IDs 10ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × lost ACK on a live socket retries after two seconds with the same event ID 9ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × rejects unbound tab/document/meeting 'doc' 'https://meet.google.com/room' 10ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × rejects unbound tab/document/meeting 'old' 'https://meet.google.com/room' 9ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × rejects unbound tab/document/meeting 'doc' 'https://meet.google.com/other' 8ms
+     → Cannot set properties of undefined (setting 'readyState')
+   ✓ rejects another tab overwriting the active caption calibration 10ms
+   × reload interrupts, discards old document pending events, and requires explicit resume 9ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × worker reconstruction keeps pending event IDs and does not need an open side panel 9ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × pause discards pending with explicit gap reason; no event from pause is queued 7ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × end discards pending with explicit gap reason; no event from pause is queued 7ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × overflow stays bounded and publishes an explicit gap after reconnect 7ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × backend interrupted after restart discards pending rather than replaying into resumed session 6ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × a heartbeat proves content liveness while selector failure still reports unsupported_dom 6ms
+     → Cannot set properties of undefined (setting 'readyState')
+   × diagnostic loss markers survive lost ACK and are removed only by matching gap ACK 6ms
+     → Cannot set properties of undefined (setting 'readyState')
+ ✓ tests/phase2-dom.test.ts (8 tests) 170ms
+ ✓ tests/caption.test.ts (9 tests) 113ms
+ ✓ tests/phase2-replay.test.ts (19 tests) 24ms
+ ✓ tests/state.test.ts (4 tests) 9ms
+ ✓ tests/phase2-timing.test.ts (1 test) 9ms
+ ✓ tests/phase4-memory.test.ts (2 tests) 6ms
+ ✓ tests/phase3-state.test.ts (2 tests) 6ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 14 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/phase2-transport.test.ts > buffers actual worker commands during 5000 ms outage and resends identical IDs
+ FAIL  tests/phase2-transport.test.ts > buffers actual worker commands during 20000 ms outage and resends identical IDs
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:38:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > lost ACK on a live socket retries after two seconds with the same event ID
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:45:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > rejects unbound tab/document/meeting 'doc' 'https://meet.google.com/room'
+ FAIL  tests/phase2-transport.test.ts > rejects unbound tab/document/meeting 'old' 'https://meet.google.com/room'
+ FAIL  tests/phase2-transport.test.ts > rejects unbound tab/document/meeting 'doc' 'https://meet.google.com/other'
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:50:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > reload interrupts, discards old document pending events, and requires explicit resume
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:56:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > worker reconstruction keeps pending event IDs and does not need an open side panel
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:61:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > pause discards pending with explicit gap reason; no event from pause is queued
+ FAIL  tests/phase2-transport.test.ts > end discards pending with explicit gap reason; no event from pause is queued
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:66:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > overflow stays bounded and publishes an explicit gap after reconnect
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:73:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > backend interrupted after restart discards pending rather than replaying into resumed session
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:79:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > a heartbeat proves content liveness while selector failure still reports unsupported_dom
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:83:9
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/14]⎯
+
+ FAIL  tests/phase2-transport.test.ts > diagnostic loss markers survive lost ACK and are removed only by matching gap ACK
+TypeError: Cannot set properties of undefined (setting 'readyState')
+ ❯ connected tests/phase2-transport.test.ts:19:31
+     17| }
+     18| async function connected(){
+     19|   const ws=sockets.at(-1)!;ws.readyState=1;ws.onopen?.();ws.receive({t…
+       |                               ^
+     20|   ws.receive({type:'session.snapshot',session_id:'meeting',payload:{sn…
+     21| }
+ ❯ tests/phase2-transport.test.ts:88:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/14]⎯
+
+
+ Test Files  1 failed | 7 passed (8)
+      Tests  14 failed | 46 passed (60)
+   Start at  06:47:16
+   Duration  16.97s (transform 484ms, setup 0ms, collect 834ms, tests 596ms, environment 10.87s, prepare 1.86s)
+
+JSON report written to D:/meetEX/.local/checks/frontend.json
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path D:\meetEX\extension
+npm error workspace @meet-copilot/extension@0.1.0
+npm error location D:\meetEX\extension
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c vitest run --maxWorkers=1 --minWorkers=1 --reporter=default --reporter=json
+CalledProcessError: operation failed; run doctor / inspect local startup output.

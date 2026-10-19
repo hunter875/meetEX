@@ -197,3 +197,11 @@ if phase4_path.exists():
         stream.write('\nPhase 4: **PARTIAL** · evidence ledger/versioned migration 002, live context, report reconciliation/current-history và UI/export đã triển khai trong phạm vi grammar có giới hạn. [Báo cáo A–F](PHASE4_REPORT.md). Bare Yes/authority/coreference ngoài phạm vi vẫn cần làm rõ; không tự chứng nhận model quality hay Meet live.\n')
 (docs/'ACCEPTANCE_REPORT.md').write_text(text+'\n',encoding='utf8')
 print('Generated traceability, task status and mode-specific acceptance report')
+
+# The original acceptance matrix remains a historical Phase 4 snapshot. Phase 5
+# operational acceptance has its own A-F/gates and never silently upgrades it.
+if (docs/'PHASE5_REPORT.md').exists():
+    for name in ('IMPLEMENTATION_STATUS.md','ACCEPTANCE_REPORT.md','TRACEABILITY.md'):
+        target=docs/name
+        text=target.read_text('utf8')
+        target.write_text('> Hiện hành: [Phase 5 / release gates](PHASE5_REPORT.md). Ma trận bên dưới là snapshot Phase 4 và truy vết spec gốc, không phải nghiệm thu Phase 5.\n\n'+text,encoding='utf8')

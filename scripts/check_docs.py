@@ -1,6 +1,10 @@
 from pathlib import Path
 import json,re,xml.etree.ElementTree as ET
 root=Path(__file__).resolve().parents[1];docs=root/'docs'
+if (docs/'PHASE5_REPORT.md').exists():
+    import runpy,sys
+    runpy.run_path(str(root/'scripts/check_phase5_docs.py'),run_name='__main__')
+    raise SystemExit(0)
 phase1=(docs/'evidence/phase1/semantic-review.json').exists()
 phase2=(docs/'evidence/phase2/review.json').exists()
 phase3=(docs/'evidence/phase3/review.json').exists()

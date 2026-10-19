@@ -1,4 +1,10 @@
-# Chức năng nên bổ sung sau bộ phân loại
+# Chức năng và nghiệm thu tiếp theo
+
+## Sau Phase 5
+
+[Phase 5 candidate](PHASE5_REPORT.md) triển khai vận hành local. Ưu tiên đóng Meet thật/Windows độc lập/model-quality với budget được cấp, E5 load/shutdown và soak thực địa; mở rộng authority/coreference/multilingual và weighted matrix. CI/backup không thay các gate thực địa. Durable cost accounting và full-size corpus vẫn mở.
+
+Các danh sách bên dưới là lịch sử ưu tiên trước khi làm từng phase.
 
 ## Sau Phase 4 — Phase 5
 
@@ -6,7 +12,7 @@
 
 ## Sau Phase 3
 
-[Kết quả Phase 3](PHASE3_REPORT.md): **PARTIAL**, hai mục tiêu request/Auto wait vẫn mở. Phase 4 ưu tiên corpus cuộc họp được phép dùng, chấm trigger/card hữu ích theo người, benchmark provider thật với budget mới và đóng Meet live gate; sau đó hiệu chỉnh indirect/multilingual trigger, paraphrase dedup, full RSS/index writer và cold retrieval. Không hạ ngưỡng hoặc bỏ câu hỏi/validator để hợp thức hóa PASS. Bảng phương án/trọng số và decision memory dưới đây vẫn chưa triển khai.
+[Kết quả Phase 3](PHASE3_REPORT.md): **PARTIAL**, hai mục tiêu request/Auto wait vẫn mở. Phase 4 ưu tiên corpus cuộc họp được phép dùng, chấm trigger/card hữu ích theo người, benchmark provider thật với budget mới và đóng Meet live gate; sau đó hiệu chỉnh indirect/multilingual trigger, paraphrase dedup, full RSS/index writer và cold retrieval. Không hạ ngưỡng hoặc bỏ câu hỏi/validator để hợp thức hóa PASS. Bảng phương án/trọng số vẫn chưa triển khai; memory đã có ở Phase 4 trong phạm vi công bố.
 
 Bộ phân loại đã triển khai: [RESPONSE_ROUTING.md](RESPONSE_ROUTING.md). Giai đoạn 1 đã đóng các probe gốc và bất biến phiên trong phạm vi đã kiểm thử: [PHASE1_REPORT.md](PHASE1_REPORT.md). Các mục dưới là đề xuất tiếp theo, chưa triển khai chỉ vì được ghi trong tài liệu.
 

@@ -1,5 +1,8 @@
 # Giới hạn và phần chờ kiểm chứng
 
+**Trạng thái hiện hành:** [Phase 5 và release gates](PHASE5_REPORT.md), [runbook local](LOCAL_OPERATIONS.md). Các snapshot Phase 1–4 bên dưới giữ giá trị lịch sử/phạm vi riêng.
+
+
 ## Phase 4 — giới hạn bộ nhớ/báo cáo
 
 [Phase 4 PARTIAL](PHASE4_REPORT.md). 38/38 items, 11/11 owner, 6/6 normalized due trong nhãn synthetic không là accuracy cuộc họp thật. Grammar chủ yếu Anh/task IDs/action/environment rõ; bare Yes không tự bind owner, authority/coreference/paraphrase/multilingual còn mở. Ngày mơ hồ giữ raw, past due không đổi state. Fact participant phát biểu không là fact đã xác minh; chưa tìm được mọi factual/source contradiction. Compound clause có thể giữ unresolved thay vì tách đủ task.

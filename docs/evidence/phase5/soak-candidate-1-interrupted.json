@@ -1,0 +1,105 @@
+{
+  "plan": {
+    "seconds": 3600,
+    "interval": 2.0,
+    "rss_limit_mib": 768,
+    "disk_limit_mib": 256,
+    "recycle_turns": 60
+  },
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.4"
+  },
+  "started_at": "2026-10-19T13:42:46.842657+00:00",
+  "paid_calls": 0,
+  "browser": "NOT TESTED by this harness",
+  "samples": [
+    {
+      "elapsed_s": 123.24,
+      "rss_bytes": 70926336,
+      "disk_bytes": 4804328,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 60,
+      "captions": 60
+    },
+    {
+      "elapsed_s": 246.96,
+      "rss_bytes": 73506816,
+      "disk_bytes": 5295848,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 120,
+      "captions": 120
+    },
+    {
+      "elapsed_s": 369.91,
+      "rss_bytes": 50405376,
+      "disk_bytes": 5295848,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 180,
+      "captions": 180
+    },
+    {
+      "elapsed_s": 493.71,
+      "rss_bytes": 50692096,
+      "disk_bytes": 5299968,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 240,
+      "captions": 240
+    },
+    {
+      "elapsed_s": 616.87,
+      "rss_bytes": 50008064,
+      "disk_bytes": 5299968,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 300,
+      "captions": 300
+    },
+    {
+      "elapsed_s": 740.45,
+      "rss_bytes": 50790400,
+      "disk_bytes": 5299968,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 360,
+      "captions": 360
+    }
+  ],
+  "captions": 360,
+  "reconnects": 36,
+  "reports": 6,
+  "report_maps": 24,
+  "suggestions": 48,
+  "provider_attempts": 72,
+  "provider_faults": {
+    "429": 5,
+    "401": 1,
+    "slow_timeout": 3
+  },
+  "errors": [],
+  "status": "INTERRUPTED_FOR_SOURCE_REFINEMENT",
+  "elapsed_s": 740.448,
+  "scope": "Earlier candidate, deliberately stopped before planned duration; not a passed soak gate."
+}

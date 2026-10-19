@@ -1,0 +1,55 @@
+{
+  "plan": {
+    "seconds": 3600,
+    "interval": 2.0,
+    "rss_limit_mib": 768,
+    "disk_limit_mib": 256,
+    "recycle_turns": 60
+  },
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.4"
+  },
+  "started_at": "2026-10-19T13:51:01.747829+00:00",
+  "paid_calls": 0,
+  "browser": "NOT TESTED by this harness",
+  "samples": [
+    {
+      "elapsed_s": 123.57,
+      "rss_bytes": 67989504,
+      "disk_bytes": 4804328,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 60,
+      "captions": 60
+    },
+    {
+      "elapsed_s": 247.38,
+      "rss_bytes": 70201344,
+      "disk_bytes": 5295848,
+      "tasks": 0,
+      "listeners": 0,
+      "report_jobs": 0,
+      "query_cache": 0,
+      "vector_cache": 0,
+      "ack_buffer": 120,
+      "captions": 120
+    }
+  ],
+  "captions": 120,
+  "reconnects": 12,
+  "reports": 2,
+  "report_maps": 8,
+  "suggestions": 16,
+  "provider_attempts": 24,
+  "provider_faults": {
+    "429": 1
+  },
+  "errors": [],
+  "status": "INTERRUPTED_FOR_SOURCE_REFINEMENT",
+  "elapsed_s": 247.382,
+  "scope": "Earlier candidate, deliberately stopped before planned duration; not a passed soak gate."
+}

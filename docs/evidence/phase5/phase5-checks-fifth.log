@@ -1,0 +1,35 @@
+........................................................................ [ 20%]
+........................................................................ [ 41%]
+........................................................................ [ 61%]
+........................................................................ [ 82%]
+.............................................................            [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+----------- generated xml file: D:\meetEX\.local\checks\backend.xml -----------
+349 passed, 1 warning in 46.00s
+
+> meet-copilot@0.1.0 test
+> npm run test -w extension
+
+
+> @meet-copilot/extension@0.1.0 test
+> vitest run --maxWorkers=1 --minWorkers=1 --reporter=default --reporter=json
+
+
+ RUN  v3.2.4 D:/meetEX/extension
+
+Traceback (most recent call last):
+  File "D:\meetEX\scripts\ci_check.py", line 30, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\meetEX\scripts\ci_check.py", line 23, in main
+    print(redact(line), end="", flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minhl\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 1: character maps to <undefined>

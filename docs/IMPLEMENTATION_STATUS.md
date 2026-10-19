@@ -1,3 +1,5 @@
+> Hiện hành: [Phase 5 / release gates](PHASE5_REPORT.md). Ma trận bên dưới là snapshot Phase 4 và truy vết spec gốc, không phải nghiệm thu Phase 5.
+
 # Trạng thái triển khai theo task
 
 Cập nhật giai đoạn 1: 2026-10-18 · baseline bàn giao 2026-10-17 · Windows local. Spec gốc giữ nguyên; live gate chưa đóng.

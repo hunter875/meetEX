@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "command": "python scripts/ci_check.py (published test --browser with redacted output)",
+  "backend": 349,
+  "frontend": 63,
+  "browser": 7,
+  "paid_calls": 0,
+  "scope": "Keyword mode; Ruff bounded full style + backend syntax; Prettier changed modules; actual Chromium MV3 and intercepted Provider SSE"
+}

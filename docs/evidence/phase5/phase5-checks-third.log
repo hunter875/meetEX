@@ -1,0 +1,57 @@
+........................................................................ [ 20%]
+........................................................................ [ 41%]
+........................................................................ [ 62%]
+........................................................................ [ 82%]
+...........................................................              [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+----------- generated xml file: D:\meetEX\.local\checks\backend.xml -----------
+347 passed, 1 warning in 45.44s
+
+> meet-copilot@0.1.0 test
+> npm run test -w extension
+
+
+> @meet-copilot/extension@0.1.0 test
+> vitest run --maxWorkers=1 --minWorkers=1 --reporter=default --reporter=json
+
+
+ RUN  v3.2.4 D:/meetEX/extension
+
+ ✓ tests/phase2-transport.test.ts (18 tests) 1596ms
+   ✓ overflow stays bounded and publishes an explicit gap after reconnect  1247ms
+ ✓ tests/phase2-dom.test.ts (8 tests) 125ms
+ ✓ tests/caption.test.ts (9 tests) 103ms
+ ✓ tests/phase2-replay.test.ts (19 tests) 22ms
+ ✓ tests/state.test.ts (4 tests) 10ms
+ ✓ tests/phase2-timing.test.ts (1 test) 9ms
+ ✓ tests/phase4-memory.test.ts (2 tests) 6ms
+ ✓ tests/phase3-state.test.ts (2 tests) 7ms
+
+ Test Files  8 passed (8)
+      Tests  63 passed (63)
+   Start at  06:51:24
+   Duration  18.22s (transform 524ms, setup 0ms, collect 865ms, tests 1.88s, environment 10.86s, prepare 1.82s)
+
+JSON report written to D:/meetEX/.local/checks/frontend.json
+
+> meet-copilot@0.1.0 typecheck
+> npm run typecheck -w extension
+
+
+> @meet-copilot/extension@0.1.0 typecheck
+> tsc --noEmit
+
+vite.config.ts(3,287): error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path D:\meetEX\extension
+npm error workspace @meet-copilot/extension@0.1.0
+npm error location D:\meetEX\extension
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc --noEmit
+CalledProcessError: operation failed; run doctor / inspect local startup output.

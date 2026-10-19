@@ -24,9 +24,10 @@ async function boot(){
 }
 beforeEach(async()=>{
   vi.useFakeTimers();vi.resetModules();session={binding:{session_id:'meeting',tab_id:1,document_id:'doc',meeting_key:'/room',status:'active'}};sockets=[];sent=[];tabsSent=[];meeting={id:'meeting',meeting_key:'/room',status:'active'};
-  const storage=(values:Record<string,any>)=>({setAccessLevel:async()=>{},get:async(keys:any)=>keys===null?structuredClone(values):Object.fromEntries((Array.isArray(keys)?keys:[keys]).map((k:string)=>[k,structuredClone(values[k])])),set:async(value:any)=>{Object.assign(values,structuredClone(value));},remove:async(key:string)=>{delete values[key];}});
+  const storage=(values:Record<string,any>)=>({setAccessLevel:async()=>{},get:async(keys:any)=>keys===null?structuredClone(values):Object.fromEntries((Array.isArray(keys)?keys:[keys]).map((k:string)=>[k,structuredClone(values[k])])),set:async(value:any)=>{Object.assign(values,structuredClone(value));},remove:async(key:string)=>{delete values[key];},clear:async()=>{for(const key of Object.keys(values))delete values[key];}});
   vi.stubGlobal('WebSocket',Socket);
   vi.stubGlobal('fetch',vi.fn(async(_url:string,options:any)=>{
+    if(_url.endsWith('/ready'))return {ok:true,json:async()=>({ready:true,protocol_version:1,app_version:'0.1.0'})};
     if(_url.endsWith('/control')){const action=JSON.parse(options.body).action;meeting.status=action==='resume'?'active':action==='pause'?'paused':action==='end'?'ended':'interrupted';}
     return {ok:true,json:async()=>structuredClone(_url.endsWith('/meetings')?[meeting]:meeting)};
   }));
@@ -88,4 +89,23 @@ it('diagnostic loss markers survive lost ACK and are removed only by matching ga
   const ws=await connected();await command('capture.gap',{reason:'adapter_replaced'});const first=sent.filter(m=>m.type==='capture.gap').at(-1).payload;
   await vi.advanceTimersByTimeAsync(1100);expect(sent.filter(m=>m.type==='capture.gap').at(-1).payload.event_id).toBe(first.event_id);expect(session.pendingReasons).toContain('adapter_replaced');
   ws.receive({type:'capture.gap.ack',event_id:first.event_id,reason:first.reason});await settle();expect(session.pendingReasons).toEqual([]);
+});
+
+it('Phase5 disconnect clears credentials and temporary content, stops capture and reconnect',async()=>{
+  await connected();await command('capture.caption',event());session.reading_meeting={text:'SYNTHETIC'};
+  const result=await command('ui.disconnect',undefined,ui);expect(result.ok).toBe(true);
+  expect((await command('ui.state',undefined,ui)).config.token).toBe('');expect(session.pending).toEqual([]);expect(session.reading_meeting).toBeUndefined();expect(session.binding).toBeNull();
+  const count=sockets.length;await vi.advanceTimersByTimeAsync(120000);expect(sockets).toHaveLength(count);
+  expect(tabsSent.some(c=>c[1].type==='capture.stop')).toBe(true);
+});
+it('Phase5 invalid auth blocks reconnection until explicit re-pair',async()=>{
+  const ws=await connected();ws.receive({type:'auth.error'});await settle();
+  expect((await command('ui.state',undefined,ui)).pairing_status).toBe('invalid');const count=sockets.length;
+  await vi.advanceTimersByTimeAsync(120000);expect(sockets).toHaveLength(count);
+  await command('ui.config',undefined,ui,{config:{url:'http://127.0.0.1:8765',token:'NEW_TEST_PAIRING'}});expect(sockets).toHaveLength(count+1);
+});
+it('Phase5 incompatible protocol stops before opening/authenticating a socket',async()=>{
+  const count=sockets.length;vi.clearAllTimers();vi.resetModules();
+  (fetch as any).mockImplementation(async(url:string)=>({ok:true,json:async()=>url.endsWith('/ready')?{ready:true,protocol_version:999,app_version:'9.0.0'}:url.endsWith('/meetings')?[meeting]:meeting}));
+  await boot();expect(sockets).toHaveLength(count);expect((await command('ui.state',undefined,ui)).pairing_status).toBe('incompatible');
 });

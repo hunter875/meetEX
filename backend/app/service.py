@@ -13,6 +13,7 @@ from .routing import classify
 from .evidence import VALIDATION_POLICY
 from . import meeting_memory
 from .orchestration import TriggerPolicy,decide,meaning_key,card_key,retrieval_query,freshness_safe_smalltalk,POLICY_VERSION,PROMPT_VERSION
+REPORT_TOTAL_SECONDS=300
 
 class Service:
     POLICY_VERSION=POLICY_VERSION
@@ -466,6 +467,11 @@ class Service:
         if revision!=m['transcript_revision']:raise AppError('REVISION_CONFLICT','Reload the final transcript snapshot',409)
         for j in self.report_jobs.values():
             if j['meeting_id']==id and j['status'] in ('queued','running'):return j
+        if any(j['status'] in ('queued','running') for j in self.report_jobs.values()):
+            raise AppError('REPORT_BUSY','One local report job is already running; retry after it finishes',429,True)
+        for key in list(self.report_jobs):
+            if len(self.report_jobs)<200:break
+            if self.report_jobs[key]['status'] not in ('queued','running'):self.report_jobs.pop(key)
         job=dict(id=uid(),meeting_id=id,status='queued',error=None,progress=0,report_id=None)
         self.report_jobs[job['id']]=job;self.report_tasks[job['id']]=self.task(self.run_report(id,job,self.store.transcript(id),revision));return job
     async def generate_report_part(self,context):
@@ -497,7 +503,9 @@ class Service:
             for n,part in enumerate(parts):
                 context=dict(segments=part,timezone=m['timezone'],meeting_started_at=m['started_at'],transcript_revision=revision,task='report map; preserve each requirement/decision/action/open question, with evidence. Summarize only supplied observations.')
                 context['report_job_id']=job['id']
-                async with asyncio.timeout(self.store.settings()['report_timeout_s']):
+                remaining=REPORT_TOTAL_SECONDS-(time.perf_counter()-began)
+                if remaining<=0:raise AppError('REPORT_DEADLINE','Report exceeded the 300-second total budget; saved versions remain intact',504,True)
+                async with asyncio.timeout(min(self.store.settings()['report_timeout_s'],remaining)):
                     result=demo_report(part) if m['demo'] else await self.generate_report_part(context)
                 validate_report(result,part)
                 if any(len('\n'.join(filter(None,(getattr(payload,key),getattr(result,key)))))>15000 for key in ('summary_vi','summary_en')):
@@ -528,10 +536,10 @@ class Service:
             report=self.save_report(id,payload,revision,mode='demo' if m['demo'] else 'real',metadata=dict(memory_snapshot=ledger,memory_revision=memory_revision,historical_payload=history.model_dump(),reconciliation=reconciliation))
             job.update(status='ready',progress=100,report_id=report['id']);await self.emit('report.ready',id,report=report)
         except asyncio.CancelledError:job['status']='cancelled';raise
+        except TimeoutError:job.update(status='error',error=AppError('REPORT_DEADLINE','Report map/total time budget expired; saved versions remain intact',504,True).payload())
         except Exception as e:job.update(status='error',error=e.payload() if isinstance(e,AppError) else AppError('REPORT_ERROR','Report failed; previous versions were preserved',500).payload())
         finally:
             job['duration_ms']=(time.perf_counter()-began)*1000
-            attempts=[r for r in getattr(self.provider,'metrics',[]) if r.get('logical_request_id')==job['id']]
             job['maps']=len(locals().get('parts',[]))
             for key in ('http_attempts','repair_attempts','transient_retry_attempts','usage_unknown_attempts'):job.setdefault(key,0)
             self.report_tasks.pop(job['id'],None)

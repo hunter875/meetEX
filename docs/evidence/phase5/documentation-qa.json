@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "historical_evidence_unchanged": true,
+  "links_valid": true,
+  "source_hashes_valid": true,
+  "paid_calls": 0,
+  "release_ready": false,
+  "independent_windows": "NOT TESTED"
+}

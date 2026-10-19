@@ -2,13 +2,21 @@
   "name": "meet-copilot",
   "private": true,
   "version": "0.1.0",
-  "workspaces": ["extension"],
+  "workspaces": [
+    "extension"
+  ],
   "scripts": {
     "build": "npm run build -w extension",
     "test": "npm run test -w extension",
     "typecheck": "npm run typecheck -w extension",
     "test:e2e": "playwright test",
-    "contracts": "node scripts/check-contracts.mjs"
+    "contracts": "node scripts/check-contracts.mjs",
+    "format:check": "prettier --check extension/src/background/index.ts extension/src/ui/api.tsx extension/src/ui/settings.tsx",
+    "format": "prettier --write extension/src/background/index.ts extension/src/ui/api.tsx extension/src/ui/settings.tsx"
   },
-  "devDependencies": {"@playwright/test": "1.56.1", "openapi-typescript": "7.10.1"}
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "openapi-typescript": "7.10.1",
+    "prettier": "3.6.2"
+  }
 }
