@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        os: [windows-2025, ubuntu-24.04]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 25
     env:
@@ -23,6 +23,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Initialize redacted diagnostics
+        run: python -c "from pathlib import Path; p=Path('.local/checks'); p.mkdir(parents=True, exist_ok=True); (p/'bootstrap.txt').write_text('Synthetic CI bootstrap. No credentials or meeting data.')"
       - uses: actions/setup-node@v4
         with:
           node-version: '22.20.0'
