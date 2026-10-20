@@ -257,6 +257,34 @@ def test(browser=False):
     run([PYTHON, "-m", "ruff", "check", "--select", "E4,E7,E9,F", *QUALITY_FILES])
     run([PYTHON, "-m", "ruff", "format", "--check", *QUALITY_FILES])
     run([NPM, "run", "format:check"])
+    regression_env = {**os.environ}
+    for key in ("MEET_BENCH_BACKEND", "MEET_PHASE4_BACKEND"):
+        regression_env.pop(key, None)
+    for script, filename in [
+        ("evaluate_phase1.py", "semantic-regression.json"),
+        ("benchmark_phase3.py", "orchestration-regression.json"),
+        ("evaluate_phase4.py", "memory-regression.json"),
+    ]:
+        run(
+            [PYTHON, ROOT / "scripts" / script, "--output", evidence / filename], env=regression_env
+        )
+    semantic = json.loads((evidence / "semantic-regression.json").read_text("utf8"))
+    routing = json.loads((evidence / "orchestration-regression.json").read_text("utf8"))["totals"]
+    memory = json.loads((evidence / "memory-regression.json").read_text("utf8"))["totals"]
+    if (
+        semantic["result"] != "PASS"
+        or not (
+            routing["eligible"] == routing["processed"] == 39
+            and routing["missed"] == routing["false_trigger"] == 0
+        )
+        or not (
+            memory["correct_items"] == memory["expected_items"] == memory["evidence_correct"] == 38
+            and memory["wrong_items"] == memory["missing_items"] == memory["extra_items"] == 0
+        )
+    ):
+        raise RuntimeError(
+            "REGRESSION_FAILED: inspect synthetic evidence in .local/checks; no gate was skipped."
+        )
     # Original Phase 1 semantic probes and Phase 2-4 regressions are included in pytest/vitest/E2E.
     if browser:
         run(["npx.cmd" if os.name == "nt" else "npx", "playwright", "install", "chromium"])

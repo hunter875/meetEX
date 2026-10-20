@@ -27,6 +27,7 @@ ALLOWED_FILES = {
     "docs/ARCHITECTURE.md",
     "docs/PHASE5_REPORT.md",
     "docs/openapi.json",
+    "docs/evidence/system-assessment-probes.json",
     ".gitignore",
     ".gitattributes",
 }

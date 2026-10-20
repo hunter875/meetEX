@@ -14,6 +14,8 @@ import statistics
 import sys
 import tempfile
 import time
+import hashlib
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -83,6 +85,13 @@ def main():
         paid_calls=0,
         browser="NOT TESTED by this harness",
         samples=[],
+        active_samples=[],
+        request_outcomes={},
+        request_error_codes={},
+        source_hashes={
+            p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_text("utf8").encode()).hexdigest()
+            for p in sorted((ROOT / "backend/app").glob("*.py"))
+        },
         captions=0,
         reconnects=0,
         reports=0,
@@ -266,6 +275,23 @@ def main():
                                         dict(action="suggest"),
                                     )
                                     output["suggestions"] += 1
+                                    service = application.state.service
+                                    output["active_samples"].append(
+                                        dict(
+                                            elapsed_s=round(time.monotonic() - started, 2),
+                                            rss_bytes=rss_bytes(),
+                                            active=len(service.active),
+                                            queued=len(service.queued),
+                                            tasks=len(service.tasks),
+                                            auto_timers=len(service.auto_timers),
+                                            listeners=len(service.listeners),
+                                            query_cache=len(application.state.retrieval._cache),
+                                            query_inflight=len(
+                                                application.state.retrieval._inflight
+                                            ),
+                                        )
+                                    )
+                                    assert len(service.active) <= 1 and len(service.queued) <= 1
                                 time.sleep(
                                     min(
                                         args.interval,
@@ -278,6 +304,14 @@ def main():
                         dict(action="end", idempotency_key=uid()),
                     )
                     snapshot = call(f"/api/v1/meetings/{mid}")
+                    outcomes = Counter(output["request_outcomes"])
+                    outcomes.update(r["status"] for r in snapshot["requests"])
+                    output["request_outcomes"] = dict(outcomes)
+                    errors = Counter(output["request_error_codes"])
+                    errors.update(
+                        r["error"]["code"] for r in snapshot["requests"] if r.get("error")
+                    )
+                    output["request_error_codes"] = dict(errors)
                     job = call(
                         f"/api/v1/meetings/{mid}/reports",
                         "POST",
@@ -333,6 +367,12 @@ def main():
                     )
                     save()
             output["shutdown"] = "PASS"
+            metrics = application.state.provider.metrics
+            output["provider_outcomes"] = dict(Counter(r["status"] for r in metrics))
+            output["unknown_usage_attempts"] = sum(r.get("usage") is None for r in metrics)
+            output["request_error_fraction"] = sum(
+                v for k, v in output["request_outcomes"].items() if k == "error"
+            ) / max(1, sum(output["request_outcomes"].values()))
             output["status"] = "PASS" if output["elapsed_s"] >= args.seconds else "SHORT"
         except Exception as error:
             output["status"] = "FAIL"

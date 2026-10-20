@@ -18,7 +18,12 @@ from tests.semantic_cases import CASES, exercise
 
 
 def git(*args):
-    return subprocess.check_output(['git',*args],cwd=ROOT,text=True).strip()
+    try:return subprocess.check_output(['git',*args],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip()
+    except (OSError,subprocess.CalledProcessError):
+        metadata=json.loads((ROOT/'BUILD_SOURCE.json').read_text('utf8'))
+        if args==('branch','--show-current'):return 'source-archive'
+        if args==('rev-parse','HEAD'):return metadata['source_commit']
+        raise
 
 
 def main():

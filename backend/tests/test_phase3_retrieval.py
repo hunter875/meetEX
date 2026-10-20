@@ -28,6 +28,9 @@ async def test_async_cache_project_generation_and_own_thread_connection(store,pr
     fresh=await retrieval.search_async(project['id'],'API-17');assert fresh['results'][0]['generation']==2 and '50' in fresh['results'][0]['content'];await retrieval.aclose()
 
 def test_actual_websocket_ack_continues_during_slow_semantic_query(client):
+    # This barrier tests a deliberately held query, not native-library cold import
+    # time. Preload NumPy so a fresh Windows install cannot exhaust the 2 s barrier.
+    __import__('numpy')
     store=client.app.state.store;p=store.create_project(dict(name='Async',description='',glossary={}));sid,meta=seed(store,p)
     store.set_settings({'semantic_enabled':True});started=threading.Event();release=threading.Event();thread_ids=[]
     class SlowSemantic:
