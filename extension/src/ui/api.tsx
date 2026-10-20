@@ -67,16 +67,22 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const refresh = useCallback(() => setRevision((n) => n + 1), []);
   useEffect(() => {
     if (isExtension) {
+      const applyState = (next: RuntimeState) => {
+        setState(next);
+        setConfig((previous) =>
+          previous.url === next.config.url &&
+          previous.token === next.config.token
+            ? previous
+            : next.config,
+        );
+      };
       runtime({ type: "ui.state" })
-        .then((s) => {
-          setState(s);
-          setConfig(s.config);
-        })
+        .then(applyState)
         .finally(() => setLoading(false));
       const heartbeat = setInterval(
         () =>
           void runtime({ type: "ui.state" })
-            .then(setState)
+            .then(applyState)
             .catch(() => {}),
         2000,
       );
@@ -84,7 +90,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         if (message.type === "server.event") {
           refresh();
           void runtime({ type: "ui.state" })
-            .then(setState)
+            .then(applyState)
             .catch(() => {});
         } else if (message.type === "transport.error") setNotice(message.error);
         else if (message.type === "transport.status")
@@ -93,7 +99,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           );
         else if (message.type === "capture.timing")
           void runtime({ type: "ui.state" })
-            .then(setState)
+            .then(applyState)
             .catch(() => {});
       };
       chrome.runtime.onMessage.addListener(listener);

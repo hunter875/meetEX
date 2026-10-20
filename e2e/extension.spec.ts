@@ -205,13 +205,21 @@ test.describe.serial('Genuine MV3 extension + real local backend; synthetic Meet
     await expect(page.getByRole('alert').filter({hasText:'Pairing đã hết hiệu lực'})).toBeVisible();
     token=(await readFile(path.join(dataDir,'pairing-token'),'utf8')).trim();await pair(page);
     await expect.poll(async()=>(await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).connected).toBe(true);
+    const otherSettings=await context.newPage();await otherSettings.goto(`chrome-extension://${extensionId}/dashboard.html#/settings`);
+    const otherToken=otherSettings.getByLabel('Pairing token ứng dụng local');
+    await expect.poll(async()=>(await otherToken.inputValue()).length).toBeGreaterThan(0);
+    await otherSettings.getByLabel('Backend URL',{exact:true}).fill('http://localhost:8765');
+    await expect.poll(async()=>(await otherSettings.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}))).connected).toBe(true);
+    await new Promise(resolve=>setTimeout(resolve,2200));
+    await expect(otherSettings.getByLabel('Backend URL',{exact:true})).toHaveValue('http://localhost:8765');
     await page.getByRole('button',{name:'Ngắt kết nối',exact:true}).click();
     await expect.poll(async()=>(await page.evaluate(()=>chrome.storage.local.get('config'))).config.token).toBe('');
+    await expect(otherToken).toHaveValue('');await otherSettings.close();
     await page.reload();await expect(page.getByLabel('Pairing token ứng dụng local')).toHaveValue('');
     const state=await page.evaluate(()=>chrome.runtime.sendMessage({type:'ui.state'}));expect(state.connected).toBe(false);expect(state.binding).toBeNull();expect(state.pending).toBe(0);
     const storage=await page.evaluate(()=>chrome.storage.session.get(null));expect(Object.keys(storage).filter(k=>k.startsWith('reading_'))).toHaveLength(0);
     await page.screenshot({path:evidencePath('phase5-disconnected.png'),fullPage:true});
-    await writeFile(evidencePath('phase5-pairing.json'),JSON.stringify({synthetic:true,old_rest_status:401,open_socket_invalidated:true,re_pair:true,disconnect_cleared:true,paid_calls:0},null,2));
+    await writeFile(evidencePath('phase5-pairing.json'),JSON.stringify({synthetic:true,old_rest_status:401,open_socket_invalidated:true,re_pair:true,disconnect_cleared:true,other_open_page_cleared_without_reload:true,unsaved_form_survives_heartbeat:true,paid_calls:0},null,2));
   });
 
 });
