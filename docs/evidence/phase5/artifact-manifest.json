@@ -1,0 +1,33 @@
+{
+  "app_version": "0.1.0",
+  "protocol_version": 1,
+  "schema_version": 2,
+  "source_commit": "4de30b9729afe5019ec3022333f219d5d7fd337c",
+  "source_clean": true,
+  "provider_calls": 0,
+  "build": "npm ci + npm run build in isolated temp folder",
+  "node": "v22.20.0",
+  "artifacts": [
+    {
+      "file": "meet-local-0.1.0-4de30b9729af-source.zip",
+      "sha256": "f784622759584581a57a26182a8dc45ef8e54a79e9992bee7e7f2099df8896e6",
+      "bytes": 1867285
+    },
+    {
+      "file": "meet-local-0.1.0-4de30b9729af-extension.zip",
+      "sha256": "9de6ff312f303f3790c160857c91070e989cf6b9e5b9e2251cf983914920b3a4",
+      "bytes": 106418
+    }
+  ],
+  "excluded": [
+    "credentials",
+    "personal SQLite",
+    ".env",
+    "browser profiles",
+    "node_modules",
+    "venv",
+    "model caches",
+    "historical evidence"
+  ],
+  "extension_update": "Keep the same unpacked directory; ID can change when path/profile changes. Pair exact new ID if changed."
+}

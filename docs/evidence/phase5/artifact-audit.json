@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "source_commit": "4de30b9729afe5019ec3022333f219d5d7fd337c",
+  "app_version": "0.1.0",
+  "protocol_version": 1,
+  "schema_version": 2,
+  "delivery_directory": "D:\\meetEX\\.local\\artifacts\\phase5-delivery",
+  "independent_build_directory": "D:\\meetEX\\.local\\artifacts\\phase5-reproduce",
+  "two_isolated_npm_ci_builds": true,
+  "byte_identical_zips": true,
+  "archived_source_matches_git": true,
+  "current_application_matches_build": true,
+  "verified_application_files": 81,
+  "archive_entries": {
+    "meet-local-0.1.0-4de30b9729af-source.zip": 259,
+    "meet-local-0.1.0-4de30b9729af-extension.zip": 8
+  },
+  "forbidden_paths": 0,
+  "credential_pattern_hits": 0,
+  "scanned_text_bytes": 3389581,
+  "scan_scope": "Archive paths and credential-shaped text; synthetic test fixtures retained",
+  "paid_calls": 0,
+  "public_release_or_upload": false,
+  "artifacts": [
+    {
+      "file": "meet-local-0.1.0-4de30b9729af-source.zip",
+      "sha256": "f784622759584581a57a26182a8dc45ef8e54a79e9992bee7e7f2099df8896e6",
+      "bytes": 1867285
+    },
+    {
+      "file": "meet-local-0.1.0-4de30b9729af-extension.zip",
+      "sha256": "9de6ff312f303f3790c160857c91070e989cf6b9e5b9e2251cf983914920b3a4",
+      "bytes": 106418
+    }
+  ]
+}

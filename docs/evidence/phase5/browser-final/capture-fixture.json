@@ -5,15 +5,15 @@
   "sidepanel_close_tested": true,
   "browser": "141.0.7390.37",
   "n": 6,
-  "median_ms": 9.599999964237213,
-  "p95_ms": 21.200000047683716,
+  "median_ms": 10.399999976158142,
+  "p95_ms": 23.80000001192093,
   "samples_ms": [
-    7.799999952316284,
-    8.300000011920929,
-    9.299999952316284,
-    9.599999964237213,
-    11.699999988079071,
-    21.200000047683716
+    7.199999988079071,
+    8,
+    8.700000047683716,
+    10.399999976158142,
+    14.899999976158142,
+    23.80000001192093
   ],
   "note": "Adapter observed event to backend ACK using content-script monotonic clock. Few samples, not reliable p95 or a Meet live result."
 }

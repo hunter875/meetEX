@@ -1,19 +1,19 @@
 {
   "provenance": "synthetic demo + genuine MV3 UI/backend; no model calls",
   "snapshot": {
-    "id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
-    "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+    "id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
+    "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
     "title": "SYNTHETIC PHASE3 UI",
     "timezone": "America/Los_Angeles",
     "persistence_mode": "memory",
     "demo": true,
     "meeting_key": null,
     "status": "active",
-    "started_at": "2026-10-20T13:30:11.830707+00:00",
+    "started_at": "2026-10-20T13:47:47.312506+00:00",
     "ended_at": null,
     "transcript_revision": 6,
     "capture_status": "starting",
-    "last_caption_at": "2026-10-20T13:30:13.052Z",
+    "last_caption_at": "2026-10-20T13:47:48.335Z",
     "self_speaker": "Me",
     "auto_mode": true,
     "confirmed_segment_ids": [],
@@ -25,71 +25,71 @@
     "memory_revision": 0,
     "segments": [
       {
-        "id": "7bd1de0d-3c21-4f15-b547-069610b512bb",
+        "id": "e7ec0db1-8e59-4db6-b2b0-9ebf9cd45879",
         "capture_epoch": "phase3-ui",
         "revision": 1,
         "speaker": "Me",
         "text": "Hello",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:11.834Z",
-        "observed_to": "2026-10-20T13:30:11.834Z"
+        "observed_from": "2026-10-20T13:47:47.316Z",
+        "observed_to": "2026-10-20T13:47:47.316Z"
       },
       {
-        "id": "e806428c-c510-478e-b969-cc9c8c493c4f",
+        "id": "26590617-6062-4c1a-9ecd-75c13353029a",
         "capture_epoch": "phase3-ui",
         "revision": 1,
         "speaker": "Client",
         "text": "Let me finish.",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:12.216Z",
-        "observed_to": "2026-10-20T13:30:12.216Z"
+        "observed_from": "2026-10-20T13:47:47.613Z",
+        "observed_to": "2026-10-20T13:47:47.613Z"
       },
       {
-        "id": "ce050068-b1e0-46e5-9259-a03ce667c656",
+        "id": "7d4ff931-67b0-493e-b5d9-0b6edfb29412",
         "capture_epoch": "phase3-ui",
         "revision": 1,
         "speaker": "Client",
         "text": "Thanks!",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:12.404Z",
-        "observed_to": "2026-10-20T13:30:12.404Z"
+        "observed_from": "2026-10-20T13:47:47.678Z",
+        "observed_to": "2026-10-20T13:47:47.678Z"
       },
       {
-        "id": "bef268cc-96da-4a2e-a1e6-bced5a0a0b87",
+        "id": "7d52d8cd-08e8-41e0-904f-b782b620b91b",
         "capture_epoch": "phase3-ui",
         "revision": 1,
         "speaker": "Client",
         "text": "Why is the cache blocked?",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:12.556Z",
-        "observed_to": "2026-10-20T13:30:12.556Z"
+        "observed_from": "2026-10-20T13:47:47.832Z",
+        "observed_to": "2026-10-20T13:47:47.832Z"
       },
       {
-        "id": "1604dc86-92ab-453c-b2f5-4a322462921a",
+        "id": "c31b3ebf-eaae-41f3-a267-02869a6873ed",
         "capture_epoch": "phase3-ui",
         "revision": 1,
         "speaker": "Client",
         "text": "Which environment?",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:12.565Z",
-        "observed_to": "2026-10-20T13:30:12.565Z"
+        "observed_from": "2026-10-20T13:47:47.842Z",
+        "observed_to": "2026-10-20T13:47:47.842Z"
       },
       {
-        "id": "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199",
+        "id": "5514225e-0da8-43d6-ad82-1facb2845ede",
         "capture_epoch": "phase3-ui",
         "revision": 1,
         "speaker": "Client",
         "text": "Why is production blocked?",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:13.052Z",
-        "observed_to": "2026-10-20T13:30:13.052Z"
+        "observed_from": "2026-10-20T13:47:48.335Z",
+        "observed_to": "2026-10-20T13:47:48.335Z"
       }
     ],
     "suggestions": [
       {
-        "id": "588c58b3-39be-428d-973b-2546bc79bc43",
-        "request_id": "58fb22cd-2449-4bd2-b54b-251638c86166",
-        "created_at": "2026-10-20T13:30:12.742482+00:00",
+        "id": "76aae0b6-450f-433e-b4f6-a2452c520688",
+        "request_id": "67ee5865-7e09-48e9-af4d-9e2f8c4613d9",
+        "created_at": "2026-10-20T13:47:48.030396+00:00",
         "mode": "demo",
         "payload": {
           "input_revision": 5,
@@ -104,73 +104,73 @@
             "Demo controlled output; không phải đánh giá AI."
           ],
           "supporting_segment_ids": [
-            "1604dc86-92ab-453c-b2f5-4a322462921a"
+            "c31b3ebf-eaae-41f3-a267-02869a6873ed"
           ]
         },
         "snapshot": {
-          "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 5,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "7bd1de0d-3c21-4f15-b547-069610b512bb",
+              "id": "e7ec0db1-8e59-4db6-b2b0-9ebf9cd45879",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Me",
               "text": "Hello",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:11.834Z",
-              "observed_to": "2026-10-20T13:30:11.834Z"
+              "observed_from": "2026-10-20T13:47:47.316Z",
+              "observed_to": "2026-10-20T13:47:47.316Z"
             },
             {
-              "id": "e806428c-c510-478e-b969-cc9c8c493c4f",
+              "id": "26590617-6062-4c1a-9ecd-75c13353029a",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Let me finish.",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.216Z",
-              "observed_to": "2026-10-20T13:30:12.216Z"
+              "observed_from": "2026-10-20T13:47:47.613Z",
+              "observed_to": "2026-10-20T13:47:47.613Z"
             },
             {
-              "id": "ce050068-b1e0-46e5-9259-a03ce667c656",
+              "id": "7d4ff931-67b0-493e-b5d9-0b6edfb29412",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Thanks!",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.404Z",
-              "observed_to": "2026-10-20T13:30:12.404Z"
+              "observed_from": "2026-10-20T13:47:47.678Z",
+              "observed_to": "2026-10-20T13:47:47.678Z"
             },
             {
-              "id": "bef268cc-96da-4a2e-a1e6-bced5a0a0b87",
+              "id": "7d52d8cd-08e8-41e0-904f-b782b620b91b",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Why is the cache blocked?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.556Z",
-              "observed_to": "2026-10-20T13:30:12.556Z"
+              "observed_from": "2026-10-20T13:47:47.832Z",
+              "observed_to": "2026-10-20T13:47:47.832Z"
             },
             {
-              "id": "1604dc86-92ab-453c-b2f5-4a322462921a",
+              "id": "c31b3ebf-eaae-41f3-a267-02869a6873ed",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Which environment?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.565Z",
-              "observed_to": "2026-10-20T13:30:12.565Z"
+              "observed_from": "2026-10-20T13:47:47.842Z",
+              "observed_to": "2026-10-20T13:47:47.842Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "auto",
           "question": "",
-          "input_hash": "6969450407a82603f4fcc4a26c95bbebfe5bb06c71ba2962b61a5fea7768f6fb",
+          "input_hash": "a4632e4bc094250fa8fba71a8e175ca87832260e3503750b53dee7112411403c",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -184,15 +184,15 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "1604dc86-92ab-453c-b2f5-4a322462921a"
+              "c31b3ebf-eaae-41f3-a267-02869a6873ed"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.13020000187680125
+            "classifier_ms": 0.13760000001639128
           },
           "focus_segment_ids": [
-            "bef268cc-96da-4a2e-a1e6-bced5a0a0b87",
-            "1604dc86-92ab-453c-b2f5-4a322462921a"
+            "7d52d8cd-08e8-41e0-904f-b782b620b91b",
+            "c31b3ebf-eaae-41f3-a267-02869a6873ed"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -215,11 +215,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 17.488099983893335
+          "retrieval_ms": 27.4080999661237
         },
         "stale": false,
         "automatic": true,
-        "duration_ms": 4.207300022244453,
+        "duration_ms": 3.055299981497228,
         "timing": {
           "trigger": "auto",
           "temperature": "warm",
@@ -233,14 +233,14 @@
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 4.168600018601865
+              "offset_ms": 4.768499988131225
             }
           ],
           "provider_ms": 0,
-          "validation_ms": 1.250700035598129,
-          "stable_to_scheduled_ms": 163.73670002212748,
-          "scheduler_wait_ms": 1.7416999908164144,
-          "retrieval_ms": 17.488099983893335,
+          "validation_ms": 0.8748999680392444,
+          "stable_to_scheduled_ms": 170.46870000194758,
+          "scheduler_wait_ms": 3.076600027270615,
+          "retrieval_ms": 27.4080999661237,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -250,9 +250,9 @@
         }
       },
       {
-        "id": "c3599ec7-ff69-49b2-845f-c8bf955ab3ae",
-        "request_id": "26a4640e-6ca1-440f-9ccd-3e62193ab9c9",
-        "created_at": "2026-10-20T13:30:13.472672+00:00",
+        "id": "89b74b42-1700-45fb-b496-ef5f9f514791",
+        "request_id": "0dbfab4a-1d58-4094-a75c-a2eaa8ef9f8d",
+        "created_at": "2026-10-20T13:47:48.752145+00:00",
         "mode": "demo",
         "payload": {
           "input_revision": 6,
@@ -267,84 +267,84 @@
             "Demo controlled output; không phải đánh giá AI."
           ],
           "supporting_segment_ids": [
-            "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199"
+            "5514225e-0da8-43d6-ad82-1facb2845ede"
           ]
         },
         "snapshot": {
-          "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 6,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "7bd1de0d-3c21-4f15-b547-069610b512bb",
+              "id": "e7ec0db1-8e59-4db6-b2b0-9ebf9cd45879",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Me",
               "text": "Hello",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:11.834Z",
-              "observed_to": "2026-10-20T13:30:11.834Z"
+              "observed_from": "2026-10-20T13:47:47.316Z",
+              "observed_to": "2026-10-20T13:47:47.316Z"
             },
             {
-              "id": "e806428c-c510-478e-b969-cc9c8c493c4f",
+              "id": "26590617-6062-4c1a-9ecd-75c13353029a",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Let me finish.",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.216Z",
-              "observed_to": "2026-10-20T13:30:12.216Z"
+              "observed_from": "2026-10-20T13:47:47.613Z",
+              "observed_to": "2026-10-20T13:47:47.613Z"
             },
             {
-              "id": "ce050068-b1e0-46e5-9259-a03ce667c656",
+              "id": "7d4ff931-67b0-493e-b5d9-0b6edfb29412",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Thanks!",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.404Z",
-              "observed_to": "2026-10-20T13:30:12.404Z"
+              "observed_from": "2026-10-20T13:47:47.678Z",
+              "observed_to": "2026-10-20T13:47:47.678Z"
             },
             {
-              "id": "bef268cc-96da-4a2e-a1e6-bced5a0a0b87",
+              "id": "7d52d8cd-08e8-41e0-904f-b782b620b91b",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Why is the cache blocked?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.556Z",
-              "observed_to": "2026-10-20T13:30:12.556Z"
+              "observed_from": "2026-10-20T13:47:47.832Z",
+              "observed_to": "2026-10-20T13:47:47.832Z"
             },
             {
-              "id": "1604dc86-92ab-453c-b2f5-4a322462921a",
+              "id": "c31b3ebf-eaae-41f3-a267-02869a6873ed",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Which environment?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.565Z",
-              "observed_to": "2026-10-20T13:30:12.565Z"
+              "observed_from": "2026-10-20T13:47:47.842Z",
+              "observed_to": "2026-10-20T13:47:47.842Z"
             },
             {
-              "id": "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199",
+              "id": "5514225e-0da8-43d6-ad82-1facb2845ede",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Why is production blocked?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:13.052Z",
-              "observed_to": "2026-10-20T13:30:13.052Z"
+              "observed_from": "2026-10-20T13:47:48.335Z",
+              "observed_to": "2026-10-20T13:47:48.335Z"
             }
           ],
           "memory": [],
           "sources": [
             {
-              "id": "e8c556ac-ad54-4abb-a121-5cd26d58eff1",
-              "source_id": "8870bd56-3dce-440b-8ce2-355bb609922c",
-              "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+              "id": "85a91eb0-273e-473e-95d6-fb3bc1bbb457",
+              "source_id": "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff",
+              "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
               "generation": 1,
               "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
               "title": "API deployment notes",
@@ -352,7 +352,7 @@
               "path": "API deployment notes",
               "line_start": 1,
               "line_end": 1,
-              "indexed_at": "2026-10-20T13:29:10.474328+00:00",
+              "indexed_at": "2026-10-20T13:46:46.194801+00:00",
               "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
               "stale": false,
               "source_changed": false,
@@ -365,7 +365,7 @@
           ],
           "action": "suggest",
           "question": "Please clarify this question.",
-          "input_hash": "07a43065da3d18a798bd95faf9b0642926fc8f103b436bdee8bf6ac0a8ac62aa",
+          "input_hash": "b2dca82c3516153dab77c92f39d417ddad867aabf4916684acaef25860e72d31",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -379,14 +379,14 @@
             "evidence_state": "available",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199"
+              "5514225e-0da8-43d6-ad82-1facb2845ede"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.08630001684650779
+            "classifier_ms": 0.07369997911155224
           },
           "focus_segment_ids": [
-            "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199"
+            "5514225e-0da8-43d6-ad82-1facb2845ede"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -409,11 +409,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 4.849700024351478
+          "retrieval_ms": 5.02260000212118
         },
         "stale": false,
         "automatic": false,
-        "duration_ms": 3.0884999432601035,
+        "duration_ms": 3.1472999835386872,
         "timing": {
           "trigger": "manual",
           "temperature": "warm",
@@ -427,14 +427,14 @@
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 3.1456000288017094
+              "offset_ms": 2.841099980287254
             }
           ],
           "provider_ms": 0,
-          "validation_ms": 1.053699990734458,
-          "stable_to_scheduled_ms": 409.430900006555,
-          "scheduler_wait_ms": 1.234700030181557,
-          "retrieval_ms": 4.849700024351478,
+          "validation_ms": 0.8527000318281353,
+          "stable_to_scheduled_ms": 407.86079998360947,
+          "scheduler_wait_ms": 1.1624000035226345,
+          "retrieval_ms": 5.02260000212118,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -446,74 +446,74 @@
     ],
     "requests": [
       {
-        "id": "58fb22cd-2449-4bd2-b54b-251638c86166",
+        "id": "67ee5865-7e09-48e9-af4d-9e2f8c4613d9",
         "action": "auto",
         "status": "ready",
         "error": null,
         "snapshot": {
-          "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 5,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "7bd1de0d-3c21-4f15-b547-069610b512bb",
+              "id": "e7ec0db1-8e59-4db6-b2b0-9ebf9cd45879",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Me",
               "text": "Hello",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:11.834Z",
-              "observed_to": "2026-10-20T13:30:11.834Z"
+              "observed_from": "2026-10-20T13:47:47.316Z",
+              "observed_to": "2026-10-20T13:47:47.316Z"
             },
             {
-              "id": "e806428c-c510-478e-b969-cc9c8c493c4f",
+              "id": "26590617-6062-4c1a-9ecd-75c13353029a",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Let me finish.",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.216Z",
-              "observed_to": "2026-10-20T13:30:12.216Z"
+              "observed_from": "2026-10-20T13:47:47.613Z",
+              "observed_to": "2026-10-20T13:47:47.613Z"
             },
             {
-              "id": "ce050068-b1e0-46e5-9259-a03ce667c656",
+              "id": "7d4ff931-67b0-493e-b5d9-0b6edfb29412",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Thanks!",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.404Z",
-              "observed_to": "2026-10-20T13:30:12.404Z"
+              "observed_from": "2026-10-20T13:47:47.678Z",
+              "observed_to": "2026-10-20T13:47:47.678Z"
             },
             {
-              "id": "bef268cc-96da-4a2e-a1e6-bced5a0a0b87",
+              "id": "7d52d8cd-08e8-41e0-904f-b782b620b91b",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Why is the cache blocked?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.556Z",
-              "observed_to": "2026-10-20T13:30:12.556Z"
+              "observed_from": "2026-10-20T13:47:47.832Z",
+              "observed_to": "2026-10-20T13:47:47.832Z"
             },
             {
-              "id": "1604dc86-92ab-453c-b2f5-4a322462921a",
+              "id": "c31b3ebf-eaae-41f3-a267-02869a6873ed",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Which environment?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.565Z",
-              "observed_to": "2026-10-20T13:30:12.565Z"
+              "observed_from": "2026-10-20T13:47:47.842Z",
+              "observed_to": "2026-10-20T13:47:47.842Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "auto",
           "question": "",
-          "input_hash": "6969450407a82603f4fcc4a26c95bbebfe5bb06c71ba2962b61a5fea7768f6fb",
+          "input_hash": "a4632e4bc094250fa8fba71a8e175ca87832260e3503750b53dee7112411403c",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -527,15 +527,15 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "1604dc86-92ab-453c-b2f5-4a322462921a"
+              "c31b3ebf-eaae-41f3-a267-02869a6873ed"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.13020000187680125
+            "classifier_ms": 0.13760000001639128
           },
           "focus_segment_ids": [
-            "bef268cc-96da-4a2e-a1e6-bced5a0a0b87",
-            "1604dc86-92ab-453c-b2f5-4a322462921a"
+            "7d52d8cd-08e8-41e0-904f-b782b620b91b",
+            "c31b3ebf-eaae-41f3-a267-02869a6873ed"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -558,7 +558,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 17.488099983893335
+          "retrieval_ms": 27.4080999661237
         },
         "timing": {
           "trigger": "auto",
@@ -573,18 +573,18 @@
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 4.168600018601865
+              "offset_ms": 4.768499988131225
             },
             {
               "stage": "request_completed",
-              "offset_ms": 7.114299980457872
+              "offset_ms": 7.191199983935803
             }
           ],
           "provider_ms": 0,
-          "validation_ms": 1.250700035598129,
-          "stable_to_scheduled_ms": 163.73670002212748,
-          "scheduler_wait_ms": 1.7416999908164144,
-          "retrieval_ms": 17.488099983893335,
+          "validation_ms": 0.8748999680392444,
+          "stable_to_scheduled_ms": 170.46870000194758,
+          "scheduler_wait_ms": 3.076600027270615,
+          "retrieval_ms": 27.4080999661237,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -592,91 +592,91 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:12.736550+00:00",
-        "started_at": "2026-10-20T13:30:12.738329+00:00",
-        "duration_ms": 5.3468000260181725,
-        "stable_to_request_ms": 165.4784000129439
+        "created_at": "2026-10-20T13:47:48.024277+00:00",
+        "started_at": "2026-10-20T13:47:48.027386+00:00",
+        "duration_ms": 4.077599965967238,
+        "stable_to_request_ms": 173.5453000292182
       },
       {
-        "id": "26a4640e-6ca1-440f-9ccd-3e62193ab9c9",
+        "id": "0dbfab4a-1d58-4094-a75c-a2eaa8ef9f8d",
         "action": "suggest",
         "status": "ready",
         "error": null,
         "snapshot": {
-          "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 6,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "7bd1de0d-3c21-4f15-b547-069610b512bb",
+              "id": "e7ec0db1-8e59-4db6-b2b0-9ebf9cd45879",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Me",
               "text": "Hello",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:11.834Z",
-              "observed_to": "2026-10-20T13:30:11.834Z"
+              "observed_from": "2026-10-20T13:47:47.316Z",
+              "observed_to": "2026-10-20T13:47:47.316Z"
             },
             {
-              "id": "e806428c-c510-478e-b969-cc9c8c493c4f",
+              "id": "26590617-6062-4c1a-9ecd-75c13353029a",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Let me finish.",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.216Z",
-              "observed_to": "2026-10-20T13:30:12.216Z"
+              "observed_from": "2026-10-20T13:47:47.613Z",
+              "observed_to": "2026-10-20T13:47:47.613Z"
             },
             {
-              "id": "ce050068-b1e0-46e5-9259-a03ce667c656",
+              "id": "7d4ff931-67b0-493e-b5d9-0b6edfb29412",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Thanks!",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.404Z",
-              "observed_to": "2026-10-20T13:30:12.404Z"
+              "observed_from": "2026-10-20T13:47:47.678Z",
+              "observed_to": "2026-10-20T13:47:47.678Z"
             },
             {
-              "id": "bef268cc-96da-4a2e-a1e6-bced5a0a0b87",
+              "id": "7d52d8cd-08e8-41e0-904f-b782b620b91b",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Why is the cache blocked?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.556Z",
-              "observed_to": "2026-10-20T13:30:12.556Z"
+              "observed_from": "2026-10-20T13:47:47.832Z",
+              "observed_to": "2026-10-20T13:47:47.832Z"
             },
             {
-              "id": "1604dc86-92ab-453c-b2f5-4a322462921a",
+              "id": "c31b3ebf-eaae-41f3-a267-02869a6873ed",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Which environment?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:12.565Z",
-              "observed_to": "2026-10-20T13:30:12.565Z"
+              "observed_from": "2026-10-20T13:47:47.842Z",
+              "observed_to": "2026-10-20T13:47:47.842Z"
             },
             {
-              "id": "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199",
+              "id": "5514225e-0da8-43d6-ad82-1facb2845ede",
               "capture_epoch": "phase3-ui",
               "revision": 1,
               "speaker": "Client",
               "text": "Why is production blocked?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:13.052Z",
-              "observed_to": "2026-10-20T13:30:13.052Z"
+              "observed_from": "2026-10-20T13:47:48.335Z",
+              "observed_to": "2026-10-20T13:47:48.335Z"
             }
           ],
           "memory": [],
           "sources": [
             {
-              "id": "e8c556ac-ad54-4abb-a121-5cd26d58eff1",
-              "source_id": "8870bd56-3dce-440b-8ce2-355bb609922c",
-              "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+              "id": "85a91eb0-273e-473e-95d6-fb3bc1bbb457",
+              "source_id": "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff",
+              "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
               "generation": 1,
               "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
               "title": "API deployment notes",
@@ -684,7 +684,7 @@
               "path": "API deployment notes",
               "line_start": 1,
               "line_end": 1,
-              "indexed_at": "2026-10-20T13:29:10.474328+00:00",
+              "indexed_at": "2026-10-20T13:46:46.194801+00:00",
               "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
               "stale": false,
               "source_changed": false,
@@ -697,7 +697,7 @@
           ],
           "action": "suggest",
           "question": "Please clarify this question.",
-          "input_hash": "07a43065da3d18a798bd95faf9b0642926fc8f103b436bdee8bf6ac0a8ac62aa",
+          "input_hash": "b2dca82c3516153dab77c92f39d417ddad867aabf4916684acaef25860e72d31",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -711,14 +711,14 @@
             "evidence_state": "available",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199"
+              "5514225e-0da8-43d6-ad82-1facb2845ede"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.08630001684650779
+            "classifier_ms": 0.07369997911155224
           },
           "focus_segment_ids": [
-            "7cd5b4ce-11bb-4d5e-a6d8-3a1338240199"
+            "5514225e-0da8-43d6-ad82-1facb2845ede"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -741,7 +741,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 4.849700024351478
+          "retrieval_ms": 5.02260000212118
         },
         "timing": {
           "trigger": "manual",
@@ -756,18 +756,18 @@
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 3.1456000288017094
+              "offset_ms": 2.841099980287254
             },
             {
               "stage": "request_completed",
-              "offset_ms": 5.087400029879063
+              "offset_ms": 5.337400012649596
             }
           ],
           "provider_ms": 0,
-          "validation_ms": 1.053699990734458,
-          "stable_to_scheduled_ms": 409.430900006555,
-          "scheduler_wait_ms": 1.234700030181557,
-          "retrieval_ms": 4.849700024351478,
+          "validation_ms": 0.8527000318281353,
+          "stable_to_scheduled_ms": 407.86079998360947,
+          "scheduler_wait_ms": 1.1624000035226345,
+          "retrieval_ms": 5.02260000212118,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -775,10 +775,10 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:13.468364+00:00",
-        "started_at": "2026-10-20T13:30:13.469626+00:00",
-        "duration_ms": 3.8305999478325248,
-        "stable_to_request_ms": 410.6656000367366
+        "created_at": "2026-10-20T13:47:48.747875+00:00",
+        "started_at": "2026-10-20T13:47:48.749064+00:00",
+        "duration_ms": 4.154699970968068,
+        "stable_to_request_ms": 409.0231999871321
       }
     ],
     "reports": [],
@@ -787,15 +787,15 @@
     "epochs": {
       "phase3-ui": 6
     },
-    "latest_request": "26a4640e-6ca1-440f-9ccd-3e62193ab9c9",
+    "latest_request": "0dbfab4a-1d58-4094-a75c-a2eaa8ef9f8d",
     "pause_from": null,
     "context_revision": 1
   },
   "metrics": {
     "memory_update": {
       "n": 32,
-      "median_ms": 0.16519997734576464,
-      "p95_ms": 2.440699958242476,
+      "median_ms": 0.16240001423284411,
+      "p95_ms": 2.4797000223770738,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "orchestration_counts": {
@@ -816,17 +816,17 @@
       "preparation_coalesced": 1
     },
     "scheduler_states": {
-      "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30": {
+      "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2": {
         "state": "listening",
         "reason": "session_control",
         "policy_version": "content-trigger-v1"
       },
-      "638ac6c4-0986-4174-8c7b-25df8f01a167": {
+      "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c": {
         "state": "listening",
         "reason": "session_control",
         "policy_version": "content-trigger-v1"
       },
-      "8f17d8ef-99ba-4ce8-afd5-98226ad87d64": {
+      "11bae562-67ee-4129-9ec2-4ef8975a7880": {
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1"
@@ -834,605 +834,605 @@
     },
     "trigger_records": [
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "waiting",
         "reason": "important_change",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "queued",
         "reason": "auto_ready",
         "policy_version": "content-trigger-v1",
-        "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907",
+        "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912",
         "route": "fast"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907"
+        "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907"
+        "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "waiting",
         "reason": "direct_question",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "queued",
         "reason": "auto_ready",
         "policy_version": "content-trigger-v1",
-        "request_id": "189b1681-cce2-44be-afad-5e5145076942",
+        "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63",
         "route": "fast"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "189b1681-cce2-44be-afad-5e5145076942"
+        "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "189b1681-cce2-44be-afad-5e5145076942"
+        "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5",
+        "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07",
         "route": "fast"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5"
+        "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "stale",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5"
+        "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d",
+        "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401",
         "route": "deep"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d"
+        "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401"
       },
       {
-        "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+        "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d"
+        "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401"
       },
       {
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
+        "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
         "route": "fast"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e"
+        "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e"
+        "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
+        "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
         "route": "fast"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f"
+        "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f"
+        "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
+        "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736",
         "route": "fast"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa"
+        "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa"
+        "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7",
+        "request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d",
         "route": "fast"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7"
+        "request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "error",
         "reason": "PROVIDER_AUTH",
         "policy_version": "content-trigger-v1",
-        "request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7"
+        "request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7",
+        "request_id": "8696ad05-5932-4295-86eb-2fb04cf255be",
         "route": "fast"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7"
+        "request_id": "8696ad05-5932-4295-86eb-2fb04cf255be"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "stale",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7"
+        "request_id": "8696ad05-5932-4295-86eb-2fb04cf255be"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "state": "queued",
-        "reason": "manual_priority",
-        "policy_version": "content-trigger-v1",
-        "request_id": "ef49031e-6076-4d72-b59b-8125db513fe4",
-        "route": "fast"
-      },
-      {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "state": "processing",
-        "reason": "provider_generation",
-        "policy_version": "content-trigger-v1",
-        "request_id": "ef49031e-6076-4d72-b59b-8125db513fe4"
-      },
-      {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "state": "queued",
+        "reason": "manual_priority",
+        "policy_version": "content-trigger-v1",
+        "request_id": "98a494b2-2937-44da-8697-4518d0b4dcc7",
+        "route": "fast"
+      },
+      {
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "state": "processing",
+        "reason": "provider_generation",
+        "policy_version": "content-trigger-v1",
+        "request_id": "98a494b2-2937-44da-8697-4518d0b4dcc7"
+      },
+      {
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9",
+        "request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a",
         "route": "fast"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9"
+        "request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9"
+        "request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "waiting",
         "reason": "speaker_unfinished",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "waiting",
         "reason": "direct_question",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "queued",
         "reason": "auto_ready",
         "policy_version": "content-trigger-v1",
-        "request_id": "ca191910-796b-43c2-9a68-2554ccac2926",
+        "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
         "route": "deep"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "ca191910-796b-43c2-9a68-2554ccac2926"
+        "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "ca191910-796b-43c2-9a68-2554ccac2926"
+        "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "waiting",
         "reason": "speaker_unfinished",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "waiting",
         "reason": "speaker_unfinished",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "state": "waiting",
         "reason": "new_information",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "listening",
         "reason": "speaker_unknown",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "waiting",
         "reason": "speaker_unfinished",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "listening",
         "reason": "small_talk",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "waiting",
         "reason": "direct_question",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "coalesced",
         "reason": "direct_question",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "queued",
         "reason": "auto_ready",
         "policy_version": "content-trigger-v1",
-        "request_id": "58fb22cd-2449-4bd2-b54b-251638c86166",
+        "request_id": "67ee5865-7e09-48e9-af4d-9e2f8c4613d9",
         "route": "fast"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "58fb22cd-2449-4bd2-b54b-251638c86166"
+        "request_id": "67ee5865-7e09-48e9-af4d-9e2f8c4613d9"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "58fb22cd-2449-4bd2-b54b-251638c86166"
+        "request_id": "67ee5865-7e09-48e9-af4d-9e2f8c4613d9"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "waiting",
         "reason": "direct_question",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "quota",
         "reason": "AUTO_QUOTA",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "quota",
         "reason": "AUTO_QUOTA",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "processing",
         "reason": "context_retrieval",
         "policy_version": "content-trigger-v1"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "queued",
         "reason": "manual_priority",
         "policy_version": "content-trigger-v1",
-        "request_id": "26a4640e-6ca1-440f-9ccd-3e62193ab9c9",
+        "request_id": "0dbfab4a-1d58-4094-a75c-a2eaa8ef9f8d",
         "route": "fast"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "processing",
         "reason": "provider_generation",
         "policy_version": "content-trigger-v1",
-        "request_id": "26a4640e-6ca1-440f-9ccd-3e62193ab9c9"
+        "request_id": "0dbfab4a-1d58-4094-a75c-a2eaa8ef9f8d"
       },
       {
-        "meeting_id": "8f17d8ef-99ba-4ce8-afd5-98226ad87d64",
+        "meeting_id": "11bae562-67ee-4129-9ec2-4ef8975a7880",
         "state": "ready",
         "reason": "validated_result",
         "policy_version": "content-trigger-v1",
-        "request_id": "26a4640e-6ca1-440f-9ccd-3e62193ab9c9"
+        "request_id": "0dbfab4a-1d58-4094-a75c-a2eaa8ef9f8d"
       }
     ],
     "retrieval_cache_hits": 8,
     "latency_records": [
       {
-        "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907",
+        "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912",
         "policy_version": "content-trigger-v1",
         "trigger": "auto",
         "temperature": "cold",
@@ -1446,25 +1446,25 @@
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 9.262399980798364
+            "offset_ms": 9.429900033865124
           },
           {
             "stage": "request_completed",
-            "offset_ms": 12.911300000268966
+            "offset_ms": 12.759800010826439
           }
         ],
         "provider_ms": 0,
-        "validation_ms": 4.715699993539602,
-        "stable_to_scheduled_ms": 820.3719999874011,
-        "scheduler_wait_ms": 2.969199966173619,
-        "retrieval_ms": 0.19149994477629662,
+        "validation_ms": 3.6145999911241233,
+        "stable_to_scheduled_ms": 810.5381999630481,
+        "scheduler_wait_ms": 3.8093000184744596,
+        "retrieval_ms": 0.41060004150494933,
         "http_attempts": 0,
         "repair_attempts": 0,
         "usage_unknown_attempts": 0,
         "wire_input_chars_total": 0
       },
       {
-        "request_id": "189b1681-cce2-44be-afad-5e5145076942",
+        "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63",
         "policy_version": "content-trigger-v1",
         "trigger": "auto",
         "temperature": "cold",
@@ -1478,25 +1478,25 @@
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 6.748299987521023
+            "offset_ms": 6.399700010661036
           },
           {
             "stage": "request_completed",
-            "offset_ms": 9.761699999216944
+            "offset_ms": 10.060300002805889
           }
         ],
         "provider_ms": 0,
-        "validation_ms": 1.1421000235714018,
-        "stable_to_scheduled_ms": 192.12349998997524,
-        "scheduler_wait_ms": 3.4137999755330384,
-        "retrieval_ms": 22.55320001859218,
+        "validation_ms": 1.1140999849885702,
+        "stable_to_scheduled_ms": 190.77119999565184,
+        "scheduler_wait_ms": 2.911499992478639,
+        "retrieval_ms": 24.40960000967607,
         "http_attempts": 0,
         "repair_attempts": 0,
         "usage_unknown_attempts": 0,
         "wire_input_chars_total": 0
       },
       {
-        "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5",
+        "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "cold",
@@ -1510,24 +1510,24 @@
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 6.9967000163160264
+            "offset_ms": 5.590999964624643
           },
           {
             "stage": "request_completed",
-            "offset_ms": 10.500899981707335
+            "offset_ms": 8.731500012800097
           }
         ],
         "provider_ms": 0,
-        "validation_ms": 1.2111000251024961,
-        "scheduler_wait_ms": 3.5410000127740204,
-        "retrieval_ms": 0.19149994477629662,
+        "validation_ms": 0.7390999817289412,
+        "scheduler_wait_ms": 3.0848999740555882,
+        "retrieval_ms": 0.41060004150494933,
         "http_attempts": 0,
         "repair_attempts": 0,
         "usage_unknown_attempts": 0,
         "wire_input_chars_total": 0
       },
       {
-        "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d",
+        "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "cold",
@@ -1541,25 +1541,25 @@
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 6.792399974074215
+            "offset_ms": 6.235900043975562
           },
           {
             "stage": "request_completed",
-            "offset_ms": 9.996199980378151
+            "offset_ms": 9.013800008688122
           }
         ],
         "provider_ms": 0,
-        "validation_ms": 0.8695999858900905,
-        "stable_to_scheduled_ms": 1999.7681999811903,
-        "scheduler_wait_ms": 3.701700014062226,
-        "retrieval_ms": 0.31700002728030086,
+        "validation_ms": 0.7013999857008457,
+        "stable_to_scheduled_ms": 1900.3040999523364,
+        "scheduler_wait_ms": 3.5074000479653478,
+        "retrieval_ms": 0.24259998463094234,
         "http_attempts": 0,
         "repair_attempts": 0,
         "usage_unknown_attempts": 0,
         "wire_input_chars_total": 0
       },
       {
-        "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
+        "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "cold",
@@ -1573,37 +1573,37 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 5.585199978668243
+            "offset_ms": 5.136499996297061
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 19.963999977335334
+            "offset_ms": 15.076400013640523
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 21.05219999793917
+            "offset_ms": 15.898599987849593
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 22.04179996624589
+            "offset_ms": 16.835200018249452
           },
           {
             "stage": "request_completed",
-            "offset_ms": 25.79310000874102
+            "offset_ms": 20.82969999173656
           }
         ],
-        "provider_ms": 14.366600022185594,
-        "validation_ms": 1.8428000039421022,
-        "stable_to_scheduled_ms": 881.9549000472762,
-        "scheduler_wait_ms": 3.9967999910004437,
-        "retrieval_ms": 29.31209997041151,
+        "provider_ms": 9.932099957950413,
+        "validation_ms": 1.54819997260347,
+        "stable_to_scheduled_ms": 618.7666999758221,
+        "scheduler_wait_ms": 3.3964000176638365,
+        "retrieval_ms": 18.58079998055473,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 2254
       },
       {
-        "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
+        "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "warm",
@@ -1617,37 +1617,37 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 4.986800020560622
+            "offset_ms": 10.10889996541664
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 8.698099991306663
+            "offset_ms": 14.585299999453127
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 9.221900021657348
+            "offset_ms": 15.428599959705025
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 10.09420002810657
+            "offset_ms": 16.366099996957928
           },
           {
             "stage": "request_completed",
-            "offset_ms": 13.213900034315884
+            "offset_ms": 20.04029997624457
           }
         ],
-        "provider_ms": 3.702400019392371,
-        "validation_ms": 1.2215999886393547,
-        "stable_to_scheduled_ms": 1125.4832000122406,
-        "scheduler_wait_ms": 3.276500036008656,
-        "retrieval_ms": 17.098500044085085,
+        "provider_ms": 4.466599959414452,
+        "validation_ms": 1.5588999958708882,
+        "stable_to_scheduled_ms": 870.0937000103295,
+        "scheduler_wait_ms": 8.336699975188822,
+        "retrieval_ms": 28.610799985472113,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 2254
       },
       {
-        "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
+        "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "warm",
@@ -1661,37 +1661,37 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 10.18739998107776
+            "offset_ms": 9.986800025217235
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 13.634399976581335
+            "offset_ms": 13.97159998305142
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 14.237599971238524
+            "offset_ms": 14.738300000317395
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 14.856699970550835
+            "offset_ms": 15.672900015488267
           },
           {
             "stage": "request_completed",
-            "offset_ms": 18.2739999727346
+            "offset_ms": 19.157900009304285
           }
         ],
-        "provider_ms": 3.4401999437250197,
-        "validation_ms": 1.0218999814242125,
-        "stable_to_scheduled_ms": 1391.4256000425667,
-        "scheduler_wait_ms": 8.331799996085465,
-        "retrieval_ms": 32.92129997862503,
+        "provider_ms": 3.9778000209480524,
+        "validation_ms": 1.4944999711588025,
+        "stable_to_scheduled_ms": 1126.9164999830537,
+        "scheduler_wait_ms": 8.120100013911724,
+        "retrieval_ms": 27.68359996844083,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 2254
       },
       {
-        "request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7",
+        "request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "warm",
@@ -1705,29 +1705,29 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 9.875599993392825
+            "offset_ms": 7.87329999729991
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 14.971899974625558
+            "offset_ms": 11.519199993927032
           },
           {
             "stage": "request_completed",
-            "offset_ms": 15.76859998749569
+            "offset_ms": 12.034600018523633
           }
         ],
-        "provider_ms": 5.085000011604279,
+        "provider_ms": 3.639700007624924,
         "validation_ms": 0,
-        "stable_to_scheduled_ms": 1656.6211000317708,
-        "scheduler_wait_ms": 6.238500005565584,
-        "retrieval_ms": 39.06260000076145,
+        "stable_to_scheduled_ms": 1399.7132999938913,
+        "scheduler_wait_ms": 5.610399995930493,
+        "retrieval_ms": 31.25010000076145,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 2252
       },
       {
-        "request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7",
+        "request_id": "8696ad05-5932-4295-86eb-2fb04cf255be",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "warm",
@@ -1741,37 +1741,37 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 5.843400023877621
+            "offset_ms": 6.225899967830628
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 823.0683000292629
+            "offset_ms": 818.3163999929093
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 823.5254000173882
+            "offset_ms": 818.7703999574296
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 824.1037999978289
+            "offset_ms": 819.3489999976009
           },
           {
             "stage": "request_completed",
-            "offset_ms": 826.874400023371
+            "offset_ms": 821.8891999567859
           }
         ],
-        "provider_ms": 817.2166000003926,
-        "validation_ms": 0.88310003047809,
-        "stable_to_scheduled_ms": 1778.6221000133082,
-        "scheduler_wait_ms": 4.171000036876649,
-        "retrieval_ms": 29.283000039868057,
+        "provider_ms": 812.0829000254162,
+        "validation_ms": 0.8847999852150679,
+        "stable_to_scheduled_ms": 1521.1306000128388,
+        "scheduler_wait_ms": 4.186499980278313,
+        "retrieval_ms": 27.846999990288168,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 2257
       },
       {
-        "request_id": "ef49031e-6076-4d72-b59b-8125db513fe4",
+        "request_id": "98a494b2-2937-44da-8697-4518d0b4dcc7",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "warm",
@@ -1785,28 +1785,28 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 5.433399986941367
+            "offset_ms": 22.411400044802576
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 192.98220000928268
+            "offset_ms": 161.05230001267046
           },
           {
             "stage": "request_completed",
-            "offset_ms": 194.652899983339
+            "offset_ms": 163.04220003075898
           }
         ],
-        "provider_ms": 187.54219997208565,
+        "provider_ms": 138.6328000226058,
         "validation_ms": 0,
-        "scheduler_wait_ms": 3.599099989514798,
-        "retrieval_ms": 19.953600014559925,
+        "scheduler_wait_ms": 20.532800001092255,
+        "retrieval_ms": 27.474199945572764,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 1957
       },
       {
-        "request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9",
+        "request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "warm",
@@ -1820,37 +1820,37 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 15.340800047852099
+            "offset_ms": 29.692500014789402
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 18.963500042445958
+            "offset_ms": 33.01050001755357
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 19.750400038901716
+            "offset_ms": 33.82940002484247
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 20.624800003133714
+            "offset_ms": 34.80690001742914
           },
           {
             "stage": "request_completed",
-            "offset_ms": 23.896300001069903
+            "offset_ms": 37.94250002829358
           }
         ],
-        "provider_ms": 3.6161000025458634,
-        "validation_ms": 1.4573000371456146,
-        "stable_to_scheduled_ms": 124.8448999831453,
-        "scheduler_wait_ms": 13.39980005286634,
-        "retrieval_ms": 41.94840003037825,
+        "provider_ms": 3.311699954792857,
+        "validation_ms": 1.55699992319569,
+        "stable_to_scheduled_ms": 155.1194000057876,
+        "scheduler_wait_ms": 27.315600018482655,
+        "retrieval_ms": 29.422399995382875,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 2283
       },
       {
-        "request_id": "ca191910-796b-43c2-9a68-2554ccac2926",
+        "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
         "policy_version": "content-trigger-v1",
         "trigger": "auto",
         "temperature": "warm",
@@ -1864,37 +1864,37 @@
           },
           {
             "stage": "provider_started",
-            "offset_ms": 5.148699972778559
+            "offset_ms": 4.875200043898076
           },
           {
             "stage": "provider_completed",
-            "offset_ms": 8.227999962400645
+            "offset_ms": 8.595400024205446
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 10.004599986132234
+            "offset_ms": 10.934500023722649
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 11.357099981978536
+            "offset_ms": 12.487400032114238
           },
           {
             "stage": "request_completed",
-            "offset_ms": 15.654799994081259
+            "offset_ms": 18.74100003624335
           }
         ],
-        "provider_ms": 3.0738000059500337,
-        "validation_ms": 2.930099959485233,
-        "stable_to_scheduled_ms": 156.27580002183095,
-        "scheduler_wait_ms": 3.048499987926334,
-        "retrieval_ms": 0.19779999274760485,
+        "provider_ms": 3.714499995112419,
+        "validation_ms": 3.6786999553442,
+        "stable_to_scheduled_ms": 165.21209996426478,
+        "scheduler_wait_ms": 2.8921000193804502,
+        "retrieval_ms": 0.20740000763908029,
         "http_attempts": 1,
         "repair_attempts": 0,
         "usage_unknown_attempts": 1,
         "wire_input_chars_total": 2566
       },
       {
-        "request_id": "58fb22cd-2449-4bd2-b54b-251638c86166",
+        "request_id": "67ee5865-7e09-48e9-af4d-9e2f8c4613d9",
         "policy_version": "content-trigger-v1",
         "trigger": "auto",
         "temperature": "warm",
@@ -1908,25 +1908,25 @@
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 4.168600018601865
+            "offset_ms": 4.768499988131225
           },
           {
             "stage": "request_completed",
-            "offset_ms": 7.114299980457872
+            "offset_ms": 7.191199983935803
           }
         ],
         "provider_ms": 0,
-        "validation_ms": 1.250700035598129,
-        "stable_to_scheduled_ms": 163.73670002212748,
-        "scheduler_wait_ms": 1.7416999908164144,
-        "retrieval_ms": 17.488099983893335,
+        "validation_ms": 0.8748999680392444,
+        "stable_to_scheduled_ms": 170.46870000194758,
+        "scheduler_wait_ms": 3.076600027270615,
+        "retrieval_ms": 27.4080999661237,
         "http_attempts": 0,
         "repair_attempts": 0,
         "usage_unknown_attempts": 0,
         "wire_input_chars_total": 0
       },
       {
-        "request_id": "26a4640e-6ca1-440f-9ccd-3e62193ab9c9",
+        "request_id": "0dbfab4a-1d58-4094-a75c-a2eaa8ef9f8d",
         "policy_version": "content-trigger-v1",
         "trigger": "manual",
         "temperature": "warm",
@@ -1940,18 +1940,18 @@
           },
           {
             "stage": "validation_completed",
-            "offset_ms": 3.1456000288017094
+            "offset_ms": 2.841099980287254
           },
           {
             "stage": "request_completed",
-            "offset_ms": 5.087400029879063
+            "offset_ms": 5.337400012649596
           }
         ],
         "provider_ms": 0,
-        "validation_ms": 1.053699990734458,
-        "stable_to_scheduled_ms": 409.430900006555,
-        "scheduler_wait_ms": 1.234700030181557,
-        "retrieval_ms": 4.849700024351478,
+        "validation_ms": 0.8527000318281353,
+        "stable_to_scheduled_ms": 407.86079998360947,
+        "scheduler_wait_ms": 1.1624000035226345,
+        "retrieval_ms": 5.02260000212118,
         "http_attempts": 0,
         "repair_attempts": 0,
         "usage_unknown_attempts": 0,
@@ -1960,15 +1960,15 @@
     ],
     "classifier": {
       "n": 49,
-      "median_ms": 0.09849999332800508,
-      "p95_ms": 0.4896000027656555,
+      "median_ms": 0.10549998842179775,
+      "p95_ms": 0.5022999830543995,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "provider_by_route": {
       "fast": {
         "n": 7,
-        "median_ms": 1.5130999963730574,
-        "p95_ms": 814.8779000039212,
+        "median_ms": 2.0454999757930636,
+        "p95_ms": 809.6075999783352,
         "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
       },
       "explain": {
@@ -1979,8 +1979,8 @@
       },
       "deep": {
         "n": 1,
-        "median_ms": 1.1659000301733613,
-        "p95_ms": 1.1659000301733613,
+        "median_ms": 1.47280003875494,
+        "p95_ms": 1.47280003875494,
         "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
       },
       "clarify": {
@@ -2001,59 +2001,59 @@
     "cost_note": "Estimate from configured per-million token prices, not a bill.",
     "capture_apply": {
       "n": 23,
-      "median_ms": 2.283699985127896,
-      "p95_ms": 4.785400000400841,
+      "median_ms": 2.1391999907791615,
+      "p95_ms": 6.321499997284263,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "retrieval": {
       "n": 25,
-      "median_ms": 16.255299968179315,
-      "p95_ms": 39.06260000076145,
+      "median_ms": 15.101799974218011,
+      "p95_ms": 29.422399995382875,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "provider": {
       "n": 8,
-      "median_ms": 1.5130999963730574,
-      "p95_ms": 814.8779000039212,
+      "median_ms": 2.0454999757930636,
+      "p95_ms": 809.6075999783352,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "provider_first_token": {
       "n": 6,
-      "median_ms": 1.2925000046379864,
-      "p95_ms": 814.682400028687,
+      "median_ms": 1.6795999836176634,
+      "p95_ms": 809.3891000025906,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "backend_stable_to_request": {
       "n": 12,
-      "median_ms": 885.9517000382766,
-      "p95_ms": 2003.4698999952525,
+      "median_ms": 814.3474999815226,
+      "p95_ms": 1903.8115000003017,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "backend_stable_to_validated": {
       "n": 11,
-      "median_ms": 832.4000999564305,
-      "p95_ms": 2604.7951000509784,
+      "median_ms": 638.4136999840848,
+      "p95_ms": 2342.3341999878176,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "report": {
       "n": 1,
-      "median_ms": 30.46800004085526,
-      "p95_ms": 30.46800004085526,
+      "median_ms": 30.61600000364706,
+      "p95_ms": 30.61600000364706,
       "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
     },
     "records": [
       {
-        "id": "fddf8f1b-cc6d-4725-9e2b-ab4d9a8c3e3c",
+        "id": "e97314bc-e39f-411d-8849-3a79a370c1b3",
         "mode": "real",
         "status": "ready",
         "usage": null,
-        "duration_ms": 6.156400020699948,
-        "first_token_ms": 2.5545000098645687,
+        "duration_ms": 3.0036999960429966,
+        "first_token_ms": 2.3264000192284584,
         "client_reused": false,
         "request_kind": "suggestion",
         "wire_input_chars": 2254,
         "route": "fast",
-        "logical_request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
+        "logical_request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
         "automatic": false,
         "generation_attempt": 1,
         "http_attempt": 1,
@@ -2062,17 +2062,17 @@
         "token_estimate_method": "Unicode characters / 3; not tokenizer usage"
       },
       {
-        "id": "35074968-f241-4f93-b95f-66a85afa1d00",
+        "id": "b40156e6-3410-4f8a-9baa-c667f610a2e8",
         "mode": "real",
         "status": "ready",
         "usage": null,
-        "duration_ms": 1.5130999963730574,
-        "first_token_ms": 1.2925000046379864,
+        "duration_ms": 2.0454999757930636,
+        "first_token_ms": 1.6795999836176634,
         "client_reused": true,
         "request_kind": "suggestion",
         "wire_input_chars": 2254,
         "route": "fast",
-        "logical_request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
+        "logical_request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
         "automatic": false,
         "generation_attempt": 1,
         "http_attempt": 1,
@@ -2081,17 +2081,17 @@
         "token_estimate_method": "Unicode characters / 3; not tokenizer usage"
       },
       {
-        "id": "2fed3949-5c11-44c9-9b1e-90c2515e5104",
+        "id": "947c275f-7b8c-49d4-b3b4-b2463f570a74",
         "mode": "real",
         "status": "ready",
         "usage": null,
-        "duration_ms": 1.2660000356845558,
-        "first_token_ms": 1.0550000006332994,
+        "duration_ms": 1.6280999989248812,
+        "first_token_ms": 1.4040999813005328,
         "client_reused": true,
         "request_kind": "suggestion",
         "wire_input_chars": 2254,
         "route": "fast",
-        "logical_request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
+        "logical_request_id": "cfc9d4fe-4096-4338-8853-647d665d0736",
         "automatic": false,
         "generation_attempt": 1,
         "http_attempt": 1,
@@ -2100,17 +2100,17 @@
         "token_estimate_method": "Unicode characters / 3; not tokenizer usage"
       },
       {
-        "id": "b0f3e3a1-0a9f-4594-84c4-3f99cc372ef4",
+        "id": "434501d2-d629-4c52-bbe3-158e3998524d",
         "mode": "real",
         "status": "PROVIDER_AUTH",
         "usage": null,
-        "duration_ms": 1.5095999697223306,
+        "duration_ms": 1.2943000183440745,
         "first_token_ms": null,
         "client_reused": true,
         "request_kind": "suggestion",
         "wire_input_chars": 2252,
         "route": "fast",
-        "logical_request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7",
+        "logical_request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d",
         "automatic": false,
         "generation_attempt": 1,
         "http_attempt": 1,
@@ -2119,17 +2119,17 @@
         "token_estimate_method": "Unicode characters / 3; not tokenizer usage"
       },
       {
-        "id": "5d2cbc8d-6d3c-44e4-b03e-e40f8ef12ed3",
+        "id": "d55bd587-26e2-40e1-988c-1c2412290a5f",
         "mode": "real",
         "status": "ready",
         "usage": null,
-        "duration_ms": 814.8779000039212,
-        "first_token_ms": 814.682400028687,
+        "duration_ms": 809.6075999783352,
+        "first_token_ms": 809.3891000025906,
         "client_reused": true,
         "request_kind": "suggestion",
         "wire_input_chars": 2257,
         "route": "fast",
-        "logical_request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7",
+        "logical_request_id": "8696ad05-5932-4295-86eb-2fb04cf255be",
         "automatic": false,
         "generation_attempt": 1,
         "http_attempt": 1,
@@ -2138,17 +2138,17 @@
         "token_estimate_method": "Unicode characters / 3; not tokenizer usage"
       },
       {
-        "id": "a7cabdb0-038b-4de0-8006-1b9134103e57",
+        "id": "63de660d-4041-4cad-abe5-d17aa9d44a19",
         "mode": "real",
         "status": "cancelled",
         "usage": null,
-        "duration_ms": 185.46750000678003,
+        "duration_ms": 136.81850000284612,
         "first_token_ms": null,
         "client_reused": true,
         "request_kind": "suggestion",
         "wire_input_chars": 1957,
         "route": "fast",
-        "logical_request_id": "ef49031e-6076-4d72-b59b-8125db513fe4",
+        "logical_request_id": "98a494b2-2937-44da-8697-4518d0b4dcc7",
         "automatic": false,
         "generation_attempt": 1,
         "http_attempt": 1,
@@ -2157,17 +2157,17 @@
         "token_estimate_method": "Unicode characters / 3; not tokenizer usage"
       },
       {
-        "id": "5b0c723b-bb71-4728-963b-4a517ac1d674",
+        "id": "62c39e6f-f587-4e1b-b29d-228c217fd119",
         "mode": "real",
         "status": "ready",
         "usage": null,
-        "duration_ms": 1.375799998641014,
-        "first_token_ms": 1.1891000322066247,
+        "duration_ms": 1.4896999928168952,
+        "first_token_ms": 1.2549000093713403,
         "client_reused": true,
         "request_kind": "suggestion",
         "wire_input_chars": 2283,
         "route": "fast",
-        "logical_request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9",
+        "logical_request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a",
         "automatic": false,
         "generation_attempt": 1,
         "http_attempt": 1,
@@ -2176,17 +2176,17 @@
         "token_estimate_method": "Unicode characters / 3; not tokenizer usage"
       },
       {
-        "id": "c7fa1a96-548d-4a5b-8361-ec80d39ca732",
+        "id": "8a2ce72b-88a0-4667-a52d-49a36317b67b",
         "mode": "real",
         "status": "ready",
         "usage": null,
-        "duration_ms": 1.1659000301733613,
-        "first_token_ms": 0.9306999854743481,
+        "duration_ms": 1.47280003875494,
+        "first_token_ms": 1.254200004041195,
         "client_reused": true,
         "request_kind": "suggestion",
         "wire_input_chars": 2566,
         "route": "deep",
-        "logical_request_id": "ca191910-796b-43c2-9a68-2554ccac2926",
+        "logical_request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
         "automatic": true,
         "generation_attempt": 1,
         "http_attempt": 1,

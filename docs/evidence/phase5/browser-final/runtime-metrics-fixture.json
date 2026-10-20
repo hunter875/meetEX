@@ -1,8 +1,8 @@
 {
   "memory_update": {
     "n": 9,
-    "median_ms": 0.06499997107312083,
-    "p95_ms": 3.420800028834492,
+    "median_ms": 0.06360001862049103,
+    "p95_ms": 3.365800017490983,
     "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
   },
   "orchestration_counts": {
@@ -17,12 +17,12 @@
     "manual_priority": 2
   },
   "scheduler_states": {
-    "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30": {
+    "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2": {
       "state": "listening",
       "reason": "session_control",
       "policy_version": "content-trigger-v1"
     },
-    "6e1083ce-903b-4a21-a4b7-744427c7b068": {
+    "5efe39d9-f23d-4295-832c-0fc61d4d1236": {
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
@@ -30,167 +30,167 @@
   },
   "trigger_records": [
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "waiting",
       "reason": "important_change",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "context_retrieval",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "queued",
       "reason": "auto_ready",
       "policy_version": "content-trigger-v1",
-      "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907",
+      "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912",
       "route": "fast"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "provider_generation",
       "policy_version": "content-trigger-v1",
-      "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907"
+      "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "ready",
       "reason": "validated_result",
       "policy_version": "content-trigger-v1",
-      "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907"
+      "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "waiting",
       "reason": "direct_question",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "context_retrieval",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "queued",
       "reason": "auto_ready",
       "policy_version": "content-trigger-v1",
-      "request_id": "189b1681-cce2-44be-afad-5e5145076942",
+      "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63",
       "route": "fast"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "provider_generation",
       "policy_version": "content-trigger-v1",
-      "request_id": "189b1681-cce2-44be-afad-5e5145076942"
+      "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "ready",
       "reason": "validated_result",
       "policy_version": "content-trigger-v1",
-      "request_id": "189b1681-cce2-44be-afad-5e5145076942"
+      "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "context_retrieval",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "queued",
       "reason": "manual_priority",
       "policy_version": "content-trigger-v1",
-      "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5",
+      "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07",
       "route": "fast"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "provider_generation",
       "policy_version": "content-trigger-v1",
-      "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5"
+      "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "stale",
       "reason": "validated_result",
       "policy_version": "content-trigger-v1",
-      "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5"
+      "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "context_retrieval",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "queued",
       "reason": "manual_priority",
       "policy_version": "content-trigger-v1",
-      "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d",
+      "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401",
       "route": "deep"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "processing",
       "reason": "provider_generation",
       "policy_version": "content-trigger-v1",
-      "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d"
+      "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401"
     },
     {
-      "meeting_id": "bd02ecbd-7e2d-45cc-b51f-2e85f622fd30",
+      "meeting_id": "77fb1ddc-53c5-4f78-8ca2-a882e9bf1cb2",
       "state": "ready",
       "reason": "validated_result",
       "policy_version": "content-trigger-v1",
-      "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d"
+      "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401"
     },
     {
-      "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+      "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+      "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+      "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+      "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+      "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
     },
     {
-      "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
+      "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
       "state": "listening",
       "reason": "speaker_unknown",
       "policy_version": "content-trigger-v1"
@@ -199,7 +199,7 @@
   "retrieval_cache_hits": 5,
   "latency_records": [
     {
-      "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907",
+      "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912",
       "policy_version": "content-trigger-v1",
       "trigger": "auto",
       "temperature": "cold",
@@ -213,25 +213,25 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 9.262399980798364
+          "offset_ms": 9.429900033865124
         },
         {
           "stage": "request_completed",
-          "offset_ms": 12.911300000268966
+          "offset_ms": 12.759800010826439
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 4.715699993539602,
-      "stable_to_scheduled_ms": 820.3719999874011,
-      "scheduler_wait_ms": 2.969199966173619,
-      "retrieval_ms": 0.19149994477629662,
+      "validation_ms": 3.6145999911241233,
+      "stable_to_scheduled_ms": 810.5381999630481,
+      "scheduler_wait_ms": 3.8093000184744596,
+      "retrieval_ms": 0.41060004150494933,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
       "wire_input_chars_total": 0
     },
     {
-      "request_id": "189b1681-cce2-44be-afad-5e5145076942",
+      "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63",
       "policy_version": "content-trigger-v1",
       "trigger": "auto",
       "temperature": "cold",
@@ -245,25 +245,25 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 6.748299987521023
+          "offset_ms": 6.399700010661036
         },
         {
           "stage": "request_completed",
-          "offset_ms": 9.761699999216944
+          "offset_ms": 10.060300002805889
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 1.1421000235714018,
-      "stable_to_scheduled_ms": 192.12349998997524,
-      "scheduler_wait_ms": 3.4137999755330384,
-      "retrieval_ms": 22.55320001859218,
+      "validation_ms": 1.1140999849885702,
+      "stable_to_scheduled_ms": 190.77119999565184,
+      "scheduler_wait_ms": 2.911499992478639,
+      "retrieval_ms": 24.40960000967607,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
       "wire_input_chars_total": 0
     },
     {
-      "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5",
+      "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "cold",
@@ -277,24 +277,24 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 6.9967000163160264
+          "offset_ms": 5.590999964624643
         },
         {
           "stage": "request_completed",
-          "offset_ms": 10.500899981707335
+          "offset_ms": 8.731500012800097
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 1.2111000251024961,
-      "scheduler_wait_ms": 3.5410000127740204,
-      "retrieval_ms": 0.19149994477629662,
+      "validation_ms": 0.7390999817289412,
+      "scheduler_wait_ms": 3.0848999740555882,
+      "retrieval_ms": 0.41060004150494933,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
       "wire_input_chars_total": 0
     },
     {
-      "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d",
+      "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "cold",
@@ -308,18 +308,18 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 6.792399974074215
+          "offset_ms": 6.235900043975562
         },
         {
           "stage": "request_completed",
-          "offset_ms": 9.996199980378151
+          "offset_ms": 9.013800008688122
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 0.8695999858900905,
-      "stable_to_scheduled_ms": 1999.7681999811903,
-      "scheduler_wait_ms": 3.701700014062226,
-      "retrieval_ms": 0.31700002728030086,
+      "validation_ms": 0.7013999857008457,
+      "stable_to_scheduled_ms": 1900.3040999523364,
+      "scheduler_wait_ms": 3.5074000479653478,
+      "retrieval_ms": 0.24259998463094234,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
@@ -328,8 +328,8 @@
   ],
   "classifier": {
     "n": 19,
-    "median_ms": 0.11979998089373112,
-    "p95_ms": 5.5182999931275845,
+    "median_ms": 0.13080000644549727,
+    "p95_ms": 9.854000003542751,
     "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
   },
   "provider_by_route": {
@@ -369,14 +369,14 @@
   "cost_note": "Estimate from configured per-million token prices, not a bill.",
   "capture_apply": {
     "n": 6,
-    "median_ms": 1.8874999950639904,
-    "p95_ms": 2.5599999935366213,
+    "median_ms": 1.7649999936111271,
+    "p95_ms": 2.737700007855892,
     "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
   },
   "retrieval": {
     "n": 10,
-    "median_ms": 4.177899973001331,
-    "p95_ms": 23.730500019155443,
+    "median_ms": 2.884899964556098,
+    "p95_ms": 24.40960000967607,
     "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
   },
   "provider": {
@@ -393,20 +393,20 @@
   },
   "backend_stable_to_request": {
     "n": 3,
-    "median_ms": 823.3411999535747,
-    "p95_ms": 2003.4698999952525,
+    "median_ms": 814.3474999815226,
+    "p95_ms": 1903.8115000003017,
     "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
   },
   "backend_stable_to_validated": {
     "n": 3,
-    "median_ms": 832.4000999564305,
-    "p95_ms": 2008.9506999938749,
+    "median_ms": 822.3468999494798,
+    "p95_ms": 1908.7007999769412,
     "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
   },
   "report": {
     "n": 1,
-    "median_ms": 30.46800004085526,
-    "p95_ms": 30.46800004085526,
+    "median_ms": 30.61600000364706,
+    "p95_ms": 30.61600000364706,
     "p95_note": "Descriptive sample percentile; small n is not a reliable SLA."
   },
   "records": []

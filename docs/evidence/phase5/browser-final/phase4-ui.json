@@ -5,9 +5,9 @@
     "policy": "meeting-ledger-v1",
     "items": [
       {
-        "id": "09d97a9934f4df3099d5013b",
-        "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-        "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+        "id": "3c0f1fe5527f7d71eeb67da7",
+        "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+        "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
         "kind": "action_item",
         "text": "I will review API-71 by tomorrow.",
         "entity": "API-71",
@@ -71,9 +71,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "09d97a9934f4df3099d5013b",
+          "id": "3c0f1fe5527f7d71eeb67da7",
           "kind": "action_item",
-          "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
+          "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
           "negative": false,
           "normalized_due": "2026-10-19",
           "order": [
@@ -83,7 +83,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "raw_due_text": "tomorrow",
           "relations": [],
           "replaces_owner": null,
@@ -94,9 +94,9 @@
         }
       },
       {
-        "id": "ea889ed868bf953e7ff26062",
-        "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-        "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+        "id": "c5b0d80e7c90c40bf4a00502",
+        "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+        "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
         "kind": "decision",
         "text": "We have NOT approved test API-17 in staging.",
         "entity": "API-17",
@@ -137,8 +137,8 @@
   },
   "reports": [
     {
-      "id": "1167b1ec-f878-4482-a938-79cbe3322778",
-      "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
+      "id": "c776f09a-40a1-4dc4-b9b7-d6e0469c89a9",
+      "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
       "version": 1,
       "transcript_revision": 3,
       "payload": {
@@ -163,13 +163,13 @@
       "user_edits": false,
       "reviewed_at": null,
       "mode": "demo",
-      "created_at": "2026-10-20T13:30:15.805409+00:00",
+      "created_at": "2026-10-20T13:47:50.987569+00:00",
       "parent_id": null,
       "memory_snapshot": [
         {
-          "id": "09d97a9934f4df3099d5013b",
-          "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "id": "3c0f1fe5527f7d71eeb67da7",
+          "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "kind": "action_item",
           "text": "I will review API-71 by tomorrow.",
           "entity": "API-71",
@@ -233,9 +233,9 @@
               }
             ],
             "explicit_replace": false,
-            "id": "09d97a9934f4df3099d5013b",
+            "id": "3c0f1fe5527f7d71eeb67da7",
             "kind": "action_item",
-            "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
+            "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
             "negative": false,
             "normalized_due": "2026-10-19",
             "order": [
@@ -245,7 +245,7 @@
             "origin": "transcript",
             "owner": "Minh",
             "policy": "meeting-ledger-v1",
-            "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+            "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
             "raw_due_text": "tomorrow",
             "relations": [],
             "replaces_owner": null,
@@ -256,9 +256,9 @@
           }
         },
         {
-          "id": "ea889ed868bf953e7ff26062",
-          "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "id": "c5b0d80e7c90c40bf4a00502",
+          "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "kind": "decision",
           "text": "We have NOT approved test API-17 in staging.",
           "entity": "API-17",
@@ -332,7 +332,7 @@
         "action_items": [],
         "open_questions": [
           {
-            "id": "8675ddeb-2402-4213-93e7-5f96e208636f",
+            "id": "dbfb02e8-736c-4688-8c49-bed6fab551be",
             "text": "I will review API-71 by tomorrow.",
             "text_en": "I will review API-71 by tomorrow.",
             "evidence_segment_ids": [
@@ -346,7 +346,7 @@
             "status": "open"
           },
           {
-            "id": "e4365952-b2a5-47a8-a1b0-2f8756e410a8",
+            "id": "a04f9c37-ac06-4bab-a3ce-7d055564c007",
             "text": "We have NOT approved test API-17 in staging.",
             "text_en": "We have NOT approved test API-17 in staging.",
             "evidence_segment_ids": [
@@ -374,8 +374,8 @@
       }
     },
     {
-      "id": "1bc9dbee-f4ed-4050-aad2-e9ebe018ef30",
-      "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
+      "id": "2a45dfb7-4ab2-4bbe-a1e4-d259d864d9b5",
+      "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
       "version": 2,
       "transcript_revision": 3,
       "payload": {
@@ -390,7 +390,7 @@
         "open_questions": [],
         "ai_proposals": [
           {
-            "id": "187e36c1-cd77-4510-8725-7f336cca8104",
+            "id": "61b07566-36b8-4e9d-afdd-765946defe9c",
             "text": "USER PROPOSAL: consider a staged rollout.",
             "text_en": "",
             "evidence_segment_ids": [],
@@ -413,13 +413,13 @@
       "user_edits": true,
       "reviewed_at": null,
       "mode": "demo",
-      "created_at": "2026-10-20T13:30:16.087389+00:00",
-      "parent_id": "1167b1ec-f878-4482-a938-79cbe3322778",
+      "created_at": "2026-10-20T13:47:51.201365+00:00",
+      "parent_id": "c776f09a-40a1-4dc4-b9b7-d6e0469c89a9",
       "memory_snapshot": [
         {
-          "id": "09d97a9934f4df3099d5013b",
-          "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "id": "3c0f1fe5527f7d71eeb67da7",
+          "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "kind": "action_item",
           "text": "I will review API-71 by tomorrow.",
           "entity": "API-71",
@@ -483,9 +483,9 @@
               }
             ],
             "explicit_replace": false,
-            "id": "09d97a9934f4df3099d5013b",
+            "id": "3c0f1fe5527f7d71eeb67da7",
             "kind": "action_item",
-            "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
+            "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
             "negative": false,
             "normalized_due": "2026-10-19",
             "order": [
@@ -495,7 +495,7 @@
             "origin": "transcript",
             "owner": "Minh",
             "policy": "meeting-ledger-v1",
-            "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+            "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
             "raw_due_text": "tomorrow",
             "relations": [],
             "replaces_owner": null,
@@ -506,9 +506,9 @@
           }
         },
         {
-          "id": "ea889ed868bf953e7ff26062",
-          "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "id": "c5b0d80e7c90c40bf4a00502",
+          "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "kind": "decision",
           "text": "We have NOT approved test API-17 in staging.",
           "entity": "API-17",
@@ -582,7 +582,7 @@
         "action_items": [],
         "open_questions": [
           {
-            "id": "8675ddeb-2402-4213-93e7-5f96e208636f",
+            "id": "dbfb02e8-736c-4688-8c49-bed6fab551be",
             "text": "I will review API-71 by tomorrow.",
             "text_en": "I will review API-71 by tomorrow.",
             "evidence_segment_ids": [
@@ -596,7 +596,7 @@
             "status": "open"
           },
           {
-            "id": "e4365952-b2a5-47a8-a1b0-2f8756e410a8",
+            "id": "a04f9c37-ac06-4bab-a3ce-7d055564c007",
             "text": "We have NOT approved test API-17 in staging.",
             "text_en": "We have NOT approved test API-17 in staging.",
             "evidence_segment_ids": [
@@ -615,10 +615,10 @@
       },
       "edit_provenance": {
         "actor": "local_user",
-        "parent_id": "1167b1ec-f878-4482-a938-79cbe3322778",
+        "parent_id": "c776f09a-40a1-4dc4-b9b7-d6e0469c89a9",
         "summary_changed": true,
         "changed_item_ids": [
-          "187e36c1-cd77-4510-8725-7f336cca8104"
+          "61b07566-36b8-4e9d-afdd-765946defe9c"
         ]
       },
       "reconciliation": {
@@ -631,8 +631,8 @@
       }
     },
     {
-      "id": "af14b96f-6f8e-41ca-9dc6-52d4c668f75c",
-      "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
+      "id": "4a9f38f1-17c2-4de6-af4b-280984837100",
+      "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
       "version": 3,
       "transcript_revision": 3,
       "payload": {
@@ -657,13 +657,13 @@
       "user_edits": false,
       "reviewed_at": null,
       "mode": "demo",
-      "created_at": "2026-10-20T13:30:16.599697+00:00",
+      "created_at": "2026-10-20T13:47:51.698663+00:00",
       "parent_id": null,
       "memory_snapshot": [
         {
-          "id": "09d97a9934f4df3099d5013b",
-          "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "id": "3c0f1fe5527f7d71eeb67da7",
+          "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "kind": "action_item",
           "text": "I will review API-71 by tomorrow.",
           "entity": "API-71",
@@ -727,9 +727,9 @@
               }
             ],
             "explicit_replace": false,
-            "id": "09d97a9934f4df3099d5013b",
+            "id": "3c0f1fe5527f7d71eeb67da7",
             "kind": "action_item",
-            "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
+            "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
             "negative": false,
             "normalized_due": "2026-10-19",
             "order": [
@@ -739,7 +739,7 @@
             "origin": "transcript",
             "owner": "Minh",
             "policy": "meeting-ledger-v1",
-            "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+            "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
             "raw_due_text": "tomorrow",
             "relations": [],
             "replaces_owner": null,
@@ -750,9 +750,9 @@
           }
         },
         {
-          "id": "ea889ed868bf953e7ff26062",
-          "meeting_id": "ea7afc57-2b3c-4264-87c2-833f89de8682",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "id": "c5b0d80e7c90c40bf4a00502",
+          "meeting_id": "92eed376-374f-4f5c-ac81-ab7399b24a96",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "kind": "decision",
           "text": "We have NOT approved test API-17 in staging.",
           "entity": "API-17",
@@ -826,7 +826,7 @@
         "action_items": [],
         "open_questions": [
           {
-            "id": "c86fc2e8-ff67-4c52-bf7a-6653ad93880c",
+            "id": "7a3d418d-4270-4e10-a320-9920e0a73c92",
             "text": "I will review API-71 by tomorrow.",
             "text_en": "I will review API-71 by tomorrow.",
             "evidence_segment_ids": [
@@ -840,7 +840,7 @@
             "status": "open"
           },
           {
-            "id": "2f08194d-bb4d-429a-adc1-658805fe4d07",
+            "id": "e1d9fbd6-445d-4a98-a4a9-8fd8a9d21249",
             "text": "We have NOT approved test API-17 in staging.",
             "text_en": "We have NOT approved test API-17 in staging.",
             "evidence_segment_ids": [

@@ -4,5 +4,7 @@
   "open_socket_invalidated": true,
   "re_pair": true,
   "disconnect_cleared": true,
+  "other_open_page_cleared_without_reload": true,
+  "unsaved_form_survives_heartbeat": true,
   "paid_calls": 0
 }

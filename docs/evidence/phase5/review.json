@@ -2,7 +2,7 @@
   "result": "PARTIAL: internal release candidate; independent/live gates remain open",
   "date": "2026-10-20",
   "base_commit": "9a5ac7153343a4b84256fbc1343267eeb285de55",
-  "source_commit_at_review": "8e36ea721a5d8da9d37da3a59d00881f8b8d2f9e",
+  "source_commit_at_review": "4de30b9729afe5019ec3022333f219d5d7fd337c",
   "app_version": "0.1.0",
   "protocol_version": 1,
   "schema_version": 2,
@@ -27,7 +27,7 @@
     "B": "PASS tested Windows operations",
     "C": "PASS schema1-to2 and schema2 recovery paths",
     "D": "PASS automated REST/WS/MV3",
-    "E": "PARTIAL",
+    "E": "PASS tested scope",
     "F": "PASS controlled developer-host scope"
   },
   "clean_setup": {
@@ -136,25 +136,57 @@
   },
   "ci": {
     "status": "PASS",
-    "run_id": 39430598033,
-    "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033",
-    "source_commit": "d7796da5e9a7e6b2794c2ea44ba9545d7da710ca",
+    "run_id": 39432929503,
+    "url": "https://github.com/hunter875/meetEX/actions/runs/39432929503",
+    "source_commit": "4de30b9729afe5019ec3022333f219d5d7fd337c",
     "jobs": [
-      {
-        "name": "Keyword / ubuntu-24.04 / Python 3.13",
-        "conclusion": "success",
-        "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033/job/118654338104"
-      },
       {
         "name": "Keyword / windows-2025 / Python 3.13",
         "conclusion": "success",
-        "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033/job/118654338376"
+        "url": "https://github.com/hunter875/meetEX/actions/runs/39432929503/job/118662369257"
+      },
+      {
+        "name": "Keyword / ubuntu-24.04 / Python 3.13",
+        "conclusion": "success",
+        "url": "https://github.com/hunter875/meetEX/actions/runs/39432929503/job/118662370359"
       }
     ],
     "paid_calls": 0,
     "scope": "Python 3.13 / Node 22.20.0 / keyword mode; full offline regressions and seven MV3 E2E per OS"
   },
-  "artifact": null,
+  "artifact": {
+    "app_version": "0.1.0",
+    "protocol_version": 1,
+    "schema_version": 2,
+    "source_commit": "4de30b9729afe5019ec3022333f219d5d7fd337c",
+    "source_clean": true,
+    "provider_calls": 0,
+    "build": "npm ci + npm run build in isolated temp folder",
+    "node": "v22.20.0",
+    "artifacts": [
+      {
+        "file": "meet-local-0.1.0-4de30b9729af-source.zip",
+        "sha256": "f784622759584581a57a26182a8dc45ef8e54a79e9992bee7e7f2099df8896e6",
+        "bytes": 1867285
+      },
+      {
+        "file": "meet-local-0.1.0-4de30b9729af-extension.zip",
+        "sha256": "9de6ff312f303f3790c160857c91070e989cf6b9e5b9e2251cf983914920b3a4",
+        "bytes": 106418
+      }
+    ],
+    "excluded": [
+      "credentials",
+      "personal SQLite",
+      ".env",
+      "browser profiles",
+      "node_modules",
+      "venv",
+      "model caches",
+      "historical evidence"
+    ],
+    "extension_update": "Keep the same unpacked directory; ID can change when path/profile changes. Pair exact new ID if changed."
+  },
   "release_gates": {
     "core_correctness": "PARTIAL outside bounded grammar",
     "live_meet": "NOT TESTED",

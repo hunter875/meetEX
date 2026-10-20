@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "command": "python scripts/ci_check.py in isolated clean clone",
-  "source_commit": "a15bf0a174a986ac99c106d0e13acb0215e7d5f0",
+  "command": "python scripts/ci_check.py",
+  "source_commit": "4de30b9729afe5019ec3022333f219d5d7fd337c",
   "backend": 349,
   "frontend": 63,
   "browser": 7,

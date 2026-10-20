@@ -42,9 +42,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 3.641100018285215,
-        "p95_ms": 3.641100018285215,
-        "max_ms": 3.641100018285215
+        "median_ms": 3.89960000757128,
+        "p95_ms": 3.89960000757128,
+        "max_ms": 3.89960000757128
       },
       "items": [
         {
@@ -66,9 +66,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "338f93d27cad09dd087c2674",
+          "id": "435db7bfc2e81a671f016494",
           "kind": "proposal",
-          "meeting_id": "0766c317-ea09-4067-9ea9-68ab657a1846",
+          "meeting_id": "5c1c044e-2f48-4409-8e44-a3202411af2b",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -78,7 +78,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "d3bcc4a1-cdb8-4096-879e-0c2bb18635c7",
+          "project_id": "a27fd2e7-82d5-406a-8eb3-e9e41c893989",
           "raw_due_text": "Friday",
           "relations": [],
           "replaces_owner": null,
@@ -123,9 +123,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 1.0991000453941524,
-        "p95_ms": 1.0991000453941524,
-        "max_ms": 1.0991000453941524
+        "median_ms": 1.1424999684095383,
+        "p95_ms": 1.1424999684095383,
+        "max_ms": 1.1424999684095383
       },
       "items": [
         {
@@ -147,9 +147,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "fdb278c59da6e91419837330",
+          "id": "35ab40cbd0e5fbf93baac3c9",
           "kind": "decision",
-          "meeting_id": "0d3dcfe3-d1be-4511-a121-dbd4fde84569",
+          "meeting_id": "5654d7f2-e288-464d-8ae5-475b8fb089a0",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -159,7 +159,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "ebed1c4d-9322-46bd-a0ed-a99fbfb63a10",
+          "project_id": "d247c240-b27a-4bb3-ae25-d33ffadbf6b4",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -204,9 +204,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.7831499970052391,
-        "p95_ms": 0.914399977773428,
-        "max_ms": 0.914399977773428
+        "median_ms": 0.884550012415275,
+        "p95_ms": 1.0653000208549201,
+        "max_ms": 1.0653000208549201
       },
       "items": [
         {
@@ -228,9 +228,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "42fc02c3ce4cc635822c8829",
+          "id": "81e28f9f20f90ca8dded87d9",
           "kind": "decision",
-          "meeting_id": "16aaaccd-a12d-4289-8fbb-388affe27f7a",
+          "meeting_id": "47a790bf-7e61-4035-b770-3ef4e9c8b321",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -240,11 +240,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "8b1131e1-de7d-4d84-958c-0bf82fd315cc",
+          "project_id": "ff4f196b-1c0f-47f2-ab7a-101677f4f9a3",
           "raw_due_text": "Friday",
           "relations": [
             {
-              "item_id": "dbc837017545f270b29163e3",
+              "item_id": "0792361cfbb1897576ce60d5",
               "type": "superseded_by"
             }
           ],
@@ -273,9 +273,9 @@
             }
           ],
           "explicit_replace": true,
-          "id": "dbc837017545f270b29163e3",
+          "id": "0792361cfbb1897576ce60d5",
           "kind": "decision",
-          "meeting_id": "16aaaccd-a12d-4289-8fbb-388affe27f7a",
+          "meeting_id": "47a790bf-7e61-4035-b770-3ef4e9c8b321",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -285,7 +285,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "8b1131e1-de7d-4d84-958c-0bf82fd315cc",
+          "project_id": "ff4f196b-1c0f-47f2-ab7a-101677f4f9a3",
           "raw_due_text": "Monday",
           "relations": [],
           "replaces_owner": null,
@@ -330,9 +330,9 @@
       "evidence_expected": 4,
       "caption_apply": {
         "n": 4,
-        "median_ms": 0.9352499910164624,
-        "p95_ms": 1.1560999555513263,
-        "max_ms": 1.1560999555513263
+        "median_ms": 0.7375499990303069,
+        "p95_ms": 0.7990999729372561,
+        "max_ms": 0.7990999729372561
       },
       "items": [
         {
@@ -354,9 +354,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "3b9bcdb53eef92b5d5cc7655",
+          "id": "185c932b93f0d5ec77c56a6d",
           "kind": "proposal",
-          "meeting_id": "f97cf0e3-709b-4d0f-b965-4d615038b88f",
+          "meeting_id": "74a1ae37-e59e-41ed-adf6-9b335a52fb87",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -366,11 +366,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "4bf0a203-f2e1-44ca-a4b6-f9003f39c339",
+          "project_id": "a18e193d-50cc-4aef-a7eb-a45e8a05e60c",
           "raw_due_text": "Friday",
           "relations": [
             {
-              "item_id": "65c56c3ed603181fe380b7db",
+              "item_id": "9952f24186382e7059806127",
               "type": "accepted_by"
             }
           ],
@@ -399,9 +399,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "65c56c3ed603181fe380b7db",
+          "id": "9952f24186382e7059806127",
           "kind": "decision",
-          "meeting_id": "f97cf0e3-709b-4d0f-b965-4d615038b88f",
+          "meeting_id": "74a1ae37-e59e-41ed-adf6-9b335a52fb87",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -411,11 +411,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "4bf0a203-f2e1-44ca-a4b6-f9003f39c339",
+          "project_id": "a18e193d-50cc-4aef-a7eb-a45e8a05e60c",
           "raw_due_text": "Friday",
           "relations": [
             {
-              "item_id": "e002c462a34a0d834cc1f091",
+              "item_id": "9a6d82c7b1588a681eb57e48",
               "type": "superseded_by"
             }
           ],
@@ -444,9 +444,9 @@
             }
           ],
           "explicit_replace": true,
-          "id": "e002c462a34a0d834cc1f091",
+          "id": "9a6d82c7b1588a681eb57e48",
           "kind": "decision",
-          "meeting_id": "f97cf0e3-709b-4d0f-b965-4d615038b88f",
+          "meeting_id": "74a1ae37-e59e-41ed-adf6-9b335a52fb87",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -456,11 +456,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "4bf0a203-f2e1-44ca-a4b6-f9003f39c339",
+          "project_id": "a18e193d-50cc-4aef-a7eb-a45e8a05e60c",
           "raw_due_text": "Monday",
           "relations": [
             {
-              "item_id": "c940cba0b6cc9f81d3c06f6d",
+              "item_id": "d6413733f0717d282824e44a",
               "type": "cancelled_by"
             }
           ],
@@ -489,9 +489,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "c940cba0b6cc9f81d3c06f6d",
+          "id": "d6413733f0717d282824e44a",
           "kind": "decision",
-          "meeting_id": "f97cf0e3-709b-4d0f-b965-4d615038b88f",
+          "meeting_id": "74a1ae37-e59e-41ed-adf6-9b335a52fb87",
           "negative": true,
           "normalized_due": null,
           "order": [
@@ -501,11 +501,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "4bf0a203-f2e1-44ca-a4b6-f9003f39c339",
+          "project_id": "a18e193d-50cc-4aef-a7eb-a45e8a05e60c",
           "raw_due_text": null,
           "relations": [
             {
-              "item_id": "e002c462a34a0d834cc1f091",
+              "item_id": "9a6d82c7b1588a681eb57e48",
               "type": "cancels"
             }
           ],
@@ -551,9 +551,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.8610999793745577,
-        "p95_ms": 1.0378999868407845,
-        "max_ms": 1.0378999868407845
+        "median_ms": 0.9196499886456877,
+        "p95_ms": 1.1531999916769564,
+        "max_ms": 1.1531999916769564
       },
       "items": [
         {
@@ -575,9 +575,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "f96494db2c4533447a33e48c",
+          "id": "40805ed37052a69a6955e5b1",
           "kind": "action_item",
-          "meeting_id": "35c31305-487d-4246-ad1a-a73aa49071b2",
+          "meeting_id": "072390fa-816c-47a0-86fb-88f7490992bc",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -587,11 +587,11 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "b29f6137-66c4-4725-80f6-c12e797eb556",
+          "project_id": "727dcc07-0191-4b91-9877-0384b74dc2ed",
           "raw_due_text": null,
           "relations": [
             {
-              "item_id": "6a1d883b822ebe2f18be2d88",
+              "item_id": "181916dd8cb493d94e1f85bc",
               "type": "superseded_by"
             }
           ],
@@ -620,9 +620,9 @@
             }
           ],
           "explicit_replace": true,
-          "id": "6a1d883b822ebe2f18be2d88",
+          "id": "181916dd8cb493d94e1f85bc",
           "kind": "action_item",
-          "meeting_id": "35c31305-487d-4246-ad1a-a73aa49071b2",
+          "meeting_id": "072390fa-816c-47a0-86fb-88f7490992bc",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -632,7 +632,7 @@
           "origin": "transcript",
           "owner": "Alex",
           "policy": "meeting-ledger-v1",
-          "project_id": "b29f6137-66c4-4725-80f6-c12e797eb556",
+          "project_id": "727dcc07-0191-4b91-9877-0384b74dc2ed",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": "Minh",
@@ -677,9 +677,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.7998000073712319,
-        "p95_ms": 0.8246999932453036,
-        "max_ms": 0.8246999932453036
+        "median_ms": 0.8155499817803502,
+        "p95_ms": 0.8475999929942191,
+        "max_ms": 0.8475999929942191
       },
       "items": [
         {
@@ -701,9 +701,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "8ebfaabe9090530117a43eaa",
+          "id": "10cfd89fd0a83e9816af22f2",
           "kind": "decision",
-          "meeting_id": "023b3aee-b053-476f-bdb9-2744b22554b0",
+          "meeting_id": "e891c7f0-bbf7-4ae1-b42e-b1f68293049d",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -713,11 +713,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "848d7cc3-8aad-43dc-b72f-dabb8e3ebcd9",
+          "project_id": "1becd3f2-25a7-47ce-a665-2f70cd5d0d8d",
           "raw_due_text": "Friday",
           "relations": [
             {
-              "item_id": "6f69f3e0aff2f9c9677a81fd",
+              "item_id": "f2faf1c3ba2ecae19baa885d",
               "type": "disputed_by"
             }
           ],
@@ -746,9 +746,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "6f69f3e0aff2f9c9677a81fd",
+          "id": "f2faf1c3ba2ecae19baa885d",
           "kind": "decision",
-          "meeting_id": "023b3aee-b053-476f-bdb9-2744b22554b0",
+          "meeting_id": "e891c7f0-bbf7-4ae1-b42e-b1f68293049d",
           "negative": true,
           "normalized_due": null,
           "order": [
@@ -758,11 +758,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "848d7cc3-8aad-43dc-b72f-dabb8e3ebcd9",
+          "project_id": "1becd3f2-25a7-47ce-a665-2f70cd5d0d8d",
           "raw_due_text": null,
           "relations": [
             {
-              "item_id": "8ebfaabe9090530117a43eaa",
+              "item_id": "10cfd89fd0a83e9816af22f2",
               "type": "disputes"
             }
           ],
@@ -808,9 +808,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.8455500355921686,
-        "p95_ms": 1.0991000453941524,
-        "max_ms": 1.0991000453941524
+        "median_ms": 0.7896000170148909,
+        "p95_ms": 0.9621999925002456,
+        "max_ms": 0.9621999925002456
       },
       "items": [
         {
@@ -832,9 +832,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "514ee7542f3594b13a101b13",
+          "id": "8ba2d0006f12d2d433d81c37",
           "kind": "action_item",
-          "meeting_id": "3240b139-29f3-4357-a393-7b24932132ac",
+          "meeting_id": "82722c55-40e7-4362-bfef-98207203c00f",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -844,7 +844,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "45acc393-6d08-4213-b534-adabc088990e",
+          "project_id": "1d42d250-77e9-4350-a431-bbeef82b3df2",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -872,9 +872,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "5916fc059607b6b979ba56f6",
+          "id": "53dbaeacea371393be4ed61c",
           "kind": "action_item",
-          "meeting_id": "3240b139-29f3-4357-a393-7b24932132ac",
+          "meeting_id": "82722c55-40e7-4362-bfef-98207203c00f",
           "negative": false,
           "normalized_due": "2026-10-22",
           "order": [
@@ -884,7 +884,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "45acc393-6d08-4213-b534-adabc088990e",
+          "project_id": "1d42d250-77e9-4350-a431-bbeef82b3df2",
           "raw_due_text": "2026-10-22",
           "relations": [],
           "replaces_owner": null,
@@ -929,9 +929,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.9176000021398067,
-        "p95_ms": 0.9176000021398067,
-        "max_ms": 0.9176000021398067
+        "median_ms": 0.9552999981679022,
+        "p95_ms": 0.9552999981679022,
+        "max_ms": 0.9552999981679022
       },
       "items": [
         {
@@ -953,9 +953,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "07a7ccbb1b4fadd6596329d7",
+          "id": "c0df08f0060946060c3d9df5",
           "kind": "decision",
-          "meeting_id": "4905d16d-a1b4-4512-8149-4eaabd671ea9",
+          "meeting_id": "f2b9bef1-28b5-48f5-ae87-603f6673aa86",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -965,7 +965,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "6a196d49-133e-42b0-bf43-79ca37a85946",
+          "project_id": "02acdc49-61f4-44ed-9f86-a2468a1f195f",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -993,9 +993,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "63256384df98acd3900e90f7",
+          "id": "bd93dc471bba12ad768bc14d",
           "kind": "decision",
-          "meeting_id": "4905d16d-a1b4-4512-8149-4eaabd671ea9",
+          "meeting_id": "f2b9bef1-28b5-48f5-ae87-603f6673aa86",
           "negative": true,
           "normalized_due": null,
           "order": [
@@ -1005,7 +1005,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "6a196d49-133e-42b0-bf43-79ca37a85946",
+          "project_id": "02acdc49-61f4-44ed-9f86-a2468a1f195f",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1050,9 +1050,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.8016999927349389,
-        "p95_ms": 0.8016999927349389,
-        "max_ms": 0.8016999927349389
+        "median_ms": 0.7809000089764595,
+        "p95_ms": 0.7809000089764595,
+        "max_ms": 0.7809000089764595
       },
       "items": [
         {
@@ -1074,9 +1074,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "236129ba3ead0b9d3a634e94",
+          "id": "4e0acb3bc3f6d78ca2a5e33c",
           "kind": "proposal",
-          "meeting_id": "3bfeb808-2456-422c-9df2-483799e48549",
+          "meeting_id": "297c9fbc-8ad0-4d41-8f7d-192dd3a386c4",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1086,7 +1086,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "bf4b7e38-08fe-4639-b55e-9470636cf719",
+          "project_id": "e4c89427-cee8-4b67-83a9-613e4dfdd406",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1131,9 +1131,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.7557999924756587,
-        "p95_ms": 0.7557999924756587,
-        "max_ms": 0.7557999924756587
+        "median_ms": 0.8075999794527888,
+        "p95_ms": 0.8075999794527888,
+        "max_ms": 0.8075999794527888
       },
       "items": [
         {
@@ -1155,9 +1155,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "13535295f6619a4127ce352e",
+          "id": "6d6596db6f5888edd373d038",
           "kind": "spoken_fact",
-          "meeting_id": "9b217847-4f17-4726-84f9-3554cad86ecd",
+          "meeting_id": "36685f7d-5970-46e4-b62a-044356c590a7",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1167,7 +1167,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "b21a294a-222f-43d7-89f7-52e9977f8949",
+          "project_id": "534fa0ff-1481-4eaf-a7b5-dc7f8495a689",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1212,9 +1212,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.6674000178463757,
-        "p95_ms": 0.777800043579191,
-        "max_ms": 0.777800043579191
+        "median_ms": 0.7876500021666288,
+        "p95_ms": 0.8436000207439065,
+        "max_ms": 0.8436000207439065
       },
       "items": [
         {
@@ -1236,9 +1236,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "25681f690e66d03d9cac5c9d",
+          "id": "9754fa44ac270cf59d769290",
           "kind": "decision",
-          "meeting_id": "39a0e950-23b0-4783-9303-1e43a60e1dcf",
+          "meeting_id": "95f44a6d-6589-497b-8b9b-4ebc2d314ec8",
           "negative": true,
           "normalized_due": null,
           "order": [
@@ -1248,7 +1248,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "47d0b32b-f9d6-4f8f-a378-c65ad357de6c",
+          "project_id": "921feef8-12df-4595-8b23-d6c3403ad3c5",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1293,9 +1293,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 20.88460000231862,
-        "p95_ms": 20.88460000231862,
-        "max_ms": 20.88460000231862
+        "median_ms": 22.22990000154823,
+        "p95_ms": 22.22990000154823,
+        "max_ms": 22.22990000154823
       },
       "items": [
         {
@@ -1317,9 +1317,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "a73bd77fede09a7139bab2c7",
+          "id": "a9ce235a6dea3d711c729d31",
           "kind": "action_item",
-          "meeting_id": "b111dd36-b9a9-49b7-a80e-50b60345f52e",
+          "meeting_id": "8cb7712c-5941-4fc1-9e49-be05e0159e18",
           "negative": false,
           "normalized_due": "2026-10-19",
           "order": [
@@ -1329,7 +1329,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "9d531bdf-ad3b-4349-aa3b-af4a037fadfe",
+          "project_id": "f1e08938-db72-48fa-a1fb-2c422af2c821",
           "raw_due_text": "tomorrow",
           "relations": [],
           "replaces_owner": null,
@@ -1374,9 +1374,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.6589999829884619,
-        "p95_ms": 0.7606999715790153,
-        "max_ms": 0.7606999715790153
+        "median_ms": 0.7176500221248716,
+        "p95_ms": 0.7773000397719443,
+        "max_ms": 0.7773000397719443
       },
       "items": [
         {
@@ -1398,9 +1398,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "5c5c1b66ec9902f8fbe83a0d",
+          "id": "2006927a9e70a73f97dd4fc2",
           "kind": "action_item",
-          "meeting_id": "90a504a6-f94a-4f4e-b83c-ad63e627e024",
+          "meeting_id": "22df3f15-97f1-42b3-a85e-8df33d4e5fd6",
           "negative": false,
           "normalized_due": "2026-10-22",
           "order": [
@@ -1410,7 +1410,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "c5707d8c-7125-4511-8c68-96884bc23783",
+          "project_id": "f1417e95-659f-4c8f-b414-056b3c668a33",
           "raw_due_text": "2026-10-22",
           "relations": [],
           "replaces_owner": null,
@@ -1438,9 +1438,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "6b6ca03f47059174a36adb59",
+          "id": "ef94ffe3f6bcf299fe1dadda",
           "kind": "action_item",
-          "meeting_id": "90a504a6-f94a-4f4e-b83c-ad63e627e024",
+          "meeting_id": "22df3f15-97f1-42b3-a85e-8df33d4e5fd6",
           "negative": false,
           "normalized_due": "2026-10-23",
           "order": [
@@ -1450,7 +1450,7 @@
           "origin": "transcript",
           "owner": "Alex",
           "policy": "meeting-ledger-v1",
-          "project_id": "c5707d8c-7125-4511-8c68-96884bc23783",
+          "project_id": "f1417e95-659f-4c8f-b414-056b3c668a33",
           "raw_due_text": "2026-10-23",
           "relations": [],
           "replaces_owner": null,
@@ -1495,9 +1495,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.694699992891401,
-        "p95_ms": 0.694699992891401,
-        "max_ms": 0.694699992891401
+        "median_ms": 0.7392999832518399,
+        "p95_ms": 0.7392999832518399,
+        "max_ms": 0.7392999832518399
       },
       "items": [
         {
@@ -1519,9 +1519,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "2b4f6b8fb028991a7ebebbc1",
+          "id": "9621e08d7ad41dd0cf5b5f51",
           "kind": "proposal",
-          "meeting_id": "b5897f44-b409-4d83-bac1-eeb14965a1fb",
+          "meeting_id": "84de5787-4ded-4c0a-9e4f-c5911324d5d2",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1531,7 +1531,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "e3d1f312-1292-4bf3-ac72-7a38d69a1d40",
+          "project_id": "aa066e60-e252-465f-b090-5e3948071abf",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1576,9 +1576,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.7733000093139708,
-        "p95_ms": 0.7733000093139708,
-        "max_ms": 0.7733000093139708
+        "median_ms": 0.9466999908909202,
+        "p95_ms": 0.9466999908909202,
+        "max_ms": 0.9466999908909202
       },
       "items": [
         {
@@ -1600,9 +1600,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "619893247ec0ce6b758b193f",
+          "id": "d12e68a6a86cf6c24737844a",
           "kind": "spoken_fact",
-          "meeting_id": "4dbc31b1-fb13-4040-b5c4-b885acdc14dd",
+          "meeting_id": "d320ff1b-6ba3-41bb-a637-29c89259afc5",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1612,7 +1612,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "cf5ad217-68ff-41fc-ad72-e8cf21f5be91",
+          "project_id": "be747e54-c6db-45d5-808d-afd7f16c0194",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1657,9 +1657,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.7230999763123691,
-        "p95_ms": 0.7230999763123691,
-        "max_ms": 0.7230999763123691
+        "median_ms": 0.8426000131294131,
+        "p95_ms": 0.8426000131294131,
+        "max_ms": 0.8426000131294131
       },
       "items": [
         {
@@ -1681,9 +1681,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "ad98e010c16ed61972765b5d",
+          "id": "39ebb287173e13ac003a2fc4",
           "kind": "proposal",
-          "meeting_id": "999514b1-30f9-4a0f-a1a2-3067297f13a2",
+          "meeting_id": "8cfd2271-6273-4792-9d4b-b3d18fbf8588",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1693,7 +1693,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "e7e05ab5-2bbe-4c02-934f-565f9e3b41ef",
+          "project_id": "8785b288-60a2-4c6c-a699-db5ae89dfde3",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1738,9 +1738,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.9462999878451228,
-        "p95_ms": 0.9462999878451228,
-        "max_ms": 0.9462999878451228
+        "median_ms": 0.8653000113554299,
+        "p95_ms": 0.8653000113554299,
+        "max_ms": 0.8653000113554299
       },
       "items": [
         {
@@ -1762,9 +1762,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "b21e340bd9f4ee61859d87d5",
+          "id": "9cb524c63d2cd2e3b32d5695",
           "kind": "action_item",
-          "meeting_id": "661b6cd3-949c-45b8-8b6b-5ce1737ecb31",
+          "meeting_id": "a4b06ed9-df83-4f66-8768-6dd94f5dd435",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1774,7 +1774,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "4ba0ca0f-d43e-49a9-8cfa-b55edbd9d780",
+          "project_id": "5e5fcb35-9662-494f-a5da-c9510b519b64",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -1819,9 +1819,9 @@
       "evidence_expected": 3,
       "caption_apply": {
         "n": 3,
-        "median_ms": 0.7275000098161399,
-        "p95_ms": 0.7321999873965979,
-        "max_ms": 0.7321999873965979
+        "median_ms": 0.7430000114254653,
+        "p95_ms": 0.7496000034734607,
+        "max_ms": 0.7496000034734607
       },
       "items": [
         {
@@ -1843,9 +1843,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "918a4a74cd1c937329090b2e",
+          "id": "c7b609573bd8d1e7c80d5772",
           "kind": "decision",
-          "meeting_id": "16393ac8-7290-41bf-a62f-b515e85cdbbc",
+          "meeting_id": "0a17822f-15fd-4137-9c78-0dcfb6e8751d",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1855,11 +1855,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "f1322439-273b-4267-8be6-c88c0cc8fd96",
+          "project_id": "c6131423-79cb-4326-9ebc-e979289ee411",
           "raw_due_text": "Friday",
           "relations": [
             {
-              "item_id": "d11393f8f5dbedac4eb21fb7",
+              "item_id": "e17f8c124e6ce26008f35a8e",
               "type": "superseded_by"
             }
           ],
@@ -1888,9 +1888,9 @@
             }
           ],
           "explicit_replace": true,
-          "id": "d11393f8f5dbedac4eb21fb7",
+          "id": "e17f8c124e6ce26008f35a8e",
           "kind": "decision",
-          "meeting_id": "16393ac8-7290-41bf-a62f-b515e85cdbbc",
+          "meeting_id": "0a17822f-15fd-4137-9c78-0dcfb6e8751d",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -1900,11 +1900,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "f1322439-273b-4267-8be6-c88c0cc8fd96",
+          "project_id": "c6131423-79cb-4326-9ebc-e979289ee411",
           "raw_due_text": "Monday",
           "relations": [
             {
-              "item_id": "a9fc16e442f0966f12892a76",
+              "item_id": "758edc8098aa7be116507f5a",
               "type": "cancelled_by"
             }
           ],
@@ -1933,9 +1933,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "a9fc16e442f0966f12892a76",
+          "id": "758edc8098aa7be116507f5a",
           "kind": "decision",
-          "meeting_id": "16393ac8-7290-41bf-a62f-b515e85cdbbc",
+          "meeting_id": "0a17822f-15fd-4137-9c78-0dcfb6e8751d",
           "negative": true,
           "normalized_due": null,
           "order": [
@@ -1945,11 +1945,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "f1322439-273b-4267-8be6-c88c0cc8fd96",
+          "project_id": "c6131423-79cb-4326-9ebc-e979289ee411",
           "raw_due_text": null,
           "relations": [
             {
-              "item_id": "d11393f8f5dbedac4eb21fb7",
+              "item_id": "e17f8c124e6ce26008f35a8e",
               "type": "cancels"
             }
           ],
@@ -1995,9 +1995,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 1,
-        "median_ms": 1.3211999903433025,
-        "p95_ms": 1.3211999903433025,
-        "max_ms": 1.3211999903433025
+        "median_ms": 0.9538999875076115,
+        "p95_ms": 0.9538999875076115,
+        "max_ms": 0.9538999875076115
       },
       "items": [
         {
@@ -2019,9 +2019,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "32b4dbca3366aaf0154753e2",
+          "id": "fc08d94b7e1c12af58c7777b",
           "kind": "action_item",
-          "meeting_id": "a32211cd-0d71-4a97-b4a5-0f54599f7859",
+          "meeting_id": "b6b5c587-8771-4d20-87d1-d1431de9f006",
           "negative": false,
           "normalized_due": "2026-10-22",
           "order": [
@@ -2031,7 +2031,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "3520edc6-eb1b-4366-8c9b-04c0bb451a2d",
+          "project_id": "c4db192b-fd0c-4f17-911a-341936312263",
           "raw_due_text": "2026-10-22",
           "relations": [],
           "replaces_owner": null,
@@ -2059,9 +2059,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "469bfb15c4a3d4caf42286e3",
+          "id": "1899fd5aae1492fabd7c8845",
           "kind": "action_item",
-          "meeting_id": "a32211cd-0d71-4a97-b4a5-0f54599f7859",
+          "meeting_id": "b6b5c587-8771-4d20-87d1-d1431de9f006",
           "negative": false,
           "normalized_due": "2026-10-23",
           "order": [
@@ -2071,7 +2071,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "3520edc6-eb1b-4366-8c9b-04c0bb451a2d",
+          "project_id": "c4db192b-fd0c-4f17-911a-341936312263",
           "raw_due_text": "2026-10-23",
           "relations": [],
           "replaces_owner": null,
@@ -2116,9 +2116,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.6942000181879848,
-        "p95_ms": 0.7818000158295035,
-        "max_ms": 0.7818000158295035
+        "median_ms": 0.7548000430688262,
+        "p95_ms": 0.8007000433281064,
+        "max_ms": 0.8007000433281064
       },
       "items": [
         {
@@ -2140,9 +2140,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "83d3e34a813721128d49b147",
+          "id": "f58eda76e88c8c6938187c00",
           "kind": "decision",
-          "meeting_id": "d354cfcd-9570-4c51-b1f6-8dc836289239",
+          "meeting_id": "715c41f1-304a-49a6-894e-9d9124f6e21b",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2152,7 +2152,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "cfb33167-db74-4c04-af87-141e138b1473",
+          "project_id": "e60bcc5c-f10d-4c70-9a1f-c50907514b8f",
           "raw_due_text": "Friday",
           "relations": [],
           "replaces_owner": null,
@@ -2180,9 +2180,9 @@
             }
           ],
           "explicit_replace": true,
-          "id": "38d0def03474ab370491dea5",
+          "id": "2a45a76b635104edd11de16b",
           "kind": "proposal",
-          "meeting_id": "d354cfcd-9570-4c51-b1f6-8dc836289239",
+          "meeting_id": "715c41f1-304a-49a6-894e-9d9124f6e21b",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2192,7 +2192,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "cfb33167-db74-4c04-af87-141e138b1473",
+          "project_id": "e60bcc5c-f10d-4c70-9a1f-c50907514b8f",
           "raw_due_text": "Monday",
           "relations": [],
           "replaces_owner": null,
@@ -2237,9 +2237,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.8825999975670129,
-        "p95_ms": 0.9282000246457756,
-        "max_ms": 0.9282000246457756
+        "median_ms": 0.8732000133022666,
+        "p95_ms": 0.9267000132240355,
+        "max_ms": 0.9267000132240355
       },
       "items": [
         {
@@ -2262,9 +2262,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "90934e5636393cc85115ee6f",
+          "id": "1d6f5ed9276e928eb04857f1",
           "kind": "action_item",
-          "meeting_id": "fed04a3e-8de3-4637-8ec0-2c9285637986",
+          "meeting_id": "a2c814f5-ea5e-44e1-b339-549bfba6ca68",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2274,7 +2274,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "22c16515-e582-4454-8f65-a48e5f731ede",
+          "project_id": "198b1b8d-82b3-461b-89b2-c09abc3bb0c0",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -2300,9 +2300,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "adae756a0b95aec108eed92b",
+          "id": "9d6160ded235e267c704b7c9",
           "kind": "spoken_fact",
-          "meeting_id": "fed04a3e-8de3-4637-8ec0-2c9285637986",
+          "meeting_id": "a2c814f5-ea5e-44e1-b339-549bfba6ca68",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2312,7 +2312,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "22c16515-e582-4454-8f65-a48e5f731ede",
+          "project_id": "198b1b8d-82b3-461b-89b2-c09abc3bb0c0",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -2357,9 +2357,9 @@
       "evidence_expected": 1,
       "caption_apply": {
         "n": 1,
-        "median_ms": 0.7616000366397202,
-        "p95_ms": 0.7616000366397202,
-        "max_ms": 0.7616000366397202
+        "median_ms": 0.7296999683603644,
+        "p95_ms": 0.7296999683603644,
+        "max_ms": 0.7296999683603644
       },
       "items": [
         {
@@ -2381,9 +2381,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "89eb679d86fb25f7440cd2ae",
+          "id": "650f35490693c58c9b09ff1a",
           "kind": "proposal",
-          "meeting_id": "d953879a-6e1f-47cd-85ad-abbe45f0938f",
+          "meeting_id": "35a1c9ea-e815-445e-a7c4-736dfa35d1b3",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2393,7 +2393,7 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "c8120129-bf51-4bed-9db4-284c9ba0be07",
+          "project_id": "2532bd01-1c20-4905-be39-40438a4b144a",
           "raw_due_text": "next Friday",
           "relations": [],
           "replaces_owner": null,
@@ -2438,9 +2438,9 @@
       "evidence_expected": 2,
       "caption_apply": {
         "n": 2,
-        "median_ms": 0.7180999964475632,
-        "p95_ms": 0.8067999733611941,
-        "max_ms": 0.8067999733611941
+        "median_ms": 0.6814000080339611,
+        "p95_ms": 0.7526000263169408,
+        "max_ms": 0.7526000263169408
       },
       "items": [
         {
@@ -2462,9 +2462,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "48c165af73150378b50d593c",
+          "id": "cd1caf68653d023ddc312268",
           "kind": "action_item",
-          "meeting_id": "2a68844f-f8aa-43ba-9d7f-464c08cbeab4",
+          "meeting_id": "b0bd85ca-7596-4428-9570-7295f039a675",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2474,11 +2474,11 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "18a1721b-e18d-43fc-ae63-180f11d3a614",
+          "project_id": "25549a36-66fb-4251-80d2-8b065c4eb67e",
           "raw_due_text": null,
           "relations": [
             {
-              "item_id": "765663bd3026508149acefb1",
+              "item_id": "a028256f7586152a82eb3047",
               "type": "completed_by"
             }
           ],
@@ -2507,9 +2507,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "765663bd3026508149acefb1",
+          "id": "a028256f7586152a82eb3047",
           "kind": "action_item",
-          "meeting_id": "2a68844f-f8aa-43ba-9d7f-464c08cbeab4",
+          "meeting_id": "b0bd85ca-7596-4428-9570-7295f039a675",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2519,7 +2519,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "18a1721b-e18d-43fc-ae63-180f11d3a614",
+          "project_id": "25549a36-66fb-4251-80d2-8b065c4eb67e",
           "raw_due_text": null,
           "relations": [],
           "replaces_owner": null,
@@ -2552,12 +2552,12 @@
     "real_cost": null,
     "status": "ready",
     "error": null,
-    "latency_ms": 702.0931000006385,
+    "latency_ms": 727.6999999885447,
     "caption_apply": {
       "n": 321,
-      "median_ms": 0.8607000345364213,
-      "p95_ms": 1.1502000270411372,
-      "max_ms": 1.8485999898985028
+      "median_ms": 0.9072000393643975,
+      "p95_ms": 1.023300050292164,
+      "max_ms": 1.9689000328071415
     },
     "final_report": {
       "memory_snapshot": [
@@ -2580,9 +2580,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "851036e80bf9303d58f04c39",
+          "id": "1239e07f7325c97e415fc28b",
           "kind": "decision",
-          "meeting_id": "e94646c8-9b56-453f-b504-546b8f2b1ea1",
+          "meeting_id": "c34a9b71-37e0-4a1a-b469-aea521f95357",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2592,11 +2592,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "1df94b38-80c7-4337-a81a-973df2a109ff",
+          "project_id": "7d1a31b9-b5ba-487b-9981-c1ca281c9ae3",
           "raw_due_text": "Friday",
           "relations": [
             {
-              "item_id": "8363c2bb1fb7ae8f1b6ef060",
+              "item_id": "fbedd0841e3e7b570d46c5e5",
               "type": "superseded_by"
             }
           ],
@@ -2625,9 +2625,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "f27b9960a620636ed5b7465a",
+          "id": "69a39669ff551cf4ad08ddf8",
           "kind": "action_item",
-          "meeting_id": "e94646c8-9b56-453f-b504-546b8f2b1ea1",
+          "meeting_id": "c34a9b71-37e0-4a1a-b469-aea521f95357",
           "negative": false,
           "normalized_due": "2026-10-22",
           "order": [
@@ -2637,11 +2637,11 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "1df94b38-80c7-4337-a81a-973df2a109ff",
+          "project_id": "7d1a31b9-b5ba-487b-9981-c1ca281c9ae3",
           "raw_due_text": "2026-10-22",
           "relations": [
             {
-              "item_id": "b5cf883ae47f0d1958596863",
+              "item_id": "021e8ca541012a5ea7b8cddc",
               "type": "superseded_by"
             }
           ],
@@ -2670,9 +2670,9 @@
             }
           ],
           "explicit_replace": true,
-          "id": "8363c2bb1fb7ae8f1b6ef060",
+          "id": "fbedd0841e3e7b570d46c5e5",
           "kind": "decision",
-          "meeting_id": "e94646c8-9b56-453f-b504-546b8f2b1ea1",
+          "meeting_id": "c34a9b71-37e0-4a1a-b469-aea521f95357",
           "negative": false,
           "normalized_due": null,
           "order": [
@@ -2682,11 +2682,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "1df94b38-80c7-4337-a81a-973df2a109ff",
+          "project_id": "7d1a31b9-b5ba-487b-9981-c1ca281c9ae3",
           "raw_due_text": "Monday",
           "relations": [
             {
-              "item_id": "d4e531c01ae881b672f7bb4d",
+              "item_id": "37181faacb46060fb7a74067",
               "type": "cancelled_by"
             }
           ],
@@ -2715,9 +2715,9 @@
             }
           ],
           "explicit_replace": true,
-          "id": "b5cf883ae47f0d1958596863",
+          "id": "021e8ca541012a5ea7b8cddc",
           "kind": "action_item",
-          "meeting_id": "e94646c8-9b56-453f-b504-546b8f2b1ea1",
+          "meeting_id": "c34a9b71-37e0-4a1a-b469-aea521f95357",
           "negative": false,
           "normalized_due": "2026-10-26",
           "order": [
@@ -2727,7 +2727,7 @@
           "origin": "transcript",
           "owner": "Minh",
           "policy": "meeting-ledger-v1",
-          "project_id": "1df94b38-80c7-4337-a81a-973df2a109ff",
+          "project_id": "7d1a31b9-b5ba-487b-9981-c1ca281c9ae3",
           "raw_due_text": "2026-10-26",
           "relations": [],
           "replaces_owner": null,
@@ -2755,9 +2755,9 @@
             }
           ],
           "explicit_replace": false,
-          "id": "d4e531c01ae881b672f7bb4d",
+          "id": "37181faacb46060fb7a74067",
           "kind": "decision",
-          "meeting_id": "e94646c8-9b56-453f-b504-546b8f2b1ea1",
+          "meeting_id": "c34a9b71-37e0-4a1a-b469-aea521f95357",
           "negative": true,
           "normalized_due": null,
           "order": [
@@ -2767,11 +2767,11 @@
           "origin": "transcript",
           "owner": null,
           "policy": "meeting-ledger-v1",
-          "project_id": "1df94b38-80c7-4337-a81a-973df2a109ff",
+          "project_id": "7d1a31b9-b5ba-487b-9981-c1ca281c9ae3",
           "raw_due_text": null,
           "relations": [
             {
-              "item_id": "8363c2bb1fb7ae8f1b6ef060",
+              "item_id": "fbedd0841e3e7b570d46c5e5",
               "type": "cancels"
             }
           ],
@@ -6324,7 +6324,7 @@
         "requirements": [],
         "decisions": [
           {
-            "id": "adf5b959-e17a-427a-a919-13bf8bfdac5a",
+            "id": "f6bb7650-f225-4945-b59b-c1ace194b770",
             "text": "Confirmed: deploy API-17 on Friday.",
             "text_en": "Confirmed: deploy API-17 on Friday.",
             "evidence_segment_ids": [
@@ -6338,7 +6338,7 @@
             "status": "open"
           },
           {
-            "id": "c5aacd2d-28a1-406b-a483-a41db2044fc5",
+            "id": "26708c87-21ff-4208-8481-ffba1ebbf987",
             "text": "Correction: confirmed deploy API-17 on Monday instead.",
             "text_en": "Correction: confirmed deploy API-17 on Monday instead.",
             "evidence_segment_ids": [
@@ -6354,7 +6354,7 @@
         ],
         "action_items": [
           {
-            "id": "84d944b3-5fde-4086-803e-a4be3c5584f0",
+            "id": "bcfecac6-18f0-4cf4-ad6d-f53234ffca9e",
             "text": "I will review API-18 by 2026-10-22.",
             "text_en": "I will review API-18 by 2026-10-22.",
             "evidence_segment_ids": [
@@ -6368,7 +6368,7 @@
             "status": "open"
           },
           {
-            "id": "75cae317-fa36-4423-816c-e50ccd45a4fb",
+            "id": "8d2a0348-21de-4130-acd4-7ec98f3c2fe6",
             "text": "Correction: I will review API-18 by 2026-10-26 instead.",
             "text_en": "Correction: I will review API-18 by 2026-10-26 instead.",
             "evidence_segment_ids": [
@@ -6384,7 +6384,7 @@
         ],
         "open_questions": [
           {
-            "id": "f61405f1-eb9d-4ffe-acb4-f89891559e2c",
+            "id": "c9d921c2-456b-4302-a85a-a317334845cc",
             "text": "Cancel deploy API-17 because QA is not finished.",
             "text_en": "Cancel deploy API-17 because QA is not finished.",
             "evidence_segment_ids": [
@@ -6410,8 +6410,8 @@
         "scope": "bounded explicit grammar; other map items retain original validators, not general entailment"
       },
       "edit_provenance": null,
-      "id": "2896c0f6-0d09-438e-8f45-d294a5da8643",
-      "meeting_id": "e94646c8-9b56-453f-b504-546b8f2b1ea1",
+      "id": "5103bab6-1079-45a3-b722-db239887565c",
+      "meeting_id": "c34a9b71-37e0-4a1a-b469-aea521f95357",
       "version": 1,
       "transcript_revision": 321,
       "payload": {
@@ -6425,7 +6425,7 @@
         "decisions": [],
         "action_items": [
           {
-            "id": "memory-b5cf883ae47f0d1958596863",
+            "id": "memory-021e8ca541012a5ea7b8cddc",
             "text": "Correction: I will review API-18 by 2026-10-26 instead.",
             "text_en": "Correction: I will review API-18 by 2026-10-26 instead.",
             "evidence_segment_ids": [
@@ -6451,15 +6451,15 @@
       "user_edits": false,
       "reviewed_at": null,
       "mode": "real",
-      "created_at": "2026-10-20T13:28:53.114998+00:00",
+      "created_at": "2026-10-20T13:46:09.641900+00:00",
       "parent_id": null,
       "evidence_changed": false
     },
     "memory_update": {
       "n": 321,
-      "median_ms": 0.6452000234276056,
-      "p95_ms": 0.8236999856308103,
-      "max_ms": 1.312199980020523
+      "median_ms": 0.7093000458553433,
+      "p95_ms": 0.7813999545760453,
+      "max_ms": 1.5388000174425542
     },
     "expired_confirmed_decisions_current": 0,
     "expired_deadlines_current": 0,

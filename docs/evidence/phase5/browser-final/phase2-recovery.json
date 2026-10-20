@@ -14,19 +14,19 @@
     }
   ],
   "snapshot": {
-    "id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-    "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+    "id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+    "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
     "title": "SYNTHETIC PHASE 2 RECOVERY",
     "timezone": "America/Los_Angeles",
     "persistence_mode": "local",
     "demo": false,
     "meeting_key": "/phase2-room",
     "status": "active",
-    "started_at": "2026-10-20T13:29:20.645893+00:00",
+    "started_at": "2026-10-20T13:46:55.402390+00:00",
     "ended_at": null,
     "transcript_revision": 15,
     "capture_status": "observing",
-    "last_caption_at": "2026-10-20T13:30:11.508Z",
+    "last_caption_at": "2026-10-20T13:47:47.027Z",
     "self_speaker": "Client",
     "auto_mode": true,
     "confirmed_segment_ids": [],
@@ -38,81 +38,81 @@
     "memory_revision": 6,
     "segments": [
       {
-        "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-        "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+        "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+        "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
         "revision": 3,
         "speaker": "Client",
         "text": "Timeout 50.5 ms API-71",
         "stable": true,
-        "observed_from": "2026-10-20T13:29:20.813Z",
-        "observed_to": "2026-10-20T13:29:21.891Z"
+        "observed_from": "2026-10-20T13:46:55.577Z",
+        "observed_to": "2026-10-20T13:46:56.648Z"
       },
       {
-        "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-        "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+        "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+        "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
         "revision": 2,
         "speaker": "Client",
         "text": "During outage 5000 NOT API-17",
         "stable": true,
-        "observed_from": "2026-10-20T13:29:22.033Z",
-        "observed_to": "2026-10-20T13:29:23.091Z"
+        "observed_from": "2026-10-20T13:46:56.736Z",
+        "observed_to": "2026-10-20T13:46:57.747Z"
       },
       {
-        "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-        "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+        "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+        "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
         "revision": 2,
         "speaker": "Client",
         "text": "During outage 20000 NOT API-17",
         "stable": true,
-        "observed_from": "2026-10-20T13:29:30.046Z",
-        "observed_to": "2026-10-20T13:29:31.091Z"
+        "observed_from": "2026-10-20T13:47:04.751Z",
+        "observed_to": "2026-10-20T13:47:05.848Z"
       },
       {
-        "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-        "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+        "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+        "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
         "revision": 4,
         "speaker": "Another client",
         "text": "Could you explain the revised next step?",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:03.657Z",
-        "observed_to": "2026-10-20T13:30:07.632Z"
+        "observed_from": "2026-10-20T13:47:39.349Z",
+        "observed_to": "2026-10-20T13:47:43.025Z"
       },
       {
-        "id": "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7",
-        "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+        "id": "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c",
+        "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
         "revision": 2,
         "speaker": "Another client",
         "text": "Which option should we choose next?",
         "stable": true,
-        "observed_from": "2026-10-20T13:30:07.936Z",
-        "observed_to": "2026-10-20T13:30:09.021Z"
+        "observed_from": "2026-10-20T13:47:43.394Z",
+        "observed_to": "2026-10-20T13:47:44.425Z"
       },
       {
-        "id": "d30d6785-cad4-4483-8b6b-3fe3f850ddf4",
-        "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+        "id": "cac04858-6d97-4290-bd21-271fa646446e",
+        "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
         "revision": 1,
         "speaker": "Another client",
         "text": "Could you clarify after the panel closes?",
         "stable": false,
-        "observed_from": "2026-10-20T13:30:09.948Z",
-        "observed_to": "2026-10-20T13:30:09.948Z"
+        "observed_from": "2026-10-20T13:47:45.423Z",
+        "observed_to": "2026-10-20T13:47:45.423Z"
       },
       {
-        "id": "070daf8c-0d5f-447e-a2b2-b079604b0a76",
-        "capture_epoch": "2c87e034-cb5c-4d39-91b9-ec3ca770a881",
+        "id": "70772833-0cd5-47bb-ade2-1797f132ffc2",
+        "capture_epoch": "e85d06ba-48cc-4e21-aa42-a873009321f5",
         "revision": 1,
         "speaker": "Fresh speaker",
         "text": "Fresh after reload",
         "stable": false,
-        "observed_from": "2026-10-20T13:30:11.508Z",
-        "observed_to": "2026-10-20T13:30:11.508Z"
+        "observed_from": "2026-10-20T13:47:47.027Z",
+        "observed_to": "2026-10-20T13:47:47.027Z"
       }
     ],
     "suggestions": [
       {
-        "id": "477c57e0-f8e2-4a6a-ab68-56663c5d0291",
-        "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
-        "created_at": "2026-10-20T13:30:05.643908+00:00",
+        "id": "0f8e248b-102b-45a3-8216-34a920b60c1f",
+        "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
+        "created_at": "2026-10-20T13:47:41.079889+00:00",
         "mode": "real",
         "payload": {
           "input_revision": 9,
@@ -125,66 +125,66 @@
           "evidence_status": "missing",
           "uncertainties": [],
           "supporting_segment_ids": [
-            "6f33055f-afac-4ffa-b1c4-2711add48184",
-            "154a8000-8651-4711-942f-eb7f77fd3b15",
-            "f0ce9762-7f74-41f9-8233-514e645894ef",
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+            "1f0483e3-7ce6-4538-8a52-808be6054087",
+            "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ]
         },
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY 0",
-          "input_hash": "07d29dc33ff81b5ae2002bdf320b39285497c4f80a8c954e7e589e6d23b6c69b",
+          "input_hash": "2acece47e1bab963ac5710da951138c9a3572515a00c73f82b2c2bc85a0fca20",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -198,14 +198,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.10559998918324709
+            "classifier_ms": 0.10099995415657759
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -215,7 +215,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -229,14 +229,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -250,14 +250,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -271,14 +271,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -292,7 +292,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -313,11 +313,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 29.31209997041151
+          "retrieval_ms": 18.58079998055473
         },
         "stale": true,
         "automatic": false,
-        "duration_ms": 19.10099998349324,
+        "duration_ms": 14.73609998356551,
         "timing": {
           "trigger": "manual",
           "temperature": "cold",
@@ -331,26 +331,26 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 5.585199978668243
+              "offset_ms": 5.136499996297061
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 19.963999977335334
+              "offset_ms": 15.076400013640523
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 21.05219999793917
+              "offset_ms": 15.898599987849593
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 22.04179996624589
+              "offset_ms": 16.835200018249452
             }
           ],
-          "provider_ms": 14.366600022185594,
-          "validation_ms": 1.8428000039421022,
-          "stable_to_scheduled_ms": 881.9549000472762,
-          "scheduler_wait_ms": 3.9967999910004437,
-          "retrieval_ms": 29.31209997041151,
+          "provider_ms": 9.932099957950413,
+          "validation_ms": 1.54819997260347,
+          "stable_to_scheduled_ms": 618.7666999758221,
+          "scheduler_wait_ms": 3.3964000176638365,
+          "retrieval_ms": 18.58079998055473,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -360,9 +360,9 @@
         }
       },
       {
-        "id": "d4aac5d8-da9e-4359-80ed-60f8be9b412e",
-        "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
-        "created_at": "2026-10-20T13:30:05.875328+00:00",
+        "id": "785262f3-6e86-4a28-a807-5c2a1468da5b",
+        "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
+        "created_at": "2026-10-20T13:47:41.330632+00:00",
         "mode": "real",
         "payload": {
           "input_revision": 9,
@@ -375,66 +375,66 @@
           "evidence_status": "missing",
           "uncertainties": [],
           "supporting_segment_ids": [
-            "6f33055f-afac-4ffa-b1c4-2711add48184",
-            "154a8000-8651-4711-942f-eb7f77fd3b15",
-            "f0ce9762-7f74-41f9-8233-514e645894ef",
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+            "1f0483e3-7ce6-4538-8a52-808be6054087",
+            "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ]
         },
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY 1",
-          "input_hash": "7058352450ca1893a510b7e0cfab86d6cbd5155ae20396feff1ff153f6b34a0d",
+          "input_hash": "020e27d83a822f2b1bd51b54e35383f3e1001ae7893e821e94f3b8eb62e6d496",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -448,14 +448,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.06500002928078175
+            "classifier_ms": 0.12370001059025526
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -465,7 +465,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -479,14 +479,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -500,14 +500,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -521,14 +521,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -542,7 +542,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -563,11 +563,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 17.098500044085085
+          "retrieval_ms": 28.610799985472113
         },
         "stale": true,
         "automatic": false,
-        "duration_ms": 7.692699960898608,
+        "duration_ms": 9.215200028847903,
         "timing": {
           "trigger": "manual",
           "temperature": "warm",
@@ -581,26 +581,26 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 4.986800020560622
+              "offset_ms": 10.10889996541664
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 8.698099991306663
+              "offset_ms": 14.585299999453127
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 9.221900021657348
+              "offset_ms": 15.428599959705025
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 10.09420002810657
+              "offset_ms": 16.366099996957928
             }
           ],
-          "provider_ms": 3.702400019392371,
-          "validation_ms": 1.2215999886393547,
-          "stable_to_scheduled_ms": 1125.4832000122406,
-          "scheduler_wait_ms": 3.276500036008656,
-          "retrieval_ms": 17.098500044085085,
+          "provider_ms": 4.466599959414452,
+          "validation_ms": 1.5588999958708882,
+          "stable_to_scheduled_ms": 870.0937000103295,
+          "scheduler_wait_ms": 8.336699975188822,
+          "retrieval_ms": 28.610799985472113,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -610,9 +610,9 @@
         }
       },
       {
-        "id": "ebfe2a9c-bfe3-4af1-aaee-dc95e9336af5",
-        "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
-        "created_at": "2026-10-20T13:30:06.146178+00:00",
+        "id": "eea903c8-6e06-4749-9823-10d88bdd50b0",
+        "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736",
+        "created_at": "2026-10-20T13:47:41.586749+00:00",
         "mode": "real",
         "payload": {
           "input_revision": 9,
@@ -625,66 +625,66 @@
           "evidence_status": "missing",
           "uncertainties": [],
           "supporting_segment_ids": [
-            "6f33055f-afac-4ffa-b1c4-2711add48184",
-            "154a8000-8651-4711-942f-eb7f77fd3b15",
-            "f0ce9762-7f74-41f9-8233-514e645894ef",
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+            "1f0483e3-7ce6-4538-8a52-808be6054087",
+            "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ]
         },
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY 2",
-          "input_hash": "7cb27441c4f5bf82aa57d333fb475f8ef67482fa0bfa5d77bf04f555959c0d92",
+          "input_hash": "1fe29d7a940c269cd989f383a2383d948bbf29deadeac859bc0af3462b5cd321",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -698,14 +698,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.08219998562708497
+            "classifier_ms": 0.10710000060498714
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -715,7 +715,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -729,14 +729,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -750,14 +750,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -771,14 +771,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -792,7 +792,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -813,11 +813,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 32.92129997862503
+          "retrieval_ms": 27.68359996844083
         },
         "stale": true,
         "automatic": false,
-        "duration_ms": 7.549499976448715,
+        "duration_ms": 8.724000013899058,
         "timing": {
           "trigger": "manual",
           "temperature": "warm",
@@ -831,26 +831,26 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 10.18739998107776
+              "offset_ms": 9.986800025217235
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 13.634399976581335
+              "offset_ms": 13.97159998305142
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 14.237599971238524
+              "offset_ms": 14.738300000317395
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 14.856699970550835
+              "offset_ms": 15.672900015488267
             }
           ],
-          "provider_ms": 3.4401999437250197,
-          "validation_ms": 1.0218999814242125,
-          "stable_to_scheduled_ms": 1391.4256000425667,
-          "scheduler_wait_ms": 8.331799996085465,
-          "retrieval_ms": 32.92129997862503,
+          "provider_ms": 3.9778000209480524,
+          "validation_ms": 1.4944999711588025,
+          "stable_to_scheduled_ms": 1126.9164999830537,
+          "scheduler_wait_ms": 8.120100013911724,
+          "retrieval_ms": 27.68359996844083,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -860,9 +860,9 @@
         }
       },
       {
-        "id": "8ceeee80-550c-4201-a6a0-cc2bb20285e4",
-        "request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7",
-        "created_at": "2026-10-20T13:30:07.342389+00:00",
+        "id": "5f98958a-7731-4281-95dc-bc8076ff3e12",
+        "request_id": "8696ad05-5932-4295-86eb-2fb04cf255be",
+        "created_at": "2026-10-20T13:47:42.784258+00:00",
         "mode": "real",
         "payload": {
           "input_revision": 9,
@@ -875,66 +875,66 @@
           "evidence_status": "missing",
           "uncertainties": [],
           "supporting_segment_ids": [
-            "6f33055f-afac-4ffa-b1c4-2711add48184",
-            "154a8000-8651-4711-942f-eb7f77fd3b15",
-            "f0ce9762-7f74-41f9-8233-514e645894ef",
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+            "1f0483e3-7ce6-4538-8a52-808be6054087",
+            "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ]
         },
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_SLOW_STALE",
-          "input_hash": "283d14e63ea21d866094a59bf5232ae81d5c867a77fb7bb0c1fdc4e8378c7321",
+          "input_hash": "b018d50ba837f44fb0d9d4ab919c7e300edd7642de3a54121f80f78b34ee1a4c",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -948,14 +948,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.06639998173341155
+            "classifier_ms": 0.10859995381906629
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -965,7 +965,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -979,14 +979,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -1000,14 +1000,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -1021,14 +1021,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -1042,7 +1042,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -1063,11 +1063,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 29.283000039868057
+          "retrieval_ms": 27.846999990288168
         },
         "stale": true,
         "automatic": false,
-        "duration_ms": 820.709599996917,
+        "duration_ms": 815.936699975282,
         "timing": {
           "trigger": "manual",
           "temperature": "warm",
@@ -1081,26 +1081,26 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 5.843400023877621
+              "offset_ms": 6.225899967830628
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 823.0683000292629
+              "offset_ms": 818.3163999929093
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 823.5254000173882
+              "offset_ms": 818.7703999574296
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 824.1037999978289
+              "offset_ms": 819.3489999976009
             }
           ],
-          "provider_ms": 817.2166000003926,
-          "validation_ms": 0.88310003047809,
-          "stable_to_scheduled_ms": 1778.6221000133082,
-          "scheduler_wait_ms": 4.171000036876649,
-          "retrieval_ms": 29.283000039868057,
+          "provider_ms": 812.0829000254162,
+          "validation_ms": 0.8847999852150679,
+          "stable_to_scheduled_ms": 1521.1306000128388,
+          "scheduler_wait_ms": 4.186499980278313,
+          "retrieval_ms": 27.846999990288168,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -1110,9 +1110,9 @@
         }
       },
       {
-        "id": "a50e61a8-c682-4e13-9157-eaa106cc1c1e",
-        "request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9",
-        "created_at": "2026-10-20T13:30:07.808625+00:00",
+        "id": "76fcacb2-714a-45ac-bb15-bfc8b877fff2",
+        "request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a",
+        "created_at": "2026-10-20T13:47:43.228118+00:00",
         "mode": "real",
         "payload": {
           "input_revision": 11,
@@ -1125,66 +1125,66 @@
           "evidence_status": "missing",
           "uncertainties": [],
           "supporting_segment_ids": [
-            "6f33055f-afac-4ffa-b1c4-2711add48184",
-            "154a8000-8651-4711-942f-eb7f77fd3b15",
-            "f0ce9762-7f74-41f9-8233-514e645894ef",
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+            "1f0483e3-7ce6-4538-8a52-808be6054087",
+            "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ]
         },
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 11,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 4,
               "speaker": "Another client",
               "text": "Could you explain the revised next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:07.632Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:43.025Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY_AFTER_CANCEL",
-          "input_hash": "c1dd67bd7ed14221ff981a3d34077816bd113bbbdbac7c22dbb9d5616497c8d6",
+          "input_hash": "da3dafc005d1e0ced701e89790a074988cccf34d17fcf16e5c28f8935dad0d55",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -1198,14 +1198,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.09699998190626502
+            "classifier_ms": 0.12989999959245324
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -1215,7 +1215,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -1229,14 +1229,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -1250,14 +1250,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the revised next step?",
               "entity": null,
@@ -1271,14 +1271,14 @@
               "evidence": [
                 {
                   "revision": 4,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 3,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -1292,7 +1292,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -1313,11 +1313,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 41.94840003037825
+          "retrieval_ms": 29.422399995382875
         },
         "stale": true,
         "automatic": false,
-        "duration_ms": 8.260899980086833,
+        "duration_ms": 8.501600008457899,
         "timing": {
           "trigger": "manual",
           "temperature": "warm",
@@ -1331,26 +1331,26 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 15.340800047852099
+              "offset_ms": 29.692500014789402
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 18.963500042445958
+              "offset_ms": 33.01050001755357
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 19.750400038901716
+              "offset_ms": 33.82940002484247
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 20.624800003133714
+              "offset_ms": 34.80690001742914
             }
           ],
-          "provider_ms": 3.6161000025458634,
-          "validation_ms": 1.4573000371456146,
-          "stable_to_scheduled_ms": 124.8448999831453,
-          "scheduler_wait_ms": 13.39980005286634,
-          "retrieval_ms": 41.94840003037825,
+          "provider_ms": 3.311699954792857,
+          "validation_ms": 1.55699992319569,
+          "stable_to_scheduled_ms": 155.1194000057876,
+          "scheduler_wait_ms": 27.315600018482655,
+          "retrieval_ms": 29.422399995382875,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -1360,9 +1360,9 @@
         }
       },
       {
-        "id": "21a0ae32-b7b8-4395-8625-0dfffc456dbd",
-        "request_id": "ca191910-796b-43c2-9a68-2554ccac2926",
-        "created_at": "2026-10-20T13:30:09.196919+00:00",
+        "id": "461fa8eb-bdce-4e1b-985d-2337259cd967",
+        "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
+        "created_at": "2026-10-20T13:47:44.613193+00:00",
         "mode": "real",
         "payload": {
           "input_revision": 13,
@@ -1375,78 +1375,78 @@
           "evidence_status": "missing",
           "uncertainties": [],
           "supporting_segment_ids": [
-            "6f33055f-afac-4ffa-b1c4-2711add48184",
-            "154a8000-8651-4711-942f-eb7f77fd3b15",
-            "f0ce9762-7f74-41f9-8233-514e645894ef",
-            "4feda5ee-ab1c-461e-a431-63e7875c1546",
-            "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7"
+            "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+            "1f0483e3-7ce6-4538-8a52-808be6054087",
+            "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+            "a2dcd498-3e58-499f-9f31-b06149ca4052",
+            "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c"
           ]
         },
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 13,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 4,
               "speaker": "Another client",
               "text": "Could you explain the revised next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:07.632Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:43.025Z"
             },
             {
-              "id": "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Which option should we choose next?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:07.936Z",
-              "observed_to": "2026-10-20T13:30:09.021Z"
+              "observed_from": "2026-10-20T13:47:43.394Z",
+              "observed_to": "2026-10-20T13:47:44.425Z"
             }
           ],
           "memory": [],
           "sources": [
             {
-              "id": "e8c556ac-ad54-4abb-a121-5cd26d58eff1",
-              "source_id": "8870bd56-3dce-440b-8ce2-355bb609922c",
-              "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+              "id": "85a91eb0-273e-473e-95d6-fb3bc1bbb457",
+              "source_id": "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff",
+              "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
               "generation": 1,
               "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
               "title": "API deployment notes",
@@ -1454,7 +1454,7 @@
               "path": "API deployment notes",
               "line_start": 1,
               "line_end": 1,
-              "indexed_at": "2026-10-20T13:29:10.474328+00:00",
+              "indexed_at": "2026-10-20T13:46:46.194801+00:00",
               "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
               "stale": false,
               "source_changed": false,
@@ -1467,7 +1467,7 @@
           ],
           "action": "auto",
           "question": "",
-          "input_hash": "4085aca25016f5947960aacd20110ab0ee737f729738f54abf60728c248c6218",
+          "input_hash": "347d890f6bd81c4e3dd37bc20aaba4a452ac1c066f6788e1859672e3bbbebe97",
           "routing": {
             "version": "rules-v1",
             "route": "deep",
@@ -1481,14 +1481,14 @@
             "evidence_state": "available",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7"
+              "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c"
             ],
             "target_min_s": 5,
             "target_max_s": 10,
-            "classifier_ms": 0.08319999324157834
+            "classifier_ms": 0.0819999841041863
           },
           "focus_segment_ids": [
-            "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7"
+            "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -1498,7 +1498,7 @@
           "capture_cursor": 8,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -1512,14 +1512,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -1533,14 +1533,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the revised next step?",
               "entity": null,
@@ -1554,14 +1554,14 @@
               "evidence": [
                 {
                   "revision": 4,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 3,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -1575,7 +1575,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -1596,11 +1596,11 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 0.19779999274760485
+          "retrieval_ms": 0.20740000763908029
         },
         "stale": false,
         "automatic": true,
-        "duration_ms": 10.66159998299554,
+        "duration_ms": 13.083599973469973,
         "timing": {
           "trigger": "auto",
           "temperature": "warm",
@@ -1614,26 +1614,26 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 5.148699972778559
+              "offset_ms": 4.875200043898076
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 8.227999962400645
+              "offset_ms": 8.595400024205446
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 10.004599986132234
+              "offset_ms": 10.934500023722649
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 11.357099981978536
+              "offset_ms": 12.487400032114238
             }
           ],
-          "provider_ms": 3.0738000059500337,
-          "validation_ms": 2.930099959485233,
-          "stable_to_scheduled_ms": 156.27580002183095,
-          "scheduler_wait_ms": 3.048499987926334,
-          "retrieval_ms": 0.19779999274760485,
+          "provider_ms": 3.714499995112419,
+          "validation_ms": 3.6786999553442,
+          "stable_to_scheduled_ms": 165.21209996426478,
+          "scheduler_wait_ms": 2.8921000193804502,
+          "retrieval_ms": 0.20740000763908029,
           "http_attempts": 0,
           "repair_attempts": 0,
           "usage_unknown_attempts": 0,
@@ -1645,64 +1645,64 @@
     ],
     "requests": [
       {
-        "id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
+        "id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
         "action": "suggest",
         "status": "ready",
         "error": null,
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY 0",
-          "input_hash": "07d29dc33ff81b5ae2002bdf320b39285497c4f80a8c954e7e589e6d23b6c69b",
+          "input_hash": "2acece47e1bab963ac5710da951138c9a3572515a00c73f82b2c2bc85a0fca20",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -1716,14 +1716,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.10559998918324709
+            "classifier_ms": 0.10099995415657759
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -1733,7 +1733,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -1747,14 +1747,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -1768,14 +1768,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -1789,14 +1789,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -1810,7 +1810,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -1831,7 +1831,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 29.31209997041151
+          "retrieval_ms": 18.58079998055473
         },
         "timing": {
           "trigger": "manual",
@@ -1846,30 +1846,30 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 5.585199978668243
+              "offset_ms": 5.136499996297061
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 19.963999977335334
+              "offset_ms": 15.076400013640523
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 21.05219999793917
+              "offset_ms": 15.898599987849593
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 22.04179996624589
+              "offset_ms": 16.835200018249452
             },
             {
               "stage": "request_completed",
-              "offset_ms": 25.79310000874102
+              "offset_ms": 20.82969999173656
             }
           ],
-          "provider_ms": 14.366600022185594,
-          "validation_ms": 1.8428000039421022,
-          "stable_to_scheduled_ms": 881.9549000472762,
-          "scheduler_wait_ms": 3.9967999910004437,
-          "retrieval_ms": 29.31209997041151,
+          "provider_ms": 9.932099957950413,
+          "validation_ms": 1.54819997260347,
+          "stable_to_scheduled_ms": 618.7666999758221,
+          "scheduler_wait_ms": 3.3964000176638365,
+          "retrieval_ms": 18.58079998055473,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -1877,70 +1877,70 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:05.620850+00:00",
-        "started_at": "2026-10-20T13:30:05.624881+00:00",
-        "duration_ms": 21.77369996206835,
-        "stable_to_request_ms": 885.9517000382766
+        "created_at": "2026-10-20T13:47:41.061779+00:00",
+        "started_at": "2026-10-20T13:47:41.065210+00:00",
+        "duration_ms": 17.40589999826625,
+        "stable_to_request_ms": 622.163099993486
       },
       {
-        "id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
+        "id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
         "action": "suggest",
         "status": "ready",
         "error": null,
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY 1",
-          "input_hash": "7058352450ca1893a510b7e0cfab86d6cbd5155ae20396feff1ff153f6b34a0d",
+          "input_hash": "020e27d83a822f2b1bd51b54e35383f3e1001ae7893e821e94f3b8eb62e6d496",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -1954,14 +1954,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.06500002928078175
+            "classifier_ms": 0.12370001059025526
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -1971,7 +1971,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -1985,14 +1985,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -2006,14 +2006,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -2027,14 +2027,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -2048,7 +2048,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -2069,7 +2069,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 17.098500044085085
+          "retrieval_ms": 28.610799985472113
         },
         "timing": {
           "trigger": "manual",
@@ -2084,30 +2084,30 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 4.986800020560622
+              "offset_ms": 10.10889996541664
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 8.698099991306663
+              "offset_ms": 14.585299999453127
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 9.221900021657348
+              "offset_ms": 15.428599959705025
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 10.09420002810657
+              "offset_ms": 16.366099996957928
             },
             {
               "stage": "request_completed",
-              "offset_ms": 13.213900034315884
+              "offset_ms": 20.04029997624457
             }
           ],
-          "provider_ms": 3.702400019392371,
-          "validation_ms": 1.2215999886393547,
-          "stable_to_scheduled_ms": 1125.4832000122406,
-          "scheduler_wait_ms": 3.276500036008656,
-          "retrieval_ms": 17.098500044085085,
+          "provider_ms": 4.466599959414452,
+          "validation_ms": 1.5588999958708882,
+          "stable_to_scheduled_ms": 870.0937000103295,
+          "scheduler_wait_ms": 8.336699975188822,
+          "retrieval_ms": 28.610799985472113,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -2115,70 +2115,70 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:05.864387+00:00",
-        "started_at": "2026-10-20T13:30:05.867688+00:00",
-        "duration_ms": 9.921799995936453,
-        "stable_to_request_ms": 1128.7597000482492
+        "created_at": "2026-10-20T13:47:41.313114+00:00",
+        "started_at": "2026-10-20T13:47:41.321476+00:00",
+        "duration_ms": 11.678099981509149,
+        "stable_to_request_ms": 878.4303999855183
       },
       {
-        "id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
+        "id": "cfc9d4fe-4096-4338-8853-647d665d0736",
         "action": "suggest",
         "status": "ready",
         "error": null,
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY 2",
-          "input_hash": "7cb27441c4f5bf82aa57d333fb475f8ef67482fa0bfa5d77bf04f555959c0d92",
+          "input_hash": "1fe29d7a940c269cd989f383a2383d948bbf29deadeac859bc0af3462b5cd321",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -2192,14 +2192,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.08219998562708497
+            "classifier_ms": 0.10710000060498714
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -2209,7 +2209,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -2223,14 +2223,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -2244,14 +2244,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -2265,14 +2265,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -2286,7 +2286,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -2307,7 +2307,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 32.92129997862503
+          "retrieval_ms": 27.68359996844083
         },
         "timing": {
           "trigger": "manual",
@@ -2322,30 +2322,30 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 10.18739998107776
+              "offset_ms": 9.986800025217235
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 13.634399976581335
+              "offset_ms": 13.97159998305142
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 14.237599971238524
+              "offset_ms": 14.738300000317395
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 14.856699970550835
+              "offset_ms": 15.672900015488267
             },
             {
               "stage": "request_completed",
-              "offset_ms": 18.2739999727346
+              "offset_ms": 19.157900009304285
             }
           ],
-          "provider_ms": 3.4401999437250197,
-          "validation_ms": 1.0218999814242125,
-          "stable_to_scheduled_ms": 1391.4256000425667,
-          "scheduler_wait_ms": 8.331799996085465,
-          "retrieval_ms": 32.92129997862503,
+          "provider_ms": 3.9778000209480524,
+          "validation_ms": 1.4944999711588025,
+          "stable_to_scheduled_ms": 1126.9164999830537,
+          "scheduler_wait_ms": 8.120100013911724,
+          "retrieval_ms": 27.68359996844083,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -2353,75 +2353,75 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:06.130330+00:00",
-        "started_at": "2026-10-20T13:30:06.138687+00:00",
-        "duration_ms": 9.918499970808625,
-        "stable_to_request_ms": 1399.7574000386521
+        "created_at": "2026-10-20T13:47:41.569938+00:00",
+        "started_at": "2026-10-20T13:47:41.578082+00:00",
+        "duration_ms": 11.017100012395531,
+        "stable_to_request_ms": 1135.0365999969654
       },
       {
-        "id": "740c86d5-556f-41f2-9935-0d6a0b1546c7",
+        "id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d",
         "action": "suggest",
         "status": "error",
         "error": {
           "code": "PROVIDER_AUTH",
           "message": "Provider HTTP 401. Check key/model/settings; retry only when appropriate.",
           "retryable": false,
-          "request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7"
+          "request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d"
         },
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_ERROR",
-          "input_hash": "1a87b96c9f29b1a8cb9782c6bf7d2d5fd497b7cbf19ee0542bbdc9a69ccf8657",
+          "input_hash": "8e52a16705e71ac3fc6d782371487f4e756ade4823a77f7da8de198ff7990207",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -2435,14 +2435,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.09579997276887298
+            "classifier_ms": 0.08230004459619522
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -2452,7 +2452,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -2466,14 +2466,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -2487,14 +2487,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -2508,14 +2508,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -2529,7 +2529,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -2550,7 +2550,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 39.06260000076145
+          "retrieval_ms": 31.25010000076145
         },
         "timing": {
           "trigger": "manual",
@@ -2565,22 +2565,22 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 9.875599993392825
+              "offset_ms": 7.87329999729991
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 14.971899974625558
+              "offset_ms": 11.519199993927032
             },
             {
               "stage": "request_completed",
-              "offset_ms": 15.76859998749569
+              "offset_ms": 12.034600018523633
             }
           ],
-          "provider_ms": 5.085000011604279,
+          "provider_ms": 3.639700007624924,
           "validation_ms": 0,
-          "stable_to_scheduled_ms": 1656.6211000317708,
-          "scheduler_wait_ms": 6.238500005565584,
-          "retrieval_ms": 39.06260000076145,
+          "stable_to_scheduled_ms": 1399.7132999938913,
+          "scheduler_wait_ms": 5.610399995930493,
+          "retrieval_ms": 31.25010000076145,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -2588,70 +2588,70 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:06.395520+00:00",
-        "started_at": "2026-10-20T13:30:06.401792+00:00",
-        "duration_ms": 9.508299990557134,
-        "stable_to_request_ms": 1662.8596000373363
+        "created_at": "2026-10-20T13:47:41.842733+00:00",
+        "started_at": "2026-10-20T13:47:41.848370+00:00",
+        "duration_ms": 6.403099978342652,
+        "stable_to_request_ms": 1405.3236999898218
       },
       {
-        "id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7",
+        "id": "8696ad05-5932-4295-86eb-2fb04cf255be",
         "action": "suggest",
         "status": "stale",
         "error": null,
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 9,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Could you explain the next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:04.730Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:40.436Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_SLOW_STALE",
-          "input_hash": "283d14e63ea21d866094a59bf5232ae81d5c867a77fb7bb0c1fdc4e8378c7321",
+          "input_hash": "b018d50ba837f44fb0d9d4ab919c7e300edd7642de3a54121f80f78b34ee1a4c",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -2665,14 +2665,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.06639998173341155
+            "classifier_ms": 0.10859995381906629
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -2682,7 +2682,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -2696,14 +2696,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -2717,14 +2717,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the next step?",
               "entity": null,
@@ -2738,14 +2738,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -2759,7 +2759,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -2780,7 +2780,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 29.283000039868057
+          "retrieval_ms": 27.846999990288168
         },
         "timing": {
           "trigger": "manual",
@@ -2795,30 +2795,30 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 5.843400023877621
+              "offset_ms": 6.225899967830628
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 823.0683000292629
+              "offset_ms": 818.3163999929093
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 823.5254000173882
+              "offset_ms": 818.7703999574296
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 824.1037999978289
+              "offset_ms": 819.3489999976009
             },
             {
               "stage": "request_completed",
-              "offset_ms": 826.874400023371
+              "offset_ms": 821.8891999567859
             }
           ],
-          "provider_ms": 817.2166000003926,
-          "validation_ms": 0.88310003047809,
-          "stable_to_scheduled_ms": 1778.6221000133082,
-          "scheduler_wait_ms": 4.171000036876649,
-          "retrieval_ms": 29.283000039868057,
+          "provider_ms": 812.0829000254162,
+          "validation_ms": 0.8847999852150679,
+          "stable_to_scheduled_ms": 1521.1306000128388,
+          "scheduler_wait_ms": 4.186499980278313,
+          "retrieval_ms": 27.846999990288168,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -2826,70 +2826,70 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:06.517525+00:00",
-        "started_at": "2026-10-20T13:30:06.521721+00:00",
-        "duration_ms": 822.6846999605186,
-        "stable_to_request_ms": 1782.7931000501849
+        "created_at": "2026-10-20T13:47:41.964144+00:00",
+        "started_at": "2026-10-20T13:47:41.968362+00:00",
+        "duration_ms": 817.684100009501,
+        "stable_to_request_ms": 1525.3170999931172
       },
       {
-        "id": "ef49031e-6076-4d72-b59b-8125db513fe4",
+        "id": "98a494b2-2937-44da-8697-4518d0b4dcc7",
         "action": "suggest",
         "status": "cancelled",
         "error": null,
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 10,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 3,
               "speaker": "Another client",
               "text": "Could you explain the revised next step?",
               "stable": false,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:06.601Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:42.025Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_SLOW_CANCEL",
-          "input_hash": "cc4c6d88be4c4fd2a98dad808dbb08c6fb9bd7f72be76f92a0328995294490a0",
+          "input_hash": "d91e0704136c6cf63257751731afbb48462aab0076abe3c6122cc3ccb4426f0b",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -2903,14 +2903,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.09600003249943256
+            "classifier_ms": 0.10740000288933516
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -2920,7 +2920,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -2934,14 +2934,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -2955,14 +2955,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -2976,7 +2976,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -2997,7 +2997,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 19.953600014559925
+          "retrieval_ms": 27.474199945572764
         },
         "timing": {
           "trigger": "manual",
@@ -3012,22 +3012,22 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 5.433399986941367
+              "offset_ms": 22.411400044802576
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 192.98220000928268
+              "offset_ms": 161.05230001267046
             },
             {
               "stage": "request_completed",
-              "offset_ms": 194.652899983339
+              "offset_ms": 163.04220003075898
             }
           ],
-          "provider_ms": 187.54219997208565,
+          "provider_ms": 138.6328000226058,
           "validation_ms": 0,
           "stable_to_scheduled_ms": null,
-          "scheduler_wait_ms": 3.599099989514798,
-          "retrieval_ms": 19.953600014559925,
+          "scheduler_wait_ms": 20.532800001092255,
+          "retrieval_ms": 27.474199945572764,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -3035,69 +3035,69 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:07.597833+00:00",
-        "started_at": "2026-10-20T13:30:07.601456+00:00",
-        "duration_ms": 191.02790002943948
+        "created_at": "2026-10-20T13:47:43.042853+00:00",
+        "started_at": "2026-10-20T13:47:43.063417+00:00",
+        "duration_ms": 142.48260000022128
       },
       {
-        "id": "c602fb1f-a14d-449e-97f7-a217de670cc9",
+        "id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a",
         "action": "suggest",
         "status": "ready",
         "error": null,
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 11,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 4,
               "speaker": "Another client",
               "text": "Could you explain the revised next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:07.632Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:43.025Z"
             }
           ],
           "memory": [],
           "sources": [],
           "action": "suggest",
           "question": "PHASE2_READY_AFTER_CANCEL",
-          "input_hash": "c1dd67bd7ed14221ff981a3d34077816bd113bbbdbac7c22dbb9d5616497c8d6",
+          "input_hash": "da3dafc005d1e0ced701e89790a074988cccf34d17fcf16e5c28f8935dad0d55",
           "routing": {
             "version": "rules-v1",
             "route": "fast",
@@ -3111,14 +3111,14 @@
             "evidence_state": "missing",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "4feda5ee-ab1c-461e-a431-63e7875c1546"
+              "a2dcd498-3e58-499f-9f31-b06149ca4052"
             ],
             "target_min_s": 1,
             "target_max_s": 2,
-            "classifier_ms": 0.09699998190626502
+            "classifier_ms": 0.12989999959245324
           },
           "focus_segment_ids": [
-            "4feda5ee-ab1c-461e-a431-63e7875c1546"
+            "a2dcd498-3e58-499f-9f31-b06149ca4052"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -3128,7 +3128,7 @@
           "capture_cursor": 7,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -3142,14 +3142,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -3163,14 +3163,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the revised next step?",
               "entity": null,
@@ -3184,14 +3184,14 @@
               "evidence": [
                 {
                   "revision": 4,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 3,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -3205,7 +3205,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -3226,7 +3226,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 41.94840003037825
+          "retrieval_ms": 29.422399995382875
         },
         "timing": {
           "trigger": "manual",
@@ -3241,30 +3241,30 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 15.340800047852099
+              "offset_ms": 29.692500014789402
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 18.963500042445958
+              "offset_ms": 33.01050001755357
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 19.750400038901716
+              "offset_ms": 33.82940002484247
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 20.624800003133714
+              "offset_ms": 34.80690001742914
             },
             {
               "stage": "request_completed",
-              "offset_ms": 23.896300001069903
+              "offset_ms": 37.94250002829358
             }
           ],
-          "provider_ms": 3.6161000025458634,
-          "validation_ms": 1.4573000371456146,
-          "stable_to_scheduled_ms": 124.8448999831453,
-          "scheduler_wait_ms": 13.39980005286634,
-          "retrieval_ms": 41.94840003037825,
+          "provider_ms": 3.311699954792857,
+          "validation_ms": 1.55699992319569,
+          "stable_to_scheduled_ms": 155.1194000057876,
+          "scheduler_wait_ms": 27.315600018482655,
+          "retrieval_ms": 29.422399995382875,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -3272,81 +3272,81 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:07.786996+00:00",
-        "started_at": "2026-10-20T13:30:07.800428+00:00",
-        "duration_ms": 10.474999959114939,
-        "stable_to_request_ms": 138.24470003601164
+        "created_at": "2026-10-20T13:47:43.192307+00:00",
+        "started_at": "2026-10-20T13:47:43.219678+00:00",
+        "duration_ms": 10.601499991025776,
+        "stable_to_request_ms": 182.43500002427027
       },
       {
-        "id": "ca191910-796b-43c2-9a68-2554ccac2926",
+        "id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
         "action": "auto",
         "status": "ready",
         "error": null,
         "snapshot": {
-          "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-          "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+          "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+          "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
           "transcript_revision": 13,
           "index_generation": {
-            "8870bd56-3dce-440b-8ce2-355bb609922c": 1
+            "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff": 1
           },
           "segments": [
             {
-              "id": "6f33055f-afac-4ffa-b1c4-2711add48184",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 3,
               "speaker": "Client",
               "text": "Timeout 50.5 ms API-71",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:20.813Z",
-              "observed_to": "2026-10-20T13:29:21.891Z"
+              "observed_from": "2026-10-20T13:46:55.577Z",
+              "observed_to": "2026-10-20T13:46:56.648Z"
             },
             {
-              "id": "154a8000-8651-4711-942f-eb7f77fd3b15",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "1f0483e3-7ce6-4538-8a52-808be6054087",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 5000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:22.033Z",
-              "observed_to": "2026-10-20T13:29:23.091Z"
+              "observed_from": "2026-10-20T13:46:56.736Z",
+              "observed_to": "2026-10-20T13:46:57.747Z"
             },
             {
-              "id": "f0ce9762-7f74-41f9-8233-514e645894ef",
-              "capture_epoch": "de36ebb7-56a9-4bb0-a284-0fd4f708a818",
+              "id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
+              "capture_epoch": "c742f620-7860-4fb0-afa5-a9a0099b0857",
               "revision": 2,
               "speaker": "Client",
               "text": "During outage 20000 NOT API-17",
               "stable": true,
-              "observed_from": "2026-10-20T13:29:30.046Z",
-              "observed_to": "2026-10-20T13:29:31.091Z"
+              "observed_from": "2026-10-20T13:47:04.751Z",
+              "observed_to": "2026-10-20T13:47:05.848Z"
             },
             {
-              "id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 4,
               "speaker": "Another client",
               "text": "Could you explain the revised next step?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:03.657Z",
-              "observed_to": "2026-10-20T13:30:07.632Z"
+              "observed_from": "2026-10-20T13:47:39.349Z",
+              "observed_to": "2026-10-20T13:47:43.025Z"
             },
             {
-              "id": "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7",
-              "capture_epoch": "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4",
+              "id": "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c",
+              "capture_epoch": "0b71c955-e9ad-4143-8418-e9d6d01cc6aa",
               "revision": 2,
               "speaker": "Another client",
               "text": "Which option should we choose next?",
               "stable": true,
-              "observed_from": "2026-10-20T13:30:07.936Z",
-              "observed_to": "2026-10-20T13:30:09.021Z"
+              "observed_from": "2026-10-20T13:47:43.394Z",
+              "observed_to": "2026-10-20T13:47:44.425Z"
             }
           ],
           "memory": [],
           "sources": [
             {
-              "id": "e8c556ac-ad54-4abb-a121-5cd26d58eff1",
-              "source_id": "8870bd56-3dce-440b-8ce2-355bb609922c",
-              "project_id": "430d4659-049c-4796-9026-9e45b46d8310",
+              "id": "85a91eb0-273e-473e-95d6-fb3bc1bbb457",
+              "source_id": "eef9c6e4-2aa2-4dbc-be97-f3e2160b10ff",
+              "project_id": "4a044867-f40a-47ed-b6c9-2a5c85d1aaa8",
               "generation": 1,
               "content": "API-17: The fix still needs testing on staging. Deployment date is not confirmed.",
               "title": "API deployment notes",
@@ -3354,7 +3354,7 @@
               "path": "API deployment notes",
               "line_start": 1,
               "line_end": 1,
-              "indexed_at": "2026-10-20T13:29:10.474328+00:00",
+              "indexed_at": "2026-10-20T13:46:46.194801+00:00",
               "content_hash": "4c06c88e232ead1b437061ca076e099d8d7cb33ea517cb972cfbaaf69f998a05",
               "stale": false,
               "source_changed": false,
@@ -3367,7 +3367,7 @@
           ],
           "action": "auto",
           "question": "",
-          "input_hash": "4085aca25016f5947960aacd20110ab0ee737f729738f54abf60728c248c6218",
+          "input_hash": "347d890f6bd81c4e3dd37bc20aaba4a452ac1c066f6788e1859672e3bbbebe97",
           "routing": {
             "version": "rules-v1",
             "route": "deep",
@@ -3381,14 +3381,14 @@
             "evidence_state": "available",
             "requires_verification": false,
             "trigger_segment_ids": [
-              "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7"
+              "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c"
             ],
             "target_min_s": 5,
             "target_max_s": 10,
-            "classifier_ms": 0.08319999324157834
+            "classifier_ms": 0.0819999841041863
           },
           "focus_segment_ids": [
-            "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7"
+            "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c"
           ],
           "context_omitted_count": 0,
           "source_omitted_count": 0,
@@ -3398,7 +3398,7 @@
           "capture_cursor": 8,
           "structured_memory": [
             {
-              "id": "0b04278d77935250b07af539",
+              "id": "3082a920fc3730702b951d51",
               "kind": "spoken_fact",
               "text": "During outage 20000 NOT API-17",
               "entity": "API-17",
@@ -3412,14 +3412,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef"
+                  "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "c71cc1269446ae62e3d16232",
+              "id": "94ee01168755cd8bd5a2fdb0",
               "kind": "spoken_fact",
               "text": "During outage 5000 NOT API-17",
               "entity": "API-17",
@@ -3433,14 +3433,14 @@
               "evidence": [
                 {
                   "revision": 2,
-                  "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15"
+                  "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087"
                 }
               ],
               "version": 1,
               "relations": []
             },
             {
-              "id": "3643a5d49901737ae77414d8",
+              "id": "d3bf50d578e04c5d0fa616cd",
               "kind": "proposal",
               "text": "Could you explain the revised next step?",
               "entity": null,
@@ -3454,14 +3454,14 @@
               "evidence": [
                 {
                   "revision": 4,
-                  "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546"
+                  "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052"
                 }
               ],
               "version": 3,
               "relations": []
             },
             {
-              "id": "c7d5f50fd3630099594d0b45",
+              "id": "dd69cad7507ca02d34ebf179",
               "kind": "spoken_fact",
               "text": "Timeout 50.5 ms API-71",
               "entity": "API-71",
@@ -3475,7 +3475,7 @@
               "evidence": [
                 {
                   "revision": 3,
-                  "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184"
+                  "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65"
                 }
               ],
               "version": 1,
@@ -3496,7 +3496,7 @@
             "input_chars": 18000,
             "live_timeout_s": 20
           },
-          "retrieval_ms": 0.19779999274760485
+          "retrieval_ms": 0.20740000763908029
         },
         "timing": {
           "trigger": "auto",
@@ -3511,30 +3511,30 @@
             },
             {
               "stage": "provider_started",
-              "offset_ms": 5.148699972778559
+              "offset_ms": 4.875200043898076
             },
             {
               "stage": "provider_completed",
-              "offset_ms": 8.227999962400645
+              "offset_ms": 8.595400024205446
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 10.004599986132234
+              "offset_ms": 10.934500023722649
             },
             {
               "stage": "validation_completed",
-              "offset_ms": 11.357099981978536
+              "offset_ms": 12.487400032114238
             },
             {
               "stage": "request_completed",
-              "offset_ms": 15.654799994081259
+              "offset_ms": 18.74100003624335
             }
           ],
-          "provider_ms": 3.0738000059500337,
-          "validation_ms": 2.930099959485233,
-          "stable_to_scheduled_ms": 156.27580002183095,
-          "scheduler_wait_ms": 3.048499987926334,
-          "retrieval_ms": 0.19779999274760485,
+          "provider_ms": 3.714499995112419,
+          "validation_ms": 3.6786999553442,
+          "stable_to_scheduled_ms": 165.21209996426478,
+          "scheduler_wait_ms": 2.8921000193804502,
+          "retrieval_ms": 0.20740000763908029,
           "http_attempts": 1,
           "repair_attempts": 0,
           "usage_unknown_attempts": 1,
@@ -3542,419 +3542,419 @@
           "policy_version": "content-trigger-v1",
           "freshness_reason": null
         },
-        "created_at": "2026-10-20T13:30:09.183238+00:00",
-        "started_at": "2026-10-20T13:30:09.186310+00:00",
-        "duration_ms": 12.58609996875748,
-        "stable_to_request_ms": 159.32430000975728
+        "created_at": "2026-10-20T13:47:44.597249+00:00",
+        "started_at": "2026-10-20T13:47:44.600164+00:00",
+        "duration_ms": 15.820199972949922,
+        "stable_to_request_ms": 168.10419998364523
       }
     ],
     "reports": [],
     "gaps": [
       {
-        "id": "539bb4d7-be1e-432c-b70d-e025edf8796f",
+        "id": "c70fdadf-b212-4d36-8c7f-c81b5dedfe31",
         "reason": "transport_disconnected",
-        "from_at": "2026-10-20T13:29:21.988893+00:00",
-        "to_at": "2026-10-20T13:29:29.593721+00:00",
+        "from_at": "2026-10-20T13:46:56.692029+00:00",
+        "to_at": "2026-10-20T13:47:03.932783+00:00",
         "certainty": "possible"
       },
       {
-        "id": "f7aeb4eb-f6b0-48bd-9e49-852596d2b4b0",
+        "id": "7bb19c6d-136c-4f2b-9255-62e2e1d77de5",
         "reason": "transport_disconnected",
-        "from_at": "2026-10-20T13:29:29.995701+00:00",
-        "to_at": "2026-10-20T13:30:00.890776+00:00",
+        "from_at": "2026-10-20T13:47:04.706609+00:00",
+        "to_at": "2026-10-20T13:47:35.831927+00:00",
         "certainty": "possible"
       },
       {
-        "id": "6eacf22a-2b87-4ad5-b4b7-8717858ccd18",
+        "id": "a2e821cd-1d3e-4212-a15c-8f2b0f1ccbfe",
         "reason": "pause",
-        "from_at": "2026-10-20T13:30:01.169963+00:00",
-        "to_at": "2026-10-20T13:30:02.415875+00:00",
+        "from_at": "2026-10-20T13:47:36.872386+00:00",
+        "to_at": "2026-10-20T13:47:38.119403+00:00",
         "certainty": "certain"
       },
       {
-        "id": "10c1bc27-81ef-4c3f-a767-9f1dedb7d8be",
+        "id": "59e89318-7af0-402d-a59d-af53568b7b27",
         "reason": "adapter_replaced",
-        "from_at": "2026-10-20T13:30:07.961512+00:00",
+        "from_at": "2026-10-20T13:47:43.420123+00:00",
         "to_at": null,
         "certainty": "possible"
       },
       {
-        "id": "7327e5c5-b9bf-497f-864c-056f9b64aa8a",
+        "id": "46b6e2d4-2b03-42f8-a5c6-d910b84f7857",
         "reason": "adapter_replaced",
-        "from_at": "2026-10-20T13:30:09.954302+00:00",
+        "from_at": "2026-10-20T13:47:45.426955+00:00",
         "to_at": null,
         "certainty": "possible"
       },
       {
-        "id": "b1ad87f7-9962-488b-8aca-6cd47ee84305",
+        "id": "92a43804-3a16-4446-8dcc-a416d143c8ca",
         "reason": "document_reloaded",
-        "from_at": "2026-10-20T13:30:10.081238+00:00",
+        "from_at": "2026-10-20T13:47:45.631348+00:00",
         "to_at": null,
         "certainty": "possible"
       },
       {
-        "id": "f670f0a5-e9d9-43a6-9f6e-2642014be7dc",
+        "id": "d01ae7de-b1e4-49a4-a234-590da343ee89",
         "reason": "interrupted",
-        "from_at": "2026-10-20T13:30:09.948Z",
-        "to_at": "2026-10-20T13:30:10.250402+00:00",
+        "from_at": "2026-10-20T13:47:45.423Z",
+        "to_at": "2026-10-20T13:47:45.783180+00:00",
         "certainty": "certain"
       },
       {
-        "id": "d6096520-38e3-45d2-a63c-db97a1b111d8",
+        "id": "c76f0674-1009-4060-bf99-09a8a3eba24e",
         "reason": "document_reloaded",
-        "from_at": "2026-10-20T13:30:10.268077+00:00",
+        "from_at": "2026-10-20T13:47:45.796974+00:00",
         "to_at": null,
         "certainty": "possible"
       }
     ],
     "binding": {
-      "tab_id": 127821561,
-      "document_id": "FE4769E495474B101C13403E1AFEB8C8",
+      "tab_id": 1023912052,
+      "document_id": "2BEEB88CE0235638FB1A668587860765",
       "meeting_key": "/phase2-room"
     },
     "epochs": {
-      "de36ebb7-56a9-4bb0-a284-0fd4f708a818": 7,
-      "e6a538ab-fe8e-4a5f-ab6e-d25a8577f3e4": 7,
-      "2c87e034-cb5c-4d39-91b9-ec3ca770a881": 1
+      "c742f620-7860-4fb0-afa5-a9a0099b0857": 7,
+      "0b71c955-e9ad-4143-8418-e9d6d01cc6aa": 7,
+      "e85d06ba-48cc-4e21-aa42-a873009321f5": 1
     },
-    "latest_request": "ca191910-796b-43c2-9a68-2554ccac2926",
+    "latest_request": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
     "pause_from": null,
     "transport_gap_id": null,
     "context_revision": 1
   },
   "telemetry": {
     "captureTimings": [
-      9.599999964237213,
-      11.699999988079071,
-      8.300000011920929,
-      7.799999952316284,
-      21.200000047683716,
-      9.299999952316284,
-      6.5,
+      8,
+      10.399999976158142,
+      14.899999976158142,
+      7.199999988079071,
+      23.80000001192093,
+      8.700000047683716,
+      5.899999976158142,
       7.600000023841858,
-      17.5,
-      6.199999988079071,
-      7572.800000011921,
-      6520.599999964237,
-      30852.80000001192,
-      29816.299999952316,
-      17.30000001192093,
-      10.199999988079071,
-      29.80000001192093,
-      30.5,
-      34.69999998807907,
+      18.900000035762787,
+      10.600000023841858,
+      7211.800000011921,
+      6206.5,
+      31094.399999976158,
+      30004.099999964237,
+      9.300000011920929,
       7,
-      14.900000035762787,
-      9.700000047683716
+      15.800000011920929,
+      12.399999976158142,
+      34.89999997615814,
+      7.100000023841858,
+      30.599999964237213,
+      11
     ],
     "latencyRecords": [
       {
         "clock": "content_monotonic",
-        "event_id": "f49cfa22-bd00-4417-a69b-2544424d8084",
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
-        "observed_to_ack_ms": 9.5,
+        "event_id": "99c77f11-88fe-4a92-b408-79abf514d723",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
+        "observed_to_ack_ms": 8,
         "revision": 1,
-        "segment_id": "c9de1c1f-c939-4359-a046-013d67a1bcda",
+        "segment_id": "0abc0bd6-ca77-41ee-bf2f-20e17c69ac42",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "121121dc-a52a-439d-b2da-1f4b2b210e40",
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
-        "observed_to_ack_ms": 11.599999964237213,
+        "event_id": "f68893a4-468d-43fd-9199-1841a7ab54ad",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
+        "observed_to_ack_ms": 10.199999988079071,
         "revision": 2,
-        "segment_id": "c9de1c1f-c939-4359-a046-013d67a1bcda",
+        "segment_id": "0abc0bd6-ca77-41ee-bf2f-20e17c69ac42",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "bc051792-38fe-4f5f-b282-4b3a0ab2c663",
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
-        "observed_to_ack_ms": 8.200000047683716,
+        "event_id": "b0c2e29d-fd22-4fb1-aa3b-e7a4adbbcf49",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
+        "observed_to_ack_ms": 14.800000011920929,
         "revision": 3,
-        "segment_id": "c9de1c1f-c939-4359-a046-013d67a1bcda",
+        "segment_id": "0abc0bd6-ca77-41ee-bf2f-20e17c69ac42",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "d7fb4c47-fcfa-47f5-a4cc-ca8f394b1c4b",
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
-        "observed_to_ack_ms": 7.699999988079071,
+        "event_id": "03e5a4c0-7a38-4ca1-8e0d-f26dfff2dc0b",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
+        "observed_to_ack_ms": 7.099999964237213,
         "revision": 4,
-        "segment_id": "c9de1c1f-c939-4359-a046-013d67a1bcda",
+        "segment_id": "0abc0bd6-ca77-41ee-bf2f-20e17c69ac42",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "7a18b106-877d-4042-abfe-5e501c6195f2",
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
-        "observed_to_ack_ms": 40.5,
+        "event_id": "f85c354d-5aa7-4585-8d36-b938c99c9415",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
+        "observed_to_ack_ms": 43.5,
         "revision": 5,
-        "segment_id": "c9de1c1f-c939-4359-a046-013d67a1bcda",
+        "segment_id": "0abc0bd6-ca77-41ee-bf2f-20e17c69ac42",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "a442e82c-51d2-45e8-9069-67456916258e",
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
-        "observed_to_ack_ms": 9.099999964237213,
+        "event_id": "d93fe0f9-b05a-41f0-83c7-e92a9d8caff2",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
+        "observed_to_ack_ms": 8.700000047683716,
         "revision": 1,
-        "segment_id": "72c7d9f0-69ba-4902-99b7-ba323b3fad35",
+        "segment_id": "5c446ac4-996a-4659-8eae-b878590a23f0",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "a093b777-37ca-4fbf-ab5a-9cd6d4d75c47",
-        "meeting_id": "6e1083ce-903b-4a21-a4b7-744427c7b068",
-        "observed_to_ack_ms": 91.09999996423721,
+        "event_id": "067b5bec-aecc-45b3-a65a-285511eb0b28",
+        "meeting_id": "5efe39d9-f23d-4295-832c-0fc61d4d1236",
+        "observed_to_ack_ms": 78.60000002384186,
         "revision": 2,
-        "segment_id": "72c7d9f0-69ba-4902-99b7-ba323b3fad35",
+        "segment_id": "5c446ac4-996a-4659-8eae-b878590a23f0",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "ce7bcb82-8130-4670-ab36-b5512ab8a22f",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
+        "event_id": "855f0eaa-e44d-4328-8efa-c36dacc6cfaa",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
         "observed_to_ack_ms": 7.5,
         "revision": 1,
-        "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184",
+        "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "1abf8015-27c4-4f70-8ab5-5618e2874155",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 17.400000035762787,
+        "event_id": "cdaeeb02-a17d-4284-b2d8-cd5d81aaa0f7",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 18.80000001192093,
         "revision": 2,
-        "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184",
+        "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "f76f85fd-a838-4383-b6fa-b5f11642d130",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 1059.4000000357628,
+        "event_id": "7a971992-e1df-4912-9694-1897e8d8d86f",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 1058.300000011921,
         "revision": 3,
-        "segment_id": "6f33055f-afac-4ffa-b1c4-2711add48184",
+        "segment_id": "0a0f5f50-b115-457b-ac06-32da8cd80e65",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "c7ebf235-43c0-4c84-8783-30fca139e66a",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 7572.900000035763,
+        "event_id": "36fb7931-bd4e-4f62-9e9a-0ab4b54268a6",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 7211.699999988079,
         "revision": 1,
-        "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15",
+        "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "cc4ce4b9-01b8-4dd4-aa31-01128fa93492",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 7579.400000035763,
+        "event_id": "e2265dbe-9021-4843-bb0d-558566c609a1",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 7217.600000023842,
         "revision": 2,
-        "segment_id": "154a8000-8651-4711-942f-eb7f77fd3b15",
+        "segment_id": "1f0483e3-7ce6-4538-8a52-808be6054087",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "35e55959-75b2-4578-bb44-5c8e4f624d6a",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 30852.80000001192,
+        "event_id": "5e0ffda5-42d1-44e5-bec1-4e5d107c999a",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 31094.30000001192,
         "revision": 1,
-        "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef",
+        "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "4c84ffd1-04e1-405e-b5cf-a05fd5a2482a",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 30861.5,
+        "event_id": "137d1c4c-a482-4300-be53-ad6f103fd28d",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 31101.19999998808,
         "revision": 2,
-        "segment_id": "f0ce9762-7f74-41f9-8233-514e645894ef",
+        "segment_id": "f5d0509a-3311-4ba1-ae10-28d832129e8c",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "f1101807-cce8-4585-ba09-9a0b0d415f6a",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 17.200000047683716,
+        "event_id": "13df91d4-14f0-41c8-b036-07729e6a2a52",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 9.300000011920929,
         "revision": 1,
-        "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
+        "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "706cc6d3-f550-43be-a5f9-69966240d2d1",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 1083,
+        "event_id": "0fbdb1f0-25e5-494e-8627-974f783326d0",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 1094.5,
         "revision": 2,
-        "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
+        "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
-        "stable_to_schedule_received_ms": 896.1999999880791,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
+        "stable_to_schedule_received_ms": 631.5,
         "stage": "suggestion_scheduled_received",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_rendered_notification_ms": 2137.100000023842,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_rendered_notification_ms": 1890.0999999642372,
         "outcome": "ready",
-        "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
+        "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
         "revision": 2,
-        "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-        "stable_to_rendered_notification_ms": 1064.300000011921,
+        "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+        "stable_to_rendered_notification_ms": 802.6999999880791,
         "stage": "card_rendered_notification",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
-        "stable_to_schedule_received_ms": 1138.300000011921,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
+        "stable_to_schedule_received_ms": 886.6999999880791,
         "stage": "suggestion_scheduled_received",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_rendered_notification_ms": 2370.2000000476837,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_rendered_notification_ms": 2090.199999988079,
         "outcome": "ready",
-        "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
+        "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
         "revision": 2,
-        "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-        "stable_to_rendered_notification_ms": 1297.4000000357628,
+        "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+        "stable_to_rendered_notification_ms": 1002.6999999880791,
         "stage": "card_rendered_notification",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
-        "stable_to_schedule_received_ms": 1409.300000011921,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736",
+        "stable_to_schedule_received_ms": 1142.199999988079,
         "stage": "suggestion_scheduled_received",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_rendered_notification_ms": 2636.900000035763,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_rendered_notification_ms": 2368.099999964237,
         "outcome": "ready",
-        "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
+        "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736",
         "revision": 2,
-        "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
-        "stable_to_rendered_notification_ms": 1564.1000000238419,
+        "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
+        "stable_to_rendered_notification_ms": 1280.5999999642372,
         "stage": "card_rendered_notification",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7",
-        "stable_to_schedule_received_ms": 1673.6000000238419,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d",
+        "stable_to_schedule_received_ms": 1413.300000011921,
         "stage": "suggestion_scheduled_received",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7",
-        "stable_to_schedule_received_ms": 1792.5,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "request_id": "8696ad05-5932-4295-86eb-2fb04cf255be",
+        "stable_to_schedule_received_ms": 1534.0999999642372,
         "stage": "suggestion_scheduled_received",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "aaacdc92-db60-4ace-9ad7-31a681f9ed00",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 29.700000047683716,
+        "event_id": "bec64d0c-517b-43bd-851f-842146999056",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 15.700000047683716,
         "revision": 3,
-        "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
+        "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "850c67d7-1fc0-4a9b-9ec4-f287643969dd",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 1061.1000000238419,
+        "event_id": "86b1733d-c927-4dc8-a676-fae2b658a444",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 1012.5,
         "revision": 4,
-        "segment_id": "4feda5ee-ab1c-461e-a431-63e7875c1546",
+        "segment_id": "a2dcd498-3e58-499f-9f31-b06149ca4052",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9",
-        "stable_to_schedule_received_ms": 159.5999999642372,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a",
+        "stable_to_schedule_received_ms": 178.69999998807907,
         "stage": "suggestion_scheduled_received",
         "trigger": "manual"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "a83c061f-e55a-4546-94fd-e58713012e1e",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 34.60000002384186,
+        "event_id": "01a8ac25-2a53-4aba-b156-024ab8d29ebc",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 34.69999998807907,
         "revision": 1,
-        "segment_id": "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7",
+        "segment_id": "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "94f81713-cd81-4897-b137-8e8244f02c72",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 1091.300000011921,
+        "event_id": "671eb790-01ca-4157-9a63-24fd136db870",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 1038.0999999642372,
         "revision": 2,
-        "segment_id": "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7",
+        "segment_id": "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "request_id": "ca191910-796b-43c2-9a68-2554ccac2926",
-        "stable_to_schedule_received_ms": 181.69999998807907,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
+        "stable_to_schedule_received_ms": 193.30000001192093,
         "stage": "suggestion_scheduled_received",
         "trigger": "auto"
       },
       {
         "clock": "content_monotonic",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_rendered_notification_ms": 1412.6000000238419,
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_rendered_notification_ms": 1377.300000011921,
         "outcome": "ready",
-        "request_id": "ca191910-796b-43c2-9a68-2554ccac2926",
+        "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
         "revision": 2,
-        "segment_id": "52bf58eb-3cbc-4d59-aae5-fcb7b838cba7",
-        "stable_to_rendered_notification_ms": 328.19999998807907,
+        "segment_id": "da8d5077-bfbd-4f13-b74e-a7e5d2e7b12c",
+        "stable_to_rendered_notification_ms": 346.2000000476837,
         "stage": "card_rendered_notification",
         "trigger": "auto"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "d8c0f4d0-d861-405a-a5d6-c3d85e96a904",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 14.800000011920929,
+        "event_id": "34fa97a1-eeda-4177-933f-4f2ec7abc595",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 30.5,
         "revision": 1,
-        "segment_id": "d30d6785-cad4-4483-8b6b-3fe3f850ddf4",
+        "segment_id": "cac04858-6d97-4290-bd21-271fa646446e",
         "stage": "ack_received"
       },
       {
         "clock": "content_monotonic",
-        "event_id": "e7ec0574-9fbd-42ac-be51-d48c05d5a715",
-        "meeting_id": "638ac6c4-0986-4174-8c7b-25df8f01a167",
-        "observed_to_ack_ms": 9.599999964237213,
+        "event_id": "864a7f39-55c3-4ec4-835d-8854496c1cb0",
+        "meeting_id": "ea7c63c3-947a-4a4f-8c8f-60fb1cdf269c",
+        "observed_to_ack_ms": 11,
         "revision": 1,
-        "segment_id": "070daf8c-0d5f-447e-a2b2-b079604b0a76",
+        "segment_id": "70772833-0cd5-47bb-ade2-1797f132ffc2",
         "stage": "ack_received"
       }
     ]
   },
   "backend_latency": [
     {
-      "request_id": "c5f6c8e1-5ba6-48ec-8271-23cbe37bd907",
+      "request_id": "3d3879d5-cc9a-47c8-9381-64c03fb77912",
       "policy_version": "content-trigger-v1",
       "trigger": "auto",
       "temperature": "cold",
@@ -3968,25 +3968,25 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 9.262399980798364
+          "offset_ms": 9.429900033865124
         },
         {
           "stage": "request_completed",
-          "offset_ms": 12.911300000268966
+          "offset_ms": 12.759800010826439
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 4.715699993539602,
-      "stable_to_scheduled_ms": 820.3719999874011,
-      "scheduler_wait_ms": 2.969199966173619,
-      "retrieval_ms": 0.19149994477629662,
+      "validation_ms": 3.6145999911241233,
+      "stable_to_scheduled_ms": 810.5381999630481,
+      "scheduler_wait_ms": 3.8093000184744596,
+      "retrieval_ms": 0.41060004150494933,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
       "wire_input_chars_total": 0
     },
     {
-      "request_id": "189b1681-cce2-44be-afad-5e5145076942",
+      "request_id": "9be50798-9ab3-49ff-be05-c41f0b1f4f63",
       "policy_version": "content-trigger-v1",
       "trigger": "auto",
       "temperature": "cold",
@@ -4000,25 +4000,25 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 6.748299987521023
+          "offset_ms": 6.399700010661036
         },
         {
           "stage": "request_completed",
-          "offset_ms": 9.761699999216944
+          "offset_ms": 10.060300002805889
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 1.1421000235714018,
-      "stable_to_scheduled_ms": 192.12349998997524,
-      "scheduler_wait_ms": 3.4137999755330384,
-      "retrieval_ms": 22.55320001859218,
+      "validation_ms": 1.1140999849885702,
+      "stable_to_scheduled_ms": 190.77119999565184,
+      "scheduler_wait_ms": 2.911499992478639,
+      "retrieval_ms": 24.40960000967607,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
       "wire_input_chars_total": 0
     },
     {
-      "request_id": "e4ff5d26-ea17-4a14-b45b-8bb2270e74b5",
+      "request_id": "e92dd3a1-3db4-4f09-a6bf-e6e806dcfb07",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "cold",
@@ -4032,24 +4032,24 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 6.9967000163160264
+          "offset_ms": 5.590999964624643
         },
         {
           "stage": "request_completed",
-          "offset_ms": 10.500899981707335
+          "offset_ms": 8.731500012800097
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 1.2111000251024961,
-      "scheduler_wait_ms": 3.5410000127740204,
-      "retrieval_ms": 0.19149994477629662,
+      "validation_ms": 0.7390999817289412,
+      "scheduler_wait_ms": 3.0848999740555882,
+      "retrieval_ms": 0.41060004150494933,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
       "wire_input_chars_total": 0
     },
     {
-      "request_id": "efdb68f3-d0ac-4ab8-ad7b-03945102035d",
+      "request_id": "1d933cf0-2ba2-4e44-94f5-293fe146f401",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "cold",
@@ -4063,25 +4063,25 @@
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 6.792399974074215
+          "offset_ms": 6.235900043975562
         },
         {
           "stage": "request_completed",
-          "offset_ms": 9.996199980378151
+          "offset_ms": 9.013800008688122
         }
       ],
       "provider_ms": 0,
-      "validation_ms": 0.8695999858900905,
-      "stable_to_scheduled_ms": 1999.7681999811903,
-      "scheduler_wait_ms": 3.701700014062226,
-      "retrieval_ms": 0.31700002728030086,
+      "validation_ms": 0.7013999857008457,
+      "stable_to_scheduled_ms": 1900.3040999523364,
+      "scheduler_wait_ms": 3.5074000479653478,
+      "retrieval_ms": 0.24259998463094234,
       "http_attempts": 0,
       "repair_attempts": 0,
       "usage_unknown_attempts": 0,
       "wire_input_chars_total": 0
     },
     {
-      "request_id": "7d4d99e3-8c89-44d9-802d-18e586ff2c6e",
+      "request_id": "12bd53af-88fb-482e-8c1a-392fefae8ae8",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "cold",
@@ -4095,37 +4095,37 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 5.585199978668243
+          "offset_ms": 5.136499996297061
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 19.963999977335334
+          "offset_ms": 15.076400013640523
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 21.05219999793917
+          "offset_ms": 15.898599987849593
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 22.04179996624589
+          "offset_ms": 16.835200018249452
         },
         {
           "stage": "request_completed",
-          "offset_ms": 25.79310000874102
+          "offset_ms": 20.82969999173656
         }
       ],
-      "provider_ms": 14.366600022185594,
-      "validation_ms": 1.8428000039421022,
-      "stable_to_scheduled_ms": 881.9549000472762,
-      "scheduler_wait_ms": 3.9967999910004437,
-      "retrieval_ms": 29.31209997041151,
+      "provider_ms": 9.932099957950413,
+      "validation_ms": 1.54819997260347,
+      "stable_to_scheduled_ms": 618.7666999758221,
+      "scheduler_wait_ms": 3.3964000176638365,
+      "retrieval_ms": 18.58079998055473,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
       "wire_input_chars_total": 2254
     },
     {
-      "request_id": "cd80099c-85bf-46f0-a39d-e6e4d708ba0f",
+      "request_id": "d5d50bde-0952-484d-afc0-71a9fbec74d5",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "warm",
@@ -4139,37 +4139,37 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 4.986800020560622
+          "offset_ms": 10.10889996541664
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 8.698099991306663
+          "offset_ms": 14.585299999453127
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 9.221900021657348
+          "offset_ms": 15.428599959705025
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 10.09420002810657
+          "offset_ms": 16.366099996957928
         },
         {
           "stage": "request_completed",
-          "offset_ms": 13.213900034315884
+          "offset_ms": 20.04029997624457
         }
       ],
-      "provider_ms": 3.702400019392371,
-      "validation_ms": 1.2215999886393547,
-      "stable_to_scheduled_ms": 1125.4832000122406,
-      "scheduler_wait_ms": 3.276500036008656,
-      "retrieval_ms": 17.098500044085085,
+      "provider_ms": 4.466599959414452,
+      "validation_ms": 1.5588999958708882,
+      "stable_to_scheduled_ms": 870.0937000103295,
+      "scheduler_wait_ms": 8.336699975188822,
+      "retrieval_ms": 28.610799985472113,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
       "wire_input_chars_total": 2254
     },
     {
-      "request_id": "15899ca5-39f9-448b-8417-eb81ff8eb0fa",
+      "request_id": "cfc9d4fe-4096-4338-8853-647d665d0736",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "warm",
@@ -4183,37 +4183,37 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 10.18739998107776
+          "offset_ms": 9.986800025217235
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 13.634399976581335
+          "offset_ms": 13.97159998305142
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 14.237599971238524
+          "offset_ms": 14.738300000317395
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 14.856699970550835
+          "offset_ms": 15.672900015488267
         },
         {
           "stage": "request_completed",
-          "offset_ms": 18.2739999727346
+          "offset_ms": 19.157900009304285
         }
       ],
-      "provider_ms": 3.4401999437250197,
-      "validation_ms": 1.0218999814242125,
-      "stable_to_scheduled_ms": 1391.4256000425667,
-      "scheduler_wait_ms": 8.331799996085465,
-      "retrieval_ms": 32.92129997862503,
+      "provider_ms": 3.9778000209480524,
+      "validation_ms": 1.4944999711588025,
+      "stable_to_scheduled_ms": 1126.9164999830537,
+      "scheduler_wait_ms": 8.120100013911724,
+      "retrieval_ms": 27.68359996844083,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
       "wire_input_chars_total": 2254
     },
     {
-      "request_id": "740c86d5-556f-41f2-9935-0d6a0b1546c7",
+      "request_id": "8663e7d7-a112-49fe-a68f-bd56fe06e13d",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "warm",
@@ -4227,29 +4227,29 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 9.875599993392825
+          "offset_ms": 7.87329999729991
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 14.971899974625558
+          "offset_ms": 11.519199993927032
         },
         {
           "stage": "request_completed",
-          "offset_ms": 15.76859998749569
+          "offset_ms": 12.034600018523633
         }
       ],
-      "provider_ms": 5.085000011604279,
+      "provider_ms": 3.639700007624924,
       "validation_ms": 0,
-      "stable_to_scheduled_ms": 1656.6211000317708,
-      "scheduler_wait_ms": 6.238500005565584,
-      "retrieval_ms": 39.06260000076145,
+      "stable_to_scheduled_ms": 1399.7132999938913,
+      "scheduler_wait_ms": 5.610399995930493,
+      "retrieval_ms": 31.25010000076145,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
       "wire_input_chars_total": 2252
     },
     {
-      "request_id": "7b1ee61e-3c73-44d5-87bd-8af846d7b4d7",
+      "request_id": "8696ad05-5932-4295-86eb-2fb04cf255be",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "warm",
@@ -4263,37 +4263,37 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 5.843400023877621
+          "offset_ms": 6.225899967830628
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 823.0683000292629
+          "offset_ms": 818.3163999929093
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 823.5254000173882
+          "offset_ms": 818.7703999574296
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 824.1037999978289
+          "offset_ms": 819.3489999976009
         },
         {
           "stage": "request_completed",
-          "offset_ms": 826.874400023371
+          "offset_ms": 821.8891999567859
         }
       ],
-      "provider_ms": 817.2166000003926,
-      "validation_ms": 0.88310003047809,
-      "stable_to_scheduled_ms": 1778.6221000133082,
-      "scheduler_wait_ms": 4.171000036876649,
-      "retrieval_ms": 29.283000039868057,
+      "provider_ms": 812.0829000254162,
+      "validation_ms": 0.8847999852150679,
+      "stable_to_scheduled_ms": 1521.1306000128388,
+      "scheduler_wait_ms": 4.186499980278313,
+      "retrieval_ms": 27.846999990288168,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
       "wire_input_chars_total": 2257
     },
     {
-      "request_id": "ef49031e-6076-4d72-b59b-8125db513fe4",
+      "request_id": "98a494b2-2937-44da-8697-4518d0b4dcc7",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "warm",
@@ -4307,28 +4307,28 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 5.433399986941367
+          "offset_ms": 22.411400044802576
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 192.98220000928268
+          "offset_ms": 161.05230001267046
         },
         {
           "stage": "request_completed",
-          "offset_ms": 194.652899983339
+          "offset_ms": 163.04220003075898
         }
       ],
-      "provider_ms": 187.54219997208565,
+      "provider_ms": 138.6328000226058,
       "validation_ms": 0,
-      "scheduler_wait_ms": 3.599099989514798,
-      "retrieval_ms": 19.953600014559925,
+      "scheduler_wait_ms": 20.532800001092255,
+      "retrieval_ms": 27.474199945572764,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
       "wire_input_chars_total": 1957
     },
     {
-      "request_id": "c602fb1f-a14d-449e-97f7-a217de670cc9",
+      "request_id": "3502e2e4-1ca2-43de-9bcf-4f5fc1195f8a",
       "policy_version": "content-trigger-v1",
       "trigger": "manual",
       "temperature": "warm",
@@ -4342,37 +4342,37 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 15.340800047852099
+          "offset_ms": 29.692500014789402
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 18.963500042445958
+          "offset_ms": 33.01050001755357
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 19.750400038901716
+          "offset_ms": 33.82940002484247
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 20.624800003133714
+          "offset_ms": 34.80690001742914
         },
         {
           "stage": "request_completed",
-          "offset_ms": 23.896300001069903
+          "offset_ms": 37.94250002829358
         }
       ],
-      "provider_ms": 3.6161000025458634,
-      "validation_ms": 1.4573000371456146,
-      "stable_to_scheduled_ms": 124.8448999831453,
-      "scheduler_wait_ms": 13.39980005286634,
-      "retrieval_ms": 41.94840003037825,
+      "provider_ms": 3.311699954792857,
+      "validation_ms": 1.55699992319569,
+      "stable_to_scheduled_ms": 155.1194000057876,
+      "scheduler_wait_ms": 27.315600018482655,
+      "retrieval_ms": 29.422399995382875,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
       "wire_input_chars_total": 2283
     },
     {
-      "request_id": "ca191910-796b-43c2-9a68-2554ccac2926",
+      "request_id": "cebbdcce-2fa7-43d6-9009-2ce9f99e52f3",
       "policy_version": "content-trigger-v1",
       "trigger": "auto",
       "temperature": "warm",
@@ -4386,30 +4386,30 @@
         },
         {
           "stage": "provider_started",
-          "offset_ms": 5.148699972778559
+          "offset_ms": 4.875200043898076
         },
         {
           "stage": "provider_completed",
-          "offset_ms": 8.227999962400645
+          "offset_ms": 8.595400024205446
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 10.004599986132234
+          "offset_ms": 10.934500023722649
         },
         {
           "stage": "validation_completed",
-          "offset_ms": 11.357099981978536
+          "offset_ms": 12.487400032114238
         },
         {
           "stage": "request_completed",
-          "offset_ms": 15.654799994081259
+          "offset_ms": 18.74100003624335
         }
       ],
-      "provider_ms": 3.0738000059500337,
-      "validation_ms": 2.930099959485233,
-      "stable_to_scheduled_ms": 156.27580002183095,
-      "scheduler_wait_ms": 3.048499987926334,
-      "retrieval_ms": 0.19779999274760485,
+      "provider_ms": 3.714499995112419,
+      "validation_ms": 3.6786999553442,
+      "stable_to_scheduled_ms": 165.21209996426478,
+      "scheduler_wait_ms": 2.8921000193804502,
+      "retrieval_ms": 0.20740000763908029,
       "http_attempts": 1,
       "repair_attempts": 0,
       "usage_unknown_attempts": 1,
