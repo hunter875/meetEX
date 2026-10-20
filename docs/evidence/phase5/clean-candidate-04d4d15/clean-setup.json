@@ -1,0 +1,86 @@
+{
+  "status": "FAIL",
+  "source_commit": "04d4d159ed4f6ba13ce78344839afe419c09b8cc",
+  "scope": "Clean local clone on existing Windows developer account/runtime; NOT independent clean Windows",
+  "shared_caches": "pip/npm/Playwright download caches may be reused; no venv/node_modules/data/browser profile copied",
+  "initial": {
+    "venv": false,
+    "node_modules": false,
+    "data": false
+  },
+  "steps": [
+    {
+      "name": "clone",
+      "exit_code": 0,
+      "duration_s": 3.59
+    },
+    {
+      "name": "setup",
+      "exit_code": 0,
+      "duration_s": 120.34
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "duration_s": 19.84
+    },
+    {
+      "name": "doctor",
+      "exit_code": 0,
+      "duration_s": 0.96
+    },
+    {
+      "name": "demo",
+      "exit_code": 0,
+      "duration_s": 2.29
+    },
+    {
+      "name": "rotate",
+      "exit_code": 0,
+      "duration_s": 0.87
+    },
+    {
+      "name": "backup",
+      "exit_code": 0,
+      "duration_s": 0.72
+    },
+    {
+      "name": "stop",
+      "exit_code": 0,
+      "duration_s": 0.91
+    },
+    {
+      "name": "restore",
+      "exit_code": 0,
+      "duration_s": 1.02
+    },
+    {
+      "name": "stop",
+      "exit_code": 0,
+      "duration_s": 0.96
+    },
+    {
+      "name": "update",
+      "exit_code": 0,
+      "duration_s": 80.28
+    },
+    {
+      "name": "doctor-after-update",
+      "exit_code": 0,
+      "duration_s": 0.89
+    },
+    {
+      "name": "stop",
+      "exit_code": 0,
+      "duration_s": 1.04
+    },
+    {
+      "name": "checks",
+      "exit_code": 1,
+      "duration_s": 62.87
+    }
+  ],
+  "paid_calls": 0,
+  "failure_type": "RuntimeError",
+  "failure": "Clean step failed: checks"
+}

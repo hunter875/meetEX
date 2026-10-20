@@ -1,8 +1,8 @@
 {
   "result": "PARTIAL: internal release candidate; independent/live gates remain open",
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "base_commit": "9a5ac7153343a4b84256fbc1343267eeb285de55",
-  "source_commit_at_review": "2030844b7b2085aec34fee2c85778b9058784100",
+  "source_commit_at_review": "d7796da5e9a7e6b2794c2ea44ba9545d7da710ca",
   "app_version": "0.1.0",
   "protocol_version": 1,
   "schema_version": 2,
@@ -28,22 +28,131 @@
     "C": "PASS schema1-to2 and schema2 recovery paths",
     "D": "PASS automated REST/WS/MV3",
     "E": "PARTIAL",
-    "F": "PARTIAL"
+    "F": "PASS controlled developer-host scope"
   },
   "clean_setup": {
-    "status": "NOT TESTED"
+    "status": "PASS",
+    "source_commit": "a15bf0a174a986ac99c106d0e13acb0215e7d5f0",
+    "scope": "Clean local clone on existing Windows developer account/runtime; NOT independent clean Windows",
+    "shared_caches": "pip/npm/Playwright download caches may be reused; no venv/node_modules/data/browser profile copied",
+    "initial": {
+      "venv": false,
+      "node_modules": false,
+      "data": false
+    },
+    "steps": [
+      {
+        "name": "clone",
+        "exit_code": 0,
+        "duration_s": 3.83
+      },
+      {
+        "name": "setup",
+        "exit_code": 0,
+        "duration_s": 152.86
+      },
+      {
+        "name": "build",
+        "exit_code": 0,
+        "duration_s": 19.67
+      },
+      {
+        "name": "doctor",
+        "exit_code": 0,
+        "duration_s": 0.92
+      },
+      {
+        "name": "demo",
+        "exit_code": 0,
+        "duration_s": 2.26
+      },
+      {
+        "name": "rotate",
+        "exit_code": 0,
+        "duration_s": 0.98
+      },
+      {
+        "name": "backup",
+        "exit_code": 0,
+        "duration_s": 0.82
+      },
+      {
+        "name": "stop",
+        "exit_code": 0,
+        "duration_s": 1.07
+      },
+      {
+        "name": "restore",
+        "exit_code": 0,
+        "duration_s": 0.87
+      },
+      {
+        "name": "stop",
+        "exit_code": 0,
+        "duration_s": 1.04
+      },
+      {
+        "name": "update",
+        "exit_code": 0,
+        "duration_s": 60.17
+      },
+      {
+        "name": "doctor-after-update",
+        "exit_code": 0,
+        "duration_s": 0.85
+      },
+      {
+        "name": "stop",
+        "exit_code": 0,
+        "duration_s": 0.91
+      },
+      {
+        "name": "checks",
+        "exit_code": 0,
+        "duration_s": 204.46
+      }
+    ],
+    "paid_calls": 0,
+    "application_rows_preserved": true,
+    "report_user_edit_preserved": true,
+    "upgrade": "schema2-to2 update/reinstall; schema1-to2 validated by operations suite",
+    "online_wal_restore": true,
+    "token_rotation": true,
+    "actual_mv3_pair": "PASS in seven browser E2E",
+    "independent_windows": "NOT TESTED"
   },
   "soak": {
-    "status": "RUNNING",
-    "elapsed_s": 741.247,
+    "status": "PASS",
+    "elapsed_s": 3600.374,
     "planned_seconds": 3600,
-    "captions": 360,
-    "reports": 6,
-    "attempts": 72,
-    "ack": null
+    "captions": 1750,
+    "reports": 30,
+    "attempts": 350,
+    "ack": {
+      "n": 1750,
+      "median_ms": 12.912349979160354,
+      "p95_ms": 24.392599996645004
+    }
   },
   "ci": {
-    "status": "NOT TESTED"
+    "status": "PASS",
+    "run_id": 39430598033,
+    "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033",
+    "source_commit": "d7796da5e9a7e6b2794c2ea44ba9545d7da710ca",
+    "jobs": [
+      {
+        "name": "Keyword / ubuntu-24.04 / Python 3.13",
+        "conclusion": "success",
+        "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033/job/118654338104"
+      },
+      {
+        "name": "Keyword / windows-2025 / Python 3.13",
+        "conclusion": "success",
+        "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033/job/118654338376"
+      }
+    ],
+    "paid_calls": 0,
+    "scope": "Python 3.13 / Node 22.20.0 / keyword mode; full offline regressions and seven MV3 E2E per OS"
   },
   "artifact": null,
   "release_gates": {
@@ -54,7 +163,7 @@
     "performance_cost": "PARTIAL; no end-to-end SLA/real token cost",
     "upgrade_recovery": "PASS tested paths",
     "independent_clean_windows": "NOT TESTED",
-    "operational_soak": "RUNNING",
+    "operational_soak": "PASS",
     "semantic_profile": "NOT TESTED in Phase 5"
   },
   "hash_format": "utf8-lf",
@@ -76,7 +185,7 @@
     "backend/app/report_ledger.py": "79c0f0fcf7791e7db604a0b42a9e1996d2ffafdb7f6d6b117d6cf715d44e9b3a",
     "backend/app/retrieval.py": "93ee92d4aa3a788f5c65c201943e3cc727bfc25c97b73c48106257983bd42689",
     "backend/app/routing.py": "5dbe1b861fe5d42b0cf4d916fa36defe0b1c60c7743a8ce1ba72e03b49c9eb3f",
-    "backend/app/runner.py": "a9873a3ffa7c0b8ba0d060018e7511a9bad65f0030b6bf79e6a4a41b770bf796",
+    "backend/app/runner.py": "20124f92ed43ea6547f26b0a9b484cb2f21f6f1f568231f3f3a346f0a0a711af",
     "backend/app/service.py": "1841f104c02a5d37aeb3b3d8b14c48e6c0b59ea9fc0ad3790a3fd27dcc7eed05",
     "backend/app/storage.py": "953a70dd5078de306d397c5e77bfec567542d22b3f489301f858f502b776c531",
     "backend/app/version.py": "a4a440b0e302a0d1de1c3091d0824057e36491e3e122d0657e7ff8395be2275e",
@@ -99,12 +208,12 @@
     "extension/src/ui/report.tsx": "f2c843c4a40e6467eb5f6edaa66912fbb5359112e4493a6c180607688842b4be",
     "extension/src/ui/settings.tsx": "78dbd8b9d4df803e65c8f13fc8f1bd54b38070ee7b3aeb39c38a06af16f7ab59",
     "extension/src/ui/shared.tsx": "b276e07a95cafe7c7900099433d0b45feda64cea5dc4cb1c246b0ae358c2e10d",
-    "scripts/meet.py": "892eba4bac4074e34c64b058e0f334d3d27f22e46696ccb49c5ffab7505044db",
-    "scripts/package_local.py": "e213752ee4a3acc611839c55b6e097470e41020a1275027d893512104579ec49",
-    "scripts/soak_phase5.py": "38563f6b4a4c1f608cfd42f3ee27bea240246347d959cf92337db8ed5025a355",
+    "scripts/meet.py": "37cba8a604c3ed7d90021b536e85681ac4397e73bfafe27b6aae43f004fd1721",
+    "scripts/package_local.py": "920b56b465b6f7b65f3f2a2b43d3a9c1e30b737c64c113ad985af2d1a0d48be5",
+    "scripts/soak_phase5.py": "af59f04c2c22e3e097cd94e600cd7575323c2e88a8ed95d4d8952470c3e85a01",
     "backend/requirements.lock": "f469511787705eeb35e11f1c3b0676175f4abcefbafc374ed2daefe4b0328fcc",
-    "backend/requirements-dev.lock": "b11288a6bef0778f32fbc262ad22dbf7252ef360e02968fa07a6a2a9e71f0acf",
+    "backend/requirements-dev.lock": "73584564e1b05de63e8b042c8278aaea1aab64971ba29620ba987bb47b7ecd61",
     "package-lock.json": "0210b4066b83ebc1c934f4f2075b5be7ee5666f93674e7c0288f71e6bbba15fd",
-    ".github/workflows/checks.yml": "7bf4f588119c635ececf047445e6693e94f01ba820088a31ff29506f6a35dbe6"
+    ".github/workflows/checks.yml": "a3d34813dcc478343660c97dde82e14acf3fdfeced41ad69a38516bd27ab7524"
   }
 }

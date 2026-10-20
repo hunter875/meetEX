@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "app_version": "0.1.0",
+  "created_at": "2026-10-20T13:25:45.599888+00:00",
+  "schema_version": 2,
+  "counts": {
+    "projects": 1,
+    "sources": 12,
+    "meetings": 1,
+    "caption_segments": 2,
+    "reports": 2
+  },
+  "sha256": "4bbeb99cd30291b6d3fbf8158056d074c6086bf44b88362adf27b3a759bdc71a",
+  "contents": [
+    "copilot.sqlite3"
+  ],
+  "excluded": [
+    "RAM meetings",
+    "pairing-token",
+    "provider API key",
+    ".env",
+    "model cache",
+    "external source files"
+  ]
+}

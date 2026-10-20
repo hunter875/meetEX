@@ -1,0 +1,57 @@
+{
+  "app_version": "0.1.0",
+  "protocol_version": 1,
+  "checks": [
+    {
+      "check": "runtime",
+      "status": "PASS",
+      "action": "Python 3.13.4; Node v22.20.0"
+    },
+    {
+      "check": "dependencies",
+      "status": "PASS",
+      "action": "Required modules available"
+    },
+    {
+      "check": "fts5",
+      "status": "PASS",
+      "action": "3.49.1"
+    },
+    {
+      "check": "data_permissions",
+      "status": "PASS",
+      "action": "Writable"
+    },
+    {
+      "check": "schema",
+      "status": "PASS",
+      "action": "Database 2; app supports <= 2; use matching source if newer"
+    },
+    {
+      "check": "backend",
+      "status": "PASS",
+      "action": "Ready"
+    },
+    {
+      "check": "compatibility",
+      "status": "PASS",
+      "action": "Update backend and extension together; reload unpacked extension"
+    },
+    {
+      "check": "pairing",
+      "status": "PASS",
+      "action": "Local credential accepted; extension must use the same token"
+    },
+    {
+      "check": "extension_origin",
+      "status": "PASS",
+      "action": "Exact extension ID configured"
+    },
+    {
+      "check": "semantic",
+      "status": "INFO",
+      "action": "Optional E5 absent; keyword FTS5 remains supported"
+    }
+  ],
+  "paid_calls": 0
+}

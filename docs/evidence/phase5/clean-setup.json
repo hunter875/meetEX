@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "source_commit": "a15bf0a174a986ac99c106d0e13acb0215e7d5f0",
+  "scope": "Clean local clone on existing Windows developer account/runtime; NOT independent clean Windows",
+  "shared_caches": "pip/npm/Playwright download caches may be reused; no venv/node_modules/data/browser profile copied",
+  "initial": {
+    "venv": false,
+    "node_modules": false,
+    "data": false
+  },
+  "steps": [
+    {
+      "name": "clone",
+      "exit_code": 0,
+      "duration_s": 3.83
+    },
+    {
+      "name": "setup",
+      "exit_code": 0,
+      "duration_s": 152.86
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "duration_s": 19.67
+    },
+    {
+      "name": "doctor",
+      "exit_code": 0,
+      "duration_s": 0.92
+    },
+    {
+      "name": "demo",
+      "exit_code": 0,
+      "duration_s": 2.26
+    },
+    {
+      "name": "rotate",
+      "exit_code": 0,
+      "duration_s": 0.98
+    },
+    {
+      "name": "backup",
+      "exit_code": 0,
+      "duration_s": 0.82
+    },
+    {
+      "name": "stop",
+      "exit_code": 0,
+      "duration_s": 1.07
+    },
+    {
+      "name": "restore",
+      "exit_code": 0,
+      "duration_s": 0.87
+    },
+    {
+      "name": "stop",
+      "exit_code": 0,
+      "duration_s": 1.04
+    },
+    {
+      "name": "update",
+      "exit_code": 0,
+      "duration_s": 60.17
+    },
+    {
+      "name": "doctor-after-update",
+      "exit_code": 0,
+      "duration_s": 0.85
+    },
+    {
+      "name": "stop",
+      "exit_code": 0,
+      "duration_s": 0.91
+    },
+    {
+      "name": "checks",
+      "exit_code": 0,
+      "duration_s": 204.46
+    }
+  ],
+  "paid_calls": 0,
+  "application_rows_preserved": true,
+  "report_user_edit_preserved": true,
+  "upgrade": "schema2-to2 update/reinstall; schema1-to2 validated by operations suite",
+  "online_wal_restore": true,
+  "token_rotation": true,
+  "actual_mv3_pair": "PASS in seven browser E2E",
+  "independent_windows": "NOT TESTED"
+}

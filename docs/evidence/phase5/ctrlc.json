@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Native Windows ConPTY Ctrl+C through published start command; synthetic active meeting",
+  "meeting_statuses": [
+    "interrupted"
+  ],
+  "ownership_released": true,
+  "runtime_metadata_removed": true,
+  "application_shutdown_complete": true,
+  "unhandled_traceback": false,
+  "console_wrapper_exit": 1,
+  "python_interrupt_policy": "130; PowerShell ConPTY reports its own interrupted pipeline as 1",
+  "paid_calls": 0
+}

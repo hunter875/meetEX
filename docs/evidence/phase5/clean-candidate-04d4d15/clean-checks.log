@@ -1,0 +1,40 @@
+........................................................................ [ 20%]
+........................................................................ [ 41%]
+........................................................................ [ 61%]
+........F............................................................... [ 82%]
+.............................................................            [100%]
+================================== FAILURES ===================================
+_______ test_actual_websocket_ack_continues_during_slow_semantic_query ________
+
+client = <starlette.testclient.TestClient object at 0x00000256620788D0>
+
+    def test_actual_websocket_ack_continues_during_slow_semantic_query(client):
+        store=client.app.state.store;p=store.create_project(dict(name='Async',description='',glossary={}));sid,meta=seed(store,p)
+        store.set_settings({'semantic_enabled':True});started=threading.Event();release=threading.Event();thread_ids=[]
+        class SlowSemantic:
+            ready=True
+            def query(self,text):thread_ids.append(threading.get_ident());started.set();release.wait(2);return [1.,0.]
+        client.app.state.retrieval.semantic=SlowSemantic()
+        m=client.post('/api/v1/meetings',json=dict(project_id=p['id'],title='Concurrency',meeting_key='/async')).json()
+        with client.websocket_connect('/api/v1/events',headers={'Host':'127.0.0.1:8765','Origin':'chrome-extension://'+'a'*32}) as ws:
+            ws.send_json(dict(type='auth',protocol_version=1,token='test-pairing-token'));receive(ws,'auth.ok')
+            ws.send_json(dict(type='session.bind',protocol_version=1,session_id=m['id'],payload=dict(tab_id=1,document_id='doc',meeting_key='/async')));receive(ws,'session.snapshot')
+            with ThreadPoolExecutor(max_workers=1) as caller:
+                job=caller.submit(client.post,f'/api/v1/projects/{p["id"]}/search',json={'query':'API-17'})
+>               assert started.wait(2)
+E               assert False
+E                +  where False = wait(2)
+E                +    where wait = <threading.Event at 0x2566209daf0: unset>.wait
+
+backend\tests\test_phase3_retrieval.py:43: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:51
+  D:\meetEX\.local\Phase 5 clean 04d4d159ed4f\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\meetEX\.local\Phase 5 clean 04d4d159ed4f\.local\checks\backend.xml -
+=========================== short test summary info ===========================
+FAILED backend/tests/test_phase3_retrieval.py::test_actual_websocket_ack_continues_during_slow_semantic_query
+1 failed, 348 passed, 1 warning in 56.81s
+CalledProcessError: operation failed; run doctor / inspect local startup output.

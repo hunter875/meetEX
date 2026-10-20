@@ -1,0 +1,1005 @@
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	﻿2026-10-19T14:11:05.1789341Z Current runner version: '2.337.0'
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1805759Z ##[group]Runner Image Provisioner
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1806462Z Hosted Compute Agent
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1806806Z Version: 20261012.601
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1807224Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1807680Z Build Date: 2026-10-12T17:48:21Z
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1808069Z Worker ID: {2f88e9c8-fae0-4e88-b04e-40826aa3831f}
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1808505Z Region: westus2
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1808826Z Cloud: Azure
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1809131Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1810004Z ##[group]Operating System
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1810391Z Ubuntu
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1810728Z 24.04.5
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1811040Z LTS
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1811341Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1811749Z ##[group]Runner Image
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1812091Z Image: ubuntu-24.04
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1812669Z Version: 20261012.334.1
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1813410Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1814318Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1814851Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1815517Z ##[group]GITHUB_TOKEN Permissions
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1816978Z Contents: read
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1817381Z Metadata: read
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1817720Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1818977Z Secret source: Actions
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1819562Z Cache mode: write
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.1820004Z Prepare workflow directory
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.2047567Z Prepare all required actions
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.2077683Z Getting action download info
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.5178990Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.6050770Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.7006097Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.7949741Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0520444Z Complete job name: Keyword / ubuntu-latest / Python 3.13
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0947758Z ##[group]Run actions/checkout@v4
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0948142Z with:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0948368Z   repository: hunter875/meetEX
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0950397Z   token: ***
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0950620Z   ssh-strict: true
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0950846Z   ssh-user: git
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0951078Z   persist-credentials: true
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0951326Z   clean: true
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0951557Z   sparse-checkout-cone-mode: true
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0951821Z   fetch-depth: 1
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0952045Z   fetch-tags: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0952273Z   show-progress: true
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0952503Z   lfs: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0952716Z   submodules: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0952947Z   set-safe-directory: true
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0953210Z   allow-unsafe-pr-checkout: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0953557Z env:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0953766Z   DEEPSEEK_API_KEY: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0953997Z   MEET_EXTENSION_ID: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0954226Z   MEET_DEV_ORIGIN: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0954491Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0954774Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1568259Z Syncing repository: hunter875/meetEX
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1569417Z ##[group]Getting Git version info
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1569762Z Working directory is '/home/runner/work/meetEX/meetEX'
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1570252Z [command]/usr/bin/git version
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1628170Z git version 2.55.0
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1657519Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1671895Z Temporarily overriding HOME='/home/runner/work/_temp/67b3627f-e93c-4aee-a8d0-47c3ed8a143b' before making global git config changes
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1672869Z Adding repository directory to the temporary git global config as a safe directory
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1676386Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/meetEX/meetEX
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1719863Z Deleting the contents of '/home/runner/work/meetEX/meetEX'
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1731950Z ##[group]Initializing the repository
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1732579Z [command]/usr/bin/git init /home/runner/work/meetEX/meetEX
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1805382Z hint: Using 'master' as the name for the initial branch. This default branch name
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1806305Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1806946Z hint: to use in all of your new repositories, which will suppress this warning,
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1807327Z hint: call:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1807539Z hint:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1807814Z hint: 	git config --global init.defaultBranch <name>
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1808130Z hint:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1808427Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1808892Z hint: 'development'. The just-created branch can be renamed via this command:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1809281Z hint:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1809495Z hint: 	git branch -m <name>
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1809736Z hint:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1810053Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1813686Z Initialized empty Git repository in /home/runner/work/meetEX/meetEX/.git/
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1820337Z [command]/usr/bin/git remote add origin https://github.com/hunter875/meetEX
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1870129Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1870992Z ##[group]Disabling automatic garbage collection
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1875540Z [command]/usr/bin/git config --local gc.auto 0
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1898298Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1899047Z ##[group]Setting up auth
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1903083Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.1936487Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2206019Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2234102Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2403231Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2430847Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2598415Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2629303Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2629941Z ##[group]Fetching the repository
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2636198Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bfc1e6fc778553182e9ce524f006b082e349942e:refs/remotes/origin/codex/phase5-local-operations
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5659679Z From https://github.com/hunter875/meetEX
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5661330Z  * [new ref]         bfc1e6fc778553182e9ce524f006b082e349942e -> origin/codex/phase5-local-operations
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5664353Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5665388Z ##[group]Determining the checkout info
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5666636Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5670147Z [command]/usr/bin/git sparse-checkout disable
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5713019Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5746562Z ##[group]Checking out the ref
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5748001Z [command]/usr/bin/git checkout --progress --force -B codex/phase5-local-operations refs/remotes/origin/codex/phase5-local-operations
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6441368Z Switched to a new branch 'codex/phase5-local-operations'
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6445117Z branch 'codex/phase5-local-operations' set up to track 'origin/codex/phase5-local-operations'.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6454282Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6490812Z [command]/usr/bin/git log -1 --format=%H
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6511458Z bfc1e6fc778553182e9ce524f006b082e349942e
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6817973Z ##[group]Run actions/setup-python@v5
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6818712Z with:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6819217Z   python-version: 3.13
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6819797Z   check-latest: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6825556Z   token: ***
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6826186Z   update-environment: true
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6826811Z   allow-prereleases: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6827429Z   freethreaded: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6827975Z env:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6828447Z   DEEPSEEK_API_KEY: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6828990Z   MEET_EXTENSION_ID: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6829536Z   MEET_DEV_ORIGIN: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6830098Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.6830777Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7667037Z ##[group]Installed versions
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7743141Z (node:2081) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7745626Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7749504Z Successfully set up CPython (3.13.16)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7751092Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7960956Z ##[group]Run actions/setup-node@v4
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7961651Z with:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7962131Z   node-version: 22.20.0
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7962669Z   cache: npm
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7963164Z   always-auth: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7963710Z   check-latest: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7969099Z   token: ***
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7969589Z env:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7970062Z   DEEPSEEK_API_KEY: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7970597Z   MEET_EXTENSION_ID: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7971194Z   MEET_DEV_ORIGIN: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7971762Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7972577Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7973639Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7974657Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7975569Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7976669Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7977608Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7978389Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.8842223Z Attempting to download 22.20.0...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.8908010Z (node:2089) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.8909690Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:08.4361957Z Acquiring 22.20.0 - x64 from https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-linux-x64.tar.gz
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:08.8855441Z Extracting ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:08.8934970Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/e3755910-1157-45ad-9f90-dd121af0f3a1 -f /home/runner/work/_temp/79093891-9c11-437d-94d5-0d8bdc9ab3b9
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:09.7685836Z Adding to the cache ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.5526284Z ##[group]Environment details
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.6838030Z node: v22.20.0
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.6838404Z npm: 10.9.3
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.6838599Z yarn: 1.22.22
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.6839387Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.6851086Z [command]/opt/hostedtoolcache/node/22.20.0/x64/bin/npm config get cache
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.7410157Z /home/runner/.npm
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.9827843Z npm cache is not found
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.9968162Z ##[group]Run python scripts/meet.py setup
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.9968385Z ^[[36;1mpython scripts/meet.py setup^[[0m
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0301838Z shell: /usr/bin/bash -e {0}
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0302023Z env:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0302165Z   DEEPSEEK_API_KEY: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0302482Z   MEET_EXTENSION_ID: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0302601Z   MEET_DEV_ORIGIN: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0302730Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0302921Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0303156Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0303378Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0303584Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0303792Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0303994Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:12.0304197Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.0139329Z Collecting annotated-types==0.8.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 1))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.0564460Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.0752633Z Collecting anyio==4.15.1 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 2))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.0817292Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.0962503Z Collecting certifi==2026.7.22 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 3))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.1026146Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.1162387Z Collecting click==8.5.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 4))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.1227327Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.1343397Z Collecting colorama==0.4.6 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 5))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.1417514Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.1713199Z Collecting fastapi==0.119.1 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 6))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.1783056Z   Downloading fastapi-0.119.1-py3-none-any.whl.metadata (28 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.2091838Z Collecting h11==0.16.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 7))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.2210041Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.2337378Z Collecting httpcore==1.0.9 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 8))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.2411796Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.2753159Z Collecting httptools==0.9.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 9))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.2826796Z   Downloading httptools-0.9.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3087234Z Collecting httpx==0.28.1 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 10))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3158486Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3335280Z Collecting idna==3.20 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 11))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3401659Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3556365Z Collecting iniconfig==2.3.1 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 12))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3618737Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3740629Z Collecting packaging==26.3 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 13))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.3805218Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.4079692Z Collecting pathspec==0.12.1 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 14))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.4146142Z   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.4259159Z Collecting pluggy==1.6.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 15))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.4321994Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.4862578Z Collecting pydantic==2.12.3 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 16))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.4926155Z   Downloading pydantic-2.12.3-py3-none-any.whl.metadata (87 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8047011Z Collecting pydantic_core==2.41.4 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 17))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8115284Z   Downloading pydantic_core-2.41.4-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8341665Z Collecting Pygments==2.21.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 18))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8406406Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8571699Z Collecting pytest==8.4.2 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 19))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8642570Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8776519Z Collecting pytest-asyncio==1.2.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 20))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8841311Z   Downloading pytest_asyncio-1.2.0-py3-none-any.whl.metadata (4.1 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.8962597Z Collecting python-dotenv==1.1.1 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 21))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9025808Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9246961Z Collecting PyYAML==6.0.3 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 22))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9319315Z   Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9471705Z Collecting starlette==0.48.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 23))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9535185Z   Downloading starlette-0.48.0-py3-none-any.whl.metadata (6.3 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9638911Z Collecting typing-inspection==0.4.4 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 24))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9702438Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9820670Z Collecting typing_extensions==4.16.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 25))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9884103Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:16.9995060Z Collecting tzdata==2026.5 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 26))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.0060779Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.0296512Z Collecting uvicorn==0.38.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 27))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.0364843Z   Downloading uvicorn-0.38.0-py3-none-any.whl.metadata (6.8 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.0743960Z Collecting watchfiles==1.3.0 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 28))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.0808999Z   Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.1356178Z Collecting websockets==17.2 (from -r /home/runner/work/meetEX/meetEX/backend/requirements.lock (line 29))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.1422391Z   Downloading websockets-17.2-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.1631985Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.1709628Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.1843556Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.1966607Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2049597Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2213839Z Downloading fastapi-0.119.1-py3-none-any.whl (108 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2402166Z Downloading pydantic-2.12.3-py3-none-any.whl (462 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2542742Z Downloading starlette-0.48.0-py3-none-any.whl (73 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2619063Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2696777Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2773116Z Downloading httptools-0.9.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (520 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.2927475Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3008609Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3086075Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3162378Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3242387Z Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3319371Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3397892Z Downloading pydantic_core-2.41.4-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3569902Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 127.1 MB/s  0:00:00
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3638665Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3722112Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 145.6 MB/s  0:00:00
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3787954Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3870748Z Downloading pytest_asyncio-1.2.0-py3-none-any.whl (15 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.3947180Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4025371Z Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4061931Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 252.4 MB/s  0:00:00
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4128067Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4204761Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4282429Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4499287Z Downloading uvicorn-0.38.0-py3-none-any.whl (68 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4576888Z Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (458 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.4666196Z Downloading websockets-17.2-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (225 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.5397225Z Installing collected packages: websockets, tzdata, typing_extensions, PyYAML, python-dotenv, Pygments, pluggy, pathspec, packaging, iniconfig, idna, httptools, h11, colorama, click, certifi, annotated-types, uvicorn, typing-inspection, pytest, pydantic_core, httpcore, anyio, watchfiles, starlette, pytest-asyncio, pydantic, httpx, fastapi
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.0375786Z 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.0394972Z Successfully installed PyYAML-6.0.3 Pygments-2.21.0 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 colorama-0.4.6 fastapi-0.119.1 h11-0.16.0 httpcore-1.0.9 httptools-0.9.0 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 packaging-26.3 pathspec-0.12.1 pluggy-1.6.0 pydantic-2.12.3 pydantic_core-2.41.4 pytest-8.4.2 pytest-asyncio-1.2.0 python-dotenv-1.1.1 starlette-0.48.0 typing-inspection-0.4.4 typing_extensions-4.16.0 tzdata-2026.5 uvicorn-0.38.0 watchfiles-1.3.0 websockets-17.2
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.5407250Z Collecting ruff==0.14.1 (from -r /home/runner/work/meetEX/meetEX/backend/requirements-dev.lock (line 1))
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.5923352Z   Downloading ruff-0.14.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (25 kB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.6124358Z Downloading ruff-0.14.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.7854543Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 82.0 MB/s  0:00:00
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.8142268Z Installing collected packages: ruff
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:19.9195175Z Successfully installed ruff-0.14.1
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:20.4402952Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.8734153Z 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.8734738Z added 178 packages in 2s
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9703457Z Setup complete. Next: python scripts/meet.py build
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9819336Z ##[group]Run npx playwright install --with-deps chromium
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9819576Z ^[[36;1mnpx playwright install --with-deps chromium^[[0m
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9871298Z shell: /usr/bin/bash -e {0}
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9871435Z env:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9871552Z   DEEPSEEK_API_KEY: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9871671Z   MEET_EXTENSION_ID: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9871844Z   MEET_DEV_ORIGIN: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9872027Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9872213Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9872441Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9872709Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9872941Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9873164Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9873398Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:21.9873648Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.4393132Z Installing dependencies...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.4464955Z Switching to root user to install dependencies...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.5035434Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.5402365Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.5432773Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.5483857Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.5516834Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.6281037Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1397 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.6402572Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [308 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.6413621Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1704 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.6486967Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.6500757Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.6566900Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.7017427Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1144 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.7062390Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.7083979Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.7128612Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.7581883Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.7643626Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.7908863Z Get:18 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.8327627Z Get:19 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [618 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.8423636Z Get:20 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.8451101Z Get:21 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [557 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:27.3649376Z Fetched 12.5 MB in 1s (13.8 MB/s)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:27.9075460Z Reading package lists...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:27.9259992Z Reading package lists...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.0658042Z Building dependency tree...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.0666635Z Reading state information...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1771484Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1772113Z libasound2t64 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1773054Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1773327Z libatk-bridge2.0-0t64 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1773626Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1773944Z libatk1.0-0t64 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1774312Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1774652Z libatspi2.0-0t64 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1774960Z libcairo2 is already the newest version (1.18.0-3build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1775168Z libcairo2 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1775387Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1775597Z libcups2t64 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1775822Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1776334Z libdbus-1-3 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1776682Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1776958Z libdrm2 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1777169Z libgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.4).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1777370Z libgbm1 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1777588Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.9).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1777805Z libglib2.0-0t64 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1778025Z libnspr4 is already the newest version (2:4.35-1.1build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1778223Z libnspr4 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1778421Z libnss3 is already the newest version (2:3.98-1ubuntu0.2).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1778612Z libnss3 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1778827Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1779040Z libpango-1.0-0 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1779252Z libx11-6 is already the newest version (2:1.8.7-1ubuntu0.1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1779452Z libx11-6 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1779639Z libxcb1 is already the newest version (1.15-1ubuntu2).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1779826Z libxcb1 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1780038Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1780250Z libxcomposite1 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1780461Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1780664Z libxdamage1 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1780865Z libxext6 is already the newest version (2:1.3.4-1build2).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1781059Z libxext6 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1781258Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1781457Z libxfixes3 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1781667Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1781869Z libxkbcommon0 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1782081Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1782282Z libxrandr2 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1782484Z xvfb is already the newest version (2:21.1.12-1ubuntu1.8).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1782759Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1783044Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1783257Z libfontconfig1 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1783484Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.2).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1783705Z libfreetype6 set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1783916Z fonts-liberation is already the newest version (1:2.1.5-3).
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1784128Z fonts-liberation set to manually installed.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1784464Z The following additional packages will be installed:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1784652Z   xfonts-encodings xfonts-utils
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1784805Z Recommended packages:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1785089Z   fonts-ipafont-mincho fonts-tlwg-loma
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1907584Z The following NEW packages will be installed:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1908017Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1910447Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.1910759Z   xfonts-utils
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.2037101Z 0 upgraded, 9 newly installed, 0 to remove and 77 not upgraded.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.2037477Z Need to get 21.1 MB of archives.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.2037717Z After this operation, 79.5 MB of additional disk space will be used.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.2037979Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.2929076Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.4386747Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.6111670Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.6808858Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.7729932Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:28.9920496Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.0638352Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.1334942Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.2050774Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.3765793Z Fetched 21.1 MB in 1s (20.9 MB/s)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.3996573Z Selecting previously unselected package fonts-ipafont-gothic.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4237371Z (Reading database ... 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4238110Z (Reading database ... 5%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4238303Z (Reading database ... 10%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4238450Z (Reading database ... 15%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4238584Z (Reading database ... 20%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4238718Z (Reading database ... 25%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4238849Z (Reading database ... 30%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4238979Z (Reading database ... 35%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4239112Z (Reading database ... 40%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4239240Z (Reading database ... 45%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4239372Z (Reading database ... 50%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.4270255Z (Reading database ... 55%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.5293427Z (Reading database ... 60%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.7783248Z (Reading database ... 65%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:29.9288406Z (Reading database ... 70%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.1317496Z (Reading database ... 75%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.3304664Z (Reading database ... 80%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.4797152Z (Reading database ... 85%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.6562007Z (Reading database ... 90%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.8318310Z (Reading database ... 95%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.8318538Z (Reading database ... 100%
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.8318775Z (Reading database ... 203540 files and directories currently installed.)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.8355638Z Preparing to unpack .../0-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:30.9985420Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.2256899Z Selecting previously unselected package fonts-freefont-ttf.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.2350192Z Preparing to unpack .../1-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.2354877Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.3363958Z Selecting previously unselected package fonts-tlwg-loma-otf.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.3457405Z Preparing to unpack .../2-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.3462934Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.3623407Z Selecting previously unselected package fonts-unifont.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.3716938Z Preparing to unpack .../3-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.3722203Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.5746380Z Selecting previously unselected package fonts-wqy-zenhei.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.5838734Z Preparing to unpack .../4-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.5915003Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:31.9923054Z Selecting previously unselected package xfonts-encodings.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0016715Z Preparing to unpack .../5-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0022493Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0230041Z Selecting previously unselected package xfonts-utils.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0321382Z Preparing to unpack .../6-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0327089Z Unpacking xfonts-utils (1:7.7+6build3) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0620516Z Selecting previously unselected package xfonts-cyrillic.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0712589Z Preparing to unpack .../7-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.0769719Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1115343Z Selecting previously unselected package xfonts-scalable.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1208709Z Preparing to unpack .../8-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1213372Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1520479Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1603778Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1616426Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1630216Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1643135Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1688997Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1699947Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1712551Z Setting up xfonts-utils (1:7.7+6build3) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1742364Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.1960907Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.2160859Z Processing triggers for man-db (2.12.0-4build2) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.2176874Z Not building database; man-db/auto-update is not 'true'.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.2185522Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7134649Z 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7135184Z Running kernel seems to be up-to-date.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7135392Z 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7135482Z No services need to be restarted.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7135615Z 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7135700Z No containers need to be restarted.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7135798Z 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7136052Z No user sessions are running outdated binaries.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7136236Z 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7136387Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.3495554Z Downloading Chromium 141.0.7390.37 (playwright build v1194) from https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1194/chromium-linux.zip
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.5448935Z |                                                                                |   0% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.9414378Z |■■■■■■■■                                                                        |  10% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.0660108Z |■■■■■■■■■■■■■■■■                                                                |  20% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.1839232Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.3125117Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.4222792Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.5696440Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.6783052Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.8107003Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.9197435Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.0463146Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 173.9 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.1511965Z Chromium 141.0.7390.37 (playwright build v1194) downloaded to /home/runner/.cache/ms-playwright/chromium-1194
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.1513806Z Downloading FFMPEG playwright build v1011 from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.3514004Z |                                                                                |   0% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4046430Z |■■■■■■■■                                                                        |  10% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4428631Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4552839Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4735995Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4925584Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4983036Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5040791Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5186412Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5241364Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5417727Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5736660Z FFMPEG playwright build v1011 downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1011
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5739403Z Downloading Chromium Headless Shell 141.0.7390.37 (playwright build v1194) from https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1194/chromium-headless-shell-linux.zip
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.6817095Z |                                                                                |   0% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.7593776Z |■■■■■■■■                                                                        |  10% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.7886514Z |■■■■■■■■■■■■■■■■                                                                |  20% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.8395183Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.8721457Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.9297380Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.9599064Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.0027300Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.0736295Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.1228834Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.1694450Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 104.3 MiB
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.3057746Z Chromium Headless Shell 141.0.7390.37 (playwright build v1194) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1194
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4148441Z ##[group]Run python scripts/ci_check.py
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4148729Z ^[[36;1mpython scripts/ci_check.py^[[0m
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4201684Z shell: /usr/bin/bash -e {0}
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4201821Z env:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4201922Z   DEEPSEEK_API_KEY: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4202041Z   MEET_EXTENSION_ID: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4202155Z   MEET_DEV_ORIGIN: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4202278Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4202463Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4202731Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4202954Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4203155Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4203357Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4203558Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4203755Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4862896Z ModuleNotFoundError: operation failed; run doctor / inspect local startup output.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.4974999Z ##[error]Process completed with exit code 1.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5040801Z ##[group]Run actions/upload-artifact@v4
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5040957Z with:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5041073Z   name: synthetic-failure-ubuntu-latest
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5041225Z   path: .local/checks/
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	test-results/
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5041365Z   retention-days: 7
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5041481Z   if-no-files-found: error
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5041757Z   compression-level: 6
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5041871Z   overwrite: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5041988Z   include-hidden-files: false
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5042117Z env:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5042219Z   DEEPSEEK_API_KEY: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5042333Z   MEET_EXTENSION_ID: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5042443Z   MEET_DEV_ORIGIN: 
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5042562Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5042738Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5042955Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib/pkgconfig
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5043194Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5043389Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5043586Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.16/x64
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5043787Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.16/x64/lib
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.5043953Z ##[endgroup]
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6048866Z (node:3022) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6049586Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6073942Z Multiple search paths detected. Calculating the least common ancestor of all paths
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6079445Z The least common ancestor is /home/runner/work/meetEX/meetEX. This will be the root directory of the artifact
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6092303Z ##[error]No files were found with the provided path: .local/checks/
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	test-results/. No artifacts will be uploaded.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6293285Z Post job cleanup.
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6813860Z [command]/usr/bin/git version
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6845397Z git version 2.55.0
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6868782Z Temporarily overriding HOME='/home/runner/work/_temp/6ec6ca9e-270d-47d5-b56a-13cd6b563a90' before making global git config changes
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6869437Z Adding repository directory to the temporary git global config as a safe directory
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6871775Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/meetEX/meetEX
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6901015Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.6926339Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7117998Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7146597Z http.https://github.com/.extraheader
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7157808Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7188524Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7372694Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7401888Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7693032Z Cleaning up orphan processes
+Keyword / ubuntu-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:39.7875541Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	﻿2026-10-19T14:11:05.3082889Z Current runner version: '2.337.0'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3105416Z ##[group]Runner Image Provisioner
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3106067Z Hosted Compute Agent
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3106560Z Version: 20261002.596
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3107022Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3107555Z Build Date: 2026-10-02T22:28:27Z
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3108102Z Worker ID: {aa1419fb-9a32-4d0c-88bb-4fb5bc3e4f35}
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3108637Z Region: westus3
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3109046Z Cloud: Azure
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3109461Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3110503Z ##[group]Operating System
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3111035Z Microsoft Windows Server 2025
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3111500Z 10.0.26100
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3111917Z Datacenter
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3112320Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3112750Z ##[group]Runner Image
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3113197Z Image: windows-2025-vs2026
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3113650Z Version: 20261007.264.1
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3115443Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261007.264/images/windows/Windows2025-VS2026-Readme.md
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3116783Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261007.264
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3117546Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3118411Z ##[group]GITHUB_TOKEN Permissions
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3119920Z Contents: read
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3120347Z Metadata: read
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3120735Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3122462Z Secret source: Actions
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3123140Z Cache mode: write
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3123710Z Prepare workflow directory
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3498789Z Prepare all required actions
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.3538072Z Getting action download info
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.7374924Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:05.8741008Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.0030209Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.2656542Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.5773449Z Complete job name: Keyword / windows-latest / Python 3.13
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7013073Z ##[group]Run actions/checkout@v4
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7014477Z with:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7015098Z   repository: hunter875/meetEX
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7021018Z   token: ***
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7021640Z   ssh-strict: true
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7022242Z   ssh-user: git
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7022850Z   persist-credentials: true
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7023527Z   clean: true
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7024158Z   sparse-checkout-cone-mode: true
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7024891Z   fetch-depth: 1
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7025494Z   fetch-tags: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7026104Z   show-progress: true
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7026731Z   lfs: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7027301Z   submodules: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7027968Z   set-safe-directory: true
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7028667Z   allow-unsafe-pr-checkout: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7029578Z env:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7030310Z   DEEPSEEK_API_KEY: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7030942Z   MEET_EXTENSION_ID: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7031741Z   MEET_DEV_ORIGIN: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7032443Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.7033192Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.8253146Z Syncing repository: hunter875/meetEX
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.8255256Z ##[group]Getting Git version info
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.8256093Z Working directory is 'D:\a\meetEX\meetEX'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:06.8929513Z [command]"C:\Program Files\Git\bin\git.exe" version
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5838783Z git version 2.56.0.windows.2
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5879874Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5896343Z Temporarily overriding HOME='D:\a\_temp\c85d1d91-8a60-400c-9a75-a4bf69e6c112' before making global git config changes
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5898038Z Adding repository directory to the temporary git global config as a safe directory
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.5904841Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\meetEX\meetEX
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7410664Z Deleting the contents of 'D:\a\meetEX\meetEX'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7416931Z ##[group]Initializing the repository
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.7427351Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\meetEX\meetEX
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.8303878Z Initialized empty Git repository in D:/a/meetEX/meetEX/.git/
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.8345497Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/hunter875/meetEX
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.9949400Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.9950558Z ##[group]Disabling automatic garbage collection
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:07.9956320Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:08.0292107Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:08.0293995Z ##[group]Setting up auth
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:08.0301947Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:08.0695452Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:09.8331675Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:09.8669188Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:10.3680963Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:10.4028271Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:10.9984006Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.0332891Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.0333464Z ##[group]Fetching the repository
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:11.0347104Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bfc1e6fc778553182e9ce524f006b082e349942e:refs/remotes/origin/codex/phase5-local-operations
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4087619Z From https://github.com/hunter875/meetEX
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4088470Z  * [new ref]         bfc1e6fc778553182e9ce524f006b082e349942e -> origin/codex/phase5-local-operations
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4124207Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4124717Z ##[group]Determining the checkout info
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4126694Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4134441Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4488240Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4867362Z ##[group]Checking out the ref
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.4869151Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B codex/phase5-local-operations refs/remotes/origin/codex/phase5-local-operations
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.7105895Z Switched to a new branch 'codex/phase5-local-operations'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.7119247Z branch 'codex/phase5-local-operations' set up to track 'origin/codex/phase5-local-operations'.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.7194768Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.7530871Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.7832164Z bfc1e6fc778553182e9ce524f006b082e349942e
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8280400Z ##[group]Run actions/setup-python@v5
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8280863Z with:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8281041Z   python-version: 3.13
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8281536Z   check-latest: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8283671Z   token: ***
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8284595Z   update-environment: true
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8284797Z   allow-prereleases: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8285003Z   freethreaded: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8285195Z env:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8285345Z   DEEPSEEK_API_KEY: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8285505Z   MEET_EXTENSION_ID: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8285660Z   MEET_DEV_ORIGIN: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8285851Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.8286065Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.9626791Z ##[group]Installed versions
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.9788936Z (node:2080) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.9789815Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.9790623Z Successfully set up CPython (3.13.16)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:13.9791518Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0107046Z ##[group]Run actions/setup-node@v4
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0107384Z with:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0107579Z   node-version: 22.20.0
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0107750Z   cache: npm
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0107897Z   always-auth: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0108060Z   check-latest: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0110137Z   token: ***
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0110289Z env:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0110435Z   DEEPSEEK_API_KEY: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0110603Z   MEET_EXTENSION_ID: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0110763Z   MEET_DEV_ORIGIN: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0110936Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0111207Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0111609Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.16\x64/lib/pkgconfig
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0111954Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0112258Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0112592Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.0112832Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.1896251Z Attempting to download 22.20.0...
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.2084927Z (node:6636) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:14.2086049Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:15.3048387Z Acquiring 22.20.0 - x64 from https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-win32-x64.7z
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:15.7012765Z Extracting ...
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:17.7622325Z Adding to the cache ...
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:22.9947728Z ##[group]Environment details
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:24.6482945Z node: v22.20.0
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:24.6483286Z npm: 10.9.3
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:24.6483526Z yarn: 1.22.22
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:24.6484082Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:24.6953501Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\22.20.0\x64\npm.cmd config get cache"
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:24.9259950Z C:\npm\cache
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.2597076Z npm cache is not found
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.2847638Z ##[group]Run python scripts/meet.py setup
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.2848002Z ^[[36;1mpython scripts/meet.py setup^[[0m
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4328591Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4328882Z env:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4329038Z   DEEPSEEK_API_KEY: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4329205Z   MEET_EXTENSION_ID: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4329365Z   MEET_DEV_ORIGIN: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4329539Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4329816Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4330168Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.16\x64/lib/pkgconfig
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4330562Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4330881Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4331189Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:25.4331748Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.4276052Z Collecting annotated-types==0.8.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 1))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.4715065Z   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7467334Z Collecting anyio==4.15.1 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 2))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:32.7583472Z   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.0226537Z Collecting certifi==2026.7.22 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 3))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.0341160Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.1389742Z Collecting click==8.5.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 4))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.1509288Z   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.3623651Z Collecting colorama==0.4.6 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 5))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.3753144Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.4597725Z Collecting fastapi==0.119.1 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 6))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.4724978Z   Downloading fastapi-0.119.1-py3-none-any.whl.metadata (28 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.5661809Z Collecting h11==0.16.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 7))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.5781710Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.6750560Z Collecting httpcore==1.0.9 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 8))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.6897221Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.7628768Z Collecting httptools==0.9.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 9))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.7785761Z   Downloading httptools-0.9.0-cp313-cp313-win_amd64.whl.metadata (3.7 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.8535709Z Collecting httpx==0.28.1 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 10))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:33.8657345Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.0734422Z Collecting idna==3.20 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 11))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.0850986Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.3309636Z Collecting iniconfig==2.3.1 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 12))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.3751866Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.5291710Z Collecting packaging==26.3 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 13))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.5506278Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.7081105Z Collecting pathspec==0.12.1 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 14))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.7235678Z   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.8676374Z Collecting pluggy==1.6.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 15))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:34.8790248Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.0436687Z Collecting pydantic==2.12.3 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 16))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.0552250Z   Downloading pydantic-2.12.3-py3-none-any.whl.metadata (87 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.6133301Z Collecting pydantic_core==2.41.4 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 17))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.6260024Z   Downloading pydantic_core-2.41.4-cp313-cp313-win_amd64.whl.metadata (7.4 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.8104927Z Collecting Pygments==2.21.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 18))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.8223096Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.8880074Z Collecting pytest==8.4.2 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 19))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.9024959Z   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.9720879Z Collecting pytest-asyncio==1.2.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 20))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:35.9879809Z   Downloading pytest_asyncio-1.2.0-py3-none-any.whl.metadata (4.1 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.0441253Z Collecting python-dotenv==1.1.1 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 21))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.0555094Z   Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.1554826Z Collecting PyYAML==6.0.3 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 22))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.1676681Z   Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl.metadata (2.4 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.2700327Z Collecting starlette==0.48.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 23))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.2852111Z   Downloading starlette-0.48.0-py3-none-any.whl.metadata (6.3 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.3388628Z Collecting typing-inspection==0.4.4 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 24))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.3508862Z   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.4085623Z Collecting typing_extensions==4.16.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 25))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.4204581Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.4970951Z Collecting tzdata==2026.5 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 26))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.5103974Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.5758485Z Collecting uvicorn==0.38.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 27))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.5878035Z   Downloading uvicorn-0.38.0-py3-none-any.whl.metadata (6.8 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.7030605Z Collecting watchfiles==1.3.0 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 28))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.7154493Z   Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl.metadata (5.0 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.8438703Z Collecting websockets==17.2 (from -r D:\a\meetEX\meetEX\backend\requirements.lock (line 29))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.8565201Z   Downloading websockets-17.2-cp313-cp313-win_amd64.whl.metadata (6.5 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.9098477Z Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:36.9634582Z Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.0364968Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.0896501Z Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.1347149Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.2267326Z Downloading fastapi-0.119.1-py3-none-any.whl (108 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.3238159Z Downloading pydantic-2.12.3-py3-none-any.whl (462 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4272687Z Downloading starlette-0.48.0-py3-none-any.whl (73 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4562734Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.4929749Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5326454Z Downloading httptools-0.9.0-cp313-cp313-win_amd64.whl (91 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.5968174Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.6295061Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.6692562Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.6979434Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.7282470Z Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.7733003Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.8074691Z Downloading pydantic_core-2.41.4-cp313-cp313-win_amd64.whl (2.0 MB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.8576162Z    ---------------------------------------- 2.0/2.0 MB 37.6 MB/s  0:00:00
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.8701217Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.8987743Z    ---------------------------------------- 1.3/1.3 MB 37.8 MB/s  0:00:00
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.9100445Z Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.9434313Z Downloading pytest_asyncio-1.2.0-py3-none-any.whl (15 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:37.9739278Z Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.0102445Z Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl (154 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.0454026Z Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.0754770Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.1023446Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.1366873Z Downloading uvicorn-0.38.0-py3-none-any.whl (68 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.1647840Z Downloading watchfiles-1.3.0-cp310-abi3-win_amd64.whl (290 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.1992893Z Downloading websockets-17.2-cp313-cp313-win_amd64.whl (218 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:38.3651597Z Installing collected packages: websockets, tzdata, typing_extensions, PyYAML, python-dotenv, Pygments, pluggy, pathspec, packaging, iniconfig, idna, httptools, h11, colorama, click, certifi, annotated-types, uvicorn, typing-inspection, pytest, pydantic_core, httpcore, anyio, watchfiles, starlette, pytest-asyncio, pydantic, httpx, fastapi
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:41.3578285Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:41.3604659Z Successfully installed PyYAML-6.0.3 Pygments-2.21.0 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 click-8.5.0 colorama-0.4.6 fastapi-0.119.1 h11-0.16.0 httpcore-1.0.9 httptools-0.9.0 httpx-0.28.1 idna-3.20 iniconfig-2.3.1 packaging-26.3 pathspec-0.12.1 pluggy-1.6.0 pydantic-2.12.3 pydantic_core-2.41.4 pytest-8.4.2 pytest-asyncio-1.2.0 python-dotenv-1.1.1 starlette-0.48.0 typing-inspection-0.4.4 typing_extensions-4.16.0 tzdata-2026.5 uvicorn-0.38.0 watchfiles-1.3.0 websockets-17.2
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:42.8303545Z Collecting ruff==0.14.1 (from -r D:\a\meetEX\meetEX\backend\requirements-dev.lock (line 1))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:44.9373781Z   Downloading ruff-0.14.1-py3-none-win_amd64.whl.metadata (26 kB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:44.9896475Z Downloading ruff-0.14.1-py3-none-win_amd64.whl (13.4 MB)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:45.3708736Z    ---------------------------------------- 13.4/13.4 MB 36.5 MB/s  0:00:00
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:45.4749473Z Installing collected packages: ruff
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:45.6336663Z Successfully installed ruff-0.14.1
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:47.5902806Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:52.6869044Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:52.6869536Z added 177 packages in 7s
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.1192498Z Setup complete. Next: python scripts/meet.py build
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2254743Z ##[group]Run python scripts/ci_check.py
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2255055Z ^[[36;1mpython scripts/ci_check.py^[[0m
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2312151Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2312429Z env:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2312598Z   DEEPSEEK_API_KEY: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2312770Z   MEET_EXTENSION_ID: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2312962Z   MEET_DEV_ORIGIN: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2313136Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2313417Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2313784Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.16\x64/lib/pkgconfig
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2314131Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2314447Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2314758Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:11:56.2315048Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:10.7110770Z ........................................................................ [ 20%]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:10.7827397Z ........................................................................ [ 41%]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:21.0453977Z ........................................................................ [ 61%]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:43.3709512Z ........F.F............................................................. [ 82%]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6648388Z .............................................................            [100%]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6649082Z ================================== FAILURES ===================================
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6649827Z _______ test_actual_websocket_ack_continues_during_slow_semantic_query ________
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6650158Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6650533Z client = <starlette.testclient.TestClient object at 0x000001DA720BC9E0>
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6651059Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6651365Z     def test_actual_websocket_ack_continues_during_slow_semantic_query(client):
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6652174Z         store=client.app.state.store;p=store.create_project(dict(name='Async',description='',glossary={}));sid,meta=seed(store,p)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6653149Z         store.set_settings({'semantic_enabled':True});started=threading.Event();release=threading.Event();thread_ids=[]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6655011Z         class SlowSemantic:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6655351Z             ready=True
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6655995Z             def query(self,text):thread_ids.append(threading.get_ident());started.set();release.wait(2);return [1.,0.]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6657169Z         client.app.state.retrieval.semantic=SlowSemantic()
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6657928Z         m=client.post('/api/v1/meetings',json=dict(project_id=p['id'],title='Concurrency',meeting_key='/async')).json()
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6658955Z         with client.websocket_connect('/api/v1/events',headers={'Host':'127.0.0.1:8765','Origin':'chrome-extension://'+'a'*32}) as ws:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6659955Z             ws.send_json(dict(type='auth',protocol_version=1,token='test-pairing-token'));receive(ws,'auth.ok')
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6661108Z             ws.send_json(dict(type='session.bind',protocol_version=1,session_id=m['id'],payload=dict(tab_id=1,document_id='doc',meeting_key='/async')));receive(ws,'session.snapshot')
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6662034Z             with ThreadPoolExecutor(max_workers=1) as caller:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6662691Z                 job=caller.submit(client.post,f'/api/v1/projects/{p["id"]}/search',json={'query':'API-17'})
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6663304Z >               assert started.wait(2)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6663621Z E               assert False
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6663939Z E                +  where False = wait(2)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6664418Z E                +    where wait = <threading.Event at 0x1da72a3e5d0: unset>.wait
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6664725Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6664978Z backend\tests\test_phase3_retrieval.py:43: AssertionError
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6667421Z ------------------------------ Captured log call ------------------------------
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6668411Z ERROR    meet_copilot:main.py:226 internal_failure request_id=71b4cf2a-a125-4cdf-8a7f-0fdac7d72976 error_type=ModuleNotFoundError
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6669526Z ______ test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup _______
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6669902Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6670141Z store = <app.storage.Storage object at 0x000001DA7291AC10>
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6670850Z meeting = {'auto_mode': True, 'binding': None, 'capture_status': 'starting', 'confirmed_segment_ids': [], ...}
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6671283Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6671643Z     async def test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup(store,meeting):
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6672222Z         from app.retrieval import Retrieval,Semantic
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6672589Z         from pathlib import Path
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6672869Z         import threading
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6673424Z         store.set_settings(dict(semantic_enabled=True));began=threading.Event();release=threading.Event()
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6673953Z         class Held:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6674247Z             ready=True
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6674658Z             def query(self,text):began.set();release.wait(2);return [1.,0.]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6675535Z         retrieval=Retrieval(store,Held());lookup=asyncio.create_task(retrieval.search_async(meeting['project_id'],'private meeting phrase API-17'))
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6676618Z         ready=await asyncio.to_thread(began.wait,1)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6676999Z >       if lookup.done():await lookup
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6677307Z                          ^^^^^^^^^^^^
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6677491Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6677643Z backend\tests\test_phase4_api.py:36: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6678080Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6678553Z backend\app\retrieval.py:95: in search_async
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6679838Z     result=json.loads(json.dumps(await asyncio.shield(self._inflight[key])));result['worker_duration_ms']=result['duration_ms'];result['duration_ms']=(time.perf_counter()-began)*1000;self.timings.append(result['duration_ms']);self.timings=self.timings[-1000:]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6681067Z                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6681672Z C:\hostedtoolcache\windows\Python\3.13.16\x64\Lib\concurrent\futures\thread.py:59: in run
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6682215Z     result = self.fn(*self.args, **self.kwargs)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6682548Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6682910Z backend\app\retrieval.py:83: in isolated
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6683686Z     value=worker.search(project_id,query,limit);value['index_generation']={id:s['generation'] for id,s in source_rows.items()};return value
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6684397Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6684820Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6685082Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6685330Z self = <app.retrieval.Retrieval object at 0x000001DA72A2BCF0>
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6685795Z project_id = '248aaab6-84cd-4db3-a504-94ecff3d26e3'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6686211Z query = 'private meeting phrase API-17', limit = 5
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6686459Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6686613Z     def search(self,project_id,query,limit=5):
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6687149Z         began=time.perf_counter();project=self.store.project(project_id);expanded=query
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6687697Z         for word,meaning in project['glossary'].items():
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6688166Z             if word.casefold() in query.casefold():expanded+=' '+meaning
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6688738Z         terms=list(dict.fromkeys(re.findall(r'[\w]+',expanded,flags=re.UNICODE)))[:60]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6689649Z         # Treat MATCH as an escaped list of terms, never user-supplied SQL/FTS syntax.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6690848Z         match=' OR '.join('"'+term.replace('"','""')+'"' for term in terms)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6691251Z         db=self.store.disk
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6692400Z         rows=list(db.execute('SELECT c.*,bm25(chunks_fts) AS rank FROM chunks_fts JOIN chunks c ON c.id=chunks_fts.id JOIN sources s ON s.id=c.source_id WHERE chunks_fts MATCH ? AND c.project_id=? ORDER BY rank LIMIT 40',(match,project_id))) if match else []
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6693660Z         ids=[r['id'] for r in rows];rank={id:1/(60+n) for n,id in enumerate(ids,1)}
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6694118Z         all_rows={r['id']:dict(r) for r in rows}
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6695368Z         mode='keyword';warning='Semantic chưa bật; câu Việt không khớp nguồn Anh có thể thiếu kết quả.'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6696065Z         if self.store.settings()['semantic_enabled'] and self.semantic.ready:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6696522Z >           import numpy as np
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6696906Z E           ModuleNotFoundError: No module named 'numpy'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6697148Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6697360Z backend\app\retrieval.py:110: ModuleNotFoundError
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6697830Z ============================== warnings summary ===============================
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6698281Z .venv\Lib\site-packages\starlette\testclient.py:51
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6699336Z   D:\a\meetEX\meetEX\.venv\Lib\site-packages\starlette\testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6700662Z     _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6701059Z 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6701371Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6702018Z ------ generated xml file: D:\a\meetEX\meetEX\.local\checks\backend.xml -------
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6702589Z =========================== short test summary info ===========================
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6703469Z FAILED backend/tests/test_phase3_retrieval.py::test_actual_websocket_ack_continues_during_slow_semantic_query - assert False
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6704102Z  +  where False = wait(2)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6704463Z  +    where wait = <threading.Event at 0x1da72a3e5d0: unset>.wait
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6705436Z FAILED backend/tests/test_phase4_api.py::test_deleted_meeting_cache_is_not_repopulated_by_inflight_lookup - ModuleNotFoundError: No module named 'numpy'
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.6706241Z 2 failed, 347 passed, 1 warning in 55.58s
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.8175556Z CalledProcessError: operation failed; run doctor / inspect local startup output.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9389215Z ##[error]Process completed with exit code 1.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9574580Z ##[group]Run actions/upload-artifact@v4
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9574884Z with:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9575071Z   name: synthetic-failure-windows-latest
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9575311Z   path: .local/checks/
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	test-results/
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9575528Z   retention-days: 7
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9575702Z   if-no-files-found: error
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9575886Z   compression-level: 6
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9576062Z   overwrite: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9576230Z   include-hidden-files: false
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9576416Z env:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9576562Z   DEEPSEEK_API_KEY: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9576727Z   MEET_EXTENSION_ID: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9576889Z   MEET_DEV_ORIGIN: 
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9577061Z   MEET_DATA_DIR: .local/ci-synthetic-data
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9577355Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9577711Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.16\x64/lib/pkgconfig
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9578119Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9578443Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9578752Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.16\x64
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:53.9579000Z ##[endgroup]
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.1181227Z (node:1108) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.1182243Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.1241747Z Multiple search paths detected. Calculating the least common ancestor of all paths
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.1243859Z The least common ancestor is D:\a\meetEX\meetEX. This will be the root directory of the artifact
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.1244653Z With the provided path, there will be 1 file uploaded
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.1248863Z Artifact name is valid!
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.1250103Z Root directory input is valid!
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.6375091Z Beginning upload of artifact content to blob storage
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.6547720Z (node:1108) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.8510646Z Uploaded bytes 9843
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.9070283Z Finished uploading artifact content to blob storage!
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.9071446Z SHA256 digest of uploaded artifact zip is 7288d0a88dee7e2f18756ce6f5f2408c0521b9d7714f84311d01670b79246cd0
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:54.9073213Z Finalizing artifact upload
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.2024890Z Artifact synthetic-failure-windows-latest.zip successfully finalized. Artifact ID 12192928313
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.2027106Z Artifact synthetic-failure-windows-latest has been successfully uploaded! Final size is 9843 bytes. Artifact ID is 12192928313
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.2035641Z Artifact download URL: https://github.com/hunter875/meetEX/actions/runs/39266644857/artifacts/12192928313
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.2338828Z Post job cleanup.
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.3729064Z [command]"C:\Program Files\Git\bin\git.exe" version
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.4012282Z git version 2.56.0.windows.2
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.4068476Z Temporarily overriding HOME='D:\a\_temp\4ff8e621-f282-4d66-891b-3cd1b595286a' before making global git config changes
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.4069256Z Adding repository directory to the temporary git global config as a safe directory
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.4077446Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\meetEX\meetEX
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.4401683Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.4757613Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.9619889Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.9900014Z http.https://github.com/.extraheader
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:55.9938566Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:56.0261927Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:56.5338008Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:56.5675505Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:57.1047233Z Cleaning up orphan processes
+Keyword / windows-latest / Python 3.13	UNKNOWN STEP	2026-10-19T14:12:57.1079901Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

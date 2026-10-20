@@ -1,0 +1,47 @@
+{
+  "app_version": "0.1.0",
+  "protocol_version": 1,
+  "checks": [
+    {
+      "check": "runtime",
+      "status": "PASS",
+      "action": "Python 3.13.4; Node v22.20.0"
+    },
+    {
+      "check": "dependencies",
+      "status": "PASS",
+      "action": "Required modules available"
+    },
+    {
+      "check": "fts5",
+      "status": "PASS",
+      "action": "3.49.1"
+    },
+    {
+      "check": "data_permissions",
+      "status": "WARN",
+      "action": "Data directory not created yet; start initializes it"
+    },
+    {
+      "check": "schema",
+      "status": "WARN",
+      "action": "No local database yet; run start"
+    },
+    {
+      "check": "backend",
+      "status": "WARN",
+      "action": "Backend not running; run start"
+    },
+    {
+      "check": "extension_origin",
+      "status": "WARN",
+      "action": "Run pair-extension.ps1 -ExtensionId ID, restart backend"
+    },
+    {
+      "check": "semantic",
+      "status": "INFO",
+      "action": "Dependency installed; model load remains explicit"
+    }
+  ],
+  "paid_calls": 0
+}

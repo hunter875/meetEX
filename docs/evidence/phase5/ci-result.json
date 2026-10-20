@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "run_id": 39430598033,
+  "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033",
+  "source_commit": "d7796da5e9a7e6b2794c2ea44ba9545d7da710ca",
+  "jobs": [
+    {
+      "name": "Keyword / ubuntu-24.04 / Python 3.13",
+      "conclusion": "success",
+      "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033/job/118654338104"
+    },
+    {
+      "name": "Keyword / windows-2025 / Python 3.13",
+      "conclusion": "success",
+      "url": "https://github.com/hunter875/meetEX/actions/runs/39430598033/job/118654338376"
+    }
+  ],
+  "paid_calls": 0,
+  "scope": "Python 3.13 / Node 22.20.0 / keyword mode; full offline regressions and seven MV3 E2E per OS"
+}

@@ -1,7 +1,7 @@
 {
   "mode": "synthetic virtual time; production Service + Provider + validators, intercepted SSE; zero paid calls",
-  "fixture_sha256": "fd7ca8d79c779b42182cd517534c3f51c047042fb6db143fd378eb8730bdb895",
-  "harness_sha256": "5d6c3f26b18b90c5a4cf8436e406f2a162010e362ebb6f627e72aa2e4379e019",
+  "fixture_sha256": "2671cde83b010cc54a6def6f2ee4e5e1e52a6f37fcaa843c3923f790cb4acedb",
+  "harness_sha256": "96ebe6a4e62cdf6155323ff043a80e6ba3166da5b338661b75ad92d37038dec5",
   "platform": "Windows-11-10.0.26200-SP0",
   "policy": "content-trigger-v1",
   "config": {
@@ -135,13 +135,13 @@
       "attempts": [
         {
           "at": 24.15,
-          "request_id": "e35f94ef-ff71-435e-b224-f8277117094e",
+          "request_id": "d5e04698-d031-46a7-9231-420af2ef8ac0",
           "wire_chars": 570,
           "repair": false
         },
         {
           "at": 28.15,
-          "request_id": "9b91405e-cfd6-4124-a2f4-dc457643867f",
+          "request_id": "aa6ad723-c587-4afc-be6d-2d5cc0616066",
           "wire_chars": 638,
           "repair": false
         }
@@ -225,7 +225,7 @@
       "attempts": [
         {
           "at": 37.15,
-          "request_id": "e89fddd3-d745-4081-bf7c-55616eac98b0",
+          "request_id": "b62022c6-d173-4030-8b16-8f352e0d1084",
           "wire_chars": 648,
           "repair": false
         }
@@ -463,7 +463,7 @@
       "attempts": [
         {
           "at": 70.15,
-          "request_id": "6264381a-ddf0-4df5-a62e-38c03ac40e0a",
+          "request_id": "89d6a363-7d29-45b2-b168-405f92ca0855",
           "wire_chars": 682,
           "repair": false
         }
@@ -547,13 +547,13 @@
       "attempts": [
         {
           "at": 81.0,
-          "request_id": "f4bf5d47-6533-4f3b-a409-43770b1fea2c",
+          "request_id": "675866a5-b1cf-4677-af91-0d46f2d185e7",
           "wire_chars": 619,
           "repair": false
         },
         {
           "at": 83.0,
-          "request_id": "3446cc5a-c7c3-4bed-9fe9-788e66f6f6c1",
+          "request_id": "0d8141e7-692a-4665-a5ac-89f7f1c3ffb7",
           "wire_chars": 619,
           "repair": false
         }
@@ -637,7 +637,7 @@
       "attempts": [
         {
           "at": 91.35,
-          "request_id": "1cabf227-001a-4448-afea-a078f86a3eeb",
+          "request_id": "8e9ceb74-7c2c-4d6b-8f74-09ef6619e1fb",
           "wire_chars": 592,
           "repair": false
         }
@@ -721,13 +721,13 @@
       "attempts": [
         {
           "at": 109.0,
-          "request_id": "9db2fe92-44e0-468f-ab77-0699740e22bd",
+          "request_id": "e5f54c45-34f0-4e89-be4d-3e84573621b8",
           "wire_chars": 600,
           "repair": false
         },
         {
           "at": 113.0,
-          "request_id": "75d57b3d-4a6d-4e45-9f84-f361e71b9b0c",
+          "request_id": "f2bdae27-fe55-45c6-8a33-c6ccc402b345",
           "wire_chars": 603,
           "repair": false
         }
@@ -811,13 +811,13 @@
       "attempts": [
         {
           "at": 122.0,
-          "request_id": "a5fdf2f9-53ce-4f25-af0e-70be7dd6ca81",
+          "request_id": "019fd49e-f41a-4358-93f3-7699bf21b3cc",
           "wire_chars": 589,
           "repair": false
         },
         {
           "at": 126.0,
-          "request_id": "bf1e96b6-ae9f-4cb5-a006-16b9fe3dc6c0",
+          "request_id": "3c3479b9-a111-47da-ab77-52bc13019baa",
           "wire_chars": 589,
           "repair": false
         }
@@ -901,13 +901,13 @@
       "attempts": [
         {
           "at": 135.0,
-          "request_id": "59ecda5e-519f-487a-a6c8-9f4c6781507f",
+          "request_id": "f4584940-472d-438d-a9d0-39301bab0d96",
           "wire_chars": 600,
           "repair": false
         },
         {
           "at": 139.0,
-          "request_id": "db166122-d061-460e-b4b4-90b4a71b8a4e",
+          "request_id": "1378642a-506a-4ffd-b9dd-a5915a6a13a7",
           "wire_chars": 600,
           "repair": false
         }
@@ -991,13 +991,13 @@
       "attempts": [
         {
           "at": 148.0,
-          "request_id": "56f35836-60c0-4592-9775-b4e6e0811d7f",
+          "request_id": "ee9aea84-1174-4bf7-8baa-0370ab067394",
           "wire_chars": 588,
           "repair": false
         },
         {
           "at": 152.0,
-          "request_id": "9b8b6ac2-c06a-461b-b531-cf2e2b6d4c67",
+          "request_id": "75aad61d-347c-476f-b657-5523236538b1",
           "wire_chars": 588,
           "repair": false
         }
@@ -1081,13 +1081,13 @@
       "attempts": [
         {
           "at": 161.0,
-          "request_id": "58e668c6-9092-43ea-845b-f2b130927d5d",
+          "request_id": "259fa8f9-b8f6-44dd-b2f4-9d653788762b",
           "wire_chars": 1190,
           "repair": false
         },
         {
           "at": 165.0,
-          "request_id": "8d0e8010-37ba-4778-a443-3b458ce02e7e",
+          "request_id": "cceccca6-bc69-48e2-8bc1-f44f5721c3af",
           "wire_chars": 1215,
           "repair": false
         }
@@ -1171,13 +1171,13 @@
       "attempts": [
         {
           "at": 173.35,
-          "request_id": "e51060fd-a58e-48e3-a056-30730380c7be",
+          "request_id": "a48ad633-90e8-4954-a38a-29c0eaa37ddb",
           "wire_chars": 581,
           "repair": false
         },
         {
           "at": 177.35,
-          "request_id": "bf3e1056-bc7a-484a-a6bb-31d9f08f7587",
+          "request_id": "b88001ba-915a-4715-af7f-2be09d71986c",
           "wire_chars": 652,
           "repair": false
         }
@@ -1261,7 +1261,7 @@
       "attempts": [
         {
           "at": 186.35,
-          "request_id": "78c9e3a7-189a-4e85-bc14-7f7ff366d4a4",
+          "request_id": "cd362a5c-6fde-4a28-99e1-bd26a7fc1750",
           "wire_chars": 681,
           "repair": false
         }
@@ -1345,13 +1345,13 @@
       "attempts": [
         {
           "at": 195.45,
-          "request_id": "d19596a0-045e-4690-a9a8-4c8f120dfd47",
+          "request_id": "a2175b60-6086-44a7-9a6c-0a51e6cd1b15",
           "wire_chars": 590,
           "repair": false
         },
         {
           "at": 199.45,
-          "request_id": "1ee3cb30-0007-494d-82cb-bfb73529a6ea",
+          "request_id": "7cd2ca74-2e3d-4937-b76f-6b1468727eae",
           "wire_chars": 673,
           "repair": false
         }
@@ -1435,19 +1435,19 @@
       "attempts": [
         {
           "at": 208.45,
-          "request_id": "eca8328a-de88-4f89-a9a7-91bf10f8bec2",
+          "request_id": "51ba54f0-26f3-45ed-ac6a-c2445e2110ba",
           "wire_chars": 593,
           "repair": false
         },
         {
           "at": 210.49999999999997,
-          "request_id": "929c0467-42ca-4d62-ba9e-8ff6ad18cb93",
+          "request_id": "15f0a881-a839-4366-bcbb-406825d75034",
           "wire_chars": 614,
           "repair": false
         },
         {
           "at": 213.5,
-          "request_id": "23d1de00-75be-48a9-9669-eaf3d0203291",
+          "request_id": "2dbf4bb4-289e-47f8-be98-ae36ff2d266f",
           "wire_chars": 661,
           "repair": false
         }
@@ -1531,7 +1531,7 @@
       "attempts": [
         {
           "at": 220.6,
-          "request_id": "c8866fcc-d99f-44d9-9a80-614ec6fb4b99",
+          "request_id": "d148e7d3-7d76-4c2d-bc38-d15ad1bd8724",
           "wire_chars": 605,
           "repair": false
         }
@@ -1615,13 +1615,13 @@
       "attempts": [
         {
           "at": 229.76,
-          "request_id": "7d2d3c85-b90d-4d82-b2a4-718642d5f1af",
+          "request_id": "337bf6cb-0f69-497d-bcf0-8efdf71051dd",
           "wire_chars": 594,
           "repair": false
         },
         {
           "at": 230.56,
-          "request_id": "7d2d3c85-b90d-4d82-b2a4-718642d5f1af",
+          "request_id": "337bf6cb-0f69-497d-bcf0-8efdf71051dd",
           "wire_chars": 594,
           "repair": false
         }
@@ -1705,13 +1705,13 @@
       "attempts": [
         {
           "at": 238.76,
-          "request_id": "7aba2bdb-473b-4d95-9e76-8e2a1c55234a",
+          "request_id": "7bcfdef5-2394-4e8e-a580-3610036bdf89",
           "wire_chars": 595,
           "repair": false
         },
         {
           "at": 239.06,
-          "request_id": "7aba2bdb-473b-4d95-9e76-8e2a1c55234a",
+          "request_id": "7bcfdef5-2394-4e8e-a580-3610036bdf89",
           "wire_chars": 828,
           "repair": true
         }
@@ -1795,7 +1795,7 @@
       "attempts": [
         {
           "at": 247.76,
-          "request_id": "ee58ffa0-edbc-4641-85a8-40d17a5ac4dc",
+          "request_id": "a89428d6-21f4-42ff-bb5e-2e0166767d0d",
           "wire_chars": 594,
           "repair": false
         }
@@ -1956,7 +1956,7 @@
       "attempts": [
         {
           "at": 265.81,
-          "request_id": "1854ef91-2dba-4a27-918d-57e6639f3fd3",
+          "request_id": "894a3033-5b9e-4d07-a223-9f5b6b2a56a0",
           "wire_chars": 586,
           "repair": false
         }
@@ -2040,13 +2040,13 @@
       "attempts": [
         {
           "at": 277.01,
-          "request_id": "d276ba1e-c2fb-4631-ab95-873aeaa4f961",
+          "request_id": "43f6c0fc-08ab-4d6f-b39c-feba34caefd6",
           "wire_chars": 592,
           "repair": false
         },
         {
           "at": 281.11,
-          "request_id": "adb0f9b7-1ba1-4972-a717-14753cd22170",
+          "request_id": "6fec9672-f2dd-4793-aeea-77975b1168d8",
           "wire_chars": 671,
           "repair": false
         }
@@ -2130,7 +2130,7 @@
       "attempts": [
         {
           "at": 290.11,
-          "request_id": "4e29ce5a-ede7-4fda-99a2-3d83431bc371",
+          "request_id": "9eaa1cdf-5126-4960-9127-fe980bbeb958",
           "wire_chars": 592,
           "repair": false
         }
@@ -2214,7 +2214,7 @@
       "attempts": [
         {
           "at": 306.11,
-          "request_id": "25701a7f-edc7-45f1-80d6-0a9fa8975290",
+          "request_id": "6413d6f8-26b6-4b98-b082-0162af61ca21",
           "wire_chars": 1174,
           "repair": false
         }
@@ -2298,13 +2298,13 @@
       "attempts": [
         {
           "at": 315.11,
-          "request_id": "82a0f0ed-ad4c-4638-933a-385b7601daef",
+          "request_id": "830a3c40-d508-480f-9ac1-309ed65a27df",
           "wire_chars": 574,
           "repair": false
         },
         {
           "at": 319.11,
-          "request_id": "bf47361a-73ad-4682-bb38-35ff017b982f",
+          "request_id": "75732311-557c-47c2-aa4c-01aedeb6cbb5",
           "wire_chars": 637,
           "repair": false
         }
@@ -2465,13 +2465,13 @@
       "attempts": [
         {
           "at": 343.76,
-          "request_id": "60c071be-ab0d-4d79-a233-8eab8edd4f94",
+          "request_id": "6932b036-8b4c-4615-8d60-e9b947766e30",
           "wire_chars": 584,
           "repair": false
         },
         {
           "at": 347.76,
-          "request_id": "1120626d-752e-4824-9086-1a83f5dc6608",
+          "request_id": "48b1e499-3d21-40ed-a283-b5872c3dd944",
           "wire_chars": 584,
           "repair": false
         }
@@ -2555,7 +2555,7 @@
       "attempts": [
         {
           "at": 356.13,
-          "request_id": "a6a665a1-8091-409d-b126-9c7c22a02ef8",
+          "request_id": "82d56d4e-917e-4260-b547-6dd3d983eaa5",
           "wire_chars": 680,
           "repair": false
         }
@@ -2639,7 +2639,7 @@
       "attempts": [
         {
           "at": 369.23,
-          "request_id": "eecdaccd-218b-45dd-b09d-3df1645e5f57",
+          "request_id": "faa6d338-b12f-4d5a-b5b1-9117d0741fce",
           "wire_chars": 1872,
           "repair": false
         }

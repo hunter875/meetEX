@@ -74,7 +74,7 @@ def main():
     ]
     record = dict(
         result="PARTIAL: internal release candidate; independent/live gates remain open",
-        date="2026-10-19",
+        date="2026-10-20",
         base_commit="9a5ac7153343a4b84256fbc1343267eeb285de55",
         source_commit_at_review=subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True

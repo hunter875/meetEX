@@ -1,0 +1,46 @@
+{
+  "status": "FAIL",
+  "source_commit": "693dd93767b767ccfdb1a5e50a85e9e897e75175",
+  "scope": "Clean local clone on existing Windows developer account/runtime; NOT independent clean Windows",
+  "shared_caches": "pip/npm/Playwright download caches may be reused; no venv/node_modules/data/browser profile copied",
+  "initial": {
+    "venv": false,
+    "node_modules": false,
+    "data": false
+  },
+  "steps": [
+    {
+      "name": "clone",
+      "exit_code": 0,
+      "duration_s": 4.4
+    },
+    {
+      "name": "setup",
+      "exit_code": 0,
+      "duration_s": 120.93
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "duration_s": 18.42
+    },
+    {
+      "name": "doctor",
+      "exit_code": 0,
+      "duration_s": 0.9
+    },
+    {
+      "name": "demo",
+      "exit_code": 0,
+      "duration_s": 1.62
+    },
+    {
+      "name": "stop",
+      "exit_code": 0,
+      "duration_s": 0.91
+    }
+  ],
+  "paid_calls": 0,
+  "failure_type": "HTTPError",
+  "failure": "HTTP Error 400: Bad Request"
+}

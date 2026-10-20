@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "scanned_changed_or_new_files": 70,
+  "bytes": 2402121,
+  "credential_pattern_matches": 0,
+  "scope": "Synthetic source/evidence only; pattern scan plus fixed archive allowlist; no personal data copied"
+}

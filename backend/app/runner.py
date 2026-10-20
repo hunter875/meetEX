@@ -50,4 +50,9 @@ async def run():
 
 
 if __name__ == "__main__":
-    asyncio.run(run())
+    try:
+        asyncio.run(run())
+    except KeyboardInterrupt:
+        # Uvicorn has already drained lifespan on SIGINT; the console signal
+        # is an intentional stop, not an unhandled application traceback.
+        raise SystemExit(130)
